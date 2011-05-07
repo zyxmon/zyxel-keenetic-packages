@@ -1,0 +1,26 @@
+config GCC_VERSION
+	string
+	default "4.1.2"     if GCC_VERSION_4_1_2
+	default "4.3.3+cs"  if GCC_VERSION_4_3_3_CS
+	default "4.1.2"
+
+config GCC_VERSION_4
+	bool
+	default y	if GCC_VERSION_4_1
+	default y	if GCC_VERSION_4_3
+
+config GCC_VERSION_4_1
+	bool
+	default y	if GCC_VERSION_4_1_2
+
+config GCC_VERSION_4_3
+	bool
+	default y	if GCC_VERSION_4_3_3_CS
+
+if !TOOLCHAINOPTS
+
+	config GCC_VERSION_4_3_3_CS
+		default y if (mips || mipsel) && !(TARGET_octeon || TARGET_sibyte)
+		default y if (arm || armeb) && !(TARGET_gemini || TARGET_omap35xx)
+
+endif

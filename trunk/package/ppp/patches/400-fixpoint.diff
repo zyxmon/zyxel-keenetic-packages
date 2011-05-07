@@ -1,0 +1,152 @@
+diff -ruN ppp-2.4.4.orig/pppd/chap-md5.c ppp-2.4.4/pppd/chap-md5.c
+--- ppp-2.4.4.orig/pppd/chap-md5.c	2004-11-10 01:39:25.000000000 +0300
++++ ppp-2.4.4/pppd/chap-md5.c	2008-12-08 18:03:47.000000000 +0300
+@@ -47,8 +47,7 @@
+ {
+ 	int clen;
+ 
+-	clen = (int)(drand48() * (MD5_MAX_CHALLENGE - MD5_MIN_CHALLENGE))
+-		+ MD5_MIN_CHALLENGE;
++	clen = (int)random_range (MD5_MIN_CHALLENGE, MD5_MAX_CHALLENGE);
+ 	*cp++ = clen;
+ 	random_bytes(cp, clen);
+ }
+diff -ruN ppp-2.4.4.orig/pppd/chap_ms.c ppp-2.4.4/pppd/chap_ms.c
+--- ppp-2.4.4.orig/pppd/chap_ms.c	2008-12-08 17:32:52.000000000 +0300
++++ ppp-2.4.4/pppd/chap_ms.c	2008-12-08 18:05:17.000000000 +0300
+@@ -857,7 +857,7 @@
+     /* Generate the Peer-Challenge if requested, or copy it if supplied. */
+     if (!PeerChallenge)
+ 	for (i = 0; i < MS_CHAP2_PEER_CHAL_LEN; i++)
+-	    *p++ = (u_char) (drand48() * 0xff);
++	    *p++ = (u_char) random_range (0, 0xff);
+     else
+ 	BCOPY(PeerChallenge, &response[MS_CHAP2_PEER_CHALLENGE],
+ 	      MS_CHAP2_PEER_CHAL_LEN);
+diff -ruN ppp-2.4.4.orig/pppd/chap-new.c ppp-2.4.4/pppd/chap-new.c
+--- ppp-2.4.4.orig/pppd/chap-new.c	2008-12-08 17:32:52.000000000 +0300
++++ ppp-2.4.4/pppd/chap-new.c	2008-12-08 18:03:47.000000000 +0300
+@@ -213,7 +213,7 @@
+ 	ss->digest = dp;
+ 	ss->name = our_name;
+ 	/* Start with a random ID value */
+-	ss->id = (unsigned char)(drand48() * 256);
++	ss->id = (unsigned char)random_range (0, 0xff);
+ 	ss->flags |= AUTH_STARTED;
+ 	if (ss->flags & LOWERUP)
+ 		chap_timeout(ss);
+diff -ruN ppp-2.4.4.orig/pppd/eap.c ppp-2.4.4/pppd/eap.c
+--- ppp-2.4.4.orig/pppd/eap.c	2004-11-10 01:39:25.000000000 +0300
++++ ppp-2.4.4/pppd/eap.c	2008-12-08 18:03:47.000000000 +0300
+@@ -206,7 +206,7 @@
+ 	esp->es_unit = unit;
+ 	esp->es_server.ea_timeout = EAP_DEFTIMEOUT;
+ 	esp->es_server.ea_maxrequests = EAP_DEFTRANSMITS;
+-	esp->es_server.ea_id = (u_char)(drand48() * 0x100);
++	esp->es_server.ea_id = (u_char)random_range (0, 0xff);
+ 	esp->es_client.ea_timeout = EAP_DEFREQTIME;
+ 	esp->es_client.ea_maxrequests = EAP_DEFALLOWREQ;
+ }
+@@ -704,14 +704,12 @@
+ 		 * pick a random challenge length between
+ 		 * MIN_CHALLENGE_LENGTH and MAX_CHALLENGE_LENGTH
+ 		 */
+-		challen = (drand48() *
+-		    (MAX_CHALLENGE_LENGTH - MIN_CHALLENGE_LENGTH)) +
+-			    MIN_CHALLENGE_LENGTH;
++		challen = random_range (MIN_CHALLENGE_LENGTH, MAX_CHALLENGE_LENGTH);
+ 		PUTCHAR(challen, outp);
+ 		esp->es_challen = challen;
+ 		ptr = esp->es_challenge;
+ 		while (--challen >= 0)
+-			*ptr++ = (u_char) (drand48() * 0x100);
++			*ptr++ = (u_char) random_range (0, 0xff);
+ 		BCOPY(esp->es_challenge, outp, esp->es_challen);
+ 		INCPTR(esp->es_challen, outp);
+ 		BCOPY(esp->es_server.ea_name, outp, esp->es_server.ea_namelen);
+@@ -794,7 +792,7 @@
+ 				BCOPY(cp, clear, i);
+ 				cp += i;
+ 				while (i < 8) {
+-					*cp++ = drand48() * 0x100;
++					*cp++ = random_range (0, 0xff);
+ 					i++;
+ 				}
+ 				(void) DesEncrypt(clear, cipher);
+@@ -808,7 +806,7 @@
+ 			i %= SHA_DIGESTSIZE;
+ 			if (i != 0) {
+ 				while (i < SHA_DIGESTSIZE) {
+-					*outp++ = drand48() * 0x100;
++					*outp++ = random_range (0, 0xff);
+ 					i++;
+ 				}
+ 			}
+@@ -838,12 +836,11 @@
+ 	case eapSRP4:
+ 		PUTCHAR(EAPT_SRP, outp);
+ 		PUTCHAR(EAPSRP_LWRECHALLENGE, outp);
+-		challen = MIN_CHALLENGE_LENGTH +
+-		    ((MAX_CHALLENGE_LENGTH - MIN_CHALLENGE_LENGTH) * drand48());
++		challen = random_range (MIN_CHALLENGE_LENGTH, MAX_CHALLENGE_LENGTH);
+ 		esp->es_challen = challen;
+ 		ptr = esp->es_challenge;
+ 		while (--challen >= 0)
+-			*ptr++ = drand48() * 0x100;
++			*ptr++ = random_range (0, 0xff);
+ 		BCOPY(esp->es_challenge, outp, esp->es_challen);
+ 		INCPTR(esp->es_challen, outp);
+ 		break;
+diff -ruN ppp-2.4.4.orig/pppd/magic.c ppp-2.4.4/pppd/magic.c
+--- ppp-2.4.4.orig/pppd/magic.c	2003-06-12 03:56:26.000000000 +0400
++++ ppp-2.4.4/pppd/magic.c	2008-12-08 18:03:47.000000000 +0300
+@@ -95,6 +95,16 @@
+ 		buf[i] = mrand48() >> 24;
+ }
+ 
++int
++random_range(int from, int to)
++{
++    if (to - from == 0xff)
++	    return mrand48() >> 24;
++	    
++    return from + mrand48() % (to - from);
++}
++
++
+ #ifdef NO_DRAND48
+ /*
+  * Substitute procedures for those systems which don't have
+diff -ruN ppp-2.4.4.orig/pppd/magic.h ppp-2.4.4/pppd/magic.h
+--- ppp-2.4.4.orig/pppd/magic.h	2003-06-12 03:56:26.000000000 +0400
++++ ppp-2.4.4/pppd/magic.h	2008-12-08 18:03:47.000000000 +0300
+@@ -47,3 +47,4 @@
+ 
+ /* Fill buffer with random bytes */
+ void random_bytes __P((unsigned char *buf, int len));
++int random_range __P((int from, int to));
+diff -ruN ppp-2.4.4.orig/pppd/tty.c ppp-2.4.4/pppd/tty.c
+--- ppp-2.4.4.orig/pppd/tty.c	2006-06-04 11:04:57.000000000 +0400
++++ ppp-2.4.4/pppd/tty.c	2008-12-08 18:03:47.000000000 +0300
+@@ -1110,16 +1110,17 @@
+ 	    continue;
+ 	}
+ 	if (max_data_rate) {
+-	    double dt;
+ 	    int nbt;
+ 	    struct timeval now;
+ 
+ 	    gettimeofday(&now, NULL);
+-	    dt = (now.tv_sec - levelt.tv_sec
+-		  + (now.tv_usec - levelt.tv_usec) / 1e6);
+-	    nbt = (int)(dt * max_data_rate);
++
++	    nbt = (now.tv_sec - levelt.tv_sec) * max_data_rate 
++		  + (now.tv_usec - levelt.tv_usec) * max_data_rate / 1000000;
++
+ 	    ilevel = (nbt < 0 || nbt > ilevel)? 0: ilevel - nbt;
+ 	    olevel = (nbt < 0 || nbt > olevel)? 0: olevel - nbt;
++
+ 	    levelt = now;
+ 	} else
+ 	    ilevel = olevel = 0;

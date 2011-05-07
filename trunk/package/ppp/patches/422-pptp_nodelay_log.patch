@@ -1,0 +1,71 @@
+diff -ruN ppp-2.4.4.orig/pppd/plugins/pptp/pptp_callmgr.c ppp-2.4.4/pppd/plugins/pptp/pptp_callmgr.c
+--- ppp-2.4.4.orig/pppd/plugins/pptp/pptp_callmgr.c	2009-11-19 03:07:14.000000000 +0300
++++ ppp-2.4.4/pppd/plugins/pptp/pptp_callmgr.c	2009-11-19 08:24:05.000000000 +0300
+@@ -6,10 +6,12 @@
+  */
+ #include <signal.h>
+ #include <sys/time.h>
++#include <sys/resource.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
++#include <netinet/tcp.h>
+ #include <arpa/inet.h>
+ #include <sys/un.h>
+ #include <unistd.h>
+@@ -149,6 +151,8 @@
+         default: /* Parent. Return status to caller. */
+             exit(0);
+     }
++    /* set high priority */
++    setpriority(PRIO_PROCESS, 0, -20);
+     /* re-open stderr as /dev/null to release it */
+     file2fd("/dev/null", "wb", STDERR_FILENO);
+     /* Step 1c: Clean up unix socket on TERM */
+@@ -323,6 +327,9 @@
+     struct sockaddr_in dest, src;
+     int s;
+     struct timeval   timeo;
++#ifdef USE_TCP_NODELAY
++    int value = 1;
++#endif
+ 
+     dest.sin_family = AF_INET;
+     dest.sin_port   = htons(PPTP_PORT);
+@@ -345,7 +352,10 @@
+     timeo.tv_usec = 0;
+     setsockopt( s, SOL_SOCKET, SO_RCVTIMEO, &timeo, sizeof(timeo) );
+     setsockopt( s, SOL_SOCKET, SO_SNDTIMEO, &timeo, sizeof(timeo) );
+-
++#ifdef USE_TCP_NODELAY
++    setsockopt( s, SOL_TCP, TCP_NODELAY, &value, sizeof(value) );
++#endif
++    
+     if (connect(s, (struct sockaddr *) &dest, sizeof(dest)) < 0) {
+         warn("connect: %s", strerror(errno));
+         close(s); 
+diff -ruN ppp-2.4.4.orig/pppd/plugins/pptp/pptp_callmgr.h ppp-2.4.4/pppd/plugins/pptp/pptp_callmgr.h
+--- ppp-2.4.4.orig/pppd/plugins/pptp/pptp_callmgr.h	2009-11-19 03:07:14.000000000 +0300
++++ ppp-2.4.4/pppd/plugins/pptp/pptp_callmgr.h	2009-11-19 08:18:45.000000000 +0300
+@@ -6,6 +6,7 @@
+  */
+ 
+ #define PPTP_SOCKET_PREFIX "/var/run/pptp/"
++#define USE_TCP_NODELAY    1
+ 
+ int callmgr_main(int argc, char**argv, char**envp);
+ void callmgr_name_unixsock(struct sockaddr_un *where,
+diff -ruN ppp-2.4.4.orig/pppd/plugins/pptp/util.c ppp-2.4.4/pppd/plugins/pptp/util.c
+--- ppp-2.4.4.orig/pppd/plugins/pptp/util.c	2009-11-19 03:07:14.000000000 +0300
++++ ppp-2.4.4/pppd/plugins/pptp/util.c	2009-11-19 02:58:42.000000000 +0300
+@@ -26,8 +26,7 @@
+ char buf[256], string[256];				\
+ va_start(ap, format);					\
+ vsnprintf(buf, sizeof(buf), format, ap);		\
+-snprintf(string, sizeof(string), "%s %s[%s:%s:%d]: %s",	\
+-	 log_string, label, func, file, line, buf);	\
++snprintf(string, sizeof(string), "%s", buf);	        \
+ va_end(ap)
+ 
+ /*** open log *****************************************************************/

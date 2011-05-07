@@ -1,0 +1,164 @@
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/plugins/pptp/pptp.c ppp-2.4.4/pppd/plugins/pptp/pptp.c
+--- ppp-2.4.4.orig/pppd/plugins/pptp/pptp.c	2010-06-17 23:30:10.000000000 +0400
++++ ppp-2.4.4/pppd/plugins/pptp/pptp.c	2010-06-17 23:30:16.543257647 +0400
+@@ -119,7 +119,7 @@
+ }
+ static int pptp_start_client(void)
+ {
+-	int len;
++	socklen_t len;
+ 	struct sockaddr_pppox src_addr,dst_addr;
+ 	struct hostent *hostinfo;
+ 
+@@ -143,6 +143,7 @@
+ 		if (connect(sock,(struct sockaddr*)&addr,sizeof(addr)))
+ 		{
+ 			fatal("PPTP: connect failed (%s)\n",strerror(errno));
++			close(sock);
+ 			return -1;
+ 		}
+ 		getsockname(sock,(struct sockaddr*)&addr,&len);
+@@ -171,6 +172,7 @@
+ 	if (bind(pptp_fd,(struct sockaddr*)&src_addr,sizeof(src_addr)))
+ 	{
+ 		fatal("PPTP: failed to bind PPTP socket (%s)\n",strerror(errno));
++		close(pptp_fd);
+ 		return -1;
+ 	}
+ 	len=sizeof(src_addr);
+@@ -182,12 +184,19 @@
+          * Open connection to call manager (Launch call manager if necessary.)
+          */
+         callmgr_sock = open_callmgr(src_addr.sa_addr.pptp.call_id,dst_addr.sa_addr.pptp.sin_addr, pptp_phone,50);
++			if (callmgr_sock<0)
++			{
++				close(pptp_fd);
++				return -1;
++        }
+         /* Exchange PIDs, get call ID */
+     } while (get_call_id(callmgr_sock, getpid(), getpid(), &dst_addr.sa_addr.pptp.call_id) < 0);
+ 
+ 	if (connect(pptp_fd,(struct sockaddr*)&dst_addr,sizeof(dst_addr)))
+ 	{
+ 		fatal("PPTP: failed to connect PPTP socket (%s)\n",strerror(errno));
++		close(callmgr_sock);
++		close(pptp_fd);
+ 		return -1;
+ 	}
+ 
+@@ -209,6 +218,7 @@
+ 
+ static void pptp_disconnect(void)
+ {
++	if (pptp_server) close(callmgr_sock);
+ 	close(pptp_fd);
+ }
+ 
+@@ -243,7 +253,7 @@
+                 case 0: /* child */
+                 {
+                     close (fd);
+-                    //close(pptp_fd);
++                    close(pptp_fd);
+                     /* close the pty and gre in the call manager */
+                    // close(pty_fd);
+                     //close(gre_fd);
+@@ -251,8 +261,11 @@
+                 }
+                 default: /* parent */
+                     waitpid(pid, &status, 0);
+-                    if (status!= 0)
++                    if (status!= 0) {
+                        fatal("Call manager exited with error %d", status);
++							  close(fd);
++							  return -1;
++							}
+                     break;
+             }
+             sleep(1);
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/plugins/pptp/pptp_callmgr.c ppp-2.4.4/pppd/plugins/pptp/pptp_callmgr.c
+--- ppp-2.4.4.orig/pppd/plugins/pptp/pptp_callmgr.c	2010-06-17 23:30:10.000000000 +0400
++++ ppp-2.4.4/pppd/plugins/pptp/pptp_callmgr.c	2010-06-17 23:31:32.855228935 +0400
+@@ -184,6 +184,7 @@
+     do {
+         int rc;
+         fd_set read_set = call_set, write_set;
++        if( pptp_conn_is_dead(conn) ) break;
+         FD_ZERO (&write_set);
+         if (pptp_conn_established(conn)) {
+ 	  FD_SET (unix_sock, &read_set);
+@@ -311,6 +312,7 @@
+ 	}
+         /* with extreme prejudice */
+         pptp_conn_destroy(conn);
++        pptp_conn_free(conn);
+         vector_destroy(call_list);
+     }
+ cleanup:
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/plugins/pptp/pptp_ctrl.c ppp-2.4.4/pppd/plugins/pptp/pptp_ctrl.c
+--- ppp-2.4.4.orig/pppd/plugins/pptp/pptp_ctrl.c	2010-06-17 23:30:10.000000000 +0400
++++ ppp-2.4.4/pppd/plugins/pptp/pptp_ctrl.c	2010-06-17 23:30:16.547229940 +0400
+@@ -59,7 +59,7 @@
+     int inet_sock;
+     /* Connection States */
+     enum {
+-        CONN_IDLE, CONN_WAIT_CTL_REPLY, CONN_WAIT_STOP_REPLY, CONN_ESTABLISHED
++        CONN_IDLE, CONN_WAIT_CTL_REPLY, CONN_WAIT_STOP_REPLY, CONN_ESTABLISHED, CONN_DEAD
+     } conn_state; /* on startup: CONN_IDLE */
+     /* Keep-alive states */
+     enum {
+@@ -439,6 +439,8 @@
+     int i;
+     assert(conn != NULL); assert(conn->call != NULL);
+     /* destroy all open calls */
++    
++    if( !pptp_conn_is_dead(conn) ) {
+     for (i = 0; i < vector_size(conn->call); i++)
+         pptp_call_destroy(conn, vector_get_Nth(conn->call, i));
+     /* notify */
+@@ -447,6 +449,15 @@
+     close(conn->inet_sock);
+     /* deallocate */
+     vector_destroy(conn->call);
++   	conn->conn_state = CONN_DEAD; 
++    }
++}
++
++int pptp_conn_is_dead(PPTP_CONN * conn) {
++    return conn->conn_state == CONN_DEAD;
++} 
++
++void pptp_conn_free(PPTP_CONN * conn) {
+     free(conn);
+ }
+ 
+@@ -1037,10 +1048,13 @@
+     int i;
+     /* "Keep Alives and Timers, 1": check connection state */
+     if (global.conn->conn_state != CONN_ESTABLISHED) {
+-        if (global.conn->conn_state == CONN_WAIT_STOP_REPLY)
++        if (global.conn->conn_state == CONN_WAIT_STOP_REPLY) {
+             /* hard close. */
+             pptp_conn_destroy(global.conn);
+-        else /* soft close */
++            return;
++        }
++        
++        /* soft close */
+             pptp_conn_close(global.conn, PPTP_STOP_NONE);
+     }
+     /* "Keep Alives and Timers, 2": check echo status */
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/plugins/pptp/pptp_ctrl.h ppp-2.4.4/pppd/plugins/pptp/pptp_ctrl.h
+--- ppp-2.4.4.orig/pppd/plugins/pptp/pptp_ctrl.h	2010-06-17 23:30:10.000000000 +0400
++++ ppp-2.4.4/pppd/plugins/pptp/pptp_ctrl.h	2010-06-17 23:30:16.547229940 +0400
+@@ -36,6 +36,10 @@
+ void pptp_conn_close(PPTP_CONN * conn, u_int8_t close_reason);
+ /* hard close */
+ void pptp_conn_destroy(PPTP_CONN * conn);
++/* dead test */
++int pptp_conn_is_dead(PPTP_CONN * conn);
++/* free */
++void pptp_conn_free(PPTP_CONN * conn); 
+ 
+ /* Add file descriptors used by pptp to fd_set. */
+ void pptp_fd_set(PPTP_CONN * conn, fd_set * read_set, fd_set * write_set, int *max_fd);

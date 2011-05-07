@@ -1,0 +1,62 @@
+diff -U 3 -dHBbrN -- dnrd-2.20.3.orig/src/args.c dnrd-2.20.3/src/args.c
+--- dnrd-2.20.3.orig/src/args.c	2010-10-22 15:15:27.000000000 +0400
++++ dnrd-2.20.3/src/args.c	2010-10-28 14:44:30.180779634 +0400
+@@ -36,6 +36,7 @@
+ #include "lib.h"
+ #include "cache.h"
+ 
++extern int DEFAULT_TTL;
+ 
+ /*
+  * Definitions for both long and short forms of our options.
+@@ -51,6 +52,7 @@
+ #endif
+     {"cache",        1, 0, 'c'},
+     {"debug",        1, 0, 'd'},
++    {"ttl",        	1, 0, 'T'},
+     {"help",         0, 0, 'h'},
+     {"ignore",       0, 0, 'i'},
+ #ifdef ENABLE_PIDFILE
+@@ -98,7 +100,7 @@
+ #define file_exists(f) (access(f, R_OK) == 0)
+ 
+ const char short_options[] = 
+-    "a:bc:d:hi" PIDPARM "l" MASTERPARM "M:r:R:s:t:" UIDPARM "v";
++    "a:bc:d:T:hi" PIDPARM "l" MASTERPARM "M:r:R:s:t:" UIDPARM "v";
+ 
+ /*
+  * give_help()
+@@ -125,6 +127,7 @@
+ "                            Turn off cache or tune the low/high water marks\n"
+ "    -d, --debug=LEVEL       Set the debugging level and run in foreground.\n"
+ "                            Level 0 means no debugging at all.\n"
++"    -T, --ttl=VALUE         Set the ttl value of packet. Default: 3600\n"
+ /*
+ #ifndef __CYGWIN__
+ "    -g, --gid=GID           Group name numeric gid to switch to.\n"
+@@ -263,6 +266,13 @@
+ 	    opt_debug = atoi(optarg);
+ 	    break;
+ 	  }
++	  case 'T': {
++	    DEFAULT_TTL = atoi(optarg);
++	    if( DEFAULT_TTL < 1 ) DEFAULT_TTL = 1;
++	    else if( DEFAULT_TTL > 3600 ) DEFAULT_TTL = 3600;
++	    
++	    break;
++	  }
+ 	  case 'h': {
+ 	      give_help();
+ 	      exit(0);
+diff -U 3 -dHBbrN -- dnrd-2.20.3.orig/src/master.c dnrd-2.20.3/src/master.c
+--- dnrd-2.20.3.orig/src/master.c	2010-10-22 15:15:27.000000000 +0400
++++ dnrd-2.20.3/src/master.c	2010-10-28 14:39:31.681780023 +0400
+@@ -54,7 +54,7 @@
+ #define	DNS_TYPE_PTR		12
+ #define	DNS_TYPE_MX		15
+ 
+-#define	DEFAULT_TTL		(60 * 60)
++int	DEFAULT_TTL	=	(60 * 60);
+ 
+ typedef struct _string {
+     unsigned int code;

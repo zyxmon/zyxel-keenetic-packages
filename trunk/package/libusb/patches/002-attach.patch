@@ -1,0 +1,36 @@
+diff -ruN libusb-0.1.12.orig/linux.c libusb-0.1.12/linux.c
+--- libusb-0.1.12.orig/linux.c	2006-03-04 05:52:46.000000000 +0300
++++ libusb-0.1.12/linux.c	2009-03-22 17:12:46.000000000 +0300
+@@ -731,3 +731,20 @@
+   return 0;
+ }
+ 
++/* Attach function. McMCC, 220309 */
++int usb_attach_kernel_driver_np(usb_dev_handle *dev, int interface)
++{
++  struct usb_ioctl command;
++  int ret;
++
++  command.ifno = interface;
++  command.ioctl_code = IOCTL_USB_CONNECT;
++  command.data = NULL;
++
++  ret = ioctl(dev->fd, IOCTL_USB_IOCTL, &command);
++  if (ret)
++    USB_ERROR_STR(-errno, "could not attach kernel driver from interface %d: %s",
++        interface, strerror(errno));
++
++  return 0;
++}
+diff -ruN libusb-0.1.12.orig/usb.h.in libusb-0.1.12/usb.h.in
+--- libusb-0.1.12.orig/usb.h.in	2006-03-04 05:52:46.000000000 +0300
++++ libusb-0.1.12/usb.h.in	2009-03-22 17:15:18.000000000 +0300
+@@ -318,6 +318,8 @@
+ 	unsigned int namelen);
+ #define LIBUSB_HAS_DETACH_KERNEL_DRIVER_NP 1
+ int usb_detach_kernel_driver_np(usb_dev_handle *dev, int interface);
++#define LIBUSB_HAS_ATTACH_KERNEL_DRIVER_NP 1
++int usb_attach_kernel_driver_np(usb_dev_handle *dev, int interface);
+ #endif
+ 
+ char *usb_strerror(void);

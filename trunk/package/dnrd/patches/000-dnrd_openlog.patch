@@ -1,0 +1,26 @@
+diff -ruN dnrd-2.20.3.orig/src/args.c dnrd-2.20.3/src/args.c
+--- dnrd-2.20.3.orig/src/args.c	2005-07-19 09:43:47.000000000 +0400
++++ dnrd-2.20.3/src/args.c	2009-10-01 18:38:35.000000000 +0400
+@@ -235,9 +235,6 @@
+     int c;
+     /*    int gotdomain = 0;*/
+ 
+-    progname = strrchr(argv[0], '/');
+-    if (!progname) progname = argv[0];
+-
+     while(1) {
+ #if defined(__GNU_LIBRARY__)
+ 	c = getopt_long(argc, argv, short_options, long_options, 0);
+diff -ruN dnrd-2.20.3.orig/src/main.c dnrd-2.20.3/src/main.c
+--- dnrd-2.20.3.orig/src/main.c	2007-02-08 15:25:51.000000000 +0300
++++ dnrd-2.20.3/src/main.c	2009-10-01 18:38:24.000000000 +0400
+@@ -206,6 +206,9 @@
+ 	srvnode_t *s;
+ 	char *tmpstr;
+ 
++	progname = strrchr(argv[0], '/');
++        if (!progname) progname = argv[0];
++	
+ 	/*
+ 	 * Initialization in common.h of recv_addr is broken, causing at
+ 	 * least the '-a' switch not to work.  Instead of assuming

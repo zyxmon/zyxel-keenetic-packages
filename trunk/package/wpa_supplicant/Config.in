@@ -1,0 +1,13 @@
+
+# wpa_supplicant configuration
+
+config WPASUPP_RALINK
+	bool
+	default n
+	prompt "Support Ralink RT2860"
+
+config WPASUPP_OPENSSL
+	bool
+	default n
+	prompt "Support OpenSSL"
+
