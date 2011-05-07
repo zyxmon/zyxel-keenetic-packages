@@ -1,0 +1,13 @@
+#summary C чего начать
+
+= Введение =
+
+Для сборки приложений Вам потребуется набор скриптов из svn этого проекта и исходники ядра офифицальной прошивки ZyXEL Keenetic
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
