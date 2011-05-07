@@ -1,0 +1,505 @@
+diff -urN ppp-2.4.4/pppd/auth.c ppp-2.4.4.new/pppd/auth.c
+--- ppp-2.4.4/pppd/auth.c	2006-06-18 15:26:00.000000000 +0400
++++ ppp-2.4.4.new/pppd/auth.c	2009-09-28 20:06:46.000000000 +0400
+@@ -103,6 +103,8 @@
+ #endif
+ #include <time.h>
+ 
++#include "status.h"
++
+ #include "pppd.h"
+ #include "fsm.h"
+ #include "lcp.h"
+@@ -991,6 +993,7 @@
+      * authentication secrets.
+      */
+     status = EXIT_AUTH_TOPEER_FAILED;
++    stat_auth( 0 );
+     lcp_close(unit, "Failed to authenticate ourselves to peer");
+ }
+ 
+@@ -1037,6 +1040,7 @@
+ 	bit = 0;
+     }
+ 
++    stat_auth( 1 );
+     notice("%s authentication succeeded", prot);
+ 
+     /* Save the authentication method for later. */
+diff -urN ppp-2.4.4/pppd/ipcp.c ppp-2.4.4.new/pppd/ipcp.c
+--- ppp-2.4.4/pppd/ipcp.c	2009-10-04 18:15:23.000000000 +0400
++++ ppp-2.4.4.new/pppd/ipcp.c	2009-09-28 20:14:51.000000000 +0400
+@@ -61,6 +61,8 @@
+ #include "ipcp.h"
+ #include "pathnames.h"
+ 
++#include "status.h"
++
+ static const char rcsid[] = RCSID;
+ 
+ /* global vars */
+@@ -1874,9 +1876,12 @@
+      * Execute the ip-up script, like this:
+      *	/etc/ppp/ip-up interface tty speed local-IP remote-IP
+      */
+-    if (ipcp_script_state == s_down && ipcp_script_pid == 0) {
++    if (ipcp_script_state == s_down && ipcp_script_pid == 0) 
++    {
+ 	ipcp_script_state = s_up;
+ 	ipcp_script(path_ipup, 0);
++
++        stat_link( 1 );
+     }
+ }
+ 
+@@ -1924,9 +1929,12 @@
+     }
+ 
+     /* Execute the ip-down script */
+-    if (ipcp_script_state == s_up && ipcp_script_pid == 0) {
++    if (ipcp_script_state == s_up && ipcp_script_pid == 0) 
++    {
+ 	ipcp_script_state = s_down;
+ 	ipcp_script(path_ipdown, 0);
++
++        stat_link( 0 );
+     }
+ }
+ 
+diff -urN ppp-2.4.4/pppd/main.c ppp-2.4.4.new/pppd/main.c
+--- ppp-2.4.4/pppd/main.c	2009-10-04 18:15:23.000000000 +0400
++++ ppp-2.4.4.new/pppd/main.c	2009-10-04 17:55:21.000000000 +0400
+@@ -92,6 +92,8 @@
+ #include <arpa/inet.h>
+ #include <sys/sysinfo.h>
+ 
++#include "status.h"
++
+ #include "pppd.h"
+ #include "magic.h"
+ #include "fsm.h"
+@@ -306,6 +308,8 @@
+ #define PPP_DRV_NAME	"ppp"
+ #endif /* !defined(PPP_DRV_NAME) */
+ 
++//-----------------------------------------------------------------------------
++
+ int
+ main(argc, argv)
+     int argc;
+@@ -328,9 +332,11 @@
+     /* Initialize syslog facilities */
+     reopen_log();
+ 
++    do_start();
++
+     if (gethostname(hostname, MAXNAMELEN) < 0 ) {
+ 	option_error("Couldn't get hostname: %m");
+-	exit(1);
++	do_exit(1);
+     }
+     hostname[MAXNAMELEN-1] = 0;
+ 
+@@ -370,7 +376,7 @@
+     if (!options_from_file(_PATH_SYSOPTIONS, !privileged, 0, 1)
+ 	|| !options_from_user()
+ 	|| !parse_args(argc-1, argv+1))
+-	exit(EXIT_OPTION_ERROR);
++	do_exit(EXIT_OPTION_ERROR);
+     devnam_fixed = 1;		/* can no longer change device name */
+ 
+     /*
+@@ -389,12 +395,12 @@
+     if (geteuid() != 0) {
+ 	option_error("must be root to run %s, since it is not setuid-root",
+ 		     argv[0]);
+-	exit(EXIT_NOT_ROOT);
++	do_exit(EXIT_NOT_ROOT);
+     }
+ 
+     if (!ppp_available()) {
+ 	option_error("%s", no_ppp_msg);
+-	exit(EXIT_NO_KERNEL_SUPPORT);
++	do_exit(EXIT_NO_KERNEL_SUPPORT);
+     }
+ 
+     /*
+@@ -402,7 +408,7 @@
+      */
+     check_options();
+     if (!sys_check_options())
+-	exit(EXIT_OPTION_ERROR);
++	do_exit(EXIT_OPTION_ERROR);
+     auth_check_options();
+ #ifdef HAVE_MULTILINK
+     mp_check_options();
+@@ -776,7 +782,7 @@
+ 	if (pidfilename[0])
+ 	    create_pidfile(pid);
+ 	create_linkpidfile(pid);
+-	exit(0);		/* parent dies */
++	do_exit(0);		/* parent dies */
+     }
+     setsid();
+     chdir("/");
+@@ -1176,7 +1182,7 @@
+     cleanup();
+     notify(exitnotify, status);
+     syslog(LOG_INFO, "Exit.");
+-    exit(status);
++    do_exit(status);
+ }
+ 
+ /*
+@@ -1691,11 +1697,11 @@
+     setuid(uid);
+     if (getuid() != uid) {
+ 	fprintf(stderr, "pppd: setuid failed\n");
+-	exit(1);
++	do_exit(1);
+     }
+     execl("/bin/sh", "sh", "-c", program, (char *)0);
+     perror("pppd: could not exec /bin/sh");
+-    exit(99);
++    do_exit(99);
+     /* NOTREACHED */
+ }
+ 
+diff -urN ppp-2.4.4/pppd/Makefile.linux ppp-2.4.4.new/pppd/Makefile.linux
+--- ppp-2.4.4/pppd/Makefile.linux	2009-10-04 18:15:23.000000000 +0400
++++ ppp-2.4.4.new/pppd/Makefile.linux	2009-10-04 18:28:16.000000000 +0400
+@@ -13,16 +13,16 @@
+ 
+ PPPDSRCS = main.c magic.c fsm.c lcp.c ipcp.c upap.c chap-new.c md5.c ccp.c \
+ 	   ecp.c ipxcp.c auth.c options.c sys-linux.c md4.c chap_ms.c \
+-	   demand.c utils.c tty.c eap.c chap-md5.c
++	   demand.c utils.c tty.c eap.c chap-md5.c status.c
+ 
+ HEADERS = ccp.h chap-new.h ecp.h fsm.h ipcp.h \
+ 	ipxcp.h lcp.h magic.h md5.h patchlevel.h pathnames.h pppd.h \
+-	upap.h eap.h
++	upap.h eap.h status.h
+ 
+ MANPAGES = pppd.8
+ PPPDOBJS = main.o magic.o fsm.o lcp.o ipcp.o upap.o chap-new.o md5.o ccp.o \
+ 	   ecp.o auth.o options.o demand.o utils.o sys-linux.o ipxcp.o tty.o \
+-	   eap.o chap-md5.o
++	   eap.o chap-md5.o status.o
+ 
+ #
+ # include dependencies if present
+diff -urN ppp-2.4.4/pppd/plugins/pptp/pptp_callmgr.c ppp-2.4.4.new/pppd/plugins/pptp/pptp_callmgr.c
+--- ppp-2.4.4/pppd/plugins/pptp/pptp_callmgr.c	2009-10-04 18:15:23.000000000 +0400
++++ ppp-2.4.4.new/pppd/plugins/pptp/pptp_callmgr.c	2009-10-01 23:49:56.000000000 +0400
+@@ -26,6 +26,8 @@
+ #include "vector.h"
+ #include "util.h"
+ 
++#include "../../status.h"
++
+ extern struct in_addr localbind; /* from pptp.c */
+ extern int call_ID;
+ 
+@@ -320,6 +322,8 @@
+ {
+     struct sockaddr_in dest, src;
+     int s;
++    struct timeval   timeo;
++
+     dest.sin_family = AF_INET;
+     dest.sin_port   = htons(PPTP_PORT);
+     dest.sin_addr   = inetaddr;
+@@ -336,9 +340,19 @@
+             close(s); return -1;
+         }
+     }
++
++    timeo.tv_sec = 5;
++    timeo.tv_usec = 0;
++    setsockopt( s, SOL_SOCKET, SO_RCVTIMEO, &timeo, sizeof(timeo) );
++    setsockopt( s, SOL_SOCKET, SO_SNDTIMEO, &timeo, sizeof(timeo) );
++
+     if (connect(s, (struct sockaddr *) &dest, sizeof(dest)) < 0) {
+         warn("connect: %s", strerror(errno));
+-        close(s); return -1;
++        close(s); 
++
++        stat_server( 0 );
++
++        return -1;
+     }
+     return s;
+ }
+diff -urN ppp-2.4.4/pppd/plugins/rp-pppoe/discovery.c ppp-2.4.4.new/pppd/plugins/rp-pppoe/discovery.c
+--- ppp-2.4.4/pppd/plugins/rp-pppoe/discovery.c	2009-10-04 18:15:23.000000000 +0400
++++ ppp-2.4.4.new/pppd/plugins/rp-pppoe/discovery.c	2009-10-01 23:41:35.000000000 +0400
+@@ -36,6 +36,8 @@
+ 
+ #include <signal.h>
+ 
++#include "../../status.h"
++
+ /**********************************************************************
+ *%FUNCTION: parseForHostUniq
+ *%ARGUMENTS:
+@@ -587,6 +589,9 @@
+ 	    warn("Timeout waiting for PADO packets");
+ 	    close(conn->discoverySocket);
+ 	    conn->discoverySocket = -1;
++
++            stat_server( 0 );
++
+ 	    return;
+ 	}
+ 	sendPADI(conn);
+@@ -618,6 +623,9 @@
+ 	    warn("Timeout waiting for PADS packets");
+ 	    close(conn->discoverySocket);
+ 	    conn->discoverySocket = -1;
++
++            stat_server( 0 );
++
+ 	    return;
+ 	}
+ 	sendPADR(conn);
+diff -urN ppp-2.4.4/pppd/plugins/rp-pppoe/Makefile.linux ppp-2.4.4.new/pppd/plugins/rp-pppoe/Makefile.linux
+--- ppp-2.4.4/pppd/plugins/rp-pppoe/Makefile.linux	2009-10-04 18:15:23.000000000 +0400
++++ ppp-2.4.4.new/pppd/plugins/rp-pppoe/Makefile.linux	2009-10-04 18:27:18.000000000 +0400
+@@ -49,7 +49,7 @@
+ plugin.o: plugin.c
+ 	$(CC) '-DRP_VERSION="$(VERSION)"' $(CFLAGS) -I../../..  -c -o plugin.o -fPIC plugin.c
+ 
+-libplugin.a: discovery.o if.o common.o debug.o
++libplugin.a: discovery.o if.o common.o debug.o ../../status.o
+ 	$(AR) -rc $@ $^
+ 
+ discovery.o: discovery.c
+@@ -64,3 +64,6 @@
+ common.o: common.c
+ 	$(CC) $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o common.o -fPIC common.c
+ 
++../../status.o: ../../status.c
++	$(CC) $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o ../../status.o -fPIC ../../status.c
++
+Файлы ppp-2.4.4/pppd/plugins/rp-pppoe/pppoe-discovery и ppp-2.4.4.new/pppd/plugins/rp-pppoe/pppoe-discovery различаются
+diff -urN ppp-2.4.4/pppd/status.c ppp-2.4.4.new/pppd/status.c
+--- ppp-2.4.4/pppd/status.c	1970-01-01 03:00:00.000000000 +0300
++++ ppp-2.4.4.new/pppd/status.c	2009-10-04 18:02:02.000000000 +0400
+@@ -0,0 +1,178 @@
++
++#include <stdio.h>
++#include <stdlib.h>
++#include <syslog.h>
++
++#include <sys/stat.h>
++
++//-----------------------------------------------------------------------------
++
++char  *z_ppp_status = "/var/tmp/pppstatus";  // status string
++char  *z_ppp_result = "/var/tmp/pppresult";  // result number
++char  *z_ppp_chain  = "/var/tmp/pppchain";   // status chain
++
++enum
++{
++  kePPPIdle          = 0,
++  kePPPSuccess       = 1,
++  kePPPStart         = 2,
++  kePPPServer        = 3,
++  kePPPProto         = 4,
++  kePPPAuth          = 5,
++};
++
++char *az_ppp_result[] = 
++{
++  "Disconnected",
++  "Connected",
++  "Connection",
++  "No responce",
++  "Protocol error",
++  "Auth error",
++  NULL
++};
++
++//-----------------------------------------------------------------------------
++
++void
++_stat_write_status( int a_nStat )
++{
++  FILE  *fp;
++
++  fp = fopen( z_ppp_status, "w" );
++  if( NULL != fp )
++  {
++    fprintf( fp, "%s\n", az_ppp_result[ a_nStat ] );
++    fclose( fp );
++  }
++}
++
++void
++_stat_write_result( int a_nStat )
++{
++  FILE  *fp;
++
++  fp = fopen( z_ppp_result, "w" );
++  if( NULL != fp )
++  {
++    fprintf( fp, "%d\n", a_nStat );
++    fclose( fp );
++  }
++}
++
++void
++_stat_write_chain( int a_nStat )
++{
++  FILE           *fp;
++  struct  stat   tStat;
++
++  if( -1 != stat( z_ppp_chain, &tStat ) )
++  {
++    if( tStat.st_size > 64 )
++      unlink( z_ppp_chain );
++  }
++
++  fp = fopen( z_ppp_chain, "a+" );
++  if( NULL != fp )
++  {
++    fprintf( fp, "%d\n", a_nStat );
++    fclose( fp );
++  }
++}
++
++int
++_stat_get()
++{
++  FILE           *fp;
++  int             nStat;
++
++  fp = fopen( z_ppp_result, "r" );
++  if( NULL != fp )
++  {
++    if( 1 != fscanf( fp, "%d", &nStat ) )
++      nStat = kePPPIdle;
++    fclose( fp );
++
++    return nStat;
++  }
++  return kePPPIdle;
++}
++
++//-----------------------------------------------------------------------------
++
++void
++do_exit( int status )
++{
++  int   ppp_status;
++
++  if( 0 != status )
++  {
++    ppp_status = _stat_get();
++    if( kePPPStart == ppp_status )
++    {
++      _stat_write_status( kePPPProto );
++      _stat_write_result( kePPPProto );
++      _stat_write_chain( kePPPProto );
++    }
++  }
++
++  exit( status );
++}
++
++void
++do_start()
++{
++  _stat_write_result( kePPPStart );
++  _stat_write_status( kePPPStart );
++  _stat_write_chain( kePPPStart );
++}
++
++void
++stat_link( int a_bStat )
++{
++  int    status;
++
++  if( a_bStat )
++    status = kePPPSuccess;
++  else
++    status = kePPPIdle;
++
++  _stat_write_result( status );
++  _stat_write_status( status );
++  _stat_write_chain( status );
++}
++
++void
++stat_auth( int  a_bStat )
++{
++  int   status;
++
++  status = _stat_get();
++
++  if( 0 == a_bStat )
++  {
++    if( kePPPStart == status )
++    {
++      _stat_write_result( kePPPAuth );
++      _stat_write_status( kePPPAuth );
++    }
++    _stat_write_chain( kePPPAuth );
++  }
++}
++
++void
++stat_server( int  a_bStat )
++{
++  int   status;
++
++  status = _stat_get();
++
++  if( 0 == a_bStat )
++  {
++    _stat_write_result( kePPPServer );
++    _stat_write_status( kePPPServer );
++
++    _stat_write_chain( kePPPServer );
++  }
++}
++
+diff -urN ppp-2.4.4/pppd/status.h ppp-2.4.4.new/pppd/status.h
+--- ppp-2.4.4/pppd/status.h	1970-01-01 03:00:00.000000000 +0300
++++ ppp-2.4.4.new/pppd/status.h	2009-10-01 23:26:55.000000000 +0400
+@@ -0,0 +1,15 @@
++
++#ifndef   __STATUS_H__INCLUDED__
++#define   __STATUS_H__INCLUDED__
++
++void  do_exit( int  status );
++
++void  do_start();
++
++void  stat_link( int a_bStat );
++
++void  stat_auth( int  a_bStat );
++
++void  stat_server( int  a_bStat );
++
++#endif
+--- ppp-2.4.4/pppd/plugins/pptp/pptp.c	2009-10-04 18:15:23.000000000 +0400
++++ ppp-2.4.4.new/pppd/plugins/pptp/pptp.c	2009-10-13 20:41:55.000000000 +0400
+@@ -54,6 +54,8 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ 
++#include "status.h"
++
+ extern char** environ;
+ 
+ char pppd_version[] = VERSION;
+@@ -124,6 +126,8 @@
+ 	hostinfo=gethostbyname(pptp_server);
+   if (!hostinfo)
+ 	{
++          stat_server( 0 );
++
+ 		fatal("PPTP: Unknown host %s\n", pptp_server);
+ 		return -1;
+ 	}

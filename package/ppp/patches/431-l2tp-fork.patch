@@ -1,0 +1,499 @@
+--- ppp-2.4.4.orig/pppd/Makefile.linux	2011-03-14 10:29:18.000000000 +0300
++++ ppp-2.4.4/pppd/Makefile.linux	2011-03-14 14:47:37.000000000 +0300
+@@ -138,7 +138,7 @@
+ # For "Pluggable Authentication Modules", see ftp.redhat.com:/pub/pam/.
+ ifdef USE_PAM
+ CFLAGS   += -DUSE_PAM
+-LIBS     += -lpam -ldl -lpthread
++LIBS     += -lpam -ldl
+ endif
+ 
+ # Multi-linnk
+@@ -168,7 +168,7 @@
+ ifdef PLUGIN
+ CFLAGS	+= -DPLUGIN
+ LDFLAGS	+= -Wl,-E
+-LIBS	+= -ldl -lpthread
++LIBS	+= -ldl
+ endif
+ 
+ ifdef FILTER
+--- ppp-2.4.4.orig/pppd/plugins/pppol2tp/l2tp.c	2011-03-14 10:29:18.000000000 +0300
++++ ppp-2.4.4/pppd/plugins/pppol2tp/l2tp.c	2011-03-14 14:47:37.000000000 +0300
+@@ -137,13 +137,15 @@
+ 	return 1;
+ }
+ 
+-static int connect_pppol2tp(void)
+-{
++static int connect_pppol2tp(void) {
++	 int isock_fd;
++	
+     if( l2tp_init(pppol2tp_lns) ) {
+ 	fatal("l2tp_init failed");
+     } else {
+    	l2tp_wait_socket();
+-		if( isock_fd == -1 ) {
++   	 if( (isock_fd = l2tp_get_socket()) < 0 ) {
++   		l2tp_exit();
+ 	    fatal("l2tp_get_socket failed");
+ 		}
+     }
+@@ -167,8 +169,9 @@
+     char reorderto[16];
+     char tid[8];
+     char sid[8];
++    int isock_fd;
+     
+-    if( isock_fd == -1 ) return;
++    if( (isock_fd = l2tp_get_socket()) < 0 ) return;
+     
+ 	if (pppol2tp_ifname[0]) {
+ 		struct ifreq ifr;
+@@ -229,14 +232,18 @@
+ 			      int pcomp,
+ 			      int accomp)
+ {
+-	if( isock_fd == -1 ) return;
++	int isock_fd;
++	
++	if( (isock_fd = l2tp_get_socket()) < 0 ) return;
+ 	
+ 	if ((lcp_allowoptions[0].mru > 0) && (mru > lcp_allowoptions[0].mru)) {
+ 		warn("Overriding mru %d to mtu value %d", mru, lcp_allowoptions[0].mru);
+ 		mru = lcp_allowoptions[0].mru;
+ 	}
+-	if ((ifunit >= 0) && ioctl(isock_fd, PPPIOCSMRU, (caddr_t) &mru) < 0)
+-		error("Couldn't set PPP MRU: %m");
++	if ((ifunit >= 0) && ioctl(isock_fd, PPPIOCSMRU, (caddr_t) &mru) < 0) {
++		//ignore
++		//error("Couldn't set PPP MRU: %m");
++	}
+ }
+ 
+ /*****************************************************************************
+--- ppp-2.4.4.orig/pppd/plugins/pppol2tp/l2tp.h	2011-03-14 10:29:18.000000000 +0300
++++ ppp-2.4.4/pppd/plugins/pppol2tp/l2tp.h	2011-03-14 14:47:37.000000000 +0300
+@@ -193,7 +193,7 @@
+ 
+ extern struct tunnel_list tunnels;
+ extern void tunnel_close (struct tunnel *t);
+-extern void *network_thread (void*);
++extern void network_thread ();
+ extern int init_network ();
+ extern void close_network ();
+ extern int max_tunnels;
+@@ -221,15 +221,13 @@
+ 
+ static inline void *zalloc(int isize) {
+     void *pdata;
+-    if( (pdata = malloc(isize)) )
+-	memset(pdata, 0, isize);
++    if( (pdata = malloc(isize)) ) memset(pdata, 0, isize);
+     else exit(-111);
+     return pdata;
+ }
+ 
+-extern int isock_fd;
+ extern void l2tp_wait_socket();
+-extern void l2tp_unblock();
++extern int l2tp_get_socket();
+ extern int l2tp_init(char *lns);
+ extern void l2tp_exit();
+ 
+--- ppp-2.4.4.orig/pppd/plugins/pppol2tp/network.c	2011-03-14 10:29:18.000000000 +0300
++++ ppp-2.4.4/pppd/plugins/pppol2tp/network.c	2011-03-14 14:47:37.000000000 +0300
+@@ -347,7 +347,7 @@
+ 	return max;
+ }
+ 
+-void *network_thread (void *pref)
++void network_thread ()
+ {
+     /*
+      * We loop forever waiting on either data from the ppp drivers or from
+@@ -367,14 +367,7 @@
+     struct iovec iov;
+     char cbuf[256];
+     unsigned int refme, refhim;
+-    sigset_t sig_ignore;
+ 
+-	 sigemptyset(&sig_ignore);
+-	 sigaddset(&sig_ignore, SIGINT);
+-	 sigaddset(&sig_ignore, SIGTERM);
+-	 sigaddset(&sig_ignore, SIGHUP);
+-	 
+-	 pthread_sigmask(SIG_BLOCK, &sig_ignore, NULL);
+     
+     /* This one buffer can be recycled for everything except control packets */
+     buf = new_buf (MAX_RECV_SIZE);
+@@ -601,6 +594,4 @@
+             st = st->next;
+         }
+     }
+-    
+-    return NULL;
+ }
+--- ppp-2.4.4.orig/pppd/plugins/pppol2tp/xl2tpd.c	2011-03-14 10:29:18.000000000 +0300
++++ ppp-2.4.4/pppd/plugins/pppol2tp/xl2tpd.c	2011-03-14 14:58:31.000000000 +0300
+@@ -45,7 +45,9 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include "l2tp.h"
+-#include <pthread.h>
++#include <sys/ipc.h>
++#include <sys/shm.h>
++
+ 
+ struct tunnel_list tunnels;
+ int max_tunnels = DEF_MAX_TUNNELS;
+@@ -54,19 +56,28 @@
+ 
+ int iexit = 0;
+ int isock_fd = -1;
+-int icontrol_pid = -1;
+-static int icontrol_thread = 0;
+-static pthread_t l2tp_thread;
+-static pthread_mutex_t l2tp_mutex = PTHREAD_MUTEX_INITIALIZER;
+-static pthread_cond_t  l2tp_cond  = PTHREAD_COND_INITIALIZER;
++pid_t control_pid = -1, manager_pid = -1;
++key_t key;
++
++typedef struct {
++	int ifd;
++	uint32_t ipv4_addr;
++	uint16_t port;
++	uint32_t ourtid;
++	uint32_t ourcid;
++	uint32_t tid;
++	uint32_t cid;
++} SHT, *PSHT;
++
++int shmid;
++PSHT segptr = NULL;
+ 
+ extern int _stat_get();
+ extern void _stat_write_status( int a_nStat );
+ extern void _stat_write_result( int a_nStat );
+ extern void _stat_write_chain( int a_nStat );
+ 
+-void init_tunnel_list (struct tunnel_list *t)
+-{
++void init_tunnel_list (struct tunnel_list *t) {
+     t->head = NULL;
+     t->count = 0;
+     t->calls = 0;
+@@ -82,61 +93,25 @@
+ 	
+      if( !iexit ) {
+   		 iexit = 1;
+-		 if( icontrol_pid != -1 ) kill(icontrol_pid, SIGHUP);
+-    }
+-    
+-    l2tp_unblock();
+-}
+-
+-void start_pppd (struct call *c)
+-{
+-    int flags;
+-    struct sockaddr_pppol2tp sax;
+-    
+-    isock_fd = socket(AF_PPPOX, SOCK_DGRAM, PX_PROTO_OL2TP);
+-    if (isock_fd < 0) {
+-	l2tp_log (LOG_WARNING, "%s: Unable to allocate PPPoL2TP socket.\n",
+-			__FUNCTION__);
+-		
+-	l2tp_unblock();
+-	return;
+-    }
+-    flags = fcntl(isock_fd, F_GETFL);
+-    if (flags == -1 || fcntl(isock_fd, F_SETFL, flags | O_NONBLOCK) == -1) {
+-    	l2tp_log (LOG_WARNING, "%s: Unable to set PPPoL2TP socket nonblock.\n",
+-    			__FUNCTION__);
+-	close(isock_fd);
+-	isock_fd = -1;
+-	l2tp_unblock();
+-    	return;
++		 if( istat != -1 && control_pid != -1 ) {
++			 kill(control_pid, SIGHUP);
+     }
+-    sax.sa_family = AF_PPPOX;
+-    sax.sa_protocol = PX_PROTO_OL2TP;
+-    sax.pppol2tp.pid = 0;
+-    sax.pppol2tp.fd = server_socket;
+-    sax.pppol2tp.addr.sin_addr.s_addr = c->container->peer.sin_addr.s_addr;
+-    sax.pppol2tp.addr.sin_port = c->container->peer.sin_port;
+-    sax.pppol2tp.addr.sin_family = AF_INET;
+-    sax.pppol2tp.s_tunnel  = c->container->ourtid;
+-    sax.pppol2tp.s_session = c->ourcid;
+-    sax.pppol2tp.d_tunnel  = c->container->tid;
+-    sax.pppol2tp.d_session = c->cid;
+-    if (connect(isock_fd, (struct sockaddr *)&sax, sizeof(sax)) < 0) {
+-    	l2tp_log (LOG_WARNING, "%s: Unable to connect PPPoL2TP socket.\n",
+-    			__FUNCTION__);
+ 
+-	close(isock_fd);
+-	isock_fd = -1;
+-	l2tp_unblock();
+-	return;
++		 segptr->ifd = -2; /* notify mark */
+     }
+-    /* l2tp_log (LOG_INFO, "Connect to server %s\n", inet_ntoa(sax.pppol2tp.addr.sin_addr)); */
++}
+     
+-    l2tp_unblock();
++void start_pppd (struct call *c) {
++    segptr->ifd = server_socket;
++	 segptr->ipv4_addr = c->container->peer.sin_addr.s_addr;
++	 segptr->port = c->container->peer.sin_port;
++	 segptr->ourtid = c->container->ourtid;
++	 segptr->ourcid = c->ourcid;
++	 segptr->tid = c->container->tid;
++	 segptr->cid = c->cid;
+ }
+ 
+-void destroy_tunnel (struct tunnel *t)
+-{
++void destroy_tunnel (struct tunnel *t) {
+     /*
+      * Immediately destroy a tunnel (and all its calls)
+      * and free its resources.  This may be called
+@@ -383,7 +358,7 @@
+     struct tunnel *t = tunnels.head;
+     while (t)
+     {
+-        if (t->ourtid == tid)
++        if (t->ourtid == tid )
+         {
+             l2tp_log (LOG_INFO,
+                  "Disconnecting from %s, Local: %d, Remote: %d\n",
+@@ -395,7 +370,7 @@
+         }
+         t = t->next;
+     };
+-    l2tp_log (LOG_DEBUG, "No such tunnel %d to hang up.\n", tid);
++    //l2tp_log (LOG_DEBUG, "No such tunnel %d to hang up.\n", tid);
+     return;
+ }
+ 
+@@ -473,42 +448,144 @@
+     return tmp;
+ }
+ 
++int manager_active() {
++	int iwaitstatus, iret;
++	
++	if( manager_pid != -1 ) {
++		if( (iret = waitpid(manager_pid, &iwaitstatus, WNOHANG)) == 0 ) return 1;
++		else if( iret != -1 && !WIFEXITED(iwaitstatus) && !WIFSIGNALED(iwaitstatus) ) return 1;
++		
++		manager_pid = -1;
++	}
++				
++	return 0;
++}
++
++
+ void l2tp_wait_socket() {
+-    pthread_mutex_lock(&l2tp_mutex);
+-    if( icontrol_thread ) pthread_cond_wait(&l2tp_cond, &l2tp_mutex);
+-    pthread_mutex_unlock(&l2tp_mutex);
++	while( 1 ) {
++		if( !manager_active() ) break;
++		if( segptr->ifd > 0 || segptr->ifd == -2 ) break;
++		usleep(50000);
++	} 
+ }
+ 
+-void l2tp_unblock() {
+-    pthread_mutex_lock(&l2tp_mutex);
+-    pthread_cond_signal(&l2tp_cond);
+-    pthread_mutex_unlock(&l2tp_mutex);
++int l2tp_get_socket() {
++	int flags;
++   struct sockaddr_pppol2tp sax;
++   
++   if( isock_fd != -1 ) return isock_fd;
++   if( segptr->ifd < 0 ) return -1;
++   
++   isock_fd = socket(AF_PPPOX, SOCK_DGRAM, PX_PROTO_OL2TP);
++   if( isock_fd < 0 ) {
++		l2tp_log (LOG_WARNING, "%s: Unable to allocate PPPoL2TP socket.\n",
++			__FUNCTION__);
++		
++		isock_fd = -1;
++		return -2;
++   }
++   
++   flags = fcntl(isock_fd, F_GETFL);
++   if( flags == -1 || fcntl(isock_fd, F_SETFL, flags | O_NONBLOCK) == -1 ) {
++    	l2tp_log (LOG_WARNING, "%s: Unable to set PPPoL2TP socket nonblock.\n",
++    			__FUNCTION__);
++		close(isock_fd);
++		isock_fd = -1;
++    	return -3;
++   }
++    
++   sax.sa_family = AF_PPPOX;
++   sax.sa_protocol = PX_PROTO_OL2TP;
++   sax.pppol2tp.pid = 0;
++   sax.pppol2tp.fd = segptr->ifd;
++   sax.pppol2tp.addr.sin_addr.s_addr = segptr->ipv4_addr;
++   sax.pppol2tp.addr.sin_port = segptr->port;
++   sax.pppol2tp.addr.sin_family = AF_INET;
++   sax.pppol2tp.s_tunnel  = segptr->ourtid;
++   sax.pppol2tp.s_session = segptr->ourcid;
++   sax.pppol2tp.d_tunnel  = segptr->tid;
++   sax.pppol2tp.d_session = segptr->cid;
++   if( connect(isock_fd, (struct sockaddr *)&sax, sizeof(sax)) < 0 ) {
++    	l2tp_log (LOG_WARNING, "%s: Unable to connect PPPoL2TP socket.\n",
++    			__FUNCTION__);
++
++		close(isock_fd);
++		isock_fd = -1;
++		return -4;
++   }
++   
++   close_network();
++
++	return isock_fd;
++}
++
++void on_term(int isig) {
++	stop_pppd(-1);
+ }
+ 
+ int l2tp_init(char *lns) {
+     struct lac *lac;
+     struct in_addr listenaddr;
++    struct tunnel *t;
++    pid_t fpid;
++    int itry;
+     
++    key = ftok("/dev/shm/l2tp", 'S');
+     srand( time(NULL) );
+     rand_source = 0;
+ 
+     init_config(lns);
+     init_tunnel_list(&tunnels);
+ 
+-    if (init_network ()) 
++    if( init_network () ) return -1;
++    
++    switch( (fpid = fork()) ) {
++    case -1: 
++   	 close_network();
+ 		return -1;
++    case 0: control_pid = getppid(); break;
++    default: 
++   	 manager_pid = fpid; 
++		 
++		 if( (shmid = shmget(key, sizeof(SHT), IPC_CREAT|IPC_EXCL|0666)) == -1 ) {
++  			if( (shmid = shmget(key, sizeof(SHT), 0)) == -1 ) 
++  				close_network();
++	  			return -1;
++		 }
++		 
++		 if( (segptr = (PSHT)shmat(shmid, 0, 0)) == (int*)-1 ) {
++			segptr = NULL;
++     		shmctl(shmid, IPC_RMID, 0);
++     		close_network();
++		return -1;
++  		 }
++  		 
++  		 segptr->ifd = -1; /* wait for manager */
++   	 return 0;
++    }
++    
++    /* manager part */
++    
++    itry = 0;
++    while( ++itry < 20 ) { /* average 1 sec */
++   	if( (shmid = shmget(key, sizeof(SHT), 0)) != -1 ) {
++			segptr = (PSHT)shmat(shmid, 0, 0);
++			break;
++		}
++		usleep(50000);
++  	 }
++  	 
++  	 if( segptr == (PSHT)-1 ) {
++  		close_network();
++  		exit(-112);
++  	 }
+ 
+     init_scheduler ();
+     
+     l2tp_log (LOG_INFO, "l2tp version " SERVER_VERSION " started on %s PID:%d\n",
+          hostname, getpid ());
+-/*
+-    l2tp_log (LOG_INFO,
+-         "Written by Mark Spencer, Copyright (C) 1998, Adtran, Inc.\n");
+-    l2tp_log (LOG_INFO, "Forked by Scott Balmos and David Stipp, (C) 2001\n");
+-    l2tp_log (LOG_INFO, "Inherited by Jeff McAdams, (C) 2002\n");
+-    l2tp_log (LOG_INFO, "Forked again by Xelerance (www.xelerance.com) (C) 2006\n");
+-*/
++
+     listenaddr.s_addr = gconfig.listenaddr;
+ 
+     lac = laclist;
+@@ -522,25 +599,24 @@
+             magic_lac_dial (lac);
+     }
+     
+-    icontrol_pid = getpid();
++    signal(SIGTERM, on_term);
++    signal(SIGINT, on_term);
++    signal(SIGHUP, on_term);
+ 
+-    if( pthread_create(&l2tp_thread, NULL, network_thread, NULL) ) {
+-		 l2tp_log (LOG_WARNING, "%s: Unable to create l2tp control thread.\n",
+-    		__FUNCTION__);
+-		 return -2;
+-    }
+-    icontrol_thread = 1;
++    network_thread();
+     
++    if( (t = tunnels.head) ) 
++   	lac_disconnect(t->ourtid);
++    
++    shmdt(segptr);
++    close_network();
++    
++    exit(0);
+     return 0;
+ }
+ 
+ void l2tp_exit() {
+-	 stop_pppd(-1);
+-    
+-    if( icontrol_thread ) {
+-		icontrol_thread = 0;
+-		pthread_detach(l2tp_thread);
+-    }
++	 int itry;
+     
+     if( isock_fd != -1 ) {
+         close(isock_fd);
+@@ -548,4 +624,22 @@
+     }
+     
+     close_network();
++    
++	 if( manager_active() ) {
++		 kill(manager_pid, SIGHUP);
++		 
++		 itry = 0;
++		 while( ++itry < 20 ) { /* average 1 sec */
++			 if( !manager_active() ) break;
++			 usleep(50000);
++		 }
++		 
++		 if( manager_active() ) kill(manager_pid, SIGKILL);
++	 }
++    
++    if( segptr ) {
++		shmdt(segptr);
++		shmctl(shmid, IPC_RMID, 0);
++		segptr = NULL;
++	}
+ }

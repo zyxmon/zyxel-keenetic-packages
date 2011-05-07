@@ -1,0 +1,28 @@
+diff -ruN miniupnpd-1.2.orig/config.h.openwrt miniupnpd-1.2/config.h.openwrt
+--- miniupnpd-1.2.orig/config.h.openwrt	2008-05-02 04:07:44.000000000 +0400
++++ miniupnpd-1.2/config.h.openwrt	2008-11-12 10:06:29.000000000 +0300
+@@ -6,12 +6,12 @@
+ #ifndef __CONFIG_H__
+ #define __CONFIG_H__
+ 
+-#define UPNP_VERSION	"20070228"
++#define UPNP_VERSION	"1.4"
+ #define USE_NETFILTER 1
+-#define OS_NAME	"OpenWRT"
++#define OS_NAME	"ZyXEL"
+ /* OS/version */
+-#define OS_VERSION	"OpenWRT/kamikaze"
+-#define OS_URL	"http://openwrt.org/"
++#define OS_VERSION	"ZyXEL"
++#define OS_URL	"http://omni.zyxel.ru/catalogue/internet/ethernet"
+ 
+ #define LOG_MINIUPNPD	LOG_DAEMON
+ 
+@@ -24,4 +24,7 @@
+ 
+ #define ENABLE_L3F_SERVICE
+ 
++#define ENABLE_EVENTS
++#define ENABLE_LEASEFILE
++
+ #endif

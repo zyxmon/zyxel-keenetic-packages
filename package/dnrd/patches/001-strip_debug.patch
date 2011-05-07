@@ -1,0 +1,157 @@
+diff -ruN dnrd-2.20.3.orig/src/args.c dnrd-2.20.3/src/args.c
+--- dnrd-2.20.3.orig/src/args.c	2009-10-01 18:40:51.000000000 +0400
++++ dnrd-2.20.3/src/args.c	2009-10-02 01:51:10.000000000 +0400
+@@ -305,7 +305,7 @@
+ 	  }
+ 	  case 'r': {
+ 	    if ((reactivate_interval = atoi(optarg)))
+-	      log_debug(1, "Setting retry interval to %i seconds.", 
++	      log_debug(3, "Setting retry interval to %i seconds.", 
+ 			reactivate_interval);
+ 	    else 
+ 	      log_debug(1, "Retry=0. Will never deactivate servers.");
+@@ -320,7 +320,7 @@
+ 	      *sep = 0;
+ 	      if ( (p=search_domnode(domain_list, s)) == NULL) {
+ 		p=add_domain(domain_list, load_balance, s, 200);
+-		log_debug(1, "Added domain %s %s load balancing", sep+1, 
++		log_debug(3, "Added domain %s %s load balancing", sep+1, 
+ 			  load_balance ? "with" : "without");
+ 	      } else {
+ 		free(s);
+@@ -331,12 +331,12 @@
+ 		      progname, optarg);
+ 	      exit(-1);
+ 	    } else {
+-	      log_debug(1, "Server %s added to domain %s", optarg, 
++	      log_debug(3, "Server %s added to domain %s", optarg, 
+ 			sep ? sep+1:"(default)");
+ 	    }
+ 	    if (p->roundrobin != load_balance) {
+ 	      p->roundrobin =load_balance;
+-	      log_debug(1, "Turned on load balancing for domain %s",
++	      log_debug(3, "Turned on load balancing for domain %s",
+ 			cname2asc(p->domain));
+ 	    }
+ 	    if (sep) *sep = ':';
+@@ -353,7 +353,7 @@
+ 	}
+ 	  case 't': {
+ 	    if ((forward_timeout = atoi(optarg)))
+-	      log_debug(1, "Setting timeout value to %i seconds.", 
++	      log_debug(3, "Setting timeout value to %i seconds.", 
+ 			forward_timeout);
+ 	    else 
+ 	      log_debug(1, "Timeout=0. Servers will never timeout.");
+diff -ruN dnrd-2.20.3.orig/src/common.c dnrd-2.20.3/src/common.c
+--- dnrd-2.20.3.orig/src/common.c	2009-10-02 02:04:40.000000000 +0400
++++ dnrd-2.20.3/src/common.c	2009-10-02 01:57:52.000000000 +0400
+@@ -251,7 +251,7 @@
+ {
+     va_list ap;
+     
+-    if (opt_debug < level) return;
++    if (opt_debug > level) return;
+ 
+     va_start(ap, fmt);
+     if (gotterminal) {
+diff -ruN dnrd-2.20.3.orig/src/cache.c dnrd-2.20.3/src/cache.c
+--- dnrd-2.20.3.orig/src/cache.c	2005-08-02 18:08:13.000000000 +0400
++++ dnrd-2.20.3/src/cache.c	2009-10-02 02:35:14.000000000 +0400
+@@ -140,7 +140,7 @@
+     }
+ 
+     cx->created = time(NULL);
+-    log_debug(3, "cache: added %s, type= %d, class: %d, ans= %d\n",
++    log_debug(1, "cache: added %s, type= %d, class: %d, ans= %d\n",
+ 	      cx->name, cx->type, cx->class, cx->p->ancount);
+ 
+     return (cx);
+@@ -256,7 +256,7 @@
+ 	  cx->class == query.class  &&
+ 	  strcasecmp(cx->name, query.name) == 0) {
+ 	
+-	log_debug(3, "cache: found %s, type= %d, class: %d, ans= %d\n",
++	log_debug(1, "cache: found %s, type= %d, class: %d, ans= %d\n",
+ 		  cx->name, cx->type, cx->class, cx->p->ancount);
+ 
+ 	if (cx->positive > 0) {
+diff -ruN dnrd-2.20.3.orig/src/domnode.c dnrd-2.20.3/src/domnode.c
+--- dnrd-2.20.3.orig/src/domnode.c	2004-10-19 17:45:21.000000000 +0400
++++ dnrd-2.20.3/src/domnode.c	2009-10-02 02:37:04.000000000 +0400
+@@ -171,7 +171,7 @@
+   //  if (d == NULL) return NULL;
+   if (s) {
+     if (d->roundrobin) {
+-      log_debug(3, "Setting server %s for domain %s",
++      log_debug(1, "Setting server %s for domain %s",
+ 		inet_ntoa(s->addr.sin_addr), cname2asc(d->domain));
+     } else {
+       log_msg(LOG_NOTICE, "Setting server %s for domain %s",
+diff -ruN dnrd-2.20.3.orig/src/relay.c dnrd-2.20.3/src/relay.c
+--- dnrd-2.20.3.orig/src/relay.c	2007-03-16 16:17:21.000000000 +0300
++++ dnrd-2.20.3/src/relay.c	2009-10-02 02:38:26.000000000 +0400
+@@ -100,9 +100,9 @@
+ 	char      cname_buf[256];
+ 
+ 	snprintf_cname(msg, *len, 12, cname_buf, sizeof(cname_buf));
+-	log_debug(3, "Received DNS query for \"%s\"", cname_buf);
++	log_debug(1, "Received DNS query for \"%s\"", cname_buf);
+ 	if (dump_dnspacket("query", msg, *len) < 0)
+-	  log_debug(3, "Format error");
++	  log_debug(1, "Format error");
+     }
+    
+ #ifndef EXCLUDE_MASTER
+@@ -116,7 +116,7 @@
+ 
+     /* Next, see if we have the answer cached */
+     if ((replylen = cache_lookup(msg, *len)) > 0) {
+-	log_debug(3, "Replying to query with cached answer.");
++	log_debug(1, "Replying to query with cached answer.");
+ 	*len = replylen;
+ 	return 0;
+     }  else if (replylen < 0) return -1;
+@@ -151,10 +151,10 @@
+     }
+ 
+     if (d->current) {
+-	log_debug(3, "Forwarding the query to DNS server %s",
++	log_debug(1, "Forwarding the query to DNS server %s",
+ 		  inet_ntoa(d->current->addr.sin_addr));
+     } else {
+-      log_debug(3, "All servers deactivated. Replying with \"Server failure\"");
++      log_debug(1, "All servers deactivated. Replying with \"Server failure\"");
+       if (!set_srvfail(msg, *len)) return -1;
+       return 0;
+     }
+diff -ruN dnrd-2.20.3.orig/src/udp.c dnrd-2.20.3/src/udp.c
+--- dnrd-2.20.3.orig/src/udp.c	2007-03-16 16:18:19.000000000 +0300
++++ dnrd-2.20.3/src/udp.c	2009-10-02 02:39:03.000000000 +0400
+@@ -235,7 +235,7 @@
+     unsigned           addr_len;
+     query_t *q = prev->next;
+ 
+-    log_debug(3, "handling socket %i", q->sock);
++    log_debug(1, "handling socket %i", q->sock);
+     if ((len = reply_recv(q, msg, UDP_MAXSIZE)) < 0)
+       {
+ 	log_debug(1, "dnsrecv failed: %i", len);
+@@ -253,7 +253,7 @@
+     if (opt_debug) {
+ 	char buf[256];
+ 	snprintf_cname(msg, len, 12, buf, sizeof(buf));
+-	log_debug(3, "Received DNS reply for \"%s\"", buf);
++	log_debug(1, "Received DNS reply for \"%s\"", buf);
+     }
+ 
+     dump_dnspacket("reply", msg, len);
+@@ -266,7 +266,7 @@
+ 
+       /* set the client qid */
+       *((unsigned short *)msg) = q->client_qid;
+-      log_debug(3, "Forwarding the reply to the host %s",
++      log_debug(1, "Forwarding the reply to the host %s",
+ 		inet_ntoa(q->client.sin_addr));
+       if (sendto(isock, msg, len, 0,
+ 		 (const struct sockaddr *)&q->client,

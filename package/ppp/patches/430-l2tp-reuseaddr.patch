@@ -1,0 +1,13 @@
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/plugins/pppol2tp/network.c ppp-2.4.4/pppd/plugins/pppol2tp/network.c
+--- ppp-2.4.4.orig/pppd/plugins/pppol2tp/network.c	2011-02-14 11:29:31.000000000 +0300
++++ ppp-2.4.4/pppd/plugins/pppol2tp/network.c	2011-02-18 09:11:19.651344000 +0300
+@@ -45,6 +45,9 @@
+         return -EINVAL;
+     };
+ 
++    arg = 1; 
++    setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &arg, sizeof(arg));
++    /* continue on error */
+     
+     if (bind (server_socket, (struct sockaddr *) &server, sizeof (server)))
+     {

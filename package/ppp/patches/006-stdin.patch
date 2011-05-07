@@ -1,0 +1,16 @@
+diff -rup ppp-2.4.4.orig/pppd/options.c ppp-2.4.4/pppd/options.c
+--- ppp-2.4.4.orig/pppd/options.c	2006-06-18 15:26:00.000000000 +0400
++++ ppp-2.4.4/pppd/options.c	2009-06-25 20:36:27.000000000 +0400
+@@ -409,7 +413,11 @@ options_from_file(filename, must_exist, 
+ 	option_error("unable to drop privileges to open %s: %m", filename);
+ 	return 0;
+     }
+-    f = fopen(filename, "r");
++	if( filename[0] == '-' && filename[1] == '\0' ) {
++		f = stdin;
++	} else {
++    	f = fopen(filename, "r");
++	}
+     err = errno;
+     if (check_prot && seteuid(euid) == -1)
+ 	fatal("unable to regain privileges");

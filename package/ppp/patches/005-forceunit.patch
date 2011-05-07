@@ -1,0 +1,59 @@
+diff -ruN ppp-2.4.4.orig/pppd/options.c ppp-2.4.4/pppd/options.c
+--- ppp-2.4.4.orig/pppd/options.c	2006-06-18 15:26:00.000000000 +0400
++++ ppp-2.4.4/pppd/options.c	2009-06-09 14:54:16.000000000 +0400
+@@ -119,6 +119,7 @@
+ bool	dryrun;			/* print out option values and exit */
+ char	*domain;		/* domain name set by domain option */
+ int	child_wait = 5;		/* # seconds to wait for children at exit */
++bool	force_unit = 0;		/* force unsing requested unit even if it exists */
+ 
+ #ifdef MAXOCTETS
+ unsigned int  maxoctets = 0;    /* default - no limit */
+@@ -271,6 +272,9 @@
+     { "unit", o_int, &req_unit,
+       "PPP interface unit number to use if possible",
+       OPT_PRIO | OPT_LLIMIT, 0, 0 },
++    { "forceunit", o_bool, &force_unit,
++      "Force using requested unit even if it exists",
++      OPT_PRIOSUB | 1 },
+ 
+     { "dump", o_bool, &dump_options,
+       "Print out option values after parsing all options", 1 },
+diff -ruN ppp-2.4.4.orig/pppd/pppd.h ppp-2.4.4/pppd/pppd.h
+--- ppp-2.4.4.orig/pppd/pppd.h	2005-08-26 03:59:34.000000000 +0400
++++ ppp-2.4.4/pppd/pppd.h	2009-06-09 14:54:35.000000000 +0400
+@@ -318,6 +318,7 @@
+ extern bool	dump_options;	/* print out option values */
+ extern bool	dryrun;		/* check everything, print options, exit */
+ extern int	child_wait;	/* # seconds to wait for children at end */
++extern bool	force_unit;	/* force using requested unit even if it exists */
+ 
+ #ifdef MAXOCTETS
+ extern unsigned int maxoctets;	     /* Maximum octetes per session (in bytes) */
+diff -ruN ppp-2.4.4.orig/pppd/sys-linux.c ppp-2.4.4/pppd/sys-linux.c
+--- ppp-2.4.4.orig/pppd/sys-linux.c	2005-08-27 02:44:35.000000000 +0400
++++ ppp-2.4.4/pppd/sys-linux.c	2009-06-09 14:35:55.000000000 +0400
+@@ -630,12 +630,19 @@
+ 	ifunit = req_unit;
+ 	x = ioctl(ppp_dev_fd, PPPIOCNEWUNIT, &ifunit);
+ 	if (x < 0 && req_unit >= 0 && errno == EEXIST) {
+-		warn("Couldn't allocate PPP unit %d as it is already in use", req_unit);
+-		ifunit = -1;
+-		x = ioctl(ppp_dev_fd, PPPIOCNEWUNIT, &ifunit);
++		if(force_unit)
++		{
++		    x = ioctl(ppp_dev_fd, PPPIOCATTACH, &ifunit);
++		}
++		else
++		{
++		    warn("Couldn't allocate PPP unit %d as it is already in use", req_unit);
++		    ifunit = -1;
++		    x = ioctl(ppp_dev_fd, PPPIOCNEWUNIT, &ifunit);
++		}
+ 	}
+ 	if (x < 0)
+-		error("Couldn't create new ppp unit: %m");
++		error("Couldn't create or attach ppp unit: %m");
+ 	return x;
+ }
+ 

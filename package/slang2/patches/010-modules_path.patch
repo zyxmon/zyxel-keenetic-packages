@@ -1,0 +1,11 @@
+--- a/src/slimport.c
++++ b/src/slimport.c
+@@ -53,7 +53,7 @@ static SLFUTURE_CONST char *Module_Path;
+ # define MODULE_PATH_ENV_NAME "SLANG_MODULE_PATH"
+ #endif
+ #ifndef MODULE_INSTALL_DIR
+-# define MODULE_INSTALL_DIR "/usr/local/lib/slang/v2/modules"
++# define MODULE_INSTALL_DIR "/media/DISK_A1/system/usr/lib/slang/v2/modules"
+ #endif
+ 
+ #define MAX_MODULE_NAME_SIZE 256

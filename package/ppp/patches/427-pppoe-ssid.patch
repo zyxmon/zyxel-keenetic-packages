@@ -1,0 +1,74 @@
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/ipcp.c ppp-2.4.4/pppd/ipcp.c
+--- ppp-2.4.4.orig/pppd/ipcp.c	2010-11-19 15:30:37.000000000 +0300
++++ ppp-2.4.4/pppd/ipcp.c	2010-11-19 15:28:46.000000000 +0300
+@@ -88,6 +88,9 @@
+ struct notifier *ip_up_notifier = NULL;
+ struct notifier *ip_down_notifier = NULL;
+ 
++/* pppoe session id */
++int pppoe_session_id = 0;
++
+ /* local vars */
+ static int default_route_set[NUM_PPP];	/* Have set up a default route */
+ static int proxy_arp_set[NUM_PPP];	/* Have created proxy arp entry */
+@@ -2019,12 +2022,13 @@
+     char *script;
+     int wait;
+ {
+-    char strspeed[32], strlocal[32], strremote[32];
+-    char *argv[8];
++    char strspeed[32], strlocal[32], strremote[32], strsid[32];
++    char *argv[9];
+ 
+     slprintf(strspeed, sizeof(strspeed), "%d", baud_rate);
+     slprintf(strlocal, sizeof(strlocal), "%I", ipcp_gotoptions[0].ouraddr);
+     slprintf(strremote, sizeof(strremote), "%I", ipcp_hisoptions[0].hisaddr);
++    slprintf(strsid, sizeof(strsid), "%d", pppoe_session_id);
+ 
+     argv[0] = script;
+     argv[1] = ifname;
+@@ -2032,8 +2036,9 @@
+     argv[3] = strspeed;
+     argv[4] = strlocal;
+     argv[5] = strremote;
+-    argv[6] = ipparam;
+-    argv[7] = NULL;
++    argv[6] = (ipparam && ipparam[0]) ? ipparam : "-";
++    argv[7] = strsid;
++    argv[8] = NULL;
+     if (wait)
+ 	run_program(script, argv, 0, NULL, NULL, 1);
+     else
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/plugins/rp-pppoe/discovery.c ppp-2.4.4/pppd/plugins/rp-pppoe/discovery.c
+--- ppp-2.4.4.orig/pppd/plugins/rp-pppoe/discovery.c	2010-11-19 15:30:37.000000000 +0300
++++ ppp-2.4.4/pppd/plugins/rp-pppoe/discovery.c	2010-11-19 14:49:53.000000000 +0300
+@@ -479,6 +479,9 @@
+ *%DESCRIPTION:
+ * Waits for a PADS packet and copies useful information
+ ***********************************************************************/
++
++extern int pppoe_session_id;
++
+ void
+ waitForPADS(PPPoEConnection *conn, int timeout)
+ {
+@@ -544,6 +547,7 @@
+     conn->session = packet.session;
+ 
+     info("PPP session is %d", ntohs(conn->session));
++    pppoe_session_id = ntohs(conn->session);
+ 
+     /* RFC 2516 says session id MUST NOT be zero or 0xFFFF */
+     if (ntohs(conn->session) == 0 || ntohs(conn->session) == 0xFFFF) {
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/plugins/rp-pppoe/pppoe-discovery.c ppp-2.4.4/pppd/plugins/rp-pppoe/pppoe-discovery.c
+--- ppp-2.4.4.orig/pppd/plugins/rp-pppoe/pppoe-discovery.c	2010-11-19 15:30:37.000000000 +0300
++++ ppp-2.4.4/pppd/plugins/rp-pppoe/pppoe-discovery.c	2010-11-19 14:49:53.000000000 +0300
+@@ -19,6 +19,8 @@
+ 
+ void usage(void);
+ 
++int pppoe_session_id = 0;
++
+ int main(int argc, char *argv[])
+ {
+     int opt;
