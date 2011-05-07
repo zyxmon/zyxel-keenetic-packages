@@ -1,5 +1,7 @@
 .config
+.config.old
 dl
 tmp
 staging_dir
 build_dir
+bin
