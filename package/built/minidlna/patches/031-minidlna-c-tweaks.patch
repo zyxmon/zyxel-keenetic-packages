@@ -1,0 +1,19 @@
+--- a/minidlna.c
++++ b/minidlna.c
+@@ -58,6 +58,7 @@
+ #include <fcntl.h>
+ #include <sys/file.h>
+ #include <sys/time.h>
++#include <sys/stat.h>
+ #include <time.h>
+ #include <signal.h>
+ #include <sys/param.h>
+@@ -338,7 +339,7 @@
+ 	struct sigaction sa;
+ 	/*const char * logfilename = 0;*/
+ 	const char * presurl = 0;
+-	const char * optionsfile = "/etc/minidlna.conf";
++	const char * optionsfile = "/media/DISK_A1/system/etc/minidlna.conf";
+ 	char mac_str[13];
+ 	char * string, * word;
+ 	enum media_types type;

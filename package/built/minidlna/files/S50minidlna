@@ -1,0 +1,30 @@
+#!/bin/sh
+# Copyright (C) 2011 NDM Systems, McMCC
+
+MOUNT="/media/DISK_A1/system"
+INITD="$MOUNT/etc/init.d"
+BIN="$MOUNT/usr/bin/minidlna"
+
+export LANG=C
+export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
+
+start() {
+	$BIN &
+}
+
+stop() {
+	killall -15 minidlna
+}
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+    *)
+		echo "Usage: $0 {start|stop}"
+		;;
+esac

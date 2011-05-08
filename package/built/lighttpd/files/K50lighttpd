@@ -1,0 +1,85 @@
+#!/bin/sh
+# Copyright (C) 2006 OpenWrt.org
+
+MOUNT="/media/DISK_A1/system"
+export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
+
+
+BIN=lighttpd
+DEFAULT=$MOUNT/etc/default/$BIN
+LOG_D=$MOUNT/var/log/$BIN
+RUN_D=$MOUNT/var/run
+PID_F=$RUN_D/$BIN.pid
+PORT_F=81
+
+daemon_status ()
+{
+    [ -f $PID_F ] && [ -d /proc/`cat $PID_F` ]
+}
+ 
+start_daemon() {
+	mkdir -p $LOG_D
+	mkdir -p $RUN_D
+	$BIN -f $MOUNT/etc/$BIN/$BIN.conf -m $MOUNT/usr/lib/$BIN 2>/dev/null
+	counter=5
+    while [ $counter -gt 0 ]
+    do
+        daemon_status && break
+        let counter=counter-1
+        sleep 1
+    done
+#	iptables -A INPUT -p tcp --dport $PORT_F -j ACCEPT 
+}
+
+stop_daemon() {
+	kill `cat $PID_F`
+    counter=10
+    while [ $counter -gt 0 ] 
+    do
+        daemon_status || break
+        let counter=counter-1
+        sleep 1
+    done
+#	iptables -D INPUT -p tcp --dport $PORT_F -j ACCEPT 2> /dev/null 
+}
+
+case $1 in
+    start)
+        if daemon_status
+        then
+            echo lighttpd daemon already running
+        else
+            echo Starting lighttpd daemon...
+            start_daemon
+        fi
+        ;;
+    stop)
+        echo Stopping lighttpd daemon...
+		stop_daemon
+        ;;
+    restart)
+		stop_daemon
+		start_daemon
+        ;;
+    status)
+        if daemon_status
+        then
+            echo Running
+        else
+            echo Not running
+        fi
+        ;;
+    link_up)
+        ;;
+    ppp_up)
+        ;;
+    link_down)
+        ;;
+    ppp_down)
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status|link_up|link_down|ppp_up|ppp_down}"
+        ;;
+esac 
+
