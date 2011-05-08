@@ -1046,3 +1046,26 @@ Size: 161401
 MD5Sum: 97614f17ced12ccb630147239e9c12ea
 Description:  Webinterface resources for transmission.
 
+Package: wget
+Version: 1.12-2
+Depends: 
+Provides: 
+Source: package/built/wget
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 161
+Filename: wget_1.12-2_keenetic.ipk
+Size: 988
+MD5Sum: 1663b01431f2fe474dbb849a105ab7a6
+Description:  Wget is a network utility to retrieve files from the Web using http
+ and ftp, the two most widely used Internet protocols. It works
+ non-interactively, so it will work in the background, after having
+ logged off. The program supports recursive retrieval of web-authoring
+ pages as well as ftp sites -- you can use wget to make mirrors of
+ archives and home pages or to travel the Web like a WWW robot.
+ This package is built with SSL support.
+
