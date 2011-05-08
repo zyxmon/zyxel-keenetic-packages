@@ -1057,10 +1057,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 161
+Installed-Size: 139570
 Filename: wget_1.12-2_keenetic.ipk
-Size: 988
-MD5Sum: 1663b01431f2fe474dbb849a105ab7a6
+Size: 139825
+MD5Sum: 4af01417055a52dcdea852fba2bb0989
 Description:  Wget is a network utility to retrieve files from the Web using http
  and ftp, the two most widely used Internet protocols. It works
  non-interactively, so it will work in the background, after having
