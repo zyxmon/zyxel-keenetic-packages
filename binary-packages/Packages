@@ -1,0 +1,1048 @@
+Package: busybox
+Version: 1.17.3-2
+Depends: 
+Provides: 
+Source: package/busybox
+Section: base
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Nicolas Thill <nico@openwrt.org>
+Architecture: keenetic
+Installed-Size: 148411
+Filename: busybox_1.17.3-2_keenetic.ipk
+Size: 148848
+MD5Sum: fbd1d24590a03345030f40674dc22480
+Description:  The Swiss Army Knife of embedded Linux.
+ It slices, it dices, it makes Julian Fries.
+
+Package: e2fsprogs
+Version: 1.41.12-3
+Depends: libblkid, libuuid, libext2fs
+Provides: 
+Source: package/e2fsprogs
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 132694
+Filename: e2fsprogs_1.41.12-3_keenetic.ipk
+Size: 133350
+MD5Sum: 1ae9fec731d92f69f50d56d3803e964f
+Description:  This package contains essential ext2 filesystem utilities which consists of 
+ e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2 
+ filesystem utilities.
+
+Package: file
+Version: 4.26-2
+Depends: libmagic
+Provides: 
+Source: package/built/file
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 152225
+Filename: file_4.26-2_keenetic.ipk
+Size: 152913
+MD5Sum: ff5b8efce5866e1d15b3cf9a5679809d
+Description:  utility
+
+Package: gawk
+Version: 3.1.8-1
+Depends: 
+Provides: 
+Source: package/built/gawk
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 438065
+Filename: gawk_3.1.8-1_keenetic.ipk
+Size: 438304
+MD5Sum: 0e88a981178e5f84f835d776b1b13499
+Description:  GNU version of AWK.
+
+Package: glib2
+Version: 2.22.2-1
+Depends: libiconv-full, libintl-full
+Provides: 
+Source: package/built/glib2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 524101
+Filename: glib2_2.22.2-1_keenetic.ipk
+Size: 522524
+MD5Sum: a0bf2d7481f0251267e89218dd47e891
+Description:  The GLib library of C routines
+
+Package: htop
+Version: 0.9-1
+Depends: libncurses
+Provides: 
+Source: package/built/htop
+Section: admin
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 48301
+Filename: htop_0.9-1_keenetic.ipk
+Size: 49011
+MD5Sum: 29855c9c80f9f4f96223f2bd9ef7b8ad
+Description:  Htop is an ncursed-based process viewer similar to top, but
+ it allows to scroll the list vertically and horizontally to
+ see all processes and their full command lines.
+
+Package: libblkid
+Version: 1.41.12-3
+Depends: 
+Provides: 
+Source: package/e2fsprogs
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18040
+Filename: libblkid_1.41.12-3_keenetic.ipk
+Size: 18674
+MD5Sum: ba7d57fc2832aa585e5fb1afc8f42e25
+Description:  The blkid library which allows system programs like fsck and mount to 
+ quickly and easily find block devices by filesystem UUID and LABEL.
+
+Package: libevent
+Version: 1.4.14b-1
+Depends: 
+Provides: 
+Source: package/built/libevent
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 39500
+Filename: libevent_1.4.14b-1_keenetic.ipk
+Size: 40377
+MD5Sum: 67dea743710918c6b24f14f7dcf42eaf
+Description:  The libevent API provides a mechanism to execute a callback function
+ when a specific event occurs on a file descriptor or after a timeout
+ has been reached. Furthermore, libevent also support callbacks due
+ to signals or regular timeouts.
+ 
+ libevent is meant to replace the event loop found in event driven
+ network servers. An application just needs to call event_dispatch()
+ and then add or remove events dynamically without having to change
+ the event loop.
+
+Package: libexif
+Version: 0.6.19-1
+Depends: 
+Provides: 
+Source: package/built/libexif
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 60642
+Filename: libexif_0.6.19-1_keenetic.ipk
+Size: 60754
+MD5Sum: 8156d2c9021cc54df17a2030498f612e
+Description:  libexif is a library for parsing, editing, and saving EXIF data. It is
+ intended to replace lots of redundant implementations in command-line
+ utilities and programs with GUIs.
+
+Package: libexpat
+Version: 2.0.1-1
+Depends: 
+Provides: 
+Source: package/built/expat
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 50011
+Filename: libexpat_2.0.1-1_keenetic.ipk
+Size: 50566
+MD5Sum: 543f68ccaec1e74d8a9b20092146ba79
+Description:  A fast, non-validating, stream-oriented XML parsing library.
+
+Package: libext2fs
+Version: 1.41.12-3
+Depends: 
+Provides: 
+Source: package/e2fsprogs
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 76348
+Filename: libext2fs_1.41.12-3_keenetic.ipk
+Size: 76705
+MD5Sum: ac7f98b5c09df93f4d9eea92598607f9
+Description:  libext2fs is a library which can access ext2, ext3 and ext4 filesystems.
+
+Package: libffmpeg
+Version: 0.5.2-2
+Depends: 
+Provides: 
+Source: package/built/ffmpeg
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 571963
+Filename: libffmpeg_0.5.2-2_keenetic.ipk
+Size: 570612
+MD5Sum: 66aa60835d59d2c394bee70ed1409cde
+Description:  libraries
+
+Package: libflac
+Version: 1.2.1-1
+Depends: 
+Provides: 
+Source: package/built/flac
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 125455
+Filename: libflac_1.2.1-1_keenetic.ipk
+Size: 126046
+MD5Sum: 653d6ad76e760306cacfea92b3a06853
+Description:  Free Lossless Audio Codec library
+
+Package: libgd
+Version: 2.0.35-1
+Depends: libjpeg, libpng
+Provides: 
+Source: package/built/gd
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 53970
+Filename: libgd_2.0.35-1_keenetic.ipk
+Size: 54521
+MD5Sum: ca3a68939a96bb34ffe352153fe73f68
+Description:  GD is an open source code library for the dynamic creation of images by
+ programmers. GD creates PNG, JPEG and GIF images, among other formats.
+
+Package: libiconv-full
+Version: 1.11.1-1
+Depends: 
+Provides: 
+Source: package/built/libiconv-full
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 665968
+Filename: libiconv-full_1.11.1-1_keenetic.ipk
+Size: 665988
+MD5Sum: 0ef216435b75419ec3b24269737b7e4f
+Description:  Character set conversion library
+
+Package: libid3tag
+Version: 0.15.1b-3
+Depends: 
+Provides: 
+Source: package/built/libid3tag
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 24396
+Filename: libid3tag_0.15.1b-3_keenetic.ipk
+Size: 24874
+MD5Sum: 960beb7dc6cce75869a6dd5db6f2af46
+Description:  libid3tag is a library for reading and (eventually) writing ID3 tags, both 
+ ID3v1 and the various versions of ID3v2.
+
+Package: libintl-full
+Version: 0.18.1.1-1
+Depends: 
+Provides: 
+Source: package/built/gettext-full
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 14944
+Filename: libintl-full_0.18.1.1-1_keenetic.ipk
+Size: 15302
+MD5Sum: 20b15bcb41fff5af2ac262e972cc44b3
+Description:  GNU Internationalization library
+
+Package: libjpeg
+Version: 6b-1
+Depends: 
+Provides: 
+Source: package/built/jpeg
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 57843
+Filename: libjpeg_6b-1_keenetic.ipk
+Size: 58368
+MD5Sum: 18fdd78e486c210cadcfa0d92b7680ec
+Description:  The Independent JPEG Group's JPEG runtime library
+
+Package: libmagic
+Version: 4.26-2
+Depends: 
+Provides: 
+Source: package/built/file
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 35976
+Filename: libmagic_4.26-2_keenetic.ipk
+Size: 36527
+MD5Sum: 183dc7c9dbbee16a6de0486557407b73
+Description:  library
+
+Package: libncurses
+Version: 5.7-3
+Depends: 
+Provides: 
+Source: package/ncurses
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 116774
+Filename: libncurses_5.7-3_keenetic.ipk
+Size: 115365
+MD5Sum: 7dd9b75aceaf66a2226a6939edfc70db
+Description:  Terminal handling library
+
+Package: libogg
+Version: 1.1.4-2
+Depends: 
+Provides: 
+Source: package/built/libogg
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8422
+Filename: libogg_1.1.4-2_keenetic.ipk
+Size: 9168
+MD5Sum: 1c2f8a747884c447e55e63c93ac21b42
+Description:  Ogg project codecs use the Ogg bitstream format to arrange the raw,
+ compressed bitstream into a more robust, useful form.  For example,
+ the Ogg bitstream makes seeking, time stamping and error recovery
+ possible, as well as mixing several sepearate, concurrent media
+ streams into a single physical bitstream.
+
+Package: libpcre
+Version: 8.11-1
+Depends: 
+Provides: 
+Source: package/built/pcre
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 54227
+Filename: libpcre_8.11-1_keenetic.ipk
+Size: 54927
+MD5Sum: 6e6b5a5fe365d9367beee9b8358b262c
+Description:  A Perl Compatible Regular Expression library
+
+Package: libpng
+Version: 1.2.44-1
+Depends: 
+Provides: 
+Source: package/built/libpng
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 117788
+Filename: libpng_1.2.44-1_keenetic.ipk
+Size: 118399
+MD5Sum: 88a6568cca7dc75f81ee3aec1b43dfda
+Description:  A PNG format files handling library
+
+Package: libslang2
+Version: 2.2.3-1
+Depends: libncurses
+Provides: 
+Source: package/built/slang2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 306268
+Filename: libslang2_2.2.3-1_keenetic.ipk
+Size: 296889
+MD5Sum: e23d2aa745123b17a16da30b47767746
+Description:  This is a shell which is mostly just a wrapper around the S-Lang Interpreter,
+ which is part of the S-Lang Library.
+
+Package: libsqlite3
+Version: 3070500-1
+Depends: 
+Provides: 
+Source: package/built/sqlite3
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 279084
+Filename: libsqlite3_3070500-1_keenetic.ipk
+Size: 279356
+MD5Sum: 014c8045636f6dc3d2c8d9ccfb8ae090
+Description:  SQLite is a small C library that implements a self-contained, embeddable,
+ zero-configuration SQL database engine.
+ This package contains the SQLite (v3.x) shared library, used by other
+ programs.
+
+Package: libuuid
+Version: 1.41.12-3
+Depends: 
+Provides: 
+Source: package/e2fsprogs
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6865
+Filename: libuuid_1.41.12-3_keenetic.ipk
+Size: 7543
+MD5Sum: 05bfe24342d851927b3bd47493855643
+Description:  Library for generating DCE compatible Universally Unique Identifiers.
+
+Package: libvorbis
+Version: 1.2.3-1
+Depends: libogg
+Provides: 
+Source: package/built/libvorbis
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 175219
+Filename: libvorbis_1.2.3-1_keenetic.ipk
+Size: 172082
+MD5Sum: 790d3e7b5b83a8b3b821384500c84d4e
+Description:  Vorbis is a general purpose audio and music encoding format
+ contemporary to MPEG-4's AAC and TwinVQ, the next generation beyond
+ MPEG audio layer 3. Unlike the MPEG sponsored formats (and other
+ proprietary formats such as RealAudio G2 and Windows' flavor of the
+ month), the Vorbis CODEC specification belongs to the public domain.
+ All the technical details are published and documented, and any
+ software entity may make full use of the format without license
+ fee, royalty or patent concerns.
+
+Package: libxml2
+Version: 2.7.8-1
+Depends: 
+Provides: 
+Source: package/built/libxml2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 446133
+Filename: libxml2_2.7.8-1_keenetic.ipk
+Size: 444103
+MD5Sum: a0766b06c474e8d5f5917b8f75560a72
+Description:  A library for manipulating XML and HTML resources.
+
+Package: lighttpd-mod-access
+Version: 1.4.28-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2263
+Filename: lighttpd-mod-access_1.4.28-1_keenetic.ipk
+Size: 2892
+MD5Sum: 11b4f687a6d53babe0b79f49d60ad3ca
+Description:  Access restrictions module
+
+Package: lighttpd-mod-accesslog
+Version: 1.4.28-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5688
+Filename: lighttpd-mod-accesslog_1.4.28-1_keenetic.ipk
+Size: 6274
+MD5Sum: 327c81432d1cadc486d64607d6bbc270
+Description:  Access logging module
+
+Package: lighttpd-mod-cgi
+Version: 1.4.28-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8467
+Filename: lighttpd-mod-cgi_1.4.28-1_keenetic.ipk
+Size: 9078
+MD5Sum: 641ce7bab4f345ab36aef459747dba99
+Description:  CGI module
+
+Package: lighttpd-mod-fastcgi
+Version: 1.4.28-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 20873
+Filename: lighttpd-mod-fastcgi_1.4.28-1_keenetic.ipk
+Size: 21510
+MD5Sum: 3752069ce9aa83c2afd1f95ffa49439d
+Description:  FastCGI module
+
+Package: lighttpd
+Version: 1.4.28-1
+Depends: libpcre
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 86820
+Filename: lighttpd_1.4.28-1_keenetic.ipk
+Size: 87440
+MD5Sum: 4885e1acdf09620576fda40c53c9ad68
+Description:  A flexible and lightweight web server
+
+Package: mc
+Version: 4.7.5.1-2
+Depends: libiconv-full, libintl-full, glib2, libncurses, libslang2
+Provides: 
+Source: package/built/mc
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 562919
+Filename: mc_4.7.5.1-2_keenetic.ipk
+Size: 563098
+MD5Sum: cb55c940c2c349d16d4472f3eae753f7
+Description:  GNU Midnight Commander is a text-mode full-screen file manager. 
+ It uses a two panel interface and a subshell for command execution. 
+ It includes an internal editor with syntax highlighting and an 
+ internal viewer with support for binary files. Also included is 
+ Virtual Filesystem (VFS), that allows files on remote systems 
+ (e.g. FTP, SSH, SMB servers) and files inside archives to be 
+ manipulated like real files.
+
+Package: minidlna
+Version: 1.0.19-1
+Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
+Provides: 
+Source: package/built/minidlna
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 128052
+Filename: minidlna_1.0.19-1_keenetic.ipk
+Size: 128662
+MD5Sum: 8be42f734f03f0119e46678d40bc29a3
+Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
+ being fully compliant with DLNA/UPnP-AV clients.
+
+Package: nano
+Version: 2.2.6-1
+Depends: libncurses
+Provides: 
+Source: package/built/nano
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Bernhard Loos <bernhardloos@googlemail.com>
+Architecture: keenetic
+Installed-Size: 35188
+Filename: nano_2.2.6-1_keenetic.ipk
+Size: 35938
+MD5Sum: 0be4b6c27588fd66bd2dca90e8bfccf7
+Description:  GNU nano (Nano's ANOther editor, or Not ANOther editor) is an enhanced clone
+ of the Pico text editor.
+
+Package: opkg
+Version: 576-3
+Depends: 
+Provides: 
+Source: package/opkg
+Section: base
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Jo-Philipp Wich <xm@subsignal.org>
+Architecture: keenetic
+Installed-Size: 59351
+Filename: opkg_576-3_keenetic.ipk
+Size: 60121
+MD5Sum: bff5791f8112ea2edaaaf0223568028f
+Description:  Lightweight package management system
+ opkg is the opkg Package Management System, for handling
+ installation and removal of packages on a system. It can
+ recursively follow dependencies and download all packages
+ necessary to install a particular package.
+ 
+ opkg knows how to install both .ipk and .deb packages.
+
+Package: php5-cgi
+Version: 5.3.6-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 907176
+Filename: php5-cgi_5.3.6-1_keenetic.ipk
+Size: 905861
+MD5Sum: 0aed04bff97a8f1d8670863fb59fd138
+Description:  PHP is a widely-used general-purpose scripting language that is especially 
+ suited for Web development and can be embedded into HTML.
+ This package contains the CGI version of the PHP5 interpreter.
+
+Package: php5-cli
+Version: 5.3.6-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 899499
+Filename: php5-cli_5.3.6-1_keenetic.ipk
+Size: 898381
+MD5Sum: 9f26bbeb0e45e1492912f0cf3a832f69
+Description:  PHP is a widely-used general-purpose scripting language that is especially 
+ suited for Web development and can be embedded into HTML.
+ This package contains the CLI version of the PHP5 interpreter.
+
+Package: php5-fastcgi
+Version: 5.3.6-1
+Depends: php5, php5-cgi
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 515
+Filename: php5-fastcgi_5.3.6-1_keenetic.ipk
+Size: 1168
+MD5Sum: 4748dbc89981f00418716397e253549d
+Description:  As FastCGI support is now a core feature the php5-fastcgi package now depends
+ on the php5-cgi package, containing just the startup script.
+
+Package: php5-mod-gd
+Version: 5.3.6-1
+Depends: php5, libgd
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 24860
+Filename: php5-mod-gd_5.3.6-1_keenetic.ipk
+Size: 25300
+MD5Sum: cf9a14a645076dccd21f30130730c697
+Description:  GD graphics shared module
+
+Package: php5-mod-hash
+Version: 5.3.6-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 109812
+Filename: php5-mod-hash_5.3.6-1_keenetic.ipk
+Size: 109505
+MD5Sum: 116ed0c0957973d8927997c291ca3463
+Description:  Hash shared module
+
+Package: php5-mod-json
+Version: 5.3.6-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 9774
+Filename: php5-mod-json_5.3.6-1_keenetic.ipk
+Size: 10371
+MD5Sum: b8f7bd1306bb6f0305e202017c418c3d
+Description:  JSON shared module
+
+Package: php5-mod-mbstring
+Version: 5.3.6-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 1182440
+Filename: php5-mod-mbstring_5.3.6-1_keenetic.ipk
+Size: 1178837
+MD5Sum: 60503868f4ad6fbfa9d7428f1be80deb
+Description:  MBString shared module
+
+Package: php5-mod-pdo-sqlite
+Version: 5.3.6-1
+Depends: php5-mod-pdo, libsqlite3
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 8283
+Filename: php5-mod-pdo-sqlite_5.3.6-1_keenetic.ipk
+Size: 8933
+MD5Sum: f9283c56e53e9a0b1a95f193411a8c9f
+Description:  PDO driver for SQLite 3.x shared module
+
+Package: php5-mod-pdo
+Version: 5.3.6-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 32874
+Filename: php5-mod-pdo_5.3.6-1_keenetic.ipk
+Size: 33452
+MD5Sum: 6c79f1fccced28c639dd70c72e14f060
+Description:  PHP Data Objects shared module
+
+Package: php5-mod-session
+Version: 5.3.6-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 19686
+Filename: php5-mod-session_5.3.6-1_keenetic.ipk
+Size: 20245
+MD5Sum: 21667fecf76ad1e9e704807c358b44a9
+Description:  Session shared module
+
+Package: php5-mod-simplexml
+Version: 5.3.6-1
+Depends: php5, libxml2
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 14948
+Filename: php5-mod-simplexml_5.3.6-1_keenetic.ipk
+Size: 15492
+MD5Sum: 0d97a72281b6d54d278e822b5bcbae47
+Description:  SimpleXML shared module
+
+Package: php5-mod-sqlite3
+Version: 5.3.6-1
+Depends: php5, libsqlite3
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 12999
+Filename: php5-mod-sqlite3_5.3.6-1_keenetic.ipk
+Size: 13570
+MD5Sum: b00215f87c3c5adc60f62dd09c8f9aa6
+Description:  SQLite3 shared module
+
+Package: php5-mod-xml
+Version: 5.3.6-1
+Depends: php5, libxml2
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 14235
+Filename: php5-mod-xml_5.3.6-1_keenetic.ipk
+Size: 14804
+MD5Sum: 270896adfe21ee06c4c55e636690d457
+Description:  XML shared module
+
+Package: php5-mod-xmlreader
+Version: 5.3.6-1
+Depends: php5, libxml2, libiconv-full
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 7916
+Filename: php5-mod-xmlreader_5.3.6-1_keenetic.ipk
+Size: 8549
+MD5Sum: 33b5f5f327db02a228c8c06c3cb19e10
+Description:  XMLReader shared module
+
+Package: php5-mod-xmlwriter
+Version: 5.3.6-1
+Depends: php5, libxml2, libiconv-full
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 8356
+Filename: php5-mod-xmlwriter_5.3.6-1_keenetic.ipk
+Size: 8970
+MD5Sum: 460fcd05a7d587dbbfa6b8f5aec39475
+Description:  XMLWriter shared module
+
+Package: php5
+Version: 5.3.6-1
+Depends: libpcre, libxml2, libsqlite3
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 3463
+Filename: php5_5.3.6-1_keenetic.ipk
+Size: 4238
+MD5Sum: f60ce49336d0623db8c1ff4f6f388262
+Description:  PHP is a widely-used general-purpose scripting language that is especially 
+ suited for Web development and can be embedded into HTML.
+ This package contains only the PHP config file. You must actually choose 
+ your PHP flavour (cli, cgi or fastcgi).
+
+Package: sqlite3-cli
+Version: 3070500-1
+Depends: libsqlite3, libncurses
+Provides: 
+Source: package/built/sqlite3
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 17156
+Filename: sqlite3-cli_3070500-1_keenetic.ipk
+Size: 17926
+MD5Sum: d7a76e3e10682589643b20c40188d170
+Description:  SQLite is a small C library that implements a self-contained, embeddable,
+ zero-configuration SQL database engine.
+ This package contains a terminal-based front-end to the SQLite (v3.x) library
+ that can evaluate queries interactively and display the results in multiple
+ formats.
+
+Package: transmission-cli
+Version: 2.13-1
+Depends: transmission-daemon
+Provides: 
+Source: package/built/transmission
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: keenetic
+Installed-Size: 749655
+Filename: transmission-cli_2.13-1_keenetic.ipk
+Size: 748983
+MD5Sum: 4b879426416090a32e1913a7e46c75ef
+Description:  CLI utilities for transmission.
+
+Package: transmission-daemon
+Version: 2.13-1
+Depends: libevent
+Provides: 
+Source: package/built/transmission
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: keenetic
+Installed-Size: 191736
+Filename: transmission-daemon_2.13-1_keenetic.ipk
+Size: 192282
+MD5Sum: 8d8c49574538f787f47e965b99758488
+Description:  Transmission is a simple BitTorrent client.
+ It features a very simple, intuitive interface
+ on top on an efficient, cross-platform back-end.
+ This package contains the daemon itself.
+
+Package: transmission-remote
+Version: 2.13-1
+Depends: 
+Provides: 
+Source: package/built/transmission
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: keenetic
+Installed-Size: 201193
+Filename: transmission-remote_2.13-1_keenetic.ipk
+Size: 201593
+MD5Sum: 1823490afae5db141152e11d58aaef16
+Description:  CLI remote interface for transmission.
+
+Package: transmission-web
+Version: 2.13-1
+Depends: transmission-daemon
+Provides: 
+Source: package/built/transmission
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: keenetic
+Installed-Size: 160618
+Filename: transmission-web_2.13-1_keenetic.ipk
+Size: 161401
+MD5Sum: 97614f17ced12ccb630147239e9c12ea
+Description:  Webinterface resources for transmission.
+
