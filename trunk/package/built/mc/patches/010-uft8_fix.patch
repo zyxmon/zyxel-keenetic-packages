@@ -1,0 +1,22 @@
+--- a/lib/strutil/strutil.c
++++ b/lib/strutil/strutil.c
+@@ -319,7 +319,7 @@ str_translate_char (GIConv conv, const c
+ const char *
+ str_detect_termencoding (void)
+ {
+-    return (nl_langinfo (CODESET));
++    return "UTF-8";
+ }
+ 
+ static int
+--- a/lib/tty/tty-slang.c
++++ b/lib/tty/tty-slang.c
+@@ -247,7 +247,7 @@ tty_init (gboolean slow, gboolean ugly_l
+ 
+     SLtt_Ignore_Beep = 1;
+     SLtt_get_terminfo ();
+-    SLutf8_enable (-1);
++    SLutf8_enable (1);
+     /*
+      * If the terminal in not in terminfo but begins with a well-known
+      * string such as "linux" or "xterm" S-Lang will go on, but the
