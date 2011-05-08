@@ -75,7 +75,7 @@ endif
 define Package/wget/install
 	$(INSTALL_DIR) $(1)/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/wget $(1)/bin/wget-ssl
-	ln -nsf wget $(1)/bin/wget-ssl
+	ln -nsf wget-ssl $(1)/bin/wget
 endef
 
 define Package/wget-nossl/install
