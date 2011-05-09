@@ -10,7 +10,7 @@ include $(INCLUDE_DIR)/kernel.mk
 PKG_NAME:=opkg
 PKG_REV:=576
 PKG_VERSION:=$(PKG_REV)
-PKG_RELEASE:=3
+PKG_RELEASE:=4
 
 PKG_SOURCE_PROTO:=svn
 PKG_SOURCE_VERSION:=$(PKG_REV)
@@ -53,7 +53,7 @@ CONFIGURE_ARGS += \
 	--disable-curl \
 	--disable-gpg \
 	--with-opkgetcdir=/media/DISK_A1/system/etc \
-	--with-opkglibdir=/media/DISK_A1/system/usr/lib \
+	--with-opkglibdir=var \
 	--with-opkglockfile=/media/DISK_A1/system/var/lock/opkg.lock
 
 define Build/Compile
