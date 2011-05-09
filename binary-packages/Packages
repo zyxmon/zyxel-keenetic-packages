@@ -652,7 +652,7 @@ Description:  GNU nano (Nano's ANOther editor, or Not ANOther editor) is an enha
  of the Pico text editor.
 
 Package: opkg
-Version: 576-3
+Version: 576-4
 Depends: 
 Provides: 
 Source: package/opkg
@@ -662,10 +662,10 @@ Essential: no
 Priority: optional
 Maintainer: Jo-Philipp Wich <xm@subsignal.org>
 Architecture: keenetic
-Installed-Size: 59351
-Filename: opkg_576-3_keenetic.ipk
-Size: 60121
-MD5Sum: bff5791f8112ea2edaaaf0223568028f
+Installed-Size: 59363
+Filename: opkg_576-4_keenetic.ipk
+Size: 60103
+MD5Sum: 7a864bf45b8b5eb18cf239868b7b461b
 Description:  Lightweight package management system
  opkg is the opkg Package Management System, for handling
  installation and removal of packages on a system. It can
