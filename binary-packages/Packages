@@ -662,10 +662,10 @@ Essential: no
 Priority: optional
 Maintainer: Jo-Philipp Wich <xm@subsignal.org>
 Architecture: keenetic
-Installed-Size: 59363
+Installed-Size: 59371
 Filename: opkg_576-4_keenetic.ipk
-Size: 60103
-MD5Sum: 7a864bf45b8b5eb18cf239868b7b461b
+Size: 60117
+MD5Sum: 00b32cd52b7cc03f5a7088beab799ad2
 Description:  Lightweight package management system
  opkg is the opkg Package Management System, for handling
  installation and removal of packages on a system. It can
