@@ -575,6 +575,23 @@ Size: 21510
 MD5Sum: 3752069ce9aa83c2afd1f95ffa49439d
 Description:  FastCGI module
 
+Package: lighttpd-mod-redirect
+Version: 1.4.28-1
+Depends: lighttpd, libpcre
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3100
+Filename: lighttpd-mod-redirect_1.4.28-1_keenetic.ipk
+Size: 3724
+MD5Sum: bd7d675d86c5063105d45cd009c09a67
+Description:  URL redirection module
+
 Package: lighttpd-mod-rewrite
 Version: 1.4.28-1
 Depends: lighttpd, libpcre
