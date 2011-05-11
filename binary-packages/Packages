@@ -575,6 +575,23 @@ Size: 21510
 MD5Sum: 3752069ce9aa83c2afd1f95ffa49439d
 Description:  FastCGI module
 
+Package: lighttpd-mod-rewrite
+Version: 1.4.28-1
+Depends: lighttpd, libpcre
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4204
+Filename: lighttpd-mod-rewrite_1.4.28-1_keenetic.ipk
+Size: 4802
+MD5Sum: 35668d2b91c3dda4c03b09c342ea6f5a
+Description:  URL rewriting module
+
 Package: lighttpd
 Version: 1.4.28-1
 Depends: libpcre
@@ -962,10 +979,10 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 3454
+Installed-Size: 3457
 Filename: php5_5.3.6-2_keenetic.ipk
-Size: 4243
-MD5Sum: c8bcaf184d3ae102b3efb36d00f55cdd
+Size: 4235
+MD5Sum: 90ed9ac0cbab9dcd4b721b1ff0127bb3
 Description:  PHP is a widely-used general-purpose scripting language that is especially 
  suited for Web development and can be embedded into HTML.
  This package contains only the PHP config file. You must actually choose 
