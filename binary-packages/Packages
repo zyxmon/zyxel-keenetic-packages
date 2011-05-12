@@ -620,10 +620,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 86820
+Installed-Size: 86881
 Filename: lighttpd_1.4.28-1_keenetic.ipk
-Size: 87440
-MD5Sum: 4885e1acdf09620576fda40c53c9ad68
+Size: 87515
+MD5Sum: 2ba190c4b400e3feb4dfa8545d43792c
 Description:  A flexible and lightweight web server
 
 Package: mc
