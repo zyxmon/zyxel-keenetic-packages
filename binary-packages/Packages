@@ -411,6 +411,28 @@ Size: 118399
 MD5Sum: 88a6568cca7dc75f81ee3aec1b43dfda
 Description:  A PNG format files handling library
 
+Package: libreadline
+Version: 5.2-2
+Depends: 
+Provides: 
+Source: package/libreadline
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 107497
+Filename: libreadline_5.2-2_keenetic.ipk
+Size: 107716
+MD5Sum: 5fb39093d2b18baf2481d35cd8bad913
+Description:  The Readline library provides a set of functions for use by applications 
+ that allow users to edit command lines as they are typed in. Both Emacs 
+ and vi editing modes are available. The Readline library includes 
+ additional functions to maintain a list of previously-entered command 
+ lines, to recall and perhaps reedit those lines, and perform csh-like 
+ history expansion on previous commands.
+
 Package: libslang2
 Version: 2.2.3-1
 Depends: libncurses
@@ -430,7 +452,7 @@ Description:  This is a shell which is mostly just a wrapper around the S-Lang I
  which is part of the S-Lang Library.
 
 Package: libsqlite3
-Version: 3070500-1
+Version: 3070500-2
 Depends: 
 Provides: 
 Source: package/built/sqlite3
@@ -440,10 +462,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 279084
-Filename: libsqlite3_3070500-1_keenetic.ipk
-Size: 279356
-MD5Sum: 014c8045636f6dc3d2c8d9ccfb8ae090
+Installed-Size: 279080
+Filename: libsqlite3_3070500-2_keenetic.ipk
+Size: 279340
+MD5Sum: 048d3865f55c46720580e713e41ec941
 Description:  SQLite is a small C library that implements a self-contained, embeddable,
  zero-configuration SQL database engine.
  This package contains the SQLite (v3.x) shared library, used by other
@@ -1006,8 +1028,8 @@ Description:  PHP is a widely-used general-purpose scripting language that is es
  your PHP flavour (cli, cgi or fastcgi).
 
 Package: sqlite3-cli
-Version: 3070500-1
-Depends: libsqlite3, libncurses
+Version: 3070500-2
+Depends: libsqlite3, libncurses, libreadline
 Provides: 
 Source: package/built/sqlite3
 Section: utils
@@ -1016,10 +1038,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 17156
-Filename: sqlite3-cli_3070500-1_keenetic.ipk
-Size: 17926
-MD5Sum: d7a76e3e10682589643b20c40188d170
+Installed-Size: 17155
+Filename: sqlite3-cli_3070500-2_keenetic.ipk
+Size: 17939
+MD5Sum: 080d55c3fa4ffcafc923a384076f073d
 Description:  SQLite is a small C library that implements a self-contained, embeddable,
  zero-configuration SQL database engine.
  This package contains a terminal-based front-end to the SQLite (v3.x) library
