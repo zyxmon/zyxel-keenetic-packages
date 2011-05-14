@@ -9,13 +9,14 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=sqlite
 PKG_VERSION:=3070500
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-autoconf-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://www.sqlite.org/
 PKG_MD5SUM:=a9604a82613ade2e7f4c303f233e477f
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-autoconf-$(PKG_VERSION)
+PKG_BUILD_DEPENDS:=libncurses libreadline
 
 PKG_FIXUP:=libtool
 
@@ -51,7 +52,7 @@ define Package/sqlite3-cli
   $(call Package/sqlite3/Default)
   SECTION:=utils
   CATEGORY:=Utilities
-  DEPENDS:=+libsqlite3 +libncurses
+  DEPENDS:=+libsqlite3 +libncurses +libreadline
   TITLE+= (cli)
 endef
 
