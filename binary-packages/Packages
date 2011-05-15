@@ -36,7 +36,7 @@ Description:  This package contains essential ext2 filesystem utilities which co
  filesystem utilities.
 
 Package: file
-Version: 4.26-2
+Version: 5.05-1
 Depends: libmagic
 Provides: 
 Source: package/built/file
@@ -46,10 +46,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 152225
-Filename: file_4.26-2_keenetic.ipk
-Size: 152913
-MD5Sum: ff5b8efce5866e1d15b3cf9a5679809d
+Installed-Size: 95996
+Filename: file_5.05-1_keenetic.ipk
+Size: 96641
+MD5Sum: 51264997f83c131b2ef04771981c9a8a
 Description:  utility
 
 Package: gawk
@@ -323,7 +323,7 @@ MD5Sum: 18fdd78e486c210cadcfa0d92b7680ec
 Description:  The Independent JPEG Group's JPEG runtime library
 
 Package: libmagic
-Version: 4.26-2
+Version: 5.05-1
 Depends: 
 Provides: 
 Source: package/built/file
@@ -333,10 +333,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 35976
-Filename: libmagic_4.26-2_keenetic.ipk
-Size: 36527
-MD5Sum: 183dc7c9dbbee16a6de0486557407b73
+Installed-Size: 93669
+Filename: libmagic_5.05-1_keenetic.ipk
+Size: 93981
+MD5Sum: 47735292c97b2af1c7941223f3f395a1
 Description:  library
 
 Package: libncurses
