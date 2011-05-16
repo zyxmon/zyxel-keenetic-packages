@@ -1,6 +1,5 @@
 # 
 # Copyright (C) 2007-2009 OpenWrt.org
-# Copyright (C) 2010,2011 NDM Systems
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -22,7 +21,8 @@ PKG_SOURCE_URL:=http://curl.haxx.se/download/ \
 	http://curl.mirrors.cyberservers.net/download/
 PKG_MD5SUM:=8402c1f654c51ad7287aad57c3aa79be
 
-PKG_FIXUP = libtool
+PKG_FIXUP:=libtool
+PKG_BUILD_PARALLEL:=1
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -34,8 +34,9 @@ endef
 
 define Package/curl
   $(call Package/curl/Default)
+  SUBMENU:=File Transfer
   DEPENDS:=+libcurl
-  TITLE:=A client-side URL transfer library
+  TITLE:=A client-side URL transfer utility
 endef
 
 define Package/libcurl
@@ -43,7 +44,7 @@ define Package/libcurl
   SECTION:=libs
   CATEGORY:=Libraries
   DEPENDS:=+libopenssl +zlib
-  TITLE:=A client-side URL transfer utility
+  TITLE:=A client-side URL transfer library
 endef
 
 TARGET_CFLAGS += $(FPIC)
@@ -77,17 +78,21 @@ CONFIGURE_ARGS += \
 	--without-nss \
 	--without-libssh2 \
 	--with-zlib="$(STAGING_DIR)/usr" \
+	$(call autoconf_bool,CONFIG_IPV6,ipv6) \
 
 CONFIGURE_VARS += \
 	LDFLAGS="$$$$LDFLAGS -lcrypto -lssl -lz" \
 	CC="$(filter-out ccache,$(TARGET_CC))"
 
-define Build/Configure
-	$(call Build/Configure/Default,,bash)
-endef
+#define Build/Configure
+#	(cd $(PKG_BUILD_DIR); \
+#		autoreconf -v --install || exit 1 \
+#	);
+#	$(call Build/Configure/Default)
+#endef
 
 define Build/Compile
-	$(MAKE) -C $(PKG_BUILD_DIR) \
+	$(MAKE) $(PKG_JOBS) -C $(PKG_BUILD_DIR) \
 		DESTDIR="$(PKG_INSTALL_DIR)" \
 		CC="$(TARGET_CC)" \
 		install
