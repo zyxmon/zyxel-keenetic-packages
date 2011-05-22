@@ -268,7 +268,6 @@ define KernelPackage/tun
   TITLE:=Universal TUN/TAP driver
   KCONFIG:=CONFIG_TUN
   FILES:=$(LINUX_DIR)/drivers/net/tun.$(LINUX_KMOD_SUFFIX)
-  AUTOLOAD:=$(call AutoLoad,30,tun)
 endef
 
 define KernelPackage/tun/description
