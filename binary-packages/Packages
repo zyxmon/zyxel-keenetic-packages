@@ -105,6 +105,23 @@ Description:  Htop is an ncursed-based process viewer similar to top, but
  it allows to scroll the list vertically and horizontally to
  see all processes and their full command lines.
 
+Package: kmod-tun
+Version: 2.6.23-rt-1
+Depends: 
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6237
+Filename: kmod-tun_2.6.23-rt-1_keenetic.ipk
+Size: 6851
+MD5Sum: 9303f0d0a8741a1a2e06cbec18d42862
+Description:  Kernel support for the TUN/TAP tunneling device
+
 Package: libblkid
 Version: 1.41.12-3
 Depends: 
@@ -321,6 +338,24 @@ Filename: libjpeg_6b-1_keenetic.ipk
 Size: 58368
 MD5Sum: 18fdd78e486c210cadcfa0d92b7680ec
 Description:  The Independent JPEG Group's JPEG runtime library
+
+Package: liblzo
+Version: 2.04-1
+Depends: 
+Provides: 
+Source: package/built/lzo
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 32265
+Filename: liblzo_2.04-1_keenetic.ipk
+Size: 32851
+MD5Sum: f2c304656e8c7ea23dd83f860aa0c53b
+Description:  LZO is a data compression library which is suitable for data de-/compression in
+ real-time. This means it favours speed over compression ratio.
 
 Package: libmagic
 Version: 5.05-1
@@ -706,6 +741,23 @@ Size: 35938
 MD5Sum: 0be4b6c27588fd66bd2dca90e8bfccf7
 Description:  GNU nano (Nano's ANOther editor, or Not ANOther editor) is an enhanced clone
  of the Pico text editor.
+
+Package: openvpn
+Version: 2.1.4-3
+Depends: kmod-tun, liblzo
+Provides: 
+Source: package/built/openvpn
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 183479
+Filename: openvpn_2.1.4-3_keenetic.ipk
+Size: 183964
+MD5Sum: adbe1395e701af24b0776b205373aab4
+Description:  Open source VPN solution using SSL
 
 Package: opkg
 Version: 576-4
