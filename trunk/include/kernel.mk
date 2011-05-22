@@ -82,16 +82,17 @@ define ModuleAutoLoad
 		) > $(2)/etc/modules.d/$$$$$$$$priority-$(1); \
 		modules="$$$$$$$${modules:+$$$$$$$$modules }$$$$$$$$priority-$(1)"; \
 	}; \
-	$(3) \
-	if [ -n "$$$$$$$$modules" ]; then \
-		mkdir -p $(2)/etc/modules.d; \
-		mkdir -p $(2)/CONTROL; \
-		echo "#!/bin/sh" > $(2)/CONTROL/postinst; \
-		echo "[ -z \"\$$$$$$$$IPKG_INSTROOT\" ] || exit 0" >> $(2)/CONTROL/postinst; \
-		echo ". /etc/functions.sh" >> $(2)/CONTROL/postinst; \
-		echo "load_modules $$$$$$$$modules" >> $(2)/CONTROL/postinst; \
-		chmod 0755 $(2)/CONTROL/postinst; \
-	fi
+	$(3)
+#	$(3) \
+#	if [ -n "$$$$$$$$modules" ]; then \
+#		mkdir -p $(2)/etc/modules.d; \
+#		mkdir -p $(2)/CONTROL; \
+#		echo "#!/bin/sh" > $(2)/CONTROL/postinst; \
+#		echo "[ -z \"\$$$$$$$$IPKG_INSTROOT\" ] || exit 0" >> $(2)/CONTROL/postinst; \
+#		echo ". /etc/functions.sh" >> $(2)/CONTROL/postinst; \
+#		echo "load_modules $$$$$$$$modules" >> $(2)/CONTROL/postinst; \
+#		chmod 0755 $(2)/CONTROL/postinst; \
+#	fi
 endef
 
 ifeq ($(DUMP)$(TARGET_BUILD),)
@@ -117,7 +118,6 @@ define KernelPackage
     SECTION:=kernel
     CATEGORY:=Kernel modules
     DESCRIPTION:=$(DESCRIPTION)
-    EXTRA_DEPENDS:=kernel (=$(LINUX_VERSION)-$(LINUX_RELEASE))
     VERSION:=$(LINUX_VERSION)$(if $(PKG_VERSION),+$(PKG_VERSION))-$(if $(PKG_RELEASE),$(PKG_RELEASE),$(LINUX_RELEASE))
     $(call KernelPackage/$(1))
     $(call KernelPackage/$(1)/$(KERNEL))
@@ -142,7 +142,7 @@ $(call KernelPackage/$(1)/config)
     ifneq ($(strip $(FILES)),)
       define Package/kmod-$(1)/install
 		  mkdir -p $$(1)/lib/modules/$(LINUX_VERSION)
-		  $(CP) -L $$(FILES) $$(1)/lib/modules/$(LINUX_VERSION)/
+		  $(CP) -L $$(FILES) $$(1)/lib/modules/$(LINUX_VERSION)
 		  $(call ModuleAutoLoad,$(1),$$(1),$(AUTOLOAD))
 		  $(call KernelPackage/$(1)/install,$$(1))
       endef
