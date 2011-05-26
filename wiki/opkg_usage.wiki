@@ -5,7 +5,8 @@
 Готовые, собранные приложения для ZyXEL Keenetic устанавливаются с помощью системы opkg. Приведем оснвные команды системы opkg:
 
 1. opkg list - команда выдает список пакетов, которые можно установить в настоящий момент.
-{{{~ # opkg list
+{{{
+opkg list
 busybox - 1.17.3-2 - The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 e2fsprogs - 1.41.12-3 - This package contains essential ext2 filesystem utilities which consists of
@@ -21,7 +22,7 @@ htop - 0.9-1 - Htop is an ncursed-based process viewer similar to top, but
 }}}
 2. opkg list-installed - команда выдает список уже установленных пакетов
 {{{
-~ # opkg list-installed
+opkg list-installed
 busybox - 1.17.3-2
 file - 5.05-1
 glib2 - 2.22.2-1
