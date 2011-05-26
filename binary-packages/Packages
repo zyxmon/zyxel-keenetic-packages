@@ -1,5 +1,5 @@
 Package: busybox
-Version: 1.17.3-2
+Version: 1.17.3-3
 Depends: 
 Provides: 
 Source: package/busybox
@@ -9,10 +9,10 @@ Essential: no
 Priority: optional
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keenetic
-Installed-Size: 148411
-Filename: busybox_1.17.3-2_keenetic.ipk
-Size: 148848
-MD5Sum: fbd1d24590a03345030f40674dc22480
+Installed-Size: 158547
+Filename: busybox_1.17.3-3_keenetic.ipk
+Size: 158855
+MD5Sum: 0d8d7d774d7b0001f9f28596f2cdbae0
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 
@@ -104,6 +104,23 @@ MD5Sum: 29855c9c80f9f4f96223f2bd9ef7b8ad
 Description:  Htop is an ncursed-based process viewer similar to top, but
  it allows to scroll the list vertically and horizontally to
  see all processes and their full command lines.
+
+Package: kmod-fs-cifs
+Version: 2.6.23-rt-1
+Depends: 
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 146883
+Filename: kmod-fs-cifs_2.6.23-rt-1_keenetic.ipk
+Size: 145787
+MD5Sum: b3466161648e53c0d2b2eefff45a0d28
+Description:  Kernel module for CIFS support
 
 Package: kmod-tun
 Version: 2.6.23-rt-1
