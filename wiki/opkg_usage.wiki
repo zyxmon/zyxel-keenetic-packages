@@ -1,0 +1,114 @@
+#summary Основные команды opkg.
+
+= Основные команды opkg =
+
+Готовые, собранные приложения для ZyXEL Keenetic устанавливаются с помощью системы opkg. Приведем оснвные команды системы opkg:
+
+1. opkg list - команда выдает список пакетов, которые можно установить в настоящий момент.
+{{{~ # opkg list
+busybox - 1.17.3-2 - The Swiss Army Knife of embedded Linux.
+ It slices, it dices, it makes Julian Fries.
+e2fsprogs - 1.41.12-3 - This package contains essential ext2 filesystem utilities which consists of
+ e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2
+ filesystem utilities.
+file - 5.05-1 - utility
+gawk - 3.1.8-1 - GNU version of AWK.
+glib2 - 2.22.2-1 - The GLib library of C routines
+htop - 0.9-1 - Htop is an ncursed-based process viewer similar to top, but
+ it allows to scroll the list vertically and horizontally to
+ see all processes and their full command lines.
+.....
+}}}
+2. opkg list-installed - команда выдает список уже установленных пакетов
+{{{
+~ # opkg list-installed
+busybox - 1.17.3-2
+file - 5.05-1
+glib2 - 2.22.2-1
+htop - 0.9-1
+.....
+}}}
+3. opkg update - команда скачивает список пакетов, которые могут быть установлены. Рекомендуется всегда выполнять эту команду перед установкой или других манипуляций с пакетами.
+
+4. opkg upgrade - команда обновляет установленные пакеты, если есть обновления.
+
+5. opkg install <имя пакета> - команда устанавливает пакет включая пакеты, от которых устанавливаемый пакет зависит. Например "opkg install mc" установит Midnight Commander.
+
+6. opkg remove <имя пакета> - команда удалит пакет.
+
+7. Полный список команд и опций:
+{{{
+usage: opkg [options...] sub-command [arguments...]
+where sub-command is one of:
+
+Package Manipulation:
+        update                  Update list of available packages
+        upgrade                 Upgrade installed packages
+        install <pkgs>          Install package(s)
+        configure <pkgs>        Configure unpacked package(s)
+        remove <pkgs|regexp>    Remove package(s)
+        flag <flag> <pkgs>      Flag package(s)
+         <flag>=hold|noprune|user|ok|installed|unpacked (one per invocation)
+
+Informational Commands:
+        list                    List available packages
+        list-installed          List installed packages
+        list-upgradable         List installed and upgradable packages
+        list-changed-conffiles  List user modified configuration files
+        files <pkg>             List files belonging to <pkg>
+        search <file|regexp>    List package providing <file>
+        info [pkg|regexp]       Display all info for <pkg>
+        status [pkg|regexp]     Display all status for <pkg>
+        download <pkg>          Download <pkg> to current directory
+        compare-versions <v1> <op> <v2>
+                            compare versions using <= < > >= = << >>
+        print-architecture      List installable package architectures
+        whatdepends [-A] [pkgname|pat]+
+        whatdependsrec [-A] [pkgname|pat]+
+        whatprovides [-A] [pkgname|pat]+
+        whatconflicts [-A] [pkgname|pat]+
+        whatreplaces [-A] [pkgname|pat]+
+
+Options:
+        -A                      Query all packages not just those installed
+        -V[<level>]             Set verbosity level to <level>.
+        --verbosity[=<level>]   Verbosity levels:
+                                        0 errors only
+                                        1 normal messages (default)
+                                        2 informative messages
+                                        3 debug
+                                        4 debug level 2
+        -f <conf_file>          Use <conf_file> as the opkg configuration file
+        --conf <conf_file>
+        --cache <directory>     Use a package cache
+        -d <dest_name>          Use <dest_name> as the the root directory for
+        --dest <dest_name>      package installation, removal, upgrading.
+                                <dest_name> should be a defined dest name from
+                                the configuration file, (but can also be a
+                                directory name in a pinch).
+        -o <dir>                Use <dir> as the root directory for
+        --offline-root <dir>    offline installation of packages.
+        --add-arch <arch>:<prio>        Register architecture with given priority
+        --add-dest <name>:<path>        Register destination with given path
+
+Force Options:
+        --force-depends         Install/remove despite failed dependencies
+        --force-maintainer      Overwrite preexisting config files
+        --force-reinstall       Reinstall package(s)
+        --force-overwrite       Overwrite files from other package(s)
+        --force-downgrade       Allow opkg to downgrade packages
+        --force-space           Disable free space checks
+        --force-postinstall     Run postinstall scripts even in offline mode
+        --noaction              No action -- test only
+        --download-only No action -- download only
+        --nodeps                Do not follow dependencies
+        --force-removal-of-dependent-packages
+                                Remove package and all dependencies
+        --autoremove            Remove packages that were installed
+                                automatically to satisfy dependencies
+        -t                      Specify tmp-dir.
+        --tmp-dir               Specify tmp-dir.
+
+ regexp could be something like 'pkgname*' '*file*' or similar
+ e.g. opkg info 'libstd*' or opkg search '*libop*' or opkg remove 'libncur*'
+}}}
