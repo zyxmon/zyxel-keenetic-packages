@@ -17,7 +17,7 @@ glib2 - 2.22.2-1 - The GLib library of C routines
 htop - 0.9-1 - Htop is an ncursed-based process viewer similar to top, but
  it allows to scroll the list vertically and horizontally to
  see all processes and their full command lines.
-.....
+
 }}}
 2. opkg list-installed - команда выдает список уже установленных пакетов
 {{{
@@ -26,7 +26,7 @@ busybox - 1.17.3-2
 file - 5.05-1
 glib2 - 2.22.2-1
 htop - 0.9-1
-.....
+
 }}}
 3. opkg update - команда скачивает список пакетов, которые могут быть установлены. Рекомендуется всегда выполнять эту команду перед установкой или других манипуляций с пакетами.
 
