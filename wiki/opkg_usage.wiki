@@ -8,8 +8,8 @@
 {{{
 opkg list
 busybox - 1.17.3-2 - The Swiss Army Knife of embedded Linux. It slices, it dices, it makes Julian Fries.
-e2fsprogs - 1.41.12-3 - This package contains essential ext2 filesystem utilities
-which consists of e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2 filesystem utilities.
+e2fsprogs - 1.41.12-3 - This package contains essential ext2 filesystem utilities which consists of
+e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2 filesystem utilities.
 file - 5.05-1 - utility
 gawk - 3.1.8-1 - GNU version of AWK.
 glib2 - 2.22.2-1 - The GLib library of C routines
@@ -35,7 +35,7 @@ htop - 0.9-1
 
 6. opkg remove <имя пакета> - команда удалит пакет.
 
-7. Полный список команд и опций:
+7. Полный список подкоманд и опций:
 {{{
 usage: opkg [options...] sub-command [arguments...]
 where sub-command is one of:
@@ -99,7 +99,7 @@ Force Options:
         --force-space           Disable free space checks
         --force-postinstall     Run postinstall scripts even in offline mode
         --noaction              No action -- test only
-        --download-only No action -- download only
+        --download-only         No action -- download only
         --nodeps                Do not follow dependencies
         --force-removal-of-dependent-packages
                                 Remove package and all dependencies
