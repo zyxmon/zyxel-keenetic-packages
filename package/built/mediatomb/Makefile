@@ -65,7 +65,7 @@ CONFIGURE_ARGS += \
 	--disable-lastfmlib \
 	--disable-ImageMagick \
 	--enable-libexif \
-	--with-iconv-libs=$(ICONV_PREFIX)
+	--with-iconv-libs=$(ICONV_PREFIX)/lib
 
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
