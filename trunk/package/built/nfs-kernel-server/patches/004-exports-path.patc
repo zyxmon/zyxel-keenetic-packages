@@ -1,0 +1,11 @@
+--- a/support/include/nfslib.h
++++ b/support/include/nfslib.h
+@@ -23,7 +23,7 @@
+ #include "xlog.h"
+ 
+ #ifndef _PATH_EXPORTS
+-#define _PATH_EXPORTS		"/etc/exports"
++#define _PATH_EXPORTS		"/media/DISK_A1/system/etc/exports"
+ #endif
+ #ifndef _PATH_IDMAPDCONF
+ #define _PATH_IDMAPDCONF	"/etc/idmapd.conf"
