@@ -28,7 +28,7 @@ define Package/mediatomb
   TITLE:=A powerfull UPNP media server
   URL:=http://www.mediatomb.cc/
   DEPENDS:=+libexif +libsqlite3 +id3lib +file \
-        +libexpat +libffmpeg +libstdc++
+        +libexpat +libffmpeg +libstdcpp
 endef
 
 define Package/mediatomb/description
