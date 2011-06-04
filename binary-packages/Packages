@@ -1,5 +1,5 @@
 Package: busybox
-Version: 1.17.3-3
+Version: 1.17.3-4
 Depends: 
 Provides: 
 Source: package/busybox
@@ -9,10 +9,10 @@ Essential: no
 Priority: optional
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keenetic
-Installed-Size: 158547
-Filename: busybox_1.17.3-3_keenetic.ipk
-Size: 158855
-MD5Sum: 0d8d7d774d7b0001f9f28596f2cdbae0
+Installed-Size: 158615
+Filename: busybox_1.17.3-4_keenetic.ipk
+Size: 158955
+MD5Sum: bfffaad4451136b9e9317076a7d56e0c
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 
@@ -104,6 +104,23 @@ MD5Sum: 29855c9c80f9f4f96223f2bd9ef7b8ad
 Description:  Htop is an ncursed-based process viewer similar to top, but
  it allows to scroll the list vertically and horizontally to
  see all processes and their full command lines.
+
+Package: id3lib
+Version: 3.8.3-1
+Depends: uclibcxx
+Provides: 
+Source: package/built/id3lib
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 74827
+Filename: id3lib_3.8.3-1_keenetic.ipk
+Size: 75352
+MD5Sum: ac67f059bc04eebb75f2033c6155d57d
+Description:  An ID3v1/ID3v2 tag manipulation library
 
 Package: kmod-fs-cifs
 Version: 2.6.23-rt-1
@@ -523,6 +540,23 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  This package contains the SQLite (v3.x) shared library, used by other
  programs.
 
+Package: libstdcpp
+Version: 4.1.2-60
+Depends: 
+Provides: 
+Source: package/base-files
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 160137
+Filename: libstdcpp_4.1.2-60_keenetic.ipk
+Size: 160080
+MD5Sum: 496c6216411c22c7045b98f8f4543663
+Description:  GNU Standard C++ Library v3
+
 Package: libuuid
 Version: 1.41.12-3
 Depends: 
@@ -722,6 +756,24 @@ Description:  GNU Midnight Commander is a text-mode full-screen file manager.
  Virtual Filesystem (VFS), that allows files on remote systems 
  (e.g. FTP, SSH, SMB servers) and files inside archives to be 
  manipulated like real files.
+
+Package: mediatomb
+Version: 0.12.1-1
+Depends: libexif, libsqlite3, id3lib, file, libexpat, libffmpeg, libstdcpp
+Provides: 
+Source: package/built/mediatomb
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 608232
+Filename: mediatomb_0.12.1-1_keenetic.ipk
+Size: 608081
+MD5Sum: bc910b608880485301050b8514126d93
+Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user interface and
+ with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
 Package: minidlna
 Version: 1.0.19-1
@@ -1187,6 +1239,23 @@ Filename: transmission-web_2.13-1_keenetic.ipk
 Size: 161401
 MD5Sum: 97614f17ced12ccb630147239e9c12ea
 Description:  Webinterface resources for transmission.
+
+Package: uclibcxx
+Version: 0.2.2-3
+Depends: 
+Provides: 
+Source: package/built/uclibc++
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 57018
+Filename: uclibcxx_0.2.2-3_keenetic.ipk
+Size: 57587
+MD5Sum: f8a4633b3315ca1685a97c1972cb6cf0
+Description:  C++ library for embedded systems
 
 Package: wget
 Version: 1.12-2
