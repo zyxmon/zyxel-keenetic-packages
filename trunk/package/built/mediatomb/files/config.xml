@@ -15,7 +15,7 @@
     <modelnumber>0.12.1</modelnumber>
     <udn>uuid:cfdbc7db-f260-4080-a0fe-92523a3ff7fa</udn>
     <!-- <home>/media/DISK_A1/system/root/.mediatomb</home> --><!-- Default, first launching -->
-    <home>/media/DISK_A1/system/tmp/mediatomb</home>
+    <home>/media/DISK_A1/system/var/mediatomb</home>
     <webroot>/media/DISK_A1/system/usr/share/mediatomb/web</webroot>
     <!-- <servedir>/home/stuff/Filmy</servedir> -->
     <storage caching="no"><!-- yes may call freezinging adding media to database on NAS -->
@@ -67,7 +67,7 @@
         <import-script>/usr/share/mediatomb/js/import.js</import-script>
       </virtual-layout>
     </scripting>
-    <magic-file>/media/DISK_A1/system/usr/share/file/magic</magic-file>
+    <magic-file>/media/DISK_A1/system/usr/share/misc/magic</magic-file>
     <autoscan use-inotify="auto"><!-- allowed values: "yes", "no", "auto" -->
       <!-- <directory location="/media/DISK_A1/my_video" mode="timed" interval="3600" level="basic" recursive="yes" hidden-files="no"/>
       <directory location="/media/DISK_A1/my_audio" mode="timed" interval="3600" level="basic" recursive="yes" hidden-files="no"/> -->

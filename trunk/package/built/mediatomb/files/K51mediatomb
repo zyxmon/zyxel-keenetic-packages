@@ -1,0 +1,79 @@
+#!/bin/sh
+
+MOUNT="/media/DISK_A1/system"
+MBIN="$MOUNT/usr/bin/mediatomb"
+MCONFIG="$MOUNT/etc/mediatomb/config.xml"
+MHOME="$MOUNT/var/mediatomb"
+MLOG="$MHOME/mediatomb.log"
+MPID="$MOUNT/var/mediatomb.pid"
+
+export LANG=C
+export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
+
+daemon_status ()
+{
+	[ -f $MPID ] && [ -d /proc/`cat $MPID` ]
+}
+
+start_daemon() {
+	$MBIN -c $MCONFIG -m $MHOME -l $MLOG -P $MPID -d
+	counter=5
+	while [ $counter -gt 0 ]
+	do
+		daemon_status && break
+		let counter=counter-1
+		sleep 1
+	done
+}
+
+stop_daemon() {
+	kill `cat $MPID`
+	counter=10
+	while [ $counter -gt 0 ]
+	do
+		daemon_status || break
+		let counter=counter-1
+		sleep 1
+		if [ counter = 1 ]; then
+			killall -9 mediatomb 2> /dev/null
+		fi
+	done
+}
+
+case "$1" in
+	start)
+		if daemon_status
+		then
+			echo Mediatomb daemon already running
+		else
+			start_daemon
+		fi
+		;;
+	stop)
+		stop_daemon
+		;;
+	restart)
+		stop_daemon
+		start_daemon
+		;;
+	status)
+		if daemon_status
+		then
+			echo Running
+		else
+		echo Not running
+		fi
+		;;
+	link_up)
+		;;
+	ppp_up)
+		;;
+	link_down)
+		;;
+	ppp_down)
+		;;
+	*)
+		echo "Usage: $0 {start|stop|restart|status|link_up|link_down|ppp_up|ppp_down}"
+		;;
+esac
