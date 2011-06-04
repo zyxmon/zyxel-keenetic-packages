@@ -1148,6 +1148,24 @@ Description:  PHP is a widely-used general-purpose scripting language that is es
  This package contains only the PHP config file. You must actually choose 
  your PHP flavour (cli, cgi or fastcgi).
 
+Package: screen
+Version: 4.0.3-2
+Depends: libncurses
+Provides: 
+Source: package/built/screen
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 158609
+Filename: screen_4.0.3-2_keenetic.ipk
+Size: 159069
+MD5Sum: 4c656315734568c9c21d1d6be9dcd8ee
+Description:  Screen is a full-screen window manager that multiplexes a physical
+ terminal between several processes, typically interactive shells.
+
 Package: sqlite3-cli
 Version: 3070500-2
 Depends: libsqlite3, libncurses, libreadline
