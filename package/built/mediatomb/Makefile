@@ -36,6 +36,10 @@ define Package/mediatomb/description
   with the aim of being fully compliant with DLNA/UPnP-AV clients.
 endef
 
+define Package/mediatomb/conffiles
+/etc/mediatomb/config.xml
+endef
+
 CONFIGURE_ARGS += \
 	--prefix=/usr \
 	--enable-pthread-lib \
@@ -74,22 +78,16 @@ define Build/Compile
 		all install
 endef
 
-define Build/InstallDev
-	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_BUILD_DIR)/build/libmediatomb.a $(1)/usr/lib/
-endef
-
 define Package/mediatomb/install
-	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_BUILD_DIR)/build/libmediatomb.a $(1)/usr/lib/
 	$(INSTALL_DIR) $(1)/etc/mediatomb
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_DIR) $(1)/usr/share
+	$(INSTALL_DIR) $(1)/var/mediatomb
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/mediatomb $(1)/usr/bin/
 	$(CP)  $(PKG_INSTALL_DIR)/usr/share/* $(1)/usr/share/
 	$(INSTALL_DATA) ./files/config.xml $(1)/etc/mediatomb/
-	$(INSTALL_BIN) ./files/mediatomb.init $(1)/etc/init.d/mediatomb
+	$(INSTALL_BIN) ./files/K51mediatomb $(1)/etc/init.d/K51mediatomb
 endef
 
 $(eval $(call BuildPackage,mediatomb))
