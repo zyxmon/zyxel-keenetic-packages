@@ -1,6 +1,15 @@
 diff -u orig/configure mod/configure
 --- orig/configure	2010-04-08 02:40:17.000000000 +0400
 +++ mod/configure	2011-06-02 00:21:30.000000000 +0400
+@@ -24093,7 +24093,7 @@
+ else
+ 
+                             LDFLAGS="-L$SEARCH_DIR_LIBS $LDFLAGS_SAVE $ADD_PTHREAD_CFLAGS"
+-                            unset ac_cv_lib_js_JS_NewObject
++                            ac_cv_lib_js_JS_NewObject=yes
+                             { $as_echo "$as_me:$LINENO: checking for JS_NewObject in -ljs" >&5
+ $as_echo_n "checking for JS_NewObject in -ljs... " >&6; }
+ if test "${ac_cv_lib_js_JS_NewObject+set}" = set; then
 @@ -31425,7 +31425,7 @@
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */

@@ -35,10 +35,12 @@ stop_daemon() {
 		daemon_status || break
 		let counter=counter-1
 		sleep 1
-		if [ counter = 1 ]; then
-			killall -9 mediatomb 2> /dev/null
-		fi
 	done
+	if daemon_status
+	then
+		killall -9 mediatomb 2> /dev/null
+	fi
+	rm -f $MPID 2> /dev/null
 }
 
 case "$1" in

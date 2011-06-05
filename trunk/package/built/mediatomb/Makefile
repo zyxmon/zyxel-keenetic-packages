@@ -12,7 +12,7 @@ include $(INCLUDE_DIR)/nls.mk
 
 PKG_NAME:=mediatomb
 PKG_VERSION:=0.12.1
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/mediatomb
@@ -28,7 +28,7 @@ define Package/mediatomb
   TITLE:=A powerfull UPNP media server
   URL:=http://www.mediatomb.cc/
   DEPENDS:=+libexif +libsqlite3 +id3lib +file \
-        +libexpat +libffmpeg +libstdcpp
+        +libjs +libexpat +libffmpeg +libstdcpp
 endef
 
 define Package/mediatomb/description
@@ -52,7 +52,7 @@ CONFIGURE_ARGS += \
 	--enable-protocolinfo-extension \
 	--disable-libextractor \
 	--enable-ffmpeg \
-	--disable-libjs \
+	--enable-libjs \
 	--disable-tombdebug \
 	--disable-upnpdebug \
 	--disable-sopcast \
@@ -69,7 +69,8 @@ CONFIGURE_ARGS += \
 	--disable-lastfmlib \
 	--disable-ImageMagick \
 	--enable-libexif \
-	--with-iconv-libs=$(ICONV_PREFIX)/lib
+	--with-iconv-libs=$(ICONV_PREFIX)/lib \
+	--with-js-h=$(STAGING_DIR)/usr/include/js
 
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
