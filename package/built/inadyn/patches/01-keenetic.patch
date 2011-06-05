@@ -1,0 +1,13 @@
+--- a/include/dyndns.h
++++ b/include/dyndns.h
+@@ -52,8 +52,8 @@ typedef enum
+ 
+ /*test values*/
+ #define DYNDNS_DEFAULT_DEBUG_LEVEL	1
+-#define DYNDNS_DEFAULT_CONFIG_FILE	"/etc/inadyn.conf"
+-#define DYNDNS_RUNTIME_DATA_DIR		"/var/run/inadyn"
++#define DYNDNS_DEFAULT_CONFIG_FILE	"/media/DISK_A1/system/etc/inadyn.conf"
++#define DYNDNS_RUNTIME_DATA_DIR		"/media/DISK_A1/system/var"
+ #define DYNDNS_DEFAULT_CACHE_FILE	DYNDNS_RUNTIME_DATA_DIR"/inadyn.cache"
+ #define DYNDNS_DEFAULT_PIDFILE		DYNDNS_RUNTIME_DATA_DIR"/inadyn.pid"
+ 
