@@ -390,6 +390,23 @@ Size: 58368
 MD5Sum: 18fdd78e486c210cadcfa0d92b7680ec
 Description:  The Independent JPEG Group's JPEG runtime library
 
+Package: libjs
+Version: 1.6.20070208-2
+Depends: 
+Provides: 
+Source: package/built/ossp-js
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 277423
+Filename: libjs_1.6.20070208-2_keenetic.ipk
+Size: 277495
+MD5Sum: 7a17f354898d2a4318662a3199f7149a
+Description:  Mozilla JavaScript Engine (library)
+
 Package: liblzo
 Version: 2.04-1
 Depends: 
@@ -775,8 +792,8 @@ Description:  GNU Midnight Commander is a text-mode full-screen file manager.
  manipulated like real files.
 
 Package: mediatomb
-Version: 0.12.1-1
-Depends: libexif, libsqlite3, id3lib, file, libexpat, libffmpeg, libstdcpp
+Version: 0.12.1-2
+Depends: libexif, libsqlite3, id3lib, file, libjs, libexpat, libffmpeg, libstdcpp
 Provides: 
 Source: package/built/mediatomb
 Section: multimedia
@@ -785,10 +802,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 608232
-Filename: mediatomb_0.12.1-1_keenetic.ipk
-Size: 608081
-MD5Sum: bc910b608880485301050b8514126d93
+Installed-Size: 629672
+Filename: mediatomb_0.12.1-2_keenetic.ipk
+Size: 629556
+MD5Sum: 4e57a8a04210776835bdc50c08278912
 Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user interface and
  with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
