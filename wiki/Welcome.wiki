@@ -16,7 +16,7 @@
 
 5. [cron_setup Планировщик cron.]
 
-6. minidlna сервер.
+6. [dlna_setup DLNA серверы minidlna и mediatomb.]
 
 7. transmission.
 
