@@ -18,7 +18,7 @@
 
 6. [dlna_setup DLNA серверы minidlna и mediatomb.]
 
-7. transmission.
+7. [transmission_setup transmission.]
 
 8. http сервер lighttpd и php.
 
