@@ -1,0 +1,38 @@
+#summary Transmission.
+
+= Transmission =
+
+Transmission состоит из четырех пакетов
+{{{
+# opkg list | grep transmis
+transmission-cli - 2.13-1 - CLI utilities for transmission.
+transmission-daemon - 2.13-1 - Transmission is a simple BitTorrent client.
+transmission-remote - 2.13-1 - CLI remote interface for transmission.
+transmission-web - 2.13-1 - Webinterface resources for transmission.
+}}}
+
+
+Как минимум нужно установить
+
+{{{
+opkg install transmission-daemon
+}}}
+
+Для обновления "web морды" transmission нужно поставить пакет
+
+{{{
+opkg install transmission-web
+}}}
+
+Морда будет с бОльшими возможностями, чем штатная 1.93, за счет перехода на версию 2.13, но на английском языке. Файл настроек transmission, который называется settings.json, будет находится в папке
+/media/DISK_A1/system/var/transmission
+Файл запуска transmission K90transmissiond находится, как обычно, в /media/DISK_A1/etc/init.d/
+Для автоматического запуска его следует переименовать в S90transmissiond.
+
+Редактируем K90transmissiond и settings.json под свои нужды. Если пакет transmission-web не устанавливался, то удаляем строку с TRANSMISSION_WEB_HOME. Не забываем про проброс портов (как для демона, так и для RPC).
+
+S90transmissiond с параметрами start/stop/restart понятно что делает.
+S90transmissiond reload - перечитывает отредактированный файл settings.json (не нужно останавливать transmission для редактирования настроек руками).
+S90transmissiond status - выдает статус (запущен или нет демон).
+
+PS Никаких искуственных ограничений по скорости у этого transmission нет, но не думаю, что будет работать устойчиво, если задать скорость (up и down) значительно больше 1МБайт/c.
