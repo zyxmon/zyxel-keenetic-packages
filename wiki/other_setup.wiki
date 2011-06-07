@@ -2,10 +2,10 @@
 
 = Другие приложения и сервисы =
 
-Список пакетов постоянно увеличивается. В составе пакетов есть и простые приложения: mc (Midnight Commander), nano, screen, htop, file, gawk, e2fsprogs и более сложные openvpn (клиент и сервер).
+Список пакетов постоянно увеличивается. В составе пакетов есть и простые приложения: mc (Midnight Commander), nano, screen, htop, file, gawk, e2fsprogs и более сложные inadyn, openvpn (клиент и сервер).
 Если есть вопросы по конкретному приложению, лучше всего их задать на форуме http://forum.zyxmon.org/forum3-setevoe-oborudovanie.html
 
-Остановимся подробнее на модуле ядра cifs.ko (пакет kmod-fs-cifs_2.6.23-rt-1_keenetic.ipk). После установке пакета (opkg install kmod-fs-cifs) на кинетике появляется возможность монтировать удаленные ресурсы с компов, НАСов. Делается это так
+Остановимся подробнее на модуле ядра cifs.ko (пакет kmod-fs-cifs_2.6.23-rt-1_keenetic.ipk). После установке пакета (opkg install kmod-fs-cifs) на кинетике появляется возможность монтировать удаленные ресурсы самба с компов, НАСов. Делается это так
 {{{
 insmod /media/DISK_A1/system/lib/modules/2.6.23-rt/cifs.ko
 mkdir /media/smb
