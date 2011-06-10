@@ -1,6 +1,6 @@
 #summary Эта статья посвящена вопросу установки CMS Drupal7 на Zyxel Keenetic.
 
-= Введение (*Статья еще не окончена!*)=
+= Введение =
 
 В рамках данной статьи мы займемся вопросом установки [http://drupal.org CMS Drupal] на нашем роутере. Все необходимое для этого уже имеется в репозитарии этого проекта и доступно через менеджер пакетов opkg.
 У нас имеется быстрый web-сервер [http://www.lighttpd.net/ lighttpd], [http://php.net/ PHP 5.3.6] и встроенная поддержка баз данных в виде библиотеки SQLite3.
@@ -194,9 +194,93 @@ session.bug_compat_warn = Off
  * Сразу же включите чистые ссылки - [http://drupal.org/getting-started/clean-urls CleanURLs]. Для этого все уже готово, нужно просто включить их в разделе _Administer > Configuration > Search and metadata > Clean URLs_
  * Теперь деинсталлируйте модуль "*Database Logging*": он ведет полный лог обращений к сайту даже в режиме гостевого входа, а лишняя нагрузка на базу данных нам не нужна.
  * Не устанавливайте модуль "*Path*". Конечно этот модуль очень удобен, он позволяет делать "человеческие" названия ссылкам на страницы. Но его реализация в Drupal 7 очень корявая, на загрузку одной простой страницы модуль "*Path*" делает до 60-ти обращений к базе данных.
- * Заходим в _Administration > Configuration > Performance_ и включаем кеширование страниц: включить _"Cache pages for anonymous users"_ и _"Cache blocks"_, _"Minimum cache lifetime"_ ставим 10 минут, а _"Expiration of cached pages"_ - 1 день, включаем _"Aggregate and compress CSS files"_ и _"Aggregate JavaScript files"_, _"Compress cached pages"_ - *выключаем*.
- * Я рекомендую установить модуль [http://drupal.org/project/filecache File Cache] - очень ускоряет работу с закешированными данными.
+ * Заходим в _Administration > Configuration > Performance_ и включаем кеширование страниц: включить _"Cache pages for anonymous users"_ и _"Cache blocks"_, _"Minimum cache lifetime"_ ставим 10 минут, а _"Expiration of cached pages"_ - 1 день, включаем _"Aggregate and compress CSS files"_ и _"Aggregate JScript files"_, _"Compress cached pages"_ - ВЫКЛЮЧАЕМ.
+ * Я рекомендую установить модуль [http://drupal.org/project/filecache File Cache] - очень ускоряет работу с закешированными данными. Для работы этого модуля в файле /media/DISK_A1/net/www/sites/default/settings.php нужно дописать код:
+{{{
+/**
+ * turn off HTTP Request Fails message (in admin/reports/status)
+ */
+$conf['drupal_http_request_fails'] = FALSE;
 
-memory_limit = 32M
+/**
+ * Setings for filecache module
+ */ 
+$conf['cache_backends'] = array('sites/all/modules/filecache/filecache.inc');
+$conf['cache_default_class'] = 'DrupalFileCache';
+$conf['filecache_directory'] = '/media/DISK_A1/system/tmp/filecache-' . substr(conf_path(), 6);
+}}}
+ * Установите на своем роутере cron (читайте [cron_setup эту статье]). В файл заданий crontab допишите две задачи для нашего сайта:
+{{{
+# Drupal cron and VACUUM
+10 */1 * * * wget -O - -q -t 1 http://мой_сайт.com/cron.php?cron_key=cron_ИД
+* */23 * * * sqlite3 /media/DISK_A1/net/db/.ht.sqlite 'VACUUM' 
+}}}
+ первая задача запускает самообслуживание сайта раз в 1час и 10 мин (cron_ИД вы можете посмотреть в _Administration > Reports > Status report_. Вторая задача "вакуумирует" вашу базу данных - это прямой аналог дефрагментации для файловых систем, выполняется раз в 23 часа.
+ * Теперь когда сайт установлен и работает можно снова заглянуть в настройки php и уменьшить объем занимаемой памяти до 20-22Мб - memory_limit = 22M, так же я рекомендую теперь установить параметры кеширования файлового поиска в php - realpath_cache_size и realpath_cache_ttl. В результате наш myphp.ini измениться и теперь выглядит так:
+{{{
+; Language Options
+allow_call_time_pass_reference = Off
+
+; Resource Limits
+memory_limit = 22M		; Maximum amount of memory a script may consume.
+max_execution_time = 120	; Maximum execution time of each script, in seconds.
+max_input_time = 120		; Maximum amount of time each script may spend parsing request data.
+
+; Error handling and logging
+log_errors = On
+log_errors_max_len = 1024
+
+; Paths and Directories
+doc_root = "/media/DISK_A1/net/www"
+
+; Realpath tuning
+realpath_cache_size = 128K
+realpath_cache_ttl = 12000
+
+; Module Settings
+[Date]
+date.timezone = Europe/Kiev
+
+[Session]
+session.cookie_path = /
+session.bug_compat_42 = Off
+session.bug_compat_warn = Off
+}}}
+
+В качестве примера перечислю минималистический набор модулей, установленных на моем роутерном сайте.
+Стандартные:
+ * Block
+ * Field
+ * Field SQL storage
+ * Field UI
+ * File
+ * Filter
+ * Image
+ * Menu
+ * Node
+ * Options
+ * System
+ * Taxonomy
+ * Text
+ * User
+
+Дополнительные:
+ * File Field Sources
+ * IMCE
+ * Block for news (мой личный)
+ * Colorbox
+ * Insert
+ * Site Verification
+ * File Cache
+ * Wysiwyg
+ * XML sitemap, XML sitemap engines, XML sitemap node
+
+
 ----
 = Завершение =
+Наконец-то мы закончили настройки и можем приступить к наполнению сайта содержимым, добавить необходимые модули, недостающее дописать руками... Если вы действительно решили дорабатывать функциональность Drupal-а то лучше это делать в своем модуле, избегайте использования php кода в теле страниц и блоков - не устанавливаейте модуль "*PHP Filter*" - его использование опасно написанием дыр на сайте, так же он отключает систему кеширования страниц Drupal-а. 
+
+Пару слов о скорости работы сайта: как уже говорилось - главное чтобы была свободна ОЗУ, чем меньше будет задействоваться своп - тем быстрее будет работать сайт. Максимальную производительность мы будем получить при анонимном/гостевом входе на сайт - скорость отдачи страниц (при условии работы кеша) будет менее 1-2 сек. Когда кеш не работает, а это вариант аутентификационной работы на сайте, задержки могут достигать 8-9 сек. Эти задержки вызваны постоянным парсированием php кода, которого в Drupal-е много. К сожалению попытки прикрутить какую-либо из систем кеширования операционного кода APC, XCache, eAccelerator и т.п. - пока не увенчались успехом :(
+
+P.S.:
+За время написания статьи был выпущен новый релиз - Drupal 7.2. Все что было сказано выше - отлично работает и на нем :)
