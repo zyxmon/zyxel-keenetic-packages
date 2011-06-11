@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=php
 PKG_VERSION:=5.3.6
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://www.php.net/distributions/
@@ -74,9 +74,6 @@ define Package/php5
   DEPENDS:=+libpcre
   ifneq ($(CONFIG_PHP5_LIBXML),)
     DEPENDS+= +libxml2
-  endif
-  ifneq ($(CONFIG_PACKAGE_php5-mod-apc),)
-    DEPENDS+= +librt
   endif
   ifneq ($(CONFIG_PACKAGE_php5-mod-sqlite3)$(CONFIG_PACKAGE_php5-mod-pdo-sqlite),)
     DEPENDS+= +libsqlite3
