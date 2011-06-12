@@ -1,0 +1,76 @@
+#!/bin/sh
+# Copyright (C) 2006 OpenWrt.org
+
+MOUNTPNT="/media/DISK_A1"
+MOUNT="$MOUNTPNT/system"
+
+export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
+
+
+NFS_D=/var/lib/nfs
+LOCK_D=/var/lib/nfs/sm
+
+start() {
+	insmod $MOUNT/lib/modules/2.6.23-rt/exportfs.ko
+	insmod $MOUNT/lib/modules/2.6.23-rt/sunrpc.ko
+	insmod $MOUNT/lib/modules/2.6.23-rt/lockd.ko
+	insmod $MOUNT/lib/modules/2.6.23-rt/auth_rpcgss.ko
+	insmod $MOUNT/lib/modules/2.6.23-rt/nfsd.ko
+	grep -q /proc/fs/nfsd /proc/mounts || \
+		mount -t nfsd nfsd /proc/fs/nfsd
+	mkdir -p $NFS_D
+	mkdir -p $LOCK_D
+	touch $NFS_D/rmtab
+	sysctl -w fs.nfs.nlm_tcpport=32777 fs.nfs.nlm_udpport=32777 > /dev/null
+	$MOUNT/usr/sbin/rpc.statd -p 32778 -o 32779
+	$MOUNT/usr/sbin/exportfs -r
+	$MOUNT/usr/sbin/rpc.nfsd
+	$MOUNT/usr/sbin/rpc.mountd -p 32780
+}
+
+stop() {
+	killall rpc.mountd 2> /dev/null
+	rpc.nfsd 0 2> /dev/null
+	$MOUNT/usr/sbin/exportfs -au
+	killall rpc.statd 2> /dev/null
+	grep -q /proc/fs/nfsd /proc/mounts && \
+		umount /proc/fs/nfsd
+	rmmod $MOUNT/lib/modules/2.6.23-rt/nfsd.ko
+	rmmod $MOUNT/lib/modules/2.6.23-rt/auth_rpcgss.ko
+	rmmod $MOUNT/lib/modules/2.6.23-rt/lockd.ko
+	rmmod $MOUNT/lib/modules/2.6.23-rt/sunrpc.ko
+	rmmod $MOUNT/lib/modules/2.6.23-rt/exportfs.ko
+}
+
+reload() {
+	$MOUNT/usr/sbin/exportfs -r
+}
+
+
+case "$1" in
+	start)
+	    start
+	    ;;
+	stop)
+	    stop
+	    ;;
+	restart)
+	    stop
+	    start
+	    ;;
+	reload)
+		reload
+	    ;;
+	link_up)
+		;;
+	ppp_up)
+	    ;;
+	link_down)
+	    ;;
+	ppp_down)
+	    ;;
+	*)
+	    echo "Usage: $0 {start|stop|restart|reload|link_up|link_down|ppp_up|ppp_down}"
+	    ;;
+esac
