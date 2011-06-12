@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=minidlna
-PKG_VERSION:=1.0.19
+PKG_VERSION:=1.0.20
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)_$(PKG_VERSION)_src.tar.gz
 PKG_SOURCE_URL:=@SF/minidlna
-PKG_MD5SUM:=8bb5f2c0abc009e16039d7deecf09cf6
+PKG_MD5SUM:=1c5230cc6dec7592eca4c63c526eadb7
 
 PKG_BUILD_PARALLEL:=0
 
@@ -39,6 +39,10 @@ define Package/minidlna/description
   being fully compliant with DLNA/UPnP-AV clients.
 endef
 
+define Package/minidlna/conffiles
+/etc/minidlna.conf
+endef
+
 define Package/minidlna/install
 	$(INSTALL_DIR) $(1)/etc
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/minidlna.conf $(1)/etc/
@@ -46,6 +50,7 @@ define Package/minidlna/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/minidlna $(1)/usr/bin/
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/S50minidlna $(1)/etc/init.d/S50minidlna
+	$(INSTALL_DIR) $(1)/tmp/minidlna
 endef
 
 $(eval $(call BuildPackage,minidlna))
