@@ -156,6 +156,74 @@ Size: 145787
 MD5Sum: b3466161648e53c0d2b2eefff45a0d28
 Description:  Kernel module for CIFS support
 
+Package: kmod-fs-exportfs
+Version: 2.6.23-rt-1
+Depends: 
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3327
+Filename: kmod-fs-exportfs_2.6.23-rt-1_keenetic.ipk
+Size: 3924
+MD5Sum: 01cebab98687802a6bb8a9d5024c3e83
+Description:  Kernel module for exportfs. Needed for some other modules.
+
+Package: kmod-fs-nfs-common
+Version: 2.6.23-rt-1
+Depends: 
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 147733
+Filename: kmod-fs-nfs-common_2.6.23-rt-1_keenetic.ipk
+Size: 147772
+MD5Sum: 119f3fce977e1c6e82bf0a5ec7be9256
+Description:  Common NFS filesystem modules
+
+Package: kmod-fs-nfs
+Version: 2.6.23-rt-1
+Depends: kmod-fs-nfs-common
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 152307
+Filename: kmod-fs-nfs_2.6.23-rt-1_keenetic.ipk
+Size: 152081
+MD5Sum: 5a0b09616bc85dc117be182cf3ab7b15
+Description:  Kernel module for NFS support
+
+Package: kmod-fs-nfsd
+Version: 2.6.23-rt-1
+Depends: kmod-fs-nfs-common, kmod-fs-exportfs
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 115779
+Filename: kmod-fs-nfsd_2.6.23-rt-1_keenetic.ipk
+Size: 115759
+MD5Sum: 0dd2b4fbf9671a9a8555763722b6f7a5
+Description:  Kernel module for NFS kernel server support
+
 Package: kmod-tun
 Version: 2.6.23-rt-1
 Depends: 
@@ -632,6 +700,23 @@ Description:  Vorbis is a general purpose audio and music encoding format
  software entity may make full use of the format without license
  fee, royalty or patent concerns.
 
+Package: libwrap
+Version: 7.6-1
+Depends: 
+Provides: 
+Source: package/built/tcp_wrappers
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10254
+Filename: libwrap_7.6-1_keenetic.ipk
+Size: 10881
+MD5Sum: a99d01186eb90ebf2694802b8a8a2070
+Description:  Security wrapper library for TCP services
+
 Package: libxml2
 Version: 2.7.8-1
 Depends: 
@@ -844,6 +929,23 @@ Size: 35938
 MD5Sum: 0be4b6c27588fd66bd2dca90e8bfccf7
 Description:  GNU nano (Nano's ANOther editor, or Not ANOther editor) is an enhanced clone
  of the Pico text editor.
+
+Package: nfs-kernel-server
+Version: 1.1.6-1
+Depends: libwrap, libblkid, libuuid, kmod-fs-nfsd, kmod-fs-nfs, portmap
+Provides: 
+Source: package/built/nfs-kernel-server
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 84167
+Filename: nfs-kernel-server_1.1.6-1_keenetic.ipk
+Size: 84888
+MD5Sum: 925e123ec176e0a2fadd7ea7ca8d9381
+Description:  Kernel NFS server support
 
 Package: openvpn
 Version: 2.1.4-3
@@ -1198,6 +1300,24 @@ Description:  PHP is a widely-used general-purpose scripting language that is es
  suited for Web development and can be embedded into HTML.
  This package contains only the PHP config file. You must actually choose 
  your PHP flavour (cli, cgi or fastcgi).
+
+Package: portmap
+Version: 6.0-2
+Depends: libwrap
+Provides: 
+Source: package/built/portmap
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 7158
+Filename: portmap_6.0-2_keenetic.ipk
+Size: 7837
+MD5Sum: a0e5b5e0936e2976e0a63a491bd09b53
+Description:  Portmap is a server that converts RPC (Remote Procedure Call) program
+ numbers into DARPA protocol port numbers.
 
 Package: screen
 Version: 4.0.3-2
