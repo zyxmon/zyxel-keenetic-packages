@@ -1,0 +1,1 @@
+/media/DISK_A1	*(ro,subtree_check,root_squash,insecure,sync)

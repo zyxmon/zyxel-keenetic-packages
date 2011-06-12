@@ -42,7 +42,7 @@ define Package/portmap/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/portmap $(1)/usr/sbin/
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) ./files/portmap.init $(1)/etc/init.d/portmap
+	$(INSTALL_BIN) ./files/S19portmap $(1)/etc/init.d/S19portmap
 endef
 
 $(eval $(call BuildPackage,portmap))

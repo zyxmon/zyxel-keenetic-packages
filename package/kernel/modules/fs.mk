@@ -61,7 +61,6 @@ define KernelPackage/fs-exportfs
   TITLE:=exportfs kernel server support
   KCONFIG:=CONFIG_EXPORTFS
   FILES=$(LINUX_DIR)/fs/exportfs/exportfs.ko
-  AUTOLOAD:=$(call AutoLoad,20,exportfs)
 endef
 
 define KernelPackage/fs-exportfs/description
@@ -234,7 +233,6 @@ define KernelPackage/fs-nfs
 	CONFIG_NFS_FS
   FILES:= \
 	$(LINUX_DIR)/fs/nfs/nfs.ko
-  AUTOLOAD:=$(call AutoLoad,40,nfs)
 endef
 
 define KernelPackage/fs-nfs/description
@@ -252,8 +250,8 @@ define KernelPackage/fs-nfs-common
 	CONFIG_SUNRPC
   FILES:= \
 	$(LINUX_DIR)/fs/lockd/lockd.ko \
-	$(LINUX_DIR)/net/sunrpc/sunrpc.ko
-  AUTOLOAD:=$(call AutoLoad,30,sunrpc lockd)
+	$(LINUX_DIR)/net/sunrpc/sunrpc.ko \
+	$(LINUX_DIR)/net/sunrpc/auth_gss/auth_rpcgss.ko
 endef
 
 $(eval $(call KernelPackage,fs-nfs-common))
@@ -268,7 +266,6 @@ define KernelPackage/fs-nfs-common-v4
 	CONFIG_NFSD_V4=y
   DEPENDS:= @BROKEN
   FILES+=$(LINUX_DIR)/net/sunrpc/auth_gss/auth_rpcgss.ko
-  AUTOLOAD=$(call AutoLoad,30,auth_rpcgss)
 endef
 
 define KernelPackage/fs-nfs-common-v4/description
@@ -284,7 +281,6 @@ define KernelPackage/fs-nfsd
   DEPENDS:=+kmod-fs-nfs-common +kmod-fs-exportfs
   KCONFIG:=CONFIG_NFSD
   FILES:=$(LINUX_DIR)/fs/nfsd/nfsd.ko
-  AUTOLOAD:=$(call AutoLoad,40,nfsd)
 endef
 
 define KernelPackage/fs-nfsd/description
