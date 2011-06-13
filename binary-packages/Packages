@@ -947,6 +947,23 @@ Size: 84888
 MD5Sum: 925e123ec176e0a2fadd7ea7ca8d9381
 Description:  Kernel NFS server support
 
+Package: openssh-sftp-server
+Version: 5.8p2-1
+Depends: 
+Provides: 
+Source: package/built/openssh
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Peter Wagner <tripolar@gmx.at>
+Architecture: keenetic
+Installed-Size: 27356
+Filename: openssh-sftp-server_5.8p2-1_keenetic.ipk
+Size: 27919
+MD5Sum: 0b102cfa12b4fc95514ad93692cad83d
+Description:  OpenSSH SFTP server.
+
 Package: openvpn
 Version: 2.1.4-3
 Depends: kmod-tun, liblzo
