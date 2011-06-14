@@ -1375,6 +1375,23 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  that can evaluate queries interactively and display the results in multiple
  formats.
 
+Package: tcpdump-mini
+Version: 4.1.1-1
+Depends: 
+Provides: 
+Source: package/built/tcpdump
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 138615
+Filename: tcpdump-mini_4.1.1-1_keenetic.ipk
+Size: 139084
+MD5Sum: c9eb173ec8339c69dacfe2fffbf6993c
+Description:  Network monitoring and data acquisition tool (minimal version)
+
 Package: transmission-cli
 Version: 2.13-1
 Depends: transmission-daemon
