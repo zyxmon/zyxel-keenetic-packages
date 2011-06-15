@@ -6,3 +6,4 @@ staging_dir
 build_dir
 bin
 feeds
+cpconf.sh
