@@ -123,7 +123,7 @@ MD5Sum: ac67f059bc04eebb75f2033c6155d57d
 Description:  An ID3v1/ID3v2 tag manipulation library
 
 Package: inadyn
-Version: 1.98.0-1
+Version: 1.98.0-2
 Depends: 
 Provides: 
 Source: package/built/inadyn
@@ -133,10 +133,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 22708
-Filename: inadyn_1.98.0-1_keenetic.ipk
-Size: 23358
-MD5Sum: cf03c7f7018cb1dbe0221606850b7b01
+Installed-Size: 22709
+Filename: inadyn_1.98.0-2_keenetic.ipk
+Size: 23381
+MD5Sum: e9d5170af2322722a6d3589ae68af463
 Description:  inadyn - a client for open DNS servers.
 
 Package: kmod-fs-cifs
