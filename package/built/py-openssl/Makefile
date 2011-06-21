@@ -7,39 +7,39 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=PIL
-PKG_VERSION:=1.1.7
+PKG_NAME:=pyOpenSSL
+PKG_VERSION:=0.12
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://effbot.org/media/downloads
+PKG_SOURCE_URL:=http://pypi.python.org/packages/source/p/pyOpenSSL/
 PKG_MD5SUM:=
 
 include $(INCLUDE_DIR)/package.mk
 $(call include_mk, python-package.mk)
 
-define Package/python-pil
+define Package/py-openssl
 	SECTION:=lang-python
 	CATEGORY:=Languages
 	SUBMENU:=Python
-	TITLE:=python-pil
-	URL:=http://effbot.org/
-	DEPENDS:=+python +libjpeg +libfreetype +liblcms
+	TITLE:=py-OpenSSL
+	URL:=http://pypi.python.org
+	DEPENDS:=+python
 endef
 
-define Package/python-pil/description
-The Python Imaging Library (PIL) adds image processing capabilities to your Python interpreter.
+define Package/py-openssl/description
+Python wrapper around a small subset of the OpenSSL library.
 endef
 
 define Build/Compile
 	$(call Build/Compile/PyMod,,install --prefix=/usr --root=$(PKG_INSTALL_DIR))
 endef
 
-define Package/python-pil/install
+define Package/py-openssl/install
 	$(INSTALL_DIR) $(1)$(PYTHON_PKG_DIR)/
 	$(CP) \
 		$(PKG_INSTALL_DIR)$(PYTHON_PKG_DIR)/* \
 		$(1)$(PYTHON_PKG_DIR)/
 endef
 
-$(eval $(call BuildPackage,python-pil))
+$(eval $(call BuildPackage,py-openssl))
