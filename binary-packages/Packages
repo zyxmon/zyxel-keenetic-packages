@@ -1487,8 +1487,8 @@ MD5Sum: 971d82381c9ea20f02a4e7910d42cdbd
 Description:  Python wrapper around a small subset of the OpenSSL library.
 
 Package: pyload
-Version: 1.0.0-1
-Depends: js, python-django, py-openssl, python-pil, python-sqlite3, python-crypto, python-curl, tesseract, tesseract-eng-data
+Version: 1.0.0-2
+Depends: js, python-django, py-openssl, python-pil, python-sqlite3, python-crypto, python-curl, tesseract, tesseract-eng-data, screen
 Provides: 
 Source: package/built/pyload
 Section: net
@@ -1497,10 +1497,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: all
-Installed-Size: 778
-Filename: pyload_1.0.0-1_all.ipk
-Size: 1701
-MD5Sum: ff64a9088e0aacd2b3c3ab532c397659
+Installed-Size: 858
+Filename: pyload_1.0.0-2_all.ipk
+Size: 1786
+MD5Sum: ded8a14a4ecb1a1e921bfb35c3de703f
 Description:  pyLoad is a fast, lightweight and full featured download manager written in python for many One-Click-Hoster, container formats like DLC, video sites or just plain http/ftp links. It aims for low hardware requirements and platform independence to be runnable on all kind of systems (desktop pc, netbook, NAS, router). 
  Despite its strict restriction it is packed full of features just like webinterface, captcha recognition, unrar and much more. 	
 
