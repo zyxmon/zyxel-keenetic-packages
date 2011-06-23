@@ -7,13 +7,29 @@ export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
 
 
 start() {
-	    cd $MOUNT/usr/share/pyload
-        screen -dmS pyload python pyLoadCore.py
+	PIDPL=`screen -list | grep pyload | cut -f1 -d.`
+	if [  -z "$PIDPL" ]; then
+		cd $MOUNT/usr/share/pyload
+		screen -dmS pyload python pyLoadCore.py
+        fi
 }
 
 stop() {
-	killall screen
+	PIDPL=`screen -list | grep pyload | cut -f1 -d.`
+	if [ ! -z "$PIDPL" ]; then
+		kill $PIDPL
+        fi
 }
+
+status() {
+	PIDPL=`screen -list | grep pyload | cut -f1 -d.`
+	if [ ! -z "$PIDPL" ]; then
+		echo "pyLoad is running"
+	else
+		echo "pyLoad is not running"
+        fi
+}
+        
 
 case "$1" in
 	start)
@@ -21,6 +37,9 @@ case "$1" in
 		;;
 	stop)
 		stop
+		;;
+	status)
+		status
 		;;
 	restart)
 		stop
@@ -36,6 +55,6 @@ case "$1" in
 	ppp_down)
 		;;
 	*)
-		echo "Usage: $0 {start|stop|restart|link_up|link_down|ppp_up|ppp_down}"
+		echo "Usage: $0 {start|stop|status|restart|link_up|link_down|ppp_up|ppp_down}"
 		;;
 esac
