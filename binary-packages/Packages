@@ -139,6 +139,23 @@ Size: 23381
 MD5Sum: e9d5170af2322722a6d3589ae68af463
 Description:  inadyn - a client for open DNS servers.
 
+Package: js
+Version: 1.6.20070208-2
+Depends: libjs, libreadline, libncurses
+Provides: 
+Source: package/built/ossp-js
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11728
+Filename: js_1.6.20070208-2_keenetic.ipk
+Size: 12355
+MD5Sum: 4bc1d576789537a3936a974574e3f107
+Description:  Mozilla JavaScript Engine (interpreter)
+
 Package: kmod-fs-cifs
 Version: 2.6.23-rt-1
 Depends: 
@@ -337,6 +354,32 @@ Size: 76705
 MD5Sum: ac7f98b5c09df93f4d9eea92598607f9
 Description:  libext2fs is a library which can access ext2, ext3 and ext4 filesystems.
 
+Package: libffi
+Version: 3.0.9-1
+Depends: 
+Provides: 
+Source: package/built/libffi
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11794
+Filename: libffi_3.0.9-1_keenetic.ipk
+Size: 12714
+MD5Sum: 7dd1007f217bb4efff5b6b7d3c9ddf9a
+Description:  The libffi library provides a portable, high level programming interface to
+ various calling conventions. This allows a programmer to call any function
+ specified by a call interface description at run-time.
+ 
+ FFI stands for Foreign Function Interface. A foreign function interface is the
+ popular name for the interface that allows code written in one language to call
+ code written in another language. The libffi library really only provides the
+ lowest, machine dependent layer of a fully featured foreign function interface.
+ A layer must exist above libffi that handles type conversions for values passed
+ between the two languages.
+
 Package: libffmpeg
 Version: 0.5.2-2
 Depends: 
@@ -371,6 +414,26 @@ Size: 126046
 MD5Sum: 653d6ad76e760306cacfea92b3a06853
 Description:  Free Lossless Audio Codec library
 
+Package: libfreetype
+Version: 2.3.12-1
+Depends: 
+Provides: 
+Source: package/built/freetype
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 232889
+Filename: libfreetype_2.3.12-1_keenetic.ipk
+Size: 233338
+MD5Sum: ffdf9a46949572c323703b13b6009fdf
+Description:  The FreeType project is a team of volunteers who develop free, 
+ portable and high-quality software solutions for digital typography.
+ They specifically target embedded systems and focus on bringing small, 
+ efficient and ubiquitous products.
+
 Package: libgd
 Version: 2.0.35-1
 Depends: libjpeg, libpng
@@ -388,6 +451,24 @@ Size: 54521
 MD5Sum: ca3a68939a96bb34ffe352153fe73f68
 Description:  GD is an open source code library for the dynamic creation of images by
  programmers. GD creates PNG, JPEG and GIF images, among other formats.
+
+Package: libgmp
+Version: 4.3.1-2
+Depends: 
+Provides: 
+Source: package/built/gmp
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 141423
+Filename: libgmp_4.3.1-2_keenetic.ipk
+Size: 141983
+MD5Sum: c0ee44dde6f8e99ceacd3ce612b746ae
+Description:  GMP is a free library for arbitrary precision arithmetic, operating on
+ signed integers, rational numbers, and floating point numbers.
 
 Package: libiconv-full
 Version: 1.11.1-1
@@ -474,6 +555,23 @@ Filename: libjs_1.6.20070208-2_keenetic.ipk
 Size: 277495
 MD5Sum: 7a17f354898d2a4318662a3199f7149a
 Description:  Mozilla JavaScript Engine (library)
+
+Package: liblcms
+Version: 1.19-1
+Depends: libjpeg, libtiff
+Provides: 
+Source: package/built/liblcms
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 124541
+Filename: liblcms_1.19-1_keenetic.ipk
+Size: 125059
+MD5Sum: bdb7f5b3fdaf45a5ad29f5764a21aa1a
+Description:  A small-footprint, speed optimized color management engine.
 
 Package: liblzo
 Version: 2.04-1
@@ -676,6 +774,23 @@ Filename: libstdcpp_4.1.2-60_keenetic.ipk
 Size: 160080
 MD5Sum: 496c6216411c22c7045b98f8f4543663
 Description:  GNU Standard C++ Library v3
+
+Package: libtiff
+Version: 3.9.2-1
+Depends: libjpeg
+Provides: 
+Source: package/built/tiff
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 100918
+Filename: libtiff_3.9.2-1_keenetic.ipk
+Size: 101089
+MD5Sum: 806e495cc0bd785f50e8a0fe3f366e87
+Description:  TIFF library
 
 Package: libuuid
 Version: 1.41.12-3
@@ -1354,6 +1469,175 @@ MD5Sum: a0e5b5e0936e2976e0a63a491bd09b53
 Description:  Portmap is a server that converts RPC (Remote Procedure Call) program
  numbers into DARPA protocol port numbers.
 
+Package: py-openssl
+Version: 0.12-1
+Depends: python
+Provides: 
+Source: package/built/py-openssl
+Section: lang-python
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 79965
+Filename: py-openssl_0.12-1_keenetic.ipk
+Size: 80401
+MD5Sum: 971d82381c9ea20f02a4e7910d42cdbd
+Description:  Python wrapper around a small subset of the OpenSSL library.
+
+Package: pyload
+Version: 1.0.0-1
+Depends: js, python-django, py-openssl, python-pil, python-sqlite3, python-crypto, python-curl, tesseract, tesseract-eng-data
+Provides: 
+Source: package/built/pyload
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: all
+Installed-Size: 778
+Filename: pyload_1.0.0-1_all.ipk
+Size: 1701
+MD5Sum: ff64a9088e0aacd2b3c3ab532c397659
+Description:  pyLoad is a fast, lightweight and full featured download manager written in python for many One-Click-Hoster, container formats like DLC, video sites or just plain http/ftp links. It aims for low hardware requirements and platform independence to be runnable on all kind of systems (desktop pc, netbook, NAS, router). 
+ Despite its strict restriction it is packed full of features just like webinterface, captcha recognition, unrar and much more. 	
+
+Package: python-crypto
+Version: 2.0.1-1
+Depends: python, libgmp
+Provides: 
+Source: package/built/python-crypto
+Section: lang-python
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 106249
+Filename: python-crypto_2.0.1-1_keenetic.ipk
+Size: 106442
+MD5Sum: cc4505b8fa5f4838ac6857e1f79b1769
+Description:  A collection of both secure hash functions (such as MD5 and SHA),
+ and various encryption algorithms (AES, DES, IDEA, RSA, ElGamal, etc.).
+
+Package: python-curl
+Version: 7.19.0-1
+Depends: python
+Provides: 
+Source: package/built/python-curl
+Section: language-python
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 23119
+Filename: python-curl_7.19.0-1_keenetic.ipk
+Size: 23717
+MD5Sum: b26ed57eb2c9dfa93c57eb35cac5c1c9
+Description:  Python module interface to the cURL library.
+
+Package: python-django
+Version: 1.3-1
+Depends: python
+Provides: 
+Source: package/built/python-django
+Section: language-python
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4200305
+Filename: python-django_1.3-1_keenetic.ipk
+Size: 4156874
+MD5Sum: c76bb0d3c93e99af972fc9c5f773c0d8
+Description:  A high-level Python Web framework.
+
+Package: python-mini
+Version: 2.6.4-3
+Depends: 
+Provides: 
+Source: package/built/python
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1293389
+Filename: python-mini_2.6.4-3_keenetic.ipk
+Size: 1275638
+MD5Sum: ddc7a4ac5362316361a2c0a0b446c700
+Description:  Python is a dynamic object-oriented programming language that can be used
+ for many kinds of software development. It offers strong support for
+ integration with other languages and tools, comes with extensive standard
+ libraries, and can be learned in a few days. Many Python programmers
+ report substantial productivity gains and feel the language encourages
+ the development of higher quality, more maintainable code.
+ .
+ This package contains only a minimal Python install.
+
+Package: python-pil
+Version: 1.1.7-1
+Depends: python, libjpeg, libfreetype, liblcms
+Provides: 
+Source: package/built/python-pil
+Section: lang-python
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 247957
+Filename: python-pil_1.1.7-1_keenetic.ipk
+Size: 247880
+MD5Sum: 89d6972d1629683ef5fda6ece4ea91c0
+Description:  The Python Imaging Library (PIL) adds image processing capabilities to your Python interpreter.
+
+Package: python-sqlite3
+Version: 2.6.4-3
+Depends: python-mini, libsqlite3
+Provides: 
+Source: package/built/python
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 37405
+Filename: python-sqlite3_2.6.4-3_keenetic.ipk
+Size: 38096
+MD5Sum: fbfd8dd2f5405ff537fa6438547db69d
+Description:  Python support for sqlite3
+
+Package: python
+Version: 2.6.4-3
+Depends: libffi, python-mini
+Provides: 
+Source: package/built/python
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1819777
+Filename: python_2.6.4-3_keenetic.ipk
+Size: 1818991
+MD5Sum: 0089f9ea145596a9433b49dcf4ed7a37
+Description:  Python is a dynamic object-oriented programming language that can be used
+ for many kinds of software development. It offers strong support for
+ integration with other languages and tools, comes with extensive standard
+ libraries, and can be learned in a few days. Many Python programmers
+ report substantial productivity gains and feel the language encourages
+ the development of higher quality, more maintainable code.
+ .
+ This package contains the full Python install.
+
 Package: screen
 Version: 4.0.3-2
 Depends: libncurses
@@ -1409,6 +1693,40 @@ Filename: tcpdump-mini_4.1.1-2_keenetic.ipk
 Size: 140052
 MD5Sum: 151bad1fe9e80ea81fec4c57afa548d8
 Description:  Network monitoring and data acquisition tool (minimal version)
+
+Package: tesseract-eng-data
+Version: 3.00-1
+Depends: tesseract
+Provides: 
+Source: package/built/tesseract-ocr-eng-data
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 743091
+Filename: tesseract-eng-data_3.00-1_keenetic.ipk
+Size: 741448
+MD5Sum: db90521cc6685e1e9b6919146b07ae8e
+Description:  English data file for tesseract3
+
+Package: tesseract
+Version: 3.00-1
+Depends: libtiff, libstdcpp, libjpeg, libpng
+Provides: 
+Source: package/built/tesseract-ocr
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1361835
+Filename: tesseract_3.00-1_keenetic.ipk
+Size: 1356215
+MD5Sum: c311835e9166cf4c329417dac84c55f6
+Description:  OCR
 
 Package: transmission-cli
 Version: 2.13-1
