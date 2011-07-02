@@ -1,3 +1,20 @@
+Package: aria2
+Version: 1.11.2-1
+Depends: libxml2, libcares, libsqlite3, libstdcpp
+Provides: 
+Source: package/built/aria2
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1143903
+Filename: aria2_1.11.2-1_keenetic.ipk
+Size: 1141179
+MD5Sum: b6ef776cb22ded3b8e7ea0b3219f48be
+Description:  download manager
+
 Package: busybox
 Version: 1.17.3-4
 Depends: 
@@ -275,6 +292,52 @@ Size: 18674
 MD5Sum: ba7d57fc2832aa585e5fb1afc8f42e25
 Description:  The blkid library which allows system programs like fsck and mount to 
  quickly and easily find block devices by filesystem UUID and LABEL.
+
+Package: libcares
+Version: 1.7.4-1
+Depends: 
+Provides: 
+Source: package/built/c-ares
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 25732
+Filename: libcares_1.7.4-1_keenetic.ipk
+Size: 26313
+MD5Sum: ca18187fb261ce8ba12bef797c7f72f7
+Description:  c-ares is a C library that performs DNS requests and name resolves
+ asynchronously.
+
+Package: libevent2
+Version: 2.0.12-1
+Depends: 
+Provides: 
+Source: package/built/libevent2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 93761
+Filename: libevent2_2.0.12-1_keenetic.ipk
+Size: 94551
+MD5Sum: cd2e702c12de4747288d64033ed2a504
+Description:  The libevent API provides a mechanism to execute a callback function
+ when a specific event occurs on a file descriptor or after a timeout
+ has been reached. Furthermore, libevent also support callbacks due
+ to signals or regular timeouts.
+ 
+ libevent is meant to replace the event loop found in event driven
+ network servers. An application just needs to call event_dispatch()
+ and then add or remove events dynamically without having to change
+ the event loop.
+ 
+ This package contains the libevent shared library historically
+ containing both the core & extra libraries.
 
 Package: libevent
 Version: 1.4.14b-1
@@ -1729,7 +1792,7 @@ MD5Sum: c311835e9166cf4c329417dac84c55f6
 Description:  OCR
 
 Package: transmission-cli
-Version: 2.13-1
+Version: 2.32-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -1739,15 +1802,15 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 749655
-Filename: transmission-cli_2.13-1_keenetic.ipk
-Size: 748983
-MD5Sum: 4b879426416090a32e1913a7e46c75ef
+Installed-Size: 846513
+Filename: transmission-cli_2.32-1_keenetic.ipk
+Size: 845560
+MD5Sum: 04ff1f4b73486ef10376674c4eb6a7f9
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.13-1
-Depends: libevent
+Version: 2.32-1
+Depends: libevent2
 Provides: 
 Source: package/built/transmission
 Section: net
@@ -1756,17 +1819,17 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 191736
-Filename: transmission-daemon_2.13-1_keenetic.ipk
-Size: 192282
-MD5Sum: 8d8c49574538f787f47e965b99758488
+Installed-Size: 215826
+Filename: transmission-daemon_2.32-1_keenetic.ipk
+Size: 216216
+MD5Sum: c486dd028faebb835ea5eea270c70ed4
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.13-1
+Version: 2.32-1
 Depends: 
 Provides: 
 Source: package/built/transmission
@@ -1776,14 +1839,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 201193
-Filename: transmission-remote_2.13-1_keenetic.ipk
-Size: 201593
-MD5Sum: 1823490afae5db141152e11d58aaef16
+Installed-Size: 225879
+Filename: transmission-remote_2.32-1_keenetic.ipk
+Size: 226161
+MD5Sum: 8a10967aebe69e6b642e923e1eb21407
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.13-1
+Version: 2.32-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -1793,10 +1856,10 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 160618
-Filename: transmission-web_2.13-1_keenetic.ipk
-Size: 161401
-MD5Sum: 97614f17ced12ccb630147239e9c12ea
+Installed-Size: 168415
+Filename: transmission-web_2.32-1_keenetic.ipk
+Size: 169141
+MD5Sum: cd76f1953062f1c42007ec67e0081087
 Description:  Webinterface resources for transmission.
 
 Package: uclibcxx
