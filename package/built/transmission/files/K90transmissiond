@@ -86,6 +86,9 @@ case $1 in
             echo Not running
         fi
         ;;
+    settings)
+	$TRNEXE -et -g $TRNVAR -d
+	;;
     link_up)
         ;;
     ppp_up)
@@ -95,6 +98,6 @@ case $1 in
     ppp_down)
         ;;
     *)
-        echo "Usage: $0 {start|stop|restart|reload|status|setttings|link_up|link_down|ppp_up|ppp_down}"
+        echo "Usage: $0 {start|stop|restart|reload|status|settings|link_up|link_down|ppp_up|ppp_down}"
         ;;
 esac

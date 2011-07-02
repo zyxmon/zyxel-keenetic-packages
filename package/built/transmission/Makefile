@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2009-2010 OpenWrt.org
+# Copyright (C) 2009-2011 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=transmission
-PKG_VERSION:=2.13
+PKG_VERSION:=2.32
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://mirrors.m0k.org/transmission/files
-#PKG_MD5SUM:=ef2b40ddc2c17a57c47bfe15b1f23cc4
+PKG_MD5SUM:=cac5d0e07b92e563b34b61de5a6235c7
 
 PKG_FIXUP:=libtool
 PKG_INSTALL:=1
@@ -32,7 +32,7 @@ endef
 
 define Package/transmission-daemon
   $(call Package/transmission/template)
-  DEPENDS:=+libevent
+  DEPENDS:=+libevent2
   MENU:=1
 endef
 
@@ -71,20 +71,21 @@ define Package/transmission-web/description
 endef
 
 define Package/transmission-daemon/conffiles
-/etc/config/transmission
+/var/transmission/settings.json
 endef
 
 CONFIGURE_VARS += \
-	LIBEVENT_LIBS="$(STAGING_DIR)/usr/lib/libevent.so"
+	LIBEVENT_LIBS="$(STAGING_DIR)/usr/lib/libevent-2.0.so.5"
 
 CONFIGURE_ARGS += \
 	--enable-daemon \
 	--enable-cli \
 	--disable-gtk \
-	--enable-largefile
+	--enable-largefile \
+	--enable-lightweight
 
 MAKE_FLAGS += \
-	CFLAGS="$(TARGET_CFLAGS)"
+	CFLAGS="$(TARGET_CFLAGS) -D_GNU_SOURCE"
 
 define Package/transmission-daemon/install
 	$(INSTALL_DIR) $(1)/usr/bin
