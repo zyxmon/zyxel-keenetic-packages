@@ -1,6 +1,6 @@
 --- a/configure
 +++ b/configure
-@@ -21508,7 +21508,7 @@
+@@ -21508,7 +21508,7 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
    fi
@@ -9,7 +9,7 @@
      cat >>confdefs.h <<\_ACEOF
  #define HAVE_LIBXML2 1
  _ACEOF
-@@ -21519,10 +21519,10 @@
+@@ -21519,10 +21519,10 @@ _ACEOF
  
  #    LIBS="$LIBS $LIBXML2_LIBS"
  #    CFLAGS="$CFLAGS $LIBXML2_CFLAGS"
