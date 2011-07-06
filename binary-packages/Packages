@@ -122,6 +122,23 @@ Description:  Htop is an ncursed-based process viewer similar to top, but
  it allows to scroll the list vertically and horizontally to
  see all processes and their full command lines.
 
+Package: iconv
+Version: 1.11.1-1
+Depends: libiconv-full, libcharset
+Provides: 
+Source: package/built/libiconv-full
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10773
+Filename: iconv_1.11.1-1_keenetic.ipk
+Size: 11375
+MD5Sum: 3a8ca0b835a10702219015de70bd3c58
+Description:  Character set conversion utility
+
 Package: id3lib
 Version: 3.8.3-1
 Depends: uclibcxx
@@ -310,6 +327,23 @@ Size: 26313
 MD5Sum: ca18187fb261ce8ba12bef797c7f72f7
 Description:  c-ares is a C library that performs DNS requests and name resolves
  asynchronously.
+
+Package: libcharset
+Version: 1.11.1-1
+Depends: 
+Provides: 
+Source: package/built/libiconv-full
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2946
+Filename: libcharset_1.11.1-1_keenetic.ipk
+Size: 3586
+MD5Sum: 5e4935fcc8e7038051abffa3ee963245
+Description:  Character set conversion library
 
 Package: libevent2
 Version: 2.0.12-1
@@ -1091,7 +1125,7 @@ Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user
  with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
 Package: microdc2
-Version: 0.15.6-1
+Version: 0.15.6-2
 Depends: libiconv-full, libxml2, libreadline, libncurses
 Provides: 
 Source: package/built/microdc2
@@ -1101,10 +1135,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 146525
-Filename: microdc2_0.15.6-1_keenetic.ipk
-Size: 147027
-MD5Sum: d7b90e17094bfc898a3898dc8f0abe4c
+Installed-Size: 146501
+Filename: microdc2_0.15.6-2_keenetic.ipk
+Size: 147014
+MD5Sum: 3794237c388dc323817bb8e9268756ca
 Description:  A command-line based Direct Connect client.
 
 Package: minidlna
