@@ -3,7 +3,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=microdc2
 PKG_VERSION:=0.15.6
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://savio.km.ua/download/microdc2
@@ -18,7 +18,7 @@ define Package/microdc2
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=microdc2
-	DEPENDS:=$(ICONV_DEPENDS) +libxml2 +libreadline +libncurses
+	DEPENDS:=$(ICONV_DEPENDS) +libxml2 +libreadline +libncurses +iconv
 	URL:=http://corsair626.no-ip.org/microdc
 endef
 
