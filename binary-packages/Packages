@@ -796,7 +796,7 @@ MD5Sum: 88a6568cca7dc75f81ee3aec1b43dfda
 Description:  A PNG format files handling library
 
 Package: libreadline
-Version: 5.2-2
+Version: 5.2-3
 Depends: 
 Provides: 
 Source: package/libreadline
@@ -806,10 +806,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 107497
-Filename: libreadline_5.2-2_keenetic.ipk
-Size: 107716
-MD5Sum: 5fb39093d2b18baf2481d35cd8bad913
+Installed-Size: 107736
+Filename: libreadline_5.2-3_keenetic.ipk
+Size: 107896
+MD5Sum: 868042113471d20252e3918885d91ad6
 Description:  The Readline library provides a set of functions for use by applications 
  that allow users to edit command lines as they are typed in. Both Emacs 
  and vi editing modes are available. The Readline library includes 
@@ -1125,8 +1125,8 @@ Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user
  with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
 Package: microdc2
-Version: 0.15.6-2
-Depends: libiconv-full, libxml2, libreadline, libncurses
+Version: 0.15.6-3
+Depends: libiconv-full, libxml2, libreadline, libncurses, iconv
 Provides: 
 Source: package/built/microdc2
 Section: net
@@ -1135,10 +1135,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 146501
-Filename: microdc2_0.15.6-2_keenetic.ipk
-Size: 147014
-MD5Sum: 3794237c388dc323817bb8e9268756ca
+Installed-Size: 146560
+Filename: microdc2_0.15.6-3_keenetic.ipk
+Size: 147066
+MD5Sum: 88dbf215c3f54c951a1d55ca666d27df
 Description:  A command-line based Direct Connect client.
 
 Package: minidlna
