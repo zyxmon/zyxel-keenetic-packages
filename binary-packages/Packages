@@ -1324,6 +1324,23 @@ Size: 45960
 MD5Sum: cf1e50f6d5758d340566b74daea643af
 Description:  APC shared module
 
+Package: php5-mod-curl
+Version: 5.3.6-3
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 20889
+Filename: php5-mod-curl_5.3.6-3_keenetic.ipk
+Size: 21454
+MD5Sum: d421de7b3fe4bbf00d2b1413fce59c7d
+Description:  cURL shared module
+
 Package: php5-mod-dom
 Version: 5.3.6-3
 Depends: php5, libxml2
