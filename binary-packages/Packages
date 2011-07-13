@@ -33,6 +33,23 @@ MD5Sum: bfffaad4451136b9e9317076a7d56e0c
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 
+Package: cfdisk
+Version: 2.13.0.1-4
+Depends: libncurses
+Provides: 
+Source: package/built/util-linux-ng
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 27733
+Filename: cfdisk_2.13.0.1-4_keenetic.ipk
+Size: 28312
+MD5Sum: 4a47b029569b6747891e74f328e3fada
+Description:  This package contains a utility for managing disk partition tables.
+
 Package: e2fsprogs
 Version: 1.41.12-3
 Depends: libblkid, libuuid, libext2fs
@@ -51,6 +68,23 @@ MD5Sum: 1ae9fec731d92f69f50d56d3803e964f
 Description:  This package contains essential ext2 filesystem utilities which consists of 
  e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2 
  filesystem utilities.
+
+Package: fdisk
+Version: 2.13.0.1-4
+Depends: 
+Provides: 
+Source: package/built/util-linux-ng
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 41539
+Filename: fdisk_2.13.0.1-4_keenetic.ipk
+Size: 42159
+MD5Sum: ec9311e465f61de8cc2aade4b3e39959
+Description:  This package contains a utility for managing disk partition tables.
 
 Package: file
 Version: 5.05-1
@@ -1946,6 +1980,29 @@ Filename: uclibcxx_0.2.2-3_keenetic.ipk
 Size: 57587
 MD5Sum: f8a4633b3315ca1685a97c1972cb6cf0
 Description:  C++ library for embedded systems
+
+Package: udpxy
+Version: 1.0-Chipmunk-19-1
+Depends: 
+Provides: 
+Source: package/built/udpxy
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 29233
+Filename: udpxy_1.0-Chipmunk-19-1_keenetic.ipk
+Size: 30100
+MD5Sum: 9fc27cddceebcbc9c5355d36980c7cba
+Description:  udproxy makes it possible to convert UDP IPTV streams into http
+ streams which can be viewed even over wlans. http streams do
+ not generate huge amounts of multicast traffic, so a sd stream
+ only takes about 300k. interesting for peoply who have IPTV at
+ home and do not want to rent multiple decoders from their
+ provider but just use their own streaming client for example
+ popcornhour/mediatomb/vlc/etc.
 
 Package: wget
 Version: 1.12-2
