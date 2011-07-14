@@ -1982,7 +1982,7 @@ MD5Sum: f8a4633b3315ca1685a97c1972cb6cf0
 Description:  C++ library for embedded systems
 
 Package: udpxy
-Version: 1.0-Chipmunk-19-1
+Version: 1.0-Chipmunk-20-1
 Depends: 
 Provides: 
 Source: package/built/udpxy
@@ -1992,10 +1992,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 29233
-Filename: udpxy_1.0-Chipmunk-19-1_keenetic.ipk
-Size: 30100
-MD5Sum: 9fc27cddceebcbc9c5355d36980c7cba
+Installed-Size: 29815
+Filename: udpxy_1.0-Chipmunk-20-1_keenetic.ipk
+Size: 30669
+MD5Sum: 386405a980eb36b8f9320d47ed1368e3
 Description:  udproxy makes it possible to convert UDP IPTV streams into http
  streams which can be viewed even over wlans. http streams do
  not generate huge amounts of multicast traffic, so a sd stream
