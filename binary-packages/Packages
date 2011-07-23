@@ -1634,6 +1634,23 @@ MD5Sum: a0e5b5e0936e2976e0a63a491bd09b53
 Description:  Portmap is a server that converts RPC (Remote Procedure Call) program
  numbers into DARPA protocol port numbers.
 
+Package: pshare
+Version: 0.0.2rc2-1
+Depends: 
+Provides: 
+Source: package/built/pshare
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 31812
+Filename: pshare_0.0.2rc2-1_keenetic.ipk
+Size: 32517
+MD5Sum: ad0e574c2baf9b57f4c17033c020b917
+Description:  UPnP Playlist Browser http://ps3muxer.org/pshare.html
+
 Package: py-openssl
 Version: 0.12-1
 Depends: python
