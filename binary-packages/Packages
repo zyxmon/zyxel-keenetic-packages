@@ -999,7 +999,7 @@ MD5Sum: a0766b06c474e8d5f5917b8f75560a72
 Description:  A library for manipulating XML and HTML resources.
 
 Package: lighttpd-mod-access
-Version: 1.4.28-1
+Version: 1.4.29-1
 Depends: lighttpd
 Provides: 
 Source: package/built/lighttpd
@@ -1009,14 +1009,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2263
-Filename: lighttpd-mod-access_1.4.28-1_keenetic.ipk
-Size: 2892
-MD5Sum: 11b4f687a6d53babe0b79f49d60ad3ca
+Installed-Size: 2264
+Filename: lighttpd-mod-access_1.4.29-1_keenetic.ipk
+Size: 2895
+MD5Sum: 244da73d14a51b40503dfdeaccc999f1
 Description:  Access restrictions module
 
 Package: lighttpd-mod-accesslog
-Version: 1.4.28-1
+Version: 1.4.29-1
 Depends: lighttpd
 Provides: 
 Source: package/built/lighttpd
@@ -1026,14 +1026,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 5688
-Filename: lighttpd-mod-accesslog_1.4.28-1_keenetic.ipk
-Size: 6274
-MD5Sum: 327c81432d1cadc486d64607d6bbc270
+Installed-Size: 5685
+Filename: lighttpd-mod-accesslog_1.4.29-1_keenetic.ipk
+Size: 6275
+MD5Sum: 0d8b98dbd3cb66dd67346936e109d390
 Description:  Access logging module
 
 Package: lighttpd-mod-cgi
-Version: 1.4.28-1
+Version: 1.4.29-1
 Depends: lighttpd
 Provides: 
 Source: package/built/lighttpd
@@ -1043,14 +1043,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 8467
-Filename: lighttpd-mod-cgi_1.4.28-1_keenetic.ipk
-Size: 9078
-MD5Sum: 641ce7bab4f345ab36aef459747dba99
+Installed-Size: 8558
+Filename: lighttpd-mod-cgi_1.4.29-1_keenetic.ipk
+Size: 9167
+MD5Sum: 3f0d1fa51ac36d9491532f9b4b90d5cb
 Description:  CGI module
 
 Package: lighttpd-mod-fastcgi
-Version: 1.4.28-1
+Version: 1.4.29-1
 Depends: lighttpd
 Provides: 
 Source: package/built/lighttpd
@@ -1060,14 +1060,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 20873
-Filename: lighttpd-mod-fastcgi_1.4.28-1_keenetic.ipk
+Installed-Size: 20876
+Filename: lighttpd-mod-fastcgi_1.4.29-1_keenetic.ipk
 Size: 21510
-MD5Sum: 3752069ce9aa83c2afd1f95ffa49439d
+MD5Sum: 37c582960bd0e40be319d535892eebf0
 Description:  FastCGI module
 
 Package: lighttpd-mod-redirect
-Version: 1.4.28-1
+Version: 1.4.29-1
 Depends: lighttpd, libpcre
 Provides: 
 Source: package/built/lighttpd
@@ -1077,14 +1077,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3100
-Filename: lighttpd-mod-redirect_1.4.28-1_keenetic.ipk
-Size: 3724
-MD5Sum: bd7d675d86c5063105d45cd009c09a67
+Installed-Size: 3093
+Filename: lighttpd-mod-redirect_1.4.29-1_keenetic.ipk
+Size: 3720
+MD5Sum: 5b2ff38373f6ecb8ccd937778ad5b122
 Description:  URL redirection module
 
 Package: lighttpd-mod-rewrite
-Version: 1.4.28-1
+Version: 1.4.29-1
 Depends: lighttpd, libpcre
 Provides: 
 Source: package/built/lighttpd
@@ -1094,14 +1094,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4204
-Filename: lighttpd-mod-rewrite_1.4.28-1_keenetic.ipk
-Size: 4802
-MD5Sum: 35668d2b91c3dda4c03b09c342ea6f5a
+Installed-Size: 4200
+Filename: lighttpd-mod-rewrite_1.4.29-1_keenetic.ipk
+Size: 4801
+MD5Sum: 39714322e3f05329ee961613b4d6a884
 Description:  URL rewriting module
 
 Package: lighttpd
-Version: 1.4.28-1
+Version: 1.4.29-1
 Depends: libpcre
 Provides: 
 Source: package/built/lighttpd
@@ -1111,10 +1111,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 86881
-Filename: lighttpd_1.4.28-1_keenetic.ipk
-Size: 87515
-MD5Sum: 2ba190c4b400e3feb4dfa8545d43792c
+Installed-Size: 87793
+Filename: lighttpd_1.4.29-1_keenetic.ipk
+Size: 88438
+MD5Sum: c69d5a202598afd9e8931ff771852fee
 Description:  A flexible and lightweight web server
 
 Package: mc
