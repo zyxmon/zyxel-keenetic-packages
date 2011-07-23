@@ -1,0 +1,13 @@
+--- a/main.cpp
++++ b/main.cpp
+@@ -158,8 +158,8 @@ namespace pshare
+ 
+     int http_port=4044;
+ 
+-    const char www_root_def[]="/opt/share/pshare/www";
+-    const char pls_root_def[]="/opt/share/pshare/playlists";
++    const char www_root_def[]="/media/DISK_A1/system/usr/share/pshare/www";
++    const char pls_root_def[]="/media/DISK_A1/system/usr/share/pshare/playlists";
+ 
+ 
+     playlist_item* playlist_beg=0;
