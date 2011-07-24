@@ -326,6 +326,40 @@ Size: 6851
 MD5Sum: 9303f0d0a8741a1a2e06cbec18d42862
 Description:  Kernel support for the TUN/TAP tunneling device
 
+Package: libapr
+Version: 1.4.5-1
+Depends: 
+Provides: 
+Source: package/built/apr
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 68118
+Filename: libapr_1.4.5-1_keenetic.ipk
+Size: 68741
+MD5Sum: ee4a4b7d9a52f306f344b8198d294e9d
+Description:  Apache Portable Runtime Library
+
+Package: libaprutil
+Version: 1.3.12-1
+Depends: libapr, libexpat, libsqlite3, libuuid, libiconv-full
+Provides: 
+Source: package/built/apr-util
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 51299
+Filename: libaprutil_1.3.12-1_keenetic.ipk
+Size: 51987
+MD5Sum: 83ab06610e2b46e505b9cdf1decee776
+Description:  Apache Portable Runtime Utility Library
+
 Package: libblkid
 Version: 1.41.12-3
 Depends: 
@@ -755,6 +789,23 @@ Filename: libncurses_5.7-3_keenetic.ipk
 Size: 115365
 MD5Sum: 7dd9b75aceaf66a2226a6939edfc70db
 Description:  Terminal handling library
+
+Package: libneon
+Version: 0.29.6-1
+Depends: libexpat
+Provides: 
+Source: package/built/neon
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 57186
+Filename: libneon_0.29.6-1_keenetic.ipk
+Size: 57772
+MD5Sum: bd6f7de2785fe4db816719560c7b6e25
+Description:  HTTP and WebDAV client library
 
 Package: libogg
 Version: 1.1.4-2
@@ -1858,6 +1909,72 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  This package contains a terminal-based front-end to the SQLite (v3.x) library
  that can evaluate queries interactively and display the results in multiple
  formats.
+
+Package: subversion-client
+Version: 1.6.17-1
+Depends: libneon, libaprutil, subversion-libs
+Provides: 
+Source: package/built/subversion
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 70699
+Filename: subversion-client_1.6.17-1_keenetic.ipk
+Size: 71546
+MD5Sum: 4b7af7cc84d267094ce6574ac4fe4b91
+Description:  Subversion is a free/open-source version control system. That is,
+ Subversion manages files and directories, and the changes made to them,
+ over time. This allows you to recover older versions of your data, or
+ examine the history of how your data changed. In this regard, many
+ people think of a version control system as a sort of time machine.
+ This package contains the subversion client tools.
+
+Package: subversion-libs
+Version: 1.6.17-1
+Depends: libneon, libaprutil
+Provides: 
+Source: package/built/subversion
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 565972
+Filename: subversion-libs_1.6.17-1_keenetic.ipk
+Size: 565839
+MD5Sum: f6f217656a816a344dda859bba4fba34
+Description:  Subversion is a free/open-source version control system. That is,
+ Subversion manages files and directories, and the changes made to them,
+ over time. This allows you to recover older versions of your data, or
+ examine the history of how your data changed. In this regard, many
+ people think of a version control system as a sort of time machine.
+ This package contains the subversion libraries.
+
+Package: subversion-server
+Version: 1.6.17-1
+Depends: libneon, libaprutil, subversion-libs
+Provides: 
+Source: package/built/subversion
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 57504
+Filename: subversion-server_1.6.17-1_keenetic.ipk
+Size: 58273
+MD5Sum: b13517b3d82fa332138aa79e58888c67
+Description:  Subversion is a free/open-source version control system. That is,
+ Subversion manages files and directories, and the changes made to them,
+ over time. This allows you to recover older versions of your data, or
+ examine the history of how your data changed. In this regard, many
+ people think of a version control system as a sort of time machine.
+ This package contains the subversion server.
 
 Package: tcpdump-mini
 Version: 4.1.1-2
