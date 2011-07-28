@@ -1,0 +1,41 @@
+--- a/minidlna.conf
++++ b/minidlna.conf
+@@ -2,7 +2,7 @@
+ port=8200
+ 
+ # network interfaces to serve, comma delimited
+-#network_interface=eth0
++network_interface=br0
+ 
+ # set this to the directory you want scanned.
+ # * if have multiple directories, you can have multiple media_dir= lines
+@@ -11,16 +11,16 @@
+ #   + "A" for audio  (eg. media_dir=A,/home/jmaggard/Music)
+ #   + "V" for video  (eg. media_dir=V,/home/jmaggard/Videos)
+ #   + "P" for images (eg. media_dir=P,/home/jmaggard/Pictures)
+-media_dir=/opt
++media_dir=/media/DISK_A1/Videos
+ 
+ # set this if you want to customize the name that shows up on your clients
+-#friendly_name=My DLNA Server
++friendly_name=KEENETIC MiniDLNA Server
+ 
+ # set this if you would like to specify the directory where you want MiniDLNA to store its database and album art cache
+-#db_dir=/var/cache/minidlna
++db_dir=/media/DISK_A1/system/tmp/minidlna
+ 
+ # set this if you would like to specify the directory where you want MiniDLNA to store its log file
+-#log_dir=/var/log
++log_dir=/media/DISK_A1/system/tmp/minidlna
+ 
+ # this should be a list of file names to check for when searching for album art
+ # note: names should be delimited with a forward slash ("/")
+@@ -42,7 +42,7 @@
+ #presentation_url=http://www.mylan/index.php
+ 
+ # notify interval in seconds. default is 895 seconds.
+-notify_interval=900
++notify_interval=90
+ 
+ # serial and model number the daemon will report to clients
+ # in its XML description

@@ -1,0 +1,79 @@
+#!/bin/sh
+# Copyright (C) 2011 NDM Systems, McMCC
+
+MOUNT="/media/DISK_A1/system"
+BIN="$MOUNT/usr/bin/minidlna"
+PIDFILE="$MOUNT/var/minidlna.pid"
+CONFIG="$MOUNT/etc/minidlna.conf"
+
+export LANG=C
+export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
+
+daemon_status ()
+{
+[ -f $PIDFILE ] && [ -d /proc/`cat $PIDFILE` ]
+}
+
+start_daemon() {
+$BIN -f $CONFIG -P $PIDFILE
+counter=5
+while [ $counter -gt 0 ]
+do
+daemon_status && break
+let counter=counter-1
+sleep 1
+done
+}
+
+stop_daemon() {
+kill `cat $PIDFILE`
+counter=10
+while [ $counter -gt 0 ]
+do
+daemon_status || break
+let counter=counter-1
+sleep 1
+done
+if daemon_status
+then
+killall -9 minidlna 2> /dev/null
+fi
+}
+
+case "$1" in
+start)
+if daemon_status
+then
+echo minidlna daemon already running
+else
+start_daemon
+fi
+;;
+stop)
+stop_daemon
+;;
+restart)
+stop_daemon
+start_daemon
+;;
+status)
+if daemon_status
+then
+echo Running
+else
+echo Not running
+fi
+;;
+link_up)
+;;
+ppp_up)
+;;
+link_down)
+;;
+ppp_down)
+;;
+*)
+echo "Usage: $0 {start|stop|restart|status|link_up|link_down|ppp_up|ppp_down}"
+;;
+esac
