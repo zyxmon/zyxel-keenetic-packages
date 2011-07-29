@@ -1169,7 +1169,7 @@ MD5Sum: c69d5a202598afd9e8931ff771852fee
 Description:  A flexible and lightweight web server
 
 Package: mc
-Version: 4.7.5.1-2
+Version: 4.7.5.3-1
 Depends: libiconv-full, libintl-full, glib2, libncurses, libslang2
 Provides: 
 Source: package/built/mc
@@ -1179,10 +1179,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 562919
-Filename: mc_4.7.5.1-2_keenetic.ipk
-Size: 563098
-MD5Sum: cb55c940c2c349d16d4472f3eae753f7
+Installed-Size: 549656
+Filename: mc_4.7.5.3-1_keenetic.ipk
+Size: 549434
+MD5Sum: c01598ec89d436580656302946d3423e
 Description:  GNU Midnight Commander is a text-mode full-screen file manager. 
  It uses a two panel interface and a subshell for command execution. 
  It includes an internal editor with syntax highlighting and an 
