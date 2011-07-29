@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mc
-PKG_VERSION:=4.7.5.1
-PKG_RELEASE:=2
+PKG_VERSION:=4.7.5.3
+PKG_RELEASE:=1
 PKG_INSTALL:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://www.midnight-commander.org/downloads/
-#PKG_MD5SUM:=ec92966f4d0c8b50c344fe901859ae2a
+PKG_MD5SUM:=6a67e139e0032d8a871455a80d490941
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/nls.mk
