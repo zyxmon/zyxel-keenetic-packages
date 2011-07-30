@@ -1227,7 +1227,7 @@ MD5Sum: 88dbf215c3f54c951a1d55ca666d27df
 Description:  A command-line based Direct Connect client.
 
 Package: minidlna
-Version: 1.0.20-1
+Version: 1.0.21-1
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
 Provides: 
 Source: package/built/minidlna
@@ -1237,10 +1237,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 130964
-Filename: minidlna_1.0.20-1_keenetic.ipk
-Size: 131609
-MD5Sum: aeced36f2db7db86ec2465015fc75df3
+Installed-Size: 133283
+Filename: minidlna_1.0.21-1_keenetic.ipk
+Size: 133847
+MD5Sum: 007b0aa980141b58fba2054384a64e48
 Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
  being fully compliant with DLNA/UPnP-AV clients.
 
