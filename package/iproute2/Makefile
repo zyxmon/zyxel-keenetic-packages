@@ -38,7 +38,6 @@ endef
 define Package/tc
 $(call Package/iproute2/Default)
   TITLE:=Traffic control utility
-  DEPENDS:=+kmod-sched
 endef
 
 define Package/genl
