@@ -1477,6 +1477,23 @@ Size: 109534
 MD5Sum: e66cf2c099eed0c17ab4972f7e939029
 Description:  Hash shared module
 
+Package: php5-mod-iconv
+Version: 5.3.6-3
+Depends: php5, libiconv-full
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 12178
+Filename: php5-mod-iconv_5.3.6-3_keenetic.ipk
+Size: 12774
+MD5Sum: 3620a1185dc6ee62925f10a6b867a104
+Description:  iConv shared module
+
 Package: php5-mod-json
 Version: 5.3.6-3
 Depends: php5
