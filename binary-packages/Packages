@@ -16,7 +16,7 @@ MD5Sum: b6ef776cb22ded3b8e7ea0b3219f48be
 Description:  download manager
 
 Package: busybox
-Version: 1.17.3-4
+Version: 1.17.3-5
 Depends: 
 Provides: 
 Source: package/busybox
@@ -26,10 +26,10 @@ Essential: no
 Priority: optional
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keenetic
-Installed-Size: 158615
-Filename: busybox_1.17.3-4_keenetic.ipk
-Size: 158955
-MD5Sum: bfffaad4451136b9e9317076a7d56e0c
+Installed-Size: 159897
+Filename: busybox_1.17.3-5_keenetic.ipk
+Size: 160142
+MD5Sum: 840a5fd6a4720f95bfe5108f2fb1dc3b
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 
