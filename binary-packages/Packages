@@ -50,6 +50,24 @@ Size: 28312
 MD5Sum: 4a47b029569b6747891e74f328e3fada
 Description:  This package contains a utility for managing disk partition tables.
 
+Package: curlftpfs
+Version: 0.9.2-2
+Depends: libfuse, glib2
+Provides: 
+Source: package/built/curlftpfs
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19012
+Filename: curlftpfs_0.9.2-2_keenetic.ipk
+Size: 19672
+MD5Sum: 47e2e5b29a1546a5032d8f1b2f912765
+Description:  CurlFtpFS is a filesystem for accessing FTP hosts
+ based on FUSE and libcurl.
+
 Package: e2fsprogs
 Version: 1.41.12-3
 Depends: libblkid, libuuid, libext2fs
@@ -598,6 +616,26 @@ Description:  The FreeType project is a team of volunteers who develop free,
  portable and high-quality software solutions for digital typography.
  They specifically target embedded systems and focus on bringing small, 
  efficient and ubiquitous products.
+
+Package: libfuse
+Version: 2.8.5-1
+Depends: 
+Provides: 
+Source: package/built/fuse
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 49288
+Filename: libfuse_2.8.5-1_keenetic.ipk
+Size: 49867
+MD5Sum: 85c561cbcffa4c9d939dcb27e5dfbe1b
+Description:  FUSE (Filesystem in UserSpacE)
+ This package contains the FUSE shared libraries, needed by other programs.
+ - libfuse
+ - libulockmgr
 
 Package: libgd
 Version: 2.0.35-1
