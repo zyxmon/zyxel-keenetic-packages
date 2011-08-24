@@ -1,0 +1,3 @@
+Дополнительный (к 3-м существующим) патч для совместимости с ffmpeg v.0.8.2
+
+030-libav-0.7-support.patch - взят здесь: https://launchpadlibrarian.net/71985647/libav_0.7_support.patch
