@@ -105,7 +105,7 @@ MD5Sum: ec9311e465f61de8cc2aade4b3e39959
 Description:  This package contains a utility for managing disk partition tables.
 
 Package: file
-Version: 5.05-1
+Version: 5.08-1
 Depends: libmagic
 Provides: 
 Source: package/built/file
@@ -115,10 +115,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 95996
-Filename: file_5.05-1_keenetic.ipk
-Size: 96641
-MD5Sum: 51264997f83c131b2ef04771981c9a8a
+Installed-Size: 97703
+Filename: file_5.08-1_keenetic.ipk
+Size: 98373
+MD5Sum: 28651c46a4419d9967a411622dba79f4
 Description:  utility
 
 Package: gawk
@@ -795,7 +795,7 @@ Description:  LZO is a data compression library which is suitable for data de-/c
  real-time. This means it favours speed over compression ratio.
 
 Package: libmagic
-Version: 5.05-1
+Version: 5.08-1
 Depends: 
 Provides: 
 Source: package/built/file
@@ -805,10 +805,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 93669
-Filename: libmagic_5.05-1_keenetic.ipk
-Size: 93981
-MD5Sum: 47735292c97b2af1c7941223f3f395a1
+Installed-Size: 95442
+Filename: libmagic_5.08-1_keenetic.ipk
+Size: 95748
+MD5Sum: 11b0b46f9d29bb5ff2da3af7501acb00
 Description:  library
 
 Package: libncurses
@@ -959,7 +959,7 @@ Description:  This is a shell which is mostly just a wrapper around the S-Lang I
  which is part of the S-Lang Library.
 
 Package: libsqlite3
-Version: 3070500-2
+Version: 3070603-1
 Depends: 
 Provides: 
 Source: package/built/sqlite3
@@ -969,10 +969,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 279080
-Filename: libsqlite3_3070500-2_keenetic.ipk
-Size: 279340
-MD5Sum: 048d3865f55c46720580e713e41ec941
+Installed-Size: 283538
+Filename: libsqlite3_3070603-1_keenetic.ipk
+Size: 283762
+MD5Sum: 0fe613da50b583db00fb99ab62b423d7
 Description:  SQLite is a small C library that implements a self-contained, embeddable,
  zero-configuration SQL database engine.
  This package contains the SQLite (v3.x) shared library, used by other
@@ -1944,8 +1944,25 @@ MD5Sum: 4c656315734568c9c21d1d6be9dcd8ee
 Description:  Screen is a full-screen window manager that multiplexes a physical
  terminal between several processes, typically interactive shells.
 
+Package: sd-idle
+Version: 2.6-1
+Depends: 
+Provides: 
+Source: package/built/sd-idle
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4528
+Filename: sd-idle_2.6-1_keenetic.ipk
+Size: 5157
+MD5Sum: aa171fa14e9e9a4b65010b2dddce6254
+Description:  sd-idle-2.6 is a disk idle spindown program for router firmware based on linux 2.6.
+
 Package: sqlite3-cli
-Version: 3070500-2
+Version: 3070603-1
 Depends: libsqlite3, libncurses, libreadline
 Provides: 
 Source: package/built/sqlite3
@@ -1955,10 +1972,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 17155
-Filename: sqlite3-cli_3070500-2_keenetic.ipk
-Size: 17939
-MD5Sum: 080d55c3fa4ffcafc923a384076f073d
+Installed-Size: 17827
+Filename: sqlite3-cli_3070603-1_keenetic.ipk
+Size: 18640
+MD5Sum: 4c8bf84833f2b8ebb6da1f5315817ca0
 Description:  SQLite is a small C library that implements a self-contained, embeddable,
  zero-configuration SQL database engine.
  This package contains a terminal-based front-end to the SQLite (v3.x) library
