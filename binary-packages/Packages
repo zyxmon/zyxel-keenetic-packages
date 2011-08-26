@@ -485,7 +485,7 @@ Description:  The libevent API provides a mechanism to execute a callback functi
  the event loop.
 
 Package: libexif
-Version: 0.6.19-1
+Version: 0.6.20-1
 Depends: 
 Provides: 
 Source: package/built/libexif
@@ -495,10 +495,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 60642
-Filename: libexif_0.6.19-1_keenetic.ipk
-Size: 60754
-MD5Sum: 8156d2c9021cc54df17a2030498f612e
+Installed-Size: 60714
+Filename: libexif_0.6.20-1_keenetic.ipk
+Size: 60802
+MD5Sum: ade8255a4045e0625d7fdad69b701816
 Description:  libexif is a library for parsing, editing, and saving EXIF data. It is
  intended to replace lots of redundant implementations in command-line
  utilities and programs with GUIs.
