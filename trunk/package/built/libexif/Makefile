@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=libexif
-PKG_VERSION:=0.6.19
+PKG_VERSION:=0.6.20
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=@SF/libexif
-PKG_MD5SUM:=56144a030a4c875c600b1ccf713f69f7
+PKG_MD5SUM:=19844ce6b5d075af16f0d45de1e8a6a3
 
 PKG_FIXUP:=libtool
 PKG_INSTALL:=1
@@ -41,6 +41,10 @@ CONFIGURE_ARGS+= \
 	--without-libintl-prefix \
 
 TARGET_CFLAGS += $(FPIC)
+
+define Build/Compile
+	$(MAKE) -C $(PKG_BUILD_DIR) DESTDIR="$(PKG_INSTALL_DIR)" all install
+endef
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include
