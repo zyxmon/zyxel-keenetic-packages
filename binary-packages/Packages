@@ -564,7 +564,7 @@ Description:  The libffi library provides a portable, high level programming int
  between the two languages.
 
 Package: libffmpeg
-Version: 0.5.2-2
+Version: 0.8.2-1
 Depends: 
 Provides: 
 Source: package/built/ffmpeg
@@ -574,10 +574,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 571963
-Filename: libffmpeg_0.5.2-2_keenetic.ipk
-Size: 570612
-MD5Sum: 66aa60835d59d2c394bee70ed1409cde
+Installed-Size: 519173
+Filename: libffmpeg_0.8.2-1_keenetic.ipk
+Size: 517004
+MD5Sum: 05cf343a6c956dccfe5163891d10f99b
 Description:  libraries
 
 Package: libflac
@@ -1230,7 +1230,7 @@ Description:  GNU Midnight Commander is a text-mode full-screen file manager.
  manipulated like real files.
 
 Package: mediatomb
-Version: 0.12.1-2
+Version: 0.12.1-3
 Depends: libexif, libsqlite3, id3lib, file, libjs, libexpat, libffmpeg, libstdcpp
 Provides: 
 Source: package/built/mediatomb
@@ -1240,10 +1240,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 629672
-Filename: mediatomb_0.12.1-2_keenetic.ipk
-Size: 629556
-MD5Sum: 4e57a8a04210776835bdc50c08278912
+Installed-Size: 628986
+Filename: mediatomb_0.12.1-3_keenetic.ipk
+Size: 629013
+MD5Sum: de566c20d5f58efeeb8aedbeafff12d4
 Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user interface and
  with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
@@ -1265,7 +1265,7 @@ MD5Sum: 88dbf215c3f54c951a1d55ca666d27df
 Description:  A command-line based Direct Connect client.
 
 Package: minidlna
-Version: 1.0.21-1
+Version: 1.0.22-1
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
 Provides: 
 Source: package/built/minidlna
@@ -1275,10 +1275,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 133283
-Filename: minidlna_1.0.21-1_keenetic.ipk
-Size: 133847
-MD5Sum: 007b0aa980141b58fba2054384a64e48
+Installed-Size: 135175
+Filename: minidlna_1.0.22-1_keenetic.ipk
+Size: 135737
+MD5Sum: 8642dbbd57f4c1764cafa8ddbce445d5
 Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
  being fully compliant with DLNA/UPnP-AV clients.
 
