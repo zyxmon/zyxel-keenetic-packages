@@ -1,0 +1,11 @@
+--- a/repeater.cpp
++++ b/repeater.cpp
+@@ -1758,7 +1758,7 @@ int main(int argc, char **argv)
+     struct sigaction saInt;
+ 
+     //ini file default
+-    char defaultIniFilePathAndName[] = "/etc/vncrepeater.conf";
++    char defaultIniFilePathAndName[] = "/media/DISK_A1/system/etc/vncrepeater.conf";
+     char tmpBuf[MAX_PATH];
+     bool memoryOk;
+ 
