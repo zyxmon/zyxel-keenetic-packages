@@ -4,18 +4,16 @@
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
-# vovic67, libffmpeg for miniDLNA for Keenetic
-#
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ffmpeg
-PKG_VERSION:=0.5.2
-PKG_RELEASE:=2
+PKG_VERSION:=0.8.2
+PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://ffmpeg.org/releases/
-PKG_MD5SUM:=451eb428ca97a72c00555d50944cdb24
+PKG_MD5SUM:=967d481c98161582d149aced6e3b2f31
 
 #libavcodec.so.52 McMCC
 FFMPEG_DECODERS:= \
@@ -41,6 +39,9 @@ FFMPEG_PARSERS:= \
 	mpegaudio \
 	mpegvideo \
 
+FFMPEG_PROTOCOLS:= \
+	file http pipe rtp tcp udp
+
 FFMPEG_CONFIGURE_DECODERS:= \
 	$(foreach c, $(FFMPEG_DECODERS), \
 		"--enable-decoder=$(c)" \
@@ -49,6 +50,11 @@ FFMPEG_CONFIGURE_DECODERS:= \
 FFMPEG_CONFIGURE_PARSERS:= \
 	$(foreach c, $(FFMPEG_PARSERS), \
 		"--enable-parser=$(c)" \
+	)
+
+FFMPEG_CONFIGURE_PROTOCOLS:= \
+	$(foreach c, $(FFMPEG_PROTOCOLS), \
+		"--enable-protocol=$(c)" \
 	)
 
 include $(INCLUDE_DIR)/package.mk
@@ -76,6 +82,10 @@ ifneq ($(CONFIG_TARGET_x86),)
 endif
 
 # XXX: add --disable-mmx & --disable-mmx2 to fix build failure on x86
+# libpostproc/postprocess_template.c:2195: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+# libpostproc/postprocess_template.c:3124: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+# libpostproc/postprocess_template.c:3207: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
+
 define Build/Configure
 	# this is *NOT* GNU configure
 	( cd $(PKG_BUILD_DIR); \
@@ -90,26 +100,35 @@ define Build/Configure
 		--enable-shared \
 		--enable-static \
 		--disable-debug \
+		\
 		--enable-gpl \
+		--enable-version3 \
+		\
+		--disable-doc \
+		--disable-dxva2 \
 		--disable-mmx \
 		--disable-mmx2 \
 		--enable-pthreads \
 		--disable-optimizations \
 		--enable-small \
 		--disable-stripping \
-		--disable-vhook \
 		--enable-zlib \
 		--enable-postproc \
 		--enable-swscale \
-		--disable-ipv6 \
+		\
 		--disable-bsfs \
 		--disable-devices \
+		--disable-filters \
+		--disable-hwaccels \
+		\
+		--disable-bzlib \
+		\
 		--disable-encoders \
 		--disable-decoders \
-		$(FFMPEG_CONFIGURE_DECODERS) \
 		--disable-muxers \
 		--disable-parsers \
-		$(FFMPEG_CONFIGURE_PARSERS) \
+		--disable-protocols \
+		$(FFMPEG_CONFIGURE_PROTOCOLS) \
 	)
 endef
 

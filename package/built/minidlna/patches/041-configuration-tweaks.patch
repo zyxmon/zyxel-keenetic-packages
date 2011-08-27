@@ -35,7 +35,7 @@
  
  # notify interval in seconds. default is 895 seconds.
 -notify_interval=900
-+notify_interval=90
++notify_interval=600
  
  # serial and model number the daemon will report to clients
  # in its XML description

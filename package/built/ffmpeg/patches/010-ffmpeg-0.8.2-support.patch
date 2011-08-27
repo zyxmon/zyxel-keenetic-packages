@@ -1,0 +1,47 @@
+=== modified file 'libavcodec/h264.c'
+--- orig/libavcodec/h264.c	2011-08-10 16:18:20.000000000 +0400
++++ mod/libavcodec/h264.c	2011-08-25 23:32:14.000000000 +0400
+@@ -1704,8 +1704,11 @@
+                                     idct_dc_add(ptr, h->mb + (i*16+p*256 << pixel_shift), linesize);
+                                 else
+                                     idct_add   (ptr, h->mb + (i*16+p*256 << pixel_shift), linesize);
+-                            }else
++                            }
++#if CONFIG_SVQ3_DECODER
++                            else
+                                 ff_svq3_add_idct_c(ptr, h->mb + i*16+p*256, linesize, qscale, 0);
++#endif
+                         }
+                     }
+                 }
+@@ -1724,8 +1728,11 @@
+                         dctcoef_set(h->mb+p*256, pixel_shift, dc_mapping[i], dctcoef_get(h->mb_luma_dc[p], pixel_shift, i));
+                 }
+             }
+-        }else
++        }
++#if CONFIG_SVQ3_DECODER
++        else
+             ff_svq3_luma_dc_dequant_idct_c(h->mb+p*256, h->mb_luma_dc[p], qscale);
++#endif
+     }
+ }
+
+@@ -1768,7 +1774,9 @@
+                     }
+                 }
+             }
+-        }else{
++        }
++#if CONFIG_SVQ3_DECODER
++        else{
+             for(i=0; i<16; i++){
+                 if(h->non_zero_count_cache[ scan8[i+p*16] ] || h->mb[i*16+p*256]){ //FIXME benchmark weird rule, & below
+                     uint8_t * const ptr= dest_y + block_offset[i];
+@@ -1776,6 +1784,7 @@
+                 }
+             }
+         }
++#endif
+     }
+ }
