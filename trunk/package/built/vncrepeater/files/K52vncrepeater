@@ -7,14 +7,16 @@ export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbi
 export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
 
 
-start {
-	$RP
+start() {
+	$RP 2>/dev/null &
 	iptables -A INPUT -p tcp --dport 5500 -j ACCEPT
 	iptables -A INPUT -p tcp --dport 5901 -j ACCEPT
 }
 
 stop() {
 	killall vncrepeater
+	iptables -D INPUT -p tcp --dport 5500 -j ACCEPT
+	iptables -D INPUT -p tcp --dport 5901 -j ACCEPT
 }
 
 case "$1" in
