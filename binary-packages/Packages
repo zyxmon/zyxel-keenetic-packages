@@ -1985,6 +1985,26 @@ Size: 5157
 MD5Sum: aa171fa14e9e9a4b65010b2dddce6254
 Description:  sd-idle-2.6 is a disk idle spindown program for router firmware based on linux 2.6.
 
+Package: smartmontools
+Version: 5.41-1
+Depends: uclibcxx
+Provides: 
+Source: package/built/smartmontools
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 284420
+Filename: smartmontools_5.41-1_keenetic.ipk
+Size: 284831
+MD5Sum: ab0a8d67665abbddf4fa596ef8f11939
+Description:  smartmontools contains utility programs (smartctl, smartd) to
+ control/monitor storage systems using the Self-Monitoring, Analysis
+ and Reporting Technology System (S.M.A.R.T.) built into most modern
+ ATA and SCSI disks. It is derived from smartsuite.
+
 Package: sqlite3-cli
 Version: 3070603-1
 Depends: libsqlite3, libncurses, libreadline
