@@ -2265,10 +2265,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 17485
+Installed-Size: 17478
 Filename: vncrepeater_0.12-4_keenetic.ipk
-Size: 18274
-MD5Sum: 925aff37d151650d7ebe0e2bddedf238
+Size: 18271
+MD5Sum: 93005cf414a6a28c2be778e5d8da1efa
 Description:  Viewer can be behind Nat router or directly connected to the internet 
  instead of forwarding serveral ports, you only need to forward 1 port. 
  If the PC that runs the Repeater has access to the local DNS server, 
