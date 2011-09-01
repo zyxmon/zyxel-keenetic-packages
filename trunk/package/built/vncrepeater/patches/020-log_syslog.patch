@@ -1,81 +1,82 @@
 --- a/readini.cpp
 +++ b/readini.cpp
-@@ -81,6 +81,8 @@ int maxSessions = MAX_SESSIONS_DEFAULT;
+@@ -81,6 +81,7 @@ int maxSessions = MAX_SESSIONS_DEFAULT;
  
  //Logging level
  int loggingLevel = DEFAULT_LOGGING_LEVEL;
 +bool loggingStdErr = true;
-+bool loggingSysLog = false;
  
    
  //Parse ip address (i'm sure similar function has been recoded thousands of times ;-)
-@@ -155,6 +157,8 @@ bool readIniFile(char *iniFilePathAndNam
+@@ -155,6 +156,7 @@ bool readIniFile(char *iniFilePathAndNam
          strlcpy(runAsUser, iniparser_getstring(dict, "general:runasuser", "uvncrep"), MY_TMP_BUF_LEN);
                  
          loggingLevel = iniparser_getint(dict, "general:logginglevel", DEFAULT_LOGGING_LEVEL);     
-+	loggingStdErr = iniparser_getboolean(dict, "general:loggingstderr",1);
-+	loggingSysLog = iniparser_getboolean(dict, "general:loggingsyslog",0);
++        loggingStdErr = iniparser_getboolean(dict, "general:loggingstderr", true);
          if (loggingLevel > LEVEL_3)
              loggingLevel = DEFAULT_LOGGING_LEVEL;
          if (loggingLevel < LEVEL_0)
 --- a/readini.h
 +++ b/readini.h
-@@ -11,6 +11,10 @@ extern int allowedModes;
+@@ -11,6 +11,8 @@ extern int allowedModes;
  
  extern int loggingLevel;
  
 +extern bool loggingStdErr;
-+
-+extern bool loggingSysLog;
 +
  extern int allowedMode1ServerPort; 
  
  extern int requireListedId;
 --- a/repeater.cpp
 +++ b/repeater.cpp
-@@ -33,6 +33,7 @@
- #include <sys/socket.h>
- #include <sys/time.h>
- #include <stdio.h>
+@@ -49,6 +49,7 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <pwd.h>        //for getpwnam() in dropPrivileges()
 +#include <syslog.h>
- #include <stdlib.h>
- #include <string.h>
- #include <ctype.h>
+ 
+ #include "commondefines.h"
+ #include "repeaterproc.h"
 @@ -167,8 +168,10 @@ void debug(int msgLevel, const char *fmt
          logLineStart("UltraVnc");
  
          va_start(args, fmt);
 -    
 -        vfprintf(stderr, fmt, args);
-+	if (loggingStdErr)
-+	        vfprintf(stderr, fmt, args);
-+	if (loggingSysLog)
-+		vsyslog ( LOG_SYSLOG, fmt, args );
++	if (loggingStdErr)    
++           vfprintf(stderr, fmt, args);
++        else
++	   vsyslog(LOG_INFO, fmt, args);
          va_end(args);
      }
  }
-@@ -184,7 +187,10 @@ static void fatal(const char *fmt, ...)
+@@ -183,8 +186,10 @@ static void fatal(const char *fmt, ...)
+     logLineStart("UltraVnc FATAL");
      
      va_start(args, fmt);
-    
+-   
 -    vfprintf(stderr, fmt, args);
 +    if (loggingStdErr)
 +	vfprintf(stderr, fmt, args);
-+    if (loggingSysLog)
-+	vsyslog ( LOG_SYSLOG, fmt, args );
++    else
++        vsyslog(LOG_ERR, fmt, args);
      va_end(args);
   
      //Close program down cleanly (as if user just pressed ctrl+c, of course 
-@@ -206,8 +212,10 @@ static void logLineStart(const char *pre
-     lf = strchr(buf, '\n');
-     if (NULL != lf)
-         *lf = ' ';
--
--    fprintf(stderr, "%s %s> ", prefix, buf);
-+    if (loggingStdErr)
-+	fprintf(stderr, "%s %s> ", prefix, buf);
-+    if (loggingSysLog)
-+	vsyslog ( LOG_SYSLOG, (const char*)"%s", (void *)prefix );
- }
+@@ -198,6 +203,8 @@ static void logLineStart(const char *pre
+     time_t errTime;
+     char buf[MY_TMP_BUF_LEN];
+     char *lf;
++    if (!loggingStdErr)
++	return;
  
- //Allocate memory for various lists of repeater when program starts
+     errTime = time(NULL);
+ 
+@@ -1748,6 +1755,7 @@ static void dropRootPrivileges()
+ 
+ int main(int argc, char **argv)
+ {
++    openlog ( basename ( argv [ 0 ] ), LOG_PID, LOG_USER );
+     //Viewer port listener variable
+     listenPortInfo viewerListener = {-1, -1};
+ 
