@@ -2319,3 +2319,24 @@ Description:  Wget is a network utility to retrieve files from the Web using htt
  archives and home pages or to travel the Web like a WWW robot.
  This package is built with SSL support.
 
+Package: xinetd
+Version: 2.3.14-1
+Depends: 
+Provides: 
+Source: package/built/xinetd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 66423
+Filename: xinetd_2.3.14-1_keenetic.ipk
+Size: 67203
+MD5Sum: 0bbc2e5b2cad3190f6dd26413258a3a3
+Description:  xinetd has access control mechanisms, extensive logging capabilities,
+ the ability to make services available based on time, can place limits
+ on the number of servers that can be started, and has deployable
+ defence mechanisms to protect against port scanners, among other
+ things.
+
