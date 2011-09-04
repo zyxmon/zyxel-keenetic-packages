@@ -50,6 +50,44 @@ Size: 28312
 MD5Sum: 4a47b029569b6747891e74f328e3fada
 Description:  This package contains a utility for managing disk partition tables.
 
+Package: coreutils-dd
+Version: 8.8-1
+Depends: coreutils
+Provides: 
+Source: package/built/coreutils
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 26412
+Filename: coreutils-dd_8.8-1_keenetic.ipk
+Size: 27027
+MD5Sum: 282f475a2e2945b40b47bbbc49938790
+Description:  Full version of standard GNU dd utility.  Normally, you would not
+ use this package, since the functionality in BusyBox is more than
+ sufficient.
+
+Package: coreutils
+Version: 8.8-1
+Depends: 
+Provides: 
+Source: package/built/coreutils
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 105
+Filename: coreutils_8.8-1_keenetic.ipk
+Size: 775
+MD5Sum: b09aaa886fa72986ac4298cb360a18b0
+Description:  Full versions of standard GNU utilities.  Normally, you would not
+ use this package, since the functionality in BusyBox is more than
+ sufficient and much smaller.
+
 Package: curlftpfs
 Version: 0.9.2-2
 Depends: libfuse, glib2
