@@ -6,7 +6,7 @@
 {{{
 sudo apt-get install git gawk libncurses5-dev libz-dev subversion flex bison autoconf libtool libssl-dev
 }}}
-Создадим, например в домашней директории папку keenetic, перейдем в нее и "сольем в нее" набор исходников/скриптов с этого сайта:
+Создадим, например, в домашней директории папку keenetic, перейдем в нее и "сольем в нее" набор исходников/скриптов с этого сайта:
 {{{
 svn checkout http://zyxel-keenetic-packages.googlecode.com/svn/trunk/ .
 }}}
@@ -16,4 +16,3 @@ svn checkout http://zyxel-keenetic-packages.googlecode.com/svn/trunk/ .
 wget http://zyxel.ru/sites/default/download/Keenetic/firmware/zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
 tar -xf zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
 }}}
-
