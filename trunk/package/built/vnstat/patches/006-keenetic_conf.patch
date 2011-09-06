@@ -1,0 +1,54 @@
+--- a/cfg/vnstat.conf
++++ b/cfg/vnstat.conf
+@@ -2,10 +2,10 @@
+ ##
+ 
+ # default interface
+-Interface "eth0"
++Interface "br0"
+ 
+ # location of the database directory
+-DatabaseDir "/var/lib/vnstat"
++DatabaseDir "/media/DISK_A1/system/var/lib/vnstat"
+ 
+ # locale (LC_ALL) ("-" = use system locale)
+ Locale "-"
+@@ -62,7 +62,7 @@ CheckDiskSpace 1
+ UseFileLocking 1
+ 
+ # how much the boot time can variate between updates (seconds)
+-BootVariation 15
++BootVariation 100
+ 
+ # log days without traffic to daily list (1 = enabled, 0 = disabled)
+ TrafficlessDays 1
+@@ -72,13 +72,13 @@ TrafficlessDays 1
+ ##
+ 
+ # how often (in seconds) interface data is updated
+-UpdateInterval 30
++UpdateInterval 60
+ 
+ # how often (in seconds) interface status changes are checked
+-PollInterval 5
++PollInterval 30
+ 
+ # how often (in minutes) data is saved to file
+-SaveInterval 5
++SaveInterval 30
+ 
+ # how often (in minutes) data is saved when all interface are offline
+ OfflineSaveInterval 30
+@@ -90,10 +90,10 @@ SaveOnStatusChange 1
+ UseLogging 2
+ 
+ # file used for logging if UseLogging is set to 1
+-LogFile "/var/log/vnstat.log"
++LogFile "/media/DISK_A1/system/var/log/vnstat.log"
+ 
+ # file used as daemon pid / lock file
+-PidFile "/var/run/vnstat.pid"
++PidFile "/media/DISK_A1/system/var/run/vnstat.pid"
+ 
+ 
+ # vnstati
