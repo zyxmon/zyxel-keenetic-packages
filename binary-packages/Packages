@@ -2334,6 +2334,47 @@ Description:  Viewer can be behind Nat router or directly connected to the inter
  This could be handy when you have a dynamic DHCP server allocating 
  ip adresses for your PC.
 
+Package: vnstat
+Version: 1.11-1
+Depends: 
+Provides: 
+Source: package/built/vnstat
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 64992
+Filename: vnstat_1.11-1_keenetic.ipk
+Size: 65743
+MD5Sum: 1106b28ca579a231dc2469a3b0ecf38e
+Description:  vnStat is a network traffic monitor for Linux that keeps a log of daily
+ network traffic for the selected interface(s). vnStat isn't a packet
+ sniffer. The traffic information is analyzed from the /proc -filesystem,
+ so vnStat can be used without root permissions.
+
+Package: vnstati
+Version: 1.11-1
+Depends: vnstat, libgd
+Provides: 
+Source: package/built/vnstat
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 34336
+Filename: vnstati_1.11-1_keenetic.ipk
+Size: 35117
+MD5Sum: f7405ba13bc2ee15901dacebf71eca50
+Description:  The purpose of vnstati is to provide image output support for statistics
+ collected using vnstat(1). However, the image file format is limited to
+ png. All basic outputs of vnStat are supported excluding live traffic
+ features. The image can be outputted either to a file or to standard
+ output.
+
 Package: wget
 Version: 1.12-2
 Depends: 
