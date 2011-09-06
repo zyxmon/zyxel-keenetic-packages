@@ -1,0 +1,60 @@
+--- a/src/cfg.c
++++ b/src/cfg.c
+@@ -240,7 +240,7 @@ int loadcfg(const char *cfgfile)
+ 		if (tryhome && (fd=fopen(buffer, "r"))!=NULL) {
+ 			if (debug)
+ 				printf("Config file: $HOME/.vnstatrc\n");
+-		} else if ((fd=fopen("/etc/vnstat.conf", "r"))!=NULL) {
++		} else if ((fd=fopen("/media/DISK_A1/system/etc/vnstat.conf", "r"))!=NULL) {
+ 			if (debug)
+ 				printf("Config file: /etc/vnstat.conf\n");
+ 		} else {
+--- a/src/common.h
++++ b/src/common.h
+@@ -41,7 +41,7 @@ and most can be changed later from the c
+ #if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
+ #define DATABASEDIR "/var/db/vnstat"
+ #else
+-#define DATABASEDIR "/var/lib/vnstat"
++#define DATABASEDIR "/media/DISK_A1/system/var/lib/vnstat"
+ #endif
+ 
+ /* on which day should months change */
+@@ -84,7 +84,7 @@ and most can be changed later from the c
+ #define RATEUNIT 1
+ 
+ /* default interface */
+-#define DEFIFACE "eth0"
++#define DEFIFACE "br0"
+ 
+ /* default locale */
+ #define LOCALE "-"
+@@ -109,7 +109,7 @@ and most can be changed later from the c
+ #define DEFQMODE 0
+ 
+ /* how much the boot time can variate between updates (seconds) */
+-#define BVAR 15
++#define BVAR 100
+ 
+ /* check disk space by default */
+ #define USESPACECHECK 1
+@@ -150,14 +150,14 @@ and most can be changed later from the c
+ #define PROCNETDEV "/proc/net/dev"
+ 
+ /* daemon defaults */
+-#define UPDATEINTERVAL 30
+-#define POLLINTERVAL 5
+-#define SAVEINTERVAL 5
++#define UPDATEINTERVAL 60
++#define POLLINTERVAL 30
++#define SAVEINTERVAL 30
+ #define OFFSAVEINTERVAL 30
+ #define SAVESTATUS 1
+ #define USELOGGING 2
+-#define LOGFILE "/var/log/vnstat.log"
+-#define PIDFILE "/var/run/vnstat.pid"
++#define LOGFILE "/media/DISK_A1/system/var/log/vnstat.log"
++#define PIDFILE "/media/DISK_A1/system/var/run/vnstat.pid"
+ 
+ /* no transparency by default */
+ #define TRANSBG 0
