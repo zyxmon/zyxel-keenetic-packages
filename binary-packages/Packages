@@ -143,7 +143,7 @@ MD5Sum: ec9311e465f61de8cc2aade4b3e39959
 Description:  This package contains a utility for managing disk partition tables.
 
 Package: file
-Version: 5.08-1
+Version: 5.08-2
 Depends: libmagic
 Provides: 
 Source: package/built/file
@@ -153,10 +153,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 97703
-Filename: file_5.08-1_keenetic.ipk
-Size: 98373
-MD5Sum: 28651c46a4419d9967a411622dba79f4
+Installed-Size: 97722
+Filename: file_5.08-2_keenetic.ipk
+Size: 98404
+MD5Sum: 0331c619a61b1b06a09ae051060205fc
 Description:  utility
 
 Package: gawk
@@ -853,7 +853,7 @@ Description:  LZO is a data compression library which is suitable for data de-/c
  real-time. This means it favours speed over compression ratio.
 
 Package: libmagic
-Version: 5.08-1
+Version: 5.08-2
 Depends: 
 Provides: 
 Source: package/built/file
@@ -864,9 +864,9 @@ Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 95442
-Filename: libmagic_5.08-1_keenetic.ipk
-Size: 95748
-MD5Sum: 11b0b46f9d29bb5ff2da3af7501acb00
+Filename: libmagic_5.08-2_keenetic.ipk
+Size: 95743
+MD5Sum: fd13380d6020b66f3629fa775e1fc63c
 Description:  library
 
 Package: libncurses
