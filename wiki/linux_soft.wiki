@@ -1,6 +1,6 @@
-#summary Необходимый софт.
+#summary Необходимый софт для сборки (linux).
 
-= Необходимый софт =
+= Необходимый софт для сборки (linux)=
 
 Для сборки программ, пакетов для Keenetic необходим установленный Linux. Подойдет почти любой дистрибутив. Потребуется установить в дистрибутиве ряд пакетов. Для Ubuntu обычно достаточно поставить следующие: 
 {{{
@@ -16,3 +16,4 @@ svn checkout http://zyxel-keenetic-packages.googlecode.com/svn/trunk/ .
 wget http://zyxel.ru/sites/default/download/Keenetic/firmware/zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
 tar -xf zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
 }}}
+Если wget не скачивает файл, скачиваем браузером.
