@@ -4,7 +4,7 @@
 
 Для сборки программ, пакетов для Keenetic необходим установленный Linux. Подойдет почти любой дистрибутив. Потребуется установить в дистрибутиве ряд пакетов. Для Ubuntu обычно достаточно поставить следующие: 
 {{{
-sudo apt-get install git gawk libncurses5-dev libz-dev subversion flex bison autoconf libtool libssl-dev
+sudo apt-get install git-core gawk libncurses5-dev libz-dev subversion flex bison autoconf libtool libssl-dev
 }}}
 Создадим, например, в домашней директории папку keenetic, перейдем в нее и "сольем в нее" набор исходников/скриптов с этого сайта:
 {{{
@@ -13,7 +13,6 @@ svn checkout http://zyxel-keenetic-packages.googlecode.com/svn/trunk/ .
 Нам потребуются еще исходники ядра с сайта zyxel.ru - http://zyxel.ru/support/download?product=50322
 Скачаем их в произвольную папку и распакуем:
 {{{
-wget http://zyxel.ru/sites/default/download/Keenetic/firmware/zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
+wget --user-agent="Browser" http://zyxel.ru/sites/default/download/Keenetic/firmware/zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
 tar -xf zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
 }}}
-Если wget не скачивает файл, скачиваем браузером.
