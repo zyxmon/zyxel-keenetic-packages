@@ -506,6 +506,23 @@ Size: 3586
 MD5Sum: 5e4935fcc8e7038051abffa3ee963245
 Description:  Character set conversion library
 
+Package: libdb47
+Version: 4.7.25.NC-6
+Depends: libxml2
+Provides: 
+Source: package/built/db47
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: W. Michael Petullo <mike@flyn.org>
+Architecture: keenetic
+Installed-Size: 291378
+Filename: libdb47_4.7.25.NC-6_keenetic.ipk
+Size: 291610
+MD5Sum: abb8cde7c9a7603dbaa4c7686a57dc86
+Description:  Berkeley DB library (4.7).
+
 Package: libevent2
 Version: 2.0.14-1
 Depends: 
