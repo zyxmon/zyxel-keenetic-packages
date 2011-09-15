@@ -729,6 +729,30 @@ Description:  FUSE (Filesystem in UserSpacE)
  - libfuse
  - libulockmgr
 
+Package: libgcrypt
+Version: 1.5.0-1
+Depends: libgpg-error
+Provides: 
+Source: package/built/libgcrypt
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 154448
+Filename: libgcrypt_1.5.0-1_keenetic.ipk
+Size: 154667
+MD5Sum: 70752f88ecc77c012b2f07f1579736ac
+Description:  This is a general purpose cryptographic library based on the code from
+ GnuPG. It provides functions for all cryptograhic building blocks:
+ symmetric ciphers (AES, DES, Arcfour, CAST5), hash algorithms (MD5, SHA-1,
+ RIPE-MD160, SHA-224/256, SHA-384/512), MACs (HMAC for all hash
+ algorithms), public key algorithms (RSA, DSA), large integer functions,
+ random numbers and a lot of supporting functions. Some algorithms have
+ been disabled to reduce size (Blowfish, Twofish, Serpent,
+ RC2, SEED, Camellia, CRC, MD4, TIGER-192, Whirlpool, ElGamal, ECC).
+
 Package: libgd
 Version: 2.0.35-1
 Depends: libjpeg, libpng
@@ -764,6 +788,27 @@ Size: 141983
 MD5Sum: c0ee44dde6f8e99ceacd3ce612b746ae
 Description:  GMP is a free library for arbitrary precision arithmetic, operating on
  signed integers, rational numbers, and floating point numbers.
+
+Package: libgpg-error
+Version: 1.9-1
+Depends: 
+Provides: 
+Source: package/built/libgpg-error
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5098
+Filename: libgpg-error_1.9-1_keenetic.ipk
+Size: 5820
+MD5Sum: 72169b426e658c3536163126472ecc00
+Description:  An helper library for common error codes and descriptions.
+ This is a library that defines common error values for all GnuPG
+ components. Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt,
+ Libksba, DirMngr, Pinentry, SmartCard Daemon and possibly more in the
+ future.
 
 Package: libiconv-full
 Version: 1.11.1-1
