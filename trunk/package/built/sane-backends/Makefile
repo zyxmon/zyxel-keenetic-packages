@@ -71,6 +71,7 @@ endef
 
 TARGET_LDFLAGS += \
 	-Wl,-rpath,$(PREFIX_ZYX)/lib/sane \
+	-Wl,-rpath,$(PREFIX_ZYX)/lib \
 	-Wl,-rpath-link $(STAGING_DIR)/usr/lib \
 	-Wl,-rpath-link $(PKG_BUILD_DIR)/backend/.libs
 	
