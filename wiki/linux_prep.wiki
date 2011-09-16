@@ -13,7 +13,7 @@ svn checkout http://zyxel-keenetic-packages.googlecode.com/svn/trunk/ .
 wget --user-agent="Browser" http://zyxel.ru/sites/default/download/Keenetic/firmware/zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
 tar -xf zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
 }}}
-Если wget не скачивает файл, скачиваем браузером. И в этом случае не забываем их распаковать.
+Если wget не скачивает файл, скачиваем браузером. И в этом случае не забываем его распаковать.
 
 Перейдем в папку keenetic, где будет происходить сборка пакетов, и скопируем в нее _распакованные_ исходники ядра от zyxel:
 {{{
