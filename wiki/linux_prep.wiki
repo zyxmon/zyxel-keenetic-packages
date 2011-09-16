@@ -10,7 +10,7 @@ svn checkout http://zyxel-keenetic-packages.googlecode.com/svn/trunk/ .
 Нам потребуются еще исходники ядра с сайта zyxel.ru - http://zyxel.ru/support/download?product=50322
 Скачаем их в произвольную папку и распакуем:
 {{{
-wget http://zyxel.ru/sites/default/download/Keenetic/firmware/zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
+wget --user-agent="Browser" http://zyxel.ru/sites/default/download/Keenetic/firmware/zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
 tar -xf zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
 }}}
 Если wget не скачивает файл, скачиваем браузером. И в этом случае не забываем их распаковать.
