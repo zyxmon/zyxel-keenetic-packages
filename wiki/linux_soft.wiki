@@ -7,4 +7,4 @@
 sudo apt-get install git-core gawk libncurses5-dev libz-dev subversion flex bison autoconf libtool libssl-dev
 }}}
 
-Для других дистрибутивов linux набор пакетов может быть немного иным, используйте для определения требуемых пакетов [http://wiki.openwrt.org/doc/howto/buildroot.exigence таблицу из wiki openwrt] и примеры (Examples) ниже на странице.
+Для других дистрибутивов linux набор пакетов может быть немного иным, используйте для определения требуемых пакетов [http://wiki.openwrt.org/doc/howto/buildroot.exigence таблицу из wiki openwrt] и примеры (Examples) ниже на странице wiki openwrt.
