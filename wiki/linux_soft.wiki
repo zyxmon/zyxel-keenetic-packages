@@ -6,13 +6,5 @@
 {{{
 sudo apt-get install git-core gawk libncurses5-dev libz-dev subversion flex bison autoconf libtool libssl-dev
 }}}
-Создадим, например, в домашней директории папку keenetic, перейдем в нее и "сольем в нее" набор исходников/скриптов с этого сайта:
-{{{
-svn checkout http://zyxel-keenetic-packages.googlecode.com/svn/trunk/ .
-}}}
-Нам потребуются еще исходники ядра с сайта zyxel.ru - http://zyxel.ru/support/download?product=50322
-Скачаем их в произвольную папку и распакуем:
-{{{
-wget --user-agent="Browser" http://zyxel.ru/sites/default/download/Keenetic/firmware/zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
-tar -xf zyxel_keenetics_gpl_v.1.00_2_D0.tar.bz2
-}}}
+
+Для других дистрибутивов linux набор пакетов может быть немного иным, используйте для определения требуемых пакетов [http://wiki.openwrt.org/doc/howto/buildroot.exigence таблицу из wiki openwrt].
