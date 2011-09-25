@@ -523,6 +523,23 @@ Size: 291610
 MD5Sum: abb8cde7c9a7603dbaa4c7686a57dc86
 Description:  Berkeley DB library (4.7).
 
+Package: libdb51
+Version: 5.1.25.NC-1
+Depends: libxml2
+Provides: 
+Source: package/built/db51
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: W. Michael Petullo <mike@flyn.org>
+Architecture: keenetic
+Installed-Size: 309191
+Filename: libdb51_5.1.25.NC-1_keenetic.ipk
+Size: 309104
+MD5Sum: 335d9972df4443b60754ddad1138da31
+Description:  Berkeley DB library (5.1).
+
 Package: libevent2
 Version: 2.0.14-1
 Depends: 
@@ -1460,6 +1477,23 @@ Size: 35938
 MD5Sum: 0be4b6c27588fd66bd2dca90e8bfccf7
 Description:  GNU nano (Nano's ANOther editor, or Not ANOther editor) is an enhanced clone
  of the Pico text editor.
+
+Package: netatalk
+Version: 2.2.1-2
+Depends: libdb51, libgcrypt
+Provides: 
+Source: package/built/netatalk
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: W. Michael Petullo <mike@flyn.org>
+Architecture: keenetic
+Installed-Size: 353727
+Filename: netatalk_2.2.1-2_keenetic.ipk
+Size: 352860
+MD5Sum: 022e3fd05c602f69e3d679a7e4e0c957
+Description:  netatalk
 
 Package: nfs-kernel-server
 Version: 1.1.6-1
