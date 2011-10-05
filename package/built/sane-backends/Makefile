@@ -71,13 +71,14 @@ endef
 
 TARGET_LDFLAGS += \
 	-Wl,-rpath,$(PREFIX_ZYX)/lib/sane \
-	-Wl,-rpath,$(PREFIX_ZYX)/lib \
 	-Wl,-rpath-link $(STAGING_DIR)/usr/lib \
 	-Wl,-rpath-link $(PKG_BUILD_DIR)/backend/.libs
 	
 
+CONFIGURE_PREFIX:=$(PREFIX_ZYX)
+
 CONFIGURE_ARGS+= \
-	--sysconfdir="/media/DISK_A1/system/etc" \
+	--sysconfdir="$(ROOT_ZYX)/etc" \
 	--enable-shared \
 	--enable-static \
 	--disable-translations \
@@ -93,32 +94,33 @@ endef
 
 define Package/sane-backends/conffiles
 /etc/sane.d/saned.conf
+/etc/sane.d/dll.conf
 endef
 
 define Package/sane-backends/install
 	$(INSTALL_DIR) $(1)/etc/sane.d
-	$(INSTALL_CONF) $(PKG_INSTALL_DIR)/media/DISK_A1/system/etc/sane.d/*.conf $(1)/etc/sane.d/
+	$(INSTALL_CONF) $(PKG_INSTALL_DIR)$(ROOT_ZYX)/etc/sane.d/*.conf $(1)/etc/sane.d/
 	$(INSTALL_DIR) $(1)/usr/sbin
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/sbin/* $(1)/usr/sbin/
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)$(PREFIX_ZYX)/sbin/* $(1)/usr/sbin/
 endef
 
 define Package/sane-libs/install
 	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libsane.so.* $(1)/usr/lib/
+	$(CP) $(PKG_INSTALL_DIR)$(PREFIX_ZYX)/lib/libsane.so.* $(1)/usr/lib/
 	$(INSTALL_DIR) $(1)/usr/lib/sane
-	$(CP) $(PKG_INSTALL_DIR)/usr/lib/sane/libsane-*.so.* $(1)/usr/lib/sane/
+	$(CP) $(PKG_INSTALL_DIR)$(PREFIX_ZYX)/lib/sane/libsane-*.so.* $(1)/usr/lib/sane/
 endef
 
 define Package/sane-frontends/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/* $(1)/usr/bin/
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)$(PREFIX_ZYX)/bin/* $(1)/usr/bin/
 endef
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include
-	$(CP) $(PKG_INSTALL_DIR)/usr/include/sane $(1)/usr/include/
+	$(CP) $(PKG_INSTALL_DIR)$(PREFIX_ZYX)/include/sane $(1)/usr/include/
 	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libsane.{a,so*} $(1)/usr/lib/
+	$(CP) $(PKG_INSTALL_DIR)$(PREFIX_ZYX)/lib/libsane.{a,so*} $(1)/usr/lib/
 endef
 
 $(eval $(call BuildPackage,sane-backends))
