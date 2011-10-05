@@ -1166,6 +1166,23 @@ Size: 101089
 MD5Sum: 806e495cc0bd785f50e8a0fe3f366e87
 Description:  TIFF library
 
+Package: libusb-1.0
+Version: 1.0.8-1
+Depends: 
+Provides: 
+Source: package/built/libusb-1.0
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19478
+Filename: libusb-1.0_1.0.8-1_keenetic.ipk
+Size: 20054
+MD5Sum: 77654d32c5453a963f732b069e2a3e1c
+Description:  libusb-1.0
+
 Package: libuuid
 Version: 1.41.12-3
 Depends: 
@@ -2121,6 +2138,60 @@ Description:  Python is a dynamic object-oriented programming language that can 
  .
  This package contains the full Python install.
 
+Package: sane-backends
+Version: 1.0.22-1
+Depends: sane-libs, libtiff
+Provides: 
+Source: package/built/sane-backends
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 45313
+Filename: sane-backends_1.0.22-1_keenetic.ipk
+Size: 46126
+MD5Sum: 9b17597702123ce46df8563114583b7b
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE daemon.
+
+Package: sane-frontends
+Version: 1.0.22-1
+Depends: sane-backends
+Provides: 
+Source: package/built/sane-backends
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 61564
+Filename: sane-frontends_1.0.22-1_keenetic.ipk
+Size: 62278
+MD5Sum: 339cc5a8340326bba603697c6a8cb42d
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE frontends.
+
+Package: sane-libs
+Version: 1.0.22-1
+Depends: libjpeg
+Provides: 
+Source: package/built/sane-backends
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2869178
+Filename: sane-libs_1.0.22-1_keenetic.ipk
+Size: 2864543
+MD5Sum: 6a1bb2d549a82698f76bec46c8ade7d7
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE shared libraries.
+
 Package: screen
 Version: 4.0.3-2
 Depends: libncurses
@@ -2155,6 +2226,24 @@ Filename: sd-idle_2.6-1_keenetic.ipk
 Size: 5157
 MD5Sum: aa171fa14e9e9a4b65010b2dddce6254
 Description:  sd-idle-2.6 is a disk idle spindown program for router firmware based on linux 2.6.
+
+Package: sdparm
+Version: 1.04-1
+Depends: 
+Provides: 
+Source: package/built/sdparm
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 74859
+Filename: sdparm_1.04-1_keenetic.ipk
+Size: 75039
+MD5Sum: 40854b63ed4477a722f4b25e1f1cc407
+Description:  The sdparm utility outputs and in some cases modifies SCSI device
+ parameters.
 
 Package: smartmontools
 Version: 5.41-1
@@ -2424,6 +2513,23 @@ Description:  udproxy makes it possible to convert UDP IPTV streams into http
  home and do not want to rent multiple decoders from their
  provider but just use their own streaming client for example
  popcornhour/mediatomb/vlc/etc.
+
+Package: usbutils
+Version: 004-1
+Depends: libusb-1.0
+Provides: 
+Source: package/built/usbutils
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 184772
+Filename: usbutils_004-1_keenetic.ipk
+Size: 185481
+MD5Sum: 24113bf7a6a01b9a3894af0fe7861534
+Description:  USB devices listing utilities
 
 Package: vncrepeater
 Version: 0.12-4
