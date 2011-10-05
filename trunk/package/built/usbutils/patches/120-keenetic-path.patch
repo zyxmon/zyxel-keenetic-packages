@@ -1,0 +1,15 @@
+--- a/lsusb.c
++++ b/lsusb.c
+@@ -4018,10 +4018,10 @@ int main(int argc, char *argv[])
+ 	}
+ 
+ 	/* by default, print names as well as numbers */
+-	err = names_init(DATADIR "/usb.ids");
++	err = names_init("/media/DISK_A1/system/usr/share/usb.ids");
+ #ifdef HAVE_LIBZ
+ 	if (err != 0)
+-		err = names_init(DATADIR "/usb.ids.gz");
++		err = names_init("/media/DISK_A1/system/usr/share/usb.ids.gz");
+ #endif
+ 	if (err != 0)
+ 		fprintf(stderr, "%s: cannot open \"%s\", %s\n",
