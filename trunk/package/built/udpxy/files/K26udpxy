@@ -1,0 +1,51 @@
+#!/bin/sh
+
+MOUNT="/media/DISK_A1/system"
+
+export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
+
+
+start() {
+#for pure PPPoE without ip add any ip to eth2.2 
+#ifconfig eth2.2 10.10.99.1 up
+IGMODULE=`lsmod | grep igmpsn | cut -d " " -f 1`
+if [ -n "$IGMODULE" ]; then
+	rmmod igmpsn
+fi
+# Forcing setting IGMPv2
+echo "2" > /proc/sys/net/ipv4/conf/all/force_igmp_version
+# route add -net 239.0.0.0 netmask 255.0.0.0 br0 (не обязательно, работает без этого маршрута)
+iptables -I INPUT -i eth2.2 -d 239.0.0.0/8 -j ACCEPT
+udpxy -a br0 -p 4022 -m eth2.2 -c 20 -B 4Kb -R -1 -H 4
+}
+
+stop() {
+iptables -D INPUT -i eth2.2 -d 239.0.0.0/8 -j ACCEPT
+killall udpxy
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        sleep 1
+        start
+        ;;
+    link_up)
+        ;;
+    ppp_up)
+        ;;
+    link_down)
+        ;;
+    ppp_down)
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|link_up|link_down|ppp_up|ppp_down}"
+        ;;
+esac 

@@ -46,6 +46,8 @@ define Package/udpxy/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/udpxy $(1)/usr/bin/
 	ln -sf udpxy $(1)/usr/bin/udpxrec
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/K26udpxy $(1)/etc/init.d/K26udpxy
 endef
 
 $(eval $(call BuildPackage,udpxy))
