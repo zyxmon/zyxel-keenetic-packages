@@ -52,6 +52,8 @@ endef
 define Package/xupnpd/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/xupnpd $(1)/usr/bin
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/K27xupnpd $(1)/etc/init.d/K27xupnpd
 	$(INSTALL_DIR) $(1)/usr/share/xupnpd
 	$(CP) $(PKG_BUILD_DIR)/*.lua $(1)/usr/share/xupnpd
 	$(INSTALL_DIR) $(1)/usr/share/xupnpd/ui
