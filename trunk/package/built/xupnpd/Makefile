@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=xupnpd
 PKG_REV:=213
 PKG_VERSION:=$(PKG_REV)
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE_PROTO:=svn
 PKG_SOURCE_VERSION:=$(PKG_REV)
@@ -50,6 +50,7 @@ endef
 
 
 define Package/xupnpd/install
+	$(INSTALL_DIR) $(1)/tmp
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/xupnpd $(1)/usr/bin
 	$(INSTALL_DIR) $(1)/etc/init.d
