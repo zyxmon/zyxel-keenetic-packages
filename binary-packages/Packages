@@ -930,6 +930,26 @@ Size: 125059
 MD5Sum: bdb7f5b3fdaf45a5ad29f5764a21aa1a
 Description:  A small-footprint, speed optimized color management engine.
 
+Package: liblua
+Version: 5.1.4-8
+Depends: 
+Provides: 
+Source: package/built/lua
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 67464
+Filename: liblua_5.1.4-8_keenetic.ipk
+Size: 68061
+MD5Sum: e23e9b168a0e79b34592e6001f793966
+Description:  Lua is a powerful light-weight programming language designed for extending 
+ applications. Lua is also frequently used as a general-purpose, stand-alone 
+ language. Lua is free software.
+ This package contains the Lua shared libraries, needed by other programs.
+
 Package: liblzo
 Version: 2.04-1
 Depends: 
@@ -1376,6 +1396,26 @@ Filename: lighttpd_1.4.29-1_keenetic.ipk
 Size: 88438
 MD5Sum: c69d5a202598afd9e8931ff771852fee
 Description:  A flexible and lightweight web server
+
+Package: lua
+Version: 5.1.4-8
+Depends: liblua
+Provides: 
+Source: package/built/lua
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4612
+Filename: lua_5.1.4-8_keenetic.ipk
+Size: 5323
+MD5Sum: 6532db547dd62818acdebc1f3def6b6d
+Description:  Lua is a powerful light-weight programming language designed for extending 
+ applications. Lua is also frequently used as a general-purpose, stand-alone 
+ language. Lua is free software.
+ This package contains the Lua language interpreter.
 
 Package: mc
 Version: 4.7.5.3-1
@@ -2492,7 +2532,7 @@ MD5Sum: f8a4633b3315ca1685a97c1972cb6cf0
 Description:  C++ library for embedded systems
 
 Package: udpxy
-Version: 1.0-Chipmunk-20-1
+Version: 1.0-Chipmunk-20-2
 Depends: 
 Provides: 
 Source: package/built/udpxy
@@ -2502,10 +2542,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 29815
-Filename: udpxy_1.0-Chipmunk-20-1_keenetic.ipk
-Size: 30669
-MD5Sum: 386405a980eb36b8f9320d47ed1368e3
+Installed-Size: 30910
+Filename: udpxy_1.0-Chipmunk-20-2_keenetic.ipk
+Size: 31744
+MD5Sum: b8e5f56602222541444fb81889de56a9
 Description:  udproxy makes it possible to convert UDP IPTV streams into http
  streams which can be viewed even over wlans. http streams do
  not generate huge amounts of multicast traffic, so a sd stream
@@ -2637,4 +2677,21 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  on the number of servers that can be started, and has deployable
  defence mechanisms to protect against port scanners, among other
  things.
+
+Package: xupnpd
+Version: 213-1
+Depends: liblua
+Provides: 
+Source: package/built/xupnpd
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 52656
+Filename: xupnpd_213-1_keenetic.ipk
+Size: 53394
+MD5Sum: 265342610290668918d30a6f93e4b8bd
+Description:  eXtensible UPnP agent
 
