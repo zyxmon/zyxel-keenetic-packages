@@ -2554,6 +2554,26 @@ Description:  udproxy makes it possible to convert UDP IPTV streams into http
  provider but just use their own streaming client for example
  popcornhour/mediatomb/vlc/etc.
 
+Package: unfs3
+Version: 0.9.22-1
+Depends: portmap
+Provides: 
+Source: package/built/unfs3
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 40379
+Filename: unfs3_0.9.22-1_keenetic.ipk
+Size: 41134
+MD5Sum: 40b1ea903d08488f8bb20232e0b403b1
+Description:  UNFS3 is a user-space implementation of the NFSv3 server
+ specification. It provides a daemon for the MOUNT and NFS
+ protocols, which are used by NFS clients for accessing files
+ on the server.
+
 Package: usbutils
 Version: 004-1
 Depends: libusb-1.0
