@@ -125,6 +125,27 @@ Description:  This package contains essential ext2 filesystem utilities which co
  e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2 
  filesystem utilities.
 
+Package: etherwake
+Version: 1.09-2
+Depends: 
+Provides: 
+Source: package/built/etherwake
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3974
+Filename: etherwake_1.09-2_keenetic.ipk
+Size: 4703
+MD5Sum: 16dea249db80a6156d0d9f579d8411f9
+Description:  You can wake up WOL compliant Computers which have been powered down to 
+ sleep mode or start WOL compliant Computers with a BIOS feature.
+ WOL is an abbreviation for Wake-on-LAN. It is a standard that allows you 
+ to turn on a computer from another location over a network connection.
+ ether-wake also supports WOL passwords.
+
 Package: fdisk
 Version: 2.13.0.1-4
 Depends: 
