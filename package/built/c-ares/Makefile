@@ -9,12 +9,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=c-ares
-PKG_VERSION:=1.7.4
+PKG_VERSION:=1.7.5
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://c-ares.haxx.se
-PKG_MD5SUM:=dd71e8f07d9f3c837e12a5416d1b7f73
+PKG_SOURCE_URL:=http://c-ares.haxx.se/download
+PKG_MD5SUM:=800875fc23cd8e1924d8af9172ed33e7
 
 PKG_FIXUP:=libtool
 PKG_INSTALL:=1
