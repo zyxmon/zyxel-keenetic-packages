@@ -1,6 +1,6 @@
 Package: aria2
-Version: 1.11.2-1
-Depends: libxml2, libcares, libsqlite3, libstdcpp
+Version: 1.13.0-1
+Depends: libxml2, libstdcpp
 Provides: 
 Source: package/built/aria2
 Section: net
@@ -9,10 +9,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1143903
-Filename: aria2_1.11.2-1_keenetic.ipk
-Size: 1141179
-MD5Sum: b6ef776cb22ded3b8e7ea0b3219f48be
+Installed-Size: 1136308
+Filename: aria2_1.13.0-1_keenetic.ipk
+Size: 1133736
+MD5Sum: 250380f4f68349c7cc6513c1129d1227
 Description:  download manager
 
 Package: busybox
@@ -493,7 +493,7 @@ Description:  The blkid library which allows system programs like fsck and mount
  quickly and easily find block devices by filesystem UUID and LABEL.
 
 Package: libcares
-Version: 1.7.4-1
+Version: 1.7.5-1
 Depends: 
 Provides: 
 Source: package/built/c-ares
@@ -503,10 +503,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 25732
-Filename: libcares_1.7.4-1_keenetic.ipk
-Size: 26313
-MD5Sum: ca18187fb261ce8ba12bef797c7f72f7
+Installed-Size: 26077
+Filename: libcares_1.7.5-1_keenetic.ipk
+Size: 26666
+MD5Sum: e7300f586d01e945ae59460db4566e7b
 Description:  c-ares is a C library that performs DNS requests and name resolves
  asynchronously.
 
@@ -2737,7 +2737,7 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 213-4
+Version: 225-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
@@ -2747,9 +2747,9 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 52725
-Filename: xupnpd_213-4_keenetic.ipk
-Size: 53465
-MD5Sum: e0caec27b909edd42348e0b354c925a3
+Installed-Size: 55759
+Filename: xupnpd_225-1_keenetic.ipk
+Size: 56476
+MD5Sum: fa59c3adeccf9e2ffa2cb88968ab7168
 Description:  eXtensible UPnP agent
 
