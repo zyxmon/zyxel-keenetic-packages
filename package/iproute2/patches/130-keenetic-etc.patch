@@ -1,0 +1,58 @@
+--- a/lib/rt_names.c
++++ b/lib/rt_names.c
+@@ -127,7 +127,7 @@ static int rtnl_rtprot_init;
+ static void rtnl_rtprot_initialize(void)
+ {
+ 	rtnl_rtprot_init = 1;
+-	rtnl_tab_initialize("/etc/iproute2/rt_protos",
++	rtnl_tab_initialize("/media/DISK_A1/system/etc/iproute2/rt_protos",
+ 			    rtnl_rtprot_tab, 256);
+ }
+ 
+@@ -194,7 +194,7 @@ static void rtnl_rtscope_initialize(void
+ 	rtnl_rtscope_tab[254] = "host";
+ 	rtnl_rtscope_tab[253] = "link";
+ 	rtnl_rtscope_tab[200] = "site";
+-	rtnl_tab_initialize("/etc/iproute2/rt_scopes",
++	rtnl_tab_initialize("/media/DISK_A1/system/etc/iproute2/rt_scopes",
+ 			    rtnl_rtscope_tab, 256);
+ }
+ 
+@@ -257,7 +257,7 @@ static int rtnl_rtrealm_init;
+ static void rtnl_rtrealm_initialize(void)
+ {
+ 	rtnl_rtrealm_init = 1;
+-	rtnl_tab_initialize("/etc/iproute2/rt_realms",
++	rtnl_tab_initialize("/media/DISK_A1/system/etc/iproute2/rt_realms",
+ 			    rtnl_rtrealm_tab, 256);
+ }
+ 
+@@ -326,7 +326,7 @@ static int rtnl_rttable_init;
+ static void rtnl_rttable_initialize(void)
+ {
+ 	rtnl_rttable_init = 1;
+-	rtnl_hash_initialize("/etc/iproute2/rt_tables",
++	rtnl_hash_initialize("/media/DISK_A1/system/etc/iproute2/rt_tables",
+ 			     rtnl_rttable_hash, 256);
+ }
+ 
+@@ -394,7 +394,7 @@ static int rtnl_rtdsfield_init;
+ static void rtnl_rtdsfield_initialize(void)
+ {
+ 	rtnl_rtdsfield_init = 1;
+-	rtnl_tab_initialize("/etc/iproute2/rt_dsfield",
++	rtnl_tab_initialize("/media/DISK_A1/system/etc/iproute2/rt_dsfield",
+ 			    rtnl_rtdsfield_tab, 256);
+ }
+ 
+--- a/tc/m_ematch.c
++++ b/tc/m_ematch.c
+@@ -26,7 +26,7 @@
+ #include "tc_util.h"
+ #include "m_ematch.h"
+ 
+-#define EMATCH_MAP "/etc/iproute2/ematch_map"
++#define EMATCH_MAP "/media/DISK_A1/system/etc/iproute2/ematch_map"
+ 
+ static struct ematch_util *ematch_list;
+ 
