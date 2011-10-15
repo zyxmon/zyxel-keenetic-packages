@@ -1695,7 +1695,7 @@ MD5Sum: d01a0e3ef8621b08bdce3dac5af1b047
 Description:  Open source VPN solution using SSL
 
 Package: opkg
-Version: 576-4
+Version: 576-5
 Depends: 
 Provides: 
 Source: package/opkg
@@ -1705,10 +1705,10 @@ Essential: no
 Priority: optional
 Maintainer: Jo-Philipp Wich <xm@subsignal.org>
 Architecture: keenetic
-Installed-Size: 59371
-Filename: opkg_576-4_keenetic.ipk
-Size: 60117
-MD5Sum: 00b32cd52b7cc03f5a7088beab799ad2
+Installed-Size: 59388
+Filename: opkg_576-5_keenetic.ipk
+Size: 60126
+MD5Sum: d64d192ebd10d5075667473c24ea6717
 Description:  Lightweight package management system
  opkg is the opkg Package Management System, for handling
  installation and removal of packages on a system. It can
