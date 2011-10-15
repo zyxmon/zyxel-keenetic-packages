@@ -26,10 +26,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 347121
+Installed-Size: 347123
 Filename: bash_4.2-1_keenetic.ipk
-Size: 347566
-MD5Sum: ee606610d3ff3af0e63a53e2256b63fe
+Size: 347627
+MD5Sum: 39061ab1024fe46a22c85f86cde13a4c
 Description:  Bash is an sh-compatible command language interpreter that executes 
  commands read from the standard input or from a file. Bash also 
  incorporates useful features from the Korn and C shells (ksh and csh).
