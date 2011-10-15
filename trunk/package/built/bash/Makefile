@@ -48,6 +48,13 @@ define Build/Compile
 		all install
 endef
 
+define Package/bash/postinst
+#!/bin/sh
+grep bash /media/DISK_A1/system/etc/shells || \
+	echo "/media/DISK_A1/system/bin/bash" >> /media/DISK_A1/system/etc/shells
+endef
+
+
 define Package/bash/install
 	$(INSTALL_DIR) $(1)/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/bin/bash $(1)/bin/
