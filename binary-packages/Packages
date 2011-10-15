@@ -15,6 +15,25 @@ Size: 1133736
 MD5Sum: 250380f4f68349c7cc6513c1129d1227
 Description:  download manager
 
+Package: bash
+Version: 4.2-1
+Depends: libncurses
+Provides: 
+Source: package/built/bash
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 347121
+Filename: bash_4.2-1_keenetic.ipk
+Size: 347566
+MD5Sum: ee606610d3ff3af0e63a53e2256b63fe
+Description:  Bash is an sh-compatible command language interpreter that executes 
+ commands read from the standard input or from a file. Bash also 
+ incorporates useful features from the Korn and C shells (ksh and csh).
+
 Package: busybox
 Version: 1.17.3-8
 Depends: 
@@ -197,6 +216,23 @@ Size: 438304
 MD5Sum: 0e88a981178e5f84f835d776b1b13499
 Description:  GNU version of AWK.
 
+Package: genl
+Version: 2.6.35-2
+Depends: 
+Provides: 
+Source: package/iproute2
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13532
+Filename: genl_2.6.35-2_keenetic.ipk
+Size: 14110
+MD5Sum: de5bd9cc85022a9c3c7e99b8edfe7172
+Description:  General netlink utility frontend
+
 Package: glib2
 Version: 2.22.2-1
 Depends: libiconv-full, libintl-full
@@ -303,6 +339,23 @@ Filename: inadyn_1.98.0-2_keenetic.ipk
 Size: 23381
 MD5Sum: e9d5170af2322722a6d3589ae68af463
 Description:  inadyn - a client for open DNS servers.
+
+Package: ip
+Version: 2.6.35-2
+Depends: 
+Provides: 
+Source: package/iproute2
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 82239
+Filename: ip_2.6.35-2_keenetic.ipk
+Size: 82671
+MD5Sum: 75299c81fcaead74c5126e4b47eda153
+Description:  Routing control utility
 
 Package: js
 Version: 1.6.20070208-2
@@ -2429,6 +2482,23 @@ Description:  Subversion is a free/open-source version control system. That is,
  examine the history of how your data changed. In this regard, many
  people think of a version control system as a sort of time machine.
  This package contains the subversion server.
+
+Package: tc
+Version: 2.6.35-2
+Depends: 
+Provides: 
+Source: package/iproute2
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 93142
+Filename: tc_2.6.35-2_keenetic.ipk
+Size: 93583
+MD5Sum: e42b79ae68c652ab26a7e8ef9bde68db
+Description:  Traffic control utility
 
 Package: tcpdump-mini
 Version: 4.1.1-2
