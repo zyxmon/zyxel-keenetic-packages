@@ -862,6 +862,23 @@ MD5Sum: ca3a68939a96bb34ffe352153fe73f68
 Description:  GD is an open source code library for the dynamic creation of images by
  programmers. GD creates PNG, JPEG and GIF images, among other formats.
 
+Package: libgdbm
+Version: 1.9.1-2
+Depends: 
+Provides: 
+Source: package/built/gdbm
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 12048
+Filename: libgdbm_1.9.1-2_keenetic.ipk
+Size: 12645
+MD5Sum: bc8b79023001322c83ab38002b6b0159
+Description:  GNU database manager
+
 Package: libgmp
 Version: 4.3.1-2
 Depends: 
@@ -1566,6 +1583,23 @@ Size: 147066
 MD5Sum: 88dbf215c3f54c951a1d55ca666d27df
 Description:  A command-line based Direct Connect client.
 
+Package: microperl
+Version: 5.10.0-7
+Depends: 
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 437284
+Filename: microperl_5.10.0-7_keenetic.ipk
+Size: 437718
+MD5Sum: 9463795827f0793422cee3a2a6e24c30
+Description:  A perl package without operating-specific functions such as readdir.
+
 Package: minidlna
 Version: 1.0.22-1
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
@@ -1716,6 +1750,2337 @@ Description:  Lightweight package management system
  necessary to install a particular package.
  
  opkg knows how to install both .ipk and .deb packages.
+
+Package: perl
+Version: 5.10.0-7
+Depends: 
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 552355
+Filename: perl_5.10.0-7_keenetic.ipk
+Size: 552578
+MD5Sum: 30d055196f330c3d12589d04999a9242
+Description:  Perl is a stable, cross platform programming language.
+ It is used for mission critical projects in the public and private sectors
+ and is widely used to program web applications of all needs.
+
+Package: perlbase-abbrev
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 508
+Filename: perlbase-abbrev_5.10.0-7_keenetic.ipk
+Size: 1102
+MD5Sum: 22a3ebba6dbb35563b8a658e775ffa6f
+Description:  abbrev perl module
+
+Package: perlbase-anydbm-file
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 445
+Filename: perlbase-anydbm-file_5.10.0-7_keenetic.ipk
+Size: 1047
+MD5Sum: a0007a3e8a59864092527b839a469e83
+Description:  AnyDBM_File perl module
+
+Package: perlbase-archive
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18908
+Filename: perlbase-archive_5.10.0-7_keenetic.ipk
+Size: 19548
+MD5Sum: 5b51a9aadebcce94b7a9c9a42a29b0e9
+Description:  Archive perl module
+
+Package: perlbase-assert
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 755
+Filename: perlbase-assert_5.10.0-7_keenetic.ipk
+Size: 1360
+MD5Sum: a91a1184483347ae8c59265b6193818a
+Description:  assert perl module
+
+Package: perlbase-attribute
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2845
+Filename: perlbase-attribute_5.10.0-7_keenetic.ipk
+Size: 3436
+MD5Sum: 4a22729555b08d25394b6f36d333e634
+Description:  Attribute perl module
+
+Package: perlbase-attributes
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1051
+Filename: perlbase-attributes_5.10.0-7_keenetic.ipk
+Size: 1659
+MD5Sum: c476648cf9b3d5e849e22655c4887784
+Description:  attributes perl module
+
+Package: perlbase-attrs
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3176
+Filename: perlbase-attrs_5.10.0-7_keenetic.ipk
+Size: 3763
+MD5Sum: 77fbec1832566157d74e10c5094ad033
+Description:  attrs perl module
+
+Package: perlbase-autoloader
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2282
+Filename: perlbase-autoloader_5.10.0-7_keenetic.ipk
+Size: 2912
+MD5Sum: 806ebadac9b94de78b924c930fc33d3b
+Description:  AutoLoader perl module
+
+Package: perlbase-autosplit
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4695
+Filename: perlbase-autosplit_5.10.0-7_keenetic.ipk
+Size: 5299
+MD5Sum: 1a031bb59e487591054aa2b9d69b0023
+Description:  AutoSplit perl module
+
+Package: perlbase-autouse
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1091
+Filename: perlbase-autouse_5.10.0-7_keenetic.ipk
+Size: 1701
+MD5Sum: 1b7658a65d06d0562ddbafd7e3c0f888
+Description:  autouse perl module
+
+Package: perlbase-b
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 77291
+Filename: perlbase-b_5.10.0-7_keenetic.ipk
+Size: 77961
+MD5Sum: 21466ab39dfff405dcffc0b9dc6ec7ba
+Description:  B perl module
+
+Package: perlbase-base
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2059
+Filename: perlbase-base_5.10.0-7_keenetic.ipk
+Size: 2675
+MD5Sum: e1ddf7efe77818834227f07f76546cf6
+Description:  base perl module
+
+Package: perlbase-benchmark
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5841
+Filename: perlbase-benchmark_5.10.0-7_keenetic.ipk
+Size: 6456
+MD5Sum: 597d41030c54339d8d6aa751e59be8a1
+Description:  Benchmark perl module
+
+Package: perlbase-bigfloat
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1788
+Filename: perlbase-bigfloat_5.10.0-7_keenetic.ipk
+Size: 2415
+MD5Sum: baadf679e7158c6bc574b419c2fee598
+Description:  bigfloat perl module
+
+Package: perlbase-bigint
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4720
+Filename: perlbase-bigint_5.10.0-7_keenetic.ipk
+Size: 5321
+MD5Sum: e66d9250645d94199111d9aafb6f03ed
+Description:  bigint perl module
+
+Package: perlbase-bignum
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2424
+Filename: perlbase-bignum_5.10.0-7_keenetic.ipk
+Size: 3017
+MD5Sum: 95dbba6a322aeaf0840198754a088182
+Description:  bignum perl module
+
+Package: perlbase-bigrat
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3137
+Filename: perlbase-bigrat_5.10.0-7_keenetic.ipk
+Size: 3727
+MD5Sum: c60b7de018eeee0856fc13823d63eafc
+Description:  bigrat perl module
+
+Package: perlbase-blib
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 909
+Filename: perlbase-blib_5.10.0-7_keenetic.ipk
+Size: 1510
+MD5Sum: e81d0bdede7b7bd0d4a1c2a6a1ba76db
+Description:  blib perl module
+
+Package: perlbase-bytes
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 633
+Filename: perlbase-bytes_5.10.0-7_keenetic.ipk
+Size: 1247
+MD5Sum: 82bb8daef1b6af3a49e85f172497b06a
+Description:  bytes perl module
+
+Package: perlbase-cacheout
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 633
+Filename: perlbase-cacheout_5.10.0-7_keenetic.ipk
+Size: 1241
+MD5Sum: dd49ee0ea48099791a4fad47664d4482
+Description:  cacheout perl module
+
+Package: perlbase-cgi
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 39088
+Filename: perlbase-cgi_5.10.0-7_keenetic.ipk
+Size: 39796
+MD5Sum: 84284f8f69a4e6cd3234e2c924f15176
+Description:  CGI perl module
+
+Package: perlbase-charnames
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3652
+Filename: perlbase-charnames_5.10.0-7_keenetic.ipk
+Size: 4257
+MD5Sum: f1d335dd2d5bf58ec588ffe7e0a4c686
+Description:  charnames perl module
+
+Package: perlbase-class
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2931
+Filename: perlbase-class_5.10.0-7_keenetic.ipk
+Size: 3529
+MD5Sum: 140e69e53190179ce308f659346ba175
+Description:  Class perl module
+
+Package: perlbase-complete
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1164
+Filename: perlbase-complete_5.10.0-7_keenetic.ipk
+Size: 1787
+MD5Sum: b5d74f9ed043b93d0de88b3981b6fc54
+Description:  complete perl module
+
+Package: perlbase-compress
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 55468
+Filename: perlbase-compress_5.10.0-7_keenetic.ipk
+Size: 56121
+MD5Sum: f3bb084c8012d37f1efdf7e0632b347d
+Description:  Compress perl module
+
+Package: perlbase-config
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11260
+Filename: perlbase-config_5.10.0-7_keenetic.ipk
+Size: 11792
+MD5Sum: f00e1a76158563234ea6c3c4cdb3def9
+Description:  Config perl module
+
+Package: perlbase-cpan
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 106435
+Filename: perlbase-cpan_5.10.0-7_keenetic.ipk
+Size: 107140
+MD5Sum: 955a3d4ed352d5fca71e8818c66efaf1
+Description:  CPAN perl module
+
+Package: perlbase-cpanplus
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 109660
+Filename: perlbase-cpanplus_5.10.0-7_keenetic.ipk
+Size: 110388
+MD5Sum: ac21603cc4640baebe07bb880765ac4e
+Description:  CPANPLUS perl module
+
+Package: perlbase-ctime
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1167
+Filename: perlbase-ctime_5.10.0-7_keenetic.ipk
+Size: 1781
+MD5Sum: 3cc22e9b03d87e22155d3873bbda3a22
+Description:  ctime perl module
+
+Package: perlbase-cwd
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8050
+Filename: perlbase-cwd_5.10.0-7_keenetic.ipk
+Size: 8657
+MD5Sum: 58174586d69a7ed3b95950af8ca46a13
+Description:  Cwd perl module
+
+Package: perlbase-data
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18376
+Filename: perlbase-data_5.10.0-7_keenetic.ipk
+Size: 18987
+MD5Sum: e88df52073a15fcbcfe852ce48f05663
+Description:  Data perl module
+
+Package: perlbase-db-file
+Version: 5.10.0-7
+Depends: perl, libdb47
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19686
+Filename: perlbase-db-file_5.10.0-7_keenetic.ipk
+Size: 20320
+MD5Sum: f3eb1b586535920269694b9202229008
+Description:  DB_File perl module
+
+Package: perlbase-db
+Version: 5.10.0-7
+Depends: perl, libdb47
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3599
+Filename: perlbase-db_5.10.0-7_keenetic.ipk
+Size: 4214
+MD5Sum: 96d7b68ad498470d5ab964d5cdb908d1
+Description:  DB perl module
+
+Package: perlbase-dbm-filter
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2410
+Filename: perlbase-dbm-filter_5.10.0-7_keenetic.ipk
+Size: 3028
+MD5Sum: 7204cd2d6e798a13196047a392ed89a9
+Description:  DBM_Filter perl module
+
+Package: perlbase-devel
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 61522
+Filename: perlbase-devel_5.10.0-7_keenetic.ipk
+Size: 62120
+MD5Sum: b7747fb70d878283939659dd2c928d8a
+Description:  Devel perl module
+
+Package: perlbase-diagnostics
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4526
+Filename: perlbase-diagnostics_5.10.0-7_keenetic.ipk
+Size: 5121
+MD5Sum: f5d593063443c032cf21c07dc7ad3068
+Description:  diagnostics perl module
+
+Package: perlbase-digest
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 35499
+Filename: perlbase-digest_5.10.0-7_keenetic.ipk
+Size: 36097
+MD5Sum: be4b926c6a3d5c450feb7ec0964bf660
+Description:  Digest perl module
+
+Package: perlbase-dirhandle
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 624
+Filename: perlbase-dirhandle_5.10.0-7_keenetic.ipk
+Size: 1230
+MD5Sum: 03a9f11316baff64caa5cd39d6e448f0
+Description:  DirHandle perl module
+
+Package: perlbase-dotsh
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 738
+Filename: perlbase-dotsh_5.10.0-7_keenetic.ipk
+Size: 1347
+MD5Sum: 29389d37b8c514792f726ce717bea14c
+Description:  dotsh perl module
+
+Package: perlbase-dumpvalue
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4035
+Filename: perlbase-dumpvalue_5.10.0-7_keenetic.ipk
+Size: 4650
+MD5Sum: 3b2402851827f369731a6188a09fb58a
+Description:  Dumpvalue perl module
+
+Package: perlbase-dumpvar
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4848
+Filename: perlbase-dumpvar_5.10.0-7_keenetic.ipk
+Size: 5460
+MD5Sum: 1eb3d085de2b79b433ef9c9b55d08106
+Description:  dumpvar perl module
+
+Package: perlbase-dynaloader
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4214
+Filename: perlbase-dynaloader_5.10.0-7_keenetic.ipk
+Size: 4803
+MD5Sum: 6d1142eecae0f51edf40cbca41b8359d
+Description:  DynaLoader perl module
+
+Package: perlbase-encode
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1900432
+Filename: perlbase-encode_5.10.0-7_keenetic.ipk
+Size: 1672954
+MD5Sum: 5048dcde1f85945e79300dc1f9564043
+Description:  Encode perl module
+
+Package: perlbase-encoding
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2693
+Filename: perlbase-encoding_5.10.0-7_keenetic.ipk
+Size: 3281
+MD5Sum: 56cd93db0fb49b27367fad314a0683cd
+Description:  encoding perl module
+
+Package: perlbase-english
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1360
+Filename: perlbase-english_5.10.0-7_keenetic.ipk
+Size: 1981
+MD5Sum: 532b3cb705019ab4bdd0f584b2413116
+Description:  English perl module
+
+Package: perlbase-env
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1081
+Filename: perlbase-env_5.10.0-7_keenetic.ipk
+Size: 1712
+MD5Sum: 8cd8e0be377925ade3d2fab0cb176bf7
+Description:  Env perl module
+
+Package: perlbase-errno
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2560
+Filename: perlbase-errno_5.10.0-7_keenetic.ipk
+Size: 3150
+MD5Sum: a9d183fca3ca215c69d963ddb04cb5d4
+Description:  Errno perl module
+
+Package: perlbase-essential
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 12719
+Filename: perlbase-essential_5.10.0-7_keenetic.ipk
+Size: 13319
+MD5Sum: 65fdc1717fb05c2b2864b86487c1afb9
+Description:  essential perl module
+
+Package: perlbase-exceptions
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 439
+Filename: perlbase-exceptions_5.10.0-7_keenetic.ipk
+Size: 1029
+MD5Sum: 244a968b66c378c345f12883292c6a5c
+Description:  exceptions perl module
+
+Package: perlbase-extutils
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 141826
+Filename: perlbase-extutils_5.10.0-7_keenetic.ipk
+Size: 142557
+MD5Sum: 63a41d48edb2a878383cb5386c4347ab
+Description:  ExtUtils perl module
+
+Package: perlbase-fastcwd
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 480
+Filename: perlbase-fastcwd_5.10.0-7_keenetic.ipk
+Size: 1077
+MD5Sum: f8af751ceb81cd5d65fa6a744a858ef7
+Description:  fastcwd perl module
+
+Package: perlbase-fatal
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1679
+Filename: perlbase-fatal_5.10.0-7_keenetic.ipk
+Size: 2292
+MD5Sum: 13d80b3aa8a26437c6b75cfcdd268a45
+Description:  Fatal perl module
+
+Package: perlbase-fcntl
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5992
+Filename: perlbase-fcntl_5.10.0-7_keenetic.ipk
+Size: 6596
+MD5Sum: bd70bec3ab68f8bb1d58d16182b8d96c
+Description:  Fcntl perl module
+
+Package: perlbase-feature
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 770
+Filename: perlbase-feature_5.10.0-7_keenetic.ipk
+Size: 1373
+MD5Sum: 050f3766118a7a04fe15e894a487d3a5
+Description:  feature perl module
+
+Package: perlbase-fields
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1916
+Filename: perlbase-fields_5.10.0-7_keenetic.ipk
+Size: 2543
+MD5Sum: 9eef16f6970dcffaab14e8cba0a0760c
+Description:  fields perl module
+
+Package: perlbase-file
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 59126
+Filename: perlbase-file_5.10.0-7_keenetic.ipk
+Size: 59792
+MD5Sum: 22423fc48c4fffdac410015badcea3d5
+Description:  File perl module
+
+Package: perlbase-filecache
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1431
+Filename: perlbase-filecache_5.10.0-7_keenetic.ipk
+Size: 2058
+MD5Sum: 427b7ea23bd763f787e48e008afa7f01
+Description:  FileCache perl module
+
+Package: perlbase-filehandle
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1009
+Filename: perlbase-filehandle_5.10.0-7_keenetic.ipk
+Size: 1622
+MD5Sum: 67c5838b90ff693148f9d88c3b831738
+Description:  FileHandle perl module
+
+Package: perlbase-filetest
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 418
+Filename: perlbase-filetest_5.10.0-7_keenetic.ipk
+Size: 1014
+MD5Sum: 0ec5321e4e02f0ac987927559618c22c
+Description:  filetest perl module
+
+Package: perlbase-filter
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 7631
+Filename: perlbase-filter_5.10.0-7_keenetic.ipk
+Size: 8277
+MD5Sum: c9d4c66bde0b966f9c2f4839e2296b1e
+Description:  Filter perl module
+
+Package: perlbase-find
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 346
+Filename: perlbase-find_5.10.0-7_keenetic.ipk
+Size: 934
+MD5Sum: 599839b4b8fe4d77cd9c425bd61248ed
+Description:  find perl module
+
+Package: perlbase-findbin
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1458
+Filename: perlbase-findbin_5.10.0-7_keenetic.ipk
+Size: 2073
+MD5Sum: f1455d795a0d1ee7845c647a2c1f1910
+Description:  FindBin perl module
+
+Package: perlbase-finddepth
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 352
+Filename: perlbase-finddepth_5.10.0-7_keenetic.ipk
+Size: 949
+MD5Sum: 3ed9dd876698f2facbc447b045f88fc9
+Description:  finddepth perl module
+
+Package: perlbase-flush
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 381
+Filename: perlbase-flush_5.10.0-7_keenetic.ipk
+Size: 977
+MD5Sum: 0587d3d35aa3deb1b5654048eaad1ccb
+Description:  flush perl module
+
+Package: perlbase-gdbm-file
+Version: 5.10.0-7
+Depends: perl, libgdbm
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8060
+Filename: perlbase-gdbm-file_5.10.0-7_keenetic.ipk
+Size: 8711
+MD5Sum: fc8a42c5c28d83ebc734264830d137f0
+Description:  GDBM_File perl module
+
+Package: perlbase-getcwd
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 632
+Filename: perlbase-getcwd_5.10.0-7_keenetic.ipk
+Size: 1237
+MD5Sum: df619a628368f88e5d8cb7ef58306b02
+Description:  getcwd perl module
+
+Package: perlbase-getopt
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 12862
+Filename: perlbase-getopt_5.10.0-7_keenetic.ipk
+Size: 13484
+MD5Sum: d859365286a2431f7aeccb1d82b0a6d4
+Description:  Getopt perl module
+
+Package: perlbase-getoptpl
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1068
+Filename: perlbase-getoptpl_5.10.0-7_keenetic.ipk
+Size: 1685
+MD5Sum: abc355f3487769ef0e53215c2f8f40af
+Description:  getoptpl perl module
+
+Package: perlbase-hash
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10363
+Filename: perlbase-hash_5.10.0-7_keenetic.ipk
+Size: 10989
+MD5Sum: 10d1785c9e6c87511a7e0283f2961b36
+Description:  Hash perl module
+
+Package: perlbase-hostname
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 427
+Filename: perlbase-hostname_5.10.0-7_keenetic.ipk
+Size: 1020
+MD5Sum: 7e1559d70588a035258b7cf721e5e8ef
+Description:  hostname perl module
+
+Package: perlbase-i18n
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 12429
+Filename: perlbase-i18n_5.10.0-7_keenetic.ipk
+Size: 13030
+MD5Sum: 0331885a97d8251fbee053a66fbcc1f8
+Description:  I18N perl module
+
+Package: perlbase-if
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 564
+Filename: perlbase-if_5.10.0-7_keenetic.ipk
+Size: 1161
+MD5Sum: bbdf2bd4e924db3b87b2744754616aa1
+Description:  if perl module
+
+Package: perlbase-importenv
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 427
+Filename: perlbase-importenv_5.10.0-7_keenetic.ipk
+Size: 1023
+MD5Sum: 68a0a5c8833774bc6ba906528ea9bafe
+Description:  importenv perl module
+
+Package: perlbase-integer
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 316
+Filename: perlbase-integer_5.10.0-7_keenetic.ipk
+Size: 911
+MD5Sum: 748100c3cd427b47b9a30c2f84e6d938
+Description:  integer perl module
+
+Package: perlbase-io
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 55561
+Filename: perlbase-io_5.10.0-7_keenetic.ipk
+Size: 56202
+MD5Sum: a3fc10389bf1fe857eb3b6d9d6f763c0
+Description:  IO perl module
+
+Package: perlbase-ipc
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13248
+Filename: perlbase-ipc_5.10.0-7_keenetic.ipk
+Size: 13854
+MD5Sum: d8301250e9c2362520055020ad8ebcff
+Description:  IPC perl module
+
+Package: perlbase-less
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 677
+Filename: perlbase-less_5.10.0-7_keenetic.ipk
+Size: 1282
+MD5Sum: 807400d3020e702a8f58e1b27b5b92a5
+Description:  less perl module
+
+Package: perlbase-list
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8538
+Filename: perlbase-list_5.10.0-7_keenetic.ipk
+Size: 9169
+MD5Sum: a837bd74e5059721d70c6db784181985
+Description:  List perl module
+
+Package: perlbase-locale
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 20440
+Filename: perlbase-locale_5.10.0-7_keenetic.ipk
+Size: 21069
+MD5Sum: dd50ef550ff153353143c9c9d40dc316
+Description:  Locale perl module
+
+Package: perlbase-log
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4028
+Filename: perlbase-log_5.10.0-7_keenetic.ipk
+Size: 4618
+MD5Sum: a0f0dcd64fd15d57543658834a4c941c
+Description:  Log perl module
+
+Package: perlbase-look
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 724
+Filename: perlbase-look_5.10.0-7_keenetic.ipk
+Size: 1327
+MD5Sum: d6511a6c63a6a60321f7a714c1d7116b
+Description:  look perl module
+
+Package: perlbase-math
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 84188
+Filename: perlbase-math_5.10.0-7_keenetic.ipk
+Size: 84869
+MD5Sum: 44ba00fa01253600bf91f06a13e7f7cb
+Description:  Math perl module
+
+Package: perlbase-memoize
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5810
+Filename: perlbase-memoize_5.10.0-7_keenetic.ipk
+Size: 6414
+MD5Sum: e593eef9ff5f9ff6f7a1636e696d67cb
+Description:  Memoize perl module
+
+Package: perlbase-mime
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5522
+Filename: perlbase-mime_5.10.0-7_keenetic.ipk
+Size: 6134
+MD5Sum: f5e5df337f86bc47cfaee64e55ad61de
+Description:  MIME perl module
+
+Package: perlbase-module
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 98005
+Filename: perlbase-module_5.10.0-7_keenetic.ipk
+Size: 98631
+MD5Sum: 4ccd1d1f543dc5d07e010ea523c96954
+Description:  Module perl module
+
+Package: perlbase-mro
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 446
+Filename: perlbase-mro_5.10.0-7_keenetic.ipk
+Size: 1035
+MD5Sum: 160be4e6eea8d0a5321804420d34e44e
+Description:  mro perl module
+
+Package: perlbase-net
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 37274
+Filename: perlbase-net_5.10.0-7_keenetic.ipk
+Size: 37962
+MD5Sum: f9e7a777b387c2b3c5a32949dc016780
+Description:  Net perl module
+
+Package: perlbase-next
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1498
+Filename: perlbase-next_5.10.0-7_keenetic.ipk
+Size: 2125
+MD5Sum: f972e058ed74113376deb2f47c457101
+Description:  NEXT perl module
+
+Package: perlbase-o
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 831
+Filename: perlbase-o_5.10.0-7_keenetic.ipk
+Size: 1433
+MD5Sum: 9f4b2621d4053c0db0cf667d9b3c8870
+Description:  O perl module
+
+Package: perlbase-object
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3212
+Filename: perlbase-object_5.10.0-7_keenetic.ipk
+Size: 3807
+MD5Sum: 565d1b9de18420fbf92a76ee0a047ee2
+Description:  Object perl module
+
+Package: perlbase-opcode
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 9481
+Filename: perlbase-opcode_5.10.0-7_keenetic.ipk
+Size: 10078
+MD5Sum: 9995a3fa5655e907110616fc7d6d9d4a
+Description:  Opcode perl module
+
+Package: perlbase-open
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1725
+Filename: perlbase-open_5.10.0-7_keenetic.ipk
+Size: 2346
+MD5Sum: 139b884903f07156a8a2450678f7ef47
+Description:  open perl module
+
+Package: perlbase-ops
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 484
+Filename: perlbase-ops_5.10.0-7_keenetic.ipk
+Size: 1072
+MD5Sum: 9da1ec06c41c18ceca7fe16b5b08e674
+Description:  ops perl module
+
+Package: perlbase-package
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 666
+Filename: perlbase-package_5.10.0-7_keenetic.ipk
+Size: 1272
+MD5Sum: 89194202873c8bce5e677974cd08eda3
+Description:  Package perl module
+
+Package: perlbase-params
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3375
+Filename: perlbase-params_5.10.0-7_keenetic.ipk
+Size: 3979
+MD5Sum: 442de1d39ac72f33e93f87aa358eb740
+Description:  Params perl module
+
+Package: perlbase-perl5db
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 57917
+Filename: perlbase-perl5db_5.10.0-7_keenetic.ipk
+Size: 58674
+MD5Sum: 4a4be0691348ef1520abc9e855c4c563
+Description:  perl5db perl module
+
+Package: perlbase-perlio
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 17901
+Filename: perlbase-perlio_5.10.0-7_keenetic.ipk
+Size: 18498
+MD5Sum: 8fcde499de96a3165a91483434974be7
+Description:  PerlIO perl module
+
+Package: perlbase-pod
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 172081
+Filename: perlbase-pod_5.10.0-7_keenetic.ipk
+Size: 172767
+MD5Sum: b9d7a0f121938921d51896bc4a47f8d8
+Description:  Pod perl module
+
+Package: perlbase-posix
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 44736
+Filename: perlbase-posix_5.10.0-7_keenetic.ipk
+Size: 44897
+MD5Sum: 452b2973548d7e92a77301647d58e5b2
+Description:  POSIX perl module
+
+Package: perlbase-pwd
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 764
+Filename: perlbase-pwd_5.10.0-7_keenetic.ipk
+Size: 1364
+MD5Sum: 80be18383085548c8fdaf9b851ce85a6
+Description:  pwd perl module
+
+Package: perlbase-re
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 114350
+Filename: perlbase-re_5.10.0-7_keenetic.ipk
+Size: 115017
+MD5Sum: 3395cf2d406d8cca24bff001fc5ad366
+Description:  re perl module
+
+Package: perlbase-safe
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2856
+Filename: perlbase-safe_5.10.0-7_keenetic.ipk
+Size: 3446
+MD5Sum: b50fcb29f87fa626a8c0e2a78bc8880c
+Description:  Safe perl module
+
+Package: perlbase-scalar
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1569
+Filename: perlbase-scalar_5.10.0-7_keenetic.ipk
+Size: 2182
+MD5Sum: 6eaf6694af8c1478b4441cbc66429183
+Description:  Scalar perl module
+
+Package: perlbase-sdbm-file
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10743
+Filename: perlbase-sdbm-file_5.10.0-7_keenetic.ipk
+Size: 11331
+MD5Sum: ecb91ffe5bc596465435f804cd026eb1
+Description:  SDBM_File perl module
+
+Package: perlbase-search
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 904
+Filename: perlbase-search_5.10.0-7_keenetic.ipk
+Size: 1506
+MD5Sum: 50c3b0fd8dc41229e2120b0e29ec4f46
+Description:  Search perl module
+
+Package: perlbase-selectsaver
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 436
+Filename: perlbase-selectsaver_5.10.0-7_keenetic.ipk
+Size: 1037
+MD5Sum: 1b9f3fa1f1a121bf060750ea7f5dbe68
+Description:  SelectSaver perl module
+
+Package: perlbase-selfloader
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2116
+Filename: perlbase-selfloader_5.10.0-7_keenetic.ipk
+Size: 2755
+MD5Sum: 19bdefeaa3b9c6598de6ebb727188019
+Description:  SelfLoader perl module
+
+Package: perlbase-shell
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1460
+Filename: perlbase-shell_5.10.0-7_keenetic.ipk
+Size: 2084
+MD5Sum: cbac69a57c4885f95f303950b00c30cd
+Description:  Shell perl module
+
+Package: perlbase-shellwords
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 355
+Filename: perlbase-shellwords_5.10.0-7_keenetic.ipk
+Size: 950
+MD5Sum: d3bb7b579c2604decc031ec8707de134
+Description:  shellwords perl module
+
+Package: perlbase-sigtrap
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1454
+Filename: perlbase-sigtrap_5.10.0-7_keenetic.ipk
+Size: 2067
+MD5Sum: d974188bf345304969c9e9c0383d1a18
+Description:  sigtrap perl module
+
+Package: perlbase-socket
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8896
+Filename: perlbase-socket_5.10.0-7_keenetic.ipk
+Size: 9427
+MD5Sum: fc157815e3382c0bed287683f8e3b2a7
+Description:  Socket perl module
+
+Package: perlbase-sort
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 724
+Filename: perlbase-sort_5.10.0-7_keenetic.ipk
+Size: 1332
+MD5Sum: 44f028a0b74506302f666e2debbd5a3a
+Description:  sort perl module
+
+Package: perlbase-stat
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 515
+Filename: perlbase-stat_5.10.0-7_keenetic.ipk
+Size: 1105
+MD5Sum: ff5d0e77480ff0430fbde980beb6ea71
+Description:  stat perl module
+
+Package: perlbase-storable
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 32732
+Filename: perlbase-storable_5.10.0-7_keenetic.ipk
+Size: 33406
+MD5Sum: 109e099a5aa8f0c923223a4e359b05e9
+Description:  Storable perl module
+
+Package: perlbase-switch
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3862
+Filename: perlbase-switch_5.10.0-7_keenetic.ipk
+Size: 4472
+MD5Sum: d845418f0076df5dc2ac1b0c5f962d38
+Description:  Switch perl module
+
+Package: perlbase-symbol
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1117
+Filename: perlbase-symbol_5.10.0-7_keenetic.ipk
+Size: 1727
+MD5Sum: 1ac9416662353d4479cf1dc22676b13b
+Description:  Symbol perl module
+
+Package: perlbase-sys
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 14880
+Filename: perlbase-sys_5.10.0-7_keenetic.ipk
+Size: 15472
+MD5Sum: e841e1b145a95230ed8d40a4f0b15d7e
+Description:  Sys perl module
+
+Package: perlbase-syslog
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1834
+Filename: perlbase-syslog_5.10.0-7_keenetic.ipk
+Size: 2460
+MD5Sum: 306a957377533b5acb05385522c20e39
+Description:  syslog perl module
+
+Package: perlbase-tainted
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 289
+Filename: perlbase-tainted_5.10.0-7_keenetic.ipk
+Size: 876
+MD5Sum: db01ed408c5d7d64a6788f638bd63932
+Description:  tainted perl module
+
+Package: perlbase-term
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11352
+Filename: perlbase-term_5.10.0-7_keenetic.ipk
+Size: 11949
+MD5Sum: 1f0e30eebada7669be000a8820a7648a
+Description:  Term perl module
+
+Package: perlbase-termcap
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1664
+Filename: perlbase-termcap_5.10.0-7_keenetic.ipk
+Size: 2277
+MD5Sum: 5a7c6a7a47fc43e4e2f4becfaa45b254
+Description:  termcap perl module
+
+Package: perlbase-test
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 28594
+Filename: perlbase-test_5.10.0-7_keenetic.ipk
+Size: 29213
+MD5Sum: 0af00b096d6285b00725fac54ee54338
+Description:  Test perl module
+
+Package: perlbase-text
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 14260
+Filename: perlbase-text_5.10.0-7_keenetic.ipk
+Size: 14848
+MD5Sum: 32a1c7d7927594540b7f65cac7565562
+Description:  Text perl module
+
+Package: perlbase-thread
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 918
+Filename: perlbase-thread_5.10.0-7_keenetic.ipk
+Size: 1528
+MD5Sum: 683c0de7c2dd111e7ed85dfa6e6a303f
+Description:  Thread perl module
+
+Package: perlbase-threads
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4072
+Filename: perlbase-threads_5.10.0-7_keenetic.ipk
+Size: 4636
+MD5Sum: d56726175c0d9a3d08c6ab33d31a509f
+Description:  threads perl module
+
+Package: perlbase-tie
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18032
+Filename: perlbase-tie_5.10.0-7_keenetic.ipk
+Size: 18633
+MD5Sum: 0454c29724827b2b6b7e6fe3c52307f8
+Description:  Tie perl module
+
+Package: perlbase-time
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18948
+Filename: perlbase-time_5.10.0-7_keenetic.ipk
+Size: 19569
+MD5Sum: af5cef257cbd57a2df7453b933f07fd9
+Description:  Time perl module
+
+Package: perlbase-timelocal
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 598
+Filename: perlbase-timelocal_5.10.0-7_keenetic.ipk
+Size: 1200
+MD5Sum: 1c2e2f2b9ff94d1500d5f5d18012bd6d
+Description:  timelocal perl module
+
+Package: perlbase-unicode
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 318888
+Filename: perlbase-unicode_5.10.0-7_keenetic.ipk
+Size: 303526
+MD5Sum: 3fedf985250d640d1a23be060438de4f
+Description:  Unicode perl module
+
+Package: perlbase-unicore
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1017162
+Filename: perlbase-unicore_5.10.0-7_keenetic.ipk
+Size: 981171
+MD5Sum: d0b11a0460e795c1a412a4276153ff2e
+Description:  unicore perl module
+
+Package: perlbase-universal
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 369
+Filename: perlbase-universal_5.10.0-7_keenetic.ipk
+Size: 973
+MD5Sum: 7b8d8bb4e08d7e38ccac7725c9954350
+Description:  UNIVERSAL perl module
+
+Package: perlbase-user
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2069
+Filename: perlbase-user_5.10.0-7_keenetic.ipk
+Size: 2654
+MD5Sum: 6f28dac449fe1c697d0bcfa2414d2d71
+Description:  User perl module
+
+Package: perlbase-utf8
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3377
+Filename: perlbase-utf8_5.10.0-7_keenetic.ipk
+Size: 3966
+MD5Sum: 4abaed9387e2b09898a80decfcfc38a3
+Description:  utf8 perl module
+
+Package: perlbase-validate
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1583
+Filename: perlbase-validate_5.10.0-7_keenetic.ipk
+Size: 2198
+MD5Sum: 0de5e4f52210812361d5bc17ec31d0c3
+Description:  validate perl module
+
+Package: perlbase-version
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 447
+Filename: perlbase-version_5.10.0-7_keenetic.ipk
+Size: 1033
+MD5Sum: acb2f986a39b36bf546d7998256ff919
+Description:  version perl module
+
+Package: perlbase-xsloader
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1418
+Filename: perlbase-xsloader_5.10.0-7_keenetic.ipk
+Size: 2033
+MD5Sum: 7859061a6283e84733cf3c635665215d
+Description:  XSLoader perl module
 
 Package: php5-cgi
 Version: 5.3.8-1
