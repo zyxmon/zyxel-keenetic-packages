@@ -52,6 +52,24 @@ MD5Sum: 209336a3fea275532e3e92570c696dca
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 
+Package: bzip2
+Version: 1.0.6-1
+Depends: libbz2
+Provides: 
+Source: package/built/bzip2
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11412
+Filename: bzip2_1.0.6-1_keenetic.ipk
+Size: 12101
+MD5Sum: 4e55c1edf17ee54d8df98bada4dc8e7b
+Description:  bzip2 is a freely available, patent free, high-quality
+ data compressor. This package provides the binary.
+
 Package: cfdisk
 Version: 2.13.0.1-4
 Depends: libncurses
@@ -544,6 +562,24 @@ Size: 18674
 MD5Sum: ba7d57fc2832aa585e5fb1afc8f42e25
 Description:  The blkid library which allows system programs like fsck and mount to 
  quickly and easily find block devices by filesystem UUID and LABEL.
+
+Package: libbz2
+Version: 1.0.6-1
+Depends: 
+Provides: 
+Source: package/built/bzip2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 26546
+Filename: libbz2_1.0.6-1_keenetic.ipk
+Size: 27168
+MD5Sum: 167e1991de25204b84b66c1cedcb53da
+Description:  bzip2 is a freely available, patent free, high-quality
+ data compressor. This packages provides libbz2 library.
 
 Package: libcares
 Version: 1.7.5-1
@@ -5047,6 +5083,26 @@ Description:  UNFS3 is a user-space implementation of the NFSv3 server
  protocols, which are used by NFS clients for accessing files
  on the server.
 
+Package: unzip
+Version: 5.52-1
+Depends: 
+Provides: 
+Source: package/built/unzip
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 143433
+Filename: unzip_5.52-1_keenetic.ipk
+Size: 144181
+MD5Sum: 4b9ef9b7192ac870c34214173038e23b
+Description:  InfoZIP's unzip program. With the exception of multi-volume archives 
+ (ie, .ZIP files that are split across several disks using PKZIP's /& option), 
+ this can handle any file produced either by PKZIP, or the corresponding 
+ InfoZIP zip program.
+
 Package: usbutils
 Version: 004-1
 Depends: libusb-1.0
@@ -5187,4 +5243,24 @@ Filename: xupnpd_225-1_keenetic.ipk
 Size: 56476
 MD5Sum: fa59c3adeccf9e2ffa2cb88968ab7168
 Description:  eXtensible UPnP agent
+
+Package: zip
+Version: 2.32-1
+Depends: 
+Provides: 
+Source: package/built/zip
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 90793
+Filename: zip_2.32-1_keenetic.ipk
+Size: 91493
+MD5Sum: 966ff38eba2b39dc0595bf02c2183e2c
+Description:  This is InfoZIP's zip program. It produces files that are fully 
+ compatible with the popular PKZIP program; however, the command line 
+ options are not identical. In other words, the end result is the same, 
+ but the methods differ.
 
