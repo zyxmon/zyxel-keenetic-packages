@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=xupnpd
-PKG_REV:=225
+PKG_REV:=242
 PKG_VERSION:=$(PKG_REV)
 PKG_RELEASE:=1
 
@@ -32,10 +32,12 @@ define Build/Compile
 	$(TARGET_CC) $(TARGET_CFLAGS) -c -I$(PKG_BUILD_DIR) -I$(STAGING_DIR)/usr/include -o $(PKG_BUILD_DIR)/soap.o $(PKG_BUILD_DIR)/soap.cpp
 	$(TARGET_CC) $(TARGET_CFLAGS) -c -I$(PKG_BUILD_DIR) -I$(STAGING_DIR)/usr/include -o $(PKG_BUILD_DIR)/mcast.o $(PKG_BUILD_DIR)/mcast.cpp
 	$(TARGET_CC) $(TARGET_CFLAGS) -c -I$(PKG_BUILD_DIR) -I$(STAGING_DIR)/usr/include -o $(PKG_BUILD_DIR)/md5c.o $(PKG_BUILD_DIR)/md5c.c
+	$(TARGET_CC) $(TARGET_CFLAGS) -c -I$(PKG_BUILD_DIR) -I$(STAGING_DIR)/usr/include -o $(PKG_BUILD_DIR)/luajson.o $(PKG_BUILD_DIR)/luajson.cpp
+	$(TARGET_CC) $(TARGET_CFLAGS) -c -I$(PKG_BUILD_DIR) -I$(STAGING_DIR)/usr/include -o $(PKG_BUILD_DIR)/luajson_parser.o $(PKG_BUILD_DIR)/luajson_parser.cpp
 	$(TARGET_CC) $(TARGET_CFLAGS) -o $(PKG_BUILD_DIR)/xupnpd -L$(STAGING_DIR)/usr/lib \
 		$(PKG_BUILD_DIR)/main.o $(PKG_BUILD_DIR)/soap.o $(PKG_BUILD_DIR)/luaxcore.o \
 		$(PKG_BUILD_DIR)/mem.o $(PKG_BUILD_DIR)/luaxlib.o $(PKG_BUILD_DIR)/mcast.o \
-		$(PKG_BUILD_DIR)/md5c.o -llua -lm -ldl
+		$(PKG_BUILD_DIR)/md5c.o $(PKG_BUILD_DIR)/luajson.o $(PKG_BUILD_DIR)/luajson_parser.o -llua -lm -ldl
 endef
 
 define Package/xupnpd
