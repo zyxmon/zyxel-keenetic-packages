@@ -8,13 +8,14 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=busybox
-PKG_VERSION:=1.17.3
-PKG_RELEASE:=8
+PKG_VERSION:=1.19.2
+PKG_RELEASE:=1
+PKG_FLAGS:=essential
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://www.busybox.net/downloads \
 		http://distfiles.gentoo.org/distfiles/
-PKG_MD5SUM:=a2ce1a951571da8c6e0eaf75b1acef60
+PKG_MD5SUM:=50267054345f1a0b77fe65f6e0e5ba29
 
 PKG_BUILD_PARALLEL:=1
 
@@ -62,9 +63,7 @@ ifdef CONFIG_GCC_VERSION_LLVM
   TARGET_CFLAGS += -fnested-functions
 endif
 
-ifdef CONFIG_GCC_VERSION_4_5_0
-  TARGET_CFLAGS += -fno-tree-pta
-endif
+LDLIBS:=m crypt
 
 define Build/Compile
 	$(MAKE) $(PKG_JOBS) -C $(PKG_BUILD_DIR) \
@@ -74,6 +73,7 @@ define Build/Compile
 		EXTRA_CFLAGS="$(TARGET_CFLAGS)" \
 		ARCH="$(ARCH)" \
 		SKIP_STRIP=y \
+		LDLIBS="$(LDLIBS)" \
 		all
 	rm -rf $(PKG_INSTALL_DIR)
 	$(FIND) $(PKG_BUILD_DIR) -lname "*busybox" -exec rm \{\} \;
@@ -83,6 +83,7 @@ define Build/Compile
 		EXTRA_CFLAGS="$(TARGET_CFLAGS)" \
 		ARCH="$(ARCH)" \
 		CONFIG_PREFIX="$(PKG_INSTALL_DIR)" \
+		LDLIBS="$(LDLIBS)" \
 		install
 endef
 
@@ -98,5 +99,6 @@ define Package/busybox/install
 	$(CP) $(PKG_INSTALL_DIR)/* $(1)/
 	-rm -rf $(1)/lib64
 endef
+
 
 $(eval $(call BuildPackage,busybox))
