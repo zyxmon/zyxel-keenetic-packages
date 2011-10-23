@@ -143,6 +143,24 @@ MD5Sum: 47e2e5b29a1546a5032d8f1b2f912765
 Description:  CurlFtpFS is a filesystem for accessing FTP hosts
  based on FUSE and libcurl.
 
+Package: diffutils
+Version: 3.0-1
+Depends: 
+Provides: 
+Source: package/built/diffutils
+Section: devel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 143220
+Filename: diffutils_3.0-1_keenetic.ipk
+Size: 143878
+MD5Sum: 6f4d544f28039c047afa6bb0a5982dfa
+Description:  The Diffutils package contains programs that show the differences between
+ files or directories.
+
 Package: e2fsprogs
 Version: 1.41.12-3
 Depends: libblkid, libuuid, libext2fs
