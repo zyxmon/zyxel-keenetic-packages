@@ -1,0 +1,23 @@
+--- a/include/libbb.h
++++ b/include/libbb.h
+@@ -87,16 +87,16 @@
+ #endif
+ /* Just in case libc doesn't define some of these... */
+ #ifndef _PATH_PASSWD
+-#define _PATH_PASSWD  "/etc/passwd"
++#define _PATH_PASSWD  "/media/DISK_A1/system/etc/passwd"
+ #endif
+ #ifndef _PATH_GROUP
+-#define _PATH_GROUP   "/etc/group"
++#define _PATH_GROUP   "/media/DISK_A1/system/etc/group"
+ #endif
+ #ifndef _PATH_SHADOW
+-#define _PATH_SHADOW  "/etc/shadow"
++#define _PATH_SHADOW  "/media/DISK_A1/system/etc/shadow"
+ #endif
+ #ifndef _PATH_GSHADOW
+-#define _PATH_GSHADOW "/etc/gshadow"
++#define _PATH_GSHADOW "/media/DISK_A1/system/etc/gshadow"
+ #endif
+ #if defined __FreeBSD__ || defined __OpenBSD__
+ # include <netinet/in.h>
