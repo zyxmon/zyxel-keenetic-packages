@@ -1822,6 +1822,176 @@ Description:  Lightweight package management system
  
  opkg knows how to install both .ipk and .deb packages.
 
+Package: perl-compress-bzip2
+Version: 2.09-3
+Depends: perl, libbz2
+Provides: 
+Source: package/built/perl-compress-bzip2
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 23453
+Filename: perl-compress-bzip2_2.09-3_keenetic.ipk
+Size: 24037
+MD5Sum: ab43e6dfdfc7006d9211b3a4887d29bd
+Description:  Perl interface to bzip2 compression library
+
+Package: perl-dbi
+Version: 1.604-1
+Depends: perl, perlbase-essential
+Provides: 
+Source: package/built/perl-dbi
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 160985
+Filename: perl-dbi_1.604-1_keenetic.ipk
+Size: 161689
+MD5Sum: 030abc22ba28a2b3e7858c1f601fb128
+Description:  Database independent interface for Perl
+
+Package: perl-html-parser
+Version: 3.56-1
+Depends: perl, perl-html-tagset, perl-uri
+Provides: 
+Source: package/built/perl-html-parser
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 27084
+Filename: perl-html-parser_3.56-1_keenetic.ipk
+Size: 27689
+MD5Sum: 872f8eb1bdecf8cde62c852535743c5d
+Description:  A collection of modules that parse HTML text documents
+
+Package: perl-html-tagset
+Version: 3.20-1
+Depends: perl
+Provides: 
+Source: package/built/perl-html-tagset
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1850
+Filename: perl-html-tagset_3.20-1_keenetic.ipk
+Size: 2489
+MD5Sum: 653e70eaca4df86e73387e066f40a460
+Description:  Data tables pertaining to HTML
+
+Package: perl-html-tree
+Version: 3.23-2
+Depends: perl, perl-html-parser, perl-html-tagset
+Provides: 
+Source: package/built/perl-html-tree
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 31475
+Filename: perl-html-tree_3.23-2_keenetic.ipk
+Size: 32095
+MD5Sum: e0f9e7ab3fa7cd438d9ceff5ac26509f
+Description:  represent and create HTML syntax trees
+
+Package: perl-lockfile-simple
+Version: 0.206-1
+Depends: perl
+Provides: 
+Source: package/built/perl-lockfile-simple
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4636
+Filename: perl-lockfile-simple_0.206-1_keenetic.ipk
+Size: 5233
+MD5Sum: 4375adee75eb4aa397ebab0eded27497
+Description:  Simple advisory file locking
+
+Package: perl-uri
+Version: 1.36-1
+Depends: perl
+Provides: 
+Source: package/built/perl-uri
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19706
+Filename: perl-uri_1.36-1_keenetic.ipk
+Size: 20325
+MD5Sum: 19525aada0cc5ef2dc1d6bf7f3c5fcf6
+Description:  Manipulates and accesses URI strings
+
+Package: perl-www-curl
+Version: 4.00-1
+Depends: perl
+Provides: 
+Source: package/built/perl-www-curl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 17315
+Filename: perl-www-curl_4.00-1_keenetic.ipk
+Size: 17914
+MD5Sum: f1140c2bf9102364c88aedab342f3829
+Description:  Perl bindings to libcurl
+
+Package: perl-www-mechanize
+Version: 1.58-1
+Depends: perl, perl-www
+Provides: 
+Source: package/built/perl-www-mechanize
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 9677
+Filename: perl-www-mechanize_1.58-1_keenetic.ipk
+Size: 10283
+MD5Sum: e596670e89b574d167fa6d3917370d87
+Description:  Perl WWW Mechanize
+
+Package: perl-www
+Version: 5.812-1
+Depends: perl, perl-html-parser, perl-uri
+Provides: 
+Source: package/built/perl-www
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 76213
+Filename: perl-www_5.812-1_keenetic.ipk
+Size: 76973
+MD5Sum: 2129652c100994808d7fbb24e316732c
+Description:  WWW client/server library for Perl (aka LWP)
+
 Package: perl
 Version: 5.10.0-7
 Depends: 
