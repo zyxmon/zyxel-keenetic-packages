@@ -1544,8 +1544,25 @@ Description:  Lua is a powerful light-weight programming language designed for e
  language. Lua is free software.
  This package contains the Lua language interpreter.
 
+Package: make
+Version: 3.81-1
+Depends: 
+Provides: 
+Source: package/built/make
+Section: devel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 74029
+Filename: make_3.81-1_keenetic.ipk
+Size: 74607
+MD5Sum: acc3c9717b37d1e44b1ebc5f34b90ccb
+Description:  The Make package contains a program for compiling packages
+
 Package: mc
-Version: 4.7.5.3-1
+Version: 4.8.0-1
 Depends: libiconv-full, libintl-full, glib2, libncurses, libslang2
 Provides: 
 Source: package/built/mc
@@ -1555,10 +1572,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 549656
-Filename: mc_4.7.5.3-1_keenetic.ipk
-Size: 549434
-MD5Sum: c01598ec89d436580656302946d3423e
+Installed-Size: 582345
+Filename: mc_4.8.0-1_keenetic.ipk
+Size: 582343
+MD5Sum: 37accf0e7916a751cf4e21fa2a655e67
 Description:  GNU Midnight Commander is a text-mode full-screen file manager. 
  It uses a two panel interface and a subshell for command execution. 
  It includes an internal editor with syntax highlighting and an 
