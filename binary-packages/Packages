@@ -5023,6 +5023,24 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  that can evaluate queries interactively and display the results in multiple
  formats.
 
+Package: strace
+Version: 4.5.20-1
+Depends: 
+Provides: 
+Source: package/built/strace
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 114875
+Filename: strace_4.5.20-1_keenetic.ipk
+Size: 90810
+MD5Sum: 208ef82cb7a257926eb09708f373d703
+Description:  A useful diagnostic, instructional, and debugging tool. Allows you to track what
+ system calls a program makes while it is running.
+
 Package: subversion-client
 Version: 1.6.17-1
 Depends: libneon, libaprutil, subversion-libs
