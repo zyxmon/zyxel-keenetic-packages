@@ -107,6 +107,15 @@ define Package/flock/description
   This package contains a utility for managing file locks from shell scripts.
 endef
 
+define Package/whereis
+$(call Package/util-linux/Default)
+  TITLE:=Locate the binary, source, and manual page files for a command
+endef
+
+define Package/whereis/description
+  This package contains a utility for finding files.
+endef
+
 define Package/setterm
 $(call Package/util-linux/Default)
   TITLE:=Tool for setting terminal attributes
@@ -138,6 +147,7 @@ define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR)/sys-utils flock
 	$(MAKE) -C $(PKG_BUILD_DIR)/misc-utils setterm
 	$(MAKE) -C $(PKG_BUILD_DIR)/misc-utils script
+	$(MAKE) -C $(PKG_BUILD_DIR)/misc-utils whereis
 endef
 
 define Package/fdisk/install
@@ -181,6 +191,11 @@ define Package/flock/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/sys-utils/flock $(1)/usr/bin/
 endef
 
+define Package/whereis/install
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/misc-utils/whereis $(1)/usr/bin/
+endef
+
 define Package/setterm/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/misc-utils/setterm $(1)/usr/bin/
@@ -202,3 +217,4 @@ $(eval $(call BuildPackage,hwclock))
 $(eval $(call BuildPackage,flock))
 $(eval $(call BuildPackage,setterm))
 $(eval $(call BuildPackage,script))
+$(eval $(call BuildPackage,whereis))
