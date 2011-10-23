@@ -5429,6 +5429,23 @@ Description:  Wget is a network utility to retrieve files from the Web using htt
  archives and home pages or to travel the Web like a WWW robot.
  This package is built with SSL support.
 
+Package: whereis
+Version: 2.13.0.1-4
+Depends: 
+Provides: 
+Source: package/built/util-linux-ng
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3488
+Filename: whereis_2.13.0.1-4_keenetic.ipk
+Size: 4082
+MD5Sum: b789b1ccaf5ab2424dfd42d3ede1a276
+Description:  This package contains a utility for finding files.
+
 Package: xinetd
 Version: 2.3.14-1
 Depends: 
