@@ -45,10 +45,10 @@ Essential: yes
 Priority: optional
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keenetic
-Installed-Size: 161031
+Installed-Size: 161041
 Filename: busybox_1.19.2-1_keenetic.ipk
-Size: 161449
-MD5Sum: a226bc39f0b2c6545a2219c486618002
+Size: 161418
+MD5Sum: b28e402318260d11a36c053a23891a5c
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 
