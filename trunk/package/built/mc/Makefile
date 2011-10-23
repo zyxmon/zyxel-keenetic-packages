@@ -8,13 +8,15 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mc
-PKG_VERSION:=4.7.5.3
+PKG_VERSION:=4.8.0
 PKG_RELEASE:=1
 PKG_INSTALL:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://www.midnight-commander.org/downloads/
-PKG_MD5SUM:=6a67e139e0032d8a871455a80d490941
+PKG_MD5SUM:=592478c3edfa2ad64c8cd165b9bec446
+
+#PKG_FIXUP:=autoreconf
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/nls.mk
@@ -42,24 +44,12 @@ CONFIGURE_PREFIX:=$(PREFIX_ZYX)
 
 CONFIGURE_ARGS += \
 	--sysconfdir="$(ROOT_ZYX)/etc" \
-	--without-sco \
-	--without-sunos-curses \
-	--without-osf1-curses \
-	--without-vcurses \
 	--without-gpm-mouse \
-	--without-hsc \
-	--without-termnet \
-	--without-debug \
-	--without-efence \
-	--without-netrc \
-	--without-ext2undel \
-	--without-catgets \
 	--without-x \
-	--without-tk \
-	--without-xview \
 	--disable-glibtest \
-	--disable-vfs-fish \
-	--disable-vfs-smb \
+	--disable-doxygen-doc \
+	--disable-nls \
+	--disable-tests \
 	--with-libintl-prefix="$(INTL_PREFIX)" \
 	--with-libiconv-prefix="$(ICONV_PREFIX)" \
 	--with-slang-includes="$(STAGING_DIR)/usr/include" \
