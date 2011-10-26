@@ -1783,7 +1783,7 @@ MD5Sum: 0b102cfa12b4fc95514ad93692cad83d
 Description:  OpenSSH SFTP server.
 
 Package: openvpn
-Version: 2.2.1-1
+Version: 2.2.1-2
 Depends: kmod-tun, liblzo
 Provides: 
 Source: package/built/openvpn
@@ -1793,10 +1793,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 164945
-Filename: openvpn_2.2.1-1_keenetic.ipk
-Size: 165510
-MD5Sum: d01a0e3ef8621b08bdce3dac5af1b047
+Installed-Size: 164875
+Filename: openvpn_2.2.1-2_keenetic.ipk
+Size: 165412
+MD5Sum: 42a0f53e02232a33c36146c1ef487bf0
 Description:  Open source VPN solution using SSL
 
 Package: opkg
