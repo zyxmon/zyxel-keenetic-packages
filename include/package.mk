@@ -33,10 +33,15 @@ else
   STAMP_PREPARED=$(PKG_BUILD_DIR)/.prepared$(if $(QUILT)$(DUMP),,_$(shell $(call find_md5,${CURDIR} $(PKG_FILE_DEPENDS),)))
 endif
 STAMP_CONFIGURED:=$(PKG_BUILD_DIR)/.configured$(if $(DUMP),,_$(call confvar,$(PKG_CONFIG_DEPENDS)))
+STAMP_CONFIGURED_WILDCARD=$(patsubst %_$(call confvar,$(PKG_CONFIG_DEPENDS)),%_*,$(STAMP_CONFIGURED))
 STAMP_BUILT:=$(PKG_BUILD_DIR)/.built
 STAMP_INSTALLED:=$(STAGING_DIR)/stamp/.$(PKG_NAME)_installed
 
 STAGING_FILES_LIST:=$(PKG_NAME)$(if $(BUILD_VARIANT),.$(BUILD_VARIANT),).list
+ifneq ($(if $(CONFIG_SRC_TREE_OVERRIDE),$(wildcard ./git-src)),)
+  USE_GIT_TREE:=1
+  QUILT:=1
+endif
 
 include $(INCLUDE_DIR)/download.mk
 include $(INCLUDE_DIR)/quilt.mk
@@ -84,6 +89,14 @@ define Download/default
   MD5SUM:=$(PKG_MD5SUM)
 endef
 
+ifdef USE_GIT_TREE
+  define Build/Prepare/Default
+	mkdir -p $(PKG_BUILD_DIR)
+	ln -s $(CURDIR)/git-src $(PKG_BUILD_DIR)/.git
+	( cd $(PKG_BUILD_DIR); git checkout .)
+  endef
+endif
+
 define Build/Exports/Default
   $(1) : export ACLOCAL_INCLUDE=$$(foreach p,$$(wildcard $$(STAGING_DIR)/usr/share/aclocal $$(STAGING_DIR)/usr/share/aclocal-* $$(STAGING_DIR)/host/share/aclocal $$(STAGING_DIR)/host/share/aclocal-*),-I $$(p))
   $(1) : export STAGING_PREFIX=$$(STAGING_DIR)/usr
@@ -97,8 +110,13 @@ Build/Exports=$(Build/Exports/Default)
 
 define Build/DefaultTargets
   $(if $(QUILT),$(Build/Quilt))
-  $(if $(strip $(PKG_SOURCE_URL)),$(call Download,default))
+  $(if $(USE_GIT_TREE),,$(if $(strip $(PKG_SOURCE_URL)),$(call Download,default)))
   $(call Build/Autoclean)
+
+  download:
+	$(foreach hook,$(Hooks/Download),
+		$(call $(hook))$(sep)
+	)
 
   $(STAMP_PREPARED) : export PATH=$$(TARGET_PATH_PKG)
   $(STAMP_PREPARED):
@@ -114,6 +132,7 @@ define Build/DefaultTargets
 	$(foreach hook,$(Hooks/Configure/Pre),$(call $(hook))$(sep))
 	$(Build/Configure)
 	$(foreach hook,$(Hooks/Configure/Post),$(call $(hook))$(sep))
+	rm -f $(STAMP_CONFIGURED_WILDCARD)
 	touch $$@
 
   $(call Build/Exports,$(STAMP_BUILT))
