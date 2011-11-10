@@ -269,6 +269,25 @@ Size: 14110
 MD5Sum: de5bd9cc85022a9c3c7e99b8edfe7172
 Description:  General netlink utility frontend
 
+Package: giflib
+Version: 4.1.6-1
+Depends: 
+Provides: 
+Source: package/built/giflib
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13166
+Filename: giflib_4.1.6-1_keenetic.ipk
+Size: 13794
+MD5Sum: a79cda8e3a2203013925a7b16ccd3f13
+Description:  giflib is a library for reading and writing gif images.
+ It is API and ABI compatible with libungif which was in wide use while
+ the LZW compression algorithm was patented. 
+
 Package: glib2
 Version: 2.22.2-1
 Depends: libiconv-full, libintl-full
@@ -1074,6 +1093,23 @@ Filename: liblcms_1.19-1_keenetic.ipk
 Size: 125059
 MD5Sum: bdb7f5b3fdaf45a5ad29f5764a21aa1a
 Description:  A small-footprint, speed optimized color management engine.
+
+Package: libleptonica
+Version: 1.68-1
+Depends: giflib, libjpeg, libpng, libtiff
+Provides: 
+Source: package/built/leptonica
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 566035
+Filename: libleptonica_1.68-1_keenetic.ipk
+Size: 565510
+MD5Sum: bc41b77da8fef05e6ee4326e6a01b067
+Description:  A library for efficient image processing and image analysis operations
 
 Package: liblua
 Version: 5.1.4-8
