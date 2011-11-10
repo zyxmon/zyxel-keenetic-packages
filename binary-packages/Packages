@@ -1148,7 +1148,7 @@ MD5Sum: 7dd9b75aceaf66a2226a6939edfc70db
 Description:  Terminal handling library
 
 Package: libneon
-Version: 0.29.6-1
+Version: 0.29.6-2
 Depends: libexpat
 Provides: 
 Source: package/built/neon
@@ -1158,10 +1158,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 57186
-Filename: libneon_0.29.6-1_keenetic.ipk
-Size: 57772
-MD5Sum: bd6f7de2785fe4db816719560c7b6e25
+Installed-Size: 57196
+Filename: libneon_0.29.6-2_keenetic.ipk
+Size: 57782
+MD5Sum: 3e44affbd1a9fbcc148b2da788be7cf2
 Description:  HTTP and WebDAV client library
 
 Package: libogg
