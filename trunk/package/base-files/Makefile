@@ -246,34 +246,6 @@ define Package/librt/config
 endef
 
 
-define Package/ldd
-$(call Package/libc/Default)
-  SECTION:=utils
-  CATEGORY:=Utilities
-  TITLE:=LDD trace utility
-endef
-
-define Package/ldd/config
-	menu "Configuration"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_ldd
-
-	config LDD_ROOT_DIR
-		string
-		prompt "ldd trace utility base directory"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_ldd
-		default TOOLCHAIN_ROOT  if !NATIVE_TOOLCHAIN
-		default "/"  if NATIVE_TOOLCHAIN
-
-	config LDD_FILE_SPEC
-		string
-		prompt "ldd trace utility file"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_ldd
-		default "./usr/bin/ldd"
-
-	endmenu
-endef
-
-
 define Package/ldconfig
 $(call Package/libc/Default)
   SECTION:=utils
@@ -481,11 +453,6 @@ ifeq ($(CONFIG_EXTERNAL_TOOLCHAIN),)
 		$(1)/lib/
   endef
 
-  define Package/ldd/install
-	$(INSTALL_DIR) $(1)/usr/bin/
-	$(CP) $(TOOLCHAIN_DIR)/bin/ldd $(1)/usr/bin/
-  endef
-
   define Package/ldconfig/install
 	$(INSTALL_DIR) $(1)/sbin/
 	$(CP) $(TOOLCHAIN_DIR)/sbin/ldconfig $(1)/sbin/
@@ -541,14 +508,6 @@ else
 	done
   endef
 
-  define Package/ldd/install
-	for file in $(call qstrip,$(CONFIG_LDD_FILE_SPEC)); do \
-		dir=`dirname $$$$file` ; \
-		$(INSTALL_DIR) $(1)/$$$$dir ; \
-		$(CP) $(call qstrip,$(CONFIG_LDD_ROOT_DIR))/$$$$file $(1)/$$$$dir/ ; \
-	done
-  endef
-
   define Package/ldconfig/install
 	for file in $(call qstrip,$(CONFIG_LDCONFIG_FILE_SPEC)); do \
 		dir=`dirname $$$$file` ; \
@@ -570,5 +529,4 @@ $(eval $(call BuildPackage,libssp))
 $(eval $(call BuildPackage,libstdcpp))
 $(eval $(call BuildPackage,libpthread))
 $(eval $(call BuildPackage,librt))
-$(eval $(call BuildPackage,ldd))
 $(eval $(call BuildPackage,ldconfig))
