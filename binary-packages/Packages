@@ -532,20 +532,20 @@ MD5Sum: 9303f0d0a8741a1a2e06cbec18d42862
 Description:  Kernel support for the TUN/TAP tunneling device
 
 Package: ldd
-Version: 0.9.30.3-60
+Version: 0.9.30.3-61
 Depends: 
 Provides: 
-Source: package/base-files
+Source: package/built/ldd
 Section: utils
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4933
-Filename: ldd_0.9.30.3-60_keenetic.ipk
-Size: 5492
-MD5Sum: 5a581adf6353c9a6af9c759dfaa2079d
+Installed-Size: 4454
+Filename: ldd_0.9.30.3-61_keenetic.ipk
+Size: 5022
+MD5Sum: 4f3931a6e7f0416968783921f63e130b
 Description:  LDD trace utility
 
 Package: libapr
