@@ -1333,7 +1333,7 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  This package contains the SQLite (v2.x) shared library, used by other programs.
 
 Package: libsqlite3
-Version: 3070603-1
+Version: 3070701-1
 Depends: 
 Provides: 
 Source: package/built/sqlite3
@@ -1343,10 +1343,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 283538
-Filename: libsqlite3_3070603-1_keenetic.ipk
-Size: 283762
-MD5Sum: 0fe613da50b583db00fb99ab62b423d7
+Installed-Size: 291048
+Filename: libsqlite3_3070701-1_keenetic.ipk
+Size: 291282
+MD5Sum: c3dec31949f478f3655e24df435f5691
 Description:  SQLite is a small C library that implements a self-contained, embeddable,
  zero-configuration SQL database engine.
  This package contains the SQLite (v3.x) shared library, used by other
@@ -5079,7 +5079,7 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  multiple formats.
 
 Package: sqlite3-cli
-Version: 3070603-1
+Version: 3070701-1
 Depends: libsqlite3, libncurses, libreadline
 Provides: 
 Source: package/built/sqlite3
@@ -5089,10 +5089,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 17827
-Filename: sqlite3-cli_3070603-1_keenetic.ipk
-Size: 18640
-MD5Sum: 4c8bf84833f2b8ebb6da1f5315817ca0
+Installed-Size: 18053
+Filename: sqlite3-cli_3070701-1_keenetic.ipk
+Size: 18858
+MD5Sum: 782c2af8cfb20397cc252f538f5f01d2
 Description:  SQLite is a small C library that implements a self-contained, embeddable,
  zero-configuration SQL database engine.
  This package contains a terminal-based front-end to the SQLite (v3.x) library
