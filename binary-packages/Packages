@@ -1313,6 +1313,25 @@ MD5Sum: e23d2aa745123b17a16da30b47767746
 Description:  This is a shell which is mostly just a wrapper around the S-Lang Interpreter,
  which is part of the S-Lang Library.
 
+Package: libsqlite2
+Version: 2.8.17-2
+Depends: 
+Provides: 
+Source: package/built/sqlite2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 144196
+Filename: libsqlite2_2.8.17-2_keenetic.ipk
+Size: 144411
+MD5Sum: ff3dd5e29ffd9bf7c6d728c113c27b08
+Description:  SQLite is a small C library that implements a self-contained, embeddable, 
+ zero-configuration SQL database engine.	
+ This package contains the SQLite (v2.x) shared library, used by other programs.
+
 Package: libsqlite3
 Version: 3070603-1
 Depends: 
@@ -5037,6 +5056,27 @@ Description:  smartmontools contains utility programs (smartctl, smartd) to
  control/monitor storage systems using the Self-Monitoring, Analysis
  and Reporting Technology System (S.M.A.R.T.) built into most modern
  ATA and SCSI disks. It is derived from smartsuite.
+
+Package: sqlite2-cli
+Version: 2.8.17-2
+Depends: libsqlite2, libncurses, libreadline
+Provides: 
+Source: package/built/sqlite2
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 9910
+Filename: sqlite2-cli_2.8.17-2_keenetic.ipk
+Size: 10683
+MD5Sum: 5238a2c53ff4ce48a8b4dd764ba21392
+Description:  SQLite is a small C library that implements a self-contained, embeddable, 
+ zero-configuration SQL database engine.	
+ This package contains a terminal-based front-end to the SQLite (v2.x) library 
+ that can evaluate queries interactively and display the results in 
+ multiple formats.
 
 Package: sqlite3-cli
 Version: 3070603-1
