@@ -1,0 +1,81 @@
+Package: busybox
+Version: 1.19.3-6
+Depends: 
+Provides: 
+Source: package/busybox
+Section: base
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Nicolas Thill <nico@openwrt.org>
+Architecture: keenetic
+Installed-Size: 166978
+Filename: busybox_1.19.3-6_keenetic.ipk
+Size: 167393
+MD5Sum: e2b2131dc8273b935d355209f82b7f13
+Description:  The Swiss Army Knife of embedded Linux.
+ It slices, it dices, it makes Julian Fries.
+
+Package: dropbear
+Version: 0.52-5
+Depends: 
+Provides: 
+Source: package/dropbear
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 101565
+Filename: dropbear_0.52-5_keenetic.ipk
+Size: 102102
+MD5Sum: c6c7d8545dd45403b584b9dc85998578
+Description:  A small SSH2 server/client designed for small memory environments.
+
+Package: opkg
+Version: 576-6
+Depends: 
+Provides: 
+Source: package/opkg
+Section: base
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Jo-Philipp Wich <xm@subsignal.org>
+Architecture: keenetic
+Installed-Size: 58994
+Filename: opkg_576-6_keenetic.ipk
+Size: 59753
+MD5Sum: f6d578091ad4c46f60c5617c08e7d609
+Description:  Lightweight package management system
+ opkg is the opkg Package Management System, for handling
+ installation and removal of packages on a system. It can
+ recursively follow dependencies and download all packages
+ necessary to install a particular package.
+ 
+ opkg knows how to install both .ipk and .deb packages.
+
+Package: wget
+Version: 1.13.4-1
+Depends: 
+Provides: 
+Source: package/built/wget
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 145787
+Filename: wget_1.13.4-1_keenetic.ipk
+Size: 146105
+MD5Sum: 58ebddee67dcf6ac71879bfe6da0e3b5
+Description:  Wget is a network utility to retrieve files from the Web using http
+ and ftp, the two most widely used Internet protocols. It works
+ non-interactively, so it will work in the background, after having
+ logged off. The program supports recursive retrieval of web-authoring
+ pages as well as ftp sites -- you can use wget to make mirrors of
+ archives and home pages or to travel the Web like a WWW robot.
+ This package is built with SSL support.
+
