@@ -1,0 +1,54 @@
+diff -Nuar uClibc-0.9.30.3/libpthread/linuxthreads.old/attr.c uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/attr.c
+--- uClibc-0.9.30.3/libpthread/linuxthreads.old/attr.c	2010-03-12 22:32:42.000000000 +0300
++++ uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/attr.c	2010-06-02 15:25:42.000000000 +0400
+@@ -37,6 +37,8 @@
+ libpthread_hidden_proto(pthread_attr_setschedpolicy)
+ libpthread_hidden_proto(pthread_attr_getscope)
+ libpthread_hidden_proto(pthread_attr_setscope)
++libpthread_hidden_proto(pthread_attr_setstack)
++libpthread_hidden_proto(pthread_attr_getstack)
+ 
+ /* NOTE: With uClibc I don't think we need this versioning stuff.
+  * Therefore, define the function pthread_attr_init() here using
+@@ -236,3 +238,41 @@
+   return 0;
+ }
+ weak_alias (__pthread_attr_getstacksize, pthread_attr_getstacksize)
++
++int pthread_attr_setstack(pthread_attr_t *attr, void *stackaddr, size_t stacksize)
++{
++  int err;
++
++  if ((((uintptr_t) stackaddr) & 
++      (__alignof__ (struct _pthread_descr_struct) - 1)) != 0)
++    err = EINVAL;
++  else
++    err = __pthread_attr_setstacksize (attr, stacksize);
++
++  if (err == 0)
++  {
++#ifndef _STACK_GROWS_UP
++    attr->__stackaddr = (char *) stackaddr + stacksize;
++#else
++    attr->__stackaddr = stackaddr;
++#endif
++    attr->__stackaddr_set = 1;
++  }
++
++  return err;
++}
++libpthread_hidden_def(pthread_attr_setstack)
++
++int pthread_attr_getstack(const pthread_attr_t *attr, void **stackaddr, size_t *stacksize)
++{
++  /* XXX This function has a stupid definition.  The standard specifies
++     no error value but what is if no stack address was set?  We simply
++     return the value we have in the member.  */
++#ifndef _STACK_GROWS_UP
++  *stackaddr = (char *) attr->__stackaddr - attr->__stacksize;
++#else
++  *stackaddr = attr->__stackaddr;
++#endif
++}
++libpthread_hidden_def(pthread_attr_getstack)
++

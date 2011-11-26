@@ -1,0 +1,342 @@
+diff -Nuar uClibc-0.9.30.3/libpthread/linuxthreads.old/condvar.c uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/condvar.c
+--- uClibc-0.9.30.3/libpthread/linuxthreads.old/condvar.c	2010-03-12 22:32:42.000000000 +0300
++++ uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/condvar.c	2010-06-02 15:28:44.000000000 +0400
+@@ -15,10 +15,11 @@
+ 
+ /* Condition variables */
+ 
++#include <time.h>
+ #include <errno.h>
+ #include <sched.h>
+ #include <stddef.h>
+-#include <sys/time.h>
++#include <unistd.h>
+ #include "pthread.h"
+ #include "internals.h"
+ #include "spinlock.h"
+@@ -34,12 +35,26 @@
+ 
+ libpthread_hidden_proto(pthread_condattr_destroy)
+ libpthread_hidden_proto(pthread_condattr_init)
++libpthread_hidden_proto(pthread_condattr_getclock)
++libpthread_hidden_proto(pthread_condattr_setclock)
+ 
+ int pthread_cond_init(pthread_cond_t *cond,
+-                      const pthread_condattr_t *cond_attr attribute_unused)
++                      const pthread_condattr_t *attr)
+ {
+   __pthread_init_lock(&cond->__c_lock);
+   cond->__c_waiting = NULL;
++
++  /* Only CLOCK_REALTIME and CLOCK_MONOTONIC timers supported.
++     Use CLOCK_REALTIME by default. */
++
++  if (attr == NULL)
++    cond->__c_clock_id = CLOCK_REALTIME;
++  else
++  if (attr->__clock_id != CLOCK_REALTIME && attr->__clock_id != CLOCK_MONOTONIC)
++    return EINVAL;
++  else
++    cond->__c_clock_id = attr->__clock_id;
++
+   return 0;
+ }
+ libpthread_hidden_def(pthread_cond_init)
+@@ -189,8 +204,8 @@
+   spurious_wakeup_count = 0;
+   while (1)
+     {
+-      if (!timedsuspend(self, abstime)) {
+-	int was_on_queue;
++      if (timedsuspend(self, abstime, cond->__c_clock_id) == 0) {
++ 	int was_on_queue;
+ 
+ 	/* __pthread_lock will queue back any spurious restarts that
+ 	   may happen to it. */
+@@ -283,8 +298,13 @@
+ }
+ libpthread_hidden_def(pthread_cond_broadcast)
+ 
+-int pthread_condattr_init(pthread_condattr_t *attr attribute_unused)
++int pthread_condattr_init(pthread_condattr_t *attr)
+ {
++  if (attr == NULL)
++    return EINVAL;
++
++  attr->__clock_id = CLOCK_REALTIME;
++
+   return 0;
+ }
+ libpthread_hidden_def(pthread_condattr_init)
+@@ -312,3 +332,43 @@
+ 
+   return 0;
+ }
++
++int pthread_condattr_getclock(const pthread_condattr_t *attr, clockid_t *clock_id)
++{
++  if (attr == NULL)
++    return EINVAL;
++
++  *clock_id = attr->__clock_id;
++
++  return 0;
++}
++libpthread_hidden_def(pthread_condattr_getclock)
++
++int pthread_condattr_setclock(pthread_condattr_t *attr, clockid_t clock_id)
++{
++  if (attr == NULL)
++    return EINVAL;
++
++  if (clock_id == CLOCK_MONOTONIC) {
++#ifdef _POSIX_MONOTONIC_CLOCK
++    /* Check whether the clock is available. */
++
++   struct timespec res;
++
++    if (clock_getres(CLOCK_MONOTONIC, &res) < 0)
++     return EINVAL;
++#else
++   /* Not available.  */
++   return EINVAL;
++#endif
++  } else
++  if (clock_id != CLOCK_REALTIME)
++    /* Only CLOCK_REALTIME and CLOCK_MONOTONIC allowed. */
++    return EINVAL;
++
++  attr->__clock_id = clock_id;
++
++  return 0;
++}
++libpthread_hidden_def(pthread_condattr_setclock)
++
+diff -Nuar uClibc-0.9.30.3/libpthread/linuxthreads.old/internals.h uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/internals.h
+--- uClibc-0.9.30.3/libpthread/linuxthreads.old/internals.h	2010-03-12 22:32:42.000000000 +0300
++++ uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/internals.h	2010-06-02 15:03:40.000000000 +0400
+@@ -20,6 +20,7 @@
+ /* Includes */
+ 
+ #include <bits/libc-tsd.h> /* for _LIBC_TSD_KEY_N */
++#include <time.h>
+ #include <limits.h>
+ #include <setjmp.h>
+ #include <signal.h>
+@@ -484,11 +485,15 @@
+ 
+ extern void __pthread_restart_old(pthread_descr th);
+ extern void __pthread_suspend_old(pthread_descr self);
+-extern int __pthread_timedsuspend_old(pthread_descr self, const struct timespec *abstime);
++extern int __pthread_timedsuspend_old(pthread_descr self,
++                                      const struct timespec *abstime,
++                                      const clockid_t clock_id);
+ 
+ extern void __pthread_restart_new(pthread_descr th);
+ extern void __pthread_suspend_new(pthread_descr self);
+-extern int __pthread_timedsuspend_new(pthread_descr self, const struct timespec *abstime);
++extern int __pthread_timedsuspend_new(pthread_descr self,
++                                      const struct timespec *abstime,
++                                      const clockid_t clock_id);
+ 
+ extern void __pthread_wait_for_restart_signal(pthread_descr self);
+ 
+diff -Nuar uClibc-0.9.30.3/libpthread/linuxthreads.old/pthread.c uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/pthread.c
+--- uClibc-0.9.30.3/libpthread/linuxthreads.old/pthread.c	2010-03-12 22:32:42.000000000 +0300
++++ uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/pthread.c	2010-06-02 15:37:35.000000000 +0400
+@@ -25,6 +25,7 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <sys/wait.h>
++#include <sys/time.h>
+ #include <sys/resource.h>
+ #include "pthread.h"
+ #include "internals.h"
+@@ -214,7 +215,9 @@
+ static void pthread_handle_sigcancel(int sig);
+ static void pthread_handle_sigrestart(int sig);
+ static void pthread_handle_sigdebug(int sig);
+-int __pthread_timedsuspend_new(pthread_descr self, const struct timespec *abstime);
++int __pthread_timedsuspend_new(pthread_descr self,
++                               const struct timespec *abstime,
++                               const clockid_t clock_id);
+ 
+ /* Signal numbers used for the communication.
+    In these variables we keep track of the used variables.  If the
+@@ -237,7 +240,9 @@
+ int __pthread_sig_debug = __SIGRTMIN + 2;
+ void (*__pthread_restart)(pthread_descr) = __pthread_restart_new;
+ void (*__pthread_suspend)(pthread_descr) = __pthread_wait_for_restart_signal;
+-int (*__pthread_timedsuspend)(pthread_descr, const struct timespec *) = __pthread_timedsuspend_new;
++int (*__pthread_timedsuspend)(pthread_descr,
++                              const struct timespec *,
++                              const clockid_t) = __pthread_timedsuspend_new;
+ #else
+ static int current_rtmin = __SIGRTMIN;
+ static int current_rtmax = __SIGRTMAX;
+@@ -250,6 +255,19 @@
+ 
+ #endif
+ 
++#ifndef _POSIX_MONOTONIC_CLOCK
++#define __pthread_now(clock_id, now)   \
++    do {                               \
++      struct timeval tv;               \
++                                       \
++      gettimeofday(&tv, NULL);         \
++      TIMEVAL_TO_TIMESPEC(*now, tv);   \
++    } while(0);
++#else
++#define __pthread_now(clock_id, now)   \
++    clock_gettime(clock_id, now);
++#endif
++
+ /* Return number of available real-time signal with highest priority.  */
+ int __libc_current_sigrtmin (void)
+ {
+@@ -992,8 +1010,9 @@
+ 	__pthread_wait_for_restart_signal(self);
+ }
+ 
+-int
+-__pthread_timedsuspend_old(pthread_descr self, const struct timespec *abstime)
++int __pthread_timedsuspend_old(pthread_descr self,
++                               const struct timespec *abstime,
++                               const clockid_t clock_id)
+ {
+   sigset_t unblock, initial_mask;
+   int was_signalled = 0;
+@@ -1012,12 +1031,12 @@
+       sigprocmask(SIG_UNBLOCK, &unblock, &initial_mask);
+ 
+       while (1) {
+-	struct timeval now;
++	struct timespec now;
+ 	struct timespec reltime;
+ 
+ 	/* Compute a time offset relative to now.  */
+-	gettimeofday (&now, NULL);
+-	reltime.tv_nsec = abstime->tv_nsec - now.tv_usec * 1000;
++	__pthread_now(clock_id, &now);
++	reltime.tv_nsec = abstime->tv_nsec - now.tv_nsec;
+ 	reltime.tv_sec = abstime->tv_sec - now.tv_sec;
+ 	if (reltime.tv_nsec < 0) {
+ 	  reltime.tv_nsec += 1000000000;
+@@ -1082,7 +1101,9 @@
+     kill(th->p_pid, __pthread_sig_restart);
+ }
+ 
+-int __pthread_timedsuspend_new(pthread_descr self, const struct timespec *abstime)
++int __pthread_timedsuspend_new(pthread_descr self,
++                               const struct timespec *abstime,
++                               const clockid_t clock_id)
+ {
+     sigset_t unblock, initial_mask;
+     int was_signalled = 0;
+@@ -1097,12 +1118,12 @@
+ 	sigprocmask(SIG_UNBLOCK, &unblock, &initial_mask);
+ 
+ 	while (1) {
+-	    struct timeval now;
++	    struct timespec now;
+ 	    struct timespec reltime;
+ 
+ 	    /* Compute a time offset relative to now.  */
+-	    gettimeofday (&now, NULL);
+-	    reltime.tv_nsec = abstime->tv_nsec - now.tv_usec * 1000;
++	    __pthread_now(clock_id, &now);
++	    reltime.tv_nsec = abstime->tv_nsec - now.tv_nsec;
+ 	    reltime.tv_sec = abstime->tv_sec - now.tv_sec;
+ 	    if (reltime.tv_nsec < 0) {
+ 		reltime.tv_nsec += 1000000000;
+diff -Nuar uClibc-0.9.30.3/libpthread/linuxthreads.old/restart.h uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/restart.h
+--- uClibc-0.9.30.3/libpthread/linuxthreads.old/restart.h	2010-03-12 22:32:42.000000000 +0300
++++ uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/restart.h	2010-06-02 15:16:49.000000000 +0400
+@@ -12,6 +12,7 @@
+ /* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        */
+ /* GNU Library General Public License for more details.                 */
+ 
++#include <time.h>
+ #include <signal.h>
+ #include <sys/syscall.h>
+ #define __ASSUME_REALTIME_SIGNALS defined(__NR_rt_sigaction)
+@@ -39,12 +40,13 @@
+ }
+ 
+ static __inline__ int timedsuspend(pthread_descr self,
+-		const struct timespec *abstime)
++        const struct timespec *abstime,
++        const clockid_t clock_id)
+ {
+   /* See pthread.c */
+ #if __ASSUME_REALTIME_SIGNALS
+-  return __pthread_timedsuspend_new(self, abstime);
++  return __pthread_timedsuspend_new(self, abstime, clock_id);
+ #else
+-  return __pthread_timedsuspend(self, abstime);
++  return __pthread_timedsuspend(self, abstime, clock_id);
+ #endif
+ }
+diff -Naur uClibc-0.9.29/libpthread/linuxthreads.old/semaphore.c uClibc-0.9.29-patched/libpthread/linuxthreads.old/semaphore.c
+--- uClibc-0.9.29/libpthread/linuxthreads.old/semaphore.c	2006-11-09 11:11:33.000000000 +0300
++++ uClibc-0.9.29-patched/libpthread/linuxthreads.old/semaphore.c	2010-02-25 23:14:43.000000000 +0300
+@@ -258,7 +258,7 @@
+   spurious_wakeup_count = 0;
+   while (1)
+     {
+-      if (timedsuspend(self, abstime) == 0) {
++      if (timedsuspend(self, abstime, CLOCK_REALTIME) == 0) {
+ 	int was_on_queue;
+ 
+ 	/* __pthread_lock will queue back any spurious restarts that
+diff -Naur uClibc-0.9.29/libpthread/linuxthreads.old/spinlock.c uClibc-0.9.29-patched/libpthread/linuxthreads.old/spinlock.c
+--- uClibc-0.9.29/libpthread/linuxthreads.old/spinlock.c	2006-11-03 21:55:00.000000000 +0300
++++ uClibc-0.9.29-patched/libpthread/linuxthreads.old/spinlock.c	2010-02-26 00:18:39.000000000 +0300
+@@ -499,7 +499,7 @@
+      queue. If we fail, it means the owner gave us the lock. */
+ 
+   if (oldstatus != 0) {
+-    if (timedsuspend(self, abstime) == 0) {
++    if (timedsuspend(self, abstime, CLOCK_REALTIME) == 0) {
+       if (!testandset(&p_wait_node->abandoned))
+ 	return 0; /* Timeout! */
+
+diff -Nuar uClibc-0.9.30.3/libpthread/linuxthreads.old/sysdeps/pthread/bits/pthreadtypes.h uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/sysdeps/pthread/bits/pthreadtypes.h
+--- uClibc-0.9.30.3/libpthread/linuxthreads.old/sysdeps/pthread/bits/pthreadtypes.h	2010-03-12 22:32:42.000000000 +0300
++++ uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/sysdeps/pthread/bits/pthreadtypes.h	2010-06-02 15:29:36.000000000 +0400
+@@ -57,13 +57,14 @@
+ {
+   struct _pthread_fastlock __c_lock; /* Protect against concurrent access */
+   _pthread_descr __c_waiting;        /* Threads waiting on this condition */
++  __clockid_t __c_clock_id;          /* Condition clock type */
+ } pthread_cond_t;
+ 
+ 
+ /* Attribute for conditionally variables.  */
+ typedef struct
+ {
+-  int __dummy;
++  __clockid_t __clock_id;
+ } pthread_condattr_t;
+ 
+ /* Keys for thread-specific data */
+diff -Nuar uClibc-0.9.30.3/libpthread/linuxthreads.old/sysdeps/pthread/pthread.h uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/sysdeps/pthread/pthread.h
+--- uClibc-0.9.30.3/libpthread/linuxthreads.old/sysdeps/pthread/pthread.h	2010-03-12 22:32:42.000000000 +0300
++++ uClibc-0.9.30.3-patched/libpthread/linuxthreads.old/sysdeps/pthread/pthread.h	2010-06-02 15:26:27.000000000 +0400
+@@ -367,6 +367,16 @@
+ extern int pthread_mutexattr_setpshared (pthread_mutexattr_t *__attr,
+ 					 int __pshared) __THROW;
+ 
++#ifdef __USE_XOPEN2K
++/* Get the clock selected for the conditon variable attribute ATTR.  */
++extern int pthread_condattr_getclock (const pthread_condattr_t *attr,
++                    clockid_t *clock_id) __THROW;
++
++/* Set the clock selected for the conditon variable attribute ATTR.  */
++extern int pthread_condattr_setclock (pthread_condattr_t *attr,
++                    clockid_t clock_id) __THROW;
++#endif
++
+ #ifdef __USE_UNIX98
+ /* Set the mutex kind attribute in *ATTR to KIND (either PTHREAD_MUTEX_NORMAL,
+    PTHREAD_MUTEX_RECURSIVE, PTHREAD_MUTEX_ERRORCHECK, or

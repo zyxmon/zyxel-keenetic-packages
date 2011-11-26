@@ -31,7 +31,7 @@ define Package/usbutils/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/lsusb $(1)/usr/bin/
 	$(INSTALL_DIR) $(1)/usr/share
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/share/usb.ids.gz $(1)/usr/share/
+	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/usr/share/usb.ids.gz $(1)/usr/share/
 endef
 
 $(eval $(call BuildPackage,usbutils))

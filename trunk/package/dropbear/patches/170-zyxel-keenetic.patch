@@ -1,6 +1,7 @@
---- a/cli-kex.c
-+++ b/cli-kex.c
-@@ -156,7 +156,7 @@ static FILE* open_known_hosts_file(int *
+diff -u a/cli-kex.c b/cli-kex.c
+--- a/cli-kex.c	2011-11-08 16:48:15.000000000 +0400
++++ b/cli-kex.c	2011-11-25 12:46:33.342604908 +0400
+@@ -156,7 +156,7 @@
  
  	if (!homedir) {
  		struct passwd * pw = NULL;
@@ -9,9 +10,10 @@
  		if (pw) {
  			homedir = pw->pw_dir;
  		}
---- a/cli-runopts.c
-+++ b/cli-runopts.c
-@@ -558,7 +558,7 @@ static void fill_own_user() {
+diff -u a/cli-runopts.c b/cli-runopts.c
+--- a/cli-runopts.c	2011-11-25 12:14:38.000000000 +0400
++++ b/cli-runopts.c	2011-11-25 12:47:49.423603771 +0400
+@@ -622,7 +622,7 @@
  
  	uid = getuid();
  
@@ -20,9 +22,10 @@
  	if (pw == NULL || pw->pw_name == NULL) {
  		dropbear_exit("Unknown own user");
  	}
---- a/common-session.c
-+++ b/common-session.c
-@@ -444,7 +444,7 @@ void fill_passwd(const char* username) {
+diff -u a/common-session.c b/common-session.c
+--- a/common-session.c	2011-11-08 16:48:15.000000000 +0400
++++ b/common-session.c	2011-11-25 12:48:17.798662628 +0400
+@@ -444,7 +444,7 @@
  	if (ses.authstate.pw_passwd)
  		m_free(ses.authstate.pw_passwd);
  
@@ -31,9 +34,10 @@
  	if (!pw) {
  		return;
  	}
---- a/dbutil.c
-+++ b/dbutil.c
-@@ -849,3 +849,63 @@ int m_str_to_uint(const char* str, unsig
+diff -u a/dbutil.c b/dbutil.c
+--- a/dbutil.c	2011-11-08 16:48:15.000000000 +0400
++++ b/dbutil.c	2011-11-25 12:50:38.846603398 +0400
+@@ -870,3 +870,63 @@
  		return DROPBEAR_SUCCESS;
  	}
  }
@@ -97,8 +101,9 @@
 +
 +
 +
---- a/dbutil.h
-+++ b/dbutil.h
+diff -u a/dbutil.h b/dbutil.h
+--- a/dbutil.h	2011-11-08 16:48:15.000000000 +0400
++++ b/dbutil.h	2011-11-25 12:18:41.610679615 +0400
 @@ -33,6 +33,10 @@
  void startsyslog();
  #endif
@@ -107,12 +112,14 @@
 +struct passwd *getpwnam_zyxel(const char *name);
 +struct passwd* getpwuid_zyxel(uid_t uid);
 +
- extern void (*_dropbear_exit)(int exitcode, const char* format, va_list param);
- extern void (*_dropbear_log)(int priority, const char* format, va_list param);
- 
---- a/dropbearkey.c
-+++ b/dropbearkey.c
-@@ -326,7 +326,7 @@ static void printpubkey(sign_key * key, 
+ #ifdef __GNUC__
+ #define ATTRIB_PRINTF(fmt,args) __attribute__((format(printf, fmt, args))) 
+ #else
+Общие подкаталоги: a/debian и b/debian
+diff -u a/dropbearkey.c b/dropbearkey.c
+--- a/dropbearkey.c	2011-11-08 16:48:15.000000000 +0400
++++ b/dropbearkey.c	2011-11-25 12:20:24.266688507 +0400
+@@ -326,7 +326,7 @@
  
  	/* a user@host comment is informative */
  	username = "";
@@ -121,9 +128,12 @@
  	if (pw) {
  		username = pw->pw_name;
  	}
---- a/loginrec.c
-+++ b/loginrec.c
-@@ -275,7 +275,7 @@ login_init_entry(struct logininfo *li, i
+Общие подкаталоги: a/libtomcrypt и b/libtomcrypt
+Общие подкаталоги: a/libtommath и b/libtommath
+diff -u a/loginrec.c b/loginrec.c
+--- a/loginrec.c	2011-11-08 16:48:15.000000000 +0400
++++ b/loginrec.c	2011-11-25 12:53:42.802599833 +0400
+@@ -275,7 +275,7 @@
  
  	if (username) {
  		strlcpy(li->username, username, sizeof(li->username));
@@ -132,9 +142,10 @@
  		if (pw == NULL)
  			dropbear_exit("login_init_entry: Cannot find user \"%s\"",
  					li->username);
---- a/scp.c
-+++ b/scp.c
-@@ -392,7 +392,7 @@ main(int argc, char **argv)
+diff -u a/scp.c b/scp.c
+--- a/scp.c	2011-11-08 16:48:15.000000000 +0400
++++ b/scp.c	2011-11-25 12:54:23.718611803 +0400
+@@ -392,7 +392,7 @@
  	argc -= optind;
  	argv += optind;
  
@@ -143,9 +154,10 @@
  		fatal("unknown user %u", (u_int) userid);
  
  	if (!isatty(STDERR_FILENO))
---- a/svr-auth.c
-+++ b/svr-auth.c
-@@ -202,6 +202,34 @@ out:
+diff -u a/svr-auth.c b/svr-auth.c
+--- a/svr-auth.c	2011-11-08 16:48:15.000000000 +0400
++++ b/svr-auth.c	2011-11-25 12:45:52.782630377 +0400
+@@ -203,6 +203,85 @@
  	m_free(servicename);
  	m_free(methodname);
  }
@@ -153,34 +165,85 @@
 +
 +static char **curshell=NULL;
 +static const char const *okshells[] = { "/bin/sh", "/bin/ash", NULL };
++static char **shells=NULL;
++static char *strings=NULL;
 + 
 +static char **initshells_zyx()
 +{
-+   return (char **) okshells;
++	register char **sp, *cp;
++	register FILE *fp;
++	struct stat statb;
++	int flen;
++
++	if (shells != NULL)
++		free(shells);
++	shells = NULL;
++	if (strings != NULL)
++		free(strings);
++	strings = NULL;
++	if ((fp = fopen("/media/DISK_A1/system/etc/shells", "rc")) == NULL)
++		return (char **) okshells;
++	if (fstat(fileno(fp), &statb) == -1) {
++		(void)fclose(fp);
++		return (char **) okshells;
++	}
++	if ((strings = malloc((u_int)statb.st_size + 1)) == NULL) {
++		(void)fclose(fp);
++		return (char **) okshells;
++	}
++	shells = calloc((unsigned)statb.st_size / 3, sizeof (char *));
++	if (shells == NULL) {
++		(void)fclose(fp);
++		free(strings);
++		strings = NULL;
++		return (char **) okshells;
++	}
++	sp = shells;
++	cp = strings;
++	flen = statb.st_size;
++	while (fgets(cp, flen - (cp - strings), fp) != NULL) {
++		while (*cp != '#' && *cp != '/' && *cp != '\0')
++			cp++;
++		if (*cp == '#' || *cp == '\0')
++			continue;
++		*sp++ = cp;
++		while (!isspace(*cp) && *cp != '#' && *cp != '\0')
++			cp++;
++		*cp++ = '\0';
++	}
++	*sp = NULL;
++	(void)fclose(fp);
++	return (shells);
 +}
-+ 
++
 +static char* getusershell_zyx()
 +{
-+  char *ret;
-+  if (curshell == NULL)
-+    curshell = initshells_zyx();
-+  ret = *curshell;
-+  if (ret != NULL)
-+    curshell++;
-+  return (ret);
++	char *ret;
++	if (curshell == NULL)
++		curshell = initshells_zyx();
++	ret = *curshell;
++	if (ret != NULL)
++		curshell++;
++	return (ret);
 +}
 +static void endusershell_zyx()
 +{
-+  curshell = NULL;
++	curshell = NULL;
++	if (shells != NULL)
++		free(shells);
++	shells = NULL;
++	if (strings != NULL)
++		free(strings);
++	strings = NULL;
 +}
 +static void setusershell_zyx()
 +{
-+  curshell = initshells_zyx();
++	curshell = initshells_zyx();
 +}
  
  
  /* Check that the username exists, has a non-empty password, and has a valid
-@@ -269,8 +297,8 @@ static int checkusername(unsigned char *
+@@ -261,8 +340,8 @@
  	/* check the shell is valid. If /etc/shells doesn't exist, getusershell()
  	 * should return some standard shells like "/bin/sh" and "/bin/csh" (this
  	 * is platform-specific) */
@@ -191,28 +254,45 @@
  		TRACE(("test shell is '%s'", listshell))
  		if (strcmp(listshell, usershell) == 0) {
  			/* have a match */
-@@ -278,7 +306,7 @@ static int checkusername(unsigned char *
+@@ -270,7 +349,7 @@
  		}
  	}
  	/* no matching shell */
 -	endusershell();
 +	endusershell_zyx();
  	TRACE(("no matching shell"))
- 	dropbear_log(LOG_WARNING, "user '%s' has invalid shell, rejected",
+ 	dropbear_log(LOG_WARNING, "User '%s' has invalid shell, rejected",
  				ses.authstate.pw_name);
-@@ -286,7 +314,7 @@ static int checkusername(unsigned char *
- 	return DROPBEAR_FAILURE;
- 	
- goodshell:
--	endusershell();
-+	endusershell_zyx();
- 	TRACE(("matching shell"))
+diff -u a/svr-authpubkey.c b/svr-authpubkey.c
+--- a/svr-authpubkey.c	2011-11-25 12:14:38.000000000 +0400
++++ b/svr-authpubkey.c	2011-11-25 12:38:12.774602033 +0400
+@@ -222,7 +222,7 @@
+ 		/* open the file */
+ 		authfile = fopen(filename, "r");
+ 	} else {
+-		authfile = fopen("/etc/dropbear/authorized_keys","r");
++		authfile = fopen("/media/DISK_A1/system/etc/dropbear/authorized_keys","r");
+ 	}
+ 	if (authfile == NULL) {
+ 		goto out;
+@@ -377,10 +377,10 @@
+ 	}
  
- 	TRACE(("uid = %d", ses.authstate.pw_uid))
---- a/svr-chansession.c
-+++ b/svr-chansession.c
-@@ -555,7 +555,7 @@ static int sessionpty(struct ChanSess * 
- 		dropbear_exit("out of memory"); /* TODO disconnect */
+ 	if (ses.authstate.pw_uid == 0) {
+-		if (checkfileperm("/etc/dropbear") != DROPBEAR_SUCCESS) {
++		if (checkfileperm("/media/DISK_A1/system/etc/dropbear") != DROPBEAR_SUCCESS) {
+ 			goto out;
+ 		}
+-		if (checkfileperm("/etc/dropbear/authorized_keys") != DROPBEAR_SUCCESS) {
++		if (checkfileperm("/media/DISK_A1/system/etc/dropbear/authorized_keys") != DROPBEAR_SUCCESS) {
+ 			goto out;
+ 		}
+ 	} else {
+diff -u a/svr-chansession.c b/svr-chansession.c
+--- a/svr-chansession.c	2011-11-25 12:14:38.000000000 +0400
++++ b/svr-chansession.c	2011-11-25 12:59:24.318641407 +0400
+@@ -562,7 +562,7 @@
+ 		dropbear_exit("Out of memory"); /* TODO disconnect */
  	}
  
 -	pw = getpwnam(ses.authstate.pw_name);
