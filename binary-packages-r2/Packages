@@ -9,15 +9,15 @@ Essential: no
 Priority: optional
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keenetic
-Installed-Size: 166978
+Installed-Size: 166963
 Filename: busybox_1.19.3-6_keenetic.ipk
-Size: 167393
-MD5Sum: e2b2131dc8273b935d355209f82b7f13
+Size: 167350
+MD5Sum: d958800873b9443235b3cd00dbef6920
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 
 Package: dropbear
-Version: 0.52-5
+Version: 2011.54-1
 Depends: 
 Provides: 
 Source: package/dropbear
@@ -27,14 +27,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 101565
-Filename: dropbear_0.52-5_keenetic.ipk
-Size: 102102
-MD5Sum: c6c7d8545dd45403b584b9dc85998578
+Installed-Size: 93072
+Filename: dropbear_2011.54-1_keenetic.ipk
+Size: 93612
+MD5Sum: f1707b46b2b03138cc6713463394740b
 Description:  A small SSH2 server/client designed for small memory environments.
 
 Package: opkg
-Version: 576-6
+Version: 618-2
 Depends: 
 Provides: 
 Source: package/opkg
@@ -44,10 +44,10 @@ Essential: no
 Priority: optional
 Maintainer: Jo-Philipp Wich <xm@subsignal.org>
 Architecture: keenetic
-Installed-Size: 58994
-Filename: opkg_576-6_keenetic.ipk
-Size: 59753
-MD5Sum: f6d578091ad4c46f60c5617c08e7d609
+Installed-Size: 62281
+Filename: opkg_618-2_keenetic.ipk
+Size: 63020
+MD5Sum: dc1215d13b43cc7a2616fe13fbd3bce7
 Description:  Lightweight package management system
  opkg is the opkg Package Management System, for handling
  installation and removal of packages on a system. It can
