@@ -14,7 +14,7 @@ FEATURES:=squashfs
 
 LINUX_VERSION:=2.6.23-rt
 UCLIBC_VERSION:=0.9.30.3
-CFLAGS:=-Os -pipe -mips32 -mtune=mips32 -funit-at-a-time
+CFLAGS:=-Os -pipe -mips32r2 -mtune=mips32r2 -funit-at-a-time
 
 # include the profiles
 include $(INCLUDE_DIR)/target.mk

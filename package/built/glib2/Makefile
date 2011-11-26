@@ -8,16 +8,17 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=glib2
-PKG_VERSION:=2.22.2
-PKG_RELEASE:=1
+PKG_VERSION:=2.26.1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=glib-$(PKG_VERSION).tar.bz2
 PKG_BUILD_DIR:=$(BUILD_DIR)/glib-$(PKG_VERSION)
-PKG_SOURCE_URL:=@GNOME/glib/2.22
-PKG_MD5SUM:=846a86c74b74d5b16826aa5508940f9b
+PKG_SOURCE_URL:=@GNOME/glib/2.26
+PKG_MD5SUM:=17535accceef55bcb17a74d73f9c2aef
 
-PKG_FIXUP:=libtool
-PKG_BUILD_DEPENDS:=glib2/host
+PKG_FIXUP:=autoreconf
+PKG_BUILD_DEPENDS:=glib2/host libpthread zlib
+HOST_BUILD_DEPENDS:=gettext/host libiconv/host
 PKG_INSTALL:=1
 
 HOST_BUILD_DIR:=$(BUILD_DIR_HOST)/glib-$(PKG_VERSION)
@@ -38,9 +39,6 @@ define Package/glib2/description
   The GLib library of C routines
 endef
 
-TARGET_CFLAGS+= \
-	$(FPIC)
-
 define Build/Configure
 	$(call Build/Configure/Default, \
 		--enable-shared \
@@ -54,6 +52,8 @@ define Build/Configure
 		glib_cv_uscore=no \
 		ac_cv_path_GLIB_GENMARSHAL=$(STAGING_DIR_HOST)/bin/glib-genmarshal \
 		ac_cv_func_mmap_fixed_mapped=yes \
+		ac_cv_func_posix_getpwuid_r=yes \
+		ac_cv_func_posix_getgrgid_r=yes \
 	);
 endef
 

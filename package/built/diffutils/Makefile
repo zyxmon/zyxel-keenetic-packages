@@ -39,18 +39,4 @@ define Package/diffutils/install
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/{sdiff,diff3,diff,cmp} $(1)/bin/
 endef
 
-define Package/diffutils/preinst
-#!/bin/sh
-if [ -e $${IPKG_INSTROOT}/usr/bin/diff ]; then
-  rm $${IPKG_INSTROOT}/usr/bin/diff;
-fi
-endef
-
-define Package/diffutils/postrm
-#!/bin/sh
-ln -sf ../../bin/busybox $${IPKG_INSTROOT}/usr/bin/diff
-$${IPKG_INSTROOT}/usr/bin/diff 2>&1 | grep 'applet not found' > /dev/null 2>&1 && rm $${IPKG_INSTROOT}/usr/bin/diff
-exit 0
-endef
-
 $(eval $(call BuildPackage,diffutils))

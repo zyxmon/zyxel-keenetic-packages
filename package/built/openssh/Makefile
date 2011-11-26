@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=openssh
-PKG_VERSION:=5.8p2
+PKG_VERSION:=5.9p1
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
@@ -16,7 +16,9 @@ PKG_SOURCE_URL:=ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/ \
 		ftp://openbsd.wiretapped.net/pub/OpenBSD/OpenSSH/portable/ \
 		ftp://ftp.belnet.be/packages/openbsd/OpenSSH/portable/ \
 		ftp://ftp.de.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/
-PKG_MD5SUM:=0541579adf9d55abb15ef927048d372e
+PKG_MD5SUM:=afe17eee7e98d3b8550cc349834a85d0
+
+PKG_BUILD_DEPENDS:=libopenssl
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -28,6 +30,17 @@ define Package/openssh/Default
   URL:=http://www.openssh.com/
   SUBMENU:=SSH
 endef
+
+define Package/openssh-moduli
+  $(call Package/openssh/Default)
+  DEPENDS+= +openssh-server
+  TITLE+= moduli file
+endef
+
+define Package/openssh-moduli/description
+OpenSSH server moduli file.
+endef
+
 
 define Package/openssh-client
   $(call Package/openssh/Default)
@@ -189,6 +202,7 @@ define Package/openssh-sftp-server/install
 endef
 
 $(eval $(call BuildPackage,openssh-client))
+$(eval $(call BuildPackage,openssh-moduli))
 $(eval $(call BuildPackage,openssh-client-utils))
 $(eval $(call BuildPackage,openssh-keygen))
 $(eval $(call BuildPackage,openssh-server))
