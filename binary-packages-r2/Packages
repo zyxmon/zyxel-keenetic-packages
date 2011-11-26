@@ -1,3 +1,39 @@
+Package: aria2
+Version: 1.13.0-1
+Depends: libxml2, libstdcpp
+Provides: 
+Source: package/built/aria2
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1139381
+Filename: aria2_1.13.0-1_keenetic.ipk
+Size: 1136672
+MD5Sum: 23bda38f3128ae6b0f2bbc1a56023cf6
+Description:  download manager
+
+Package: bash
+Version: 4.2-1
+Depends: libncurses
+Provides: 
+Source: package/built/bash
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 347591
+Filename: bash_4.2-1_keenetic.ipk
+Size: 348025
+MD5Sum: c749d02f92eb1c4aa01c5b851e2669e8
+Description:  Bash is an sh-compatible command language interpreter that executes 
+ commands read from the standard input or from a file. Bash also 
+ incorporates useful features from the Korn and C shells (ksh and csh).
+
 Package: busybox
 Version: 1.19.3-6
 Depends: 
@@ -9,12 +45,121 @@ Essential: no
 Priority: optional
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keenetic
-Installed-Size: 166963
+Installed-Size: 166990
 Filename: busybox_1.19.3-6_keenetic.ipk
-Size: 167350
-MD5Sum: d958800873b9443235b3cd00dbef6920
+Size: 167415
+MD5Sum: 2188fb870a9d3ec85a1c2878f57a1f1a
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
+
+Package: bzip2
+Version: 1.0.6-1
+Depends: libbz2
+Provides: 
+Source: package/built/bzip2
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11441
+Filename: bzip2_1.0.6-1_keenetic.ipk
+Size: 12112
+MD5Sum: 830008df076dcca21c4be839b96cfee2
+Description:  bzip2 is a freely available, patent free, high-quality
+ data compressor. This package provides the binary.
+
+Package: cfdisk
+Version: 2.13.0.1-4
+Depends: libncurses
+Provides: 
+Source: package/built/util-linux-ng
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 27757
+Filename: cfdisk_2.13.0.1-4_keenetic.ipk
+Size: 28349
+MD5Sum: 18cd0981cad12c3128e872834985eae7
+Description:  This package contains a utility for managing disk partition tables.
+
+Package: coreutils-dd
+Version: 8.8-1
+Depends: coreutils
+Provides: 
+Source: package/built/coreutils
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 26520
+Filename: coreutils-dd_8.8-1_keenetic.ipk
+Size: 27152
+MD5Sum: 5f82ff3ec652649a3faa6f0f440c06a6
+Description:  Full version of standard GNU dd utility.  Normally, you would not
+ use this package, since the functionality in BusyBox is more than
+ sufficient.
+
+Package: coreutils
+Version: 8.8-1
+Depends: 
+Provides: 
+Source: package/built/coreutils
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 104
+Filename: coreutils_8.8-1_keenetic.ipk
+Size: 777
+MD5Sum: 5f94095c9fb8aaa024b6e6b88c92a52d
+Description:  Full versions of standard GNU utilities.  Normally, you would not
+ use this package, since the functionality in BusyBox is more than
+ sufficient and much smaller.
+
+Package: curlftpfs
+Version: 0.9.2-2
+Depends: libfuse, glib2
+Provides: 
+Source: package/built/curlftpfs
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19086
+Filename: curlftpfs_0.9.2-2_keenetic.ipk
+Size: 19744
+MD5Sum: 860316840dce4e3fddb4db1b09d53a54
+Description:  CurlFtpFS is a filesystem for accessing FTP hosts
+ based on FUSE and libcurl.
+
+Package: diffutils
+Version: 3.0-1
+Depends: 
+Provides: 
+Source: package/built/diffutils
+Section: devel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 143442
+Filename: diffutils_3.0-1_keenetic.ipk
+Size: 144032
+MD5Sum: 0ca7fb81372325eae8b2e400e298f97f
+Description:  The Diffutils package contains programs that show the differences between
+ files or directories.
 
 Package: dropbear
 Version: 2011.54-1
@@ -32,6 +177,1716 @@ Filename: dropbear_2011.54-1_keenetic.ipk
 Size: 93612
 MD5Sum: f1707b46b2b03138cc6713463394740b
 Description:  A small SSH2 server/client designed for small memory environments.
+
+Package: e2fsprogs
+Version: 1.41.12-4
+Depends: libblkid, libuuid, libext2fs, libcom_err
+Provides: 
+Source: package/e2fsprogs
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 129674
+Filename: e2fsprogs_1.41.12-4_keenetic.ipk
+Size: 130286
+MD5Sum: de1f9796628acd8f933879c484c92f2d
+Description:  This package contains essential ext2 filesystem utilities which consists of 
+ e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2 
+ filesystem utilities.
+
+Package: etherwake
+Version: 1.09-2
+Depends: 
+Provides: 
+Source: package/built/etherwake
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3979
+Filename: etherwake_1.09-2_keenetic.ipk
+Size: 4703
+MD5Sum: 4bfbf2af46e1c8f21429e8617508f3b6
+Description:  You can wake up WOL compliant Computers which have been powered down to 
+ sleep mode or start WOL compliant Computers with a BIOS feature.
+ WOL is an abbreviation for Wake-on-LAN. It is a standard that allows you 
+ to turn on a computer from another location over a network connection.
+ ether-wake also supports WOL passwords.
+
+Package: fdisk
+Version: 2.13.0.1-4
+Depends: 
+Provides: 
+Source: package/built/util-linux-ng
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 41518
+Filename: fdisk_2.13.0.1-4_keenetic.ipk
+Size: 42142
+MD5Sum: be3080da2b28fbc87d3b4ac972543fec
+Description:  This package contains a utility for managing disk partition tables.
+
+Package: file
+Version: 5.08-2
+Depends: libmagic
+Provides: 
+Source: package/built/file
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 97800
+Filename: file_5.08-2_keenetic.ipk
+Size: 98447
+MD5Sum: a441c08e710ca79fcd8691216bd2e016
+Description:  utility
+
+Package: gawk
+Version: 3.1.8-1
+Depends: 
+Provides: 
+Source: package/built/gawk
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 438740
+Filename: gawk_3.1.8-1_keenetic.ipk
+Size: 438951
+MD5Sum: 78c1a9321ef031f78d72ce59bf2c4f7f
+Description:  GNU version of AWK.
+
+Package: genl
+Version: 2.6.35-2
+Depends: 
+Provides: 
+Source: package/iproute2
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13534
+Filename: genl_2.6.35-2_keenetic.ipk
+Size: 14123
+MD5Sum: 408a3bc4a4e6667a987c6515b4664c73
+Description:  General netlink utility frontend
+
+Package: giflib
+Version: 4.1.6-1
+Depends: 
+Provides: 
+Source: package/built/giflib
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13145
+Filename: giflib_4.1.6-1_keenetic.ipk
+Size: 13797
+MD5Sum: 55cd1bb65080ea8b62b2c6bfecebeff4
+Description:  giflib is a library for reading and writing gif images.
+ It is API and ABI compatible with libungif which was in wide use while
+ the LZW compression algorithm was patented. 
+
+Package: glib2
+Version: 2.26.1-2
+Depends: libiconv-full, libintl-full
+Provides: 
+Source: package/built/glib2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 682342
+Filename: glib2_2.26.1-2_keenetic.ipk
+Size: 680298
+MD5Sum: 40e15f8f9b5d14d06c8640d248d05f9a
+Description:  The GLib library of C routines
+
+Package: htop
+Version: 0.9-1
+Depends: libncurses
+Provides: 
+Source: package/built/htop
+Section: admin
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 48544
+Filename: htop_0.9-1_keenetic.ipk
+Size: 49160
+MD5Sum: 2a2dcd306ce0f724d3f55597480b12d2
+Description:  Htop is an ncursed-based process viewer similar to top, but
+ it allows to scroll the list vertically and horizontally to
+ see all processes and their full command lines.
+
+Package: httping-nossl
+Version: 1.5.2-1
+Depends: 
+Provides: 
+Source: package/built/httping
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13093
+Filename: httping-nossl_1.5.2-1_keenetic.ipk
+Size: 13801
+MD5Sum: 802eeb2e5422eab791d972c60dbb9ffa
+Description:  Give it an url, and it'll show you how long it takes to connect, send a
+ request and retrieve the reply (only the headers). Be aware that the
+ transmission across the network also takes time!
+ This package is built without SSL support.
+
+Package: iconv
+Version: 1.11.1-1
+Depends: libiconv-full, libcharset
+Provides: 
+Source: package/built/libiconv-full
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10744
+Filename: iconv_1.11.1-1_keenetic.ipk
+Size: 11358
+MD5Sum: d4bd92f325a6201e1de4f1e7c111a4c3
+Description:  Character set conversion utility
+
+Package: id3lib
+Version: 3.8.3-1
+Depends: uclibcxx
+Provides: 
+Source: package/built/id3lib
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 75368
+Filename: id3lib_3.8.3-1_keenetic.ipk
+Size: 75950
+MD5Sum: 41eb76e70a3aefe97913959b2a4dabab
+Description:  An ID3v1/ID3v2 tag manipulation library
+
+Package: inadyn
+Version: 1.98.0-2
+Depends: 
+Provides: 
+Source: package/built/inadyn
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 22635
+Filename: inadyn_1.98.0-2_keenetic.ipk
+Size: 23267
+MD5Sum: 9d6e19acfb03b57a0bf6473ed05c2675
+Description:  inadyn - a client for open DNS servers.
+
+Package: ip
+Version: 2.6.35-2
+Depends: 
+Provides: 
+Source: package/iproute2
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 82501
+Filename: ip_2.6.35-2_keenetic.ipk
+Size: 82901
+MD5Sum: b5c80952ed49b01a870d8317e80a9f8f
+Description:  Routing control utility
+
+Package: js
+Version: 1.6.20070208-2
+Depends: libjs, libreadline, libncurses
+Provides: 
+Source: package/built/ossp-js
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11729
+Filename: js_1.6.20070208-2_keenetic.ipk
+Size: 12352
+MD5Sum: 27a6f15bf6ad967c3898e0543bc3f526
+Description:  Mozilla JavaScript Engine (interpreter)
+
+Package: kmod-fs-cifs
+Version: 2.6.23-rt-1
+Depends: 
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 145557
+Filename: kmod-fs-cifs_2.6.23-rt-1_keenetic.ipk
+Size: 144479
+MD5Sum: 8fc4fa57e6136bc366cddd0515b2d6d9
+Description:  Kernel module for CIFS support
+
+Package: kmod-fs-exportfs
+Version: 2.6.23-rt-1
+Depends: 
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3296
+Filename: kmod-fs-exportfs_2.6.23-rt-1_keenetic.ipk
+Size: 3898
+MD5Sum: 8db03896e28655756c7c4e8ada56edc5
+Description:  Kernel module for exportfs. Needed for some other modules.
+
+Package: kmod-fs-nfs-common
+Version: 2.6.23-rt-1
+Depends: 
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 140901
+Filename: kmod-fs-nfs-common_2.6.23-rt-1_keenetic.ipk
+Size: 140958
+MD5Sum: 5048c87eceb46a17dd990dd438fa497b
+Description:  Common NFS filesystem modules
+
+Package: kmod-fs-nfs
+Version: 2.6.23-rt-1
+Depends: kmod-fs-nfs-common
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 144968
+Filename: kmod-fs-nfs_2.6.23-rt-1_keenetic.ipk
+Size: 144809
+MD5Sum: 7af3149d73f8d05316e7008e6decae1d
+Description:  Kernel module for NFS support
+
+Package: kmod-fs-nfsd
+Version: 2.6.23-rt-1
+Depends: kmod-fs-nfs-common, kmod-fs-exportfs
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 111814
+Filename: kmod-fs-nfsd_2.6.23-rt-1_keenetic.ipk
+Size: 111784
+MD5Sum: d79bc2816df848ff39c150f931c06c66
+Description:  Kernel module for NFS kernel server support
+
+Package: kmod-tun
+Version: 2.6.23-rt-1
+Depends: 
+Provides: 
+Source: package/kernel
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5937
+Filename: kmod-tun_2.6.23-rt-1_keenetic.ipk
+Size: 6558
+MD5Sum: 0b0cf76d7b26c1c078d5ebfde7541d02
+Description:  Kernel support for the TUN/TAP tunneling device
+
+Package: ldd
+Version: 0.9.30.3-61
+Depends: 
+Provides: 
+Source: package/built/ldd
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4436
+Filename: ldd_0.9.30.3-61_keenetic.ipk
+Size: 5001
+MD5Sum: 4a5c56d176e8c212dad407b281d565aa
+Description:  LDD trace utility
+
+Package: libapr
+Version: 1.4.5-2
+Depends: 
+Provides: 
+Source: package/built/apr
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 68356
+Filename: libapr_1.4.5-2_keenetic.ipk
+Size: 69029
+MD5Sum: 690e32694a961fe7e8ff2f759ab0849c
+Description:  Apache Portable Runtime Library
+
+Package: libaprutil
+Version: 1.3.12-2
+Depends: libapr, libexpat, libsqlite3, libuuid, libiconv-full
+Provides: 
+Source: package/built/apr-util
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 50852
+Filename: libaprutil_1.3.12-2_keenetic.ipk
+Size: 51555
+MD5Sum: 19b41c21917c3c758ec98ecab5dcd64a
+Description:  Apache Portable Runtime Utility Library
+
+Package: libblkid
+Version: 1.41.12-4
+Depends: 
+Provides: 
+Source: package/e2fsprogs
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18136
+Filename: libblkid_1.41.12-4_keenetic.ipk
+Size: 18755
+MD5Sum: aed0aed8b20abe5980b26a105f1b4706
+Description:  The blkid library which allows system programs like fsck and mount to 
+ quickly and easily find block devices by filesystem UUID and LABEL.
+
+Package: libbz2
+Version: 1.0.6-1
+Depends: 
+Provides: 
+Source: package/built/bzip2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 26999
+Filename: libbz2_1.0.6-1_keenetic.ipk
+Size: 27606
+MD5Sum: 200d194a90f81548f6017fa7b9d5a4c9
+Description:  bzip2 is a freely available, patent free, high-quality
+ data compressor. This packages provides libbz2 library.
+
+Package: libcares
+Version: 1.7.5-1
+Depends: 
+Provides: 
+Source: package/built/c-ares
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 26242
+Filename: libcares_1.7.5-1_keenetic.ipk
+Size: 26813
+MD5Sum: df157d43fb190c0074ee25b87f7ab650
+Description:  c-ares is a C library that performs DNS requests and name resolves
+ asynchronously.
+
+Package: libcharset
+Version: 1.11.1-1
+Depends: 
+Provides: 
+Source: package/built/libiconv-full
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2947
+Filename: libcharset_1.11.1-1_keenetic.ipk
+Size: 3582
+MD5Sum: 5e86cb8990635ee701125cc224d8c7a0
+Description:  Character set conversion library
+
+Package: libcom_err
+Version: 1.41.12-4
+Depends: 
+Provides: 
+Source: package/e2fsprogs
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3856
+Filename: libcom_err_1.41.12-4_keenetic.ipk
+Size: 4451
+MD5Sum: 79dc50a558cd10505480572dc191fff4
+Description:  libcom_err is a library providing common error descriptions
+
+Package: libdb47
+Version: 4.7.25.NC-6
+Depends: libxml2
+Provides: 
+Source: package/built/db47
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: W. Michael Petullo <mike@flyn.org>
+Architecture: keenetic
+Installed-Size: 291666
+Filename: libdb47_4.7.25.NC-6_keenetic.ipk
+Size: 291876
+MD5Sum: fbf53861c44ea1ff88645de774591116
+Description:  Berkeley DB library (4.7).
+
+Package: libdb51
+Version: 5.1.25.NC-1
+Depends: libxml2
+Provides: 
+Source: package/built/db51
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: W. Michael Petullo <mike@flyn.org>
+Architecture: keenetic
+Installed-Size: 310019
+Filename: libdb51_5.1.25.NC-1_keenetic.ipk
+Size: 309738
+MD5Sum: 95d5819d63e4b27c9d15d438ff90e468
+Description:  Berkeley DB library (5.1).
+
+Package: libevent2
+Version: 2.0.15-1
+Depends: 
+Provides: 
+Source: package/built/libevent2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 95431
+Filename: libevent2_2.0.15-1_keenetic.ipk
+Size: 96228
+MD5Sum: 9f88800a501d08402a2b3be6120a211f
+Description:  The libevent API provides a mechanism to execute a callback function
+ when a specific event occurs on a file descriptor or after a timeout
+ has been reached. Furthermore, libevent also support callbacks due
+ to signals or regular timeouts.
+ 
+ libevent is meant to replace the event loop found in event driven
+ network servers. An application just needs to call event_dispatch()
+ and then add or remove events dynamically without having to change
+ the event loop.
+ 
+ This package contains the libevent shared library historically
+ containing both the core & extra libraries.
+
+Package: libevent
+Version: 1.4.14b-2
+Depends: 
+Provides: 
+Source: package/built/libevent
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 84617
+Filename: libevent_1.4.14b-2_keenetic.ipk
+Size: 85196
+MD5Sum: afa9862d30632d3d047a8aa310587ab3
+Description:  The libevent API provides a mechanism to execute a callback function
+ when a specific event occurs on a file descriptor or after a timeout
+ has been reached. Furthermore, libevent also support callbacks due
+ to signals or regular timeouts.
+ 
+ libevent is meant to replace the event loop found in event driven
+ network servers. An application just needs to call event_dispatch()
+ and then add or remove events dynamically without having to change
+ the event loop.
+
+Package: libexif
+Version: 0.6.20-1
+Depends: 
+Provides: 
+Source: package/built/libexif
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 60738
+Filename: libexif_0.6.20-1_keenetic.ipk
+Size: 60656
+MD5Sum: 4605b9a29e3ddab15c78d9c30bfbc724
+Description:  libexif is a library for parsing, editing, and saving EXIF data. It is
+ intended to replace lots of redundant implementations in command-line
+ utilities and programs with GUIs.
+
+Package: libexpat
+Version: 2.0.1-1
+Depends: 
+Provides: 
+Source: package/built/expat
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 50175
+Filename: libexpat_2.0.1-1_keenetic.ipk
+Size: 50726
+MD5Sum: 118c2d593f93273db52cecd99f5e6ae4
+Description:  A fast, non-validating, stream-oriented XML parsing library.
+
+Package: libext2fs
+Version: 1.41.12-4
+Depends: 
+Provides: 
+Source: package/e2fsprogs
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 76359
+Filename: libext2fs_1.41.12-4_keenetic.ipk
+Size: 76975
+MD5Sum: 2375ff2051bf112542621b5f3e9cba78
+Description:  libext2fs is a library which can access ext2, ext3 and ext4 filesystems.
+
+Package: libffi
+Version: 3.0.9-1
+Depends: 
+Provides: 
+Source: package/built/libffi
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11669
+Filename: libffi_3.0.9-1_keenetic.ipk
+Size: 12584
+MD5Sum: 81050c50a6cdf809e5f2912666733658
+Description:  The libffi library provides a portable, high level programming interface to
+ various calling conventions. This allows a programmer to call any function
+ specified by a call interface description at run-time.
+ 
+ FFI stands for Foreign Function Interface. A foreign function interface is the
+ popular name for the interface that allows code written in one language to call
+ code written in another language. The libffi library really only provides the
+ lowest, machine dependent layer of a fully featured foreign function interface.
+ A layer must exist above libffi that handles type conversions for values passed
+ between the two languages.
+
+Package: libffmpeg
+Version: 0.8.2-1
+Depends: 
+Provides: 
+Source: package/built/ffmpeg
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 526127
+Filename: libffmpeg_0.8.2-1_keenetic.ipk
+Size: 523588
+MD5Sum: 79ba9abf8a78af1ce2b69e4afd9ebfdf
+Description:  libraries
+
+Package: libflac
+Version: 1.2.1-1
+Depends: 
+Provides: 
+Source: package/built/flac
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 128469
+Filename: libflac_1.2.1-1_keenetic.ipk
+Size: 129038
+MD5Sum: 04d434bbe2fd0bdf49d09cc71a61715c
+Description:  Free Lossless Audio Codec library
+
+Package: libfreetype
+Version: 2.3.12-1
+Depends: 
+Provides: 
+Source: package/built/freetype
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 233489
+Filename: libfreetype_2.3.12-1_keenetic.ipk
+Size: 233765
+MD5Sum: 2eb75bfc87382d84b52f10688882a79b
+Description:  The FreeType project is a team of volunteers who develop free, 
+ portable and high-quality software solutions for digital typography.
+ They specifically target embedded systems and focus on bringing small, 
+ efficient and ubiquitous products.
+
+Package: libfuse
+Version: 2.8.5-1
+Depends: 
+Provides: 
+Source: package/built/fuse
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 49372
+Filename: libfuse_2.8.5-1_keenetic.ipk
+Size: 49911
+MD5Sum: 533cdd80e341f9be62c3fb16cc943cfb
+Description:  FUSE (Filesystem in UserSpacE)
+ This package contains the FUSE shared libraries, needed by other programs.
+ - libfuse
+ - libulockmgr
+
+Package: libgcrypt
+Version: 1.5.0-1
+Depends: libgpg-error
+Provides: 
+Source: package/built/libgcrypt
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 150779
+Filename: libgcrypt_1.5.0-1_keenetic.ipk
+Size: 149772
+MD5Sum: b2d9da35f5d78a45ee6c3b3bac0f115d
+Description:  This is a general purpose cryptographic library based on the code from
+ GnuPG. It provides functions for all cryptograhic building blocks:
+ symmetric ciphers (AES, DES, Arcfour, CAST5), hash algorithms (MD5, SHA-1,
+ RIPE-MD160, SHA-224/256, SHA-384/512), MACs (HMAC for all hash
+ algorithms), public key algorithms (RSA, DSA), large integer functions,
+ random numbers and a lot of supporting functions. Some algorithms have
+ been disabled to reduce size (Blowfish, Twofish, Serpent,
+ RC2, SEED, Camellia, CRC, MD4, TIGER-192, Whirlpool, ElGamal, ECC).
+
+Package: libgd
+Version: 2.0.35-1
+Depends: libjpeg, libpng
+Provides: 
+Source: package/built/gd
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 53879
+Filename: libgd_2.0.35-1_keenetic.ipk
+Size: 54503
+MD5Sum: 0ac40e347a992cf507f16c002bbea951
+Description:  GD is an open source code library for the dynamic creation of images by
+ programmers. GD creates PNG, JPEG and GIF images, among other formats.
+
+Package: libgdbm
+Version: 1.9.1-2
+Depends: 
+Provides: 
+Source: package/built/gdbm
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 12049
+Filename: libgdbm_1.9.1-2_keenetic.ipk
+Size: 12642
+MD5Sum: 2e11de6aab96381789a1f87145d3071b
+Description:  GNU database manager
+
+Package: libgmp
+Version: 4.3.1-2
+Depends: 
+Provides: 
+Source: package/built/gmp
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 140724
+Filename: libgmp_4.3.1-2_keenetic.ipk
+Size: 141315
+MD5Sum: 96bc9ac622e1a04b5a60a693d91a94b1
+Description:  GMP is a free library for arbitrary precision arithmetic, operating on
+ signed integers, rational numbers, and floating point numbers.
+
+Package: libgpg-error
+Version: 1.9-1
+Depends: 
+Provides: 
+Source: package/built/libgpg-error
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4987
+Filename: libgpg-error_1.9-1_keenetic.ipk
+Size: 5713
+MD5Sum: 6e18f8b73979be4912bd28f5a6a6ae2f
+Description:  An helper library for common error codes and descriptions.
+ This is a library that defines common error values for all GnuPG
+ components. Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt,
+ Libksba, DirMngr, Pinentry, SmartCard Daemon and possibly more in the
+ future.
+
+Package: libiconv-full
+Version: 1.11.1-1
+Depends: 
+Provides: 
+Source: package/built/libiconv-full
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 666035
+Filename: libiconv-full_1.11.1-1_keenetic.ipk
+Size: 666011
+MD5Sum: e27329e3a2956a68ae4f34f9830703de
+Description:  Character set conversion library
+
+Package: libid3tag
+Version: 0.15.1b-3
+Depends: 
+Provides: 
+Source: package/built/libid3tag
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 24374
+Filename: libid3tag_0.15.1b-3_keenetic.ipk
+Size: 24859
+MD5Sum: 49a3d470bca5489dc60371758847b747
+Description:  libid3tag is a library for reading and (eventually) writing ID3 tags, both 
+ ID3v1 and the various versions of ID3v2.
+
+Package: libintl-full
+Version: 0.18.1.1-1
+Depends: 
+Provides: 
+Source: package/built/gettext-full
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 14955
+Filename: libintl-full_0.18.1.1-1_keenetic.ipk
+Size: 15280
+MD5Sum: 1f6e66b675a9d7e2e40faf253dbb71e4
+Description:  GNU Internationalization library
+
+Package: libjpeg
+Version: 6b-1
+Depends: 
+Provides: 
+Source: package/built/jpeg
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 58928
+Filename: libjpeg_6b-1_keenetic.ipk
+Size: 59524
+MD5Sum: bc0b5782f9b63a92dc51137dc17d23a4
+Description:  The Independent JPEG Group's JPEG runtime library
+
+Package: libjs
+Version: 1.6.20070208-2
+Depends: 
+Provides: 
+Source: package/built/ossp-js
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 277639
+Filename: libjs_1.6.20070208-2_keenetic.ipk
+Size: 277711
+MD5Sum: 3cdaa9f2ddcfb73897fe18ebce038872
+Description:  Mozilla JavaScript Engine (library)
+
+Package: liblcms
+Version: 1.19-1
+Depends: libjpeg, libtiff
+Provides: 
+Source: package/built/liblcms
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 124521
+Filename: liblcms_1.19-1_keenetic.ipk
+Size: 124993
+MD5Sum: f6d4e2b573cdf8b18e7a21d728408228
+Description:  A small-footprint, speed optimized color management engine.
+
+Package: libleptonica
+Version: 1.68-1
+Depends: giflib, libjpeg, libpng, libtiff
+Provides: 
+Source: package/built/leptonica
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 569104
+Filename: libleptonica_1.68-1_keenetic.ipk
+Size: 568605
+MD5Sum: b77fda8efb046a628fcc51d0ce4b0117
+Description:  A library for efficient image processing and image analysis operations
+
+Package: liblua
+Version: 5.1.4-8
+Depends: 
+Provides: 
+Source: package/built/lua
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 67582
+Filename: liblua_5.1.4-8_keenetic.ipk
+Size: 68100
+MD5Sum: 0fc7fe4de614675152f79fbb2d13df7f
+Description:  Lua is a powerful light-weight programming language designed for extending 
+ applications. Lua is also frequently used as a general-purpose, stand-alone 
+ language. Lua is free software.
+ This package contains the Lua shared libraries, needed by other programs.
+
+Package: liblzo
+Version: 2.05-1
+Depends: 
+Provides: 
+Source: package/built/lzo
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 31642
+Filename: liblzo_2.05-1_keenetic.ipk
+Size: 32240
+MD5Sum: cad4c6de2a0977dd7a17b07e1b441ca9
+Description:  LZO is a data compression library which is suitable for data de-/compression in
+ real-time. This means it favours speed over compression ratio.
+
+Package: libmagic
+Version: 5.08-2
+Depends: 
+Provides: 
+Source: package/built/file
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 95178
+Filename: libmagic_5.08-2_keenetic.ipk
+Size: 95487
+MD5Sum: ca83e19592d9d9fa672a4e556c385ab5
+Description:  library
+
+Package: libncurses
+Version: 5.7-3
+Depends: 
+Provides: 
+Source: package/ncurses
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 116608
+Filename: libncurses_5.7-3_keenetic.ipk
+Size: 115436
+MD5Sum: 88b1211938679510536321ee210ad3fd
+Description:  Terminal handling library
+
+Package: libneon
+Version: 0.29.6-2
+Depends: libexpat
+Provides: 
+Source: package/built/neon
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 56633
+Filename: libneon_0.29.6-2_keenetic.ipk
+Size: 57280
+MD5Sum: d8dbaba0d8487fc565411191c8498fef
+Description:  HTTP and WebDAV client library
+
+Package: libogg
+Version: 1.1.4-2
+Depends: 
+Provides: 
+Source: package/built/libogg
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8589
+Filename: libogg_1.1.4-2_keenetic.ipk
+Size: 9335
+MD5Sum: f2e38289742120515b39802e418a12c0
+Description:  Ogg project codecs use the Ogg bitstream format to arrange the raw,
+ compressed bitstream into a more robust, useful form.  For example,
+ the Ogg bitstream makes seeking, time stamping and error recovery
+ possible, as well as mixing several sepearate, concurrent media
+ streams into a single physical bitstream.
+
+Package: libpcap
+Version: 1.1.1-1
+Depends: 
+Provides: 
+Source: package/libpcap
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 78496
+Filename: libpcap_1.1.1-1_keenetic.ipk
+Size: 79138
+MD5Sum: 92d228015655bd92be0a62dc72f3bc64
+Description:  This package contains a system-independent library for user-level network packet
+ capture.
+
+Package: libpcre
+Version: 8.11-2
+Depends: 
+Provides: 
+Source: package/built/pcre
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 66695
+Filename: libpcre_8.11-2_keenetic.ipk
+Size: 67299
+MD5Sum: a701b6c9edd36b7009a6ed570873b7d1
+Description:  A Perl Compatible Regular Expression library
+
+Package: libpng
+Version: 1.2.46-1
+Depends: 
+Provides: 
+Source: package/built/libpng
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 117723
+Filename: libpng_1.2.46-1_keenetic.ipk
+Size: 118309
+MD5Sum: 00020758080fab0134630fb8237dd67f
+Description:  A PNG format files handling library
+
+Package: libreadline
+Version: 5.2-3
+Depends: 
+Provides: 
+Source: package/libreadline
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 107637
+Filename: libreadline_5.2-3_keenetic.ipk
+Size: 107927
+MD5Sum: 383b0a69a5b57c4accafd5a497673a7a
+Description:  The Readline library provides a set of functions for use by applications 
+ that allow users to edit command lines as they are typed in. Both Emacs 
+ and vi editing modes are available. The Readline library includes 
+ additional functions to maintain a list of previously-entered command 
+ lines, to recall and perhaps reedit those lines, and perform csh-like 
+ history expansion on previous commands.
+
+Package: libslang2
+Version: 2.2.3-1
+Depends: libncurses
+Provides: 
+Source: package/built/slang2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 309088
+Filename: libslang2_2.2.3-1_keenetic.ipk
+Size: 299778
+MD5Sum: 708db01fcececf40d50ac0e2a62dcbcd
+Description:  This is a shell which is mostly just a wrapper around the S-Lang Interpreter,
+ which is part of the S-Lang Library.
+
+Package: libsqlite2
+Version: 2.8.17-2
+Depends: 
+Provides: 
+Source: package/built/sqlite2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 144487
+Filename: libsqlite2_2.8.17-2_keenetic.ipk
+Size: 144590
+MD5Sum: a8d7a39995c8b9e5272a6283077831d1
+Description:  SQLite is a small C library that implements a self-contained, embeddable, 
+ zero-configuration SQL database engine.	
+ This package contains the SQLite (v2.x) shared library, used by other programs.
+
+Package: libsqlite3
+Version: 3070701-2
+Depends: 
+Provides: 
+Source: package/built/sqlite3
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 292207
+Filename: libsqlite3_3070701-2_keenetic.ipk
+Size: 292506
+MD5Sum: 435bbf7a9a19ee6bc70f17e6b408591c
+Description:  SQLite is a small C library that implements a self-contained, embeddable,
+ zero-configuration SQL database engine.
+ This package contains the SQLite (v3.x) shared library, used by other
+ programs.
+
+Package: libstdcpp
+Version: 4.1.2-60
+Depends: 
+Provides: 
+Source: package/base-files
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 160655
+Filename: libstdcpp_4.1.2-60_keenetic.ipk
+Size: 160651
+MD5Sum: 4d55ecc1ad439bebdd34df8a37638943
+Description:  GNU Standard C++ Library v3
+
+Package: libtiff
+Version: 3.9.2-1
+Depends: libjpeg
+Provides: 
+Source: package/built/tiff
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 101111
+Filename: libtiff_3.9.2-1_keenetic.ipk
+Size: 101324
+MD5Sum: 5c403853abb2ff9d4722c346ef70b771
+Description:  TIFF library
+
+Package: libusb-1.0
+Version: 1.0.8-1
+Depends: 
+Provides: 
+Source: package/built/libusb-1.0
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19673
+Filename: libusb-1.0_1.0.8-1_keenetic.ipk
+Size: 20251
+MD5Sum: 5d27d780d84678763418327a837ff5a8
+Description:  libusb-1.0
+
+Package: libuuid
+Version: 1.41.12-4
+Depends: 
+Provides: 
+Source: package/e2fsprogs
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6882
+Filename: libuuid_1.41.12-4_keenetic.ipk
+Size: 7565
+MD5Sum: 209c956b04492693890ea654bf8207e3
+Description:  Library for generating DCE compatible Universally Unique Identifiers.
+
+Package: libvorbis
+Version: 1.2.3-1
+Depends: libogg
+Provides: 
+Source: package/built/libvorbis
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 174854
+Filename: libvorbis_1.2.3-1_keenetic.ipk
+Size: 172092
+MD5Sum: 505cef70fdd03f75de10a1967f452aef
+Description:  Vorbis is a general purpose audio and music encoding format
+ contemporary to MPEG-4's AAC and TwinVQ, the next generation beyond
+ MPEG audio layer 3. Unlike the MPEG sponsored formats (and other
+ proprietary formats such as RealAudio G2 and Windows' flavor of the
+ month), the Vorbis CODEC specification belongs to the public domain.
+ All the technical details are published and documented, and any
+ software entity may make full use of the format without license
+ fee, royalty or patent concerns.
+
+Package: libwrap
+Version: 7.6-1
+Depends: 
+Provides: 
+Source: package/built/tcp_wrappers
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10338
+Filename: libwrap_7.6-1_keenetic.ipk
+Size: 10976
+MD5Sum: 7407f2f42f0156b44a5d09931e113f2c
+Description:  Security wrapper library for TCP services
+
+Package: libxml2
+Version: 2.7.8-1
+Depends: 
+Provides: 
+Source: package/built/libxml2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 446870
+Filename: libxml2_2.7.8-1_keenetic.ipk
+Size: 444700
+MD5Sum: dd443bb49b56c2f940a0841e5f778bcd
+Description:  A library for manipulating XML and HTML resources.
+
+Package: lighttpd-mod-access
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2260
+Filename: lighttpd-mod-access_1.4.29-1_keenetic.ipk
+Size: 2885
+MD5Sum: be4e5e4a7b3d4e1705c4f5cf672e59df
+Description:  Access restrictions module
+
+Package: lighttpd-mod-accesslog
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5761
+Filename: lighttpd-mod-accesslog_1.4.29-1_keenetic.ipk
+Size: 6347
+MD5Sum: 60c22f8577cb665160d9c609fc72584f
+Description:  Access logging module
+
+Package: lighttpd-mod-cgi
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8600
+Filename: lighttpd-mod-cgi_1.4.29-1_keenetic.ipk
+Size: 9196
+MD5Sum: 087514371f8d38a709ffbf2acd086645
+Description:  CGI module
+
+Package: lighttpd-mod-fastcgi
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 21100
+Filename: lighttpd-mod-fastcgi_1.4.29-1_keenetic.ipk
+Size: 21675
+MD5Sum: 921ebd91e79c4c86d3e5ca9256165dbf
+Description:  FastCGI module
+
+Package: lighttpd-mod-redirect
+Version: 1.4.29-1
+Depends: lighttpd, libpcre
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3099
+Filename: lighttpd-mod-redirect_1.4.29-1_keenetic.ipk
+Size: 3722
+MD5Sum: 6b87ab06e3339ebb0e84e3df2513fe13
+Description:  URL redirection module
+
+Package: lighttpd-mod-rewrite
+Version: 1.4.29-1
+Depends: lighttpd, libpcre
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4196
+Filename: lighttpd-mod-rewrite_1.4.29-1_keenetic.ipk
+Size: 4790
+MD5Sum: 81c67142a20398b1d12aab6062f1554d
+Description:  URL rewriting module
+
+Package: lighttpd
+Version: 1.4.29-1
+Depends: libpcre
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 87961
+Filename: lighttpd_1.4.29-1_keenetic.ipk
+Size: 88603
+MD5Sum: 193838ffd671840119a133d18ae3b777
+Description:  A flexible and lightweight web server
+
+Package: lua
+Version: 5.1.4-8
+Depends: liblua
+Provides: 
+Source: package/built/lua
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4622
+Filename: lua_5.1.4-8_keenetic.ipk
+Size: 5324
+MD5Sum: 32044a6f468a4b5947566f166449148f
+Description:  Lua is a powerful light-weight programming language designed for extending 
+ applications. Lua is also frequently used as a general-purpose, stand-alone 
+ language. Lua is free software.
+ This package contains the Lua language interpreter.
+
+Package: make
+Version: 3.81-1
+Depends: 
+Provides: 
+Source: package/built/make
+Section: devel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 74104
+Filename: make_3.81-1_keenetic.ipk
+Size: 74667
+MD5Sum: 8a058b29313e1137bd16c4108c3f7abd
+Description:  The Make package contains a program for compiling packages
+
+Package: mc
+Version: 4.8.0-1
+Depends: libiconv-full, libintl-full, glib2, libncurses, libslang2
+Provides: 
+Source: package/built/mc
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 583970
+Filename: mc_4.8.0-1_keenetic.ipk
+Size: 583660
+MD5Sum: 3f9a4eef959e78445225893721e965b0
+Description:  GNU Midnight Commander is a text-mode full-screen file manager. 
+ It uses a two panel interface and a subshell for command execution. 
+ It includes an internal editor with syntax highlighting and an 
+ internal viewer with support for binary files. Also included is 
+ Virtual Filesystem (VFS), that allows files on remote systems 
+ (e.g. FTP, SSH, SMB servers) and files inside archives to be 
+ manipulated like real files.
+
+Package: mcprobe
+Version: 0-1
+Depends: 
+Provides: 
+Source: package/built/mcprobe
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3792
+Filename: mcprobe_0-1_keenetic.ipk
+Size: 4345
+MD5Sum: 2642f92271791ffffaac2c847f9e3bc8
+Description:  mcprobe is a test utility for multicast.
+
+Package: mediatomb
+Version: 0.12.1-4
+Depends: libexif, libsqlite3, id3lib, file, libjs, libexpat, libffmpeg, libstdcpp
+Provides: 
+Source: package/built/mediatomb
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 630904
+Filename: mediatomb_0.12.1-4_keenetic.ipk
+Size: 630938
+MD5Sum: 9748194ccfc5c19427a479881c5af782
+Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user interface and
+ with the aim of being fully compliant with DLNA/UPnP-AV clients.
+
+Package: microdc2
+Version: 0.15.6-3
+Depends: libiconv-full, libxml2, libreadline, libncurses, iconv
+Provides: 
+Source: package/built/microdc2
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 147375
+Filename: microdc2_0.15.6-3_keenetic.ipk
+Size: 147849
+MD5Sum: cdc8c87a5d480f8d2edf32390cc3d6cc
+Description:  A command-line based Direct Connect client.
+
+Package: microperl
+Version: 5.10.0-7
+Depends: 
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 438385
+Filename: microperl_5.10.0-7_keenetic.ipk
+Size: 438811
+MD5Sum: dd7cb288e3ffdb90c1cbca3a0debcda9
+Description:  A perl package without operating-specific functions such as readdir.
+
+Package: minidlna
+Version: 1.0.22-1
+Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
+Provides: 
+Source: package/built/minidlna
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 135302
+Filename: minidlna_1.0.22-1_keenetic.ipk
+Size: 135873
+MD5Sum: f58a389d1be6a1d6473b2f61a6a6f89f
+Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
+ being fully compliant with DLNA/UPnP-AV clients.
+
+Package: mtr
+Version: 0.81-1
+Depends: libncurses
+Provides: 
+Source: package/built/mtr
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 27791
+Filename: mtr_0.81-1_keenetic.ipk
+Size: 28597
+MD5Sum: 4edfbf6396c454e8d8197d1981aa7f63
+Description:  mtr combines the functionality of the 'traceroute' and 'ping' programs
+ in a single network diagnostic tool.
+ As mtr starts, it investigates the network connection between the host
+ mtr runs on and a user-specified destination host. After it
+ determines the address of each network hop between the machines,
+ it sends a sequence ICMP ECHO requests to each one to determine the
+ quality of the link to each machine. As it does this, it prints
+ running statistics about each machine.
+
+Package: nano
+Version: 2.2.6-1
+Depends: libncurses
+Provides: 
+Source: package/built/nano
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Bernhard Loos <bernhardloos@googlemail.com>
+Architecture: keenetic
+Installed-Size: 35316
+Filename: nano_2.2.6-1_keenetic.ipk
+Size: 36038
+MD5Sum: 96ea6a390729f68ceca4eaf807a5c127
+Description:  GNU nano (Nano's ANOther editor, or Not ANOther editor) is an enhanced clone
+ of the Pico text editor.
+
+Package: netatalk
+Version: 2.2.1-2
+Depends: libdb51, libgcrypt
+Provides: 
+Source: package/built/netatalk
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: W. Michael Petullo <mike@flyn.org>
+Architecture: keenetic
+Installed-Size: 354479
+Filename: netatalk_2.2.1-2_keenetic.ipk
+Size: 353596
+MD5Sum: cee6171e71890a1cf40ff7b7afbaa63d
+Description:  netatalk
+
+Package: nfs-kernel-server
+Version: 1.2.5-1
+Depends: libwrap, libblkid, libuuid, kmod-fs-nfsd, kmod-fs-nfs, portmap
+Provides: 
+Source: package/built/nfs-kernel-server
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 108854
+Filename: nfs-kernel-server_1.2.5-1_keenetic.ipk
+Size: 109016
+MD5Sum: fceb545c5d5edc30034b0a1ca0dc80c8
+Description:  Kernel NFS server support
+
+Package: openssh-sftp-server
+Version: 5.9p1-1
+Depends: 
+Provides: 
+Source: package/built/openssh
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Peter Wagner <tripolar@gmx.at>
+Architecture: keenetic
+Installed-Size: 27440
+Filename: openssh-sftp-server_5.9p1-1_keenetic.ipk
+Size: 28016
+MD5Sum: 061629816ab5b79d0a32af3b8ce47d55
+Description:  OpenSSH SFTP server.
+
+Package: openvpn
+Version: 2.2.1-2
+Depends: kmod-tun, liblzo
+Provides: 
+Source: package/built/openvpn
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 164752
+Filename: openvpn_2.2.1-2_keenetic.ipk
+Size: 165304
+MD5Sum: 162e00566ab9b7f6678e3521404f1679
+Description:  Open source VPN solution using SSL
 
 Package: opkg
 Version: 618-2
@@ -56,6 +1911,3621 @@ Description:  Lightweight package management system
  
  opkg knows how to install both .ipk and .deb packages.
 
+Package: perl-compress-bzip2
+Version: 2.09-3
+Depends: perl, libbz2
+Provides: 
+Source: package/built/perl-compress-bzip2
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 23493
+Filename: perl-compress-bzip2_2.09-3_keenetic.ipk
+Size: 24086
+MD5Sum: 8d884797144916c1a7350016b5c7cdf8
+Description:  Perl interface to bzip2 compression library
+
+Package: perl-dbi
+Version: 1.604-1
+Depends: perl, perlbase-essential
+Provides: 
+Source: package/built/perl-dbi
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 161090
+Filename: perl-dbi_1.604-1_keenetic.ipk
+Size: 161789
+MD5Sum: 3391e37400e9b9c10cb9282478973096
+Description:  Database independent interface for Perl
+
+Package: perl-html-parser
+Version: 3.56-1
+Depends: perl, perl-html-tagset, perl-uri
+Provides: 
+Source: package/built/perl-html-parser
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 27354
+Filename: perl-html-parser_3.56-1_keenetic.ipk
+Size: 28006
+MD5Sum: 94e77508ef5af07af48448749cadd89f
+Description:  A collection of modules that parse HTML text documents
+
+Package: perl-html-tagset
+Version: 3.20-1
+Depends: perl
+Provides: 
+Source: package/built/perl-html-tagset
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1850
+Filename: perl-html-tagset_3.20-1_keenetic.ipk
+Size: 2483
+MD5Sum: 40b55961912b67b7c3c2938a687d1022
+Description:  Data tables pertaining to HTML
+
+Package: perl-html-tree
+Version: 3.23-2
+Depends: perl, perl-html-parser, perl-html-tagset
+Provides: 
+Source: package/built/perl-html-tree
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 31600
+Filename: perl-html-tree_3.23-2_keenetic.ipk
+Size: 32215
+MD5Sum: 585243d39e792f908b33783d7d2c73e3
+Description:  represent and create HTML syntax trees
+
+Package: perl-lockfile-simple
+Version: 0.206-1
+Depends: perl
+Provides: 
+Source: package/built/perl-lockfile-simple
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4630
+Filename: perl-lockfile-simple_0.206-1_keenetic.ipk
+Size: 5230
+MD5Sum: a19e17c73ed5dfe9fb08915fe68cc3eb
+Description:  Simple advisory file locking
+
+Package: perl-uri
+Version: 1.36-1
+Depends: perl
+Provides: 
+Source: package/built/perl-uri
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19590
+Filename: perl-uri_1.36-1_keenetic.ipk
+Size: 20221
+MD5Sum: b9c1e849351e3d55b67ed130134dab28
+Description:  Manipulates and accesses URI strings
+
+Package: perl-www-curl
+Version: 4.00-1
+Depends: perl
+Provides: 
+Source: package/built/perl-www-curl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 16934
+Filename: perl-www-curl_4.00-1_keenetic.ipk
+Size: 17551
+MD5Sum: 7b07caed7069bce53e74711a404fac97
+Description:  Perl bindings to libcurl
+
+Package: perl-www-mechanize
+Version: 1.58-1
+Depends: perl, perl-www
+Provides: 
+Source: package/built/perl-www-mechanize
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 9772
+Filename: perl-www-mechanize_1.58-1_keenetic.ipk
+Size: 10371
+MD5Sum: e2b402a2c522f65841b9cd41de52257d
+Description:  Perl WWW Mechanize
+
+Package: perl-www
+Version: 5.812-1
+Depends: perl, perl-html-parser, perl-uri
+Provides: 
+Source: package/built/perl-www
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 75930
+Filename: perl-www_5.812-1_keenetic.ipk
+Size: 76697
+MD5Sum: 97b0b6cc3ce017b502cf66cf780eafc9
+Description:  WWW client/server library for Perl (aka LWP)
+
+Package: perl
+Version: 5.10.0-7
+Depends: 
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 553053
+Filename: perl_5.10.0-7_keenetic.ipk
+Size: 553462
+MD5Sum: ca6d4b1223650b9ef6fbde49572b7b97
+Description:  Perl is a stable, cross platform programming language.
+ It is used for mission critical projects in the public and private sectors
+ and is widely used to program web applications of all needs.
+
+Package: perlbase-abbrev
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 507
+Filename: perlbase-abbrev_5.10.0-7_keenetic.ipk
+Size: 1101
+MD5Sum: 351a70c8a14c6a823cfdeccdb7568be9
+Description:  abbrev perl module
+
+Package: perlbase-anydbm-file
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 441
+Filename: perlbase-anydbm-file_5.10.0-7_keenetic.ipk
+Size: 1046
+MD5Sum: 3d689c5381b24a60f103cf522dcb689a
+Description:  AnyDBM_File perl module
+
+Package: perlbase-archive
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18966
+Filename: perlbase-archive_5.10.0-7_keenetic.ipk
+Size: 19604
+MD5Sum: 02589c8d34c57a53744cb9433925622c
+Description:  Archive perl module
+
+Package: perlbase-assert
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 756
+Filename: perlbase-assert_5.10.0-7_keenetic.ipk
+Size: 1362
+MD5Sum: 1fdd3adbe76229da058b989a7a9e472a
+Description:  assert perl module
+
+Package: perlbase-attribute
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2850
+Filename: perlbase-attribute_5.10.0-7_keenetic.ipk
+Size: 3441
+MD5Sum: 717a61a823f417b53acac85dd19e1388
+Description:  Attribute perl module
+
+Package: perlbase-attributes
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1049
+Filename: perlbase-attributes_5.10.0-7_keenetic.ipk
+Size: 1651
+MD5Sum: 8e32d9d75ac97722b3775ec898dc2932
+Description:  attributes perl module
+
+Package: perlbase-attrs
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3174
+Filename: perlbase-attrs_5.10.0-7_keenetic.ipk
+Size: 3765
+MD5Sum: e8955f1cd482518b6ea763f9ee6c991c
+Description:  attrs perl module
+
+Package: perlbase-autoloader
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2279
+Filename: perlbase-autoloader_5.10.0-7_keenetic.ipk
+Size: 2911
+MD5Sum: 22d6574cbc146fda6d85cacb97ccf1bb
+Description:  AutoLoader perl module
+
+Package: perlbase-autosplit
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4690
+Filename: perlbase-autosplit_5.10.0-7_keenetic.ipk
+Size: 5299
+MD5Sum: 20c22a1fae0f49cc4ffcd6536bc6af42
+Description:  AutoSplit perl module
+
+Package: perlbase-autouse
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1091
+Filename: perlbase-autouse_5.10.0-7_keenetic.ipk
+Size: 1702
+MD5Sum: 69abc0cc42d955df8383df99243e13f3
+Description:  autouse perl module
+
+Package: perlbase-b
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 77467
+Filename: perlbase-b_5.10.0-7_keenetic.ipk
+Size: 78154
+MD5Sum: 711e5d3f1bb94967da99f3a105661a72
+Description:  B perl module
+
+Package: perlbase-base
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2059
+Filename: perlbase-base_5.10.0-7_keenetic.ipk
+Size: 2668
+MD5Sum: dd3b5ab830bdc4ac9b2d962d7cd785aa
+Description:  base perl module
+
+Package: perlbase-benchmark
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5839
+Filename: perlbase-benchmark_5.10.0-7_keenetic.ipk
+Size: 6459
+MD5Sum: eb66b93c67631471e69fe470f6a8eb29
+Description:  Benchmark perl module
+
+Package: perlbase-bigfloat
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1788
+Filename: perlbase-bigfloat_5.10.0-7_keenetic.ipk
+Size: 2407
+MD5Sum: ab057139a2360c7f62f03d72f154891d
+Description:  bigfloat perl module
+
+Package: perlbase-bigint
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4729
+Filename: perlbase-bigint_5.10.0-7_keenetic.ipk
+Size: 5344
+MD5Sum: 166ee26053850f0bb932f1935de46c90
+Description:  bigint perl module
+
+Package: perlbase-bignum
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2423
+Filename: perlbase-bignum_5.10.0-7_keenetic.ipk
+Size: 3012
+MD5Sum: 0fefc3a87839bfbd33849dc8af5385b2
+Description:  bignum perl module
+
+Package: perlbase-bigrat
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3134
+Filename: perlbase-bigrat_5.10.0-7_keenetic.ipk
+Size: 3727
+MD5Sum: 72dd6f2f11c8350c597eef2fda2a0af0
+Description:  bigrat perl module
+
+Package: perlbase-blib
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 908
+Filename: perlbase-blib_5.10.0-7_keenetic.ipk
+Size: 1507
+MD5Sum: 4f8dddacc5487fb5cfcb5c0330eaf834
+Description:  blib perl module
+
+Package: perlbase-bytes
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 625
+Filename: perlbase-bytes_5.10.0-7_keenetic.ipk
+Size: 1231
+MD5Sum: afd1f468f3ab10d805fddd17b39fc5d5
+Description:  bytes perl module
+
+Package: perlbase-cacheout
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 632
+Filename: perlbase-cacheout_5.10.0-7_keenetic.ipk
+Size: 1232
+MD5Sum: 0be58f7ed58abbb162b26533e8b33c59
+Description:  cacheout perl module
+
+Package: perlbase-cgi
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 39616
+Filename: perlbase-cgi_5.10.0-7_keenetic.ipk
+Size: 40302
+MD5Sum: 62a4e64ca74d6562cf480ed693e274c8
+Description:  CGI perl module
+
+Package: perlbase-charnames
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3648
+Filename: perlbase-charnames_5.10.0-7_keenetic.ipk
+Size: 4240
+MD5Sum: e0151f247a1aeff2ef7cc2fdd7ae7b4d
+Description:  charnames perl module
+
+Package: perlbase-class
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2932
+Filename: perlbase-class_5.10.0-7_keenetic.ipk
+Size: 3526
+MD5Sum: 5bb22387cf4c4dd59da6a881787fe908
+Description:  Class perl module
+
+Package: perlbase-complete
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1163
+Filename: perlbase-complete_5.10.0-7_keenetic.ipk
+Size: 1781
+MD5Sum: be94bccdd7b015126f8d9475eb832e9a
+Description:  complete perl module
+
+Package: perlbase-compress
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 55446
+Filename: perlbase-compress_5.10.0-7_keenetic.ipk
+Size: 56098
+MD5Sum: efe2589768bb2e2da8ea84bb821fed91
+Description:  Compress perl module
+
+Package: perlbase-config
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11352
+Filename: perlbase-config_5.10.0-7_keenetic.ipk
+Size: 11883
+MD5Sum: 1dedece785ce58eb2bc99b41477ca60e
+Description:  Config perl module
+
+Package: perlbase-cpan
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 106277
+Filename: perlbase-cpan_5.10.0-7_keenetic.ipk
+Size: 106975
+MD5Sum: 1302ff4c78c424d19bebf2873760e3cd
+Description:  CPAN perl module
+
+Package: perlbase-cpanplus
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 110130
+Filename: perlbase-cpanplus_5.10.0-7_keenetic.ipk
+Size: 110863
+MD5Sum: 0de3349e1507d78d8aecdfa6495c0452
+Description:  CPANPLUS perl module
+
+Package: perlbase-ctime
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1168
+Filename: perlbase-ctime_5.10.0-7_keenetic.ipk
+Size: 1784
+MD5Sum: 501cafed7ec2c16aaf53db69135255fd
+Description:  ctime perl module
+
+Package: perlbase-cwd
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8049
+Filename: perlbase-cwd_5.10.0-7_keenetic.ipk
+Size: 8667
+MD5Sum: bde87891805ae382eecc061ef90076f4
+Description:  Cwd perl module
+
+Package: perlbase-data
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18337
+Filename: perlbase-data_5.10.0-7_keenetic.ipk
+Size: 18930
+MD5Sum: 1f341d7667b198acf02fcaf6ba51d553
+Description:  Data perl module
+
+Package: perlbase-db-file
+Version: 5.10.0-7
+Depends: perl, libdb47
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19348
+Filename: perlbase-db-file_5.10.0-7_keenetic.ipk
+Size: 19988
+MD5Sum: b4a027c9e86fea9913b0ee969c842b13
+Description:  DB_File perl module
+
+Package: perlbase-db
+Version: 5.10.0-7
+Depends: perl, libdb47
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3597
+Filename: perlbase-db_5.10.0-7_keenetic.ipk
+Size: 4205
+MD5Sum: 83346ac4e631330423e61eb063a03b2f
+Description:  DB perl module
+
+Package: perlbase-dbm-filter
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2401
+Filename: perlbase-dbm-filter_5.10.0-7_keenetic.ipk
+Size: 3015
+MD5Sum: f54b33a0f187f6a795f0b2ad5f130529
+Description:  DBM_Filter perl module
+
+Package: perlbase-devel
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 62133
+Filename: perlbase-devel_5.10.0-7_keenetic.ipk
+Size: 62664
+MD5Sum: 1438f407e74d55b797e84cfad0cb3776
+Description:  Devel perl module
+
+Package: perlbase-diagnostics
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4520
+Filename: perlbase-diagnostics_5.10.0-7_keenetic.ipk
+Size: 5112
+MD5Sum: 6329fc3dd5f76e2d86904f2fdebc4786
+Description:  diagnostics perl module
+
+Package: perlbase-digest
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 29278
+Filename: perlbase-digest_5.10.0-7_keenetic.ipk
+Size: 29864
+MD5Sum: 32418e90c39a47516d2f97b66f2bb01b
+Description:  Digest perl module
+
+Package: perlbase-dirhandle
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 624
+Filename: perlbase-dirhandle_5.10.0-7_keenetic.ipk
+Size: 1236
+MD5Sum: a1a35519cf4b63d6868bafd53880ea84
+Description:  DirHandle perl module
+
+Package: perlbase-dotsh
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 737
+Filename: perlbase-dotsh_5.10.0-7_keenetic.ipk
+Size: 1342
+MD5Sum: f8dcdb8f4f065dccbbe2dc551e4040b8
+Description:  dotsh perl module
+
+Package: perlbase-dumpvalue
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4033
+Filename: perlbase-dumpvalue_5.10.0-7_keenetic.ipk
+Size: 4640
+MD5Sum: 0ab594ba1e56299b848e24682b48b56d
+Description:  Dumpvalue perl module
+
+Package: perlbase-dumpvar
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4847
+Filename: perlbase-dumpvar_5.10.0-7_keenetic.ipk
+Size: 5459
+MD5Sum: 605dd1934e22b9c1701e7857d38506a4
+Description:  dumpvar perl module
+
+Package: perlbase-dynaloader
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4216
+Filename: perlbase-dynaloader_5.10.0-7_keenetic.ipk
+Size: 4782
+MD5Sum: 59ade04377f21aa8450e15745886d343
+Description:  DynaLoader perl module
+
+Package: perlbase-encode
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1899175
+Filename: perlbase-encode_5.10.0-7_keenetic.ipk
+Size: 1670646
+MD5Sum: f929caae3dec71d2824185b64cdc0efe
+Description:  Encode perl module
+
+Package: perlbase-encoding
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2691
+Filename: perlbase-encoding_5.10.0-7_keenetic.ipk
+Size: 3281
+MD5Sum: d1541dda4f7e3cb14f17eaf80583358c
+Description:  encoding perl module
+
+Package: perlbase-english
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1365
+Filename: perlbase-english_5.10.0-7_keenetic.ipk
+Size: 1984
+MD5Sum: f5bd6be0f27299aa3e5eb71e00d3c325
+Description:  English perl module
+
+Package: perlbase-env
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1076
+Filename: perlbase-env_5.10.0-7_keenetic.ipk
+Size: 1695
+MD5Sum: 7752bbaae1915d57eea823714e1164dc
+Description:  Env perl module
+
+Package: perlbase-errno
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2561
+Filename: perlbase-errno_5.10.0-7_keenetic.ipk
+Size: 3152
+MD5Sum: b7da06d1c1ea173c169afa64321cabc3
+Description:  Errno perl module
+
+Package: perlbase-essential
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 12664
+Filename: perlbase-essential_5.10.0-7_keenetic.ipk
+Size: 13268
+MD5Sum: 36df3a9d2cf57477bdcb6bb482050ffd
+Description:  essential perl module
+
+Package: perlbase-exceptions
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 442
+Filename: perlbase-exceptions_5.10.0-7_keenetic.ipk
+Size: 1035
+MD5Sum: 87770473a6e18851ae70ea39e616dd11
+Description:  exceptions perl module
+
+Package: perlbase-extutils
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 141500
+Filename: perlbase-extutils_5.10.0-7_keenetic.ipk
+Size: 142228
+MD5Sum: ac985762652a8f27a3b57482343985aa
+Description:  ExtUtils perl module
+
+Package: perlbase-fastcwd
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 479
+Filename: perlbase-fastcwd_5.10.0-7_keenetic.ipk
+Size: 1071
+MD5Sum: 5a5d5782374568032674c054a825eff8
+Description:  fastcwd perl module
+
+Package: perlbase-fatal
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1677
+Filename: perlbase-fatal_5.10.0-7_keenetic.ipk
+Size: 2296
+MD5Sum: 614711da0240a145e36fa5bd6d981137
+Description:  Fatal perl module
+
+Package: perlbase-fcntl
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5972
+Filename: perlbase-fcntl_5.10.0-7_keenetic.ipk
+Size: 6579
+MD5Sum: 85cb6530a1024f0b5464be55f70f35ef
+Description:  Fcntl perl module
+
+Package: perlbase-feature
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 766
+Filename: perlbase-feature_5.10.0-7_keenetic.ipk
+Size: 1367
+MD5Sum: deb1c81de00c1dd82eeacc61d460a3c1
+Description:  feature perl module
+
+Package: perlbase-fields
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1912
+Filename: perlbase-fields_5.10.0-7_keenetic.ipk
+Size: 2537
+MD5Sum: 21cf0f937dc54ec7766e20dcbe6758d8
+Description:  fields perl module
+
+Package: perlbase-file
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 58957
+Filename: perlbase-file_5.10.0-7_keenetic.ipk
+Size: 59620
+MD5Sum: cb44b45b1f28e61962dc275e3a661819
+Description:  File perl module
+
+Package: perlbase-filecache
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1429
+Filename: perlbase-filecache_5.10.0-7_keenetic.ipk
+Size: 2050
+MD5Sum: 9f26de55f57843430405b530bf568748
+Description:  FileCache perl module
+
+Package: perlbase-filehandle
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1004
+Filename: perlbase-filehandle_5.10.0-7_keenetic.ipk
+Size: 1616
+MD5Sum: d82cca013b8e8e015e1e07fddc923950
+Description:  FileHandle perl module
+
+Package: perlbase-filetest
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 417
+Filename: perlbase-filetest_5.10.0-7_keenetic.ipk
+Size: 1009
+MD5Sum: 80051c7344979bf8be862dafea964881
+Description:  filetest perl module
+
+Package: perlbase-filter
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 7604
+Filename: perlbase-filter_5.10.0-7_keenetic.ipk
+Size: 8235
+MD5Sum: 5dc9546056d00834d212cd17817467fe
+Description:  Filter perl module
+
+Package: perlbase-find
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 346
+Filename: perlbase-find_5.10.0-7_keenetic.ipk
+Size: 936
+MD5Sum: 57a95ec070a9f87ef26ca4a21e13f15e
+Description:  find perl module
+
+Package: perlbase-findbin
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1457
+Filename: perlbase-findbin_5.10.0-7_keenetic.ipk
+Size: 2076
+MD5Sum: 47efada6c35485493206bfab8601da87
+Description:  FindBin perl module
+
+Package: perlbase-finddepth
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 352
+Filename: perlbase-finddepth_5.10.0-7_keenetic.ipk
+Size: 950
+MD5Sum: 8448781e68812474cd68ae4028877581
+Description:  finddepth perl module
+
+Package: perlbase-flush
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 379
+Filename: perlbase-flush_5.10.0-7_keenetic.ipk
+Size: 973
+MD5Sum: 93c59a20c4bed338de5bd05fea719720
+Description:  flush perl module
+
+Package: perlbase-gdbm-file
+Version: 5.10.0-7
+Depends: perl, libgdbm
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8014
+Filename: perlbase-gdbm-file_5.10.0-7_keenetic.ipk
+Size: 8676
+MD5Sum: 6048fd5bd3d230e1858adf9d03fa3b97
+Description:  GDBM_File perl module
+
+Package: perlbase-getcwd
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 633
+Filename: perlbase-getcwd_5.10.0-7_keenetic.ipk
+Size: 1242
+MD5Sum: 945cd0bb71e9c1f23ca07b9db75d8ce1
+Description:  getcwd perl module
+
+Package: perlbase-getopt
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 12758
+Filename: perlbase-getopt_5.10.0-7_keenetic.ipk
+Size: 13382
+MD5Sum: a646cbdef6412d5ad9089307459623fd
+Description:  Getopt perl module
+
+Package: perlbase-getoptpl
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1065
+Filename: perlbase-getoptpl_5.10.0-7_keenetic.ipk
+Size: 1674
+MD5Sum: af80c351cb81c2336bd84f88d02f5bd5
+Description:  getoptpl perl module
+
+Package: perlbase-hash
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10468
+Filename: perlbase-hash_5.10.0-7_keenetic.ipk
+Size: 11073
+MD5Sum: 79bf04674731c8e7b3d3d8f4b5ae7b15
+Description:  Hash perl module
+
+Package: perlbase-hostname
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 429
+Filename: perlbase-hostname_5.10.0-7_keenetic.ipk
+Size: 1027
+MD5Sum: 70e774e9853b41f26f95b49888aa27e9
+Description:  hostname perl module
+
+Package: perlbase-i18n
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 12340
+Filename: perlbase-i18n_5.10.0-7_keenetic.ipk
+Size: 12934
+MD5Sum: 7dbc9225fe3f8c2f90cc7d5c9d824fd3
+Description:  I18N perl module
+
+Package: perlbase-if
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 560
+Filename: perlbase-if_5.10.0-7_keenetic.ipk
+Size: 1155
+MD5Sum: b5c2037ea4866991b8a79024290f303e
+Description:  if perl module
+
+Package: perlbase-importenv
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 426
+Filename: perlbase-importenv_5.10.0-7_keenetic.ipk
+Size: 1017
+MD5Sum: 3f16e87424a54189cdfcf3ca39bdae9e
+Description:  importenv perl module
+
+Package: perlbase-integer
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 316
+Filename: perlbase-integer_5.10.0-7_keenetic.ipk
+Size: 909
+MD5Sum: 12b228be15d5d4505a98935271cbd487
+Description:  integer perl module
+
+Package: perlbase-io
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 55088
+Filename: perlbase-io_5.10.0-7_keenetic.ipk
+Size: 55721
+MD5Sum: 0e1b42d79e9c8d6c407989772b8e96ca
+Description:  IO perl module
+
+Package: perlbase-ipc
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13277
+Filename: perlbase-ipc_5.10.0-7_keenetic.ipk
+Size: 13891
+MD5Sum: 82678b053abfd1212953bde4622a9068
+Description:  IPC perl module
+
+Package: perlbase-less
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 675
+Filename: perlbase-less_5.10.0-7_keenetic.ipk
+Size: 1280
+MD5Sum: 2fbe25e7a45d9fa6357507dca8f75dab
+Description:  less perl module
+
+Package: perlbase-list
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8582
+Filename: perlbase-list_5.10.0-7_keenetic.ipk
+Size: 9214
+MD5Sum: b520fa1d88d5842c8a35b1f0b6a2a4e2
+Description:  List perl module
+
+Package: perlbase-locale
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19681
+Filename: perlbase-locale_5.10.0-7_keenetic.ipk
+Size: 20320
+MD5Sum: 6abdc0a580da34afd4d4cde6659cffb9
+Description:  Locale perl module
+
+Package: perlbase-log
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4023
+Filename: perlbase-log_5.10.0-7_keenetic.ipk
+Size: 4602
+MD5Sum: 508b0fe584e33da1aa7887e04bb21c32
+Description:  Log perl module
+
+Package: perlbase-look
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 719
+Filename: perlbase-look_5.10.0-7_keenetic.ipk
+Size: 1321
+MD5Sum: 053cb50890508c91928056370dc6538b
+Description:  look perl module
+
+Package: perlbase-math
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 83782
+Filename: perlbase-math_5.10.0-7_keenetic.ipk
+Size: 84499
+MD5Sum: b6e902396b635d091d6d54d3489cfda9
+Description:  Math perl module
+
+Package: perlbase-memoize
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5829
+Filename: perlbase-memoize_5.10.0-7_keenetic.ipk
+Size: 6428
+MD5Sum: 0dbc8e7e8ba1ee88714dcf938a6ba917
+Description:  Memoize perl module
+
+Package: perlbase-mime
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5552
+Filename: perlbase-mime_5.10.0-7_keenetic.ipk
+Size: 6160
+MD5Sum: 498b93db47d16f2c3f6ce6423fb4dcef
+Description:  MIME perl module
+
+Package: perlbase-module
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 97221
+Filename: perlbase-module_5.10.0-7_keenetic.ipk
+Size: 97868
+MD5Sum: 39e5d7d5fed294b8685dfdee0738011a
+Description:  Module perl module
+
+Package: perlbase-mro
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 443
+Filename: perlbase-mro_5.10.0-7_keenetic.ipk
+Size: 1038
+MD5Sum: 71de5402c10565eb721abfe2d7488408
+Description:  mro perl module
+
+Package: perlbase-net
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 36803
+Filename: perlbase-net_5.10.0-7_keenetic.ipk
+Size: 37516
+MD5Sum: d6a60d39d8873dafda63cb73b5f13cf3
+Description:  Net perl module
+
+Package: perlbase-next
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1496
+Filename: perlbase-next_5.10.0-7_keenetic.ipk
+Size: 2120
+MD5Sum: 951a0c47040d2436c6d283fceaa9e601
+Description:  NEXT perl module
+
+Package: perlbase-o
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 831
+Filename: perlbase-o_5.10.0-7_keenetic.ipk
+Size: 1440
+MD5Sum: 3b23c5b80650ef14f2e1095d464c4a0a
+Description:  O perl module
+
+Package: perlbase-object
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3212
+Filename: perlbase-object_5.10.0-7_keenetic.ipk
+Size: 3808
+MD5Sum: 944dfb32946b1495a203ac51e1d51c9b
+Description:  Object perl module
+
+Package: perlbase-opcode
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 9488
+Filename: perlbase-opcode_5.10.0-7_keenetic.ipk
+Size: 10110
+MD5Sum: fe99b787a3216ad8049b72234d32059b
+Description:  Opcode perl module
+
+Package: perlbase-open
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1718
+Filename: perlbase-open_5.10.0-7_keenetic.ipk
+Size: 2337
+MD5Sum: 6c215ba5419bce231f866e6ec46b9eff
+Description:  open perl module
+
+Package: perlbase-ops
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 484
+Filename: perlbase-ops_5.10.0-7_keenetic.ipk
+Size: 1071
+MD5Sum: d5ddba1bd526d47d2c10600a755a5b42
+Description:  ops perl module
+
+Package: perlbase-package
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 665
+Filename: perlbase-package_5.10.0-7_keenetic.ipk
+Size: 1269
+MD5Sum: 18fb24c16d3124327d18915a226d7d21
+Description:  Package perl module
+
+Package: perlbase-params
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3374
+Filename: perlbase-params_5.10.0-7_keenetic.ipk
+Size: 3973
+MD5Sum: 548181a6be7ee511ea6addb7e167bf76
+Description:  Params perl module
+
+Package: perlbase-perl5db
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 57912
+Filename: perlbase-perl5db_5.10.0-7_keenetic.ipk
+Size: 58670
+MD5Sum: f9a9f3867991a49fb1b0fe982c400424
+Description:  perl5db perl module
+
+Package: perlbase-perlio
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 17584
+Filename: perlbase-perlio_5.10.0-7_keenetic.ipk
+Size: 18154
+MD5Sum: 4a9f028388611bd9a93169b63c4b48ed
+Description:  PerlIO perl module
+
+Package: perlbase-pod
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 172577
+Filename: perlbase-pod_5.10.0-7_keenetic.ipk
+Size: 173256
+MD5Sum: ef112ac9fdc3a84a2ab83bbf8af23c13
+Description:  Pod perl module
+
+Package: perlbase-posix
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 45097
+Filename: perlbase-posix_5.10.0-7_keenetic.ipk
+Size: 45317
+MD5Sum: ecc0bc3f65521671de3f43022c1c92b9
+Description:  POSIX perl module
+
+Package: perlbase-pwd
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 763
+Filename: perlbase-pwd_5.10.0-7_keenetic.ipk
+Size: 1362
+MD5Sum: f15c26412f014627c433ef23137a6794
+Description:  pwd perl module
+
+Package: perlbase-re
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 113144
+Filename: perlbase-re_5.10.0-7_keenetic.ipk
+Size: 113813
+MD5Sum: 62f418b0542e67ab46c4a406c7502ea0
+Description:  re perl module
+
+Package: perlbase-safe
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2854
+Filename: perlbase-safe_5.10.0-7_keenetic.ipk
+Size: 3437
+MD5Sum: d3bf8c11d4af03af842fc675bc3ec86b
+Description:  Safe perl module
+
+Package: perlbase-scalar
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1567
+Filename: perlbase-scalar_5.10.0-7_keenetic.ipk
+Size: 2178
+MD5Sum: de3938ffd7997f0df906d14378840fef
+Description:  Scalar perl module
+
+Package: perlbase-sdbm-file
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10668
+Filename: perlbase-sdbm-file_5.10.0-7_keenetic.ipk
+Size: 11255
+MD5Sum: eb71303e654ee4a425dab477954ab476
+Description:  SDBM_File perl module
+
+Package: perlbase-search
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 903
+Filename: perlbase-search_5.10.0-7_keenetic.ipk
+Size: 1502
+MD5Sum: f24c331e57549648eacb987a8c0a7453
+Description:  Search perl module
+
+Package: perlbase-selectsaver
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 433
+Filename: perlbase-selectsaver_5.10.0-7_keenetic.ipk
+Size: 1043
+MD5Sum: c30e6a4ab42b11df2714e6bba4b14573
+Description:  SelectSaver perl module
+
+Package: perlbase-selfloader
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2109
+Filename: perlbase-selfloader_5.10.0-7_keenetic.ipk
+Size: 2740
+MD5Sum: c238517168b693ebc5f4257212151be6
+Description:  SelfLoader perl module
+
+Package: perlbase-shell
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1457
+Filename: perlbase-shell_5.10.0-7_keenetic.ipk
+Size: 2080
+MD5Sum: a4d7c912d51381aaf168dd5fb426a4fc
+Description:  Shell perl module
+
+Package: perlbase-shellwords
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 351
+Filename: perlbase-shellwords_5.10.0-7_keenetic.ipk
+Size: 945
+MD5Sum: 5c2b62eef422cea8baeac15db0b6d4c3
+Description:  shellwords perl module
+
+Package: perlbase-sigtrap
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1453
+Filename: perlbase-sigtrap_5.10.0-7_keenetic.ipk
+Size: 2065
+MD5Sum: 1a6a1b82730e83d219334552302efc9c
+Description:  sigtrap perl module
+
+Package: perlbase-socket
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8813
+Filename: perlbase-socket_5.10.0-7_keenetic.ipk
+Size: 9365
+MD5Sum: c3318cbc488e6a98b91f443756b1ccde
+Description:  Socket perl module
+
+Package: perlbase-sort
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 724
+Filename: perlbase-sort_5.10.0-7_keenetic.ipk
+Size: 1334
+MD5Sum: 67f303cfdbc7237f320f3efbbe4f6f2e
+Description:  sort perl module
+
+Package: perlbase-stat
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 512
+Filename: perlbase-stat_5.10.0-7_keenetic.ipk
+Size: 1105
+MD5Sum: 2d393b0e74df166f4026d1ad0aafa14e
+Description:  stat perl module
+
+Package: perlbase-storable
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 33158
+Filename: perlbase-storable_5.10.0-7_keenetic.ipk
+Size: 33853
+MD5Sum: ffe5e14cb549aade015e0bcaaa06c2de
+Description:  Storable perl module
+
+Package: perlbase-switch
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3861
+Filename: perlbase-switch_5.10.0-7_keenetic.ipk
+Size: 4475
+MD5Sum: ab9cc6d6bbf8b51740f29eeae87dffa6
+Description:  Switch perl module
+
+Package: perlbase-symbol
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1116
+Filename: perlbase-symbol_5.10.0-7_keenetic.ipk
+Size: 1729
+MD5Sum: 7897f8531b0ac89052385285e0b0cb1c
+Description:  Symbol perl module
+
+Package: perlbase-sys
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 14802
+Filename: perlbase-sys_5.10.0-7_keenetic.ipk
+Size: 15375
+MD5Sum: e309879cf28d0857fef901dae519ac36
+Description:  Sys perl module
+
+Package: perlbase-syslog
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1833
+Filename: perlbase-syslog_5.10.0-7_keenetic.ipk
+Size: 2460
+MD5Sum: c3df42fe538aafb1da32c1924c7fb01c
+Description:  syslog perl module
+
+Package: perlbase-tainted
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 288
+Filename: perlbase-tainted_5.10.0-7_keenetic.ipk
+Size: 879
+MD5Sum: 3fa635963b7e8d6976bc62dff6578f18
+Description:  tainted perl module
+
+Package: perlbase-term
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11331
+Filename: perlbase-term_5.10.0-7_keenetic.ipk
+Size: 11927
+MD5Sum: bea521f665ea26eb051864facdac6e6f
+Description:  Term perl module
+
+Package: perlbase-termcap
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1663
+Filename: perlbase-termcap_5.10.0-7_keenetic.ipk
+Size: 2285
+MD5Sum: 5020ebe4add83bae07a508fe597a696b
+Description:  termcap perl module
+
+Package: perlbase-test
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 28609
+Filename: perlbase-test_5.10.0-7_keenetic.ipk
+Size: 29234
+MD5Sum: f725dd1c4f8c8a75a370312410cb86b0
+Description:  Test perl module
+
+Package: perlbase-text
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 14309
+Filename: perlbase-text_5.10.0-7_keenetic.ipk
+Size: 14898
+MD5Sum: 4fd21fcfec622aad97712827e2e5b302
+Description:  Text perl module
+
+Package: perlbase-thread
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 923
+Filename: perlbase-thread_5.10.0-7_keenetic.ipk
+Size: 1533
+MD5Sum: c16843abfc99129349ad91aa8389eb6b
+Description:  Thread perl module
+
+Package: perlbase-threads
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4058
+Filename: perlbase-threads_5.10.0-7_keenetic.ipk
+Size: 4631
+MD5Sum: d0d1fd2a93efb62baf199dbe58e96f33
+Description:  threads perl module
+
+Package: perlbase-tie
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18014
+Filename: perlbase-tie_5.10.0-7_keenetic.ipk
+Size: 18626
+MD5Sum: 5b7e15f30a04a5126f0d0243a8a79397
+Description:  Tie perl module
+
+Package: perlbase-time
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19152
+Filename: perlbase-time_5.10.0-7_keenetic.ipk
+Size: 19792
+MD5Sum: da9b71348f5348120f3367ce0c9ff609
+Description:  Time perl module
+
+Package: perlbase-timelocal
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 598
+Filename: perlbase-timelocal_5.10.0-7_keenetic.ipk
+Size: 1200
+MD5Sum: ae1e24759f4701c45dcf4e7d3265c05c
+Description:  timelocal perl module
+
+Package: perlbase-unicode
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 317294
+Filename: perlbase-unicode_5.10.0-7_keenetic.ipk
+Size: 302774
+MD5Sum: dfe57a1e7b04eaa2651a62a49fc86f3e
+Description:  Unicode perl module
+
+Package: perlbase-unicore
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1013252
+Filename: perlbase-unicore_5.10.0-7_keenetic.ipk
+Size: 977256
+MD5Sum: 05ec774562425d25248d106ab2db19a6
+Description:  unicore perl module
+
+Package: perlbase-universal
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 370
+Filename: perlbase-universal_5.10.0-7_keenetic.ipk
+Size: 974
+MD5Sum: dc0f98590f0b27d51ee378b6d92caa6d
+Description:  UNIVERSAL perl module
+
+Package: perlbase-user
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2060
+Filename: perlbase-user_5.10.0-7_keenetic.ipk
+Size: 2644
+MD5Sum: 822279f6c35b9208f9ea70ae9548f93d
+Description:  User perl module
+
+Package: perlbase-utf8
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3384
+Filename: perlbase-utf8_5.10.0-7_keenetic.ipk
+Size: 3980
+MD5Sum: e14ce930c5432066127d075867fdd0a6
+Description:  utf8 perl module
+
+Package: perlbase-validate
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1580
+Filename: perlbase-validate_5.10.0-7_keenetic.ipk
+Size: 2197
+MD5Sum: 8655d5ea7f927d55ec40715991ecc918
+Description:  validate perl module
+
+Package: perlbase-version
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 447
+Filename: perlbase-version_5.10.0-7_keenetic.ipk
+Size: 1039
+MD5Sum: a8c9ff81e88871d7f4c47e272f57ee31
+Description:  version perl module
+
+Package: perlbase-xsloader
+Version: 5.10.0-7
+Depends: perl
+Provides: 
+Source: package/built/perl
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1418
+Filename: perlbase-xsloader_5.10.0-7_keenetic.ipk
+Size: 2034
+MD5Sum: 8d04f5f6dd342c5d0c93e918934624e8
+Description:  XSLoader perl module
+
+Package: php5-cgi
+Version: 5.3.8-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 908990
+Filename: php5-cgi_5.3.8-1_keenetic.ipk
+Size: 907840
+MD5Sum: 6f9c43927f463e6962931620dee7a112
+Description:  PHP is a widely-used general-purpose scripting language that is especially 
+ suited for Web development and can be embedded into HTML.
+ This package contains the CGI version of the PHP5 interpreter.
+
+Package: php5-cli
+Version: 5.3.8-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 901694
+Filename: php5-cli_5.3.8-1_keenetic.ipk
+Size: 900531
+MD5Sum: 8f4daa42edac707b70c56f6ea48d62f7
+Description:  PHP is a widely-used general-purpose scripting language that is especially 
+ suited for Web development and can be embedded into HTML.
+ This package contains the CLI version of the PHP5 interpreter.
+
+Package: php5-fastcgi
+Version: 5.3.8-1
+Depends: php5, php5-cgi
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 514
+Filename: php5-fastcgi_5.3.8-1_keenetic.ipk
+Size: 1168
+MD5Sum: c105c5672f40818c074f43de0cad91c5
+Description:  As FastCGI support is now a core feature the php5-fastcgi package now depends
+ on the php5-cgi package, containing just the startup script.
+
+Package: php5-mod-apc
+Version: 5.3.8-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 45631
+Filename: php5-mod-apc_5.3.8-1_keenetic.ipk
+Size: 46170
+MD5Sum: 54d9422b54362c7a7ae88527571e65fb
+Description:  APC shared module
+
+Package: php5-mod-curl
+Version: 5.3.8-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 21262
+Filename: php5-mod-curl_5.3.8-1_keenetic.ipk
+Size: 21782
+MD5Sum: 4ed959aa83dadee9a5bf1367101e8a99
+Description:  cURL shared module
+
+Package: php5-mod-dom
+Version: 5.3.8-1
+Depends: php5, libxml2
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 40553
+Filename: php5-mod-dom_5.3.8-1_keenetic.ipk
+Size: 41009
+MD5Sum: b5b44277b06160596b6b665533b551ab
+Description:  DOM shared module
+
+Package: php5-mod-gd
+Version: 5.3.8-1
+Depends: php5, libgd
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 24834
+Filename: php5-mod-gd_5.3.8-1_keenetic.ipk
+Size: 25300
+MD5Sum: 8044008ca7bde5586a2402f11409a651
+Description:  GD graphics shared module
+
+Package: php5-mod-hash
+Version: 5.3.8-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 110887
+Filename: php5-mod-hash_5.3.8-1_keenetic.ipk
+Size: 110224
+MD5Sum: 823956033a63489fa77f50e013cc9a48
+Description:  Hash shared module
+
+Package: php5-mod-iconv
+Version: 5.3.8-1
+Depends: php5, libiconv-full
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 12177
+Filename: php5-mod-iconv_5.3.8-1_keenetic.ipk
+Size: 12769
+MD5Sum: 1b4d2cc6e0d2c33e09a178ac714cdb6c
+Description:  iConv shared module
+
+Package: php5-mod-json
+Version: 5.3.8-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 9756
+Filename: php5-mod-json_5.3.8-1_keenetic.ipk
+Size: 10337
+MD5Sum: a04697211fd9d5baf0f879a505c80ec3
+Description:  JSON shared module
+
+Package: php5-mod-mbstring
+Version: 5.3.8-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 1183005
+Filename: php5-mod-mbstring_5.3.8-1_keenetic.ipk
+Size: 1179264
+MD5Sum: d6b972cec39a780b048d0a1cbcc6bb20
+Description:  MBString shared module
+
+Package: php5-mod-pdo-sqlite
+Version: 5.3.8-1
+Depends: php5, php5-mod-pdo, libsqlite3
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 8296
+Filename: php5-mod-pdo-sqlite_5.3.8-1_keenetic.ipk
+Size: 8948
+MD5Sum: 08cd8d55ac531323cc60fabbf06739b0
+Description:  PDO driver for SQLite 3.x shared module
+
+Package: php5-mod-pdo
+Version: 5.3.8-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 33368
+Filename: php5-mod-pdo_5.3.8-1_keenetic.ipk
+Size: 33897
+MD5Sum: 8ccf7255855a2b93c9c9af7a79c3819f
+Description:  PHP Data Objects shared module
+
+Package: php5-mod-session
+Version: 5.3.8-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 19836
+Filename: php5-mod-session_5.3.8-1_keenetic.ipk
+Size: 20401
+MD5Sum: 57b3ac4c241cfc5e29f64286d6506fc7
+Description:  Session shared module
+
+Package: php5-mod-simplexml
+Version: 5.3.8-1
+Depends: php5, libxml2
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 15149
+Filename: php5-mod-simplexml_5.3.8-1_keenetic.ipk
+Size: 15708
+MD5Sum: 9294316651c37be566d4607560f2bad6
+Description:  SimpleXML shared module
+
+Package: php5-mod-sqlite3
+Version: 5.3.8-1
+Depends: php5, libsqlite3
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 13057
+Filename: php5-mod-sqlite3_5.3.8-1_keenetic.ipk
+Size: 13615
+MD5Sum: c5fe782d0a8512e95df0b7eff12979a5
+Description:  SQLite3 shared module
+
+Package: php5-mod-xml
+Version: 5.3.8-1
+Depends: php5, libxml2
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 14321
+Filename: php5-mod-xml_5.3.8-1_keenetic.ipk
+Size: 14888
+MD5Sum: 93de0982be0bcb1715a1e4a18084ec1c
+Description:  XML shared module
+
+Package: php5-mod-xmlreader
+Version: 5.3.8-1
+Depends: php5, libxml2, libiconv-full
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 8272
+Filename: php5-mod-xmlreader_5.3.8-1_keenetic.ipk
+Size: 8900
+MD5Sum: badabb514386f48e00e931693a703c01
+Description:  XMLReader shared module
+
+Package: php5-mod-xmlwriter
+Version: 5.3.8-1
+Depends: php5, libxml2, libiconv-full
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 8416
+Filename: php5-mod-xmlwriter_5.3.8-1_keenetic.ipk
+Size: 9018
+MD5Sum: 36caf3880d96233d1bb6826b56095751
+Description:  XMLWriter shared module
+
+Package: php5
+Version: 5.3.8-1
+Depends: libpcre, libxml2
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 3412
+Filename: php5_5.3.8-1_keenetic.ipk
+Size: 4177
+MD5Sum: 5770fe9c2310b2462867c6ba33f387d9
+Description:  PHP is a widely-used general-purpose scripting language that is especially 
+ suited for Web development and can be embedded into HTML.
+ This package contains only the PHP config file. You must actually choose 
+ your PHP flavour (cli, cgi or fastcgi).
+
+Package: portmap
+Version: 6.0-2
+Depends: libwrap
+Provides: 
+Source: package/built/portmap
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 7105
+Filename: portmap_6.0-2_keenetic.ipk
+Size: 7791
+MD5Sum: 0879cf34e77d35cd4a9661409f00b989
+Description:  Portmap is a server that converts RPC (Remote Procedure Call) program
+ numbers into DARPA protocol port numbers.
+
+Package: pshare
+Version: 0.0.2rc2-1
+Depends: 
+Provides: 
+Source: package/built/pshare
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 32245
+Filename: pshare_0.0.2rc2-1_keenetic.ipk
+Size: 32921
+MD5Sum: bde94b1f0675a57765e5b35793f1835c
+Description:  UPnP Playlist Browser http://ps3muxer.org/pshare.html
+
+Package: py-openssl
+Version: 0.12-1
+Depends: python
+Provides: 
+Source: package/built/py-openssl
+Section: lang-python
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 81040
+Filename: py-openssl_0.12-1_keenetic.ipk
+Size: 81603
+MD5Sum: 8856ba4bcc3ad2bb52eb0aae606d77d8
+Description:  Python wrapper around a small subset of the OpenSSL library.
+
+Package: pyload
+Version: 1.0.0-2
+Depends: js, python-django, py-openssl, python-pil, python-sqlite3, python-crypto, python-curl, tesseract, tesseract-eng-data, screen
+Provides: 
+Source: package/built/pyload
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: all
+Installed-Size: 862
+Filename: pyload_1.0.0-2_all.ipk
+Size: 1792
+MD5Sum: f7bd6843ffc72cc5dfbe3346f8e7b2f2
+Description:  pyLoad is a fast, lightweight and full featured download manager written in python for many One-Click-Hoster, container formats like DLC, video sites or just plain http/ftp links. It aims for low hardware requirements and platform independence to be runnable on all kind of systems (desktop pc, netbook, NAS, router). 
+ Despite its strict restriction it is packed full of features just like webinterface, captcha recognition, unrar and much more. 	
+
+Package: python-crypto
+Version: 2.0.1-1
+Depends: python, libgmp
+Provides: 
+Source: package/built/python-crypto
+Section: lang-python
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 105891
+Filename: python-crypto_2.0.1-1_keenetic.ipk
+Size: 105711
+MD5Sum: 826a4886c5673123fce6a1e2527295c4
+Description:  A collection of both secure hash functions (such as MD5 and SHA),
+ and various encryption algorithms (AES, DES, IDEA, RSA, ElGamal, etc.).
+
+Package: python-curl
+Version: 7.19.0-1
+Depends: python
+Provides: 
+Source: package/built/python-curl
+Section: language-python
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 23151
+Filename: python-curl_7.19.0-1_keenetic.ipk
+Size: 23770
+MD5Sum: 714a3c0452766a3551bed589d218e9f4
+Description:  Python module interface to the cURL library.
+
+Package: python-django
+Version: 1.3.1-1
+Depends: python
+Provides: 
+Source: package/built/python-django
+Section: language-python
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4215173
+Filename: python-django_1.3.1-1_keenetic.ipk
+Size: 4174028
+MD5Sum: 52e71cd96cfbe0f1d003e38603c521e5
+Description:  Django is a high-level Python Web framework that encourages rapid
+ development and clean, pragmatic design.
+
+Package: python-mini
+Version: 2.6.4-3
+Depends: 
+Provides: 
+Source: package/built/python
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1289940
+Filename: python-mini_2.6.4-3_keenetic.ipk
+Size: 1273357
+MD5Sum: b2c4a9b453014dbb6dd9b2b67ca4e199
+Description:  Python is a dynamic object-oriented programming language that can be used
+ for many kinds of software development. It offers strong support for
+ integration with other languages and tools, comes with extensive standard
+ libraries, and can be learned in a few days. Many Python programmers
+ report substantial productivity gains and feel the language encourages
+ the development of higher quality, more maintainable code.
+ .
+ This package contains only a minimal Python install.
+
+Package: python-pil
+Version: 1.1.7-2
+Depends: python, libfreetype, libjpeg, liblcms
+Provides: 
+Source: package/built/python-pil
+Section: language-python
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 247303
+Filename: python-pil_1.1.7-2_keenetic.ipk
+Size: 247728
+MD5Sum: a63c993d9951197c620d9e05da312601
+Description:  The Python Imaging Library adds image processing capabilities to your
+ Python interpreter.
+ .
+ This library provides extensive file format support, an efficient
+ internal representation, and fairly powerful image processing
+ capabilities.
+ .
+ The core image library is designed for fast access to data stored in a
+ few basic pixel formats. It should provide a solid foundation for a
+ general image processing tool.
+
+Package: python-sqlite3
+Version: 2.6.4-3
+Depends: python-mini, libsqlite3
+Provides: 
+Source: package/built/python
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 36718
+Filename: python-sqlite3_2.6.4-3_keenetic.ipk
+Size: 37416
+MD5Sum: 40c8bc1886e1c5e3730dfe72a618aaac
+Description:  Python support for sqlite3
+
+Package: python
+Version: 2.6.4-3
+Depends: libffi, python-mini
+Provides: 
+Source: package/built/python
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1831137
+Filename: python_2.6.4-3_keenetic.ipk
+Size: 1830757
+MD5Sum: b62041a28e88ff65bf5f83768b1d2d6d
+Description:  Python is a dynamic object-oriented programming language that can be used
+ for many kinds of software development. It offers strong support for
+ integration with other languages and tools, comes with extensive standard
+ libraries, and can be learned in a few days. Many Python programmers
+ report substantial productivity gains and feel the language encourages
+ the development of higher quality, more maintainable code.
+ .
+ This package contains the full Python install.
+
+Package: sane-backends
+Version: 1.0.22-1
+Depends: sane-libs, libtiff
+Provides: 
+Source: package/built/sane-backends
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 44525
+Filename: sane-backends_1.0.22-1_keenetic.ipk
+Size: 45340
+MD5Sum: 597a4f0c4e761ed9281dbd210c38899b
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE daemon.
+
+Package: sane-frontends
+Version: 1.0.22-1
+Depends: sane-backends
+Provides: 
+Source: package/built/sane-backends
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 61290
+Filename: sane-frontends_1.0.22-1_keenetic.ipk
+Size: 62067
+MD5Sum: 41d42fd0f97225070ddcf05d6034c125
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE frontends.
+
+Package: sane-libs
+Version: 1.0.22-1
+Depends: libjpeg
+Provides: 
+Source: package/built/sane-backends
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2880417
+Filename: sane-libs_1.0.22-1_keenetic.ipk
+Size: 2875449
+MD5Sum: 0a267d324911ba327ee9a36c15ee4681
+Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
+ This package contains the SANE shared libraries.
+
+Package: screen
+Version: 4.0.3-2
+Depends: libncurses
+Provides: 
+Source: package/built/screen
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 158858
+Filename: screen_4.0.3-2_keenetic.ipk
+Size: 159359
+MD5Sum: b9bea82697dd292fb0b2a98d3e8efacc
+Description:  Screen is a full-screen window manager that multiplexes a physical
+ terminal between several processes, typically interactive shells.
+
+Package: sd-idle
+Version: 2.6-1
+Depends: 
+Provides: 
+Source: package/built/sd-idle
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4519
+Filename: sd-idle_2.6-1_keenetic.ipk
+Size: 5148
+MD5Sum: fcdd5dffa692fd74b94377a21caecf12
+Description:  sd-idle-2.6 is a disk idle spindown program for router firmware based on linux 2.6.
+
+Package: sdparm
+Version: 1.04-1
+Depends: 
+Provides: 
+Source: package/built/sdparm
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 74561
+Filename: sdparm_1.04-1_keenetic.ipk
+Size: 74734
+MD5Sum: e6d5d650cccb5fe6925dea63c4f3cc14
+Description:  The sdparm utility outputs and in some cases modifies SCSI device
+ parameters.
+
+Package: smartmontools
+Version: 5.41-1
+Depends: uclibcxx
+Provides: 
+Source: package/built/smartmontools
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 284039
+Filename: smartmontools_5.41-1_keenetic.ipk
+Size: 284470
+MD5Sum: 35a5fa7789d2ac7309f8e81d3f7ebf0c
+Description:  smartmontools contains utility programs (smartctl, smartd) to
+ control/monitor storage systems using the Self-Monitoring, Analysis
+ and Reporting Technology System (S.M.A.R.T.) built into most modern
+ ATA and SCSI disks. It is derived from smartsuite.
+
+Package: sqlite2-cli
+Version: 2.8.17-2
+Depends: libsqlite2, libncurses, libreadline
+Provides: 
+Source: package/built/sqlite2
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 9938
+Filename: sqlite2-cli_2.8.17-2_keenetic.ipk
+Size: 10724
+MD5Sum: cc58cead130ccbff491506a63c1988ac
+Description:  SQLite is a small C library that implements a self-contained, embeddable, 
+ zero-configuration SQL database engine.	
+ This package contains a terminal-based front-end to the SQLite (v2.x) library 
+ that can evaluate queries interactively and display the results in 
+ multiple formats.
+
+Package: sqlite3-cli
+Version: 3070701-2
+Depends: libsqlite3, libncurses, libreadline
+Provides: 
+Source: package/built/sqlite3
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18116
+Filename: sqlite3-cli_3070701-2_keenetic.ipk
+Size: 18900
+MD5Sum: dee9c22788ce8db6ce7450396ff9b8f1
+Description:  SQLite is a small C library that implements a self-contained, embeddable,
+ zero-configuration SQL database engine.
+ This package contains a terminal-based front-end to the SQLite (v3.x) library
+ that can evaluate queries interactively and display the results in multiple
+ formats.
+
+Package: strace
+Version: 4.5.20-1
+Depends: 
+Provides: 
+Source: package/built/strace
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 115055
+Filename: strace_4.5.20-1_keenetic.ipk
+Size: 91000
+MD5Sum: 667ed1998c571d99d2e50d9c6fae79b0
+Description:  A useful diagnostic, instructional, and debugging tool. Allows you to track what
+ system calls a program makes while it is running.
+
+Package: subversion-client
+Version: 1.6.17-2
+Depends: libneon, libaprutil, subversion-libs
+Provides: 
+Source: package/built/subversion
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 70340
+Filename: subversion-client_1.6.17-2_keenetic.ipk
+Size: 71162
+MD5Sum: d6b13d0821544f0d81ca06e1a810a8b3
+Description:  Subversion is a free/open-source version control system. That is,
+ Subversion manages files and directories, and the changes made to them,
+ over time. This allows you to recover older versions of your data, or
+ examine the history of how your data changed. In this regard, many
+ people think of a version control system as a sort of time machine.
+ This package contains the subversion client tools.
+
+Package: subversion-libs
+Version: 1.6.17-2
+Depends: libneon, libaprutil
+Provides: 
+Source: package/built/subversion
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 576816
+Filename: subversion-libs_1.6.17-2_keenetic.ipk
+Size: 576507
+MD5Sum: 862e77b5a3cddc171b02d70ce584c34d
+Description:  Subversion is a free/open-source version control system. That is,
+ Subversion manages files and directories, and the changes made to them,
+ over time. This allows you to recover older versions of your data, or
+ examine the history of how your data changed. In this regard, many
+ people think of a version control system as a sort of time machine.
+ This package contains the subversion libraries.
+
+Package: subversion-server
+Version: 1.6.17-2
+Depends: libneon, libaprutil, subversion-libs
+Provides: 
+Source: package/built/subversion
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 56377
+Filename: subversion-server_1.6.17-2_keenetic.ipk
+Size: 56965
+MD5Sum: 46286924d446c4ac6bd89cd8d0422a05
+Description:  Subversion is a free/open-source version control system. That is,
+ Subversion manages files and directories, and the changes made to them,
+ over time. This allows you to recover older versions of your data, or
+ examine the history of how your data changed. In this regard, many
+ people think of a version control system as a sort of time machine.
+ This package contains the subversion server.
+
+Package: tc
+Version: 2.6.35-2
+Depends: 
+Provides: 
+Source: package/iproute2
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 93319
+Filename: tc_2.6.35-2_keenetic.ipk
+Size: 93732
+MD5Sum: 646c499698f38d2f59e9fcf8d79513a8
+Description:  Traffic control utility
+
+Package: tcpdump-mini
+Version: 4.1.1-2
+Depends: libpcap
+Provides: 
+Source: package/built/tcpdump
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 139491
+Filename: tcpdump-mini_4.1.1-2_keenetic.ipk
+Size: 139896
+MD5Sum: cb5b5751c00cc36098d1d57488f2af12
+Description:  Network monitoring and data acquisition tool (minimal version)
+
+Package: tesseract-eng-data
+Version: 3.00-1
+Depends: tesseract
+Provides: 
+Source: package/built/tesseract-ocr-eng-data
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 743090
+Filename: tesseract-eng-data_3.00-1_keenetic.ipk
+Size: 741475
+MD5Sum: 1c6b308c2146e39e2116b47c4503a760
+Description:  English data file for tesseract3
+
+Package: tesseract
+Version: 3.00-1
+Depends: libtiff, libstdcpp, libjpeg, libpng
+Provides: 
+Source: package/built/tesseract-ocr
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1363731
+Filename: tesseract_3.00-1_keenetic.ipk
+Size: 1358684
+MD5Sum: c7a952a394d31928986593e7ef5707e1
+Description:  OCR
+
+Package: transmission-cli
+Version: 2.42-1
+Depends: transmission-daemon
+Provides: 
+Source: package/built/transmission
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: keenetic
+Installed-Size: 873512
+Filename: transmission-cli_2.42-1_keenetic.ipk
+Size: 872252
+MD5Sum: c9f63de828eaea08256abd55e0a3e597
+Description:  CLI utilities for transmission.
+
+Package: transmission-daemon
+Version: 2.42-1
+Depends: libevent2
+Provides: 
+Source: package/built/transmission
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: keenetic
+Installed-Size: 222800
+Filename: transmission-daemon_2.42-1_keenetic.ipk
+Size: 223244
+MD5Sum: 00b6a985a2561a5604d809801544e682
+Description:  Transmission is a simple BitTorrent client.
+ It features a very simple, intuitive interface
+ on top on an efficient, cross-platform back-end.
+ This package contains the daemon itself.
+
+Package: transmission-remote
+Version: 2.42-1
+Depends: 
+Provides: 
+Source: package/built/transmission
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: keenetic
+Installed-Size: 232880
+Filename: transmission-remote_2.42-1_keenetic.ipk
+Size: 233186
+MD5Sum: 419aec405796015d723203cf5507f8ec
+Description:  CLI remote interface for transmission.
+
+Package: transmission-web
+Version: 2.42-1
+Depends: transmission-daemon
+Provides: 
+Source: package/built/transmission
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: keenetic
+Installed-Size: 138099
+Filename: transmission-web_2.42-1_keenetic.ipk
+Size: 138812
+MD5Sum: cc8bd22323fe09cd6352db6fda7477ab
+Description:  Webinterface resources for transmission.
+
+Package: uclibcxx
+Version: 0.2.2-3
+Depends: 
+Provides: 
+Source: package/built/uclibc++
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 56971
+Filename: uclibcxx_0.2.2-3_keenetic.ipk
+Size: 57528
+MD5Sum: 35fc62d10e633333baa174ee8b2d2249
+Description:  C++ library for embedded systems
+
+Package: udpxy
+Version: 1.0-Chipmunk-20-2
+Depends: 
+Provides: 
+Source: package/built/udpxy
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 30705
+Filename: udpxy_1.0-Chipmunk-20-2_keenetic.ipk
+Size: 31531
+MD5Sum: 1183fa30d938d70b5055684f0ed52914
+Description:  udproxy makes it possible to convert UDP IPTV streams into http
+ streams which can be viewed even over wlans. http streams do
+ not generate huge amounts of multicast traffic, so a sd stream
+ only takes about 300k. interesting for peoply who have IPTV at
+ home and do not want to rent multiple decoders from their
+ provider but just use their own streaming client for example
+ popcornhour/mediatomb/vlc/etc.
+
+Package: unfs3
+Version: 0.9.22-1
+Depends: portmap
+Provides: 
+Source: package/built/unfs3
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 40205
+Filename: unfs3_0.9.22-1_keenetic.ipk
+Size: 40964
+MD5Sum: b701adabb8f6fc48dd1d162024dbd9f7
+Description:  UNFS3 is a user-space implementation of the NFSv3 server
+ specification. It provides a daemon for the MOUNT and NFS
+ protocols, which are used by NFS clients for accessing files
+ on the server.
+
+Package: unzip
+Version: 5.52-1
+Depends: 
+Provides: 
+Source: package/built/unzip
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 143647
+Filename: unzip_5.52-1_keenetic.ipk
+Size: 144363
+MD5Sum: a2a8102b85ecbe9eb02554f8f3bc4d22
+Description:  InfoZIP's unzip program. With the exception of multi-volume archives 
+ (ie, .ZIP files that are split across several disks using PKZIP's /& option), 
+ this can handle any file produced either by PKZIP, or the corresponding 
+ InfoZIP zip program.
+
+Package: usbutils
+Version: 004-1
+Depends: libusb-1.0
+Provides: 
+Source: package/built/usbutils
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 186334
+Filename: usbutils_004-1_keenetic.ipk
+Size: 187032
+MD5Sum: eb1eb02d4dfe1174db6ef931d1ec344c
+Description:  USB devices listing utilities
+
+Package: vncrepeater
+Version: 0.12-4
+Depends: uclibcxx
+Provides: 
+Source: package/built/vncrepeater
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 17286
+Filename: vncrepeater_0.12-4_keenetic.ipk
+Size: 18148
+MD5Sum: 3d3f1629183c1fb6e949f841abcd0452
+Description:  Viewer can be behind Nat router or directly connected to the internet 
+ instead of forwarding serveral ports, you only need to forward 1 port. 
+ If the PC that runs the Repeater has access to the local DNS server, 
+ you can use your local DNS names instead of 10.10.10.12.
+ This could be handy when you have a dynamic DHCP server allocating 
+ ip adresses for your PC.
+
+Package: vnstat
+Version: 1.11-1
+Depends: 
+Provides: 
+Source: package/built/vnstat
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 64352
+Filename: vnstat_1.11-1_keenetic.ipk
+Size: 65033
+MD5Sum: 64203f8aea5a2d9be7980d835b0b35c9
+Description:  vnStat is a network traffic monitor for Linux that keeps a log of daily
+ network traffic for the selected interface(s). vnStat isn't a packet
+ sniffer. The traffic information is analyzed from the /proc -filesystem,
+ so vnStat can be used without root permissions.
+
+Package: vnstati
+Version: 1.11-1
+Depends: vnstat, libgd
+Provides: 
+Source: package/built/vnstat
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 34482
+Filename: vnstati_1.11-1_keenetic.ipk
+Size: 35272
+MD5Sum: d1fbf568421672edf29e540c3414f84f
+Description:  The purpose of vnstati is to provide image output support for statistics
+ collected using vnstat(1). However, the image file format is limited to
+ png. All basic outputs of vnStat are supported excluding live traffic
+ features. The image can be outputted either to a file or to standard
+ output.
+
 Package: wget
 Version: 1.13.4-1
 Depends: 
@@ -78,4 +5548,79 @@ Description:  Wget is a network utility to retrieve files from the Web using htt
  pages as well as ftp sites -- you can use wget to make mirrors of
  archives and home pages or to travel the Web like a WWW robot.
  This package is built with SSL support.
+
+Package: whereis
+Version: 2.13.0.1-4
+Depends: 
+Provides: 
+Source: package/built/util-linux-ng
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3496
+Filename: whereis_2.13.0.1-4_keenetic.ipk
+Size: 4096
+MD5Sum: 63d66f901ca3cc983af9a4d6183f05cc
+Description:  This package contains a utility for finding files.
+
+Package: xinetd
+Version: 2.3.14-1
+Depends: 
+Provides: 
+Source: package/built/xinetd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 66573
+Filename: xinetd_2.3.14-1_keenetic.ipk
+Size: 67278
+MD5Sum: 0e24b0a2cb74594bd2ae1d07e4e263ee
+Description:  xinetd has access control mechanisms, extensive logging capabilities,
+ the ability to make services available based on time, can place limits
+ on the number of servers that can be started, and has deployable
+ defence mechanisms to protect against port scanners, among other
+ things.
+
+Package: xupnpd
+Version: 260-1
+Depends: liblua
+Provides: 
+Source: package/built/xupnpd
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 84164
+Filename: xupnpd_260-1_keenetic.ipk
+Size: 84903
+MD5Sum: 05c122db4dfe1c02aa1524ba44c5f155
+Description:  eXtensible UPnP agent
+
+Package: zip
+Version: 2.32-1
+Depends: 
+Provides: 
+Source: package/built/zip
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 90910
+Filename: zip_2.32-1_keenetic.ipk
+Size: 91661
+MD5Sum: 44e0973c62b67ad17ded3def0ce20d20
+Description:  This is InfoZIP's zip program. It produces files that are fully 
+ compatible with the popular PKZIP program; however, the command line 
+ options are not identical. In other words, the end result is the same, 
+ but the methods differ.
 
