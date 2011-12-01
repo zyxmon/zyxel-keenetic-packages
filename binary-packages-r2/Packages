@@ -1307,6 +1307,23 @@ Size: 118309
 MD5Sum: 00020758080fab0134630fb8237dd67f
 Description:  A PNG format files handling library
 
+Package: libpopt
+Version: 1.7-5
+Depends: 
+Provides: 
+Source: package/built/popt
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 12226
+Filename: libpopt_1.7-5_keenetic.ipk
+Size: 12834
+MD5Sum: 744d61f462eda5923a219cf5d5646e13
+Description:  A command line option parsing library
+
 Package: libreadline
 Version: 5.2-3
 Depends: 
@@ -4973,6 +4990,31 @@ Description:  Python is a dynamic object-oriented programming language that can 
  the development of higher quality, more maintainable code.
  .
  This package contains the full Python install.
+
+Package: rsync
+Version: 3.0.8-4
+Depends: libpopt
+Provides: 
+Source: package/built/rsync
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 176166
+Filename: rsync_3.0.8-4_keenetic.ipk
+Size: 176555
+MD5Sum: 4dfa1f44e6cefd74df73d7a809174565
+Description:  rsync is a program that allows files to be copied to
+ and from remote machines in much the same way as rcp.
+ It has many more options than rcp, and uses the rsync
+ remote-update protocol to greatly speed up file
+ transfers when the destination file already exists.
+ 
+ The rsync remote-update protocol allows rsync to
+ transfer just the differences between two sets of files
+ across the network link.
 
 Package: sane-backends
 Version: 1.0.22-1
