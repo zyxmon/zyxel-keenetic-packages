@@ -1,33 +1,48 @@
 #!/bin/sh
 
 MOUNT="/media/DISK_A1/system"
+PORT=4022
+PIDFILE="/var/run/udpxy$PORT.pid"
 
 export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
 export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
 
+daemon_status ()
+{
+	[ -f $PIDFILE ] && [ -d /proc/`cat $PIDFILE` ]
+}
+ 
+
 
 start() {
-#for pure PPPoE without ip add any ip to eth2.2 
-#ifconfig eth2.2 10.10.99.1 up
-IGMODULE=`lsmod | grep igmpsn | cut -d " " -f 1`
-if [ -n "$IGMODULE" ]; then
-	rmmod igmpsn
-fi
-# Forcing setting IGMPv2
-echo "2" > /proc/sys/net/ipv4/conf/all/force_igmp_version
-# route add -net 239.0.0.0 netmask 255.0.0.0 br0 (не обязательно, работает без этого маршрута)
-iptables -I INPUT -i eth2.2 -d 239.0.0.0/8 -j ACCEPT
-udpxy -a br0 -p 4022 -m eth2.2 -c 20 -B 4Kb -R -1 -H 4
+	#for pure PPPoE without ip add any ip to eth2.2 
+	#ifconfig eth2.2 10.10.99.1 up
+	IGMODULE=`lsmod | grep igmpsn | cut -d " " -f 1`
+	if [ -n "$IGMODULE" ]; then
+		rmmod igmpsn
+	fi
+	# Forcing setting IGMPv2
+	echo "2" > /proc/sys/net/ipv4/conf/all/force_igmp_version
+	iptables -I INPUT -i eth2.2 -d 224.0.0.0/4 -j ACCEPT
+	# iptables -I INPUT -i eth2.2 -s 224.0.0.0/4 -j ACCEPT
+	# route add -net 224.0.0.0 netmask 240.0.0.0 br0 (не обязательно, работает без этого маршрута)
+	udpxy -a br0 -p $PORT -m eth2.2 -c 20 -B 4Kb -R -1 -H 4
 }
 
 stop() {
-iptables -D INPUT -i eth2.2 -d 239.0.0.0/8 -j ACCEPT
-killall udpxy
+	iptables -D INPUT -i eth2.2 -d 224.0.0.0/4 -j ACCEPT
+	# iptables -D INPUT -i eth2.2 -s 224.0.0.0/4 -j ACCEPT
+	kill `cat $PIDFILE`
 }
 
 case "$1" in
     start)
-        start
+		if daemon_status
+		then
+			echo udpxy already running
+		else
+			start
+		fi 
         ;;
     stop)
         stop
@@ -37,6 +52,14 @@ case "$1" in
         sleep 1
         start
         ;;
+	status)
+		if daemon_status
+		then
+			echo udpxy is running
+		else
+			echo udpxy is not running
+		fi
+		;;
     link_up)
         ;;
     ppp_up)
