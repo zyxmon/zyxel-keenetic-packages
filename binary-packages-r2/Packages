@@ -5016,6 +5016,25 @@ Description:  rsync is a program that allows files to be copied to
  transfer just the differences between two sets of files
  across the network link.
 
+Package: rsyncd
+Version: 3.0.8-4
+Depends: rsync
+Provides: 
+Source: package/built/rsync
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 943
+Filename: rsyncd_3.0.8-4_keenetic.ipk
+Size: 1637
+MD5Sum: 69f74e55fe30efc6b4c21967c4f7f48c
+Description:  rsyncd is a configuration file and initscript to
+ utilize rsync as a daemon. It uses the same binary
+ as rsync.
+
 Package: sane-backends
 Version: 1.0.22-1
 Depends: sane-libs, libtiff
