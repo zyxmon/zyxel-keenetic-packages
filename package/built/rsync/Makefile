@@ -77,6 +77,10 @@ define Package/rsyncd/install
 	$(INSTALL_DIR) $(1)/etc
 	$(INSTALL_DATA) ./files/rsyncd.conf $(1)/etc/
 	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/K10rsyncd $(1)/etc/init.d
+	$(INSTALL_DIR) $(1)/var/run
+	$(INSTALL_DIR) $(1)/var/log
+	$(INSTALL_DIR) $(1)/var/lock
 endef
 
 $(eval $(call BuildPackage,rsync))
