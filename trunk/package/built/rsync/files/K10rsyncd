@@ -1,0 +1,36 @@
+#!/bin/sh
+
+MOUNTPNT="/media/DISK_A1"
+MOUNT="$MOUNTPNT/system"
+
+RSYNC="$MOUNT/usr/bin/rsync"
+CONFIGFILE="$MOUNT/etc/rsyncd.conf"
+
+export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
+
+start()
+{
+	$RSYNC --daemon --config=$CONFIGFILE
+}
+
+stop()
+{
+    killall rsync
+}
+
+case "$1" in
+	start)
+	    start
+	    ;;
+	stop)
+	    stop
+	    ;;
+	restart)
+	    stop
+	    start
+	    ;;
+	*)
+	    echo "Usage: $0 {start|stop|restart}"
+	    ;;
+esac
