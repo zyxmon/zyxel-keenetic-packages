@@ -4795,6 +4795,25 @@ MD5Sum: 0879cf34e77d35cd4a9661409f00b989
 Description:  Portmap is a server that converts RPC (Remote Procedure Call) program
  numbers into DARPA protocol port numbers.
 
+Package: procps
+Version: 3.2.8-1
+Depends: libncurses
+Provides: 
+Source: package/built/procps
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 135217
+Filename: procps_3.2.8-1_keenetic.ipk
+Size: 135637
+MD5Sum: 39c5490118e1f4415aac0845f504541f
+Description:  procps is the package that has a bunch of small useful utilities that give 
+ information about processes using the /proc filesystem. The package 
+ includes the programs ps, top, vmstat, w, kill, free, slabtop, and skill.
+
 Package: pshare
 Version: 0.0.2rc2-1
 Depends: 
