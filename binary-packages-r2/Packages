@@ -16,7 +16,7 @@ MD5Sum: 23bda38f3128ae6b0f2bbc1a56023cf6
 Description:  download manager
 
 Package: bash
-Version: 4.2-1
+Version: 4.2-2
 Depends: libncurses
 Provides: 
 Source: package/built/bash
@@ -26,10 +26,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 347591
-Filename: bash_4.2-1_keenetic.ipk
-Size: 348025
-MD5Sum: c749d02f92eb1c4aa01c5b851e2669e8
+Installed-Size: 347528
+Filename: bash_4.2-2_keenetic.ipk
+Size: 347963
+MD5Sum: 0f9e55883a5fe01d94569f20fce8ed79
 Description:  Bash is an sh-compatible command language interpreter that executes 
  commands read from the standard input or from a file. Bash also 
  incorporates useful features from the Korn and C shells (ksh and csh).
