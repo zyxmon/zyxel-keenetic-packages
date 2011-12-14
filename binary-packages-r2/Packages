@@ -5668,7 +5668,7 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 260-1
+Version: 264-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
@@ -5678,10 +5678,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 84164
-Filename: xupnpd_260-1_keenetic.ipk
-Size: 84903
-MD5Sum: 05c122db4dfe1c02aa1524ba44c5f155
+Installed-Size: 84727
+Filename: xupnpd_264-1_keenetic.ipk
+Size: 85452
+MD5Sum: 06aa135234cd9d4c7558476c1a856a88
 Description:  eXtensible UPnP agent
 
 Package: zip
