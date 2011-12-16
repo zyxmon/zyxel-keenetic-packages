@@ -1,0 +1,104 @@
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/plugins/pppol2tp/control.c ppp-2.4.4/pppd/plugins/pppol2tp/control.c
+--- ppp-2.4.4.orig/pppd/plugins/pppol2tp/control.c	2011-05-15 16:07:39.000000000 +0400
++++ ppp-2.4.4/pppd/plugins/pppol2tp/control.c	2011-05-15 16:05:15.000000000 +0400
+@@ -401,34 +401,6 @@
+             magic_lac_dial (t->lac);
+         }
+         break;
+-    case SCCCN:
+-        if (t->chal_them.state)
+-        {
+-            if (memcmp
+-                (t->chal_them.reply, t->chal_them.response, MD_SIG_SIZE))
+-            {
+-                set_error (c, VENDOR_ERROR,
+-                           "Invalid challenge authentication");
+-                l2tp_log (LOG_DEBUG, "%s: Invalid authentication for host '%s'\n",
+-                     __FUNCTION__, t->hostname);
+-                c->needclose = -1;
+-                return -EINVAL;
+-            }
+-        }
+-        t->state = SCCCN;
+-        l2tp_log (LOG_NOTICE,
+-             "Connection established to %s, %d.  Local: %d, Remote: %d (ref=%u/%u).\n",
+-		  IPADDY (t->peer.sin_addr),
+-		  ntohs (t->peer.sin_port), t->ourtid, t->tid, t->refme, t->refhim);
+-        /* Schedule a HELLO */
+-        tv.tv_sec = HELLO_DELAY;
+-        tv.tv_usec = 0;
+-#ifdef DEBUG_HELLO
+-        l2tp_log (LOG_DEBUG, "%s: scheduling initial HELLO on %d\n", __FUNCTION__,
+-             t->ourtid);
+-#endif
+-        t->hello = schedule (tv, hello, (void *) t);
+-        break;
+     case StopCCN:
+         if (t->qtid < 0)
+         {
+@@ -467,8 +439,11 @@
+              "%s: Connection closed to %s, port %d (%s), Local: %d, Remote: %d\n",
+              __FUNCTION__, IPADDY (t->peer.sin_addr),
+              ntohs (t->peer.sin_port), t->self->errormsg, t->ourtid, t->tid);
++        
+         c->needclose = 0;
+         c->closing = -1;
++        stop_pppd(0);
++        
+         break;
+     case ICRP:
+         if (c->cid < 0)
+@@ -517,16 +492,6 @@
+ 
+         start_pppd (c);
+         break;
+-    case OCRP:                 /* jz: nothing to do for OCRP, waiting for OCCN */
+-        break;
+-    case OCCN:                 /* jz: get OCCN, so the only thing we must do is to start the pppd */
+-	/*  jz: just show some information */
+-        l2tp_log (LOG_INFO,
+-		  "parameters: Local: %d , Remote: %d , Serial: %d , Pid: %d , Tunnelid: %d\n",
+-		  c->ourcid, c->cid, c->serno, c->pppd, t->ourtid); 
+-
+-        start_pppd (c);
+-        break;
+     case CDN:
+         if (c->qcid < 0)
+         {
+@@ -582,6 +547,9 @@
+              IPADDY (t->peer.sin_addr), c->serno, c->errormsg);
+         c->needclose = 0;
+         c->closing = -1;
++        
++        stop_pppd(0);
++        
+         break;
+     case Hello:
+         break;
+@@ -656,7 +624,6 @@
+ #endif
+             zlb = new_outgoing (t);
+             control_zlb (zlb, t, c);
+-            udp_xmit (zlb, t);
+             toss (zlb);
+         }
+         else if (!t->control_rec_seq_num && (t->tid == -1))
+@@ -1183,7 +1150,6 @@
+         /* FIXME: If I'm not a CDN, I need to send a CDN */
+         control_zlb (buf, t, c);
+         c->cid = 0;
+-        udp_xmit (buf, t);
+         toss (buf);
+     }
+     else
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/plugins/pppol2tp/network.c ppp-2.4.4/pppd/plugins/pppol2tp/network.c
+--- ppp-2.4.4.orig/pppd/plugins/pppol2tp/network.c	2011-05-15 16:07:39.000000000 +0400
++++ ppp-2.4.4/pppd/plugins/pppol2tp/network.c	2011-05-15 15:53:49.000000000 +0400
+@@ -217,7 +217,6 @@
+         }
+ 	free(buf->rstart);
+ 	free(buf);
+-	    
+ 	stop_pppd(3);
+     } 
+     else
