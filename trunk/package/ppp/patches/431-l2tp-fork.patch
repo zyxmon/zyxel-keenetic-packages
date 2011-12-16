@@ -389,9 +389,9 @@
 +   	 manager_pid = fpid; 
 +		 
 +		 if( (shmid = shmget(key, sizeof(SHT), IPC_CREAT|IPC_EXCL|0666)) == -1 ) {
-+  			if( (shmid = shmget(key, sizeof(SHT), 0)) == -1 ) 
-+  				close_network();
-+	  			return -1;
++  			if( (shmid = shmget(key, sizeof(SHT), 0)) == -1 ) {
++  				close_network(); return -1;
++	  			}
 +		 }
 +		 
 +		 if( (segptr = (PSHT)shmat(shmid, 0, 0)) == (int*)-1 ) {

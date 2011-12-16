@@ -1,0 +1,22 @@
+diff -U 3 -dHBbrN -- ppp-2.4.4.orig/pppd/chap_ms.c ppp-2.4.4/pppd/chap_ms.c
+--- ppp-2.4.4.orig/pppd/chap_ms.c	2011-04-01 18:26:53.000000000 +0400
++++ ppp-2.4.4/pppd/chap_ms.c	2011-04-01 18:10:06.000000000 +0400
+@@ -819,7 +819,8 @@
+     ChapMS_NT(rchallenge, secret, secret_len, &response[MS_CHAP_NTRESP]);
+ 
+ #ifdef MSLANMAN
+-    ChapMS_LANMan(rchallenge, secret, secret_len, &response);
++    ChapMS_LANMan(rchallenge, secret, secret_len,
++		  &response[MS_CHAP_LANMANRESP]);
+ 
+     /* preferred method is set by option  */
+     response[MS_CHAP_USENT] = !ms_lanman;
+@@ -852,7 +853,7 @@
+     u_char *p = &response[MS_CHAP2_PEER_CHALLENGE];
+     int i;
+ 
+-    BZERO(response, sizeof(*response));
++    BZERO(response, MS_CHAP2_RESPONSE_LEN);
+ 
+     /* Generate the Peer-Challenge if requested, or copy it if supplied. */
+     if (!PeerChallenge)
