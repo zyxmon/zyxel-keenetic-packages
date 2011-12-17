@@ -1,7 +1,6 @@
-diff -u a/cli-kex.c b/cli-kex.c
---- a/cli-kex.c	2011-11-08 16:48:15.000000000 +0400
-+++ b/cli-kex.c	2011-11-25 12:46:33.342604908 +0400
-@@ -156,7 +156,7 @@
+--- a/cli-kex.c
++++ b/cli-kex.c
+@@ -156,7 +156,7 @@ static FILE* open_known_hosts_file(int *
  
  	if (!homedir) {
  		struct passwd * pw = NULL;
@@ -10,10 +9,9 @@ diff -u a/cli-kex.c b/cli-kex.c
  		if (pw) {
  			homedir = pw->pw_dir;
  		}
-diff -u a/cli-runopts.c b/cli-runopts.c
---- a/cli-runopts.c	2011-11-25 12:14:38.000000000 +0400
-+++ b/cli-runopts.c	2011-11-25 12:47:49.423603771 +0400
-@@ -622,7 +622,7 @@
+--- a/cli-runopts.c
++++ b/cli-runopts.c
+@@ -622,7 +622,7 @@ static void fill_own_user() {
  
  	uid = getuid();
  
@@ -22,10 +20,9 @@ diff -u a/cli-runopts.c b/cli-runopts.c
  	if (pw == NULL || pw->pw_name == NULL) {
  		dropbear_exit("Unknown own user");
  	}
-diff -u a/common-session.c b/common-session.c
---- a/common-session.c	2011-11-08 16:48:15.000000000 +0400
-+++ b/common-session.c	2011-11-25 12:48:17.798662628 +0400
-@@ -444,7 +444,7 @@
+--- a/common-session.c
++++ b/common-session.c
+@@ -444,7 +444,7 @@ void fill_passwd(const char* username) {
  	if (ses.authstate.pw_passwd)
  		m_free(ses.authstate.pw_passwd);
  
@@ -34,10 +31,9 @@ diff -u a/common-session.c b/common-session.c
  	if (!pw) {
  		return;
  	}
-diff -u a/dbutil.c b/dbutil.c
---- a/dbutil.c	2011-11-08 16:48:15.000000000 +0400
-+++ b/dbutil.c	2011-11-25 12:50:38.846603398 +0400
-@@ -870,3 +870,63 @@
+--- a/dbutil.c
++++ b/dbutil.c
+@@ -870,3 +870,63 @@ int m_str_to_uint(const char* str, unsig
  		return DROPBEAR_SUCCESS;
  	}
  }
@@ -101,9 +97,8 @@ diff -u a/dbutil.c b/dbutil.c
 +
 +
 +
-diff -u a/dbutil.h b/dbutil.h
---- a/dbutil.h	2011-11-08 16:48:15.000000000 +0400
-+++ b/dbutil.h	2011-11-25 12:18:41.610679615 +0400
+--- a/dbutil.h
++++ b/dbutil.h
 @@ -33,6 +33,10 @@
  void startsyslog();
  #endif
@@ -115,11 +110,9 @@ diff -u a/dbutil.h b/dbutil.h
  #ifdef __GNUC__
  #define ATTRIB_PRINTF(fmt,args) __attribute__((format(printf, fmt, args))) 
  #else
-Общие подкаталоги: a/debian и b/debian
-diff -u a/dropbearkey.c b/dropbearkey.c
---- a/dropbearkey.c	2011-11-08 16:48:15.000000000 +0400
-+++ b/dropbearkey.c	2011-11-25 12:20:24.266688507 +0400
-@@ -326,7 +326,7 @@
+--- a/dropbearkey.c
++++ b/dropbearkey.c
+@@ -326,7 +326,7 @@ static void printpubkey(sign_key * key, 
  
  	/* a user@host comment is informative */
  	username = "";
@@ -128,12 +121,9 @@ diff -u a/dropbearkey.c b/dropbearkey.c
  	if (pw) {
  		username = pw->pw_name;
  	}
-Общие подкаталоги: a/libtomcrypt и b/libtomcrypt
-Общие подкаталоги: a/libtommath и b/libtommath
-diff -u a/loginrec.c b/loginrec.c
---- a/loginrec.c	2011-11-08 16:48:15.000000000 +0400
-+++ b/loginrec.c	2011-11-25 12:53:42.802599833 +0400
-@@ -275,7 +275,7 @@
+--- a/loginrec.c
++++ b/loginrec.c
+@@ -275,7 +275,7 @@ login_init_entry(struct logininfo *li, i
  
  	if (username) {
  		strlcpy(li->username, username, sizeof(li->username));
@@ -142,10 +132,9 @@ diff -u a/loginrec.c b/loginrec.c
  		if (pw == NULL)
  			dropbear_exit("login_init_entry: Cannot find user \"%s\"",
  					li->username);
-diff -u a/scp.c b/scp.c
---- a/scp.c	2011-11-08 16:48:15.000000000 +0400
-+++ b/scp.c	2011-11-25 12:54:23.718611803 +0400
-@@ -392,7 +392,7 @@
+--- a/scp.c
++++ b/scp.c
+@@ -392,7 +392,7 @@ main(int argc, char **argv)
  	argc -= optind;
  	argv += optind;
  
@@ -154,10 +143,9 @@ diff -u a/scp.c b/scp.c
  		fatal("unknown user %u", (u_int) userid);
  
  	if (!isatty(STDERR_FILENO))
-diff -u a/svr-auth.c b/svr-auth.c
---- a/svr-auth.c	2011-11-08 16:48:15.000000000 +0400
-+++ b/svr-auth.c	2011-11-25 12:45:52.782630377 +0400
-@@ -203,6 +203,85 @@
+--- a/svr-auth.c
++++ b/svr-auth.c
+@@ -203,6 +203,85 @@ out:
  	m_free(servicename);
  	m_free(methodname);
  }
@@ -243,7 +231,7 @@ diff -u a/svr-auth.c b/svr-auth.c
  
  
  /* Check that the username exists, has a non-empty password, and has a valid
-@@ -261,8 +340,8 @@
+@@ -261,8 +340,8 @@ static int checkusername(unsigned char *
  	/* check the shell is valid. If /etc/shells doesn't exist, getusershell()
  	 * should return some standard shells like "/bin/sh" and "/bin/csh" (this
  	 * is platform-specific) */
@@ -254,7 +242,7 @@ diff -u a/svr-auth.c b/svr-auth.c
  		TRACE(("test shell is '%s'", listshell))
  		if (strcmp(listshell, usershell) == 0) {
  			/* have a match */
-@@ -270,7 +349,7 @@
+@@ -270,7 +349,7 @@ static int checkusername(unsigned char *
  		}
  	}
  	/* no matching shell */
@@ -263,10 +251,9 @@ diff -u a/svr-auth.c b/svr-auth.c
  	TRACE(("no matching shell"))
  	dropbear_log(LOG_WARNING, "User '%s' has invalid shell, rejected",
  				ses.authstate.pw_name);
-diff -u a/svr-authpubkey.c b/svr-authpubkey.c
---- a/svr-authpubkey.c	2011-11-25 12:14:38.000000000 +0400
-+++ b/svr-authpubkey.c	2011-11-25 12:38:12.774602033 +0400
-@@ -222,7 +222,7 @@
+--- a/svr-authpubkey.c
++++ b/svr-authpubkey.c
+@@ -222,7 +222,7 @@ static int checkpubkey(unsigned char* al
  		/* open the file */
  		authfile = fopen(filename, "r");
  	} else {
@@ -275,7 +262,7 @@ diff -u a/svr-authpubkey.c b/svr-authpubkey.c
  	}
  	if (authfile == NULL) {
  		goto out;
-@@ -377,10 +377,10 @@
+@@ -377,10 +377,10 @@ static int checkpubkeyperms() {
  	}
  
  	if (ses.authstate.pw_uid == 0) {
@@ -288,10 +275,9 @@ diff -u a/svr-authpubkey.c b/svr-authpubkey.c
  			goto out;
  		}
  	} else {
-diff -u a/svr-chansession.c b/svr-chansession.c
---- a/svr-chansession.c	2011-11-25 12:14:38.000000000 +0400
-+++ b/svr-chansession.c	2011-11-25 12:59:24.318641407 +0400
-@@ -562,7 +562,7 @@
+--- a/svr-chansession.c
++++ b/svr-chansession.c
+@@ -562,7 +562,7 @@ static int sessionpty(struct ChanSess * 
  		dropbear_exit("Out of memory"); /* TODO disconnect */
  	}
  
@@ -300,3 +286,14 @@ diff -u a/svr-chansession.c b/svr-chansession.c
  	if (!pw)
  		dropbear_exit("getpwnam failed after succeeding previously");
  	pty_setowner(pw, chansess->tty);
+--- a/options.h
++++ b/options.h
+@@ -255,7 +255,7 @@ much traffic. */
+  * OpenSSH), set the path below. If the path isn't defined, sftp will not
+  * be enabled */
+ #ifndef SFTPSERVER_PATH
+-#define SFTPSERVER_PATH "/usr/libexec/sftp-server"
++#define SFTPSERVER_PATH "/media/DISK_A1/system/usr/libexec/sftp-server"
+ #endif
+ 
+ /* This is used by the scp binary when used as a client binary. If you're
