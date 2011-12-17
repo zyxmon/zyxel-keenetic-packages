@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mc
-PKG_VERSION:=4.8.0
+PKG_VERSION:=4.8.1
 PKG_RELEASE:=1
 PKG_INSTALL:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://www.midnight-commander.org/downloads/
-PKG_MD5SUM:=592478c3edfa2ad64c8cd165b9bec446
+PKG_MD5SUM:=7d60c87d87b359831d976fa28034935e
 
 #PKG_FIXUP:=autoreconf
 
@@ -54,6 +54,7 @@ CONFIGURE_ARGS += \
 	--with-libiconv-prefix="$(ICONV_PREFIX)" \
 	--with-slang-includes="$(STAGING_DIR)/usr/include" \
 	--with-slang-libs="$(STAGING_DIR)/usr/lib" \
+	fu_cv_sys_stat_statfs2_bsize=yes
 
 
 AM_HOST=$(firstword $(wildcard $(STAGING_DIR_HOST)/share/automake-*))
