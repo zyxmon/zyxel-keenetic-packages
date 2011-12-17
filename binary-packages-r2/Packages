@@ -162,7 +162,7 @@ Description:  The Diffutils package contains programs that show the differences 
  files or directories.
 
 Package: dropbear
-Version: 2011.54-1
+Version: 2011.54-2
 Depends: 
 Provides: 
 Source: package/dropbear
@@ -172,10 +172,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 93072
-Filename: dropbear_2011.54-1_keenetic.ipk
-Size: 93612
-MD5Sum: f1707b46b2b03138cc6713463394740b
+Installed-Size: 93076
+Filename: dropbear_2011.54-2_keenetic.ipk
+Size: 93643
+MD5Sum: cb71ae7d3fd3a9676587f8d638f8bccd
 Description:  A small SSH2 server/client designed for small memory environments.
 
 Package: e2fsprogs
