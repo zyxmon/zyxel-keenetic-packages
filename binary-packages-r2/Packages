@@ -5342,7 +5342,7 @@ MD5Sum: cb5b5751c00cc36098d1d57488f2af12
 Description:  Network monitoring and data acquisition tool (minimal version)
 
 Package: tesseract-eng-data
-Version: 3.00-1
+Version: 3.01-1
 Depends: tesseract
 Provides: 
 Source: package/built/tesseract-ocr-eng-data
@@ -5352,15 +5352,15 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 743090
-Filename: tesseract-eng-data_3.00-1_keenetic.ipk
-Size: 741475
-MD5Sum: 1c6b308c2146e39e2116b47c4503a760
+Installed-Size: 4303212
+Filename: tesseract-eng-data_3.01-1_keenetic.ipk
+Size: 4252533
+MD5Sum: d58dce5cc94a177c2dc90739f0ad85cc
 Description:  English data file for tesseract3
 
 Package: tesseract
-Version: 3.00-1
-Depends: libtiff, libstdcpp, libjpeg, libpng
+Version: 3.01-1
+Depends: libleptonica, libstdcpp
 Provides: 
 Source: package/built/tesseract-ocr
 Section: utils
@@ -5369,10 +5369,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1363731
-Filename: tesseract_3.00-1_keenetic.ipk
-Size: 1358684
-MD5Sum: c7a952a394d31928986593e7ef5707e1
+Installed-Size: 1475915
+Filename: tesseract_3.01-1_keenetic.ipk
+Size: 1469817
+MD5Sum: 3701ba3bf3479393612229394386bc47
 Description:  OCR
 
 Package: transmission-cli
