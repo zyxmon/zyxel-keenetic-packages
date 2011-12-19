@@ -4943,6 +4943,23 @@ Description:  Python is a dynamic object-oriented programming language that can 
  .
  This package contains only a minimal Python install.
 
+Package: python-openssl
+Version: 2.6.4-3
+Depends: python-mini
+Provides: 
+Source: package/built/python
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10692
+Filename: python-openssl_2.6.4-3_keenetic.ipk
+Size: 11231
+MD5Sum: 31c87da2fe78d1f184afe3fbec47256f
+Description:  Python support for OpenSSL
+
 Package: python-pil
 Version: 1.1.7-2
 Depends: python, libfreetype, libjpeg, liblcms
