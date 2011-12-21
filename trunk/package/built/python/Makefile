@@ -74,6 +74,12 @@ $(call Package/python/Default)
   DEPENDS+=+python-mini
 endef
 
+define Package/python-bzip2
+$(call Package/python/Default)
+  TITLE:=Python support for Bzip2
+  DEPENDS+=+python-mini +libbz2
+endef
+
 define Package/python-expat
 $(call Package/python/Default)
   TITLE:=Python support for expat
@@ -194,6 +200,7 @@ define PyPackage/python/filespec
 -|/usr/lib/python$(PYTHON_VERSION)/test
 -|/usr/lib/python$(PYTHON_VERSION)/lib2to3
 -|/usr/lib/python$(PYTHON_VERSION)/lib-old
+-|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/bz2.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/gdbm.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_sqlite3.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_ssl.so
@@ -238,7 +245,6 @@ define PyPackage/python/filespec
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/syslog.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/time.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/unicodedata.so
--|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/zlib.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_weakref.so
 -|/usr/lib/python$(PYTHON_VERSION)/linecache.py
 -|/usr/lib/python$(PYTHON_VERSION)/md5.py
@@ -317,7 +323,6 @@ define PyPackage/python-mini/filespec
 +|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/syslog.so
 +|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/time.so
 +|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/unicodedata.so
-+|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/zlib.so
 +|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_weakref.so
 +|/usr/lib/python$(PYTHON_VERSION)/linecache.py
 +|/usr/lib/python$(PYTHON_VERSION)/md5.py
@@ -366,6 +371,10 @@ endef
 define PyPackage/python-doc/filespec
 +|/usr/lib/python$(PYTHON_VERSION)/pydoc_topics.py
 +|/usr/lib/python$(PYTHON_VERSION)/pydoc.py
+endef
+
+define PyPackage/python-bzip2/filespec
++|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/bz2.so
 endef
 
 define PyPackage/python-expat/filespec
@@ -426,6 +435,7 @@ $(eval $(call HostBuild))
 $(eval $(call PyPackage,python))
 $(eval $(call PyPackage,python-mini))
 $(eval $(call PyPackage,python-doc))
+$(eval $(call PyPackage,python-bzip2))
 $(eval $(call PyPackage,python-expat))
 $(eval $(call PyPackage,python-gzip))
 $(eval $(call PyPackage,python-openssl))
@@ -436,6 +446,7 @@ $(eval $(call PyPackage,python-gdbm))
 $(eval $(call BuildPackage,python))
 $(eval $(call BuildPackage,python-mini))
 $(eval $(call BuildPackage,python-doc))
+$(eval $(call BuildPackage,python-bzip2))
 $(eval $(call BuildPackage,python-expat))
 $(eval $(call BuildPackage,python-gzip))
 $(eval $(call BuildPackage,python-openssl))
