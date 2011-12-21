@@ -32,7 +32,7 @@ define Package/nginx
   SUBMENU:=Web Servers/Proxies
   TITLE:=Nginx web server
   URL:=http://nginx.org/
-  DEPENDS:=+libpcre +NGINX_SSL:libopenssl +zlib
+  DEPENDS:=+libpcre +NGINX_SSL:libopenssl
   MENU:=1
 endef
 
