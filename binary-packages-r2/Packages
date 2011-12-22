@@ -218,6 +218,26 @@ Description:  You can wake up WOL compliant Computers which have been powered do
  to turn on a computer from another location over a network connection.
  ether-wake also supports WOL passwords.
 
+Package: faad2
+Version: 2.7-1
+Depends: libfaad2
+Provides: 
+Source: package/built/faad2
+Section: sound
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 22106
+Filename: faad2_2.7-1_keenetic.ipk
+Size: 22752
+MD5Sum: df33ffcbca3e594226ec5dbaddde5ca0
+Description:  FAAD2 is the fastest ISO AAC audio decoder available.
+ FAAD2 correctly decodes all MPEG-4 and MPEG-2 MAIN,
+ LOW, LTP, LD and ER object type AAC files.
+ This package contains a binary to play AAC or MP4 files.
+
 Package: fdisk
 Version: 2.13.0.1-4
 Depends: 
@@ -827,6 +847,26 @@ Size: 76975
 MD5Sum: 2375ff2051bf112542621b5f3e9cba78
 Description:  libext2fs is a library which can access ext2, ext3 and ext4 filesystems.
 
+Package: libfaad2
+Version: 2.7-1
+Depends: 
+Provides: 
+Source: package/built/faad2
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 156632
+Filename: libfaad2_2.7-1_keenetic.ipk
+Size: 156311
+MD5Sum: 83a06d784725f1cd6ed7b366053f7eb6
+Description:  FAAD2 is the fastest ISO AAC audio decoder available.
+ FAAD2 correctly decodes all MPEG-4 and MPEG-2 MAIN,
+ LOW, LTP, LD and ER object type AAC files.
+ This package contains the library.
+
 Package: libffi
 Version: 3.0.9-1
 Depends: 
@@ -1182,6 +1222,26 @@ Size: 32240
 MD5Sum: cad4c6de2a0977dd7a17b07e1b441ca9
 Description:  LZO is a data compression library which is suitable for data de-/compression in
  real-time. This means it favours speed over compression ratio.
+
+Package: libmad
+Version: 0.15.1b-3
+Depends: 
+Provides: 
+Source: package/built/libmad
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 62337
+Filename: libmad_0.15.1b-3_keenetic.ipk
+Size: 63210
+MD5Sum: 454f121b37bae19f1728f2fd28010b22
+Description:  MAD is a high-quality MPEG audio decoder. It currently supports 
+ MPEG-1 and the MPEG-2 extension to lower sampling frequencies, 
+ as well as the de facto MPEG 2.5 format. All three audio layers - 
+ Layer I, Layer II, and Layer III (i.e. MP3) - are fully implemented.
 
 Package: libmagic
 Version: 5.08-2
@@ -5276,6 +5336,23 @@ Size: 91000
 MD5Sum: 667ed1998c571d99d2e50d9c6fae79b0
 Description:  A useful diagnostic, instructional, and debugging tool. Allows you to track what
  system calls a program makes while it is running.
+
+Package: streamripper
+Version: 1.62.0-3
+Depends: libmad, libfaad2
+Provides: 
+Source: package/built/streamripper
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 94235
+Filename: streamripper_1.62.0-3_keenetic.ipk
+Size: 94803
+MD5Sum: 0f5314f2319878a7d3c50ce05bd6993b
+Description:  Streamripper is an Open Source application that lets you record streaming mp3 to your hard drive.
 
 Package: subversion-client
 Version: 1.6.17-2
