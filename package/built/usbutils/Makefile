@@ -17,6 +17,8 @@ PKG_MD5SUM:=fc69cde51b2094aa4bbd804c0ba97e35
 
 PKG_INSTALL:=1
 
+PKG_BUILD_DEPENDS:=zlib
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/usbutils

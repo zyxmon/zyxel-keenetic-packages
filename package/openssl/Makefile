@@ -19,6 +19,8 @@ PKG_SOURCE_URL:=http://www.openssl.org/source/ \
 	ftp://ftp.sunet.se/pub/security/tools/net/openssl/source/
 PKG_MD5SUM:=05a0ece1372392a2cf310ebb96333025
 
+PKG_BUILD_DEPENDS:=zlib
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/openssl/Default
@@ -38,7 +40,6 @@ $(call Package/openssl/Default)
   SECTION:=libs
   SUBMENU:=SSL
   CATEGORY:=Libraries
-  DEPENDS:=+zlib
   TITLE+= (libraries)
 endef
 
@@ -131,11 +132,11 @@ define Build/InstallDev
 	$(SED) 's#$(TARGET_LDFLAGS)##g' $(1)/usr/lib/pkgconfig/{openssl,libcrypto,libssl}.pc
 endef
 
-define Package/libopenssl/install
-	$(INSTALL_DIR) $(1)/usr/lib
-	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/usr/lib/libcrypto.so.* $(1)/usr/lib/
-	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/usr/lib/libssl.so.* $(1)/usr/lib/
-endef
+#define Package/libopenssl/install
+#	$(INSTALL_DIR) $(1)/usr/lib
+#	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/usr/lib/libcrypto.so.* $(1)/usr/lib/
+#	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/usr/lib/libssl.so.* $(1)/usr/lib/
+#endef
 
 define Package/openssl-util/install
 	$(INSTALL_DIR) $(1)/etc/ssl

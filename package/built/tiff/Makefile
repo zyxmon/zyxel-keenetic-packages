@@ -23,6 +23,8 @@ PKG_INSTALL:=1
 
 PKG_CONFIG_DEPENDS:=CONFIG_PACKAGE_libtiffxx
 
+PKG_BUILD_DEPENDS:=zlib
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/tiff/Default

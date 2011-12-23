@@ -18,6 +18,8 @@ PKG_MD5SUM:=e6e67b09986cb504db630b5a86b2dd76
 PKG_FIXUP:=libtool
 PKG_INSTALL:=1
 
+PKG_BUILD_DEPENDS:=libopenssl
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/lighttpd/Default

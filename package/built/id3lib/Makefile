@@ -18,6 +18,8 @@ PKG_MD5SUM:=19f27ddd2dda4b2d26a559a4f0f402a7
 PKG_FIXUP:=libtool-ucxx
 PKG_INSTALL:=1
 
+PKG_BUILD_DEPENDS:=zlib
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/id3lib

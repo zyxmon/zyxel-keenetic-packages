@@ -18,6 +18,8 @@ PKG_MD5SUM:=81e5dc5beee4b3fc025ac70c0b6caa14
 PKG_FIXUP:=libtool
 PKG_MACRO_PATHS:=build/ac-macros
 
+PKG_BUILD_DEPENDS:=zlib
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/subversion/Default

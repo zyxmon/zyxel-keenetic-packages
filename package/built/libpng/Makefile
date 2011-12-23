@@ -19,6 +19,8 @@ PKG_FIXUP:=libtool
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
 
+PKG_BUILD_DEPENDS:=zlib
+
 include $(INCLUDE_DIR)/host-build.mk
 include $(INCLUDE_DIR)/package.mk
 

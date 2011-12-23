@@ -16,7 +16,7 @@ PKG_SOURCE_URL:=http://effbot.org/downloads
 PKG_MD5SUM:=fc14a54e1ce02a0225be8854bfba478e
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/Imaging-$(PKG_VERSION)
-PKG_BUILD_DEPENDS:=python
+PKG_BUILD_DEPENDS:=python zlib
 
 include $(INCLUDE_DIR)/package.mk
 $(call include_mk, python-package.mk)

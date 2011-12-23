@@ -18,6 +18,8 @@ PKG_INSTALL:=1
 
 PKG_FIXUP:=libtool
 
+PKG_BUILD_DEPENDS:=zlib
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/liblcms

@@ -18,6 +18,8 @@ PKG_MD5SUM:=591e0c82e6979e7e615211b386b8f6bc
 PKG_FIXUP:=libtool
 PKG_INSTALL:=1
 
+PKG_BUILD_DEPENDS:=libopenssl
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/libneon

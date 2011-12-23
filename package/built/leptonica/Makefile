@@ -18,6 +18,8 @@ PKG_MD5SUM:=5cd7092f9ff2ca7e3f3e73bfcd556403
 PKG_FIXUP:=libtool
 PKG_INSTALL:=1
 
+PKG_BUILD_DEPENDS:=zlib
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/libleptonica

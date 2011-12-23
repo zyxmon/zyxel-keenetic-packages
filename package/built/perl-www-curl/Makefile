@@ -11,6 +11,8 @@ PKG_SOURCE:=WWW-Curl-$(PKG_VERSION).tar.gz
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/perl/WWW-Curl-$(PKG_VERSION)
 
+PKG_BUILD_DEPENDS:=libcurl
+
 include $(INCLUDE_DIR)/package.mk
 include ../perl/perlmod.mk
 
