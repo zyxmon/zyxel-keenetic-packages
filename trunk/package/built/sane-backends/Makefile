@@ -16,6 +16,8 @@ PKG_SOURCE_URL:=ftp://ftp.sane-project.org/pub/sane/$(PKG_NAME)-$(PKG_VERSION) \
 	https://alioth.debian.org/frs/download.php/3503
 PKG_MD5SUM:=fadf56a60f4776bfb24491f66b617cf5
 
+PKG_BUILD_DEPENDS:=libusb
+
 PKG_FIXUP:=libtool
 PKG_INSTALL:=1
 

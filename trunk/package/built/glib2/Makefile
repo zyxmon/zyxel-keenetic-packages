@@ -17,7 +17,7 @@ PKG_SOURCE_URL:=@GNOME/glib/2.26
 PKG_MD5SUM:=17535accceef55bcb17a74d73f9c2aef
 
 PKG_FIXUP:=autoreconf
-PKG_BUILD_DEPENDS:=glib2/host
+PKG_BUILD_DEPENDS:=glib2/host zlib
 HOST_BUILD_DEPENDS:=gettext/host libiconv/host
 PKG_INSTALL:=1
 

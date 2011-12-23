@@ -11,7 +11,7 @@ PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/curlftpfs
 PKG_MD5SUM:=b452123f755114cd4461d56c648d9f12
 
-PKG_BUILD_DEPENDS:=libiconv
+PKG_BUILD_DEPENDS:=libcurl libiconv
 PKG_FIXUP:=libtool
 
 include $(INCLUDE_DIR)/package.mk

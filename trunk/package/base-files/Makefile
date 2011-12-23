@@ -365,10 +365,10 @@ endef
 
 ifeq ($(CONFIG_EXTERNAL_TOOLCHAIN),)
 
-  define Package/libgcc/install
-	$(INSTALL_DIR) $(1)/lib
-	$(CP) $(TOOLCHAIN_DIR)/lib/libgcc_s.so.* $(1)/lib/
-  endef
+#  define Package/libgcc/install
+#	$(INSTALL_DIR) $(1)/lib
+#	$(CP) $(TOOLCHAIN_DIR)/lib/libgcc_s.so.* $(1)/lib/
+#  endef
 
   define Package/libssp/install
 	$(INSTALL_DIR) $(1)/lib
@@ -420,38 +420,38 @@ ifeq ($(CONFIG_EXTERNAL_TOOLCHAIN),)
 	done
   endef
 
-  define Package/libc/install
-    $(call Package/$(LIBC)/install,$1)
-  endef
+#  define Package/libc/install
+#    $(call Package/$(LIBC)/install,$1)
+#  endef
 
-  define Package/libc/install_lib
-	$(CP) $(filter-out %/libdl_pic.a %/libpthread_pic.a %/libresolv_pic.a,$(wildcard $(TOOLCHAIN_DIR)/lib/lib*.a)) $(1)/lib/
-	$(if $(wildcard $(TOOLCHAIN_DIR)/lib/libc_so.a),$(CP) $(TOOLCHAIN_DIR)/lib/libc_so.a $(1)/lib/libc_pic.a)
-	$(if $(wildcard $(TOOLCHAIN_DIR)/lib/gcc/*/*/libgcc.map), \
-		$(CP) $(TOOLCHAIN_DIR)/lib/gcc/*/*/libgcc_pic.a $(1)/lib/libgcc_s_pic.a; \
-		$(CP) $(TOOLCHAIN_DIR)/lib/gcc/*/*/libgcc.map $(1)/lib/libgcc_s_pic.map \
-	)
-  endef
+#  define Package/libc/install_lib
+#	$(CP) $(filter-out %/libdl_pic.a %/libpthread_pic.a %/libresolv_pic.a,$(wildcard $(TOOLCHAIN_DIR)/lib/lib*.a)) $(1)/lib/
+#	$(if $(wildcard $(TOOLCHAIN_DIR)/lib/libc_so.a),$(CP) $(TOOLCHAIN_DIR)/lib/libc_so.a $(1)/lib/libc_pic.a)
+#	$(if $(wildcard $(TOOLCHAIN_DIR)/lib/gcc/*/*/libgcc.map), \
+#		$(CP) $(TOOLCHAIN_DIR)/lib/gcc/*/*/libgcc_pic.a $(1)/lib/libgcc_s_pic.a; \
+#		$(CP) $(TOOLCHAIN_DIR)/lib/gcc/*/*/libgcc.map $(1)/lib/libgcc_s_pic.map \
+#	)
+#  endef
 
-  define Package/libpthread/install
-	$(INSTALL_DIR) $(1)/lib
-	$(CP) \
-		$(TOOLCHAIN_DIR)/lib/libpthread.so.* \
-		$(TOOLCHAIN_DIR)/lib/libpthread-$(LIBC_SO_VERSION).so \
-		$(1)/lib/
-  endef
+#  define Package/libpthread/install
+#	$(INSTALL_DIR) $(1)/lib
+#	$(CP) \
+#		$(TOOLCHAIN_DIR)/lib/libpthread.so.* \
+#		$(TOOLCHAIN_DIR)/lib/libpthread-$(LIBC_SO_VERSION).so \
+#		$(1)/lib/
+#  endef
 
-  define Package/libpthread/install_lib
-	$(if $(wildcard $(TOOLCHAIN_DIR)/lib/libpthread_so.a),$(CP) $(TOOLCHAIN_DIR)/lib/libpthread_so.a $(1)/lib/libpthread_pic.a)
-  endef
+#  define Package/libpthread/install_lib
+#	$(if $(wildcard $(TOOLCHAIN_DIR)/lib/libpthread_so.a),$(CP) $(TOOLCHAIN_DIR)/lib/libpthread_so.a $(1)/lib/libpthread_pic.a)
+#  endef
 
-  define Package/librt/install
-	$(INSTALL_DIR) $(1)/lib
-	$(CP) \
-		$(TOOLCHAIN_DIR)/lib/librt.so.* \
-		$(TOOLCHAIN_DIR)/lib/librt-$(LIBC_SO_VERSION).so \
-		$(1)/lib/
-  endef
+#  define Package/librt/install
+#	$(INSTALL_DIR) $(1)/lib
+#	$(CP) \
+#		$(TOOLCHAIN_DIR)/lib/librt.so.* \
+#		$(TOOLCHAIN_DIR)/lib/librt-$(LIBC_SO_VERSION).so \
+#		$(1)/lib/
+#  endef
 
   define Package/ldconfig/install
 	$(INSTALL_DIR) $(1)/sbin/
@@ -460,13 +460,13 @@ ifeq ($(CONFIG_EXTERNAL_TOOLCHAIN),)
 
 else
 
-  define Package/libgcc/install
-	for file in $(call qstrip,$(CONFIG_LIBGCC_FILE_SPEC)); do \
-		dir=`dirname $$$$file` ; \
-		$(INSTALL_DIR) $(1)/$$$$dir ; \
-		$(CP) $(call qstrip,$(CONFIG_LIBGCC_ROOT_DIR))/$$$$file $(1)/$$$$dir/ ; \
-	done
-  endef
+#  define Package/libgcc/install
+#	for file in $(call qstrip,$(CONFIG_LIBGCC_FILE_SPEC)); do \
+#		dir=`dirname $$$$file` ; \
+#		$(INSTALL_DIR) $(1)/$$$$dir ; \
+#		$(CP) $(call qstrip,$(CONFIG_LIBGCC_ROOT_DIR))/$$$$file $(1)/$$$$dir/ ; \
+#	done
+#  endef
 
   define Package/libssp/install
 	for file in $(call qstrip,$(CONFIG_LIBSSP_FILE_SPEC)); do \
@@ -484,29 +484,29 @@ else
 	done
   endef
 
-  define Package/libc/install
-	for file in $(call qstrip,$(CONFIG_LIBC_FILE_SPEC)); do \
-		dir=`dirname $$$$file` ; \
-		$(INSTALL_DIR) $(1)/$$$$dir ; \
-		$(CP) $(call qstrip,$(CONFIG_LIBC_ROOT_DIR))/$$$$file $(1)/$$$$dir/ ; \
-	done
-  endef
+#  define Package/libc/install
+#	for file in $(call qstrip,$(CONFIG_LIBC_FILE_SPEC)); do \
+#		dir=`dirname $$$$file` ; \
+#		$(INSTALL_DIR) $(1)/$$$$dir ; \
+#		$(CP) $(call qstrip,$(CONFIG_LIBC_ROOT_DIR))/$$$$file $(1)/$$$$dir/ ; \
+#	done
+#  endef
 
-  define Package/libpthread/install
-	for file in $(call qstrip,$(CONFIG_LIBPTHREAD_FILE_SPEC)); do \
-		dir=`dirname $$$$file` ; \
-		$(INSTALL_DIR) $(1)/$$$$dir ; \
-		$(CP) $(call qstrip,$(CONFIG_LIBPTHREAD_ROOT_DIR))/$$$$file $(1)/$$$$dir/ ; \
-	done
-  endef
+#  define Package/libpthread/install
+#	for file in $(call qstrip,$(CONFIG_LIBPTHREAD_FILE_SPEC)); do \
+#		dir=`dirname $$$$file` ; \
+#		$(INSTALL_DIR) $(1)/$$$$dir ; \
+#		$(CP) $(call qstrip,$(CONFIG_LIBPTHREAD_ROOT_DIR))/$$$$file $(1)/$$$$dir/ ; \
+#	done
+#  endef
 
-  define Package/librt/install
-	for file in $(call qstrip,$(CONFIG_LIBRT_FILE_SPEC)); do \
-		dir=`dirname $$$$file` ; \
-		$(INSTALL_DIR) $(1)/$$$$dir ; \
-		$(CP) $(call qstrip,$(CONFIG_LIBRT_ROOT_DIR))/$$$$file $(1)/$$$$dir/ ; \
-	done
-  endef
+#  define Package/librt/install
+#	for file in $(call qstrip,$(CONFIG_LIBRT_FILE_SPEC)); do \
+#		dir=`dirname $$$$file` ; \
+#		$(INSTALL_DIR) $(1)/$$$$dir ; \
+#		$(CP) $(call qstrip,$(CONFIG_LIBRT_ROOT_DIR))/$$$$file $(1)/$$$$dir/ ; \
+#	done
+#  endef
 
   define Package/ldconfig/install
 	for file in $(call qstrip,$(CONFIG_LDCONFIG_FILE_SPEC)); do \

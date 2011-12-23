@@ -59,10 +59,10 @@ define Build/InstallDev
 endef
 
 # libz.so is needed for openssl (zlib-dynamic)
-define Package/zlib/install
-	$(INSTALL_DIR) $(1)/usr/lib
-	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libz.so $(1)/usr/lib/
-	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libz.so.* $(1)/usr/lib/
-endef
+#define Package/zlib/install
+#	$(INSTALL_DIR) $(1)/usr/lib
+#	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libz.so $(1)/usr/lib/
+#	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libz.so.* $(1)/usr/lib/
+#endef
 
 $(eval $(call BuildPackage,zlib))

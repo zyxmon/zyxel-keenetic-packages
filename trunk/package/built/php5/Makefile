@@ -18,6 +18,8 @@ PKG_MD5SUM:=704cd414a0565d905e1074ffdc1fadfb
 PKG_FIXUP:=libtool no-autoreconf
 PKG_BUILD_PARALLEL:=1
 
+PKG_BUILD_DEPENDS:=libcurl libopenssl zlib
+
 PHP5_MODULES = \
 	apc \
 	ctype curl \

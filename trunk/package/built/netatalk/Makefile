@@ -18,6 +18,8 @@ PKG_MD5SUM:=4a371025daf96adb73fa491efdbfef28
 PKG_BUILD_PARALLEL:=1
 PKG_INSTALL:=1
 
+PKG_BUILD_DEPENDS:=libopenssl
+
 include $(INCLUDE_DIR)/package.mk
 define Package/netatalk
   SECTION:=net

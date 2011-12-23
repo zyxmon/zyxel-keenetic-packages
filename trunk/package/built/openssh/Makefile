@@ -18,7 +18,7 @@ PKG_SOURCE_URL:=ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/ \
 		ftp://ftp.de.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/
 PKG_MD5SUM:=afe17eee7e98d3b8550cc349834a85d0
 
-PKG_BUILD_DEPENDS:=libopenssl
+PKG_BUILD_DEPENDS:=libopenssl zlib
 
 include $(INCLUDE_DIR)/package.mk
 

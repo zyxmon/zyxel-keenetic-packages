@@ -11,6 +11,8 @@ PKG_MD5SUM:=b86a5bd4a94e465a58656f71b48c90b9
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
+PKG_BUILD_DEPENDS:=libopenssl zlib
+
 
 
 include $(INCLUDE_DIR)/package.mk

@@ -15,6 +15,8 @@ PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://pypi.python.org/packages/source/p/pyOpenSSL/
 PKG_MD5SUM:=
 
+PKG_BUILD_DEPENDS:=libopenssl
+
 include $(INCLUDE_DIR)/package.mk
 $(call include_mk, python-package.mk)
 

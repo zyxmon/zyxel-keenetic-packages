@@ -18,6 +18,8 @@ PKG_MD5SUM:=e5808ad997ba32c498803822078748c3
 PKG_FIXUP:=libtool
 PKG_INSTALL:=1
 
+PKG_BUILD_DEPENDS:=zlib
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/libid3tag
