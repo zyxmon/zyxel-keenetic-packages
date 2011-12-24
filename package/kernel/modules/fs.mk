@@ -27,6 +27,7 @@ define KernelPackage/fs-cifs
   TITLE:=CIFS support
   KCONFIG:=CONFIG_CIFS
   FILES:=$(LINUX_DIR)/fs/cifs/cifs.ko
+  PKG_RELEASE:=1
 $(call AddDepends/nls)
 endef
 
@@ -42,6 +43,7 @@ define KernelPackage/fs-exportfs
   TITLE:=exportfs kernel server support
   KCONFIG:=CONFIG_EXPORTFS
   FILES=$(LINUX_DIR)/fs/exportfs/exportfs.ko
+  PKG_RELEASE:=2
 endef
 
 define KernelPackage/fs-exportfs/description
@@ -214,6 +216,7 @@ define KernelPackage/fs-nfs
 	CONFIG_NFS_FS
   FILES:= \
 	$(LINUX_DIR)/fs/nfs/nfs.ko
+  PKG_RELEASE:=2
 endef
 
 define KernelPackage/fs-nfs/description
@@ -233,6 +236,7 @@ define KernelPackage/fs-nfs-common
 	$(LINUX_DIR)/fs/lockd/lockd.ko \
 	$(LINUX_DIR)/net/sunrpc/sunrpc.ko \
 	$(LINUX_DIR)/net/sunrpc/auth_gss/auth_rpcgss.ko
+  PKG_RELEASE:=1
 endef
 
 $(eval $(call KernelPackage,fs-nfs-common))
@@ -262,6 +266,7 @@ define KernelPackage/fs-nfsd
   DEPENDS:=+kmod-fs-nfs-common +kmod-fs-exportfs
   KCONFIG:=CONFIG_NFSD
   FILES:=$(LINUX_DIR)/fs/nfsd/nfsd.ko
+  PKG_RELEASE:=2
 endef
 
 define KernelPackage/fs-nfsd/description

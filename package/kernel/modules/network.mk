@@ -7,6 +7,7 @@
 # $Id$
 
 NETWORK_SUPPORT_MENU:=Network Support
+PKG_RELEASE:=1
 
 #define KernelPackage/atm
 #  SUBMENU:=$(NETWORK_SUPPORT_MENU)
