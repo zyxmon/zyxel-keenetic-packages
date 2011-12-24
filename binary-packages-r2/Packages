@@ -125,6 +125,23 @@ Description:  Full versions of standard GNU utilities.  Normally, you would not
  use this package, since the functionality in BusyBox is more than
  sufficient and much smaller.
 
+Package: cpulimit
+Version: r41-1
+Depends: 
+Provides: 
+Source: package/built/cpulimit
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 7949
+Filename: cpulimit_r41-1_keenetic.ipk
+Size: 8639
+MD5Sum: 7b3e7d02586ca60509bfbdd7bae4f3e5
+Description:  cpulimit is a simple program which attempts to limit the cpu usage of a process
+
 Package: curlftpfs
 Version: 0.9.2-2
 Depends: libfuse, glib2
@@ -5026,10 +5043,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1289934
+Installed-Size: 1289940
 Filename: python-mini_2.6.4-3_keenetic.ipk
-Size: 1272915
-MD5Sum: e4ddc2ace508ea2df1512ad3bcacf8d5
+Size: 1273357
+MD5Sum: b2c4a9b453014dbb6dd9b2b67ca4e199
 Description:  Python is a dynamic object-oriented programming language that can be used
  for many kinds of software development. It offers strong support for
  integration with other languages and tools, comes with extensive standard
@@ -5052,8 +5069,8 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 10692
 Filename: python-openssl_2.6.4-3_keenetic.ipk
-Size: 11232
-MD5Sum: f9c0ca32fead1d16a77d51d5fd3e4fbf
+Size: 11231
+MD5Sum: 31c87da2fe78d1f184afe3fbec47256f
 Description:  Python support for OpenSSL
 
 Package: python-pil
@@ -5093,10 +5110,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 36712
+Installed-Size: 36718
 Filename: python-sqlite3_2.6.4-3_keenetic.ipk
-Size: 37420
-MD5Sum: 67dd4790b4ca8405ab326aeeeacd0cf8
+Size: 37416
+MD5Sum: 40c8bc1886e1c5e3730dfe72a618aaac
 Description:  Python support for sqlite3
 
 Package: python
@@ -5110,10 +5127,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1820068
+Installed-Size: 1831137
 Filename: python_2.6.4-3_keenetic.ipk
-Size: 1819769
-MD5Sum: 0e6b5a0ae66172511b1c361474d75e06
+Size: 1830757
+MD5Sum: b62041a28e88ff65bf5f83768b1d2d6d
 Description:  Python is a dynamic object-oriented programming language that can be used
  for many kinds of software development. It offers strong support for
  integration with other languages and tools, comes with extensive standard
