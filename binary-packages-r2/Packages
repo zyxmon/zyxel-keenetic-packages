@@ -1950,6 +1950,23 @@ Description:  Nginx is a free, open-source, high-performance HTTP server
  and reverse proxy, as well as an IMAP/POP3 proxy server,
  written by Igor Sysoev.
 
+Package: nmap
+Version: 5.51-3
+Depends: libpcap, libstdcpp
+Provides: 
+Source: package/built/nmap
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Nuno Goncalves <nunojpg@gmail.com>
+Architecture: keenetic
+Installed-Size: 1221683
+Filename: nmap_5.51-3_keenetic.ipk
+Size: 1219872
+MD5Sum: a1ce62dffc9222213b6fa2457bdb8c55
+Description:  Utility for network exploration or security auditing
+
 Package: openssh-sftp-server
 Version: 5.9p1-1
 Depends: 
@@ -5009,10 +5026,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1289940
+Installed-Size: 1289934
 Filename: python-mini_2.6.4-3_keenetic.ipk
-Size: 1273357
-MD5Sum: b2c4a9b453014dbb6dd9b2b67ca4e199
+Size: 1272915
+MD5Sum: e4ddc2ace508ea2df1512ad3bcacf8d5
 Description:  Python is a dynamic object-oriented programming language that can be used
  for many kinds of software development. It offers strong support for
  integration with other languages and tools, comes with extensive standard
@@ -5035,8 +5052,8 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 10692
 Filename: python-openssl_2.6.4-3_keenetic.ipk
-Size: 11231
-MD5Sum: 31c87da2fe78d1f184afe3fbec47256f
+Size: 11232
+MD5Sum: f9c0ca32fead1d16a77d51d5fd3e4fbf
 Description:  Python support for OpenSSL
 
 Package: python-pil
@@ -5076,10 +5093,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 36718
+Installed-Size: 36712
 Filename: python-sqlite3_2.6.4-3_keenetic.ipk
-Size: 37416
-MD5Sum: 40c8bc1886e1c5e3730dfe72a618aaac
+Size: 37420
+MD5Sum: 67dd4790b4ca8405ab326aeeeacd0cf8
 Description:  Python support for sqlite3
 
 Package: python
@@ -5093,10 +5110,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1831137
+Installed-Size: 1820068
 Filename: python_2.6.4-3_keenetic.ipk
-Size: 1830757
-MD5Sum: b62041a28e88ff65bf5f83768b1d2d6d
+Size: 1819769
+MD5Sum: 0e6b5a0ae66172511b1c361474d75e06
 Description:  Python is a dynamic object-oriented programming language that can be used
  for many kinds of software development. It offers strong support for
  integration with other languages and tools, comes with extensive standard
