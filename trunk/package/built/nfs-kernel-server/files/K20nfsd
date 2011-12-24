@@ -15,7 +15,7 @@ start() {
 	insmod $MOUNT/lib/modules/2.6.23-rt/exportfs.ko
 	insmod $MOUNT/lib/modules/2.6.23-rt/sunrpc.ko
 	insmod $MOUNT/lib/modules/2.6.23-rt/lockd.ko
-	insmod $MOUNT/lib/modules/2.6.23-rt/auth_rpcgss.ko
+#	insmod $MOUNT/lib/modules/2.6.23-rt/auth_rpcgss.ko
 	insmod $MOUNT/lib/modules/2.6.23-rt/nfsd.ko
 	grep -q /proc/fs/nfsd /proc/mounts || \
 		mount -t nfsd nfsd /proc/fs/nfsd
@@ -37,7 +37,7 @@ stop() {
 	grep -q /proc/fs/nfsd /proc/mounts && \
 		umount /proc/fs/nfsd
 	rmmod $MOUNT/lib/modules/2.6.23-rt/nfsd.ko
-	rmmod $MOUNT/lib/modules/2.6.23-rt/auth_rpcgss.ko
+#	rmmod $MOUNT/lib/modules/2.6.23-rt/auth_rpcgss.ko
 	rmmod $MOUNT/lib/modules/2.6.23-rt/lockd.ko
 	rmmod $MOUNT/lib/modules/2.6.23-rt/sunrpc.ko
 	rmmod $MOUNT/lib/modules/2.6.23-rt/exportfs.ko
