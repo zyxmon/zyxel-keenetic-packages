@@ -5759,6 +5759,26 @@ Size: 4096
 MD5Sum: 63d66f901ca3cc983af9a4d6183f05cc
 Description:  This package contains a utility for finding files.
 
+Package: wput
+Version: 0.6.2-1
+Depends: 
+Provides: 
+Source: package/built/wput
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 39421
+Filename: wput_0.6.2-1_keenetic.ipk
+Size: 40187
+MD5Sum: b426c29e2449d67082a88462758bb08e
+Description:  Wput is a tiny ftp-client, that uploads files or directories
+ to a remote ftp-server.  Main features are: resuming,
+ time-stamping, wget-like interface, proxy-support and
+ speed-limit.
+
 Package: xinetd
 Version: 2.3.14-1
 Depends: 
