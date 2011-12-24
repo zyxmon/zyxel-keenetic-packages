@@ -1915,7 +1915,7 @@ MD5Sum: cee6171e71890a1cf40ff7b7afbaa63d
 Description:  netatalk
 
 Package: nfs-kernel-server
-Version: 1.2.5-1
+Version: 1.2.5-2
 Depends: libwrap, libblkid, libuuid, kmod-fs-nfsd, kmod-fs-nfs, portmap
 Provides: 
 Source: package/built/nfs-kernel-server
@@ -1925,10 +1925,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 108854
-Filename: nfs-kernel-server_1.2.5-1_keenetic.ipk
-Size: 109016
-MD5Sum: fceb545c5d5edc30034b0a1ca0dc80c8
+Installed-Size: 108873
+Filename: nfs-kernel-server_1.2.5-2_keenetic.ipk
+Size: 109042
+MD5Sum: 25e914b326ea0efd16543102cafe8b51
 Description:  Kernel NFS server support
 
 Package: nginx
