@@ -484,7 +484,7 @@ MD5Sum: 8fc4fa57e6136bc366cddd0515b2d6d9
 Description:  Kernel module for CIFS support
 
 Package: kmod-fs-exportfs
-Version: 2.6.23-rt-1
+Version: 2.6.23-rt-2
 Depends: 
 Provides: 
 Source: package/kernel
@@ -494,10 +494,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3296
-Filename: kmod-fs-exportfs_2.6.23-rt-1_keenetic.ipk
-Size: 3898
-MD5Sum: 8db03896e28655756c7c4e8ada56edc5
+Installed-Size: 3298
+Filename: kmod-fs-exportfs_2.6.23-rt-2_keenetic.ipk
+Size: 3900
+MD5Sum: 5988a9119874c16448ca90d70c856572
 Description:  Kernel module for exportfs. Needed for some other modules.
 
 Package: kmod-fs-nfs-common
@@ -518,7 +518,7 @@ MD5Sum: 5048c87eceb46a17dd990dd438fa497b
 Description:  Common NFS filesystem modules
 
 Package: kmod-fs-nfs
-Version: 2.6.23-rt-1
+Version: 2.6.23-rt-2
 Depends: kmod-fs-nfs-common
 Provides: 
 Source: package/kernel
@@ -528,14 +528,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 144968
-Filename: kmod-fs-nfs_2.6.23-rt-1_keenetic.ipk
-Size: 144809
-MD5Sum: 7af3149d73f8d05316e7008e6decae1d
+Installed-Size: 75871
+Filename: kmod-fs-nfs_2.6.23-rt-2_keenetic.ipk
+Size: 76208
+MD5Sum: 70b874276927a04000862483a4d7c4d1
 Description:  Kernel module for NFS support
 
 Package: kmod-fs-nfsd
-Version: 2.6.23-rt-1
+Version: 2.6.23-rt-2
 Depends: kmod-fs-nfs-common, kmod-fs-exportfs
 Provides: 
 Source: package/kernel
@@ -545,10 +545,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 111814
-Filename: kmod-fs-nfsd_2.6.23-rt-1_keenetic.ipk
-Size: 111784
-MD5Sum: d79bc2816df848ff39c150f931c06c66
+Installed-Size: 53923
+Filename: kmod-fs-nfsd_2.6.23-rt-2_keenetic.ipk
+Size: 54323
+MD5Sum: 62b158da35fdf1cfad49577c2ba32b87
 Description:  Kernel module for NFS kernel server support
 
 Package: kmod-tun
