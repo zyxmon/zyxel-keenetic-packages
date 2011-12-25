@@ -12,7 +12,8 @@ PKG_VERSION:=1.98.0
 PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
-PKG_SOURCE_URL:=ftp://ftp.vmlinux.org/pub/People/jocke/inadyn
+PKG_SOURCE_URL:=http://keenetic.zyxmon.org/sources \
+    ftp://ftp.vmlinux.org/pub/People/jocke/inadyn
 PKG_MD5SUM:=158f01ee15f4fec03b490924295e721c
 
 include $(INCLUDE_DIR)/package.mk
