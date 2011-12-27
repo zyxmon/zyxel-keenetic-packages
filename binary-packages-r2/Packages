@@ -4890,6 +4890,26 @@ Description:  PHP is a widely-used general-purpose scripting language that is es
  This package contains only the PHP config file. You must actually choose 
  your PHP flavour (cli, cgi or fastcgi).
 
+Package: polipo
+Version: 1.0.4.1-3
+Depends: 
+Provides: 
+Source: package/built/polipo
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Gabriel Kerneis <kerneis@pps.jussieu.fr>
+Architecture: keenetic
+Installed-Size: 110732
+Filename: polipo_1.0.4.1-3_keenetic.ipk
+Size: 111487
+MD5Sum: 0c28d8e6dfc5a976c111cd2a8a83624a
+Description:  Polipo is a small and fast caching web proxy (a web cache, an HTTP proxy, 
+ a proxy server). While Polipo was designed to be used by one person or a 
+ small group of people, there is nothing that prevents it from being used 
+ by a larger group.
+
 Package: portmap
 Version: 6.0-2
 Depends: libwrap
@@ -5835,7 +5855,7 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 264-1
+Version: 267-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
@@ -5845,10 +5865,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 84727
-Filename: xupnpd_264-1_keenetic.ipk
-Size: 85452
-MD5Sum: 06aa135234cd9d4c7558476c1a856a88
+Installed-Size: 84809
+Filename: xupnpd_267-1_keenetic.ipk
+Size: 85517
+MD5Sum: 71fca72696ad157044c7c95423f3bab2
 Description:  eXtensible UPnP agent
 
 Package: zip
