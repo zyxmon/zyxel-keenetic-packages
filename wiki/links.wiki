@@ -1,0 +1,15 @@
+#summary Полезные ссылки
+
+= Полезные ссылки =
+
+Готовые пакеты и систему сборки можно обсудить на [http://forum.zyxmon.org/forum6-marshrutizatory-zyxel-keenetic.html форуме].
+
+Неплохая статья на 3dnews.ru об установке пакетов: [http://www.3dnews.ru/workshop/612504/ Расширяем функциональность ZyXel Keenetic].
+
+[http://forum.zyxmon.org/topic82-sane-na-keenetic.html Тема на форуме] о подключении usb сканеров и МФУ к keenetic с инструкцией в первом сообщении.
+
+[http://forum.zyxmon.org/topic152-kak-ustanovit-svn-subversion.html Тема на форуме] об установке subversion на keenetic с инструкцией в первом сообщении.
+
+[http://forum.zyxmon.org/topic115-xupnpd-uluchshennyi-variant-pshare-extensible-upnp-agent.html Тема на форуме] об xupnpd (программе раздачи IPTV и локального медиаконтента в локальной сети DLNA/UPnP плеерам и телевизорам).
+
+[http://forum.zyxmon.org/topic118-proshu-rassmotret-vozmozhnost-dobavleniya-sheipera-trafika.html Тема на форуме] о шейпере трафика для keenetic.
