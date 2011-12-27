@@ -2,10 +2,10 @@
 
   * [Welcome Главная]
   * Статьи
-    * [usb_hdd Требования к USB носителю]
-    * [opkg_setup Устанавливаем систему opkg.]
+    * [usb_hdd Требования к USB]
+    * [opkg_setup Устанавливаем opkg.]
     * [opkg_usage Основные команды opkg.]
-    * [starting_daemons Запуск сервисов/демонов.]
+    * [starting_daemons Запуск сервисов.]
     * [cron_setup Планировщик cron.]
     * [dlna_setup DLNA серверы.]
     * [transmission_setup Transmission.]
