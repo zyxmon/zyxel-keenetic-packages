@@ -1,16 +1,17 @@
 #summary Содержание wiki.
 
   * [Welcome Главная]
-    * Статьи !HowTo
-    * [usb_hdd Требования к USB носителю.]
+  * Статьи !HowTo
+    * [usb_hdd Требования к USB носителю]
     * [opkg_setup Устанавливаем систему opkg.]
     * [opkg_usage Основные команды opkg.]
-    * [starting_daemons Общие сведения о запуске сервисов/демонов.]
+    * [starting_daemons Запуск сервисов/демонов.]
     * [cron_setup Планировщик cron.]
-    * [dlna_setup DLNA серверы minidlna и mediatomb.]
-    * [transmission_setup transmission.]
-    * [lighttpd_php_setup http сервер lighttpd и php.]
-    * [other_setup Другие приложения и сервисы.]
-    * [linux_compile Устанавливаем тулчейн и собираем пакеты из svn.]
-    * [linux_add Добавляем свои пакеты.]
-    * [links Полезные ссылки].
+    * [dlna_setup DLNA серверы.]
+    * [transmission_setup Transmission.]
+    * [lighttpd_php_setup http сервер и php.]
+    * [other_setup Другие приложения.]
+  * Собираем !ipk 
+    * [linux_compile Устанавливаем тулчейн.]
+    * [linux_add Cвои пакеты.]
+  * [links Полезные ссылки].
