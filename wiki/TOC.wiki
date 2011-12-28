@@ -1,7 +1,7 @@
 #summary Содержание wiki.
 
   * [Welcome Главная]
-  * Статьи
+  * Готовые пакеты
     * [usb_hdd Требования к USB]
     * [opkg_setup Устанавливаем opkg]
     * [opkg_usage Основные команды opkg]
@@ -11,7 +11,7 @@
     * [transmission_setup Transmission]
     * [lighttpd_php_setup http сервер и php]
     * [other_setup Другие приложения]
-  * Собираем ipk 
+  * Собираем свои пакеты 
     * [linux_compile Устанавливаем тулчейн]
     * [linux_add Cвои пакеты]
   * [links Полезные ссылки]
