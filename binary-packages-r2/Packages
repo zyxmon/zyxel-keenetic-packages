@@ -1725,6 +1725,23 @@ Size: 88603
 MD5Sum: 193838ffd671840119a133d18ae3b777
 Description:  A flexible and lightweight web server
 
+Package: lsof
+Version: 4.81-2
+Depends: 
+Provides: 
+Source: package/built/lsof
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 57226
+Filename: lsof_4.81-2_keenetic.ipk
+Size: 57788
+MD5Sum: cab05b2f031bccd1bbfa9e762d70ccf8
+Description:  LiSt Open Files - a diagnostic tool
+
 Package: lua
 Version: 5.1.4-8
 Depends: liblua
