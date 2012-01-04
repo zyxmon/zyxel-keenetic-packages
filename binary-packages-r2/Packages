@@ -4981,6 +4981,24 @@ Size: 32921
 MD5Sum: bde94b1f0675a57765e5b35793f1835c
 Description:  UPnP Playlist Browser http://ps3muxer.org/pshare.html
 
+Package: psmisc
+Version: 22.13-1
+Depends: libncurses
+Provides: 
+Source: package/built/psmisc
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19733
+Filename: psmisc_22.13-1_keenetic.ipk
+Size: 20366
+MD5Sum: 384fd9a3c56ae3ff528a2b89f1491b82
+Description:  psmisc is a set of additional small useful utilities that use
+ the proc filesystem: fuser, pstree, and prtstat
+
 Package: py-openssl
 Version: 0.12-1
 Depends: python
