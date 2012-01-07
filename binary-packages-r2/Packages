@@ -1951,6 +1951,44 @@ MD5Sum: 96ea6a390729f68ceca4eaf807a5c127
 Description:  GNU nano (Nano's ANOther editor, or Not ANOther editor) is an enhanced clone
  of the Pico text editor.
 
+Package: ncftp-utils
+Version: 3.2.5-1
+Depends: 
+Provides: 
+Source: package/built/ncftp
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 391552
+Filename: ncftp-utils_3.2.5-1_keenetic.ipk
+Size: 391633
+MD5Sum: 385efea1cfa8b1c6fb06b005c018a79c
+Description:  NcFTP Client (also known as just NcFTP) is a set of FREE application
+ programs implementing the File Transfer Protocol (FTP).
+ Utilities.
+
+Package: ncftp
+Version: 3.2.5-1
+Depends: 
+Provides: 
+Source: package/built/ncftp
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 121028
+Filename: ncftp_3.2.5-1_keenetic.ipk
+Size: 121493
+MD5Sum: 0ddd83abf79b4f992fe7109deff29679
+Description:  NcFTP Client (also known as just NcFTP) is a set of FREE application
+ programs implementing the File Transfer Protocol (FTP).
+ Main program.
+
 Package: netatalk
 Version: 2.2.1-2
 Depends: libdb51, libgcrypt
