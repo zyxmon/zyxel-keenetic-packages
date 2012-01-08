@@ -1660,6 +1660,40 @@ Size: 6347
 MD5Sum: 60c22f8577cb665160d9c609fc72584f
 Description:  Access logging module
 
+Package: lighttpd-mod-alias
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2521
+Filename: lighttpd-mod-alias_1.4.29-1_keenetic.ipk
+Size: 3135
+MD5Sum: c0eb92ea1baf4d3223641bf7123fc1cd
+Description:  Directory alias module
+
+Package: lighttpd-mod-auth
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10126
+Filename: lighttpd-mod-auth_1.4.29-1_keenetic.ipk
+Size: 10697
+MD5Sum: 09207950bb740d4572320d5acd29a040
+Description:  Authentication module
+
 Package: lighttpd-mod-cgi
 Version: 1.4.29-1
 Depends: lighttpd
@@ -1677,6 +1711,108 @@ Size: 9196
 MD5Sum: 087514371f8d38a709ffbf2acd086645
 Description:  CGI module
 
+Package: lighttpd-mod-cml
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2853
+Filename: lighttpd-mod-cml_1.4.29-1_keenetic.ipk
+Size: 3482
+MD5Sum: db524a1ba6ad06e80beab7dec575249b
+Description:  Cache Meta Language module
+
+Package: lighttpd-mod-compress
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6185
+Filename: lighttpd-mod-compress_1.4.29-1_keenetic.ipk
+Size: 6780
+MD5Sum: 43ce6dd5119c43b9333d11103c2ac3cc
+Description:  Compress output module
+
+Package: lighttpd-mod-evasive
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2205
+Filename: lighttpd-mod-evasive_1.4.29-1_keenetic.ipk
+Size: 2825
+MD5Sum: 4f00a9f92c1bc7f18c97a11d2cda236b
+Description:  Evasive module
+
+Package: lighttpd-mod-evhost
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3215
+Filename: lighttpd-mod-evhost_1.4.29-1_keenetic.ipk
+Size: 3851
+MD5Sum: 1eff93550e6ee39c275659986c5f80d7
+Description:  Exnhanced Virtual-Hosting module
+
+Package: lighttpd-mod-expire
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3520
+Filename: lighttpd-mod-expire_1.4.29-1_keenetic.ipk
+Size: 4096
+MD5Sum: 85ca67d1823a2e7345c3d109ef6d5c87
+Description:  Expire module
+
+Package: lighttpd-mod-extforward
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3353
+Filename: lighttpd-mod-extforward_1.4.29-1_keenetic.ipk
+Size: 3933
+MD5Sum: b6044540fa72dca0f3d9b47dd8f3c093
+Description:  Extract client IP module
+
 Package: lighttpd-mod-fastcgi
 Version: 1.4.29-1
 Depends: lighttpd
@@ -1693,6 +1829,57 @@ Filename: lighttpd-mod-fastcgi_1.4.29-1_keenetic.ipk
 Size: 21675
 MD5Sum: 921ebd91e79c4c86d3e5ca9256165dbf
 Description:  FastCGI module
+
+Package: lighttpd-mod-flv-streaming
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2883
+Filename: lighttpd-mod-flv-streaming_1.4.29-1_keenetic.ipk
+Size: 3503
+MD5Sum: 68347086a905cacbde690cf7e762cf07
+Description:  flv streaming module
+
+Package: lighttpd-mod-magnet
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1082
+Filename: lighttpd-mod-magnet_1.4.29-1_keenetic.ipk
+Size: 1684
+MD5Sum: c9f35263e725a163d52e96cbc88b3177
+Description:  magnet module
+
+Package: lighttpd-mod-proxy
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8624
+Filename: lighttpd-mod-proxy_1.4.29-1_keenetic.ipk
+Size: 9197
+MD5Sum: 08969c0a156fbb26b10522e13cab4d43
+Description:  Proxy module
 
 Package: lighttpd-mod-redirect
 Version: 1.4.29-1
@@ -1727,6 +1914,193 @@ Filename: lighttpd-mod-rewrite_1.4.29-1_keenetic.ipk
 Size: 4790
 MD5Sum: 81c67142a20398b1d12aab6062f1554d
 Description:  URL rewriting module
+
+Package: lighttpd-mod-rrdtool
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4331
+Filename: lighttpd-mod-rrdtool_1.4.29-1_keenetic.ipk
+Size: 4913
+MD5Sum: a0d91292897b515204c307b3f3d44b43
+Description:  rrdtool module
+
+Package: lighttpd-mod-scgi
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 15938
+Filename: lighttpd-mod-scgi_1.4.29-1_keenetic.ipk
+Size: 16496
+MD5Sum: 11208e86420890dfcd2b342b59523ab1
+Description:  SCGI module
+
+Package: lighttpd-mod-secdownload
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2959
+Filename: lighttpd-mod-secdownload_1.4.29-1_keenetic.ipk
+Size: 3594
+MD5Sum: 5cf62197080efb633879d4b49e5e1593
+Description:  Secure and fast download module
+
+Package: lighttpd-mod-setenv
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2428
+Filename: lighttpd-mod-setenv_1.4.29-1_keenetic.ipk
+Size: 3068
+MD5Sum: 0b5d935c0862a3a794c31868faf4e5c4
+Description:  Environment variable setting module
+
+Package: lighttpd-mod-simple-vhost
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2885
+Filename: lighttpd-mod-simple-vhost_1.4.29-1_keenetic.ipk
+Size: 3530
+MD5Sum: 07773bc5b49418adc298f6797efae9be
+Description:  Simple virtual hosting module
+
+Package: lighttpd-mod-ssi
+Version: 1.4.29-1
+Depends: lighttpd, libpcre
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10599
+Filename: lighttpd-mod-ssi_1.4.29-1_keenetic.ipk
+Size: 11207
+MD5Sum: 894b684bb32c3b882e96d6cc38234c35
+Description:  SSI module
+
+Package: lighttpd-mod-status
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 7279
+Filename: lighttpd-mod-status_1.4.29-1_keenetic.ipk
+Size: 7904
+MD5Sum: 08a81ca1068631a2ad61201c0f6f40d8
+Description:  Server status display module
+
+Package: lighttpd-mod-trigger-b4-dl
+Version: 1.4.29-1
+Depends: lighttpd, libpcre
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2719
+Filename: lighttpd-mod-trigger-b4-dl_1.4.29-1_keenetic.ipk
+Size: 3367
+MD5Sum: 635b5bceab94278461344edf74e0ff17
+Description:  Trigger before download module
+
+Package: lighttpd-mod-userdir
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2953
+Filename: lighttpd-mod-userdir_1.4.29-1_keenetic.ipk
+Size: 3567
+MD5Sum: 0877c8cbb7d50f19beac2f7dcca9a3b3
+Description:  User directory module
+
+Package: lighttpd-mod-usertrack
+Version: 1.4.29-1
+Depends: lighttpd
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3064
+Filename: lighttpd-mod-usertrack_1.4.29-1_keenetic.ipk
+Size: 3678
+MD5Sum: 50b35888516c7f1f9aeda911529eed08
+Description:  User tracking module
+
+Package: lighttpd-mod-webdav
+Version: 1.4.29-1
+Depends: lighttpd, libsqlite3, libuuid, libxml2
+Provides: 
+Source: package/built/lighttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13408
+Filename: lighttpd-mod-webdav_1.4.29-1_keenetic.ipk
+Size: 14017
+MD5Sum: c10da90b131eb7476c90d15e2ff99950
+Description:  WebDAV module
 
 Package: lighttpd
 Version: 1.4.29-1
