@@ -931,7 +931,7 @@ Description:  The libffi library provides a portable, high level programming int
  between the two languages.
 
 Package: libffmpeg
-Version: 0.8.2-1
+Version: 0.8.9-1
 Depends: 
 Provides: 
 Source: package/built/ffmpeg
@@ -941,10 +941,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 526127
-Filename: libffmpeg_0.8.2-1_keenetic.ipk
-Size: 523588
-MD5Sum: 79ba9abf8a78af1ce2b69e4afd9ebfdf
+Installed-Size: 529849
+Filename: libffmpeg_0.8.9-1_keenetic.ipk
+Size: 527411
+MD5Sum: 2e9dd5983d9502da02ecb6231581d473
 Description:  libraries
 
 Package: libflac
