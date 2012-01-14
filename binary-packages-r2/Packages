@@ -6140,6 +6140,24 @@ Description:  UNFS3 is a user-space implementation of the NFSv3 server
  protocols, which are used by NFS clients for accessing files
  on the server.
 
+Package: unrar
+Version: 4.0.7-1
+Depends: uclibcxx
+Provides: 
+Source: package/built/unrar
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 99955
+Filename: unrar_4.0.7-1_keenetic.ipk
+Size: 100494
+MD5Sum: 8747c064aefe3b23014368f15fddf324
+Description:  unrar is an application that can decompress files and archives created using
+ the RAR compression scheme
+
 Package: unzip
 Version: 5.52-1
 Depends: 
