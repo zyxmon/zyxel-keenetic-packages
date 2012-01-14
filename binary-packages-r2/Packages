@@ -1481,7 +1481,7 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  This package contains the SQLite (v2.x) shared library, used by other programs.
 
 Package: libsqlite3
-Version: 3070701-2
+Version: 3070900-1
 Depends: 
 Provides: 
 Source: package/built/sqlite3
@@ -1491,10 +1491,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 292207
-Filename: libsqlite3_3070701-2_keenetic.ipk
-Size: 292506
-MD5Sum: 435bbf7a9a19ee6bc70f17e6b408591c
+Installed-Size: 299699
+Filename: libsqlite3_3070900-1_keenetic.ipk
+Size: 299883
+MD5Sum: 4bdb088a4c65a0cf7e7da4d88cd83d69
 Description:  SQLite is a small C library that implements a self-contained, embeddable,
  zero-configuration SQL database engine.
  This package contains the SQLite (v3.x) shared library, used by other
@@ -2284,7 +2284,7 @@ Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
  being fully compliant with DLNA/UPnP-AV clients.
 
 Package: mtr
-Version: 0.81-1
+Version: 0.82-1
 Depends: libncurses
 Provides: 
 Source: package/built/mtr
@@ -2294,10 +2294,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 27791
-Filename: mtr_0.81-1_keenetic.ipk
-Size: 28597
-MD5Sum: 4edfbf6396c454e8d8197d1981aa7f63
+Installed-Size: 28638
+Filename: mtr_0.82-1_keenetic.ipk
+Size: 29441
+MD5Sum: 4aac9f7d1a5332beb2502050b7542529
 Description:  mtr combines the functionality of the 'traceroute' and 'ping' programs
  in a single network diagnostic tool.
  As mtr starts, it investigates the network connection between the host
@@ -5820,7 +5820,7 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  multiple formats.
 
 Package: sqlite3-cli
-Version: 3070701-2
+Version: 3070900-1
 Depends: libsqlite3, libncurses, libreadline
 Provides: 
 Source: package/built/sqlite3
@@ -5830,10 +5830,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 18116
-Filename: sqlite3-cli_3070701-2_keenetic.ipk
-Size: 18900
-MD5Sum: dee9c22788ce8db6ce7450396ff9b8f1
+Installed-Size: 18342
+Filename: sqlite3-cli_3070900-1_keenetic.ipk
+Size: 19128
+MD5Sum: c6d9478e6048e88f6e4ca4573f0effd9
 Description:  SQLite is a small C library that implements a self-contained, embeddable,
  zero-configuration SQL database engine.
  This package contains a terminal-based front-end to the SQLite (v3.x) library
