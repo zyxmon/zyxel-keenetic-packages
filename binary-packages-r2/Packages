@@ -603,7 +603,7 @@ MD5Sum: 4a5c56d176e8c212dad407b281d565aa
 Description:  LDD trace utility
 
 Package: lftp
-Version: 4.3.1-1
+Version: 4.3.4-1
 Depends: libncurses, libreadline, uclibcxx, libexpat
 Provides: 
 Source: package/built/lftp
@@ -613,10 +613,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 442052
-Filename: lftp_4.3.1-1_keenetic.ipk
-Size: 442151
-MD5Sum: e3b0679302bf6a91a4ea452563c17db4
+Installed-Size: 443825
+Filename: lftp_4.3.4-1_keenetic.ipk
+Size: 443750
+MD5Sum: 8cf63327490942be86390b9803541049
 Description:  lftp is sophisticated file transfer program with command line interface. It
  supports FTP, HTTP, FISH, SFTP and FILE (local FS) protocols. GNU Readline
  library is used for input. BitTorrent protocol is supported as built-in
