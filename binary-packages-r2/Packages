@@ -2265,6 +2265,26 @@ Size: 438811
 MD5Sum: dd7cb288e3ffdb90c1cbca3a0debcda9
 Description:  A perl package without operating-specific functions such as readdir.
 
+Package: mini-sendmail
+Version: 1.3.6-4
+Depends: 
+Provides: 
+Source: package/built/mini_sendmail
+Section: mail
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4948
+Filename: mini-sendmail_1.3.6-4_keenetic.ipk
+Size: 5728
+MD5Sum: ca84f29cc85a732ae7fb5b68877a0b94
+Description:  mini_sendmail reads its standard input up to an end-of-file and sends a
+ copy of the message found there to all of the addresses listed.
+ The message is sent by connecting to a local SMTP server. This means
+ mini_sendmail can be used to send email from inside a chroot(2) area.
+
 Package: minidlna
 Version: 1.0.22-1
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
