@@ -1,6 +1,6 @@
 --- a/src/lftp.cc
 +++ b/src/lftp.cc
-@@ -510,7 +510,7 @@ int   main(int argc,char **argv)
+@@ -527,7 +527,7 @@ int   main(int argc,char **argv)
     top_exec->SetStatusLine(new StatusLine(1));
     Log::global->SetCB(tty_clear);
  
@@ -11,7 +11,7 @@
        source_if_exist(dir_file(home,".lftprc"));
 --- a/src/lftp_ssl.cc
 +++ b/src/lftp_ssl.cc
-@@ -198,13 +198,13 @@ static const char *lftp_ssl_find_ca_file
+@@ -197,13 +197,13 @@ static const char *lftp_ssl_find_ca_file
  {
     // a few possible locations of ca-bundle.crt
     static const char *const ca_file_location[]={
