@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=portmap
 PKG_VERSION:=6.0
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tgz
 PKG_SOURCE_URL:=http://neil.brown.name/portmap/
@@ -17,12 +17,13 @@ PKG_MD5SUM:=ac108ab68bf0f34477f8317791aaf1ff
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)_$(PKG_VERSION)
 
+PKG_BUILD_DEPENDS:=libwrap
+
 include $(INCLUDE_DIR)/package.mk
 
 define Package/portmap
   SECTION:=net
   CATEGORY:=Network
-  DEPENDS:=+libwrap
   TITLE:=The RPC Portmapper
   URL:=http://neil.brown.name/portmap/
 endef
@@ -33,9 +34,9 @@ define Package/portmap/description
 endef
 
 MAKE_FLAGS += \
-	CFLAGS="$(TARGET_CFLAGS) $(TARGET_CPPFLAGS) -DHOSTS_ACCESS -DFACILITY=LOG_DAEMON -DIGNORE_SIGCHLD" \
+	CFLAGS="$(TARGET_CFLAGS) $(TARGET_CPPFLAGS) -DFACILITY=LOG_DAEMON -DIGNORE_SIGCHLD" \
 	RPCUSER="nobody" \
-	WRAP_LIB="$(TARGET_LDFLAGS) -lwrap" \
+	NO_TCP_WRAPPER="yes" \
 	all
 
 define Package/portmap/install
