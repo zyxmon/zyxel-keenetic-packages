@@ -2401,7 +2401,7 @@ MD5Sum: cee6171e71890a1cf40ff7b7afbaa63d
 Description:  netatalk
 
 Package: nfs-kernel-server
-Version: 1.2.5-2
+Version: 1.2.5-3
 Depends: libwrap, libblkid, libuuid, kmod-fs-nfsd, kmod-fs-nfs, portmap
 Provides: 
 Source: package/built/nfs-kernel-server
@@ -2411,10 +2411,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 108873
-Filename: nfs-kernel-server_1.2.5-2_keenetic.ipk
-Size: 109042
-MD5Sum: 25e914b326ea0efd16543102cafe8b51
+Installed-Size: 108872
+Filename: nfs-kernel-server_1.2.5-3_keenetic.ipk
+Size: 109045
+MD5Sum: d6611f14652200932f514c66fb6f0566
 Description:  Kernel NFS server support
 
 Package: nginx
@@ -5380,8 +5380,8 @@ Description:  Polipo is a small and fast caching web proxy (a web cache, an HTTP
  by a larger group.
 
 Package: portmap
-Version: 6.0-2
-Depends: libwrap
+Version: 6.0-3
+Depends: 
 Provides: 
 Source: package/built/portmap
 Section: net
@@ -5390,10 +5390,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7105
-Filename: portmap_6.0-2_keenetic.ipk
-Size: 7791
-MD5Sum: 0879cf34e77d35cd4a9661409f00b989
+Installed-Size: 6987
+Filename: portmap_6.0-3_keenetic.ipk
+Size: 7668
+MD5Sum: 4d8db93bce3c07d11516593f1691b691
 Description:  Portmap is a server that converts RPC (Remote Procedure Call) program
  numbers into DARPA protocol port numbers.
 
