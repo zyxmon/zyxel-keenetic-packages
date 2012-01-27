@@ -1,3 +1,20 @@
+Package: 3proxy
+Version: 0.6.1-1
+Depends: 
+Provides: 
+Source: package/built/3proxy
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 170927
+Filename: 3proxy_0.6.1-1_keenetic.ipk
+Size: 171308
+MD5Sum: b2e22e62f5188e915f332c684d9c96be
+Description:  3proxy free proxy server
+
 Package: aria2
 Version: 1.13.0-1
 Depends: libxml2, libstdcpp
@@ -6360,7 +6377,7 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 281-1
+Version: 283-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
@@ -6370,10 +6387,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 108454
-Filename: xupnpd_281-1_keenetic.ipk
-Size: 109210
-MD5Sum: dbb4de0cc023f20cb9452acb25dc1b28
+Installed-Size: 108685
+Filename: xupnpd_283-1_keenetic.ipk
+Size: 109425
+MD5Sum: 0221aa8e57584d0361d098a129dc0217
 Description:  eXtensible UPnP agent
 
 Package: zip
