@@ -1,20 +1,3 @@
-Package: 3proxy
-Version: 0.6.1-1
-Depends: 
-Provides: 
-Source: package/built/3proxy
-Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: keenetic
-Installed-Size: 170927
-Filename: 3proxy_0.6.1-1_keenetic.ipk
-Size: 171308
-MD5Sum: b2e22e62f5188e915f332c684d9c96be
-Description:  3proxy free proxy server
-
 Package: aria2
 Version: 1.13.0-1
 Depends: libxml2, libstdcpp
@@ -5413,6 +5396,28 @@ Size: 7668
 MD5Sum: 4d8db93bce3c07d11516593f1691b691
 Description:  Portmap is a server that converts RPC (Remote Procedure Call) program
  numbers into DARPA protocol port numbers.
+
+Package: privoxy
+Version: 3.0.19-1
+Depends: libpcre
+Provides: 
+Source: package/built/privoxy
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 175956
+Filename: privoxy_3.0.19-1_keenetic.ipk
+Size: 176399
+MD5Sum: 529d48cd53ff486e9f46da77621e0f7f
+Description:  Privoxy is a web proxy with advanced filtering capabilities for 
+ protecting privacy, modifying web page content, managing cookies, 
+ controlling access, and removing ads, banners, pop-ups and other 
+ obnoxious Internet junk. Privoxy has a very flexible configuration 
+ and can be customized to suit individual needs and tastes. Privoxy 
+ has application for both stand-alone systems and multi-user networks.
 
 Package: procps
 Version: 3.2.8-1
