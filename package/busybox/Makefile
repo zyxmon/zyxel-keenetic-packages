@@ -19,6 +19,12 @@ PKG_MD5SUM:=c3938e1ac59602387009bbf1dd1af7f6
 
 PKG_BUILD_PARALLEL:=1
 
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
+
+ifeq ($(BUILD_VARIANT),storage)
+  PATCH_DIR:=spatches
+endif
+
 include $(INCLUDE_DIR)/package.mk
 
 ifeq ($(DUMP),)
@@ -30,7 +36,7 @@ init-$(CONFIG_BUSYBOX_CONFIG_HTTPD) += httpd
 init-$(CONFIG_BUSYBOX_CONFIG_CROND) += cron
 init-$(CONFIG_BUSYBOX_CONFIG_TELNETD) += telnet
 
-define Package/busybox
+define Package/busybox/Default
   SECTION:=base
   CATEGORY:=Base system
   MAINTAINER:=Nicolas Thill <nico@openwrt.org>
@@ -39,13 +45,39 @@ define Package/busybox
   MENU:=1
 endef
 
-define Package/busybox/description
+define Package/busybox
+  $(call Package/busybox/Default)
+  DEPENDS:=@TARGET_keenetic
+  VARIANT:=usb
+endef
+
+define Package/busybox-storage
+  $(call Package/busybox/Default)
+  DEPENDS:=@TARGET_keenetic_storage
+  VARIANT:=storage
+endef
+
+define Package/busybox/Default/description
  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 endef
 
+define Package/busybox/description
+  $(call Package/busybox/Default/description)
+  This package is built for usb.
+endef
+
+define Package/busybox-storage/description
+  $(call Package/busybox/Default/description)
+  This package is built for internal storage/
+endef
+
 define Package/busybox/config
 	source "$(SOURCE)/Config.in"
+endef
+
+define Package/busybox-storage/config
+	source "$(SOURCE)/Config-storage.in"
 endef
 
 define Build/Configure
@@ -91,6 +123,8 @@ define Package/busybox/conffiles
 /etc/crontabs/root
 endef
 
+
+
 define Package/busybox/install
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/K02cron $(1)/etc/init.d/
@@ -100,5 +134,14 @@ define Package/busybox/install
 	-rm -rf $(1)/lib64
 endef
 
+define Package/busybox-storage/install
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/K02cron-storage $(1)/etc/init.d/K02cron
+	$(INSTALL_DIR) $(1)/etc/crontabs
+	$(INSTALL_DATA) ./files/crontab $(1)/etc/crontabs/root
+	$(CP) $(PKG_INSTALL_DIR)/* $(1)/
+	-rm -rf $(1)/lib64
+endef
 
 $(eval $(call BuildPackage,busybox))
+$(eval $(call BuildPackage,busybox-storage))
