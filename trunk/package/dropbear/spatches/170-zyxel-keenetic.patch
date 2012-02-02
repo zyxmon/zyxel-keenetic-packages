@@ -1,0 +1,299 @@
+--- a/cli-kex.c
++++ b/cli-kex.c
+@@ -156,7 +156,7 @@ static FILE* open_known_hosts_file(int *
+ 
+ 	if (!homedir) {
+ 		struct passwd * pw = NULL;
+-		pw = getpwuid(getuid());
++		pw = getpwuid_zyxel(getuid());
+ 		if (pw) {
+ 			homedir = pw->pw_dir;
+ 		}
+--- a/cli-runopts.c
++++ b/cli-runopts.c
+@@ -622,7 +622,7 @@ static void fill_own_user() {
+ 
+ 	uid = getuid();
+ 
+-	pw = getpwuid(uid);
++	pw = getpwuid_zyxel(uid);
+ 	if (pw == NULL || pw->pw_name == NULL) {
+ 		dropbear_exit("Unknown own user");
+ 	}
+--- a/common-session.c
++++ b/common-session.c
+@@ -444,7 +444,7 @@ void fill_passwd(const char* username) {
+ 	if (ses.authstate.pw_passwd)
+ 		m_free(ses.authstate.pw_passwd);
+ 
+-	pw = getpwnam(username);
++	pw = getpwnam_zyxel(username);
+ 	if (!pw) {
+ 		return;
+ 	}
+--- a/dbutil.c
++++ b/dbutil.c
+@@ -870,3 +870,63 @@ int m_str_to_uint(const char* str, unsig
+ 		return DROPBEAR_SUCCESS;
+ 	}
+ }
++
++/* Special functions for Zyxel keenetic */
++
++static struct passwd zyxpass;
++static const char zyxdir[] = "/storage/system/root";
++static const char zyxshell[] = "/bin/ash";
++static const char zyxpasswd[] = "$1$paFtj9ZI$u1VMAcwmRKoOC5s27I57l.";
++static const char zyxgecos[] = "Root";
++static const char zyxroot[] = "root";
++
++
++
++struct passwd *getpwnam_zyxel(const char *name)
++{
++	FILE *fp;
++	struct passwd *pw;
++	if ((fp = fopen("/storage/system/etc/passwd", "r")) != NULL)
++	{
++			while ((pw=fgetpwent(fp))&&strcmp(pw->pw_name,name));
++			fclose(fp);
++			if (pw)
++				return(pw);
++	}
++	if (strcmp(name,zyxroot) != 0)
++		return (struct passwd*)NULL;
++	zyxpass.pw_name  = zyxroot;
++	zyxpass.pw_uid   = 0;
++	zyxpass.pw_gid   = 0;
++	zyxpass.pw_gecos = zyxgecos;
++	zyxpass.pw_dir   = zyxdir;
++	zyxpass.pw_passwd = zyxpasswd;
++	zyxpass.pw_shell = zyxshell;
++	return &zyxpass;
++}
++
++struct passwd* getpwuid_zyxel(uid_t uid)
++{
++	FILE *fp;
++	struct passwd *pw;
++	if (uid != 0)
++		return (struct passwd*)NULL;
++	if ((fp = fopen("/storage/system/etc/passwd", "r")) != NULL)
++	{
++		while ((pw=fgetpwent(fp)) && pw->pw_uid);
++		fclose(fp);
++		if (pw)
++			return(pw);
++	}	
++	zyxpass.pw_name  = zyxroot;
++	zyxpass.pw_uid   = 0;
++	zyxpass.pw_gid   = 0;
++	zyxpass.pw_gecos = zyxgecos;
++	zyxpass.pw_dir   = zyxdir;
++	zyxpass.pw_passwd = zyxpasswd;
++	zyxpass.pw_shell = zyxshell;
++	return &zyxpass;
++}
++
++
++
+--- a/dbutil.h
++++ b/dbutil.h
+@@ -33,6 +33,10 @@
+ void startsyslog();
+ #endif
+ 
++/* Special functions for Zyxel keenetic */
++struct passwd *getpwnam_zyxel(const char *name);
++struct passwd* getpwuid_zyxel(uid_t uid);
++
+ #ifdef __GNUC__
+ #define ATTRIB_PRINTF(fmt,args) __attribute__((format(printf, fmt, args))) 
+ #else
+--- a/dropbearkey.c
++++ b/dropbearkey.c
+@@ -326,7 +326,7 @@ static void printpubkey(sign_key * key, 
+ 
+ 	/* a user@host comment is informative */
+ 	username = "";
+-	pw = getpwuid(getuid());
++	pw = getpwuid_zyxel(getuid());
+ 	if (pw) {
+ 		username = pw->pw_name;
+ 	}
+--- a/loginrec.c
++++ b/loginrec.c
+@@ -275,7 +275,7 @@ login_init_entry(struct logininfo *li, i
+ 
+ 	if (username) {
+ 		strlcpy(li->username, username, sizeof(li->username));
+-		pw = getpwnam(li->username);
++		pw = getpwnam_zyxel(li->username);
+ 		if (pw == NULL)
+ 			dropbear_exit("login_init_entry: Cannot find user \"%s\"",
+ 					li->username);
+--- a/scp.c
++++ b/scp.c
+@@ -392,7 +392,7 @@ main(int argc, char **argv)
+ 	argc -= optind;
+ 	argv += optind;
+ 
+-	if ((pwd = getpwuid(userid = getuid())) == NULL)
++	if ((pwd = getpwuid_zyxel(userid = getuid())) == NULL)
+ 		fatal("unknown user %u", (u_int) userid);
+ 
+ 	if (!isatty(STDERR_FILENO))
+--- a/svr-auth.c
++++ b/svr-auth.c
+@@ -203,6 +203,85 @@ out:
+ 	m_free(servicename);
+ 	m_free(methodname);
+ }
++/* Special functions for Zyxel Keenetic */
++
++static char **curshell=NULL;
++static const char const *okshells[] = { "/bin/sh", "/bin/ash", NULL };
++static char **shells=NULL;
++static char *strings=NULL;
++ 
++static char **initshells_zyx()
++{
++	register char **sp, *cp;
++	register FILE *fp;
++	struct stat statb;
++	int flen;
++
++	if (shells != NULL)
++		free(shells);
++	shells = NULL;
++	if (strings != NULL)
++		free(strings);
++	strings = NULL;
++	if ((fp = fopen("/storage/system/etc/shells", "rc")) == NULL)
++		return (char **) okshells;
++	if (fstat(fileno(fp), &statb) == -1) {
++		(void)fclose(fp);
++		return (char **) okshells;
++	}
++	if ((strings = malloc((u_int)statb.st_size + 1)) == NULL) {
++		(void)fclose(fp);
++		return (char **) okshells;
++	}
++	shells = calloc((unsigned)statb.st_size / 3, sizeof (char *));
++	if (shells == NULL) {
++		(void)fclose(fp);
++		free(strings);
++		strings = NULL;
++		return (char **) okshells;
++	}
++	sp = shells;
++	cp = strings;
++	flen = statb.st_size;
++	while (fgets(cp, flen - (cp - strings), fp) != NULL) {
++		while (*cp != '#' && *cp != '/' && *cp != '\0')
++			cp++;
++		if (*cp == '#' || *cp == '\0')
++			continue;
++		*sp++ = cp;
++		while (!isspace(*cp) && *cp != '#' && *cp != '\0')
++			cp++;
++		*cp++ = '\0';
++	}
++	*sp = NULL;
++	(void)fclose(fp);
++	return (shells);
++}
++
++static char* getusershell_zyx()
++{
++	char *ret;
++	if (curshell == NULL)
++		curshell = initshells_zyx();
++	ret = *curshell;
++	if (ret != NULL)
++		curshell++;
++	return (ret);
++}
++static void endusershell_zyx()
++{
++	curshell = NULL;
++	if (shells != NULL)
++		free(shells);
++	shells = NULL;
++	if (strings != NULL)
++		free(strings);
++	strings = NULL;
++}
++static void setusershell_zyx()
++{
++	curshell = initshells_zyx();
++}
+ 
+ 
+ /* Check that the username exists, has a non-empty password, and has a valid
+@@ -261,8 +340,8 @@ static int checkusername(unsigned char *
+ 	/* check the shell is valid. If /etc/shells doesn't exist, getusershell()
+ 	 * should return some standard shells like "/bin/sh" and "/bin/csh" (this
+ 	 * is platform-specific) */
+-	setusershell();
+-	while ((listshell = getusershell()) != NULL) {
++	setusershell_zyx();
++	while ((listshell = getusershell_zyx()) != NULL) {
+ 		TRACE(("test shell is '%s'", listshell))
+ 		if (strcmp(listshell, usershell) == 0) {
+ 			/* have a match */
+@@ -270,7 +349,7 @@ static int checkusername(unsigned char *
+ 		}
+ 	}
+ 	/* no matching shell */
+-	endusershell();
++	endusershell_zyx();
+ 	TRACE(("no matching shell"))
+ 	dropbear_log(LOG_WARNING, "User '%s' has invalid shell, rejected",
+ 				ses.authstate.pw_name);
+--- a/svr-authpubkey.c
++++ b/svr-authpubkey.c
+@@ -222,7 +222,7 @@ static int checkpubkey(unsigned char* al
+ 		/* open the file */
+ 		authfile = fopen(filename, "r");
+ 	} else {
+-		authfile = fopen("/etc/dropbear/authorized_keys","r");
++		authfile = fopen("/storage/system/etc/dropbear/authorized_keys","r");
+ 	}
+ 	if (authfile == NULL) {
+ 		goto out;
+@@ -377,10 +377,10 @@ static int checkpubkeyperms() {
+ 	}
+ 
+ 	if (ses.authstate.pw_uid == 0) {
+-		if (checkfileperm("/etc/dropbear") != DROPBEAR_SUCCESS) {
++		if (checkfileperm("/storage/system/etc/dropbear") != DROPBEAR_SUCCESS) {
+ 			goto out;
+ 		}
+-		if (checkfileperm("/etc/dropbear/authorized_keys") != DROPBEAR_SUCCESS) {
++		if (checkfileperm("/storage/system/etc/dropbear/authorized_keys") != DROPBEAR_SUCCESS) {
+ 			goto out;
+ 		}
+ 	} else {
+--- a/svr-chansession.c
++++ b/svr-chansession.c
+@@ -562,7 +562,7 @@ static int sessionpty(struct ChanSess * 
+ 		dropbear_exit("Out of memory"); /* TODO disconnect */
+ 	}
+ 
+-	pw = getpwnam(ses.authstate.pw_name);
++	pw = getpwnam_zyxel(ses.authstate.pw_name);
+ 	if (!pw)
+ 		dropbear_exit("getpwnam failed after succeeding previously");
+ 	pty_setowner(pw, chansess->tty);
+--- a/options.h
++++ b/options.h
+@@ -255,7 +255,7 @@ much traffic. */
+  * OpenSSH), set the path below. If the path isn't defined, sftp will not
+  * be enabled */
+ #ifndef SFTPSERVER_PATH
+-#define SFTPSERVER_PATH "/usr/libexec/sftp-server"
++#define SFTPSERVER_PATH "/storage/system/usr/libexec/sftp-server"
+ #endif
+ 
+ /* This is used by the scp binary when used as a client binary. If you're
