@@ -125,6 +125,8 @@ endef
 define Package/dropbear-storage/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/dropbear $(1)/usr/sbin/dropbear
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/S10dropbear $(1)/etc/init.d
 endef
 
 define Package/dropbearconvert/install

@@ -1,0 +1,52 @@
+#!/bin/sh
+
+MOUNTPNT="/storage"
+MOUNT="$MOUNTPNT/system"
+RSA="$MOUNT/etc/dropbear/dropbear_rsa_host_key"
+DSS="$MOUNT/etc/dropbear/dropbear_dss_host_key"
+PIDFILE="/var/run/sdropbear.pid"
+PORT=1022
+
+DROPBEAR="$MOUNT/usr/sbin/dropbear"
+
+export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
+
+dropbear_status ()
+{
+	[ -f $PIDFILE ] && [ -d /proc/`cat $PIDFILE` ]
+}
+
+start()
+{
+	$DROPBEAR -d $DSS -r $RSA -p $PORT -P $PIDFILE
+}
+
+stop()
+{
+	kill `cat $PIDFILE`
+}
+
+if [ "$2" == "automount" ]; then
+	exit
+fi
+
+if [ "$2" == "init" ]; then
+	start
+fi
+
+case "$1" in
+	start)
+	    start
+	    ;;
+	stop)
+	    stop
+	    ;;
+	restart)
+	    stop
+	    start
+	    ;;
+	*)
+	    echo "Usage: $0 {start|stop}"
+	    ;;
+esac
