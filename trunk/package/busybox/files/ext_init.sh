@@ -20,7 +20,7 @@ stop() {
 }
 
 if [ ! -f /var/tmp/.profile ]; then
-echo "export PATH=/storage/system/bin:/storage/system/sbin:/storage/system/usr/bin:/storage/system/usr/sbin:/sbin:/usr/sbi
+echo "export PATH=/storage/system/bin:/storage/system/sbin:/storage/system/usr/bin:/storage/system/usr/sbin:/bin:/sbin:/usr/bin:/usr/sbin
 export LD_LIBRARY_PATH=/storage/system/lib:/storage/system/usr/lib:/lib:/usr/lib" > /var/tmp/.profile
 fi
 
