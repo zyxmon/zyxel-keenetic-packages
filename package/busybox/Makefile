@@ -139,6 +139,7 @@ define Package/busybox-storage/install
 	$(INSTALL_BIN) ./files/K02cron-storage $(1)/etc/init.d/K02cron
 	$(INSTALL_DIR) $(1)/bin
 	$(INSTALL_BIN) ./files/ext_init.sh $(1)/bin/
+	$(INSTALL_BIN) ./files/ext_firewall.sh $(1)/bin/
 	$(INSTALL_DIR) $(1)/etc/crontabs
 	$(INSTALL_DATA) ./files/crontab $(1)/etc/crontabs/root
 	$(CP) $(PKG_INSTALL_DIR)/* $(1)/
