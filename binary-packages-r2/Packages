@@ -2214,7 +2214,7 @@ MD5Sum: 2642f92271791ffffaac2c847f9e3bc8
 Description:  mcprobe is a test utility for multicast.
 
 Package: mediatomb
-Version: 0.12.1-5
+Version: 0.12.1-6
 Depends: libexif, libsqlite3, id3lib, file, libjs, libexpat, libffmpeg, libstdcpp, libiconv-full
 Provides: 
 Source: package/built/mediatomb
@@ -2224,10 +2224,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 630894
-Filename: mediatomb_0.12.1-5_keenetic.ipk
-Size: 630980
-MD5Sum: 8ac2df7de9a2ed1416fc7589427e806d
+Installed-Size: 633072
+Filename: mediatomb_0.12.1-6_keenetic.ipk
+Size: 633100
+MD5Sum: 23c2da7e0f29ff9e20b9de5f6e9c38c9
 Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user interface and
  with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
