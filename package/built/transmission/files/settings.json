@@ -21,7 +21,6 @@
     "lazy-bitfield-enabled": true, 
     "lpd-enabled": true, 
     "message-level": 0, 
-    "open-file-limit": 32, 
     "peer-congestion-algorithm": "", 
     "peer-limit-global": 200, 
     "peer-limit-per-torrent": 40, 
