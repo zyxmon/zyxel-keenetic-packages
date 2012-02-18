@@ -2285,6 +2285,25 @@ Description:  mini_sendmail reads its standard input up to an end-of-file and se
  The message is sent by connecting to a local SMTP server. This means
  mini_sendmail can be used to send email from inside a chroot(2) area.
 
+Package: mini_inetd
+Version: 1.0.0-1
+Depends: 
+Provides: 
+Source: package/built/mini_inetd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3252
+Filename: mini_inetd_1.0.0-1_keenetic.ipk
+Size: 3970
+MD5Sum: 2792a61b67f841fdde92ed6af28ca289
+Description:  mini-inetd: Waits on a TCP socket, spawns a subprocess for each
+ incoming connection to handle the connection.  Can be used to test
+ servers that expect to be launched from inetd.
+
 Package: minidlna
 Version: 1.0.22-1
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
@@ -5840,6 +5859,23 @@ Description:  smartmontools contains utility programs (smartctl, smartd) to
  and Reporting Technology System (S.M.A.R.T.) built into most modern
  ATA and SCSI disks. It is derived from smartsuite.
 
+Package: smbclient
+Version: 3.6.3-1
+Depends: libncurses, libreadline
+Provides: 
+Source: package/built/samba36
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 405277
+Filename: smbclient_3.6.3-1_keenetic.ipk
+Size: 404724
+MD5Sum: f1d2828d0b0093d5040a1f0d2033041a
+Description:  ftp-like client to access SMB/CIFS resources on servers
+
 Package: sqlite2-cli
 Version: 2.8.17-2
 Depends: libsqlite2, libncurses, libreadline
@@ -6052,7 +6088,7 @@ MD5Sum: 3701ba3bf3479393612229394386bc47
 Description:  OCR
 
 Package: transmission-cli
-Version: 2.42-1
+Version: 2.50-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6062,14 +6098,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 873512
-Filename: transmission-cli_2.42-1_keenetic.ipk
-Size: 872252
-MD5Sum: c9f63de828eaea08256abd55e0a3e597
+Installed-Size: 876375
+Filename: transmission-cli_2.50-1_keenetic.ipk
+Size: 874941
+MD5Sum: d7183b405b68773681c60170fa4eec28
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.42-1
+Version: 2.50-1
 Depends: libevent2
 Provides: 
 Source: package/built/transmission
@@ -6079,17 +6115,17 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 222800
-Filename: transmission-daemon_2.42-1_keenetic.ipk
-Size: 223244
-MD5Sum: 00b6a985a2561a5604d809801544e682
+Installed-Size: 223737
+Filename: transmission-daemon_2.50-1_keenetic.ipk
+Size: 224075
+MD5Sum: 5fc44f2d592fb34d104c0637f53609d7
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.42-1
+Version: 2.50-1
 Depends: 
 Provides: 
 Source: package/built/transmission
@@ -6099,14 +6135,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 232880
-Filename: transmission-remote_2.42-1_keenetic.ipk
-Size: 233186
-MD5Sum: 419aec405796015d723203cf5507f8ec
+Installed-Size: 233647
+Filename: transmission-remote_2.50-1_keenetic.ipk
+Size: 233939
+MD5Sum: d35246e66a12e578a666be4cc5129f67
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.42-1
+Version: 2.50-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6116,10 +6152,10 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 138099
-Filename: transmission-web_2.42-1_keenetic.ipk
-Size: 138812
-MD5Sum: cc8bd22323fe09cd6352db6fda7477ab
+Installed-Size: 212724
+Filename: transmission-web_2.50-1_keenetic.ipk
+Size: 213460
+MD5Sum: 62d27208e9e6a408d818106172be252b
 Description:  Webinterface resources for transmission.
 
 Package: uclibcxx
@@ -6382,7 +6418,7 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 283-1
+Version: 290-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
@@ -6392,10 +6428,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 108685
-Filename: xupnpd_283-1_keenetic.ipk
-Size: 109425
-MD5Sum: 0221aa8e57584d0361d098a129dc0217
+Installed-Size: 109687
+Filename: xupnpd_290-1_keenetic.ipk
+Size: 110432
+MD5Sum: 993f04554c1a522b2545344e66f7c411
 Description:  eXtensible UPnP agent
 
 Package: zip
