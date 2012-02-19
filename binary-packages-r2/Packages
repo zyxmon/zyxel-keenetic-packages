@@ -1388,7 +1388,7 @@ MD5Sum: a701b6c9edd36b7009a6ed570873b7d1
 Description:  A Perl Compatible Regular Expression library
 
 Package: libpng
-Version: 1.2.46-1
+Version: 1.2.46-2
 Depends: 
 Provides: 
 Source: package/built/libpng
@@ -1398,10 +1398,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 117723
-Filename: libpng_1.2.46-1_keenetic.ipk
-Size: 118309
-MD5Sum: 00020758080fab0134630fb8237dd67f
+Installed-Size: 117781
+Filename: libpng_1.2.46-2_keenetic.ipk
+Size: 118380
+MD5Sum: 1ac6e13dc79e875da2eaafe1d414a501
 Description:  A PNG format files handling library
 
 Package: libpopt
