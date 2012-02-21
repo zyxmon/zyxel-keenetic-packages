@@ -1,0 +1,59 @@
+in.www
+Copyright(c)2008, Robin Rawson-Tetley
+This application is covered by the terms of the GPLv2.
+
+in.www is a tiny, inetd-based webserver designed for devices with 
+limited resources. I use it for streaming mp3 files via HTTP
+from my NSLU2 (slug) and running a CGI playlist manager. It uses
+just 84K per process when it is running.
+
+SECURITY:
+=================
+
+Makefile has some switches for security. All are on by
+default:
+
+-DCGI   - Builds with CGI support - remove this switch to disable
+          CGI support. Any .cgi file that is executable and
+          requested from the document tree will be run.
+
+-DNORELATIVE - Any attempt by a client to use a relative path 
+               will result in a 403 error. This prevents 99%
+               of web attacks to read the passwd file and break
+               out of the document root. If you are worried, you
+               could chroot in.www in the inetd startup.
+
+-DONELOG - Output a log file in /var/log/in.www.log in NCSA
+           combined format for each request. NOTE: You must run
+           in.www as a user with write permissions to 
+           /var/log if you use this option.
+
+In addition, all buffers are checked and limited to prevent buffer
+overrun attacks.
+
+You can use x/inetd and tcpd as with any other inetd service to 
+restrict access from hosts and to limit the number of in.www 
+processes.
+
+
+INSTALLATION:
+=================
+
+1. Compile in.www:
+
+   make
+
+2. Copy to your path:
+
+   cp in.www /usr/local/bin
+   cp man/in.www.1.gz /usr/local/man
+
+3. Add an inetd entry (this assumes Debian, with user www-data and 
+   that the /usr/sbin/tcpd wrapper is available) to inetd.conf:
+
+   www stream tcp nowait www-data /usr/sbin/tcpd /usr/local/bin/in.www /var/www
+
+4. Restart inetd
+
+
+For more info, run "man in.www"
