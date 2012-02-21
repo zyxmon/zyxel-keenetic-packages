@@ -432,6 +432,23 @@ Size: 75950
 MD5Sum: 41eb76e70a3aefe97913959b2a4dabab
 Description:  An ID3v1/ID3v2 tag manipulation library
 
+Package: in.www
+Version: 1.0.0-1
+Depends: 
+Provides: 
+Source: package/built/in.www
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5748
+Filename: in.www_1.0.0-1_keenetic.ipk
+Size: 6327
+MD5Sum: 5d5783431f96d093df9fee51ac35b540
+Description:  Inetd based web server
+
 Package: inadyn
 Version: 1.98.0-2
 Depends: 
