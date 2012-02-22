@@ -126,7 +126,7 @@ Description:  Full versions of standard GNU utilities.  Normally, you would not
  sufficient and much smaller.
 
 Package: cpulimit
-Version: r41-1
+Version: 1.5-1
 Depends: 
 Provides: 
 Source: package/built/cpulimit
@@ -136,10 +136,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7949
-Filename: cpulimit_r41-1_keenetic.ipk
-Size: 8639
-MD5Sum: 7b3e7d02586ca60509bfbdd7bae4f3e5
+Installed-Size: 5462
+Filename: cpulimit_1.5-1_keenetic.ipk
+Size: 6100
+MD5Sum: 2f97ae4252e3244af0070d512a70be5c
 Description:  cpulimit is a simple program which attempts to limit the cpu usage of a process
 
 Package: curlftpfs
