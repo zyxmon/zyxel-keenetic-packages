@@ -160,6 +160,23 @@ MD5Sum: 860316840dce4e3fddb4db1b09d53a54
 Description:  CurlFtpFS is a filesystem for accessing FTP hosts
  based on FUSE and libcurl.
 
+Package: dhcp-server
+Version: 3.1.0-4
+Depends: 
+Provides: 
+Source: package/built/dhcp
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 414506
+Filename: dhcp-server_3.1.0-4_keenetic.ipk
+Size: 413777
+MD5Sum: 3391ab1993ebf103989e05ae480d66cb
+Description:  ISC's DHCP server
+
 Package: diffutils
 Version: 3.0-1
 Depends: 
@@ -6103,6 +6120,23 @@ Filename: tesseract_3.01-1_keenetic.ipk
 Size: 1469817
 MD5Sum: 3701ba3bf3479393612229394386bc47
 Description:  OCR
+
+Package: tftpd-hpa
+Version: 0.48-3
+Depends: libreadline
+Provides: 
+Source: package/built/tftp-hpa
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13784
+Filename: tftpd-hpa_0.48-3_keenetic.ipk
+Size: 14347
+MD5Sum: c332e3a420025ec7686d3da35c19a144
+Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
 Version: 2.50-1
