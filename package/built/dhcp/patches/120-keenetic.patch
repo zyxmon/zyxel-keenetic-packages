@@ -1,0 +1,64 @@
+--- a/includes/dhcpd.h
++++ b/includes/dhcpd.h
+@@ -1058,11 +1058,11 @@ typedef unsigned char option_mask [16];
+ #define _PATH_DHCPD_PID		"dhcpd.pid"
+ #else
+ #ifndef _PATH_DHCPD_CONF
+-#define _PATH_DHCPD_CONF	"/etc/dhcpd.conf"
++#define _PATH_DHCPD_CONF	"/media/DISK_A1/system/etc/dhcpd.conf"
+ #endif
+ 
+ #ifndef _PATH_DHCPD_DB
+-#define _PATH_DHCPD_DB		"/etc/dhcpd.leases"
++#define _PATH_DHCPD_DB		"/media/DISK_A1/system/etc/dhcpd.leases"
+ #endif
+ 
+ #ifndef _PATH_DHCPD_PID
+@@ -1071,11 +1071,11 @@ typedef unsigned char option_mask [16];
+ #endif
+ 
+ #ifndef _PATH_DHCLIENT_CONF
+-#define _PATH_DHCLIENT_CONF	"/etc/dhclient.conf"
++#define _PATH_DHCLIENT_CONF	"/media/DISK_A1/system/etc/dhclient.conf"
+ #endif
+ 
+ #ifndef _PATH_DHCLIENT_SCRIPT
+-#define _PATH_DHCLIENT_SCRIPT	"/sbin/dhclient-script"
++#define _PATH_DHCLIENT_SCRIPT	"/media/DISK_A1/system/usr/sbin/dhclient-script"
+ #endif
+ 
+ #ifndef _PATH_DHCLIENT_PID
+@@ -1083,7 +1083,7 @@ typedef unsigned char option_mask [16];
+ #endif
+ 
+ #ifndef _PATH_DHCLIENT_DB
+-#define _PATH_DHCLIENT_DB	"/etc/dhclient.leases"
++#define _PATH_DHCLIENT_DB	"/media/DISK_A1/system/etc/dhclient.leases"
+ #endif
+ 
+ #ifndef _PATH_RESOLV_CONF
+@@ -1091,7 +1091,7 @@ typedef unsigned char option_mask [16];
+ #endif
+ 
+ #ifndef _PATH_DHCRELAY_PID
+-#define _PATH_DHCRELAY_PID	"/var/run/dhcrelay.pid"
++#define _PATH_DHCRELAY_PID	"/media/DISK_A1/system/var/run/dhcrelay.pid"
+ #endif
+ 
+ #ifndef DHCPD_LOG_FACILITY
+--- a/includes/cf/linux.h
++++ b/includes/cf/linux.h
+@@ -83,11 +83,11 @@ extern int h_errno;
+    directory. */
+ 
+ #ifndef _PATH_DHCPD_DB
+-#define _PATH_DHCPD_DB		"/var/state/dhcp/dhcpd.leases"
++#define _PATH_DHCPD_DB		"/media/DISK_A1/system/var/lib/misc/dhcpd.leases"
+ #endif
+ 
+ #ifndef _PATH_DHCLIENT_DB
+-#define _PATH_DHCLIENT_DB	"/var/state/dhcp/dhclient.leases"
++#define _PATH_DHCLIENT_DB	"/media/DISK_A1/system/var/lib/misc/dhclient.leases"
+ #endif
+ 
+ /* Varargs stuff... */
