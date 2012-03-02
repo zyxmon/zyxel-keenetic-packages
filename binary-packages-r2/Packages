@@ -2339,7 +2339,7 @@ Description:  mini-inetd: Waits on a TCP socket, spawns a subprocess for each
  servers that expect to be launched from inetd.
 
 Package: minidlna
-Version: 1.0.22-1
+Version: 1.0.23-1
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
 Provides: 
 Source: package/built/minidlna
@@ -2349,10 +2349,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 135302
-Filename: minidlna_1.0.22-1_keenetic.ipk
-Size: 135873
-MD5Sum: f58a389d1be6a1d6473b2f61a6a6f89f
+Installed-Size: 139168
+Filename: minidlna_1.0.23-1_keenetic.ipk
+Size: 139699
+MD5Sum: e564e99c4acfb45f8b525d68b71c1137
 Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
  being fully compliant with DLNA/UPnP-AV clients.
 
