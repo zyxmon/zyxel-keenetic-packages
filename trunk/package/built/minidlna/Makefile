@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=minidlna
-PKG_VERSION:=1.0.22
+PKG_VERSION:=1.0.23
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)_$(PKG_VERSION)_src.tar.gz
 PKG_SOURCE_URL:=@SF/minidlna
-PKG_MD5SUM:=3de2f6b54f43bb998dfad3c8fa75cef3
+PKG_MD5SUM:=409a36830a9ac2aaddfaff4c8b90a40f
 
 PKG_BUILD_PARALLEL:=0
 
