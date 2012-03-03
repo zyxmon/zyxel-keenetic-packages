@@ -5615,7 +5615,7 @@ Description:  Django is a high-level Python Web framework that encourages rapid
  development and clean, pragmatic design.
 
 Package: python-mini
-Version: 2.6.4-3
+Version: 2.6.4-4
 Depends: 
 Provides: 
 Source: package/built/python
@@ -5625,10 +5625,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1289940
-Filename: python-mini_2.6.4-3_keenetic.ipk
-Size: 1273357
-MD5Sum: b2c4a9b453014dbb6dd9b2b67ca4e199
+Installed-Size: 1290025
+Filename: python-mini_2.6.4-4_keenetic.ipk
+Size: 1272727
+MD5Sum: a6df2c013857b30aad78f6f3d543ec5b
 Description:  Python is a dynamic object-oriented programming language that can be used
  for many kinds of software development. It offers strong support for
  integration with other languages and tools, comes with extensive standard
@@ -5639,7 +5639,7 @@ Description:  Python is a dynamic object-oriented programming language that can 
  This package contains only a minimal Python install.
 
 Package: python-openssl
-Version: 2.6.4-3
+Version: 2.6.4-4
 Depends: python-mini
 Provides: 
 Source: package/built/python
@@ -5650,9 +5650,9 @@ Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 10692
-Filename: python-openssl_2.6.4-3_keenetic.ipk
-Size: 11231
-MD5Sum: 31c87da2fe78d1f184afe3fbec47256f
+Filename: python-openssl_2.6.4-4_keenetic.ipk
+Size: 11232
+MD5Sum: ab66811995f094208a17c3262b9ad7d0
 Description:  Python support for OpenSSL
 
 Package: python-pil
@@ -5682,7 +5682,7 @@ Description:  The Python Imaging Library adds image processing capabilities to y
  general image processing tool.
 
 Package: python-sqlite3
-Version: 2.6.4-3
+Version: 2.6.4-4
 Depends: python-mini, libsqlite3
 Provides: 
 Source: package/built/python
@@ -5693,13 +5693,13 @@ Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 36718
-Filename: python-sqlite3_2.6.4-3_keenetic.ipk
-Size: 37416
-MD5Sum: 40c8bc1886e1c5e3730dfe72a618aaac
+Filename: python-sqlite3_2.6.4-4_keenetic.ipk
+Size: 37422
+MD5Sum: db634266036aa5964f2caa89efe71658
 Description:  Python support for sqlite3
 
 Package: python
-Version: 2.6.4-3
+Version: 2.6.4-4
 Depends: libffi, python-mini
 Provides: 
 Source: package/built/python
@@ -5709,10 +5709,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1831137
-Filename: python_2.6.4-3_keenetic.ipk
-Size: 1830757
-MD5Sum: b62041a28e88ff65bf5f83768b1d2d6d
+Installed-Size: 1814380
+Filename: python_2.6.4-4_keenetic.ipk
+Size: 1813741
+MD5Sum: acc64eb74cb38277d91ceee554def5d2
 Description:  Python is a dynamic object-oriented programming language that can be used
  for many kinds of software development. It offers strong support for
  integration with other languages and tools, comes with extensive standard
