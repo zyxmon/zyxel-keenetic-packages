@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2006-2010 OpenWrt.org
+# Copyright (C) 2006-2011 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=python
 PKG_VERSION:=2.6.4
-PKG_RELEASE:=3
+PKG_RELEASE:=4
 
 PKG_SOURCE:=Python-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://www.python.org/ftp/python/$(PKG_VERSION)/
@@ -235,6 +235,7 @@ define PyPackage/python/filespec
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_md5.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/operator.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_random.so
+-|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/readline.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/select.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_sha.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_sha256.so
