@@ -1,0 +1,38 @@
+--- a/defaults.h
++++ b/defaults.h
+@@ -41,9 +41,9 @@
+ 
+ #define PPP_SPEED_DEFAULT		"115200"
+ #if EMBED
+-#define PPTPD_CONFIG_FILE_DEFAULT	"/etc/config/pptpd.conf"
++#define PPTPD_CONFIG_FILE_DEFAULT	"/media/DISK_A1/system/etc/config/pptpd.conf"
+ #else
+-#define PPTPD_CONFIG_FILE_DEFAULT	"/etc/pptpd.conf"
++#define PPTPD_CONFIG_FILE_DEFAULT	"/media/DISK_A1/system/etc/pptpd.conf"
+ #endif
+ #define PIDFILE_DEFAULT			"/var/run/pptpd.pid"
+ 
+@@ -51,9 +51,9 @@
+ 
+ /* Location of binaries */
+ 
+-#define PPTP_CTRL_BIN			SBINDIR "/pptpctrl"
+-#define PPTPD_BIN			SBINDIR "/pptpd"
+-#define BCRELAY_BIN			SBINDIR "/bcrelay"
++#define PPTP_CTRL_BIN			"/media/DISK_A1/system/usr/sbin/pptpctrl"
++#define PPTPD_BIN			"/media/DISK_A1/system/usr/sbin/pptpd"
++#define BCRELAY_BIN			"/media/DISK_A1/system/usr/sbin/bcrelay"
+ 
+ /* Parameters permitted in the config file */
+ 
+--- a/pptpctrl.c
++++ b/pptpctrl.c
+@@ -773,7 +773,7 @@ static void launch_pppd(char **pppaddrs,
+ 
+         if (pptp_logwtmp) {
+                  pppd_argv[an++] = "plugin";
+-                 pppd_argv[an++] = "/usr/lib/pptpd/pptpd-logwtmp.so";
++                 pppd_argv[an++] = "/media/DISK_A1/system/usr/lib/pptpd/pptpd-logwtmp.so";
+                  pppd_argv[an++] = "pptpd-original-ip";
+                  pppd_argv[an++] = inet_ntoa(inetaddrs[1]);
+         }
