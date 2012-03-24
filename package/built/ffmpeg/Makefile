@@ -8,28 +8,28 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ffmpeg
-PKG_VERSION:=0.8.9
+PKG_VERSION:=0.10.2
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://ffmpeg.org/releases/
-PKG_MD5SUM:=001d4e81008b02099cec28924aa11257
+PKG_MD5SUM:=de1bd5fc4bbf3ef730a5361ee596fedd
 
-#libavcodec.so.52 McMCC
 FFMPEG_DECODERS:= \
+	aac \
+	ac3 \
+	flac \
 	h264 \
 	jpegls \
+	mp3 \
 	mpeg1video \
 	mpeg2video \
 	mpeg4 \
 	mpegvideo \
 	png \
-	zlib \
-	ac3 \
-	atrac3 \
-	mp3 \
 	wmav1 \
 	wmav2 \
+	zlib \
 
 FFMPEG_PARSERS:= \
 	aac \
@@ -40,7 +40,7 @@ FFMPEG_PARSERS:= \
 	mpegvideo \
 
 FFMPEG_PROTOCOLS:= \
-	file http pipe rtp tcp udp
+	file http pipe rtp tcp udp \
 
 FFMPEG_CONFIGURE_DECODERS:= \
 	$(foreach c, $(FFMPEG_DECODERS), \
@@ -67,10 +67,6 @@ $(call Package/ffmpeg/Default)
  MENU:=1
 endef
 
-#define Package/libffmpeg/config
-#source "$(SOURCE)/Config.in"
-#endef
-
 define Package/libffmeg/description
 $(call Package/ffmpeg/Default/description)
  .
@@ -81,13 +77,7 @@ ifneq ($(CONFIG_TARGET_x86),)
   TARGET_CFLAGS += -fomit-frame-pointer
 endif
 
-# XXX: add --disable-mmx & --disable-mmx2 to fix build failure on x86
-# libpostproc/postprocess_template.c:2195: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
-# libpostproc/postprocess_template.c:3124: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
-# libpostproc/postprocess_template.c:3207: error: can't find a register in class 'GENERAL_REGS' while reloading 'asm'
-
 define Build/Configure
-	# this is *NOT* GNU configure
 	( cd $(PKG_BUILD_DIR); \
 		CFLAGS="$(TARGET_CFLAGS) $(TARGET_CPPFLAGS) $(FPIC)" \
 		LDFLAGS="$(TARGET_LDFLAGS)" \
@@ -96,7 +86,7 @@ define Build/Configure
 		--cross-prefix="$(TARGET_CROSS)" \
 		--arch="$(ARCH)" \
 		--target-os=linux \
-		--prefix="/usr" \
+		--prefix=/usr \
 		--enable-shared \
 		--enable-static \
 		--disable-debug \
@@ -125,12 +115,22 @@ define Build/Configure
 		\
 		--disable-encoders \
 		--disable-decoders \
+		$(FFMPEG_CONFIGURE_DECODERS) \
 		--disable-muxers \
 		--disable-parsers \
+		$(FFMPEG_CONFIGURE_PARSERS) \
+		\
+		--disable-network \
+		\
 		--disable-protocols \
-		$(FFMPEG_CONFIGURE_PROTOCOLS) \
+		--enable-protocol=file \
 	)
 endef
+
+#		-------------------------------
+#		--disable-protocols \
+#		$(FFMPEG_CONFIGURE_PROTOCOLS) \
+#		-------------------------------
 
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
