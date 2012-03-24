@@ -1,9 +1,9 @@
 --- a/minidlna.c
 +++ b/minidlna.c
-@@ -344,7 +345,7 @@
+@@ -341,7 +341,7 @@
+ 	int options_flag = 0;
  	struct sigaction sa;
- 	/*const char * logfilename = 0;*/
- 	const char * presurl = 0;
+ 	const char * presurl = NULL;
 -	const char * optionsfile = "/etc/minidlna.conf";
 +	const char * optionsfile = "/media/DISK_A1/system/etc/minidlna.conf";
  	char mac_str[13];
