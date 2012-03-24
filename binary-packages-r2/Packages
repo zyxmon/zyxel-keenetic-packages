@@ -982,7 +982,7 @@ Description:  The libffi library provides a portable, high level programming int
  between the two languages.
 
 Package: libffmpeg
-Version: 0.8.9-1
+Version: 0.10.2-1
 Depends: 
 Provides: 
 Source: package/built/ffmpeg
@@ -992,10 +992,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 529849
-Filename: libffmpeg_0.8.9-1_keenetic.ipk
-Size: 527411
-MD5Sum: 2e9dd5983d9502da02ecb6231581d473
+Installed-Size: 876486
+Filename: libffmpeg_0.10.2-1_keenetic.ipk
+Size: 872888
+MD5Sum: 2e7b0b176aee60b2da7c1d6d9c5005cf
 Description:  libraries
 
 Package: libflac
@@ -2356,7 +2356,7 @@ Description:  mini-inetd: Waits on a TCP socket, spawns a subprocess for each
  servers that expect to be launched from inetd.
 
 Package: minidlna
-Version: 1.0.23-1
+Version: 1.0.24-3
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
 Provides: 
 Source: package/built/minidlna
@@ -2366,10 +2366,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 139168
-Filename: minidlna_1.0.23-1_keenetic.ipk
-Size: 139699
-MD5Sum: e564e99c4acfb45f8b525d68b71c1137
+Installed-Size: 139412
+Filename: minidlna_1.0.24-3_keenetic.ipk
+Size: 140013
+MD5Sum: 4fd82735993014a31a437cbe7043e3ce
 Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
  being fully compliant with DLNA/UPnP-AV clients.
 
