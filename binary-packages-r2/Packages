@@ -35,7 +35,7 @@ Description:  Bash is an sh-compatible command language interpreter that execute
  incorporates useful features from the Korn and C shells (ksh and csh).
 
 Package: busybox
-Version: 1.19.3-6
+Version: 1.19.4-1
 Depends: 
 Provides: 
 Source: package/busybox
@@ -45,12 +45,13 @@ Essential: no
 Priority: optional
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keenetic
-Installed-Size: 166990
-Filename: busybox_1.19.3-6_keenetic.ipk
-Size: 167415
-MD5Sum: 2188fb870a9d3ec85a1c2878f57a1f1a
+Installed-Size: 167063
+Filename: busybox_1.19.4-1_keenetic.ipk
+Size: 167532
+MD5Sum: d08b932fdd7d5e807926e2915776e5a0
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
+ This package is built for usb.
 
 Package: bzip2
 Version: 1.0.6-1
