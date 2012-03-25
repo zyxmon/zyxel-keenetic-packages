@@ -1,0 +1,3 @@
+#!/bin/sh
+logger "vpn disconnected from $6"
+

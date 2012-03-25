@@ -38,6 +38,12 @@ MAKE_FLAGS += \
 	COPTS="$(TARGET_CFLAGS)" \
 	INSTALL="install" \
 
+define Package/pptpd/conffiles
+/etc/pptpd.conf
+/etc/ppp/options.pptpd
+/etc/ppp/chap-secrets
+endef
+
 define Package/pptpd/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(CP) \
@@ -47,6 +53,16 @@ define Package/pptpd/install
 		$(1)/usr/sbin/
 	$(INSTALL_DIR) $(1)/usr/lib/pptpd
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/pptpd/* $(1)/usr/lib/pptpd/
+	$(INSTALL_DIR) $(1)/etc/ppp
+	$(INSTALL_CONF) ./files/pptpd.conf $(1)/etc/
+	$(INSTALL_CONF) ./files/options.pptpd $(1)/etc/ppp/options.pptpd
+	$(INSTALL_CONF) ./files/chap-secrets $(1)/etc/ppp/chap-secrets
+	$(INSTALL_BIN) ./files/ip-up $(1)/etc/ppp/
+	$(INSTALL_BIN) ./files/ip-down $(1)/etc/ppp/
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/K60pptpd $(1)/etc/init.d/
+	$(INSTALL_DIR) $(1)/firewall.d
+	$(INSTALL_BIN) ./files/iptables_pptpd.sh $(1)/firewall.d/
 endef
 
 $(eval $(call BuildPackage,pptpd))

@@ -1,0 +1,39 @@
+#!/bin/sh
+
+start() {
+    cp "/media/DISK_A1/system/etc/ppp/chap-secrets" "/etc/ppp/chap-secrets"
+    # insmod /media/DISK_A1/system/lib/modules/2.6.23-rt/ip_gre.ko
+    pptpd
+
+}
+
+stop() {
+    killall pptpd
+    # rmmod ip_gre
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        sleep 1
+        start
+        ;;
+    link_up)
+        ;;
+    ppp_up)
+        ;;
+    link_down)
+        ;;
+    ppp_down)
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|link_up|link_down|ppp_up|ppp_down}"
+        ;;
+esac
+

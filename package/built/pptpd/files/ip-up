@@ -1,0 +1,2 @@
+#!/bin/sh
+logger "vpn connected from $6"
