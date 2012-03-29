@@ -1,0 +1,36 @@
+--- a/inotify.c	31 Jan 2012 01:17:00 -0000	1.49
++++ b/inotify.c	27 Mar 2012 07:55:34 -0000
+@@ -602,8 +602,8 @@ inotify_remove_directory(int fd, const c
+ 	/* Invalidate the scanner cache so we don't insert files into non-existent containers */
+ 	valid_cache = 0;
+ 	remove_watch(fd, path);
+-	sql = sqlite3_mprintf("SELECT ID from DETAILS where PATH glob '%q/*'"
+-	                      " UNION ALL SELECT ID from DETAILS where PATH = '%q'", path, path);
++	sql = sqlite3_mprintf("SELECT ID from DETAILS where (PATH > '%q/' and PATH <= '%q/%c')"
++	                      " or PATH = '%q'", path, path, 0xFF, path);
+ 	if( (sql_get_table(db, sql, &result, &rows, NULL) == SQLITE_OK) )
+ 	{
+ 		if( rows )
+@@ -620,7 +620,7 @@ inotify_remove_directory(int fd, const c
+ 	}
+ 	sqlite3_free(sql);
+ 	/* Clean up any album art entries in the deleted directory */
+-	sql_exec(db, "DELETE from ALBUM_ART where PATH glob '%q/*'", path);
++	sql_exec(db, "DELETE from ALBUM_ART where (PATH > '%q/' and PATH <= '%q/%c')", path, path, 0xFF);
+ 
+ 	return ret;
+ }
+--- a/metadata.c.orig	2012-02-14 22:44:56.000000000 +0400
++++ b/metadata.c	2012-03-28 10:55:52.000000000 +0400
+@@ -160,8 +160,8 @@
+ 	/* If we weren't given a detail ID, look for one. */
+ 	if( !detailID )
+ 	{
+-		id = sql_get_text_field(db, "SELECT ID from DETAILS where PATH glob '%q.*'"
+-		                            " and MIME glob 'video/*' limit 1", file);
++		id = sql_get_text_field(db, "SELECT ID from DETAILS where (PATH > '%q.' and PATH <= '%q.z'"
++		                            " and MIME > 'video/' and MIME <= 'video/z') limit 1", file, file);
+ 		if( id )
+ 		{
+ 			//DEBUG DPRINTF(E_DEBUG, L_METADATA, "New file %s looks like a caption file.\n", path);
+
