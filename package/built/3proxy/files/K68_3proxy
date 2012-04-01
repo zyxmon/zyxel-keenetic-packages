@@ -2,13 +2,13 @@
 
 MOUNT="/media/DISK_A1/system"
 BIN="$MOUNT/usr/bin/3proxy"
-CONFIG="$MOUNT/etc/3proxy/3proxy.conf"
+CONFIG="$MOUNT/etc/3proxy/3proxy.cfg"
 
 export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
 export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
 
 start_daemon() {
-	$BIN  $CONFIG &
+	$BIN  $CONFIG
 }
 
 stop_daemon() {
@@ -24,6 +24,7 @@ case "$1" in
 		;;
 	restart)
 		stop_daemon
+		sleep 3
 		start_daemon
 		;;
 	link_up)
