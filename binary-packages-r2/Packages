@@ -1,3 +1,21 @@
+Package: 3proxy
+Version: 0.6.1-2
+Depends: 
+Provides: 
+Source: package/built/3proxy
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 172100
+Filename: 3proxy_0.6.1-2_keenetic.ipk
+Size: 172514
+MD5Sum: 7d3656328a90f317d1e47996e628d88d
+Description:  3proxy is universal proxy server. It can be used to provide internal users with fully controllable 
+ access to external resources or to provide external users with access to internal resources.
+
 Package: aria2
 Version: 1.13.0-1
 Depends: libxml2, libstdcpp
