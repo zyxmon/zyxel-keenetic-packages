@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=3proxy
 PKG_VERSION:=0.6.1
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tgz
 PKG_SOURCE_URL:=http://www.3proxy.ru/0.6.1
@@ -66,7 +66,8 @@ define Package/3proxy/install
 	$(INSTALL_DIR) $(1)/etc
 	$(INSTALL_DIR) $(1)/etc/3proxy
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_CONF) ./files/3proxy.cfg $(1)/etc/3proxy
+	$(INSTALL_CONF) ./files/3proxy.cfg $(1)/etc/3proxy/
+	$(INSTALL_BIN) ./files/add3proxyuser.sh $(1)/etc/3proxy/
 	$(INSTALL_DIR) $(1)/var/log/3proxy
 	$(INSTALL_BIN) ./files/K68_3proxy $(1)/etc/init.d
 endef
