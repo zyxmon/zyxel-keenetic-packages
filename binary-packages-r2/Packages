@@ -2261,7 +2261,7 @@ MD5Sum: 8a058b29313e1137bd16c4108c3f7abd
 Description:  The Make package contains a program for compiling packages
 
 Package: mc
-Version: 4.8.1-1
+Version: 4.8.2-1
 Depends: libiconv-full, libintl-full, glib2, libncurses, libslang2
 Provides: 
 Source: package/built/mc
@@ -2271,10 +2271,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 587593
-Filename: mc_4.8.1-1_keenetic.ipk
-Size: 587367
-MD5Sum: 6d8861fbe356e3cc5a1e5efff79cb5d7
+Installed-Size: 593704
+Filename: mc_4.8.2-1_keenetic.ipk
+Size: 593277
+MD5Sum: cd1448cce26eae2a76eb52a68acba4dd
 Description:  GNU Midnight Commander is a text-mode full-screen file manager. 
  It uses a two panel interface and a subshell for command execution. 
  It includes an internal editor with syntax highlighting and an 
