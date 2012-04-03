@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mc
-PKG_VERSION:=4.8.1
+PKG_VERSION:=4.8.2
 PKG_RELEASE:=1
 PKG_INSTALL:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://www.midnight-commander.org/downloads/
-PKG_MD5SUM:=7d60c87d87b359831d976fa28034935e
+PKG_MD5SUM:=54eba7680f3e24fbdb8d83e2cde9eca3
 
 #PKG_FIXUP:=autoreconf
 
