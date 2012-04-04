@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=pptpd
 PKG_VERSION:=1.3.4
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/poptop
@@ -61,8 +61,8 @@ define Package/pptpd/install
 	$(INSTALL_BIN) ./files/ip-down $(1)/etc/ppp/
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/K60pptpd $(1)/etc/init.d/
-	$(INSTALL_DIR) $(1)/firewall.d
-	$(INSTALL_BIN) ./files/iptables_pptpd.sh $(1)/firewall.d/
+	$(INSTALL_DIR) $(1)/etc/firewall.d
+	$(INSTALL_BIN) ./files/iptables_pptpd.sh $(1)/etc/firewall.d/
 endef
 
 $(eval $(call BuildPackage,pptpd))
