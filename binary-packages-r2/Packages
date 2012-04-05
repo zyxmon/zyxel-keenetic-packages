@@ -5504,7 +5504,7 @@ Description:  Portmap is a server that converts RPC (Remote Procedure Call) prog
  numbers into DARPA protocol port numbers.
 
 Package: pptpd
-Version: 1.3.4-2
+Version: 1.3.4-3
 Depends: kmod-gre
 Provides: 
 Source: package/built/pptpd
@@ -5514,10 +5514,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 29858
-Filename: pptpd_1.3.4-2_keenetic.ipk
-Size: 30481
-MD5Sum: daf01c4dd202ee29018f798cddb0ee45
+Installed-Size: 29807
+Filename: pptpd_1.3.4-3_keenetic.ipk
+Size: 30420
+MD5Sum: 8873d45ecf36dd113f6a9604eaefd81b
 Description:  PopTop pptp server
 
 Package: privoxy
