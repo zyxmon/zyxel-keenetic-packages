@@ -485,6 +485,26 @@ Size: 75950
 MD5Sum: 41eb76e70a3aefe97913959b2a4dabab
 Description:  An ID3v1/ID3v2 tag manipulation library
 
+Package: iftop
+Version: 0.17-2
+Depends: libpcap, libncurses
+Provides: 
+Source: package/built/iftop
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 21186
+Filename: iftop_0.17-2_keenetic.ipk
+Size: 21955
+MD5Sum: c76852d476f5b132ccf6dbd8c24972b7
+Description:  iftop does for network usage what top(1) does for CPU usage. It 
+ listens to network traffic on a named interface and displays a 
+ table of current bandwidth usage by pairs of hosts. Handy for 
+ answering the question 'why is our ADSL link so slow?'.
+
 Package: in.www
 Version: 1.0.0-1
 Depends: 
