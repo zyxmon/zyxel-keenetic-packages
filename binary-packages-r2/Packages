@@ -2544,7 +2544,7 @@ MD5Sum: d6611f14652200932f514c66fb6f0566
 Description:  Kernel NFS server support
 
 Package: nginx
-Version: 1.0.10-1
+Version: 1.0.14-1
 Depends: libpcre
 Provides: 
 Source: package/built/nginx
@@ -2554,10 +2554,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 223894
-Filename: nginx_1.0.10-1_keenetic.ipk
-Size: 224285
-MD5Sum: ecda73aef935ae2943c4cb827eb5bce8
+Installed-Size: 224781
+Filename: nginx_1.0.14-1_keenetic.ipk
+Size: 225152
+MD5Sum: e050d4d7b902acae6560d3325f8a01ea
 Description:  Nginx is a free, open-source, high-performance HTTP server
  and reverse proxy, as well as an IMAP/POP3 proxy server,
  written by Igor Sysoev.
