@@ -6282,7 +6282,7 @@ MD5Sum: c332e3a420025ec7686d3da35c19a144
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.50-1
+Version: 2.51-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6292,14 +6292,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 876375
-Filename: transmission-cli_2.50-1_keenetic.ipk
-Size: 874941
-MD5Sum: d7183b405b68773681c60170fa4eec28
+Installed-Size: 878093
+Filename: transmission-cli_2.51-1_keenetic.ipk
+Size: 876902
+MD5Sum: 75146d838e8d6162b32591956eeea55d
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.50-1
+Version: 2.51-1
 Depends: libevent2
 Provides: 
 Source: package/built/transmission
@@ -6309,17 +6309,17 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 223737
-Filename: transmission-daemon_2.50-1_keenetic.ipk
-Size: 224075
-MD5Sum: 5fc44f2d592fb34d104c0637f53609d7
+Installed-Size: 224073
+Filename: transmission-daemon_2.51-1_keenetic.ipk
+Size: 224432
+MD5Sum: 5eceff6d7deff322975e198de81cc2d6
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.50-1
+Version: 2.51-1
 Depends: 
 Provides: 
 Source: package/built/transmission
@@ -6329,14 +6329,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 233647
-Filename: transmission-remote_2.50-1_keenetic.ipk
-Size: 233939
-MD5Sum: d35246e66a12e578a666be4cc5129f67
+Installed-Size: 233998
+Filename: transmission-remote_2.51-1_keenetic.ipk
+Size: 234362
+MD5Sum: ae99347c5c9db582148bd73675940528
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.50-1
+Version: 2.51-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6346,10 +6346,10 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 212724
-Filename: transmission-web_2.50-1_keenetic.ipk
-Size: 213460
-MD5Sum: 62d27208e9e6a408d818106172be252b
+Installed-Size: 214549
+Filename: transmission-web_2.51-1_keenetic.ipk
+Size: 215089
+MD5Sum: c23792b849164e6877c511287ff132b7
 Description:  Webinterface resources for transmission.
 
 Package: uclibcxx
