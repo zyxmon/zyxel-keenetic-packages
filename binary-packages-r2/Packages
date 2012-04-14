@@ -6053,6 +6053,24 @@ Size: 404724
 MD5Sum: f1d2828d0b0093d5040a1f0d2033041a
 Description:  ftp-like client to access SMB/CIFS resources on servers
 
+Package: smstools3
+Version: 3.1.14-1
+Depends: iconv
+Provides: 
+Source: package/built/smstools3
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 103099
+Filename: smstools3_3.1.14-1_keenetic.ipk
+Size: 103782
+MD5Sum: 3a3e1986c9c8f0a0a5b9a22614d86a8d
+Description:  The SMS Server Tools 3 is a SMS Gateway software which can send and receive
+ short messages through GSM modems and mobile phones.
+
 Package: sqlite2-cli
 Version: 2.8.17-2
 Depends: libsqlite2, libncurses, libreadline
