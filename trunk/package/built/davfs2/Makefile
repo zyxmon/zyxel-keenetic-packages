@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=davfs2
 PKG_VERSION:=1.4.6-18032012
 #PKG_VERSION:=1.4.6
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 
@@ -49,8 +49,9 @@ CONFIGURE_ARGS += \
 	--with-libintl-prefix=$(INTL_PREFIX) \
 	--with-libiconv-prefix=$(ICONV_PREFIX) \
 	--with-neon=$(STAGING_DIR)/usr \
-	dav_user=nobody \
-	dav_group=nobody \
+	--sysconfdir=$(ROOT_ZYX)/etc \
+	dav_user=root \
+	dav_group=root \
 	ssbindir=$(ROOT_ZYX)/usr/sbin \
 	dav_localstatedir=$(ROOT_ZYX)/var/run \
 	dav_syscachedir=$(ROOT_ZYX)/var/cache \
@@ -59,7 +60,7 @@ define Package/davfs2/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)$(ROOT_ZYX)/usr/sbin/{,u}mount.davfs $(1)/usr/sbin
 	$(INSTALL_DIR) $(1)/etc/davfs2/certs/private
-	$(INSTALL_CONF) $(PKG_INSTALL_DIR)/etc/davfs2/{davfs2.conf,secrets} $(1)/etc/davfs2/
+	$(INSTALL_CONF) $(PKG_INSTALL_DIR)$(ROOT_ZYX)/etc/davfs2/{davfs2.conf,secrets} $(1)/etc/davfs2/
 	$(INSTALL_DIR) $(1)/var/{run,cache}
 endef
 
