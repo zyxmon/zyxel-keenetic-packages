@@ -1569,7 +1569,7 @@ Description:  The Readline library provides a set of functions for use by applic
  history expansion on previous commands.
 
 Package: libslang2
-Version: 2.2.3-1
+Version: 2.2.4-1
 Depends: libncurses
 Provides: 
 Source: package/built/slang2
@@ -1579,10 +1579,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 309088
-Filename: libslang2_2.2.3-1_keenetic.ipk
-Size: 299778
-MD5Sum: 708db01fcececf40d50ac0e2a62dcbcd
+Installed-Size: 309721
+Filename: libslang2_2.2.4-1_keenetic.ipk
+Size: 300274
+MD5Sum: cd330593622939db6d3948340c22855e
 Description:  This is a shell which is mostly just a wrapper around the S-Lang Interpreter,
  which is part of the S-Lang Library.
 
@@ -2299,7 +2299,7 @@ MD5Sum: 8a058b29313e1137bd16c4108c3f7abd
 Description:  The Make package contains a program for compiling packages
 
 Package: mc
-Version: 4.8.2-1
+Version: 4.8.3-1
 Depends: libiconv-full, libintl-full, glib2, libncurses, libslang2
 Provides: 
 Source: package/built/mc
@@ -2309,10 +2309,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 593704
-Filename: mc_4.8.2-1_keenetic.ipk
-Size: 593277
-MD5Sum: cd1448cce26eae2a76eb52a68acba4dd
+Installed-Size: 593966
+Filename: mc_4.8.3-1_keenetic.ipk
+Size: 593652
+MD5Sum: 5908c863dc8ba3d1526a8ee4dcb2f88f
 Description:  GNU Midnight Commander is a text-mode full-screen file manager. 
  It uses a two panel interface and a subshell for command execution. 
  It includes an internal editor with syntax highlighting and an 
@@ -2562,7 +2562,7 @@ MD5Sum: d6611f14652200932f514c66fb6f0566
 Description:  Kernel NFS server support
 
 Package: nginx
-Version: 1.0.14-1
+Version: 1.0.15-1
 Depends: libpcre
 Provides: 
 Source: package/built/nginx
@@ -2572,10 +2572,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 224781
-Filename: nginx_1.0.14-1_keenetic.ipk
-Size: 225152
-MD5Sum: e050d4d7b902acae6560d3325f8a01ea
+Installed-Size: 224786
+Filename: nginx_1.0.15-1_keenetic.ipk
+Size: 225167
+MD5Sum: e6529763a393382d77457f0d7ec8b022
 Description:  Nginx is a free, open-source, high-performance HTTP server
  and reverse proxy, as well as an IMAP/POP3 proxy server,
  written by Igor Sysoev.
@@ -2598,7 +2598,7 @@ MD5Sum: a1ce62dffc9222213b6fa2457bdb8c55
 Description:  Utility for network exploration or security auditing
 
 Package: openssh-sftp-server
-Version: 5.9p1-1
+Version: 6.0p1-1
 Depends: 
 Provides: 
 Source: package/built/openssh
@@ -2608,10 +2608,10 @@ Essential: no
 Priority: optional
 Maintainer: Peter Wagner <tripolar@gmx.at>
 Architecture: keenetic
-Installed-Size: 27440
-Filename: openssh-sftp-server_5.9p1-1_keenetic.ipk
-Size: 28016
-MD5Sum: 061629816ab5b79d0a32af3b8ce47d55
+Installed-Size: 27451
+Filename: openssh-sftp-server_6.0p1-1_keenetic.ipk
+Size: 28020
+MD5Sum: 4b8e470f03a0c9bb21cfe4afb8733423
 Description:  OpenSSH SFTP server.
 
 Package: openvpn
@@ -6389,7 +6389,7 @@ MD5Sum: c23792b849164e6877c511287ff132b7
 Description:  Webinterface resources for transmission.
 
 Package: uclibcxx
-Version: 0.2.2-3
+Version: 0.2.3-1
 Depends: 
 Provides: 
 Source: package/built/uclibc++
@@ -6399,10 +6399,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 56971
-Filename: uclibcxx_0.2.2-3_keenetic.ipk
-Size: 57528
-MD5Sum: 35fc62d10e633333baa174ee8b2d2249
+Installed-Size: 57050
+Filename: uclibcxx_0.2.3-1_keenetic.ipk
+Size: 57620
+MD5Sum: f4e3d8ac8b77a08f4d003b80391e3b52
 Description:  C++ library for embedded systems
 
 Package: udpxy
