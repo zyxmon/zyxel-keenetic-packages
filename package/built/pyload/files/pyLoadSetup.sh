@@ -12,9 +12,9 @@ down() {
 		exit 1
 	fi
 	cd $MOUNT/usr/share
-	wget http://get.pyload.org/get/src/
-	unzip $MOUNT/usr/share/pyload-src-v*.zip
-	rm -f $MOUNT/usr/share/pyload-src-v*.zip
+	wget http://get.pyload.org/get/src/ -O $MOUNT/usr/share/pyload-src.zip
+	unzip $MOUNT/usr/share/pyload-src.zip
+	rm -f $MOUNT/usr/share/pyload-src.zip
 	echo "/media/DISK_A1/pyload" > $MOUNT/usr/share/pyload/module/config/configdir
 	
 }

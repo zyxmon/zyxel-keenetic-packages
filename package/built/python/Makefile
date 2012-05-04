@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2006-2011 OpenWrt.org
+# Copyright (C) 2006-2012 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=python
-PKG_VERSION:=2.6.4
-PKG_RELEASE:=4
+PKG_VERSION:=2.7.3
+PKG_RELEASE:=1
 
-PKG_SOURCE:=Python-$(PKG_VERSION).tar.bz2
-PKG_SOURCE_URL:=http://www.python.org/ftp/python/$(PKG_VERSION)/
-PKG_MD5SUM:=fee5408634a54e721a93531aba37f8c1
+PKG_SOURCE:=Python-$(PKG_VERSION).tar.xz
+PKG_SOURCE_URL:=http://www.python.org/ftp/python/$(PKG_VERSION)
+PKG_MD5SUM:=62c4c1699170078c469f79ddfed21bc0
 
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
@@ -22,7 +22,7 @@ HOST_BUILD_PARALLEL:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/Python-$(PKG_VERSION)
 HOST_BUILD_DIR:=$(BUILD_DIR_HOST)/Python-$(PKG_VERSION)
 
-PKG_BUILD_DEPENDS:=python/host zlib
+PKG_BUILD_DEPENDS:=python/host zlib libopenssl
 
 include $(INCLUDE_DIR)/host-build.mk
 include $(INCLUDE_DIR)/package.mk
@@ -104,10 +104,11 @@ $(call Package/python/Default)
   DEPENDS+=+python-mini
 endef
 
+# Needs datetime
 define Package/python-sqlite3
 $(call Package/python/Default)
  TITLE:=Python support for sqlite3
- DEPENDS+=+python-mini +libsqlite3
+ DEPENDS+=+python +libsqlite3
 endef
 
 define Package/python-gdbm
@@ -116,21 +117,26 @@ $(call Package/python/Default)
  DEPENDS+=+python-mini +libgdbm
 endef
 
-PY_DISABLED_MODULES:= \
-	readline _curses _curses_panel _tkinter nis
+define Package/python-readline
+$(call Package/python/Default)
+ TITLE:=Python support for readline
+ DEPENDS+=+python-mini +libreadline +libncurses @BROKEN
+endef
 
 MAKE_FLAGS:=\
 	$(TARGET_CONFIGURE_OPTS) \
-	PYTHON_DISABLE_MODULES="$(PY_DISABLED_MODULES)" \
-	PYTHON_MODULES_INCLUDE="$(STAGING_DIR)/usr/include" \
-	PYTHON_MODULES_LIB="$(STAGING_DIR)/usr/lib" \
 	DESTDIR="$(PKG_INSTALL_DIR)" \
 	CROSS_COMPILE=yes \
-	CFLAGS="$(TARGET_CFLAGS) -fno-inline" \
+	CFLAGS="$(TARGET_CFLAGS) -DNDEBUG -fno-inline" \
 	LDFLAGS="$(TARGET_LDFLAGS)" \
 	LD="$(TARGET_CC)" \
 	HOSTPYTHON=./hostpython \
 	HOSTPGEN=./hostpgen
+
+ENABLE_IPV6:=
+ifeq ($(CONFIG_IPV6),y)
+	ENABLE_IPV6 += --enable-ipv6
+endif
 
 define Build/Configure
 	-$(MAKE) -C $(PKG_BUILD_DIR) distclean
@@ -138,17 +144,19 @@ define Build/Configure
 	# The python executable needs to stay in the rootdir since its location will
 	# be used to compute the path of the config files.
 	$(CP) $(STAGING_DIR_HOST)/bin/pgen $(PKG_BUILD_DIR)/hostpgen
-	$(CP) $(STAGING_DIR_HOST)/bin/python $(PKG_BUILD_DIR)/hostpython
+	$(CP) $(STAGING_DIR_HOST)/bin/python$(PYTHON_VERSION) $(PKG_BUILD_DIR)/hostpython
 	$(call Build/Configure/Default, \
 		--sysconfdir=/media/DISK_A1/system/etc \
 		--disable-shared \
 		--without-cxx-main \
 		--with-threads \
-		--with-system-ffi \
-		ac_cv_lib_readline_readline=no \
+		--with-system-ffi="$(STAGING_DIR)/usr" \
+		$(ENABLE_IPV6) \
 		ac_cv_have_chflags=no \
 		ac_cv_have_lchflags=no \
 		ac_cv_py_format_size_t=no \
+		ac_cv_have_long_long_format=yes \
+		ac_cv_buggy_getaddrinfo=no \
 		OPT="$(TARGET_CFLAGS)" \
 	)
 endef
@@ -169,7 +177,7 @@ define Build/InstallDev
 		$(1)/usr/lib/python$(PYTHON_VERSION)/
 
 	$(CP) \
-		$(STAGING_DIR_HOST)/bin/python \
+		$(STAGING_DIR_HOST)/bin/python$(PYTHON_VERSION) \
 		$(1)/usr/bin/hostpython
 	(cd $(2)/bin; \
 	ln -sf ../../usr/bin/hostpython python$(PYTHON_VERSION); \
@@ -188,7 +196,6 @@ define PyPackage/python/filespec
 +|/usr/lib/python$(PYTHON_VERSION)
 -|/usr/lib/python$(PYTHON_VERSION)/bsddb/test
 -|/usr/lib/python$(PYTHON_VERSION)/config
-+|/usr/lib/python$(PYTHON_VERSION)/config/Makefile
 -|/usr/lib/python$(PYTHON_VERSION)/ctypes/test
 -|/usr/lib/python$(PYTHON_VERSION)/distutils/command/wininst-*.exe
 -|/usr/lib/python$(PYTHON_VERSION)/distutils/tests
@@ -205,7 +212,7 @@ define PyPackage/python/filespec
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_sqlite3.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_ssl.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/pyexpat.so
--|/usr/lib/python$(PYTHON_VERSION)/pydoc_topics.py
+-|/usr/lib/python$(PYTHON_VERSION)/pydoc_data
 -|/usr/lib/python$(PYTHON_VERSION)/pydoc.py
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_ctypes_test.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_testcapi.so
@@ -246,7 +253,6 @@ define PyPackage/python/filespec
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/syslog.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/time.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/unicodedata.so
--|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_weakref.so
 -|/usr/lib/python$(PYTHON_VERSION)/linecache.py
 -|/usr/lib/python$(PYTHON_VERSION)/md5.py
 -|/usr/lib/python$(PYTHON_VERSION)/new.py
@@ -284,6 +290,17 @@ define PyPackage/python/filespec
 -|/usr/lib/python$(PYTHON_VERSION)/UserDict.py
 -|/usr/lib/python$(PYTHON_VERSION)/warnings.py
 -|/usr/lib/python$(PYTHON_VERSION)/weakref.py
+-|/usr/lib/python$(PYTHON_VERSION)/_weakrefset.py
+-|/usr/lib/python$(PYTHON_VERSION)/sysconfig.py
+-|/usr/lib/python$(PYTHON_VERSION)/functools.py
+-|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_functools.so
+-|/usr/lib/python$(PYTHON_VERSION)/collections.py
+-|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_collections.so
+-|/usr/lib/python$(PYTHON_VERSION)/keyword.py
+-|/usr/lib/python$(PYTHON_VERSION)/heapq.py
+-|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_heapq.so
+-|/usr/lib/python$(PYTHON_VERSION)/bisect.py
+-|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_bisect.so
 endef
 
 define PyPackage/python-mini/filespec
@@ -324,7 +341,6 @@ define PyPackage/python-mini/filespec
 +|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/syslog.so
 +|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/time.so
 +|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/unicodedata.so
-+|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_weakref.so
 +|/usr/lib/python$(PYTHON_VERSION)/linecache.py
 +|/usr/lib/python$(PYTHON_VERSION)/md5.py
 +|/usr/lib/python$(PYTHON_VERSION)/new.py
@@ -362,6 +378,18 @@ define PyPackage/python-mini/filespec
 +|/usr/lib/python$(PYTHON_VERSION)/UserDict.py
 +|/usr/lib/python$(PYTHON_VERSION)/warnings.py
 +|/usr/lib/python$(PYTHON_VERSION)/weakref.py
++|/usr/lib/python$(PYTHON_VERSION)/_weakrefset.py
++|/usr/lib/python$(PYTHON_VERSION)/config/Makefile
++|/usr/lib/python$(PYTHON_VERSION)/sysconfig.py
++|/usr/lib/python$(PYTHON_VERSION)/functools.py
++|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_functools.so
++|/usr/lib/python$(PYTHON_VERSION)/collections.py
++|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_collections.so
++|/usr/lib/python$(PYTHON_VERSION)/keyword.py
++|/usr/lib/python$(PYTHON_VERSION)/heapq.py
++|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_heapq.so
++|/usr/lib/python$(PYTHON_VERSION)/bisect.py
++|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_bisect.so
 +|/usr/include/python$(PYTHON_VERSION)/pyconfig.h
 endef
 
@@ -370,7 +398,7 @@ define PyPackage/python-mini/install
 endef
 
 define PyPackage/python-doc/filespec
-+|/usr/lib/python$(PYTHON_VERSION)/pydoc_topics.py
++|/usr/lib/python$(PYTHON_VERSION)/pydoc_data
 +|/usr/lib/python$(PYTHON_VERSION)/pydoc.py
 endef
 
@@ -401,6 +429,10 @@ endef
 
 define PyPackage/python-gdbm/filespec
 +|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/gdbm.so
+endef
+
+define PyPackage/python-readline/filespec
++|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/readline.so
 endef
 
 define Host/Configure
@@ -443,6 +475,7 @@ $(eval $(call PyPackage,python-openssl))
 $(eval $(call PyPackage,python-shutil))
 $(eval $(call PyPackage,python-sqlite3))
 $(eval $(call PyPackage,python-gdbm))
+$(eval $(call PyPackage,python-readline))
 
 $(eval $(call BuildPackage,python))
 $(eval $(call BuildPackage,python-mini))
@@ -454,3 +487,4 @@ $(eval $(call BuildPackage,python-openssl))
 $(eval $(call BuildPackage,python-shutil))
 $(eval $(call BuildPackage,python-sqlite3))
 $(eval $(call BuildPackage,python-gdbm))
+$(eval $(call BuildPackage,python-readline))

@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=python-oauth
 PKG_VERSION:=1.0.1
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=oauth-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://pypi.python.org/packages/source/o/oauth

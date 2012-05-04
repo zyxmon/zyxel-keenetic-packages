@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=python-django
 PKG_VERSION:=1.3.1
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=Django-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://media.djangoproject.com/releases/1.3/
