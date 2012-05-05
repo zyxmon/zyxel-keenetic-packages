@@ -5723,7 +5723,7 @@ Description:  Django is a high-level Python Web framework that encourages rapid
  development and clean, pragmatic design.
 
 Package: python-dropbox
-Version: 1.3-2
+Version: 1.4-1
 Depends: python, distribute, python-oauth, simplejson, python-openssl
 Provides: 
 Source: package/built/python-dropbox
@@ -5733,10 +5733,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 22853
-Filename: python-dropbox_1.3-2_keenetic.ipk
-Size: 23612
-MD5Sum: 36ee3fa789771554a02daceb252b6474
+Installed-Size: 24238
+Filename: python-dropbox_1.4-1_keenetic.ipk
+Size: 24954
+MD5Sum: f31ed5a4463aab0a732c9c787e5184c3
 Description:  The SDKs contain platform-specific libraries that wrap the raw HTTP calls 
  to the Dropbox API. They are designed to shorten the distance between 
  your application and integrating Dropbox.
