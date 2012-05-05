@@ -5911,7 +5911,7 @@ Description:  rsyncd is a configuration file and initscript to
  as rsync.
 
 Package: sane-backends
-Version: 1.0.22-1
+Version: 1.0.22-2
 Depends: sane-libs, libtiff
 Provides: 
 Source: package/built/sane-backends
@@ -5921,15 +5921,15 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 44525
-Filename: sane-backends_1.0.22-1_keenetic.ipk
-Size: 45340
-MD5Sum: 597a4f0c4e761ed9281dbd210c38899b
+Installed-Size: 44530
+Filename: sane-backends_1.0.22-2_keenetic.ipk
+Size: 45336
+MD5Sum: 5e881cce5348d2abd49953f89a074a52
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  This package contains the SANE daemon.
 
 Package: sane-frontends
-Version: 1.0.22-1
+Version: 1.0.22-2
 Depends: sane-backends
 Provides: 
 Source: package/built/sane-backends
@@ -5939,15 +5939,15 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 61290
-Filename: sane-frontends_1.0.22-1_keenetic.ipk
-Size: 62067
-MD5Sum: 41d42fd0f97225070ddcf05d6034c125
+Installed-Size: 61334
+Filename: sane-frontends_1.0.22-2_keenetic.ipk
+Size: 62106
+MD5Sum: aba5d0affc8ad7e17de30ab310a38e4a
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  This package contains the SANE frontends.
 
 Package: sane-libs
-Version: 1.0.22-1
+Version: 1.0.22-2
 Depends: libjpeg
 Provides: 
 Source: package/built/sane-backends
@@ -5957,10 +5957,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2880417
-Filename: sane-libs_1.0.22-1_keenetic.ipk
-Size: 2875449
-MD5Sum: 0a267d324911ba327ee9a36c15ee4681
+Installed-Size: 2880408
+Filename: sane-libs_1.0.22-2_keenetic.ipk
+Size: 2875826
+MD5Sum: fcd73614f8bcea141866d1271c55931b
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  This package contains the SANE shared libraries.
 
