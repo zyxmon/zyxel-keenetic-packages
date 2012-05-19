@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=davfs2
 PKG_VERSION:=1.4.6-18032012
 #PKG_VERSION:=1.4.6
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 
@@ -44,6 +44,8 @@ define Package/davfs2/description
 	Mount a WebDAV resource as a regular file system. davfs2 will work with
 	most WebDAV servers needing little or no configuration.
 endef
+
+TARGET_CPPFLAGS += -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE
 
 CONFIGURE_ARGS += \
 	--with-libintl-prefix=$(INTL_PREFIX) \
