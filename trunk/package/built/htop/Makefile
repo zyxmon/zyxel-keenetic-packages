@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2007-2010 OpenWrt.org
+# Copyright (C) 2007-2012 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=htop
-PKG_VERSION:=1.0
+PKG_VERSION:=1.0.1
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/$(PKG_NAME)
-PKG_MD5SUM:=325112ca7947ea1f6d6441f631e00384
+PKG_MD5SUM:=d3b80d905a6bff03f13896870787f901
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
