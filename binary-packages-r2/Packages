@@ -33,6 +33,23 @@ Size: 1136672
 MD5Sum: 23bda38f3128ae6b0f2bbc1a56023cf6
 Description:  download manager
 
+Package: badblocks
+Version: 1.42.2-1
+Depends: e2fsprogs
+Provides: 
+Source: package/e2fsprogs
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 9035
+Filename: badblocks_1.42.2-1_keenetic.ipk
+Size: 9644
+MD5Sum: 5b502c7c01e0a40be3f064c63796d284
+Description:  Ext2 Filesystem badblocks utility
+
 Package: bash
 Version: 4.2-2
 Depends: libncurses
@@ -89,22 +106,39 @@ MD5Sum: 830008df076dcca21c4be839b96cfee2
 Description:  bzip2 is a freely available, patent free, high-quality
  data compressor. This package provides the binary.
 
-Package: cfdisk
-Version: 2.13.0.1-4
+Package: cal
+Version: 2.21.1-1
 Depends: libncurses
 Provides: 
-Source: package/built/util-linux-ng
+Source: package/built/util-linux
 Section: utils
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 27757
-Filename: cfdisk_2.13.0.1-4_keenetic.ipk
-Size: 28349
-MD5Sum: 18cd0981cad12c3128e872834985eae7
-Description:  This package contains a utility for managing disk partition tables.
+Installed-Size: 11169
+Filename: cal_2.21.1-1_keenetic.ipk
+Size: 11748
+MD5Sum: 8b2d015b6f55d27b1740ef089eb382e7
+Description:  cal displays a simple calendar
+
+Package: cfdisk
+Version: 2.21.1-1
+Depends: libblkid, libncurses, libuuid
+Provides: 
+Source: package/built/util-linux
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 30705
+Filename: cfdisk_2.21.1-1_keenetic.ipk
+Size: 31325
+MD5Sum: 8cc649ba464b3b4d0d1675f3509df0d2
+Description:  cfdisk is a curses-based program for partitioning any hard disk drive
 
 Package: coreutils-dd
 Version: 8.8-1
@@ -267,7 +301,7 @@ MD5Sum: cb71ae7d3fd3a9676587f8d638f8bccd
 Description:  A small SSH2 server/client designed for small memory environments.
 
 Package: e2fsprogs
-Version: 1.41.12-4
+Version: 1.42.2-1
 Depends: libblkid, libuuid, libext2fs, libcom_err
 Provides: 
 Source: package/e2fsprogs
@@ -277,12 +311,12 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 129674
-Filename: e2fsprogs_1.41.12-4_keenetic.ipk
-Size: 130286
-MD5Sum: de1f9796628acd8f933879c484c92f2d
-Description:  This package contains essential ext2 filesystem utilities which consists of 
- e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2 
+Installed-Size: 286578
+Filename: e2fsprogs_1.42.2-1_keenetic.ipk
+Size: 286742
+MD5Sum: 5b398e6e87f04401e22a103f7a82579f
+Description:  This package contains essential ext2 filesystem utilities which consists of
+ e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2
  filesystem utilities.
 
 Package: etherwake
@@ -327,21 +361,21 @@ Description:  FAAD2 is the fastest ISO AAC audio decoder available.
  This package contains a binary to play AAC or MP4 files.
 
 Package: fdisk
-Version: 2.13.0.1-4
-Depends: 
+Version: 2.21.1-1
+Depends: libblkid, libuuid
 Provides: 
-Source: package/built/util-linux-ng
+Source: package/built/util-linux
 Section: utils
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 41518
-Filename: fdisk_2.13.0.1-4_keenetic.ipk
-Size: 42142
-MD5Sum: be3080da2b28fbc87d3b4ac972543fec
-Description:  This package contains a utility for managing disk partition tables.
+Installed-Size: 48390
+Filename: fdisk_2.21.1-1_keenetic.ipk
+Size: 49059
+MD5Sum: edb26fb960470e4f132d075c6698d8ed
+Description:  a menu-driven program for creation and manipulation of partition tables
 
 Package: file
 Version: 5.08-2
@@ -393,6 +427,24 @@ Filename: genl_2.6.35-2_keenetic.ipk
 Size: 14123
 MD5Sum: 408a3bc4a4e6667a987c6515b4664c73
 Description:  General netlink utility frontend
+
+Package: getopt
+Version: 2.21.1-1
+Depends: 
+Provides: 
+Source: package/built/util-linux
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4247
+Filename: getopt_2.21.1-1_keenetic.ipk
+Size: 4895
+MD5Sum: c312cc0116b050edfa85aeb2c8cbd4c5
+Description:  getopt is used to break up (parse) options in command lines for easy parsing
+ by shell procedures, and to check for legal options
 
 Package: giflib
 Version: 4.1.6-1
@@ -782,22 +834,22 @@ MD5Sum: 19b41c21917c3c758ec98ecab5dcd64a
 Description:  Apache Portable Runtime Utility Library
 
 Package: libblkid
-Version: 1.41.12-4
+Version: 2.21.1-1
 Depends: 
 Provides: 
-Source: package/e2fsprogs
+Source: package/built/util-linux
 Section: libs
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 18136
-Filename: libblkid_1.41.12-4_keenetic.ipk
-Size: 18755
-MD5Sum: aed0aed8b20abe5980b26a105f1b4706
-Description:  The blkid library which allows system programs like fsck and mount to 
- quickly and easily find block devices by filesystem UUID and LABEL.
+Installed-Size: 67744
+Filename: libblkid_2.21.1-1_keenetic.ipk
+Size: 68253
+MD5Sum: 8900d1841ccda448c3384a7adf98b5d6
+Description:  The libmount library is used to parse /etc/fstab, /etc/mtab and
+ /proc/self/mountinfo files, manage the mtab file, evaluate mount options...
 
 Package: libbz2
 Version: 1.0.6-1
@@ -853,7 +905,7 @@ MD5Sum: 5e86cb8990635ee701125cc224d8c7a0
 Description:  Character set conversion library
 
 Package: libcom_err
-Version: 1.41.12-4
+Version: 1.42.2-1
 Depends: 
 Provides: 
 Source: package/e2fsprogs
@@ -863,10 +915,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3856
-Filename: libcom_err_1.41.12-4_keenetic.ipk
-Size: 4451
-MD5Sum: 79dc50a558cd10505480572dc191fff4
+Installed-Size: 3895
+Filename: libcom_err_1.42.2-1_keenetic.ipk
+Size: 4499
+MD5Sum: 5c4d81f87897804d24ab19743f117aad
 Description:  libcom_err is a library providing common error descriptions
 
 Package: libdb47
@@ -993,7 +1045,7 @@ MD5Sum: 118c2d593f93273db52cecd99f5e6ae4
 Description:  A fast, non-validating, stream-oriented XML parsing library.
 
 Package: libext2fs
-Version: 1.41.12-4
+Version: 1.42.2-1
 Depends: 
 Provides: 
 Source: package/e2fsprogs
@@ -1003,10 +1055,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 76359
-Filename: libext2fs_1.41.12-4_keenetic.ipk
-Size: 76975
-MD5Sum: 2375ff2051bf112542621b5f3e9cba78
+Installed-Size: 119110
+Filename: libext2fs_1.42.2-1_keenetic.ipk
+Size: 119548
+MD5Sum: e42cfdb0a89f97af98adaf8253c43c1e
 Description:  libext2fs is a library which can access ext2, ext3 and ext4 filesystems.
 
 Package: libfaad2
@@ -1677,21 +1729,24 @@ MD5Sum: 5d27d780d84678763418327a837ff5a8
 Description:  libusb-1.0
 
 Package: libuuid
-Version: 1.41.12-4
+Version: 2.21.1-1
 Depends: 
 Provides: 
-Source: package/e2fsprogs
+Source: package/built/util-linux
 Section: libs
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6882
-Filename: libuuid_1.41.12-4_keenetic.ipk
-Size: 7565
-MD5Sum: 209c956b04492693890ea654bf8207e3
-Description:  Library for generating DCE compatible Universally Unique Identifiers.
+Installed-Size: 6894
+Filename: libuuid_2.21.1-1_keenetic.ipk
+Size: 7688
+MD5Sum: 359361db8aad2c8a173af02b98898260
+Description:  The UUID library is used to generate unique identifiers for objects
+ that may be accessible beyond the local system. This library
+ generates UUIDs compatible with those created by the Open Software
+ Foundation (OSF) Distributed Computing Environment (DCE) utility.
 
 Package: libvorbis
 Version: 1.2.3-1
@@ -2243,6 +2298,23 @@ Filename: lighttpd_1.4.30-2_keenetic.ipk
 Size: 89608
 MD5Sum: 73993770df726d7df968dd7e550ca4e0
 Description:  A flexible and lightweight web server
+
+Package: look
+Version: 2.21.1-1
+Depends: 
+Provides: 
+Source: package/built/util-linux
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3107
+Filename: look_2.21.1-1_keenetic.ipk
+Size: 3748
+MD5Sum: 2908b5ba78786c0ff556b65cfa897cea
+Description:  look utility displays any lines in file which contain string
 
 Package: lsof
 Version: 4.81-2
@@ -5866,6 +5938,23 @@ Description:  Python is a dynamic object-oriented programming language that can 
  .
  This package contains the full Python install.
 
+Package: resize2fs
+Version: 1.42.2-1
+Depends: e2fsprogs
+Provides: 
+Source: package/e2fsprogs
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 21378
+Filename: resize2fs_1.42.2-1_keenetic.ipk
+Size: 21968
+MD5Sum: 2930781d90f2b982c57c7c5c3c1164be
+Description:  Ext2 Filesystem resize utility
+
 Package: rsync
 Version: 3.0.8-4
 Depends: libpopt
@@ -6388,6 +6477,23 @@ Size: 215079
 MD5Sum: 73c503c893ba3a595f483475bfacae45
 Description:  Webinterface resources for transmission.
 
+Package: tune2fs
+Version: 1.42.2-1
+Depends: e2fsprogs
+Provides: 
+Source: package/e2fsprogs
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 92143
+Filename: tune2fs_1.42.2-1_keenetic.ipk
+Size: 92618
+MD5Sum: 0575e57df3ae92ebaf69e8a38e09f66a
+Description:  Ext2 Filesystem tune utility
+
 Package: uclibcxx
 Version: 0.2.3-1
 Depends: 
@@ -6503,6 +6609,26 @@ Size: 187032
 MD5Sum: eb1eb02d4dfe1174db6ef931d1ec344c
 Description:  USB devices listing utilities
 
+Package: uuidd
+Version: 2.21.1-1
+Depends: libuuid
+Provides: 
+Source: package/built/util-linux
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5557
+Filename: uuidd_2.21.1-1_keenetic.ipk
+Size: 6318
+MD5Sum: c8659c64133111bfcf49b4e0b2589137
+Description:  The uuidd daemon is used by the UUID library to generate universally unique
+ identifiers (UUIDs), especially time-based UUIDs, in a secure and
+ guaranteed-unique fashion, even in the face of large numbers of threads
+ running on different CPUs trying to grab UUIDs.
+
 Package: vncrepeater
 Version: 0.12-4
 Depends: uclibcxx
@@ -6590,21 +6716,21 @@ Description:  Wget is a network utility to retrieve files from the Web using htt
  This package is built with SSL support.
 
 Package: whereis
-Version: 2.13.0.1-4
+Version: 2.21.1-1
 Depends: 
 Provides: 
-Source: package/built/util-linux-ng
+Source: package/built/util-linux
 Section: utils
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3496
-Filename: whereis_2.13.0.1-4_keenetic.ipk
-Size: 4096
-MD5Sum: 63d66f901ca3cc983af9a4d6183f05cc
-Description:  This package contains a utility for finding files.
+Installed-Size: 4118
+Filename: whereis_2.21.1-1_keenetic.ipk
+Size: 4729
+MD5Sum: 112d947bd4d9dcc98886db794e46d106
+Description:  locate the binary, source, and manual page files for a command
 
 Package: wput
 Version: 0.6.2-1
