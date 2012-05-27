@@ -728,7 +728,7 @@ MD5Sum: 4a5c56d176e8c212dad407b281d565aa
 Description:  LDD trace utility
 
 Package: lftp
-Version: 4.3.4-1
+Version: 4.3.6-1
 Depends: libncurses, libreadline, uclibcxx, libexpat
 Provides: 
 Source: package/built/lftp
@@ -738,10 +738,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 443825
-Filename: lftp_4.3.4-1_keenetic.ipk
-Size: 443750
-MD5Sum: 8cf63327490942be86390b9803541049
+Installed-Size: 446060
+Filename: lftp_4.3.6-1_keenetic.ipk
+Size: 446074
+MD5Sum: 02beebb60d5b90ddf64938362c353d60
 Description:  lftp is sophisticated file transfer program with command line interface. It
  supports FTP, HTTP, FISH, SFTP and FILE (local FS) protocols. GNU Readline
  library is used for input. BitTorrent protocol is supported as built-in
@@ -1606,7 +1606,7 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  This package contains the SQLite (v2.x) shared library, used by other programs.
 
 Package: libsqlite3
-Version: 3070900-1
+Version: 3071201-1
 Depends: 
 Provides: 
 Source: package/built/sqlite3
@@ -1616,10 +1616,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 299699
-Filename: libsqlite3_3070900-1_keenetic.ipk
-Size: 299883
-MD5Sum: 4bdb088a4c65a0cf7e7da4d88cd83d69
+Installed-Size: 311926
+Filename: libsqlite3_3071201-1_keenetic.ipk
+Size: 312219
+MD5Sum: eba231dcc2d44f5405057d14fcdb26b1
 Description:  SQLite is a small C library that implements a self-contained, embeddable,
  zero-configuration SQL database engine.
  This package contains the SQLite (v3.x) shared library, used by other
@@ -5617,7 +5617,7 @@ MD5Sum: bde94b1f0675a57765e5b35793f1835c
 Description:  UPnP Playlist Browser http://ps3muxer.org/pshare.html
 
 Package: psmisc
-Version: 22.13-1
+Version: 22.16-1
 Depends: libncurses
 Provides: 
 Source: package/built/psmisc
@@ -5627,12 +5627,12 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 19733
-Filename: psmisc_22.13-1_keenetic.ipk
-Size: 20366
-MD5Sum: 384fd9a3c56ae3ff528a2b89f1491b82
+Installed-Size: 21653
+Filename: psmisc_22.16-1_keenetic.ipk
+Size: 22223
+MD5Sum: fc3bafe85e1b6775023e43ac39f07ac6
 Description:  psmisc is a set of additional small useful utilities that use
- the proc filesystem: fuser, pstree, and prtstat
+ the proc filesystem: fuser, killall, pstree, and prtstat
 
 Package: py-openssl
 Version: 0.12-2
@@ -6111,7 +6111,7 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  multiple formats.
 
 Package: sqlite3-cli
-Version: 3070900-1
+Version: 3071201-1
 Depends: libsqlite3, libncurses, libreadline
 Provides: 
 Source: package/built/sqlite3
@@ -6121,10 +6121,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 18342
-Filename: sqlite3-cli_3070900-1_keenetic.ipk
-Size: 19128
-MD5Sum: c6d9478e6048e88f6e4ca4573f0effd9
+Installed-Size: 19405
+Filename: sqlite3-cli_3071201-1_keenetic.ipk
+Size: 20155
+MD5Sum: db814e8818e16a7daf32907e56e87683
 Description:  SQLite is a small C library that implements a self-contained, embeddable,
  zero-configuration SQL database engine.
  This package contains a terminal-based front-end to the SQLite (v3.x) library
@@ -6627,7 +6627,7 @@ Description:  Wput is a tiny ftp-client, that uploads files or directories
  speed-limit.
 
 Package: xinetd
-Version: 2.3.14-1
+Version: 2.3.15-1
 Depends: 
 Provides: 
 Source: package/built/xinetd
@@ -6637,10 +6637,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 66573
-Filename: xinetd_2.3.14-1_keenetic.ipk
-Size: 67278
-MD5Sum: 0e24b0a2cb74594bd2ae1d07e4e263ee
+Installed-Size: 66688
+Filename: xinetd_2.3.15-1_keenetic.ipk
+Size: 67393
+MD5Sum: 0e86311f98d82ac4a88029d4e6dcfa17
 Description:  xinetd has access control mechanisms, extensive logging capabilities,
  the ability to make services available based on time, can place limits
  on the number of servers that can be started, and has deployable
