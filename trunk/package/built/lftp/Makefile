@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=lftp
-PKG_VERSION:=4.3.4
+PKG_VERSION:=4.3.6
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://lftp.cybermirror.org \
   http://lftp.cybermirror.org/old
-PKG_MD5SUM:=fbbc296f8c8c73e4b38b2b3228bd94f5
+PKG_MD5SUM:=ffcdbaec5d1416cb6dd754efd43fa61a
 
 PKG_INSTALL:=1
 PKG_BUILD_DEPENDS:=libopenssl
@@ -50,7 +50,7 @@ CONFIGURE_VARS += \
 	CXXFLAGS="$$$$CXXFLAGS -fno-builtin -I$(STAGING_DIR)/usr/include/uClibc++ -nostdinc++" \
 	CPPFLAGS="$$$$CPPFLAGS -I$(STAGING_DIR)/usr/include/uClibc++" \
 	LDFLAGS="$$$$LDFLAGS" \
-	LIBS="-nodefaultlibs -lz -lutil -lc -luClibc++ -lcurses $(LIBGCC_S) -ldl" \
+	LIBS="-nodefaultlibs -lc -lz -lutil -lc -luClibc++ -lcurses $(LIBGCC_S) -ldl" \
 	i_cv_posix_fallocate_works=no
 
 MAKE_VARS += \
