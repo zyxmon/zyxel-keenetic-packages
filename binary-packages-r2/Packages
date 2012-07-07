@@ -5487,6 +5487,23 @@ Size: 15687
 MD5Sum: 295db8c6b4aa529c6dabf236e843ea1f
 Description:  SimpleXML shared module
 
+Package: php5-mod-soap
+Version: 5.3.10-1
+Depends: php5, libxml2
+Provides: 
+Source: package/built/php5
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 99848
+Filename: php5-mod-soap_5.3.10-1_keenetic.ipk
+Size: 100338
+MD5Sum: 800481730c440e0e27514ec4669d49c9
+Description:  SOAP shared module
+
 Package: php5-mod-sqlite3
 Version: 5.3.10-1
 Depends: php5, libsqlite3
