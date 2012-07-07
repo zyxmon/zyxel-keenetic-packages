@@ -319,6 +319,23 @@ Description:  This package contains essential ext2 filesystem utilities which co
  e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2
  filesystem utilities.
 
+Package: elinks
+Version: 0.12pre5-1
+Depends: 
+Provides: 
+Source: package/built/elinks
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 358800
+Filename: elinks_0.12pre5-1_keenetic.ipk
+Size: 358336
+MD5Sum: 819125e833547ec2e900a710a6756f43
+Description:  An advanced text based web browser
+
 Package: etherwake
 Version: 1.09-2
 Depends: 
