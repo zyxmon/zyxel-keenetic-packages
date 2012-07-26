@@ -1,0 +1,11 @@
+--- a/src/convmvfs.cpp.orig	2010-09-19 20:49:26.000000000 +0400
++++ b/src/convmvfs.cpp	2012-07-26 10:55:24.000000000 +0400
+@@ -145,7 +145,7 @@
+   do{
+     pthread_mutex_lock(&iconv_mutex);
+     size_t niconv = iconv(ic,
+-                   &inbuf,&ibleft,
++                   (const char**)&inbuf,&ibleft,
+                    &outbuf,&obleft);
+     pthread_mutex_unlock(&iconv_mutex);
+     if ( niconv == (size_t) -1 ){
