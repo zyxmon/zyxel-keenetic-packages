@@ -5,18 +5,19 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=binkd
-PKG_VERSION:=1.0a
-PKG_RELEASE:=2
+PKG_VERSION:=1.0a-561
+PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=:pserver:binkd@cvs.happy.kiev.ua:/cvs
-PKG_SOURCE_VERSION:=-D"2008/04/01 20:58:42"
 PKG_SOURCE_SUBDIR:=binkd
+PKG_SOURCE_VERSION:=-D'08/19/2011'
 PKG_SOURCE_PROTO:=cvs
+
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 
 include $(INCLUDE_DIR)/package.mk
 
-PKG_UNPACK:=gzip -dc $(DL_DIR)/$(PKG_SOURCE) | $(TAR) -C $(PKG_BUILD_DIR) --strip-components=1 -xf -
 
 define Package/binkd
     TITLE:=Fidonet mailer
@@ -28,12 +29,8 @@ endef
 
 define Build/Prepare
 	$(call Build/Prepare/Default)
-	(cd $(PKG_BUILD_DIR) && $(CP) mkfls/unix/* .)
+	$(CP) $(PKG_BUILD_DIR)/mkfls/unix/* $(PKG_BUILD_DIR)
 endef
-
-CONFIGURE_ARGS += \
-	--with-zlib="/usr" \
-	--with-bzip2="$(STAGING_DIR)/usr"
 
 define Package/binkd/install
 	$(INSTALL_DIR) $(1)/usr/bin
