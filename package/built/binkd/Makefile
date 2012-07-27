@@ -9,10 +9,11 @@ PKG_VERSION:=1.0a-561
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=:pserver:binkd@cvs.happy.kiev.ua:/cvs
-PKG_SOURCE_SUBDIR:=binkd
-PKG_SOURCE_VERSION:=-D'08/19/2011'
-PKG_SOURCE_PROTO:=cvs
+PKG_SOURCE_URL:=http://keenetic.zyxmon.org/sources/
+#PKG_SOURCE_URL:=:pserver:binkd@cvs.happy.kiev.ua:/cvs
+#PKG_SOURCE_SUBDIR:=binkd
+#PKG_SOURCE_VERSION:=-D'08/19/2011'
+#PKG_SOURCE_PROTO:=cvs
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 
