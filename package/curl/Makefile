@@ -35,7 +35,6 @@ endef
 define Package/curl
   $(call Package/curl/Default)
   SUBMENU:=File Transfer
-  DEPENDS:=+libcurl
   TITLE:=A client-side URL transfer utility
 endef
 
