@@ -1576,6 +1576,23 @@ Size: 95487
 MD5Sum: ca83e19592d9d9fa672a4e556c385ab5
 Description:  library
 
+Package: libminiupnpc
+Version: 1.6-1
+Depends: 
+Provides: 
+Source: package/built/miniupnpc
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 15165
+Filename: libminiupnpc_1.6-1_keenetic.ipk
+Size: 15724
+MD5Sum: 2e4e4d9c33e59cd08621ff8932feb101
+Description:  Lightweight UPnP library
+
 Package: libncurses
 Version: 5.7-4
 Depends: 
@@ -6560,7 +6577,7 @@ MD5Sum: c332e3a420025ec7686d3da35c19a144
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.60-1
+Version: 2.61-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6570,15 +6587,15 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 880009
-Filename: transmission-cli_2.60-1_keenetic.ipk
-Size: 879009
-MD5Sum: 0a8a96a48b0298f730b81bfe12d1e1f8
+Installed-Size: 830904
+Filename: transmission-cli_2.61-1_keenetic.ipk
+Size: 830291
+MD5Sum: c674a49a78ef4ea1e4964617ee651bcc
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.60-1
-Depends: libevent2
+Version: 2.61-1
+Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
 Section: net
@@ -6587,18 +6604,18 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 224554
-Filename: transmission-daemon_2.60-1_keenetic.ipk
-Size: 225035
-MD5Sum: f0410f010e5a6d71cc9e7174885953c9
+Installed-Size: 212592
+Filename: transmission-daemon_2.61-1_keenetic.ipk
+Size: 213031
+MD5Sum: 2c72061aec4342b1d3de56c3ce6ecd3f
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.60-1
-Depends: 
+Version: 2.61-1
+Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
 Section: net
@@ -6607,14 +6624,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 234270
-Filename: transmission-remote_2.60-1_keenetic.ipk
-Size: 234523
-MD5Sum: c091857e141ac8bd59439fa58d622ba5
+Installed-Size: 222351
+Filename: transmission-remote_2.61-1_keenetic.ipk
+Size: 222585
+MD5Sum: 49008e5d2ee53e992c9e9b770f1615dd
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.60-1
+Version: 2.61-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6624,10 +6641,10 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 215225
-Filename: transmission-web_2.60-1_keenetic.ipk
-Size: 215977
-MD5Sum: d5be6e76849d6f120fa3d9de5185520c
+Installed-Size: 215319
+Filename: transmission-web_2.61-1_keenetic.ipk
+Size: 216080
+MD5Sum: d818369f03d41445cde652e30e583c07
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
