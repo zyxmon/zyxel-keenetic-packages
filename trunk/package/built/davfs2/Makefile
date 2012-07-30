@@ -8,22 +8,17 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=davfs2
-PKG_VERSION:=1.4.6-18032012
-#PKG_VERSION:=1.4.6
-PKG_RELEASE:=3
+PKG_VERSION:=1.4.6-03062012
+PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-
-#PKG_SOURCE_URL:=http://download.savannah.gnu.org/releases/davfs2
-#PKG_MD5SUM:=c9e8aeb15daeba4b6283b40bb640e908
-
 PKG_SOURCE_URL:=:pserver:anonymous@cvs.sv.gnu.org:/sources/davfs2
 PKG_SOURCE_SUBDIR:=davfs2
-PKG_SOURCE_VERSION:=-D'03/19/2012'
+PKG_SOURCE_VERSION:=-D'06/03/2012'
 PKG_SOURCE_PROTO:=cvs
 PKG_BUILD_DEPENDS:=libopenssl
 
-PKG_FIXUP:=libtool autoreconf
+PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_SOURCE_SUBDIR)
@@ -35,14 +30,14 @@ define Package/davfs2
   SECTION:=net
   CATEGORY:=Network
   SUBMENU:=Filesystem
-  DEPENDS:=+libneon +libfuse $(ICONV_DEPENDS) $(INTL_DEPENDS)
+  DEPENDS:=+libneon +libfuse +libexpat $(ICONV_DEPENDS) $(INTL_DEPENDS)
   TITLE:=Mounts a WebDAV resource
   URL:=http://savannah.nongnu.org/projects/davfs2
 endef
 
 define Package/davfs2/description
-	Mount a WebDAV resource as a regular file system. davfs2 will work with
-	most WebDAV servers needing little or no configuration.
+ Mount a WebDAV resource as a regular file system. davfs2 will work with
+ most WebDAV servers needing little or no configuration.
 endef
 
 TARGET_CPPFLAGS += -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE
