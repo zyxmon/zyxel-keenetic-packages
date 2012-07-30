@@ -16,7 +16,7 @@ PKG_SOURCE_URL:=:pserver:anonymous@cvs.sv.gnu.org:/sources/davfs2
 PKG_SOURCE_SUBDIR:=davfs2
 PKG_SOURCE_VERSION:=-D'06/03/2012'
 PKG_SOURCE_PROTO:=cvs
-PKG_BUILD_DEPENDS:=libopenssl
+PKG_BUILD_DEPENDS:=gperf/host libopenssl
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
