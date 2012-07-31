@@ -248,8 +248,8 @@ Description:  CurlFtpFS is a filesystem for accessing FTP hosts
  based on FUSE and libcurl.
 
 Package: davfs2
-Version: 1.4.6-18032012-3
-Depends: libneon, libfuse, libiconv-full, libintl-full
+Version: 1.4.6-03062012-1
+Depends: libneon, libfuse, libexpat, libiconv-full, libintl-full
 Provides: 
 Source: package/built/davfs2
 Section: net
@@ -258,10 +258,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 68473
-Filename: davfs2_1.4.6-18032012-3_keenetic.ipk
-Size: 69245
-MD5Sum: 10994b97371fab0bd9c9d4f4311f4085
+Installed-Size: 68522
+Filename: davfs2_1.4.6-03062012-1_keenetic.ipk
+Size: 69299
+MD5Sum: 11fbeff953dc7d1abc283e1d258a6516
 Description:  Mount a WebDAV resource as a regular file system. davfs2 will work with
  most WebDAV servers needing little or no configuration.
 
@@ -1589,8 +1589,8 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 15165
 Filename: libminiupnpc_1.6-1_keenetic.ipk
-Size: 15724
-MD5Sum: 2e4e4d9c33e59cd08621ff8932feb101
+Size: 15723
+MD5Sum: cc48ed490bead95412427eac4ff9761e
 Description:  Lightweight UPnP library
 
 Package: libncurses
@@ -6577,7 +6577,7 @@ MD5Sum: c332e3a420025ec7686d3da35c19a144
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.61-1
+Version: 2.61-2
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6587,14 +6587,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 830904
-Filename: transmission-cli_2.61-1_keenetic.ipk
-Size: 830291
-MD5Sum: c674a49a78ef4ea1e4964617ee651bcc
+Installed-Size: 830908
+Filename: transmission-cli_2.61-2_keenetic.ipk
+Size: 830386
+MD5Sum: 2d6635319863fbade98fc1aa39327e97
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.61-1
+Version: 2.61-2
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
@@ -6604,17 +6604,17 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 212592
-Filename: transmission-daemon_2.61-1_keenetic.ipk
-Size: 213031
-MD5Sum: 2c72061aec4342b1d3de56c3ce6ecd3f
+Installed-Size: 212591
+Filename: transmission-daemon_2.61-2_keenetic.ipk
+Size: 213058
+MD5Sum: 4cf7a7d07c765d256b38b21d0e250d24
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.61-1
+Version: 2.61-2
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
@@ -6624,14 +6624,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 222351
-Filename: transmission-remote_2.61-1_keenetic.ipk
-Size: 222585
-MD5Sum: 49008e5d2ee53e992c9e9b770f1615dd
+Installed-Size: 222353
+Filename: transmission-remote_2.61-2_keenetic.ipk
+Size: 222586
+MD5Sum: f2bb18c3f8aab295c1f6872582ea6db4
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.61-1
+Version: 2.61-2
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6641,10 +6641,10 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 215319
-Filename: transmission-web_2.61-1_keenetic.ipk
-Size: 216080
-MD5Sum: d818369f03d41445cde652e30e583c07
+Installed-Size: 215320
+Filename: transmission-web_2.61-2_keenetic.ipk
+Size: 215850
+MD5Sum: 5b7aaa96b76d284fc0382712aa752f5c
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
