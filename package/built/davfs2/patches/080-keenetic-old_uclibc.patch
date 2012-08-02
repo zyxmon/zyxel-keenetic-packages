@@ -1,0 +1,11 @@
+--- a/src/cache.c	2012-07-19 15:26:00.000000000 +0400
++++ b/src/cache.c	2012-08-01 10:56:25.454812952 +0400
+@@ -55,7 +55,6 @@
+ #ifdef HAVE_SYS_TYPES_H
+ #include <sys/types.h>
+ #endif
+-#include <sys/xattr.h>
+ 
+ #include <ne_alloc.h>
+ #include <ne_string.h>
+
