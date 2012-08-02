@@ -8,20 +8,18 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=davfs2
-PKG_VERSION:=1.4.6-03062012
+PKG_VERSION:=1.4.7
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=:pserver:anonymous@cvs.sv.gnu.org:/sources/davfs2
-PKG_SOURCE_SUBDIR:=davfs2
-PKG_SOURCE_VERSION:=-D'06/03/2012'
-PKG_SOURCE_PROTO:=cvs
-PKG_BUILD_DEPENDS:=gperf/host libopenssl
+PKG_SOURCE_URL:=http://download.savannah.gnu.org/releases/davfs2/
+#PKG_BUILD_DEPENDS:=gperf/host libopenssl
+PKG_BUILD_DEPENDS:=libopenssl
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
 
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_SOURCE_SUBDIR)
+#PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_SOURCE_SUBDIR)
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/nls.mk
@@ -52,6 +50,18 @@ CONFIGURE_ARGS += \
 	ssbindir=$(ROOT_ZYX)/usr/sbin \
 	dav_localstatedir=$(ROOT_ZYX)/var/run \
 	dav_syscachedir=$(ROOT_ZYX)/var/cache \
+
+CONFIGURE_VARS += LIBS="-liconv" 
+
+#
+# If gnulib is installed on the host system one can remove 100-gnulib-big.patch
+# and uncomment Build/Prepare 'section' to build package
+#
+
+#define Build/Prepare
+#	$(call Build/Prepare/Default)
+#	( cd $(PKG_BUILD_DIR);  ./bootstrap )
+#endef
 
 define Package/davfs2/install
 	$(INSTALL_DIR) $(1)/usr/sbin
