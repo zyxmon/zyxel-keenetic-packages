@@ -4,7 +4,7 @@
  # and this notice are preserved.
  
  set -ex
-+gnulib-tool --import argz canonicalize rpmatch
++gnulib-tool --import argz canonicalize
  autopoint --force
 -cd man; po4a po4a.conf; cd ..
 -aclocal -I config
