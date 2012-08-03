@@ -248,7 +248,7 @@ Description:  CurlFtpFS is a filesystem for accessing FTP hosts
  based on FUSE and libcurl.
 
 Package: davfs2
-Version: 1.4.6-03062012-1
+Version: 1.4.7-1
 Depends: libneon, libfuse, libexpat, libiconv-full, libintl-full
 Provides: 
 Source: package/built/davfs2
@@ -258,10 +258,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 68522
-Filename: davfs2_1.4.6-03062012-1_keenetic.ipk
-Size: 69299
-MD5Sum: 11fbeff953dc7d1abc283e1d258a6516
+Installed-Size: 56523
+Filename: davfs2_1.4.7-1_keenetic.ipk
+Size: 57248
+MD5Sum: bd6f3b8c971dad94bc25df435c9de430
 Description:  Mount a WebDAV resource as a regular file system. davfs2 will work with
  most WebDAV servers needing little or no configuration.
 
