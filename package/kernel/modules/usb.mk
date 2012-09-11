@@ -19,3 +19,28 @@ define KernelPackage/ralink_dwc_otg/description
 endef
 
 $(eval $(call KernelPackage,ralink_dwc_otg))
+
+define KernelPackage/usb-audio
+  TITLE:=Support for USB audio devices
+  KCONFIG:= \
+	CONFIG_USB_AUDIO \
+	CONFIG_SND_USB_AUDIO
+  $(call AddDepends/usb)
+  $(call AddDepends/sound)
+# For Linux 2.6.35+
+ifneq ($(wildcard $(LINUX_DIR)/sound/usb/snd-usbmidi-lib.ko),)
+  FILES:= \
+	$(LINUX_DIR)/sound/usb/snd-usbmidi-lib.ko \
+	$(LINUX_DIR)/sound/usb/snd-usb-audio.ko
+else
+  FILES:= \
+	$(LINUX_DIR)/sound/usb/snd-usb-lib.ko \
+	$(LINUX_DIR)/sound/usb/snd-usb-audio.ko
+endif
+endef
+
+define KernelPackage/usb-audio/description
+ Kernel support for USB audio devices
+endef
+
+$(eval $(call KernelPackage,usb-audio))
