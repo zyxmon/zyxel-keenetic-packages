@@ -429,7 +429,7 @@ MD5Sum: edb26fb960470e4f132d075c6698d8ed
 Description:  a menu-driven program for creation and manipulation of partition tables
 
 Package: file
-Version: 5.08-2
+Version: 5.11-1
 Depends: libmagic
 Provides: 
 Source: package/built/file
@@ -439,10 +439,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 97800
-Filename: file_5.08-2_keenetic.ipk
-Size: 98447
-MD5Sum: a441c08e710ca79fcd8691216bd2e016
+Installed-Size: 100665
+Filename: file_5.11-1_keenetic.ipk
+Size: 101380
+MD5Sum: 2d2a3c777b7069ae39d33eeb9602308b
 Description:  utility
 
 Package: fuse-convmvfs
@@ -1560,7 +1560,7 @@ Description:  MAD is a high-quality MPEG audio decoder. It currently supports
  Layer I, Layer II, and Layer III (i.e. MP3) - are fully implemented.
 
 Package: libmagic
-Version: 5.08-2
+Version: 5.11-1
 Depends: 
 Provides: 
 Source: package/built/file
@@ -1570,10 +1570,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 95178
-Filename: libmagic_5.08-2_keenetic.ipk
-Size: 95487
-MD5Sum: ca83e19592d9d9fa672a4e556c385ab5
+Installed-Size: 93438
+Filename: libmagic_5.11-1_keenetic.ipk
+Size: 93792
+MD5Sum: d6b9f05c55dcb005a0b81209246ae0e0
 Description:  library
 
 Package: libminiupnpc
@@ -2806,7 +2806,7 @@ MD5Sum: a1ce62dffc9222213b6fa2457bdb8c55
 Description:  Utility for network exploration or security auditing
 
 Package: openssh-sftp-server
-Version: 6.0p1-1
+Version: 6.1p1-1
 Depends: 
 Provides: 
 Source: package/built/openssh
@@ -2816,10 +2816,10 @@ Essential: no
 Priority: optional
 Maintainer: Peter Wagner <tripolar@gmx.at>
 Architecture: keenetic
-Installed-Size: 27451
-Filename: openssh-sftp-server_6.0p1-1_keenetic.ipk
-Size: 28020
-MD5Sum: 4b8e470f03a0c9bb21cfe4afb8733423
+Installed-Size: 27454
+Filename: openssh-sftp-server_6.1p1-1_keenetic.ipk
+Size: 28028
+MD5Sum: fbaba4733546097fe6e3b17787bc4c38
 Description:  OpenSSH SFTP server.
 
 Package: openvpn
@@ -6944,7 +6944,7 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 310-1
+Version: 314-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
@@ -6954,10 +6954,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 116069
-Filename: xupnpd_310-1_keenetic.ipk
-Size: 116793
-MD5Sum: a111315ffa817580f15654b4456c7b6a
+Installed-Size: 116656
+Filename: xupnpd_314-1_keenetic.ipk
+Size: 117339
+MD5Sum: 3c779eb48ac63f75208879e2f859d84d
 Description:  eXtensible UPnP agent
 
 Package: zip
