@@ -5966,6 +5966,23 @@ Description:  The SDKs contain platform-specific libraries that wrap the raw HTT
  to the Dropbox API. They are designed to shorten the distance between 
  your application and integrating Dropbox.
 
+Package: python-expat
+Version: 2.7.3-1
+Depends: python-mini, libexpat
+Provides: 
+Source: package/built/python
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 59373
+Filename: python-expat_2.7.3-1_keenetic.ipk
+Size: 60002
+MD5Sum: 4c28029b4bb6953e7f391a09cb4d92b5
+Description:  Python support for expat
+
 Package: python-mini
 Version: 2.7.3-1
 Depends: 
