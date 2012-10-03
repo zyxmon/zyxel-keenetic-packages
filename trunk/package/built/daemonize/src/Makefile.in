@@ -1,0 +1,56 @@
+# Makefile.in for daemonize.
+#
+# This source code is released under a BSD-style license. See the LICENSE
+# file for details.
+# ---------------------------------------------------------------------------
+
+srcdir		= @srcdir@
+VPATH		= @srcdir@
+INSTALL_PREFIX	= @prefix@
+INSTALL		= @INSTALL@
+INSTALL_SBIN	= $(INSTALL_PREFIX)/sbin
+INSTALL_MAN    = $(INSTALL_PREFIX)/share/man
+MISSING_SOURCES	= @LOCAL_MISSING_SOURCES@
+MISSING_OBJECTS = $(MISSING_SOURCES:.c=.o)
+CC		= @CC@
+
+.PHONY: all psman install clean distclean
+
+.c.o:
+	$(CC) $(CFLAGS) -c $< -I.
+
+all: daemonize 
+
+daemonize: daemonize.o getopt.o $(MISSING_OBJECTS)
+	$(CC) $(CFLAGS) -o daemonize daemonize.o getopt.o $(MISSING_OBJECTS)
+
+testdaemon: testdaemon.o
+	$(CC) $(CFLAGS) -o testdaemon testdaemon.o
+ 
+psman: daemonize.ps
+
+daemonize.ps: daemonize.1
+	groff -man daemonize.1 >pstmp
+	ps2ps pstmp daemonize.ps
+	rm pstmp
+
+daemonize.html: daemonize.1
+	groff -man -Thtml daemonize.1 >daemonize.html
+
+install:
+	mkdir -p $(DESTDIR)$(INSTALL_SBIN)
+	$(INSTALL) -m 0755 daemonize $(DESTDIR)$(INSTALL_SBIN)
+	mkdir -p $(DESTDIR)$(INSTALL_MAN)/man1
+	$(INSTALL) -m 0644 daemonize.1 $(DESTDIR)$(INSTALL_MAN)/man1
+
+clean:
+	rm -rf *.o daemonize testdaemon *.ps
+
+distclean:	clean
+	rm -rf config.status config.log config.cache config.h Makefile autom?te.cache
+
+# Copy stuff to the gh-pages directory. I doubt you want to use this target,
+# unless you're maintaining the web site (i.e., unless you're me).
+gh: daemonize.html CHANGELOG.md ../gh-pages/changelog-header
+	cp daemonize.html ../gh-pages
+	cat ../gh-pages/changelog-header CHANGELOG.md >../gh-pages/CHANGELOG.md
