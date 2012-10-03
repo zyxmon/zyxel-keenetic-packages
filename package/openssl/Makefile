@@ -53,7 +53,6 @@ define Package/openssl-util
   $(call Package/openssl/Default)
   SECTION:=utils
   CATEGORY:=Utilities
-  DEPENDS:=+libopenssl
   TITLE+= (utility)
 endef
 
