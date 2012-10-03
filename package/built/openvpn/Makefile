@@ -32,6 +32,12 @@ define Package/openvpn
   MENU:=1
 endef
 
+define Package/openvpn-easy-rsa
+  $(call Package/openvpn)
+  DEPENDS:=+openssl-util
+  TITLE:=Simple shell scripts to manage a Certificate Authority
+endef
+
 define Package/openvpn/description
  Open source VPN solution using SSL
 endef
@@ -146,6 +152,12 @@ endif
 
 define Package/openvpn/conffiles
 /etc/config/openvpn
+endef
+
+define Package/openvpn-easy-rsa/conffiles
+/etc/easy-rsa/keys/serial
+/etc/easy-rsa/keys/index.txt
+/etc/easy-rsa/vars
 endef
 
 define Package/openvpn/install

@@ -1,0 +1,184 @@
+Index: openvpn-2.2.2/easy-rsa/2.0/build-ca
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/build-ca	2012-09-30 14:01:23.206782450 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/build-ca	2012-09-30 14:03:34.857127369 +0400
+@@ -5,4 +5,4 @@
+ #
+ 
+ export EASY_RSA="${EASY_RSA:-.}"
+-"/usr/sbin/pkitool" --interact --initca $*
++"/media/DISK_A1/system/usr/sbin/pkitool" --interact --initca $*
+Index: openvpn-2.2.2/easy-rsa/2.0/build-dh
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/build-dh	2012-09-30 14:01:23.206782450 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/build-dh	2012-09-30 14:05:26.683721680 +0400
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-. /etc/easy-rsa/vars
++. /media/DISK_A1/system/etc/easy-rsa/vars
+ 
+ # Build Diffie-Hellman parameters for the server side
+ # of an SSL/TLS connection.
+Index: openvpn-2.2.2/easy-rsa/2.0/build-inter
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/build-inter	2012-09-30 14:01:23.206782450 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/build-inter	2012-09-30 14:04:17.264594007 +0400
+@@ -4,4 +4,4 @@
+ # root certificate.
+ 
+ export EASY_RSA="${EASY_RSA:-.}"
+-"/usr/sbin/pkitool" --interact --inter $*
++"/media/DISK_A1/system/usr/sbin/pkitool" --interact --inter $*
+Index: openvpn-2.2.2/easy-rsa/2.0/build-key
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/build-key	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/build-key	2012-09-30 14:04:38.300329793 +0400
+@@ -4,4 +4,4 @@
+ # root certificate.
+ 
+ export EASY_RSA="${EASY_RSA:-.}"
+-"/usr/sbin/pkitool" --interact $*
++"/media/DISK_A1/system/usr/sbin/pkitool" --interact $*
+Index: openvpn-2.2.2/easy-rsa/2.0/build-key-pass
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/build-key-pass	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/build-key-pass	2012-09-30 14:04:53.328140869 +0400
+@@ -4,4 +4,4 @@
+ # with a password.
+ 
+ export EASY_RSA="${EASY_RSA:-.}"
+-"/usr/sbin/pkitool" --interact --pass $*
++"/media/DISK_A1/system/usr/sbin/pkitool" --interact --pass $*
+Index: openvpn-2.2.2/easy-rsa/2.0/build-key-pkcs12
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/build-key-pkcs12	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/build-key-pkcs12	2012-09-30 14:05:07.283964987 +0400
+@@ -5,4 +5,4 @@
+ # the CA certificate as well.
+ 
+ export EASY_RSA="${EASY_RSA:-.}"
+-"/usr/sbin/pkitool" --interact --pkcs12 $*
++"/media/DISK_A1/system/usr/sbin/pkitool" --interact --pkcs12 $*
+Index: openvpn-2.2.2/easy-rsa/2.0/build-key-server
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/build-key-server	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/build-key-server	2012-09-30 14:05:52.443397688 +0400
+@@ -7,4 +7,4 @@
+ # extension in the openssl.cnf file.
+ 
+ export EASY_RSA="${EASY_RSA:-.}"
+-"/usr/sbin/pkitool" --interact --server $*
++"/media/DISK_A1/system/usr/sbin/pkitool" --interact --server $*
+Index: openvpn-2.2.2/easy-rsa/2.0/build-req
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/build-req	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/build-req	2012-09-30 14:06:11.595156919 +0400
+@@ -4,4 +4,4 @@
+ # when your root certificate and key is not available locally.
+ 
+ export EASY_RSA="${EASY_RSA:-.}"
+-"/usr/sbin/pkitool" --interact --csr $*
++"/media/DISK_A1/system/usr/sbin/pkitool" --interact --csr $*
+Index: openvpn-2.2.2/easy-rsa/2.0/build-req-pass
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/build-req-pass	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/build-req-pass	2012-09-30 14:06:23.667005149 +0400
+@@ -4,4 +4,4 @@
+ # with a password.
+ 
+ export EASY_RSA="${EASY_RSA:-.}"
+-"/usr/sbin/pkitool" --interact --csr --pass $*
++"/media/DISK_A1/system/usr/sbin/pkitool" --interact --csr --pass $*
+Index: openvpn-2.2.2/easy-rsa/2.0/clean-all
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/clean-all	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/clean-all	2012-09-30 14:06:59.026560610 +0400
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-. /etc/easy-rsa/vars
++. /media/DISK_A1/system/etc/easy-rsa/vars
+ 
+ # Initialize the $KEY_DIR directory.
+ # Note that this script does a
+Index: openvpn-2.2.2/easy-rsa/2.0/inherit-inter
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/inherit-inter	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/inherit-inter	2012-09-30 14:07:45.341978361 +0400
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-. /etc/easy-rsa/vars
++. /media/DISK_A1/system/etc/easy-rsa/vars
+ 
+ # Build a new PKI which is rooted on an intermediate certificate generated
+ # by ./build-inter or ./pkitool --inter from a parent PKI.  The new PKI should
+Index: openvpn-2.2.2/easy-rsa/2.0/list-crl
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/list-crl	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/list-crl	2012-09-30 14:08:08.605685896 +0400
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-. /etc/easy-rsa/vars
++. /media/DISK_A1/system/etc/easy-rsa/vars
+ 
+ # list revoked certificates
+ 
+Index: openvpn-2.2.2/easy-rsa/2.0/pkitool
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/pkitool	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/pkitool	2012-09-30 14:08:46.909204358 +0400
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-. /etc/easy-rsa/vars
++. /media/DISK_A1/system/etc/easy-rsa/vars
+ 
+ #  OpenVPN -- An application to securely tunnel IP networks
+ #             over a single TCP/UDP port, with support for SSL/TLS-based
+Index: openvpn-2.2.2/easy-rsa/2.0/revoke-full
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/revoke-full	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/revoke-full	2012-09-30 14:09:05.404971618 +0400
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-. /etc/easy-rsa/vars
++. /media/DISK_A1/system/etc/easy-rsa/vars
+ 
+ # revoke a certificate, regenerate CRL,
+ # and verify revocation
+Index: openvpn-2.2.2/easy-rsa/2.0/sign-req
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/sign-req	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/sign-req	2012-09-30 14:09:22.752753803 +0400
+@@ -4,4 +4,4 @@
+ # with a local root certificate and key.
+ 
+ export EASY_RSA="${EASY_RSA:-.}"
+-"/usr/sbin/pkitool" --interact --sign $*
++"/media/DISK_A1/system/usr/sbin/pkitool" --interact --sign $*
+Index: openvpn-2.2.2/easy-rsa/2.0/vars
+===================================================================
+--- openvpn-2.2.2.orig/easy-rsa/2.0/vars	2012-09-30 14:01:23.210782400 +0400
++++ openvpn-2.2.2/easy-rsa/2.0/vars	2012-09-30 14:10:51.827633397 +0400
+@@ -12,7 +12,7 @@
+ # This variable should point to
+ # the top level of the easy-rsa
+ # tree.
+-export EASY_RSA="/etc/easy-rsa"
++export EASY_RSA="/media/DISK_A1/system/etc/easy-rsa" #DO NOT EDIT THIS
+ 
+ #
+ # This variable should point to
+@@ -26,7 +26,7 @@
+ # This variable should point to
+ # the openssl.cnf file included
+ # with easy-rsa.
+-export KEY_CONFIG=`/usr/sbin/whichopensslcnf $EASY_RSA`
++export KEY_CONFIG=`/media/DISK_A1/system/usr/sbin/whichopensslcnf $EASY_RSA` #DO NOT EDIT THIS
+ 
+ # Edit this variable to point to
+ # your soon-to-be-created key
