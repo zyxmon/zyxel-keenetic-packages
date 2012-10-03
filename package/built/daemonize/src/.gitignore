@@ -1,0 +1,8 @@
+*.o
+daemonize
+daemonize.html
+config.h
+config.log
+config.status
+config.cache
+Makefile
