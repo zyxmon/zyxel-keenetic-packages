@@ -247,6 +247,23 @@ MD5Sum: 860316840dce4e3fddb4db1b09d53a54
 Description:  CurlFtpFS is a filesystem for accessing FTP hosts
  based on FUSE and libcurl.
 
+Package: daemonize
+Version: 1.7.3-1
+Depends: 
+Provides: 
+Source: package/built/daemonize
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4980
+Filename: daemonize_1.7.3-1_keenetic.ipk
+Size: 5572
+MD5Sum: c47f6129e277288522c703b031734e86
+Description:  A tool to run a command as a daemon.
+
 Package: davfs2
 Version: 1.4.7-1
 Depends: libneon, libfuse, libexpat, libiconv-full, libintl-full
@@ -1359,6 +1376,26 @@ Size: 141315
 MD5Sum: 96bc9ac622e1a04b5a60a693d91a94b1
 Description:  GMP is a free library for arbitrary precision arithmetic, operating on
  signed integers, rational numbers, and floating point numbers.
+
+Package: libgnutls
+Version: 2.8.6-2
+Depends: libgcrypt, libgpg-error
+Provides: 
+Source: package/built/gnutls
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 185994
+Filename: libgnutls_2.8.6-2_keenetic.ipk
+Size: 185791
+MD5Sum: e100e9b477c1e44eaca8e272c45896ae
+Description:  GnuTLS is a project that aims to develop a library which provides a
+ secure layer, over a reliable transport layer. Currently the GnuTLS
+ library implements the SSL 3.0, TLS 1.0, and TLS 1.1 protocols.
+ This package contains the GnuTLS shared library, needed by other programs.
 
 Package: libgpg-error
 Version: 1.9-1
@@ -2697,6 +2734,24 @@ MD5Sum: 96ea6a390729f68ceca4eaf807a5c127
 Description:  GNU nano (Nano's ANOther editor, or Not ANOther editor) is an enhanced clone
  of the Pico text editor.
 
+Package: ncdc
+Version: 1.10-1
+Depends: libncursesw, bzip2, libsqlite3, glib2, libxml2, libgnutls, libiconv-full
+Provides: 
+Source: package/built/ncdc
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 156934
+Filename: ncdc_1.10-1_keenetic.ipk
+Size: 157582
+MD5Sum: 183ef96e53441d75c417c979181ff1f8
+Description:  ncdc is a modern and lightweight direct connect client with a friendly
+ ncurses interface.
+
 Package: ncftp-utils
 Version: 3.2.5-1
 Depends: 
@@ -2821,6 +2876,44 @@ Filename: openssh-sftp-server_6.1p1-1_keenetic.ipk
 Size: 28028
 MD5Sum: fbaba4733546097fe6e3b17787bc4c38
 Description:  OpenSSH SFTP server.
+
+Package: openssl-util
+Version: 0.9.8l-2
+Depends: 
+Provides: 
+Source: package/openssl
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 139243
+Filename: openssl-util_0.9.8l-2_keenetic.ipk
+Size: 139601
+MD5Sum: a10d0bcc9b13636a560241f0a2e13737
+Description:  The OpenSSL Project is a collaborative effort to develop a robust,
+ commercial-grade, full-featured, and Open Source toolkit implementing the
+ Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1)
+ protocols as well as a full-strength general purpose cryptography library.
+ This package contains the OpenSSL command-line utility.
+
+Package: openvpn-easy-rsa
+Version: 2.2.2-1
+Depends: openssl-util
+Provides: 
+Source: package/built/openvpn
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10152
+Filename: openvpn-easy-rsa_2.2.2-1_keenetic.ipk
+Size: 10857
+MD5Sum: 0ec6fcff2713086d1d001bfbb7ca1103
+Description:  Simple shell scripts to manage a Certificate Authority
 
 Package: openvpn
 Version: 2.2.2-1
@@ -6594,7 +6687,7 @@ MD5Sum: c332e3a420025ec7686d3da35c19a144
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.61-2
+Version: 2.71-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6604,14 +6697,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 830908
-Filename: transmission-cli_2.61-2_keenetic.ipk
-Size: 830386
-MD5Sum: 2d6635319863fbade98fc1aa39327e97
+Installed-Size: 831912
+Filename: transmission-cli_2.71-1_keenetic.ipk
+Size: 831335
+MD5Sum: 37c43a41895cb0ecef4cf7b5e6a77189
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.61-2
+Version: 2.71-1
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
@@ -6621,17 +6714,17 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 212591
-Filename: transmission-daemon_2.61-2_keenetic.ipk
-Size: 213058
-MD5Sum: 4cf7a7d07c765d256b38b21d0e250d24
+Installed-Size: 212774
+Filename: transmission-daemon_2.71-1_keenetic.ipk
+Size: 213253
+MD5Sum: f3b78dd014adbbd85bbf4c54fa8b60f5
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.61-2
+Version: 2.71-1
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
@@ -6641,14 +6734,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 222353
-Filename: transmission-remote_2.61-2_keenetic.ipk
-Size: 222586
-MD5Sum: f2bb18c3f8aab295c1f6872582ea6db4
+Installed-Size: 222636
+Filename: transmission-remote_2.71-1_keenetic.ipk
+Size: 222877
+MD5Sum: 0fb07aaa86d96b087cea453a443ba649
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.61-2
+Version: 2.71-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6658,10 +6751,10 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 215320
-Filename: transmission-web_2.61-2_keenetic.ipk
-Size: 215850
-MD5Sum: 5b7aaa96b76d284fc0382712aa752f5c
+Installed-Size: 216040
+Filename: transmission-web_2.71-1_keenetic.ipk
+Size: 216677
+MD5Sum: b4fdd9dda918ed50c1c0e82a18dba3ad
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
@@ -6961,7 +7054,7 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 314-1
+Version: 321-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
@@ -6971,10 +7064,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 116656
-Filename: xupnpd_314-1_keenetic.ipk
-Size: 117339
-MD5Sum: 3c779eb48ac63f75208879e2f859d84d
+Installed-Size: 116387
+Filename: xupnpd_321-1_keenetic.ipk
+Size: 117122
+MD5Sum: bb505b66456a32ee52e52f960909cb74
 Description:  eXtensible UPnP agent
 
 Package: zip
