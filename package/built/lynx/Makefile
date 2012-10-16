@@ -46,14 +46,13 @@ CONFIGURE_ARGS += \
 
 define Package/lynx/conffiles
 /etc/lynx.cfg
-/etc/lynx.lss
 endef
 
 define Package/lynx/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/lynx $(1)/usr/bin
 	$(INSTALL_DIR) $(1)/etc
-	$(INSTALL_CONF) $(PKG_INSTALL_DIR)$(ROOT_ZYX)/etc/lynx.{cfg,lss} $(1)/etc
+	$(INSTALL_CONF) $(PKG_INSTALL_DIR)$(ROOT_ZYX)/etc/lynx.cfg $(1)/etc
 endef
 
 $(eval $(call BuildPackage,lynx))
