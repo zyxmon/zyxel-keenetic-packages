@@ -25,7 +25,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/lynx
 	SECTION:=net
 	CATEGORY:=Network
-	DEPENDS:=+libncursesw +libbz2
+	DEPENDS:=+libbz2 +libslang2
 	TITLE:=a text web browser
 	URL:=http://lynx.isc.org/
 	MAINTAINER:=Entware team, wl500g-repo.googlecode.com
