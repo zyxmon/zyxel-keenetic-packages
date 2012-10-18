@@ -2526,6 +2526,23 @@ Description:  Lua is a powerful light-weight programming language designed for e
  language. Lua is free software.
  This package contains the Lua language interpreter.
 
+Package: lynx
+Version: 2.8.7rel.2-1
+Depends: libbz2, libslang2
+Provides: 
+Source: package/built/lynx
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Entware team, wl500g-repo.googlecode.com
+Architecture: keenetic
+Installed-Size: 577759
+Filename: lynx_2.8.7rel.2-1_keenetic.ipk
+Size: 574909
+MD5Sum: 0f7f6ea989c8cd18a9c29efe39b0b4a8
+Description:  Lynx is the text web browser
+
 Package: make
 Version: 3.81-1
 Depends: 
