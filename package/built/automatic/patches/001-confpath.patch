@@ -1,0 +1,13 @@
+Index: 1100101-Automatic-ae2ed5f/src/automatic.c
+===================================================================
+--- 1100101-Automatic-ae2ed5f.orig/src/automatic.c	2012-06-14 00:05:14.000000000 +0400
++++ 1100101-Automatic-ae2ed5f/src/automatic.c	2012-10-18 13:46:35.093489506 +0400
+@@ -17,7 +17,7 @@
+  * 02111-1307, USA.
+  */
+ 
+-#define AM_DEFAULT_CONFIGFILE      "/etc/automatic.conf"
++#define AM_DEFAULT_CONFIGFILE      "/media/DISK_A1/system/etc/automatic.conf"
+ #define AM_DEFAULT_STATEFILE       ".automatic.state"
+ #define AM_DEFAULT_VERBOSE         P_MSG
+ #define AM_DEFAULT_NOFORK          false

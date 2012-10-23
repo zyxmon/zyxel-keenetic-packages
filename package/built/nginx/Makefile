@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2009-2011 OpenWrt.org
+# Copyright (C) 2009-2012 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,19 +8,19 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nginx
-PKG_VERSION:=1.0.15
+PKG_VERSION:=1.2.2
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://nginx.org/download/
-PKG_MD5SUM:=17da4802209b83d9bebb0f0edd975dfc
+PKG_MD5SUM:=53105bbe3ac9319db54d9eb46119695b
 
 PKG_BUILD_PARALLEL:=1
 PKG_INSTALL:=1
 
 PKG_BUILD_DEPENDS:=libopenssl zlib
 
-PKG_CONFIG_DEPENDS:=\
+PKG_CONFIG_DEPENDS := \
 	CONFIG_NGINX_STUB_STATUS \
 	CONFIG_NGINX_FLV \
 	CONFIG_NGINX_SSL \
@@ -39,9 +39,8 @@ define Package/nginx
 endef
 
 define Package/nginx/description
-  Nginx is a free, open-source, high-performance HTTP server
-  and reverse proxy, as well as an IMAP/POP3 proxy server,
-  written by Igor Sysoev.
+ nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
+ written by Igor Sysoev.
 endef
 
 define Package/nginx/config
