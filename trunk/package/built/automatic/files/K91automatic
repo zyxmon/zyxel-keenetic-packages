@@ -1,0 +1,40 @@
+#!/bin/sh
+SYSTEM=/media/DISK_A1/system
+#if you need logging uncomment string below
+#LOGFILE=$SYSTEM/var/log/automatic.log
+
+start () {
+	if [ $LOGFILE ]; then
+		LOGARG="-l $LOGFILE -a"
+	else
+		LOGARG=''
+	fi
+$SYSTEM/usr/sbin/automatic $LOGARG
+}
+
+stop () {
+	killall automatic
+}
+case "$1" in
+    start)
+      start
+    ;;
+    stop)
+      stop
+    ;;
+    restart)
+      stop
+      start    
+    ;;
+    link_up)
+    ;;
+    ppp_up)
+    ;;
+    link_down)
+    ;;
+    ppp_down)
+    ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|link_up|link_down|ppp_up|ppp_down}"
+    ;;
+esac
