@@ -1,0 +1,19 @@
+Index: ncdc-1.10/src/main.c
+===================================================================
+--- ncdc-1.10.orig/src/main.c	2012-05-03 14:47:56.000000000 +0400
++++ ncdc-1.10/src/main.c	2012-09-19 22:16:14.920185515 +0400
+@@ -385,14 +385,6 @@
+   }
+   g_option_context_free(optx);
+ 
+-  // check that the current locale is UTF-8. Things aren't going to work otherwise
+-  if(!g_get_charset(NULL)) {
+-    puts("WARNING: Your current locale is not set to UTF-8.");
+-    puts("Non-ASCII characters may not display correctly.");
+-    puts("Hit Ctrl+c to abort ncdc, or the return key to continue anyway.");
+-    getchar();
+-  }
+-
+   // init stuff
+   gnutls_global_init();
+   g_thread_init(NULL);
