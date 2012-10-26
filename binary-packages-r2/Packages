@@ -33,6 +33,23 @@ Size: 1136672
 MD5Sum: 23bda38f3128ae6b0f2bbc1a56023cf6
 Description:  download manager
 
+Package: automatic
+Version: 0.8.0-1
+Depends: libpcre, libxml2
+Provides: 
+Source: package/built/automatic
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 39856
+Filename: automatic_0.8.0-1_keenetic.ipk
+Size: 40576
+MD5Sum: 36579c85f7db14aefef43729124830d4
+Description:  Automatic is an RSS downloader for Linux based systems, that grabs your favorite torrents based on filters you specify.
+
 Package: badblocks
 Version: 1.42.2-1
 Depends: e2fsprogs
@@ -1378,8 +1395,8 @@ Description:  GMP is a free library for arbitrary precision arithmetic, operatin
  signed integers, rational numbers, and floating point numbers.
 
 Package: libgnutls
-Version: 2.8.6-2
-Depends: libgcrypt, libgpg-error
+Version: 2.12.9-1
+Depends: libgcrypt, libgpg-error, nettle, p11-kit, libintl-full
 Provides: 
 Source: package/built/gnutls
 Section: libs
@@ -1388,10 +1405,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 185994
-Filename: libgnutls_2.8.6-2_keenetic.ipk
-Size: 185791
-MD5Sum: e100e9b477c1e44eaca8e272c45896ae
+Installed-Size: 227479
+Filename: libgnutls_2.12.9-1_keenetic.ipk
+Size: 227279
+MD5Sum: 3b9cc969915edeb31a92d7f480ae80fd
 Description:  GnuTLS is a project that aims to develop a library which provides a
  secure layer, over a reliable transport layer. Currently the GnuTLS
  library implements the SSL 3.0, TLS 1.0, and TLS 1.1 protocols.
@@ -2752,20 +2769,20 @@ Description:  GNU nano (Nano's ANOther editor, or Not ANOther editor) is an enha
  of the Pico text editor.
 
 Package: ncdc
-Version: 1.10-1
-Depends: libncursesw, bzip2, libsqlite3, glib2, libxml2, libgnutls, libiconv-full
+Version: 1.13-1
+Depends: libncursesw, bzip2, libgnutls, libsqlite3, glib2, libiconv-full, libgmp
 Provides: 
 Source: package/built/ncdc
 Section: net
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Maintainer: Entware team, wl500g-repo.googlecode.com
 Architecture: keenetic
-Installed-Size: 156934
-Filename: ncdc_1.10-1_keenetic.ipk
-Size: 157582
-MD5Sum: 183ef96e53441d75c417c979181ff1f8
+Installed-Size: 165465
+Filename: ncdc_1.13-1_keenetic.ipk
+Size: 166036
+MD5Sum: c4b2635d5e5e07bf86c1ff0092f99388
 Description:  ncdc is a modern and lightweight direct connect client with a friendly
  ncurses interface.
 
@@ -2824,6 +2841,23 @@ Size: 353596
 MD5Sum: cee6171e71890a1cf40ff7b7afbaa63d
 Description:  netatalk
 
+Package: nettle
+Version: 2.5-1
+Depends: 
+Provides: 
+Source: package/built/nettle
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 133843
+Filename: nettle_2.5-1_keenetic.ipk
+Size: 133878
+MD5Sum: ea1968fb146a830a94ac9e0dddf31eb0
+Description:  The Nettle package contains the low-level cryptographic library that is designed to fit easily in many contexts.
+
 Package: nfs-kernel-server
 Version: 1.2.5-3
 Depends: libwrap, libblkid, libuuid, kmod-fs-nfsd, kmod-fs-nfs, portmap
@@ -2842,7 +2876,7 @@ MD5Sum: d6611f14652200932f514c66fb6f0566
 Description:  Kernel NFS server support
 
 Package: nginx
-Version: 1.0.15-1
+Version: 1.2.2-1
 Depends: libpcre
 Provides: 
 Source: package/built/nginx
@@ -2852,12 +2886,11 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 224786
-Filename: nginx_1.0.15-1_keenetic.ipk
-Size: 225167
-MD5Sum: e6529763a393382d77457f0d7ec8b022
-Description:  Nginx is a free, open-source, high-performance HTTP server
- and reverse proxy, as well as an IMAP/POP3 proxy server,
+Installed-Size: 236483
+Filename: nginx_1.2.2-1_keenetic.ipk
+Size: 236858
+MD5Sum: 9384273e9766af64e9690827b577d09c
+Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev.
 
 Package: nmap
@@ -2971,6 +3004,23 @@ Description:  Lightweight package management system
  necessary to install a particular package.
  
  opkg knows how to install both .ipk and .deb packages.
+
+Package: p11-kit
+Version: 0.13-1
+Depends: 
+Provides: 
+Source: package/built/p11-kit
+Section: devel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 23888
+Filename: p11-kit_0.13-1_keenetic.ipk
+Size: 24513
+MD5Sum: db5ea93d72c61b496e6447740c65441a
+Description:  PKCS#11 is a standard for accessing crypto objects like keys and certificates and performing cryptographic operations on them. It's often used together with smart cards.
 
 Package: perl-compress-bzip2
 Version: 2.09-3
@@ -6704,7 +6754,7 @@ MD5Sum: c332e3a420025ec7686d3da35c19a144
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.71-1
+Version: 2.72-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6714,14 +6764,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 831912
-Filename: transmission-cli_2.71-1_keenetic.ipk
-Size: 831335
-MD5Sum: 37c43a41895cb0ecef4cf7b5e6a77189
+Installed-Size: 832522
+Filename: transmission-cli_2.72-1_keenetic.ipk
+Size: 831868
+MD5Sum: ca2d9707371a95b2aa927b929f0d6786
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.71-1
+Version: 2.72-1
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
@@ -6731,17 +6781,17 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 212774
-Filename: transmission-daemon_2.71-1_keenetic.ipk
-Size: 213253
-MD5Sum: f3b78dd014adbbd85bbf4c54fa8b60f5
+Installed-Size: 212928
+Filename: transmission-daemon_2.72-1_keenetic.ipk
+Size: 213432
+MD5Sum: bd7822c770edc21714d09ba964563967
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.71-1
+Version: 2.72-1
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
@@ -6751,14 +6801,14 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 222636
-Filename: transmission-remote_2.71-1_keenetic.ipk
-Size: 222877
-MD5Sum: 0fb07aaa86d96b087cea453a443ba649
+Installed-Size: 222702
+Filename: transmission-remote_2.72-1_keenetic.ipk
+Size: 222949
+MD5Sum: aaaa715de9beb39223f89fff87bde1dc
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.71-1
+Version: 2.72-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
@@ -6768,10 +6818,10 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 216040
-Filename: transmission-web_2.71-1_keenetic.ipk
-Size: 216677
-MD5Sum: b4fdd9dda918ed50c1c0e82a18dba3ad
+Installed-Size: 216183
+Filename: transmission-web_2.72-1_keenetic.ipk
+Size: 216910
+MD5Sum: fbeb8c0ba3ac615732da7ae41dda85f9
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
