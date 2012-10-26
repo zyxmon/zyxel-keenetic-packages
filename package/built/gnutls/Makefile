@@ -8,17 +8,14 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gnutls
-PKG_VERSION:=2.8.6
-PKG_RELEASE:=2
+PKG_VERSION:=2.12.9
+PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
-PKG_SOURCE_URL:=@GNU/gnutls \
-	ftp://ftp.mirrors.wiretapped.net/pub/security/network-security/gnutls/
-PKG_MD5SUM:=eb0a6d7d3cb9ac684d971c14f9f6d3ba
+PKG_SOURCE_URL:=@GNU/gnutls
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
-PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
-PKG_LIBTOOL_PATHS:=. lib libextra
 PKG_BUILD_DEPENDS:=zlib
 include $(INCLUDE_DIR)/package.mk
 
@@ -69,7 +66,7 @@ endef
 define Package/libgnutls
 $(call Package/gnutls/Default)
   TITLE+= (library)
-  DEPENDS+=+libgcrypt +libgpg-error
+  DEPENDS+=+libgcrypt +libgpg-error +nettle +p11-kit +libintl-full
 endef
 
 define Package/libgnutls/description
@@ -111,14 +108,17 @@ CONFIGURE_ARGS+= \
 	--with-libgcrypt-prefix="$(STAGING_DIR)/usr" \
 	--with-libreadline-prefix="$(STAGING_DIR)/usr" \
 	--with-libz-prefix="$(STAGING_DIR)/usr" \
+	--with-libnettle-prefix="$(STAGING_DIR)/usr" \
+	--with-libhogweed-prefix="$(STAGING_DIR)/usr" \
+	--with-libintl-prefix="$(STAGING_DIR)/usr/lib/libintl-full" \
 	--without-lzo \
 
 # XXX: AM_CFLAGS duplicates with CFLAGS
 MAKE_FLAGS:= \
 	AM_CFLAGS="" \
 
-TARGET_CFLAGS += $(FPIC)
-TARGET_LDFLAGS += -Wl,-rpath-link=$(STAGING_DIR)/usr/lib
+TARGET_CFLAGS += $(FPIC) -I$(PKG_BUILD_DIR)/lib/includes
+TARGET_LDFLAGS += -Wl,-rpath-link=$(STAGING_DIR)/usr/lib,-rpath-link=$(STAGING_DIR)/usr/lib/libintl-full/lib
 
 define Build/Configure
 	$(SED) 's,-I$$$${includedir},,g' $(PKG_BUILD_DIR)/configure
