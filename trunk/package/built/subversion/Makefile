@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=subversion
 PKG_VERSION:=1.6.17
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://subversion.tigris.org/downloads
@@ -88,6 +88,10 @@ CONFIGURE_ARGS += \
 	--disable-neon-version-check \
 	--with-apxs=no \
 	--without-sasl \
+
+TARGET_LDFLAGS += $(RPATH_ZYX)
+#	-Wl,-rpath,$(PREFIX_ZYX)/usr/libe \
+#	-Wl,-rpath-link $(STAGING_DIR)/usr/lib
 
 CONFIGURE_VARS += \
 	svn_lib_neon=yes \
