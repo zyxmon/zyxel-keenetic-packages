@@ -6603,7 +6603,7 @@ MD5Sum: 0f5314f2319878a7d3c50ce05bd6993b
 Description:  Streamripper is an Open Source application that lets you record streaming mp3 to your hard drive.
 
 Package: subversion-client
-Version: 1.6.17-2
+Version: 1.6.17-3
 Depends: libneon, libaprutil, subversion-libs
 Provides: 
 Source: package/built/subversion
@@ -6613,10 +6613,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 70340
-Filename: subversion-client_1.6.17-2_keenetic.ipk
-Size: 71162
-MD5Sum: d6b13d0821544f0d81ca06e1a810a8b3
+Installed-Size: 70399
+Filename: subversion-client_1.6.17-3_keenetic.ipk
+Size: 71243
+MD5Sum: 3e0de1e32bd19d8ce12f2f55caaa47f7
 Description:  Subversion is a free/open-source version control system. That is,
  Subversion manages files and directories, and the changes made to them,
  over time. This allows you to recover older versions of your data, or
@@ -6625,7 +6625,7 @@ Description:  Subversion is a free/open-source version control system. That is,
  This package contains the subversion client tools.
 
 Package: subversion-libs
-Version: 1.6.17-2
+Version: 1.6.17-3
 Depends: libneon, libaprutil
 Provides: 
 Source: package/built/subversion
@@ -6635,10 +6635,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 576816
-Filename: subversion-libs_1.6.17-2_keenetic.ipk
-Size: 576507
-MD5Sum: 862e77b5a3cddc171b02d70ce584c34d
+Installed-Size: 577623
+Filename: subversion-libs_1.6.17-3_keenetic.ipk
+Size: 577244
+MD5Sum: d0c729cb9ba8d2dbe501acad1239853f
 Description:  Subversion is a free/open-source version control system. That is,
  Subversion manages files and directories, and the changes made to them,
  over time. This allows you to recover older versions of your data, or
@@ -6647,7 +6647,7 @@ Description:  Subversion is a free/open-source version control system. That is,
  This package contains the subversion libraries.
 
 Package: subversion-server
-Version: 1.6.17-2
+Version: 1.6.17-3
 Depends: libneon, libaprutil, subversion-libs
 Provides: 
 Source: package/built/subversion
@@ -6657,10 +6657,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 56377
-Filename: subversion-server_1.6.17-2_keenetic.ipk
-Size: 56965
-MD5Sum: 46286924d446c4ac6bd89cd8d0422a05
+Installed-Size: 56515
+Filename: subversion-server_1.6.17-3_keenetic.ipk
+Size: 57203
+MD5Sum: c3f307a16b3b5660da371d3886003305
 Description:  Subversion is a free/open-source version control system. That is,
  Subversion manages files and directories, and the changes made to them,
  over time. This allows you to recover older versions of your data, or
