@@ -1,0 +1,76 @@
+#!/bin/sh
+
+SYS=/media/DISK_A1/system
+MODDIR=$SYS/lib/modules/2.6.23-rt
+MOTION=$SYS/usr/bin/motion
+CONFIG=$SYS/etc/motion.conf
+DRIVER=uvcvideo #define uvcvideo, pwc (philips cams) ,sn9c102, cpia2
+DELAY=10 #seconds. using if "waitrestart" defined
+
+insmods () {
+echo Loading video drivers
+logger Loading video drivers
+insmod $MODDIR/v4l1-compat.ko
+insmod $MODDIR/v4l2-common.ko
+insmod $MODDIR/compat_ioctl32.ko
+insmod $MODDIR/vidodev.ko
+if [ -e $MODDIR/videobuf2-core.ko ]; then
+	insmod $MODDIR/videobuf2-core.ko
+	insmod $MODDIR/videobuf2-memops.ko
+	insmod $MODDIR/videobuf2-vmalloc.ko
+fi
+insmod $MODDIR/$DRIVER.ko
+}
+
+rmmods () {
+echo Unloading video drivers
+logger Unloading video drivers
+rmmod $DRIVER
+VBUF=$(lsmod | grep videobuf2)
+if [ $VBUF ]; then
+	rmmod videobuf2-vmalloc
+	rmmod videobuf2-memops
+	rmmod videobuf2-core
+fi
+rmmod videodev
+rmmod compat_ioctl32
+rmmod v4l2-common
+rmmod v4l1-compat
+}
+
+start () {
+$MOTION -c $CONF
+}
+
+stop () {
+killall motion
+}
+
+case "$1" in
+    start)
+      start
+    ;;
+    stop)
+      stop
+    ;;
+    restart)
+      stop
+      start    
+    ;;
+    link_up)
+    ;;
+    ppp_up)
+    ;;
+    link_down)
+    ;;
+    ppp_down)
+    ;;
+    waitrestart)
+       stop
+       sleep($DELAY)
+       start
+    ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|link_up|link_down|ppp_up|ppp_down|waitrestart}"
+    ;;
+esac
