@@ -1,0 +1,54 @@
+Index: motion-20110826-051001/motion-dist.conf.in
+===================================================================
+--- motion-20110826-051001.orig/motion-dist.conf.in	2011-08-26 07:10:03.000000000 +0400
++++ motion-20110826-051001/motion-dist.conf.in	2012-10-30 20:00:27.486505392 +0400
+@@ -11,7 +11,7 @@
+ daemon on
+ 
+ # File to store the process ID, also called pid file. (default: not defined)
+-process_id_file /var/run/motion/motion.pid
++process_id_file /media/DISK_A1/system/var/run/motion/motion.pid
+ 
+ ############################################################
+ # Basic Setup Mode
+@@ -22,7 +22,7 @@
+ 
+ 
+ # Use a file to save logs messages, if not defined stderr and syslog is used. (default: not defined)
+-;logfile /tmp/motion.log
++;logfile /media/DISK_A1/system/var/tmp/motion.log
+ 
+ # Level of log messages [1..9] (EMR, ALR, CRT, ERR, WRN, NTC, ERR, DBG, ALL). (default: 6 / NTC)
+ log_level 6
+@@ -408,7 +408,7 @@
+ 
+ # Target base directory for pictures and films
+ # Recommended to use absolute path. (Default: current working directory)
+-target_dir /usr/local/apache2/htdocs/cam1
++target_dir /media/DISK_A1/motion
+ 
+ # File path for snapshots (jpeg or ppm) relative to target_dir
+ # Default: %v-%Y%m%d%H%M%S-snapshot
+@@ -696,22 +696,3 @@
+ # Output motion images to a video4linux loopback device
+ # The value '-' means next available (default: not defined)
+ ; motion_video_pipe value
+-
+-
+-##############################################################
+-# Thread config files - One for each camera.
+-# Except if only one camera - You only need this config file.
+-# If you have more than one camera you MUST define one thread
+-# config file for each camera in addition to this config file.
+-##############################################################
+-
+-# Remember: If you have more than one camera you must have one
+-# thread file for each camera. E.g. 2 cameras requires 3 files:
+-# This motion.conf file AND thread1.conf and thread2.conf.
+-# Only put the options that are unique to each camera in the
+-# thread config files.
+-; thread /usr/local/etc/thread1.conf
+-; thread /usr/local/etc/thread2.conf
+-; thread /usr/local/etc/thread3.conf
+-; thread /usr/local/etc/thread4.conf
+-
