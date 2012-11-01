@@ -1,20 +1,25 @@
 #!/bin/sh
 
 SYS=/media/DISK_A1/system
+PROG=$SYS/usr/bin/mjpg_streamer
 MODDIR=$SYS/lib/modules/2.6.23-rt
-MOTION=$SYS/usr/bin/motion
-CONFIG=$SYS/etc/motion.conf
+DEV=/dev/video0
+YUV=true #define if your cam supports ONLY yuv
+WWW=$SYS/www/webcam
+FPS=5
+RESOLUTION='640x480'
+PORT=9000
 DRIVER=uvcvideo #define uvcvideo, pwc (philips cams) ,sn9c102, cpia2
 DELAY=10 #seconds. using if "waitrestart" defined
 
 insmods () {
 echo Loading video drivers
 logger Loading video drivers
-insmod $MODDIR/v4l1-compat.ko
-insmod $MODDIR/v4l2-common.ko
-insmod $MODDIR/compat_ioctl32.ko
-insmod $MODDIR/vidodev.ko
-insmod $MODDIR/$DRIVER.ko
+insmod "$MODDIR/v4l1-compat.ko"
+insmod "$MODDIR/v4l2-common.ko"
+insmod "$MODDIR/compat_ioctl32.ko"
+insmod "$MODDIR/videodev.ko"
+insmod "$MODDIR/$DRIVER.ko"
 }
 
 rmmods () {
@@ -27,14 +32,20 @@ rmmod v4l2-common
 rmmod v4l1-compat
 }
 
+
 start () {
-insmods
-$MOTION -c $CONF
+    insmods
+    if $YUV; then
+        YARG='-y'
+    else
+        YARG=''
+    fi
+    $PROG -b -i "$SYS/usr/lib/input_uvc.so $YARG -d $DEV -f $FPS -r $RESOLUTION" -o "$SYS/usr/lib/output_http.so --www $WWW --port $PORT"
 }
 
 stop () {
-killall motion
-rmmods
+    killall -15 $PROG
+    rmmods
 }
 
 case "$1" in
@@ -58,7 +69,7 @@ case "$1" in
     ;;
     waitrestart)
        stop
-       sleep($DELAY)
+       sleep $DELAY 
        start
     ;;
     *)
