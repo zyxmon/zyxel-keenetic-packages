@@ -13,7 +13,7 @@ logger Loading video drivers
 insmod $MODDIR/v4l1-compat.ko
 insmod $MODDIR/v4l2-common.ko
 insmod $MODDIR/compat_ioctl32.ko
-insmod $MODDIR/vidodev.ko
+insmod $MODDIR/videodev.ko
 insmod $MODDIR/$DRIVER.ko
 }
 
@@ -58,7 +58,7 @@ case "$1" in
     ;;
     waitrestart)
        stop
-       sleep($DELAY)
+       sleep $DELAY
        start
     ;;
     *)
