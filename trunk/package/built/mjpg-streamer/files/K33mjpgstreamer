@@ -44,7 +44,7 @@ start () {
 }
 
 stop () {
-    killall -15 $PROG
+    killall -15 mjpg_streamer
     rmmods
 }
 
