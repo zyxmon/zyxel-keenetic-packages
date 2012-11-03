@@ -10,11 +10,11 @@ DELAY=10 #seconds. using if "waitrestart" defined
 insmods () {
 echo Loading video drivers
 logger Loading video drivers
-insmod $MODDIR/v4l1-compat.ko
-insmod $MODDIR/v4l2-common.ko
-insmod $MODDIR/compat_ioctl32.ko
-insmod $MODDIR/videodev.ko
-insmod $MODDIR/$DRIVER.ko
+insmod "$MODDIR/v4l1-compat.ko"
+insmod "$MODDIR/v4l2-common.ko"
+insmod "$MODDIR/compat_ioctl32.ko"
+insmod "$MODDIR/videodev.ko"
+insmod "$MODDIR/$DRIVER.ko"
 }
 
 rmmods () {
