@@ -2742,6 +2742,23 @@ Description:  mini-inetd: Waits on a TCP socket, spawns a subprocess for each
  incoming connection to handle the connection.  Can be used to test
  servers that expect to be launched from inetd.
 
+Package: minicom
+Version: 2.3-1
+Depends: libncurses
+Provides: 
+Source: package/built/minicom
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 74602
+Filename: minicom_2.3-1_keenetic.ipk
+Size: 75157
+MD5Sum: 48e1bee6c1d11762abe611f53fd96195
+Description:  Terminal emulation program
+
 Package: minidlna
 Version: 1.0.24-5
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
@@ -2778,7 +2795,7 @@ MD5Sum: 5365d7b13b6f5b983f2e716c4a4e2072
 Description:  Streaming application for Linux-UVC compatible webcams
 
 Package: motion
-Version: 20110826-051001-2
+Version: 20110826-051001-3
 Depends: libjpeg, kmod-video-core
 Provides: 
 Source: package/built/motion
@@ -2788,10 +2805,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 103259
-Filename: motion_20110826-051001-2_keenetic.ipk
-Size: 103788
-MD5Sum: db98a264c203c08236b16d66fe25d5c9
+Installed-Size: 102105
+Filename: motion_20110826-051001-3_keenetic.ipk
+Size: 102644
+MD5Sum: 9e125d9b15999a4d641c6ddf295aaaf2
 Description:  webcam motion sensing and logging
 
 Package: mtr
