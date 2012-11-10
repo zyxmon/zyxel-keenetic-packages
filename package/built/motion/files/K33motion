@@ -29,11 +29,12 @@ rmmod v4l1-compat
 
 start () {
 insmods
-$MOTION -c $CONF
+$MOTION -c $CONFIG
 }
 
 stop () {
 killall motion
+sleep 3
 rmmods
 }
 
@@ -46,7 +47,7 @@ case "$1" in
     ;;
     restart)
       stop
-      start    
+      start
     ;;
     link_up)
     ;;
