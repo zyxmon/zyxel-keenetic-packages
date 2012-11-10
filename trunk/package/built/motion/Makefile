@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=motion
 PKG_VERSION:=20110826-051001
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://www.lavrsen.dk/sources/motion-daily \
@@ -38,7 +38,8 @@ CONFIGURE_ARGS+= \
 	--without-jpeg-mmx \
 	--without-sdl \
 	--without-mysql \
-	--without-pgsql
+	--without-pgsql \
+	--without-sqlite3 \
 
 define Package/motion/install
 	$(INSTALL_DIR) $(1)/etc
