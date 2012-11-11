@@ -2854,7 +2854,7 @@ Description:  GNU nano (Nano's ANOther editor, or Not ANOther editor) is an enha
  of the Pico text editor.
 
 Package: ncdc
-Version: 1.13-1
+Version: 1.14-1
 Depends: libncursesw, bzip2, libgnutls, libsqlite3, glib2, libiconv-full, libgmp
 Provides: 
 Source: package/built/ncdc
@@ -2864,10 +2864,10 @@ Essential: no
 Priority: optional
 Maintainer: Entware team, wl500g-repo.googlecode.com
 Architecture: keenetic
-Installed-Size: 165465
-Filename: ncdc_1.13-1_keenetic.ipk
-Size: 166036
-MD5Sum: c4b2635d5e5e07bf86c1ff0092f99388
+Installed-Size: 166221
+Filename: ncdc_1.14-1_keenetic.ipk
+Size: 166725
+MD5Sum: 665d0c0c952d2f6a141c197344a00fe2
 Description:  ncdc is a modern and lightweight direct connect client with a friendly
  ncurses interface.
 
