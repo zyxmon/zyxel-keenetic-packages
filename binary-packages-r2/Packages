@@ -2670,20 +2670,20 @@ Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user
  with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
 Package: microdc2
-Version: 0.15.6-3
-Depends: libiconv-full, libxml2, libreadline, libncurses, iconv
+Version: 0.15.6-20121011-1
+Depends: libiconv-full, libxml2, libreadline, libncurses
 Provides: 
 Source: package/built/microdc2
 Section: net
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Maintainer: Entware team, wl500g-repo.googlecode.com
 Architecture: keenetic
-Installed-Size: 147375
-Filename: microdc2_0.15.6-3_keenetic.ipk
-Size: 147849
-MD5Sum: cdc8c87a5d480f8d2edf32390cc3d6cc
+Installed-Size: 149128
+Filename: microdc2_0.15.6-20121011-1_keenetic.ipk
+Size: 149581
+MD5Sum: 9d8eaea7ab00a09bc2d2780752beff71
 Description:  A command-line based Direct Connect client.
 
 Package: microperl
