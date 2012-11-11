@@ -1,0 +1,36 @@
+Index: ncdc-1.14/Makefile.am
+===================================================================
+--- ncdc-1.14.orig/Makefile.am	2012-11-04 14:00:45.000000000 +0400
++++ ncdc-1.14/Makefile.am	2012-11-10 20:43:24.010014110 +0400
+@@ -1,31 +1,4 @@
+-EXTRA_DIST=ChangeLog doc/ncdc.pod.in
+-CLEANFILES=doc/ncdc.1 doc/ncdc.pod
+-
+-man_MANS=doc/ncdc.1
+-
+-noinst_PROGRAMS=gendoc
+-gendoc_SOURCES=doc/gendoc.c
+-
+-doc/ncdc.pod: $(srcdir)/doc/ncdc.pod.in gendoc$(EXEEXT)
+-	$(AM_V_GEN)./gendoc$(EXEEXT) <"$(srcdir)/doc/ncdc.pod.in" >doc/ncdc.pod
+-
+-doc/ncdc.1: doc/ncdc.pod Makefile
+-if USE_POD2MAN
+-	$(AM_V_GEN)pod2man --center "ncdc manual" --release "@PACKAGE@-@VERSION@" doc/ncdc.pod >doc/ncdc.1
+-endif
+-
+-
+-if HAVE_MH
+-mkhdr=makeheaders
+-mkhdr_dep=
+-else
+ mkhdr=./makeheaders$(EXEEXT)
+-mkhdr_dep=makeheaders$(EXEEXT)
+-noinst_PROGRAMS+=makeheaders
+-endif
+-makeheaders_SOURCES=deps/makeheaders.c
+-
+-
+ 
+ bin_PROGRAMS=ncdc
+ ncdc_SOURCES=\
