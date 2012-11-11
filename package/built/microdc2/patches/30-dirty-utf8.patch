@@ -1,8 +1,10 @@
---- a/lib/quotearg.c
-+++ b/lib/quotearg.c
-@@ -405,6 +405,25 @@ quotearg_buffer_restyled (char *buffer, 
+Index: microdc2-0.15.6-20121011/lib/quotearg.c
+===================================================================
+--- microdc2-0.15.6-20121011.orig/lib/quotearg.c	2012-11-11 15:24:10.000000000 +0400
++++ microdc2-0.15.6-20121011/lib/quotearg.c	2012-11-11 15:30:26.755376089 +0400
+@@ -495,6 +495,25 @@
  
- 	    bool printable;
+             bool printable;
  
 +            /* Dirty hack - zyxmon. Test if UTF-8 2 or 3 bytes char */
 +            if (((c & 0xe0) == 0xc0) && ((arg[i+1] & 0xc0) == 0x80))
@@ -23,6 +25,6 @@
 +                goto store_c;
 +            }
 +
- 	    if (unibyte_locale)
- 	      {
- 		m = 1;
+             if (unibyte_locale)
+             {
+                 m = 1;

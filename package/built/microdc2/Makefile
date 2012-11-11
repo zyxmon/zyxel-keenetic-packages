@@ -1,15 +1,24 @@
+#
+# Copyright (C) 2011-2012 Entware
+#
+# This is free software, licensed under the GNU General Public License v2.
+# See /LICENSE for more information.
+#
+
 include $(TOPDIR)/rules.mk
 
-
 PKG_NAME:=microdc2
-PKG_VERSION:=0.15.6
-PKG_RELEASE:=3
+PKG_VERSION:=0.15.6-20121011
+PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://savio.km.ua/download/microdc2
-PKG_MD5SUM:=
+PKG_REV:=0b9add819d08edb7d70bf0dde53e0b30a7bdc15d
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
+PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=git://github.com/jnwatts/microdc2.git
+PKG_SOURCE_VERSION:=$(PKG_REV)
+
 PKG_INSTALL:=1
-#PKG_FIXUP:=libtool
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/nls.mk
@@ -17,9 +26,11 @@ include $(INCLUDE_DIR)/nls.mk
 define Package/microdc2
 	SECTION:=net
 	CATEGORY:=Network
+	SUBMENU:=P2P
+	DEPENDS:=$(ICONV_DEPENDS) +libxml2 +libreadline +libncurses
 	TITLE:=microdc2
-	DEPENDS:=$(ICONV_DEPENDS) +libxml2 +libreadline +libncurses +iconv
-	URL:=http://corsair626.no-ip.org/microdc
+	URL:=https://github.com/jnwatts/microdc2
+	MAINTAINER:=Entware team, wl500g-repo.googlecode.com
 endef
 
 define Package/microdc2/description
@@ -31,9 +42,14 @@ CONFIGURE_PREFIX:=$(PREFIX_ZYX)
 CONFIGURE_ARGS += \
 	--sysconfdir="$(ROOT_ZYX)/etc" \
 	--with-libiconv-prefix="$(ICONV_PREFIX)" \
-	--disable-static \
-	--disable-rparh
+	--with-libintl-prefix="$(INTL_PREFIX)" \
+	--disable-rpath
 
+TARGET_LDFLAGS += -lz
+
+define Package/microdc2/conffiles
+/etc/microdc2/config
+endef
 
 define Build/Compile
 	rm -rf $(PKG_INSTALL_DIR)
@@ -47,6 +63,8 @@ endef
 define Package/microdc2/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(CP) $(PKG_INSTALL_DIR)$(ROOT_ZYX)/usr/bin/* $(1)/usr/bin/
+	$(INSTALL_DIR) $(1)/etc/microdc2
+	$(INSTALL_CONF) ./files/microdc2.conf $(1)/etc/microdc2/config
 endef
 
 $(eval $(call BuildPackage,microdc2))
