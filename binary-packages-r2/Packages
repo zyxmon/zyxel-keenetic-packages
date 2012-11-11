@@ -3209,6 +3209,23 @@ Size: 5230
 MD5Sum: a19e17c73ed5dfe9fb08915fe68cc3eb
 Description:  Simple advisory file locking
 
+Package: perl-net-telnet
+Version: 3.03-1
+Depends: perl
+Provides: 
+Source: package/built/perl-net-telnet
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 16634
+Filename: perl-net-telnet_3.03-1_keenetic.ipk
+Size: 17210
+MD5Sum: 4df3f91136cb67b824b30354275268cf
+Description:  Telnet client
+
 Package: perl-uri
 Version: 1.36-1
 Depends: perl
