@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <sys/ioctl.h>
 
-#include "videodev.h"
+#include <linux/videodev.h>
 
 #include "struct-dump.h"
 #include "struct-v4l.h"
