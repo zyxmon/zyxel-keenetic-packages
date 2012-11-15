@@ -104,7 +104,7 @@ MD5Sum: d6f8ee005728d8c56dca17edc1a49023
 Description:  Fidonet mailer
 
 Package: busybox
-Version: 1.19.4-2
+Version: 1.19.4-3
 Depends: 
 Provides: 
 Source: package/busybox
@@ -114,10 +114,10 @@ Essential: no
 Priority: optional
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keenetic
-Installed-Size: 169786
-Filename: busybox_1.19.4-2_keenetic.ipk
-Size: 170236
-MD5Sum: 3e6aafbcc15c1c4c73c45107ec1e9c4e
+Installed-Size: 171588
+Filename: busybox_1.19.4-3_keenetic.ipk
+Size: 172028
+MD5Sum: 02e832255d69b49a2043cc0b8404c761
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
  This package is built for usb.
