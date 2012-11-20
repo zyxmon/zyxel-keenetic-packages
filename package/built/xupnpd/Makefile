@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=xupnpd
-PKG_REV:=326
+PKG_REV:=346
 PKG_VERSION:=$(PKG_REV)
 PKG_RELEASE:=1
 
@@ -69,8 +69,9 @@ define Package/xupnpd/install
 	$(INSTALL_DIR) $(1)/usr/share/xupnpd/config
 	$(INSTALL_DIR) $(1)/usr/share/xupnpd/playlists
 	$(CP) $(PKG_BUILD_DIR)/playlists/* $(1)/usr/share/xupnpd/playlists
-	$(INSTALL_DIR) $(1)/usr/share/xupnpd/playlists/example
-	$(CP) $(PKG_BUILD_DIR)/playlists/example/* $(1)/usr/share/xupnpd/playlists/example
+	$(INSTALL_DIR) $(1)/usr/share/xupnpd/profiles
+	$(CP) $(PKG_BUILD_DIR)/profiles/* $(1)/usr/share/xupnpd/profiles
+	$(INSTALL_DIR) $(1)/usr/share/xupnpd/localmedia
 endef
 
 $(eval $(call BuildPackage,xupnpd))
