@@ -86,6 +86,24 @@ Description:  Bash is an sh-compatible command language interpreter that execute
  commands read from the standard input or from a file. Bash also 
  incorporates useful features from the Korn and C shells (ksh and csh).
 
+Package: bc
+Version: 1.06.95-1
+Depends: libreadline, libncurses
+Provides: 
+Source: package/built/bc
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 34586
+Filename: bc_1.06.95-1_keenetic.ipk
+Size: 35368
+MD5Sum: 887d8537e215877c59534cd9be868298
+Description:  bc is a language that supports arbitrary precision numbers with 
+ interactive execution of statements.
+
 Package: binkd
 Version: 1.0a-561-1
 Depends: bzip2
