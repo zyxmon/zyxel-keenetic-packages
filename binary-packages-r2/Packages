@@ -2926,6 +2926,24 @@ Size: 353596
 MD5Sum: cee6171e71890a1cf40ff7b7afbaa63d
 Description:  netatalk
 
+Package: netcat
+Version: 0.7.1-2
+Depends: 
+Provides: 
+Source: package/built/netcat
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 15638
+Filename: netcat_0.7.1-2_keenetic.ipk
+Size: 16404
+MD5Sum: 2c77b80d74312898322b308c0ca47a7f
+Description:  Netcat is a featured networking utility which reads and writes data across network connections, using the TCP/IP protocol. 
+ It is designed to be a reliable "back-end" tool that can be used directly or easily driven by other programs and scripts. At the same time, it is a feature-rich network debugging and exploration tool, since it can create almost any kind of connection you would need and has several interesting built-in capabilities.
+
 Package: nettle
 Version: 2.5-1
 Depends: 
@@ -7240,7 +7258,7 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 326-1
+Version: 346-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
@@ -7250,10 +7268,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 117451
-Filename: xupnpd_326-1_keenetic.ipk
-Size: 118144
-MD5Sum: 00981f8ed0472f1317bb6d41f59f61e4
+Installed-Size: 128695
+Filename: xupnpd_346-1_keenetic.ipk
+Size: 129141
+MD5Sum: 5c2d6896ab3f48f50abcb7a140296235
 Description:  eXtensible UPnP agent
 
 Package: zip
