@@ -6979,6 +6979,159 @@ Size: 92618
 MD5Sum: 0575e57df3ae92ebaf69e8a38e09f66a
 Description:  Ext2 Filesystem tune utility
 
+Package: twisted-conch
+Version: 2.5.0-1
+Depends: python-mini, twisted
+Provides: 
+Source: package/built/twisted
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 109648
+Filename: twisted-conch_2.5.0-1_keenetic.ipk
+Size: 110369
+MD5Sum: ca521bfd2e631d3d676d2c4cff78dbf8
+Description:  Twisted - Conch
+
+Package: twisted-lore
+Version: 2.5.0-1
+Depends: python-mini, twisted
+Provides: 
+Source: package/built/twisted
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 25320
+Filename: twisted-lore_2.5.0-1_keenetic.ipk
+Size: 25941
+MD5Sum: f4c4a786f42e34ba1e9fa6d64a08f183
+Description:  Twisted - Lore
+
+Package: twisted-mail
+Version: 2.5.0-1
+Depends: python-mini, twisted
+Provides: 
+Source: package/built/twisted
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 92248
+Filename: twisted-mail_2.5.0-1_keenetic.ipk
+Size: 92972
+MD5Sum: a651b0512e7984018e0f539217fdc749
+Description:  Twisted - Mail
+
+Package: twisted-names
+Version: 2.5.0-1
+Depends: python-mini, twisted
+Provides: 
+Source: package/built/twisted
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 25915
+Filename: twisted-names_2.5.0-1_keenetic.ipk
+Size: 26535
+MD5Sum: a1a20ea2c89394ae190637f09887410a
+Description:  Twisted - Names
+
+Package: twisted-news
+Version: 2.5.0-1
+Depends: python-mini, twisted
+Provides: 
+Source: package/built/twisted
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 15808
+Filename: twisted-news_2.5.0-1_keenetic.ipk
+Size: 16375
+MD5Sum: 293ce61f7f40af008b53c9dfafae7e34
+Description:  Twisted - News
+
+Package: twisted-runner
+Version: 2.5.0-1
+Depends: python-mini, twisted
+Provides: 
+Source: package/built/twisted
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8663
+Filename: twisted-runner_2.5.0-1_keenetic.ipk
+Size: 9301
+MD5Sum: cac473ebdbad2782a5daafe4806b1956
+Description:  Twisted - Runner
+
+Package: twisted-web
+Version: 2.5.0-1
+Depends: python-mini, twisted
+Provides: 
+Source: package/built/twisted
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 127660
+Filename: twisted-web_2.5.0-1_keenetic.ipk
+Size: 128328
+MD5Sum: 686bb945858baecf63c4f84d91e9e639
+Description:  Twisted - Web
+
+Package: twisted-words
+Version: 2.5.0-1
+Depends: python-mini, twisted
+Provides: 
+Source: package/built/twisted
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 142618
+Filename: twisted-words_2.5.0-1_keenetic.ipk
+Size: 143361
+MD5Sum: 7def3635cf30aaa9e7bd18f7deaaf1f2
+Description:  Twisted - Words
+
+Package: twisted
+Version: 2.5.0-1
+Depends: python-mini, zope-interface
+Provides: 
+Source: package/built/twisted
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 524815
+Filename: twisted_2.5.0-1_keenetic.ipk
+Size: 525496
+MD5Sum: 5a9cb794389e5e0776e648b10a84b6a4
+Description:  Python networking engine
+
 Package: uclibcxx
 Version: 0.2.3-1
 Depends: 
@@ -7311,4 +7464,21 @@ Description:  This is InfoZIP's zip program. It produces files that are fully
  compatible with the popular PKZIP program; however, the command line 
  options are not identical. In other words, the end result is the same, 
  but the methods differ.
+
+Package: zope-interface
+Version: 2.5.0-1
+Depends: python-mini
+Provides: 
+Source: package/built/twisted
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 73052
+Filename: zope-interface_2.5.0-1_keenetic.ipk
+Size: 73766
+MD5Sum: 4df6079dd124d829993b9da02ecfe792
+Description:  Zope interface
 
