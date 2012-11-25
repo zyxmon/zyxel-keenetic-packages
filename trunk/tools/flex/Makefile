@@ -14,15 +14,11 @@ PKG_SOURCE_URL:=@SF/$(PKG_NAME)
 PKG_MD5SUM:=10714e50cea54dc7a227e3eddcd44d57
 PKG_CAT:=bzcat
 
+HOST_BUILD_PARALLEL:=1
+
 include $(INCLUDE_DIR)/host-build.mk
 
-define Host/Compile
-	$(MAKE) -C $(HOST_BUILD_DIR)
-endef
-
-define Host/Install
-	$(MAKE) -C $(HOST_BUILD_DIR) install
-endef
+HOST_LDFLAGS += $(HOST_STATIC_LINKING)
 
 define Host/Clean
 	-$(MAKE) -C $(HOST_BUILD_DIR) uninstall

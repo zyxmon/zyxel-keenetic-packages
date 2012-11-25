@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2010 OpenWrt.org
+# Copyright (C) 2010-2012 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -7,14 +7,17 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qemu
-PKG_VERSION:=0.12.5
-PKG_RELEASE:=2
+PKG_VERSION:=0.14.1
+PKG_RELEASE:=1
 
 PKG_SOURCE_URL:=http://download.savannah.gnu.org/releases/qemu/
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_MD5SUM:=1d02ee0a04dfae2894340273372c1de4
+PKG_MD5SUM:=b6c713a8db638e173af53a62d5178640
 
 include $(INCLUDE_DIR)/host-build.mk
+
+HOST_CFLAGS += -I$(STAGING_DIR_HOST)/include/e2fsprogs
+HOST_LDFLAGS += $(HOST_STATIC_LINKING)
 
 define Host/Configure
 	(cd $(HOST_BUILD_DIR); \

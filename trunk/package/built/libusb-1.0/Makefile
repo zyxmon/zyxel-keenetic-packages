@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=libusb-1.0
 PKG_VERSION:=1.0.8
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=libusb-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://downloads.sourceforge.net/project/libusb/libusb-1.0/libusb-$(PKG_VERSION)
@@ -21,18 +21,18 @@ include $(INCLUDE_DIR)/package.mk
 define Package/libusb-1.0
   SECTION:=libs
   CATEGORY:=Libraries
-  TITLE:=libusb-1.0
+  TITLE:=A library for accessing Linux USB devices (non-legacy)
   URL:=http://libusb.wiki.sourceforge.net/
 endef
 
 define Package/libusb-1.0/description
-libusb-1.0
+  libusb is a C library that gives applications easy access to USB devices on
+  many different operating systems.
 endef
 
 TARGET_CFLAGS += $(FPIC)
 
 define Build/InstallDev
-	$(MAKE) install
 	$(INSTALL_DIR) $(1)/usr/include
 	$(INSTALL_DIR) $(1)/usr/include/libusb-1.0
 	$(CP) $(PKG_BUILD_DIR)/libusb/libusb.h $(1)/usr/include/libusb-1.0/

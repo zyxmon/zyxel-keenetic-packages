@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nettle
 PKG_VERSION:=2.5
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
@@ -19,6 +19,7 @@ define Package/nettle
   CATEGORY:=Libraries
   TITLE:=The Nettle package contains the low-level cryptographic library that is designed to fit easily in many contexts.
   URL:=http://www.linuxfromscratch.org/blfs/view/svn/postlfs/nettle.html
+  DEPENDS:=libgmp
 endef
 
 define Package/nettle-tools

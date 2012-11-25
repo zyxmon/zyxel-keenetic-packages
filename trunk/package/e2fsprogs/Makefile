@@ -8,8 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=e2fsprogs
-PKG_VERSION:=1.42.2
-PKG_MD5SUM:=04f4561a54ad0419248316a00c016baa
+PKG_VERSION:=1.42.4
+PKG_MD5SUM:=b6e296f210d642361b7394437ff0f318
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
@@ -30,17 +30,18 @@ $(call Package/e2fsprogs/Default)
   SECTION:=utils
   CATEGORY:=Utilities
   TITLE:=Ext2/3/4 filesystem utilities
-  DEPENDS:=+libblkid +libuuid +libext2fs +libcom_err
+  DEPENDS:=+libblkid +libuuid +libext2fs
 endef
 
 define Package/e2fsprogs/description
  This package contains essential ext2 filesystem utilities which consists of
- e2fsck, mke2fs, debugfs, dumpe2fs, tune2fs, and most of the other core ext2
+ e2fsck, mke2fs, tune2fs, and most of the other core ext2
  filesystem utilities.
 endef
 
 define Package/libext2fs
 $(call Package/e2fsprogs/Default)
+  DEPENDS:=+libcom_err
   SECTION:=libs
   CATEGORY:=Libraries
   TITLE:=ext2/3/4 filesystem library

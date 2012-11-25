@@ -9,11 +9,14 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=python
 PKG_VERSION:=2.7.3
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=Python-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://www.python.org/ftp/python/$(PKG_VERSION)
 PKG_MD5SUM:=62c4c1699170078c469f79ddfed21bc0
+
+PKG_LICENSE:=PSF
+PKG_LICENSE_FILES:=LICENSE Modules/_ctypes/libffi_msvc/LICENSE Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi/LICENSE Modules/_ctypes/libffi_osx/LICENSE Tools/pybench/LICENSE
 
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
@@ -121,6 +124,12 @@ define Package/python-readline
 $(call Package/python/Default)
  TITLE:=Python support for readline
  DEPENDS+=+python-mini +libreadline +libncurses @BROKEN
+endef
+
+define Package/python-ncurses
+$(call Package/python/Default)
+ TITLE:=Python support for readline
+ DEPENDS+=+python-mini +libncurses
 endef
 
 MAKE_FLAGS:=\
@@ -235,6 +244,10 @@ define PyPackage/python/filespec
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/array.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/binascii.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/cStringIO.so
+-|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_curses.so
+-|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_curses_panel.so
+-|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/dbm.so
+-|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_bsddb.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/fcntl.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/grp.so
 -|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/itertools.so
@@ -435,6 +448,11 @@ define PyPackage/python-readline/filespec
 +|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/readline.so
 endef
 
+define PyPackage/python-ncurses/filespec
++|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_curses.so
++|/usr/lib/python$(PYTHON_VERSION)/lib-dynload/_curses_panel.so
+endef
+
 define Host/Configure
 	-$(MAKE) -C $(HOST_BUILD_DIR) distclean
 	(cd $(HOST_BUILD_DIR); autoreconf --force --install || exit 0)
@@ -447,9 +465,9 @@ define Host/Configure
 endef
 
 define Host/Compile
-	$(MAKE) $(HOST_JOBS) -C $(HOST_BUILD_DIR) \
+	+$(MAKE) $(HOST_JOBS) -C $(HOST_BUILD_DIR) \
 		python Parser/pgen
-	$(MAKE) $(HOST_JOBS) -C $(HOST_BUILD_DIR) \
+	+$(MAKE) $(HOST_JOBS) -C $(HOST_BUILD_DIR) \
 		HOSTPYTHON=$(HOST_BUILD_DIR)/python \
 		sharedmods
 endef
@@ -476,6 +494,7 @@ $(eval $(call PyPackage,python-shutil))
 $(eval $(call PyPackage,python-sqlite3))
 $(eval $(call PyPackage,python-gdbm))
 $(eval $(call PyPackage,python-readline))
+$(eval $(call PyPackage,python-ncurses))
 
 $(eval $(call BuildPackage,python))
 $(eval $(call BuildPackage,python-mini))
@@ -488,3 +507,4 @@ $(eval $(call BuildPackage,python-shutil))
 $(eval $(call BuildPackage,python-sqlite3))
 $(eval $(call BuildPackage,python-gdbm))
 $(eval $(call BuildPackage,python-readline))
+$(eval $(call BuildPackage,python-ncurses))
