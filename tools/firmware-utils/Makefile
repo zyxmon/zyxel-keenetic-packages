@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2006-2008 OpenWrt.org
+# Copyright (C) 2006-2012 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -12,9 +12,8 @@ include $(INCLUDE_DIR)/host-build.mk
 include $(INCLUDE_DIR)/kernel.mk
 
 define cc
-	$(CC) $(HOST_CFLAGS) -include endian.h -o $(HOST_BUILD_DIR)/bin/$(firstword $(1)) $(foreach src,$(1),src/$(src).c) $(2)
+	$(HOSTCC) $(HOST_CFLAGS) -include endian.h $(HOST_STATIC_LINKING) -o $(HOST_BUILD_DIR)/bin/$(firstword $(1)) $(foreach src,$(1),src/$(src).c) $(2)
 endef
-
 
 define Host/Compile
 	mkdir -p $(HOST_BUILD_DIR)/bin
@@ -22,6 +21,7 @@ define Host/Compile
 	$(call cc,trx)
 	$(call cc,motorola-bin)
 	$(call cc,dgfirmware)
+	$(call cc,mkdir615h1 md5)
 	$(call cc,trx2usr)
 	$(call cc,ptgen)
 	$(call cc,airlink)
@@ -33,7 +33,7 @@ define Host/Compile
 	$(call cc,mkcasfw)
 	$(call cc,mkfwimage,-lz)
 	$(call cc,mkfwimage2,-lz)
-	$(call cc,imagetag)
+	$(call cc,imagetag imagetag_cmdline)
 	$(call cc,add_header)
 	$(call cc,makeamitbin)
 	$(call cc,encode_crc)
@@ -48,6 +48,20 @@ define Host/Compile
 	$(call cc,mktitanimg)
 	$(call cc,mkchkimg)
 	$(call cc,mkzcfw cyg_crc32)
+	$(call cc,spw303v)
+	$(call cc,trx2edips)
+	$(call cc,xorimage)
+	$(call cc,buffalo-enc buffalo-lib, -Wall)
+	$(call cc,buffalo-tag buffalo-lib, -Wall)
+	$(call cc,buffalo-tftp buffalo-lib, -Wall)
+	$(call cc,mkwrgimg md5, -Wall)
+	$(call cc,mkedimaximg)
+	$(call cc,mkbrncmdline)
+	$(call cc,mkbrnimg)
+	$(call cc,mkdapimg)
+	$(call cc, mkcameofw, -Wall)
+	$(call cc,seama md5)
+	$(call cc,fix-u-media-header cyg_crc32,-Wall)
 endef
 
 define Host/Install

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2006-2011 OpenWrt.org
+# Copyright (C) 2006-2012 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -9,17 +9,16 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=sane-backends
 PKG_VERSION:=1.0.22
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=ftp://ftp.sane-project.org/pub/sane/$(PKG_NAME)-$(PKG_VERSION) \
 	https://alioth.debian.org/frs/download.php/3503
 PKG_MD5SUM:=fadf56a60f4776bfb24491f66b617cf5
 
-PKG_BUILD_DEPENDS:=libusb
-
-PKG_FIXUP:=libtool
+PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
+PCK_BUILD_DEPENDS:=libusb
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -36,7 +35,7 @@ define Package/sane-backends
 $(call Package/sane-backends/Default)
   SECTION:=utils
   CATEGORY:=Utilities
-  DEPENDS:=+sane-libs +libtiff
+  DEPENDS:=+sane-libs
   TITLE+= (backends)
 endef
 
@@ -49,7 +48,7 @@ define Package/sane-libs
   $(call Package/sane-backends/Default)
   SECTION:=libs
   CATEGORY:=Libraries
-  DEPENDS:=+libjpeg
+  DEPENDS:=+libjpeg +libtiff +libv4l
   TITLE+= (libraries)
 endef
 

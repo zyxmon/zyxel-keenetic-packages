@@ -82,7 +82,7 @@ ifeq ($(CONFIG_EXTERNAL_TOOLCHAIN),)
   GNU_TARGET_NAME=$(OPTIMIZE_FOR_CPU)-openwrt-linux
   DIR_SUFFIX:=_$(LIBC)-$(LIBCV)$(if $(CONFIG_arm),_eabi)
   BUILD_DIR:=$(BUILD_DIR_BASE)/target-$(ARCH)$(ARCH_SUFFIX)$(DIR_SUFFIX)$(if $(BUILD_SUFFIX),_$(BUILD_SUFFIX))
-  STAGING_DIR:=$(TOPDIR)/staging_dir/target-$(ARCH)$(ARCH_SUFFIX)$(DIR_SUFFIX)
+  STAGING_DIR:=$(TOPDIR)/staging_dir/target-$(ARCH)$(ARCH_SUFFIX)$(DIR_SUFFIX)$(if $(BUILD_SUFFIX),_$(BUILD_SUFFIX))
   BUILD_DIR_TOOLCHAIN:=$(BUILD_DIR_BASE)/toolchain-$(ARCH)$(ARCH_SUFFIX)_gcc-$(GCCV)$(DIR_SUFFIX)
   TOOLCHAIN_DIR:=$(TOPDIR)/staging_dir/toolchain-$(ARCH)$(ARCH_SUFFIX)_gcc-$(GCCV)$(DIR_SUFFIX)
   PACKAGE_DIR:=$(BIN_DIR)/packages
@@ -94,7 +94,7 @@ else
   endif
   REAL_GNU_TARGET_NAME=$(GNU_TARGET_NAME)
   BUILD_DIR:=$(BUILD_DIR_BASE)/target-$(GNU_TARGET_NAME)$(if $(BUILD_SUFFIX),_$(BUILD_SUFFIX))
-  STAGING_DIR:=$(TOPDIR)/staging_dir/target-$(GNU_TARGET_NAME)
+  STAGING_DIR:=$(TOPDIR)/staging_dir/target-$(GNU_TARGET_NAME)$(if $(BUILD_SUFFIX),_$(BUILD_SUFFIX))
   BUILD_DIR_TOOLCHAIN:=$(BUILD_DIR_BASE)/toolchain-$(GNU_TARGET_NAME)
   TOOLCHAIN_DIR:=$(TOPDIR)/staging_dir/toolchain-$(GNU_TARGET_NAME)
   PACKAGE_DIR:=$(BIN_DIR)/packages
@@ -105,9 +105,11 @@ TARGET_ROOTFS_DIR?=$(if $(call qstrip,$(CONFIG_TARGET_ROOTFS_DIR)),$(call qstrip
 TARGET_DIR:=$(TARGET_ROOTFS_DIR)/root-$(BOARD)
 STAGING_DIR_ROOT:=$(STAGING_DIR)/root-$(BOARD)
 BUILD_LOG_DIR:=$(TOPDIR)/logs
+PKG_INFO_DIR := $(STAGING_DIR)/pkginfo
 
-TARGET_PATH:=$(STAGING_DIR_HOST)/bin:$(PATH)
+TARGET_PATH:=$(STAGING_DIR_HOST)/bin:$(subst $(space),:,$(filter-out .,$(filter-out ./,$(subst :,$(space),$(PATH)))))
 TARGET_CFLAGS:=$(TARGET_OPTIMIZATION)$(if $(CONFIG_DEBUG), -g3)
+TARGET_CXXFLAGS = $(TARGET_CFLAGS)
 TARGET_CPPFLAGS:=-I$(STAGING_DIR)/usr/include -I$(STAGING_DIR)/include
 TARGET_LDFLAGS:=-L$(STAGING_DIR)/usr/lib -L$(STAGING_DIR)/lib
 ifneq ($(CONFIG_EXTERNAL_TOOLCHAIN),)
@@ -148,7 +150,7 @@ ifndef DUMP
       ifneq ($(TOOLCHAIN_LIB_DIRS),)
         TARGET_LDFLAGS+= $(patsubst %,-L%,$(TOOLCHAIN_LIB_DIRS))
       endif
-      TOOLCHAIN_DIR:=$(TOOLCHAIN_ROOT_DIR)
+      TARGET_PATH:=$(TOOLCHAIN_DIR)/bin:$(TARGET_PATH)
     endif
   endif
 endif
@@ -170,10 +172,13 @@ PKG_CONFIG:=$(STAGING_DIR_HOST)/bin/pkg-config
 export PKG_CONFIG
 
 HOSTCC:=gcc
-HOST_CFLAGS:=-O2 -I$(STAGING_DIR_HOST)/include
+HOST_CPPFLAGS:=-I$(STAGING_DIR_HOST)/include
+HOST_CFLAGS:=-O2 $(HOST_CPPFLAGS)
 HOST_LDFLAGS:=-L$(STAGING_DIR_HOST)/lib
 
 TARGET_CC:=$(TARGET_CROSS)gcc
+TARGET_AR:=$(TARGET_CROSS)ar
+TARGET_RANLIB:=$(TARGET_CROSS)ranlib
 TARGET_CXX:=$(if $(CONFIG_INSTALL_LIBSTDCPP),$(TARGET_CROSS)g++,no)
 KPATCH:=$(SCRIPT_DIR)/patch-kernel.sh
 SED:=$(STAGING_DIR_HOST)/bin/sed -i -e
@@ -185,9 +190,17 @@ INSTALL_DIR:=install -d -m0755
 INSTALL_DATA:=install -m0644
 INSTALL_CONF:=install -m0600
 
+TARGET_CC_NOCACHE:=$(TARGET_CC)
+TARGET_CXX_NOCACHE:=$(TARGET_CXX)
+HOSTCC_NOCACHE:=$(HOSTCC)
+export TARGET_CC_NOCACHE
+export TARGET_CXX_NOCACHE
+export HOSTCC_NOCACHE
+
 ifneq ($(CONFIG_CCACHE),)
-  TARGET_CC:= ccache $(TARGET_CC)
-  TARGET_CXX:= ccache $(TARGET_CXX)
+  TARGET_CC:= ccache_cc
+  TARGET_CXX:= ccache_cxx
+  HOSTCC:= ccache $(HOSTCC)
 endif
 
 TARGET_CONFIGURE_OPTS = \
@@ -217,9 +230,12 @@ else
     endif
   endif
   RSTRIP:= \
+    export CROSS="$(TARGET_CROSS)" \
+		$(if $(CONFIG_KERNEL_KALLSYMS),NO_RENAME=1) \
+		$(if $(CONFIG_KERNEL_PROFILING),KEEP_SYMBOLS=1); \
     NM="$(TARGET_CROSS)nm" \
     STRIP="$(STRIP)" \
-    STRIP_KMOD="$(TARGET_CROSS)strip --strip-unneeded -R .comment -R .pdr -R .mdebug.abi32 -R .note.gnu.build-id -R .gnu.attributes -R .reginfo -x" \
+    STRIP_KMOD="$(SCRIPT_DIR)/strip-kmod.sh" \
     $(SCRIPT_DIR)/rstrip.sh
 endif
 

@@ -38,7 +38,7 @@ ifdef CONFIG_USE_MKLIBS
 		file -r -N -F '' {} + | \
 		awk ' /shared object/ { print $$1 }' >> $(TMP_DIR)/mklibs-progs
 	mkdir -p $(TMP_DIR)/mklibs-out
-	$(STAGING_DIR_HOST)/bin/mklibs.py -D \
+	$(STAGING_DIR_HOST)/bin/mklibs -D \
 		-d $(TMP_DIR)/mklibs-out \
 		--sysroot $(STAGING_DIR_ROOT) \
 		-L /lib \
@@ -81,7 +81,7 @@ $(curdir)/rootfs-prepare: $(TMP_DIR)/.build
 	$(call mklibs)
 
 $(curdir)/index: FORCE
-	@(cd $(PACKAGE_DIR); $(SCRIPT_DIR)/ipkg-make-index.sh . > Packages && \
+	@(cd $(PACKAGE_DIR); $(SCRIPT_DIR)/ipkg-make-index.sh . 2>&1 > Packages && \
 		gzip -9c Packages > Packages.gz \
 	)
 

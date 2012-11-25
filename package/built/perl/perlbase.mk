@@ -381,7 +381,7 @@ $(eval $(call BuildPackage,perlbase-data))
 define Package/perlbase-db
 $(call Package/perlbase-template)
 TITLE:=DB perl module
-DEPENDS+= +libdb47
+DEPENDS+= +libdb51
 endef
 
 define Package/perlbase-db/install
@@ -394,7 +394,7 @@ $(eval $(call BuildPackage,perlbase-db))
 define Package/perlbase-db-file
 $(call Package/perlbase-template)
 TITLE:=DB_File perl module
-DEPENDS+= +libdb47
+DEPENDS+= +libdb51
 endef
 
 define Package/perlbase-db-file/install

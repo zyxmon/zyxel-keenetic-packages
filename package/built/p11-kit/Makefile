@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=p11-kit
 PKG_VERSION:=0.13
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)_$(PKG_VERSION).orig.tar.gz
@@ -20,6 +20,7 @@ define Package/p11-kit
   CATEGORY:=Development
   TITLE:=PKCS#11 is a standard for accessing crypto objects like keys and certificates and performing cryptographic operations on them. It's often used together with smart cards.
   URL:=http://p11-glue.freedesktop.org/
+  DEPENDS:=$(ICONV_DEPENDS) $(INTL_DEPENDS)
 endef
 
 define Package/p11-kit/description
