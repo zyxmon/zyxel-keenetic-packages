@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=sane-backends
 PKG_VERSION:=1.0.22
-PKG_RELEASE:=3
+PKG_RELEASE:=4
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=ftp://ftp.sane-project.org/pub/sane/$(PKG_NAME)-$(PKG_VERSION) \
@@ -48,7 +48,7 @@ define Package/sane-libs
   $(call Package/sane-backends/Default)
   SECTION:=libs
   CATEGORY:=Libraries
-  DEPENDS:=+libjpeg +libtiff +libv4l
+  DEPENDS:=+libjpeg +libtiff
   TITLE+= (libraries)
 endef
 
@@ -85,6 +85,7 @@ CONFIGURE_ARGS+= \
 	--disable-translations \
 	--disable-latex \
 	--without-gphoto2 \
+	--without-v4l \
 	--disable-debug \
 	--without-snmp
 
