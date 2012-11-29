@@ -1,0 +1,10 @@
+--- a/configure.in	2011-02-14 02:27:15.000000000 +0300
++++ b/configure.in	2012-11-29 10:55:44.000000000 +0400
+@@ -125,7 +125,6 @@
+ SANE_CHECK_GPHOTO2
+ 
+ 
+-PKG_CHECK_MODULES(LIBV4L, libv4l1, have_libv4l1=yes, have_libv4l1=no)
+ AC_SUBST(LIBV4L_LIBS)
+ AC_SUBST(LIBV4L_CFLAGS)
+ 
