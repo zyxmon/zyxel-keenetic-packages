@@ -85,7 +85,6 @@ CONFIGURE_ARGS+= \
 	--disable-translations \
 	--disable-latex \
 	--without-gphoto2 \
-	--without-v4l \
 	--disable-debug \
 	--without-snmp
 
