@@ -1967,24 +1967,24 @@ MD5Sum: 0ebc19d28bd397a267a6c855184e7469
 Description:  A library for efficient image processing and image analysis operations
 
 Package: liblua
-Version: 5.1.4-8
+Version: 5.1.5-1
 Depends: 
 Provides: 
 Source: package/built/lua
-SourceFile: lua-5.1.4.tar.gz
+SourceFile: lua-5.1.5.tar.gz
 SourceURL: http://www.lua.org/ftp/ http://ftp.gwdg.de/pub/languages/lua/ http://mirrors.dotsrc.org/lua/ http://www.tecgraf.puc-rio.br/lua/ftp/
-License: 
-LicenseFiles: 
+License: MIT
+LicenseFiles: COPYRIGHT
 Section: libs
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
 Architecture: keenetic
-Installed-Size: 67586
-Filename: liblua_5.1.4-8_keenetic.ipk
-Size: 68241
-MD5Sum: 95bf441a6ee5cd47dd12e9e16e3cb3f1
+Installed-Size: 67607
+Filename: liblua_5.1.5-1_keenetic.ipk
+Size: 68168
+MD5Sum: 27836000b64fd5ea130399e6079e8c67
 Description:  Lua is a powerful light-weight programming language designed for extending 
  applications. Lua is also frequently used as a general-purpose, stand-alone 
  language. Lua is free software.
@@ -3188,24 +3188,24 @@ MD5Sum: 471794bff7cd27f2e970f6a90e8ac1ca
 Description:  LiSt Open Files - a diagnostic tool
 
 Package: lua
-Version: 5.1.4-8
+Version: 5.1.5-1
 Depends: liblua
 Provides: 
 Source: package/built/lua
-SourceFile: lua-5.1.4.tar.gz
+SourceFile: lua-5.1.5.tar.gz
 SourceURL: http://www.lua.org/ftp/ http://ftp.gwdg.de/pub/languages/lua/ http://mirrors.dotsrc.org/lua/ http://www.tecgraf.puc-rio.br/lua/ftp/
-License: 
-LicenseFiles: 
+License: MIT
+LicenseFiles: COPYRIGHT
 Section: lang
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4631
-Filename: lua_5.1.4-8_keenetic.ipk
-Size: 5430
-MD5Sum: 4a1da4653ab62f2a07df601bcf7db4ed
+Installed-Size: 4630
+Filename: lua_5.1.5-1_keenetic.ipk
+Size: 5437
+MD5Sum: 33a4596ab4b5937ca747b41c9e4d0601
 Description:  Lua is a powerful light-weight programming language designed for extending 
  applications. Lua is also frequently used as a general-purpose, stand-alone 
  language. Lua is free software.
@@ -3832,24 +3832,24 @@ MD5Sum: e111fe77266789a9731c9e631f803fff
 Description:  Open source VPN solution using SSL
 
 Package: opkg
-Version: 618-2
+Version: 618-3
 Depends: 
 Provides: 
 Source: package/opkg
 SourceFile: opkg-618.tar.gz
 SourceURL: http://opkg.googlecode.com/svn/trunk/
-License: 
-LicenseFiles: 
+License: GPLv2
+LicenseFiles: COPYING
 Section: base
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: Jo-Philipp Wich <xm@subsignal.org>
 Architecture: keenetic
-Installed-Size: 62225
-Filename: opkg_618-2_keenetic.ipk
-Size: 63013
-MD5Sum: 329c227e0f8e30744afc1936d999e4dc
+Installed-Size: 62516
+Filename: opkg_618-3_keenetic.ipk
+Size: 63334
+MD5Sum: bb45a1497b0c392153b840504bcaf3fc
 Description:  Lightweight package management system
  opkg is the opkg Package Management System, for handling
  installation and removal of packages on a system. It can
@@ -7993,7 +7993,7 @@ Description:  rsyncd is a configuration file and initscript to
  as rsync.
 
 Package: sane-backends
-Version: 1.0.22-3
+Version: 1.0.22-4
 Depends: sane-libs
 Provides: 
 Source: package/built/sane-backends
@@ -8007,15 +8007,15 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 43915
-Filename: sane-backends_1.0.22-3_keenetic.ipk
-Size: 44800
-MD5Sum: 1f4d0812a351892428defc16bde2b297
+Installed-Size: 43826
+Filename: sane-backends_1.0.22-4_keenetic.ipk
+Size: 44723
+MD5Sum: d008fc4d46903a976f289c84da88b567
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  This package contains the SANE daemon.
 
 Package: sane-frontends
-Version: 1.0.22-3
+Version: 1.0.22-4
 Depends: sane-backends
 Provides: 
 Source: package/built/sane-backends
@@ -8029,16 +8029,16 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 47004
-Filename: sane-frontends_1.0.22-3_keenetic.ipk
-Size: 47727
-MD5Sum: 6e1baf361c4afd35f74335113525fcee
+Installed-Size: 61489
+Filename: sane-frontends_1.0.22-4_keenetic.ipk
+Size: 62281
+MD5Sum: 57e27191688ab7bc7795e82f13473a44
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  This package contains the SANE frontends.
 
 Package: sane-libs
-Version: 1.0.22-3
-Depends: libjpeg, libtiff, libv4l
+Version: 1.0.22-4
+Depends: libjpeg, libtiff
 Provides: 
 Source: package/built/sane-backends
 SourceFile: sane-backends-1.0.22.tar.gz
@@ -8051,10 +8051,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2782038
-Filename: sane-libs_1.0.22-3_keenetic.ipk
-Size: 2776357
-MD5Sum: 9cfd87edec12e2b8564b17db40bec5ed
+Installed-Size: 2880903
+Filename: sane-libs_1.0.22-4_keenetic.ipk
+Size: 2874928
+MD5Sum: e08aa584924d85df71f9d7805434c891
 Description:  SANE (Scanner Access Now Easy) is a universal scanner interface.
  This package contains the SANE shared libraries.
 
@@ -9141,11 +9141,11 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 346-1
+Version: 355-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
-SourceFile: xupnpd-346.tar.gz
+SourceFile: xupnpd-355.tar.gz
 SourceURL: http://tsdemuxer.googlecode.com/svn/trunk/xupnpd/src/
 License: 
 LicenseFiles: 
@@ -9155,10 +9155,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 128360
-Filename: xupnpd_346-1_keenetic.ipk
-Size: 128946
-MD5Sum: c715fceb6e4709c55fee2d3281645d88
+Installed-Size: 138409
+Filename: xupnpd_355-1_keenetic.ipk
+Size: 139114
+MD5Sum: a81322cd7fcf9d5feb5e6768305d1cf9
 Description:  eXtensible UPnP agent
 
 Package: zip
