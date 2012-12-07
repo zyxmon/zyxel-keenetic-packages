@@ -1,6 +1,7 @@
---- a/cli-kex.c
-+++ b/cli-kex.c
-@@ -156,7 +156,7 @@ static FILE* open_known_hosts_file(int *
+diff -ruN dropbear-2012.55.fix/cli-kex.c dropbear-2012.55/cli-kex.c
+--- dropbear-2012.55.fix/cli-kex.c	2012-02-23 17:47:05.000000000 +0400
++++ dropbear-2012.55/cli-kex.c	2012-12-06 15:03:28.000000000 +0400
+@@ -156,7 +156,7 @@
  
  	if (!homedir) {
  		struct passwd * pw = NULL;
@@ -9,9 +10,10 @@
  		if (pw) {
  			homedir = pw->pw_dir;
  		}
---- a/cli-runopts.c
-+++ b/cli-runopts.c
-@@ -622,7 +622,7 @@ static void fill_own_user() {
+diff -ruN dropbear-2012.55.fix/cli-runopts.c dropbear-2012.55/cli-runopts.c
+--- dropbear-2012.55.fix/cli-runopts.c	2012-12-06 14:37:39.000000000 +0400
++++ dropbear-2012.55/cli-runopts.c	2012-12-06 15:03:38.000000000 +0400
+@@ -622,7 +622,7 @@
  
  	uid = getuid();
  
@@ -20,9 +22,10 @@
  	if (pw == NULL || pw->pw_name == NULL) {
  		dropbear_exit("Unknown own user");
  	}
---- a/common-session.c
-+++ b/common-session.c
-@@ -444,7 +444,7 @@ void fill_passwd(const char* username) {
+diff -ruN dropbear-2012.55.fix/common-session.c dropbear-2012.55/common-session.c
+--- dropbear-2012.55.fix/common-session.c	2012-02-23 17:47:05.000000000 +0400
++++ dropbear-2012.55/common-session.c	2012-12-06 15:04:11.000000000 +0400
+@@ -444,7 +444,7 @@
  	if (ses.authstate.pw_passwd)
  		m_free(ses.authstate.pw_passwd);
  
@@ -31,9 +34,10 @@
  	if (!pw) {
  		return;
  	}
---- a/dbutil.c
-+++ b/dbutil.c
-@@ -870,3 +870,63 @@ int m_str_to_uint(const char* str, unsig
+diff -ruN dropbear-2012.55.fix/dbutil.c dropbear-2012.55/dbutil.c
+--- dropbear-2012.55.fix/dbutil.c	2012-02-23 17:47:05.000000000 +0400
++++ dropbear-2012.55/dbutil.c	2012-12-06 15:04:40.000000000 +0400
+@@ -864,3 +864,63 @@
  		return DROPBEAR_SUCCESS;
  	}
  }
@@ -97,8 +101,9 @@
 +
 +
 +
---- a/dbutil.h
-+++ b/dbutil.h
+diff -ruN dropbear-2012.55.fix/dbutil.h dropbear-2012.55/dbutil.h
+--- dropbear-2012.55.fix/dbutil.h	2012-12-06 14:37:39.000000000 +0400
++++ dropbear-2012.55/dbutil.h	2012-12-06 15:05:05.000000000 +0400
 @@ -33,6 +33,10 @@
  void startsyslog();
  #endif
@@ -110,9 +115,10 @@
  #ifdef __GNUC__
  #define ATTRIB_PRINTF(fmt,args) __attribute__((format(printf, fmt, args))) 
  #else
---- a/dropbearkey.c
-+++ b/dropbearkey.c
-@@ -326,7 +326,7 @@ static void printpubkey(sign_key * key, 
+diff -ruN dropbear-2012.55.fix/dropbearkey.c dropbear-2012.55/dropbearkey.c
+--- dropbear-2012.55.fix/dropbearkey.c	2012-02-23 17:47:05.000000000 +0400
++++ dropbear-2012.55/dropbearkey.c	2012-12-06 15:05:25.000000000 +0400
+@@ -326,7 +326,7 @@
  
  	/* a user@host comment is informative */
  	username = "";
@@ -121,9 +127,10 @@
  	if (pw) {
  		username = pw->pw_name;
  	}
---- a/loginrec.c
-+++ b/loginrec.c
-@@ -275,7 +275,7 @@ login_init_entry(struct logininfo *li, i
+diff -ruN dropbear-2012.55.fix/loginrec.c dropbear-2012.55/loginrec.c
+--- dropbear-2012.55.fix/loginrec.c	2012-02-23 17:47:06.000000000 +0400
++++ dropbear-2012.55/loginrec.c	2012-12-06 15:05:36.000000000 +0400
+@@ -275,7 +275,7 @@
  
  	if (username) {
  		strlcpy(li->username, username, sizeof(li->username));
@@ -132,9 +139,22 @@
  		if (pw == NULL)
  			dropbear_exit("login_init_entry: Cannot find user \"%s\"",
  					li->username);
---- a/scp.c
-+++ b/scp.c
-@@ -392,7 +392,7 @@ main(int argc, char **argv)
+diff -ruN dropbear-2012.55.fix/options.h dropbear-2012.55/options.h
+--- dropbear-2012.55.fix/options.h	2012-12-06 14:37:39.000000000 +0400
++++ dropbear-2012.55/options.h	2012-12-06 15:06:15.000000000 +0400
+@@ -255,7 +255,7 @@
+  * OpenSSH), set the path below. If the path isn't defined, sftp will not
+  * be enabled */
+ #ifndef SFTPSERVER_PATH
+-#define SFTPSERVER_PATH "/usr/libexec/sftp-server"
++#define SFTPSERVER_PATH "/storage/system/usr/libexec/sftp-server"
+ #endif
+ 
+ /* This is used by the scp binary when used as a client binary. If you're
+diff -ruN dropbear-2012.55.fix/scp.c dropbear-2012.55/scp.c
+--- dropbear-2012.55.fix/scp.c	2012-02-23 17:47:06.000000000 +0400
++++ dropbear-2012.55/scp.c	2012-12-06 15:06:27.000000000 +0400
+@@ -392,7 +392,7 @@
  	argc -= optind;
  	argv += optind;
  
@@ -143,9 +163,10 @@
  		fatal("unknown user %u", (u_int) userid);
  
  	if (!isatty(STDERR_FILENO))
---- a/svr-auth.c
-+++ b/svr-auth.c
-@@ -203,6 +203,85 @@ out:
+diff -ruN dropbear-2012.55.fix/svr-auth.c dropbear-2012.55/svr-auth.c
+--- dropbear-2012.55.fix/svr-auth.c	2012-02-23 17:47:06.000000000 +0400
++++ dropbear-2012.55/svr-auth.c	2012-12-06 15:07:16.000000000 +0400
+@@ -203,6 +203,85 @@
  	m_free(servicename);
  	m_free(methodname);
  }
@@ -231,7 +252,7 @@
  
  
  /* Check that the username exists, has a non-empty password, and has a valid
-@@ -261,8 +340,8 @@ static int checkusername(unsigned char *
+@@ -261,8 +340,8 @@
  	/* check the shell is valid. If /etc/shells doesn't exist, getusershell()
  	 * should return some standard shells like "/bin/sh" and "/bin/csh" (this
  	 * is platform-specific) */
@@ -242,7 +263,7 @@
  		TRACE(("test shell is '%s'", listshell))
  		if (strcmp(listshell, usershell) == 0) {
  			/* have a match */
-@@ -270,7 +349,7 @@ static int checkusername(unsigned char *
+@@ -270,7 +349,7 @@
  		}
  	}
  	/* no matching shell */
@@ -251,9 +272,10 @@
  	TRACE(("no matching shell"))
  	dropbear_log(LOG_WARNING, "User '%s' has invalid shell, rejected",
  				ses.authstate.pw_name);
---- a/svr-authpubkey.c
-+++ b/svr-authpubkey.c
-@@ -222,7 +222,7 @@ static int checkpubkey(unsigned char* al
+diff -ruN dropbear-2012.55.fix/svr-authpubkey.c dropbear-2012.55/svr-authpubkey.c
+--- dropbear-2012.55.fix/svr-authpubkey.c	2012-12-06 14:37:39.000000000 +0400
++++ dropbear-2012.55/svr-authpubkey.c	2012-12-06 15:08:00.000000000 +0400
+@@ -222,7 +222,7 @@
  		/* open the file */
  		authfile = fopen(filename, "r");
  	} else {
@@ -262,7 +284,7 @@
  	}
  	if (authfile == NULL) {
  		goto out;
-@@ -377,10 +377,10 @@ static int checkpubkeyperms() {
+@@ -377,10 +377,10 @@
  	}
  
  	if (ses.authstate.pw_uid == 0) {
@@ -275,9 +297,10 @@
  			goto out;
  		}
  	} else {
---- a/svr-chansession.c
-+++ b/svr-chansession.c
-@@ -562,7 +562,7 @@ static int sessionpty(struct ChanSess * 
+diff -ruN dropbear-2012.55.fix/svr-chansession.c dropbear-2012.55/svr-chansession.c
+--- dropbear-2012.55.fix/svr-chansession.c	2012-12-06 14:37:39.000000000 +0400
++++ dropbear-2012.55/svr-chansession.c	2012-12-06 15:08:42.000000000 +0400
+@@ -569,7 +569,7 @@
  		dropbear_exit("Out of memory"); /* TODO disconnect */
  	}
  
@@ -286,14 +309,3 @@
  	if (!pw)
  		dropbear_exit("getpwnam failed after succeeding previously");
  	pty_setowner(pw, chansess->tty);
---- a/options.h
-+++ b/options.h
-@@ -255,7 +255,7 @@ much traffic. */
-  * OpenSSH), set the path below. If the path isn't defined, sftp will not
-  * be enabled */
- #ifndef SFTPSERVER_PATH
--#define SFTPSERVER_PATH "/usr/libexec/sftp-server"
-+#define SFTPSERVER_PATH "/storage/system/usr/libexec/sftp-server"
- #endif
- 
- /* This is used by the scp binary when used as a client binary. If you're
