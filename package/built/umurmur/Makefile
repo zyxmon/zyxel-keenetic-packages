@@ -75,6 +75,7 @@ define Package/umurmur-openssl/install
 	$(INSTALL_DIR) $(1)/etc
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/K36umurmurd $(1)/etc/init.d/
+	$(INSTALL_DIR) $(1)/var/run
 	$(INSTALL_DIR) $(1)/etc/umurmur
 	$(INSTALL_CONF) ./files/umurmur.conf $(1)/etc/umurmur/
 endef
