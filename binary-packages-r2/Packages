@@ -454,24 +454,24 @@ MD5Sum: 56c8db50dd4b63262bc0e78601717425
 Description:  Distribute (fork of Setuptools) is a collection of extensions to Distutils
 
 Package: dropbear
-Version: 2011.54-2
+Version: 2012.55-2
 Depends: 
 Provides: 
 Source: package/dropbear
-SourceFile: dropbear-2011.54.tar.bz2
+SourceFile: dropbear-2012.55.tar.bz2
 SourceURL: http://matt.ucc.asn.au/dropbear/releases/ http://www.mirrors.wiretapped.net/security/cryptography/apps/ssh/dropbear/
-License: 
-LicenseFiles: 
+License: MIT
+LicenseFiles: LICENSE libtomcrypt/LICENSE libtommath/LICENSE
 Section: net
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 93085
-Filename: dropbear_2011.54-2_keenetic.ipk
-Size: 93733
-MD5Sum: 969ea0ca55ba5b224c660c9b5ca1671a
+Installed-Size: 92604
+Filename: dropbear_2012.55-2_keenetic.ipk
+Size: 93267
+MD5Sum: 3371259c60eb236be9f531912bbbec42
 Description:  A small SSH2 server/client designed for small memory environments.
  This package is built for usb.
 
@@ -1364,6 +1364,35 @@ Size: 4541
 MD5Sum: 52722dee0b94328c54376a7934f35dff
 Description:  libcom_err is a library providing common error descriptions
 
+Package: libconfig
+Version: 1.4.8-2
+Depends: 
+Provides: 
+Source: package/built/libconfig
+SourceFile: libconfig-1.4.8.tar.gz
+SourceURL: http://www.hyperrealm.com/libconfig
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 15115
+Filename: libconfig_1.4.8-2_keenetic.ipk
+Size: 15983
+MD5Sum: 6238e2bb6b2682dac714cbe9e4499696
+Description:  Libconfig is a simple library for manipulating structured configuration
+ files. This file format is more compact and more readable than XML. And
+ unlike XML, it is type-aware, so it is not necessary to do string
+ parsing in application code.
+ 
+ Libconfig is very compact -- just 38K for the stripped C shared
+ library (less than one-fourth the size of the expat XML parser library)
+ and 66K for the stripped C++ shared library. This makes it well-suited
+ for memory-constrained systems like handheld devices.
+
 Package: libdb47
 Version: 4.7.25.NC-6
 Depends: libxml2
@@ -2230,6 +2259,29 @@ Size: 118446
 MD5Sum: 977bb0192379aaf0d39c7131f58ad0a7
 Description:  A PNG format files handling library
 
+Package: libpolarssl
+Version: 1.1.3-1
+Depends: 
+Provides: 
+Source: package/built/polarssl
+SourceFile: polarssl-1.1.3-gpl.tgz
+SourceURL: http://polarssl.org/code/releases
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 115120
+Filename: libpolarssl_1.1.3-1_keenetic.ipk
+Size: 115594
+MD5Sum: 8e311e130ebca4ab6db7761dddff9890
+Description:  The aim of the PolarSSL project is to provide a quality, open-source
+ cryptographic library written in C and targeted at embedded systems.
+ This package contains the PolarSSL library.
+
 Package: libpopt
 Version: 1.7-5
 Depends: 
@@ -2250,6 +2302,30 @@ Filename: libpopt_1.7-5_keenetic.ipk
 Size: 12924
 MD5Sum: 9d01da2445cf951a9cbbbb92dd0d1c41
 Description:  A command line option parsing library
+
+Package: libprotobuf-c
+Version: 0.15-1
+Depends: 
+Provides: 
+Source: package/built/protobuf-c
+SourceFile: protobuf-c-0.15.tar.gz
+SourceURL: http://protobuf-c.googlecode.com/files
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 23166
+Filename: libprotobuf-c_0.15-1_keenetic.ipk
+Size: 23942
+MD5Sum: c4ae54f1a46a42f0623e76a28a1b0fba
+Description:  Runtime library to use Google Protocol Buffers from C applications.
+ Protocol Buffers are a way of encoding structured data in an efficient yet
+ extensible format. Google uses Protocol Buffers for almost all of its
+ internal RPC protocols and file formats.
 
 Package: libreadline
 Version: 5.2-3
@@ -3701,11 +3777,11 @@ MD5Sum: ab4c1685f67b816fe164eecf43a72683
 Description:  Kernel NFS server support
 
 Package: nginx
-Version: 1.2.2-1
+Version: 1.2.5-1
 Depends: libpcre
 Provides: 
 Source: package/built/nginx
-SourceFile: nginx-1.2.2.tar.gz
+SourceFile: nginx-1.2.5.tar.gz
 SourceURL: http://nginx.org/download/
 License: 
 LicenseFiles: 
@@ -3715,10 +3791,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 235745
-Filename: nginx_1.2.2-1_keenetic.ipk
-Size: 236216
-MD5Sum: 73159da1b811669a161eae2cb752130d
+Installed-Size: 249461
+Filename: nginx_1.2.5-1_keenetic.ipk
+Size: 249912
+MD5Sum: 64c491be5e69c5770618f0a4ebc3ae44
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev.
 
@@ -8831,6 +8907,28 @@ Description:  udproxy makes it possible to convert UDP IPTV streams into http
  home and do not want to rent multiple decoders from their
  provider but just use their own streaming client for example
  popcornhour/mediatomb/vlc/etc.
+
+Package: umurmur-polarssl
+Version: 0.2.10-1
+Depends: libconfig, libprotobuf-c, libstdcpp, libpolarssl
+Provides: 
+Source: package/built/umurmur
+SourceFile: umurmur-0.2.10.tar.gz
+SourceURL: http://umurmur.googlecode.com/files
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Martin Johansson <martin@fatbob.nu>
+Architecture: keenetic
+Installed-Size: 41308
+Filename: umurmur-polarssl_0.2.10-1_keenetic.ipk
+Size: 41995
+MD5Sum: ac879de6bf70c3669188d9bdc1156cd1
+Description:  Minimalistic Mumble server daemon.
+ Uses the PolarSSL library for SSL and crypto.
 
 Package: unfs3
 Version: 0.9.22-1
