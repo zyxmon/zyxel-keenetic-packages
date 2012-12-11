@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=icecast
-PKG_VERSION:=2.3.2
-PKG_RELEASE:=4
+PKG_VERSION:=2.3.3
+PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://downloads.us.xiph.org/releases/icecast/
-PKG_MD5SUM:=ff516b3ccd2bcc31e68f460cd316093f
+PKG_MD5SUM:=2b5d1b40778922e5f6431b7758c359ad
 PKG_BUILD_DEPENDS:=libcurl
 
 PKG_FIXUP:=autoreconf
@@ -81,6 +81,7 @@ endef
 
 define Package/icecast/install
 	$(INSTALL_DIR) $(1)/var/icecast
+	$(INSTALL_DIR) $(1)/var/log/icecast
 	$(INSTALL_DIR) $(1)/etc
 	$(CP) $(PKG_INSTALL_DIR)$(ROOT_ZYX)/etc/icecast.xml $(1)/etc/
 	$(INSTALL_DIR) $(1)/usr/bin

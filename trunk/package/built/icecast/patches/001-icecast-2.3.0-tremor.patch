@@ -1,107 +1,40 @@
---- a/src/format_flac.c
-+++ b/src/format_flac.c
-@@ -18,7 +18,7 @@
- #endif
- 
- #include <stdlib.h>
+diff -Nru icecast-2.3.3.orig/configure icecast-2.3.3/configure
+--- icecast-2.3.3.orig/configure	2012-06-11 21:03:18.000000000 +0400
++++ icecast-2.3.3/configure	2012-12-11 11:00:55.000000000 +0400
+@@ -12503,7 +12503,7 @@
+ else
+    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
 -#include <ogg/ogg.h>
 +#include <tremor/ogg.h>
- #include <string.h>
+ int
+ main ()
+ {
+diff -Nru icecast-2.3.3.orig/m4/ogg.m4 icecast-2.3.3/m4/ogg.m4
+--- icecast-2.3.3.orig/m4/ogg.m4	2012-06-11 20:45:25.000000000 +0400
++++ icecast-2.3.3/m4/ogg.m4	2012-12-11 11:02:41.000000000 +0400
+@@ -29,7 +29,7 @@
+       ])
+ AC_CACHE_CHECK([for libogg], xt_cv_lib_ogg,
+ [dnl
+-OGG_LIBS="-logg"
++OGG_LIBS="-lvorbisidec"
  
- typedef struct source_tag source_t;
---- a/src/format_midi.c
-+++ b/src/format_midi.c
-@@ -18,7 +18,7 @@
- #endif
- 
- #include <stdlib.h>
--#include <ogg/ogg.h>
-+#include <tremor/ogg.h>
- #include <string.h>
- 
- typedef struct source_tag source_t;
---- a/src/format_ogg.c
-+++ b/src/format_ogg.c
-@@ -24,7 +24,7 @@
- #include <stdlib.h>
- #include <string.h>
- 
--#include <ogg/ogg.h>
-+#include <tremor/ogg.h>
- 
- #include "refbuf.h"
- #include "source.h"
---- a/src/format_ogg.h
-+++ b/src/format_ogg.h
-@@ -18,7 +18,7 @@
- #ifndef __FORMAT_OGG_H__
- #define __FORMAT_OGG_H__
- 
--#include <ogg/ogg.h>
-+#include <tremor/ogg.h>
- #include "refbuf.h"
- #include "format.h"
- 
---- a/src/format_speex.c
-+++ b/src/format_speex.c
-@@ -18,7 +18,7 @@
- #endif
- 
- #include <stdlib.h>
--#include <ogg/ogg.h>
-+#include <tremor/ogg.h>
- #include <speex/speex_header.h>
- 
- typedef struct source_tag source_t;
---- a/src/format_theora.c
-+++ b/src/format_theora.c
-@@ -18,7 +18,7 @@
- #endif
- 
- #include <stdlib.h>
--#include <ogg/ogg.h>
-+#include <tremor/ogg.h>
- #include <theora/theora.h>
- 
- typedef struct source_tag source_t;
---- a/src/format_vorbis.c
-+++ b/src/format_vorbis.c
-@@ -18,8 +18,8 @@
- #endif
- 
- #include <stdlib.h>
--#include <ogg/ogg.h>
--#include <vorbis/codec.h>
-+#include <tremor/ogg.h>
-+#include <tremor/ivorbiscodec.h>
- #include <memory.h>
- #include <string.h>
- 
---- a/src/source.c
-+++ b/src/source.c
-@@ -19,7 +19,7 @@
- #include <stdlib.h>
- #include <string.h>
- #include <sys/types.h>
--#include <ogg/ogg.h>
-+#include <tremor/ogg.h>
- #include <errno.h>
- 
- #ifndef _WIN32
---- a/src/format_kate.c
-+++ b/src/format_kate.c
-@@ -19,7 +19,7 @@
- 
- #include <stdlib.h>
- #include <string.h>
--#include <ogg/ogg.h>
-+#include <tremor/ogg.h>
- #ifdef HAVE_KATE
- #include <kate/oggkate.h>
- #endif
---- a/m4/vorbis.m4
-+++ b/m4/vorbis.m4
-@@ -38,9 +38,9 @@ if test "x$vorbis_prefix" != "x$ogg_pref
+ #
+ # check if the installed Ogg is sufficiently new.
+@@ -42,7 +42,7 @@
+ LDFLAGS="$LDFLAGS $OGG_LDFLAGS"
+ AC_TRY_LINK_FUNC(ogg_sync_init,
+     [ xt_cv_lib_ogg=ok ],
+-    [ AC_TRY_LINK([#include <ogg/ogg.h>],, 
++    [ AC_TRY_LINK([#include <tremor/ogg.h>],, 
+         [ xt_cv_lib_ogg="pre v1.0, needs updating" ],
+         [ xt_cv_lib_ogg="not found" ])
+     ])
+diff -Nru icecast-2.3.3.orig/m4/vorbis.m4 icecast-2.3.3/m4/vorbis.m4
+--- icecast-2.3.3.orig/m4/vorbis.m4	2012-06-11 20:45:25.000000000 +0400
++++ icecast-2.3.3/m4/vorbis.m4	2012-12-11 11:17:57.000000000 +0400
+@@ -38,9 +38,9 @@
              ])
  fi
  
@@ -114,7 +47,7 @@
  
  xt_save_LIBS="$LIBS"
  xt_save_LDFLAGS="$LDFLAGS"
-@@ -58,18 +58,6 @@ AC_TRY_LINK_FUNC(ogg_stream_init, [xt_li
+@@ -58,18 +58,6 @@
              )
          ])
  
@@ -133,23 +66,123 @@
  CPPFLAGS="$xt_save_CPPFLAGS"
  LIBS="$xt_save_LIBS"
  LDFLAGS="$xt_save_LDFLAGS"
---- a/m4/ogg.m4
-+++ b/m4/ogg.m4
-@@ -29,7 +29,7 @@ XIPH_GCC_WARNING([-I$ogg_prefix/include]
-       ])
- AC_CACHE_CHECK([for libogg], xt_cv_lib_ogg,
- [dnl
--OGG_LIBS="-logg"
-+OGG_LIBS="-lvorbisidec"
+diff -Nru icecast-2.3.3.orig/src/format_flac.c icecast-2.3.3/src/format_flac.c
+--- icecast-2.3.3.orig/src/format_flac.c	2012-06-11 20:45:20.000000000 +0400
++++ icecast-2.3.3/src/format_flac.c	2012-12-11 10:59:27.000000000 +0400
+@@ -18,7 +18,7 @@
+ #endif
  
- #
- # check if the installed Ogg is sufficiently new.
-@@ -42,7 +42,7 @@ LIBS="$LIBS $OGG_LIBS"
- LDFLAGS="$LDFLAGS $OGG_LDFLAGS"
- AC_TRY_LINK_FUNC(ogg_sync_init,
-     [ xt_cv_lib_ogg=ok ],
--    [ AC_TRY_LINK([#include <ogg/ogg.h>],, 
-+    [ AC_TRY_LINK([#include <tremor/ogg.h>],, 
-         [ xt_cv_lib_ogg="pre v1.0, needs updating" ],
-         [ xt_cv_lib_ogg="not found" ])
-     ])
+ #include <stdlib.h>
+-#include <ogg/ogg.h>
++#include <tremor/ogg.h>
+ #include <string.h>
+ 
+ typedef struct source_tag source_t;
+diff -Nru icecast-2.3.3.orig/src/format_kate.c icecast-2.3.3/src/format_kate.c
+--- icecast-2.3.3.orig/src/format_kate.c	2012-06-11 20:45:20.000000000 +0400
++++ icecast-2.3.3/src/format_kate.c	2012-12-11 10:58:40.000000000 +0400
+@@ -19,7 +19,7 @@
+ 
+ #include <stdlib.h>
+ #include <string.h>
+-#include <ogg/ogg.h>
++#include <tremor/ogg.h>
+ #ifdef HAVE_KATE
+ #include <kate/oggkate.h>
+ #endif
+diff -Nru icecast-2.3.3.orig/src/format_midi.c icecast-2.3.3/src/format_midi.c
+--- icecast-2.3.3.orig/src/format_midi.c	2012-06-11 20:45:20.000000000 +0400
++++ icecast-2.3.3/src/format_midi.c	2012-12-11 10:59:43.000000000 +0400
+@@ -18,7 +18,7 @@
+ #endif
+ 
+ #include <stdlib.h>
+-#include <ogg/ogg.h>
++#include <tremor/ogg.h>
+ #include <string.h>
+ 
+ typedef struct source_tag source_t;
+diff -Nru icecast-2.3.3.orig/src/format_ogg.c icecast-2.3.3/src/format_ogg.c
+--- icecast-2.3.3.orig/src/format_ogg.c	2012-06-11 20:45:20.000000000 +0400
++++ icecast-2.3.3/src/format_ogg.c	2012-12-11 10:58:30.000000000 +0400
+@@ -24,7 +24,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
+-#include <ogg/ogg.h>
++#include <tremor/ogg.h>
+ 
+ #include "refbuf.h"
+ #include "source.h"
+diff -Nru icecast-2.3.3.orig/src/format_ogg.h icecast-2.3.3/src/format_ogg.h
+--- icecast-2.3.3.orig/src/format_ogg.h	2012-06-11 20:45:20.000000000 +0400
++++ icecast-2.3.3/src/format_ogg.h	2012-12-11 11:00:02.000000000 +0400
+@@ -18,7 +18,7 @@
+ #ifndef __FORMAT_OGG_H__
+ #define __FORMAT_OGG_H__
+ 
+-#include <ogg/ogg.h>
++#include <tremor/ogg.h>
+ #include "refbuf.h"
+ #include "format.h"
+ 
+diff -Nru icecast-2.3.3.orig/src/format_skeleton.c icecast-2.3.3/src/format_skeleton.c
+--- icecast-2.3.3.orig/src/format_skeleton.c	2012-06-11 20:45:20.000000000 +0400
++++ icecast-2.3.3/src/format_skeleton.c	2012-12-11 10:59:17.000000000 +0400
+@@ -19,7 +19,7 @@
+ 
+ #include <stdlib.h>
+ #include <string.h>
+-#include <ogg/ogg.h>
++#include <tremor/ogg.h>
+ 
+ typedef struct source_tag source_t;
+ 
+diff -Nru icecast-2.3.3.orig/src/format_speex.c icecast-2.3.3/src/format_speex.c
+--- icecast-2.3.3.orig/src/format_speex.c	2012-06-11 20:45:20.000000000 +0400
++++ icecast-2.3.3/src/format_speex.c	2012-12-11 10:59:02.000000000 +0400
+@@ -18,7 +18,7 @@
+ #endif
+ 
+ #include <stdlib.h>
+-#include <ogg/ogg.h>
++#include <tremor/ogg.h>
+ #include <speex/speex_header.h>
+ 
+ typedef struct source_tag source_t;
+diff -Nru icecast-2.3.3.orig/src/format_theora.c icecast-2.3.3/src/format_theora.c
+--- icecast-2.3.3.orig/src/format_theora.c	2012-06-11 20:45:20.000000000 +0400
++++ icecast-2.3.3/src/format_theora.c	2012-12-11 10:58:12.000000000 +0400
+@@ -18,7 +18,7 @@
+ #endif
+ 
+ #include <stdlib.h>
+-#include <ogg/ogg.h>
++#include <tremor/ogg.h>
+ #include <theora/theora.h>
+ 
+ typedef struct source_tag source_t;
+diff -Nru icecast-2.3.3.orig/src/format_vorbis.c icecast-2.3.3/src/format_vorbis.c
+--- icecast-2.3.3.orig/src/format_vorbis.c	2012-06-11 20:45:20.000000000 +0400
++++ icecast-2.3.3/src/format_vorbis.c	2012-12-11 10:58:02.000000000 +0400
+@@ -18,7 +18,7 @@
+ #endif
+ 
+ #include <stdlib.h>
+-#include <ogg/ogg.h>
++#include <tremor/ogg.h>
+ #include <vorbis/codec.h>
+ #include <memory.h>
+ #include <string.h>
+diff -Nru icecast-2.3.3.orig/src/source.c icecast-2.3.3/src/source.c
+--- icecast-2.3.3.orig/src/source.c	2012-06-11 20:45:20.000000000 +0400
++++ icecast-2.3.3/src/source.c	2012-12-11 10:58:49.000000000 +0400
+@@ -19,7 +19,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/types.h>
+-#include <ogg/ogg.h>
++#include <tremor/ogg.h>
+ #include <errno.h>
+ 
+ #ifndef _WIN32
