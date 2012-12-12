@@ -44,3 +44,17 @@ define KernelPackage/usb-audio/description
 endef
 
 $(eval $(call KernelPackage,usb-audio))
+
+define KernelPackage/usb-serial-cp2101
+  TITLE:=Support for Silicon Labs cp210x devices
+  KCONFIG:=CONFIG_USB_SERIAL_CP2101
+  FILES:=$(LINUX_DIR)/drivers/usb/serial/cp2101.ko
+endef
+
+define KernelPackage/usb-serial-cp210x/description
+ Kernel support for Silicon Labs cp210x USB-to-Serial converters
+endef
+
+$(eval $(call KernelPackage,usb-serial-cp2101))
+
+
