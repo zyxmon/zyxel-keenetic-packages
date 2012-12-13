@@ -14,7 +14,7 @@ PKG_RELEASE:=1
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://downloads.us.xiph.org/releases/icecast/
 PKG_MD5SUM:=2b5d1b40778922e5f6431b7758c359ad
-PKG_BUILD_DEPENDS:=libcurl
+PKG_BUILD_DEPENDS:=libcurl libvorbis
 
 PKG_FIXUP:=autoreconf
 
