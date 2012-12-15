@@ -828,6 +828,32 @@ Size: 800724
 MD5Sum: e510a6cf9e620ea86d29c4e9c66e824d
 Description:  husky is a bunch of os-independent software for fidonet. It consitsts of tosser hpt, fileechoprocessor htick, message editor msged TE, libraries fidoconfig, smapi etc.
 
+Package: icecast
+Version: 2.3.3-1
+Depends: libxml2, libxslt, libogg
+Provides: 
+Source: package/built/icecast
+SourceFile: icecast-2.3.3.tar.gz
+SourceURL: http://downloads.us.xiph.org/releases/icecast/
+License: 
+LicenseFiles: 
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 174545
+Filename: icecast_2.3.3-1_keenetic.ipk
+Size: 175371
+MD5Sum: a069f9a593676a447f42fb04229cfcec
+Description:  Icecast is a streaming media server which currently supports Ogg 
+ Vorbis and MP3 audio streams. It can be used to create an Internet 
+ radio station or a privately running jukebox and many things in 
+ between. It is very versatile in that new formats can be added 
+ relatively easily and supports open standards for commuincation and 
+ interaction.
+
 Package: iconv
 Version: 1.11.1-1
 Depends: libiconv-full, libcharset
@@ -1124,6 +1150,27 @@ Filename: kmod-tun_2.6.23-rt-1_keenetic.ipk
 Size: 6498
 MD5Sum: 753eb82a7b25e2502e7eb7b2b0153b38
 Description:  Kernel support for the TUN/TAP tunneling device
+
+Package: kmod-usb-serial-cp2101
+Version: 2.6.23-rt-1
+Depends: 
+Provides: 
+Source: package/kernel
+SourceFile: 
+SourceURL: 
+License: 
+LicenseFiles: 
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 7795
+Filename: kmod-usb-serial-cp2101_2.6.23-rt-1_keenetic.ipk
+Size: 8450
+MD5Sum: 7e1e3f12e3ea2b62b8cdb4d04187a5bf
+Description:  Support for Silicon Labs cp210x devices
 
 Package: kmod-video-core
 Version: 2.6.23-rt-1
@@ -2611,6 +2658,27 @@ Filename: libxml2_2.7.8-1_keenetic.ipk
 Size: 444789
 MD5Sum: 1bda6980979af6b025a42139e20ac3da
 Description:  A library for manipulating XML and HTML resources.
+
+Package: libxslt
+Version: 1.1.26-1
+Depends: libxml2
+Provides: 
+Source: package/built/libxslt
+SourceFile: libxslt-1.1.26.tar.gz
+SourceURL: http://xmlsoft.org/sources/ ftp://fr.rpmfind.net/pub/libxml/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 77616
+Filename: libxslt_1.1.26-1_keenetic.ipk
+Size: 78258
+MD5Sum: fa45b7ce852f5ca8747cd8b7fee894ed
+Description:  A library for XML transformation using XSLT.
 
 Package: lighttpd-mod-access
 Version: 1.4.30-2
@@ -8564,11 +8632,11 @@ MD5Sum: 44bd8ea1ec5eb6aadff2c34672525e39
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.72-1
+Version: 2.74-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.72.tar.bz2
+SourceFile: transmission-2.74.tar.bz2
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -8578,18 +8646,18 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 832238
-Filename: transmission-cli_2.72-1_keenetic.ipk
-Size: 831599
-MD5Sum: 0543d2fbee334118ed4560ea556644b0
+Installed-Size: 837948
+Filename: transmission-cli_2.74-1_keenetic.ipk
+Size: 837250
+MD5Sum: 732ba68eef1740dad0d5d8524fdecfc0
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.72-1
+Version: 2.74-1
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.72.tar.bz2
+SourceFile: transmission-2.74.tar.bz2
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -8599,21 +8667,21 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 213051
-Filename: transmission-daemon_2.72-1_keenetic.ipk
-Size: 213575
-MD5Sum: a53b560acdaf32b22f0566afca06eb5b
+Installed-Size: 214172
+Filename: transmission-daemon_2.74-1_keenetic.ipk
+Size: 214721
+MD5Sum: c2fedab301549628dbc477c7ea08fcd5
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.72-1
+Version: 2.74-1
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.72.tar.bz2
+SourceFile: transmission-2.74.tar.bz2
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -8623,18 +8691,18 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 222705
-Filename: transmission-remote_2.72-1_keenetic.ipk
-Size: 222975
-MD5Sum: be8afbda54dcbf2fa1c5828c493c096f
+Installed-Size: 223958
+Filename: transmission-remote_2.74-1_keenetic.ipk
+Size: 224342
+MD5Sum: 0357ab0e7f04471c969ba5b0927dc3d2
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.72-1
+Version: 2.74-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.72.tar.bz2
+SourceFile: transmission-2.74.tar.bz2
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -8644,10 +8712,10 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 216806
-Filename: transmission-web_2.72-1_keenetic.ipk
-Size: 217546
-MD5Sum: 1482ebf7b617f2e910bfa36da9b89ea3
+Installed-Size: 216631
+Filename: transmission-web_2.74-1_keenetic.ipk
+Size: 217439
+MD5Sum: 7e46ae5baaea84194d514108fb4e50bd
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
