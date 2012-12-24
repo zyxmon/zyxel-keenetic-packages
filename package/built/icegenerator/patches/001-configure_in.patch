@@ -1,0 +1,22 @@
+--- icegenerator-0.5.5-pre2.orig/configure.in	2004-11-02 13:25:11.000000000 +0300
++++ icegenerator-0.5.5-pre2/configure.in	2012-12-17 23:17:02.000000000 +0400
+@@ -63,10 +63,6 @@
+ 
+ dnl check for POSIX Threads library
+ echo -e $'\n'$'\n'POSIX Threads
+-ACX_PTHREAD([
+-  LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
+-  CXXFLAGS="$CXXFLAGS $PTHREAD_CFLAGS"
+-	])
+ AC_CHECK_HEADERS(pthread.h)
+ AC_CHECK_FUNCS(pthread_create pthread_join)
+ dnl AC_TRY_LINK_FUNC(pthread_create,[have_pthread_funcs=yes],AC_MSG_ERROR([Could not link to libpthread. IceGenerator package uses the pthread library. Install libpthread first.]))
+@@ -112,7 +108,7 @@
+ dnl POSIX semaphores functions
+ echo -e $'\n'$'\n'POSIX semaphores functions
+ AC_CHECK_HEADERS(semaphore.h)
+-AC_CHECK_LIB(rt,sem_init,[LDFLAGS="$LDFLAGS -lrt"],,$LDFLAGS)
++AC_SEARCH_LIBS(sem_init,pthread rt)
+ AC_CHECK_FUNCS(sem_init sem_destroy sem_wait sem_post,[have_sems_funcs=yes],AC_MSG_ERROR([required function missing]))
+ 
+ dnl Utility functions

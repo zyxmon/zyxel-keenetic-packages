@@ -1,0 +1,22 @@
+--- ezstream-0.5.6/configure	2009-08-31 02:02:05.000000000 +0400
++++ ezstream-0.5.6.new/configure	2012-12-22 19:25:15.000000000 +0400
+@@ -4872,7 +4872,7 @@
+ 
+ 
+ if test -n "${GCC}"; then
+-	for _flag in fstack-protector fstrict-aliasing Wall W Wstrict-aliasing \
++	for _flag in fstrict-aliasing Wall W Wstrict-aliasing \
+ 		Wwrite-strings Wpointer-arith Wshadow Wconversion Wcast-qual \
+ 		Wcast-align Wbounded Wmissing-declarations Wmissing-prototypes \
+ 		Wstrict-prototypes
+--- ezstream-0.5.6/configure.in	2009-08-31 01:58:00.000000000 +0400
++++ ezstream-0.5.6.new/configure.in	2012-12-22 19:25:32.000000000 +0400
+@@ -57,7 +57,7 @@
+ dnl ##############
+ 
+ if test -n "${GCC}"; then
+-	for _flag in fstack-protector fstrict-aliasing Wall W Wstrict-aliasing \
++	for _flag in fstrict-aliasing Wall W Wstrict-aliasing \
+ 		Wwrite-strings Wpointer-arith Wshadow Wconversion Wcast-qual \
+ 		Wcast-align Wbounded Wmissing-declarations Wmissing-prototypes \
+ 		Wstrict-prototypes

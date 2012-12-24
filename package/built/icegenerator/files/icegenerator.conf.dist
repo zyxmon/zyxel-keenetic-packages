@@ -1,0 +1,168 @@
+# IceGenerator sample configuration file
+
+#######################################################
+# Server section
+#######################################################
+
+# IP (REQUIRED)
+IP=127.0.0.1
+
+# Port (REQUIRED)
+PORT=8000
+
+# Type (REQUIRED)
+# 1 - Icecast 1.3.21 or Shoutcast (ICY protocol compatible)
+# 2 - Icecast 2.0 (HTTP protocol compatible)
+SERVER=2
+
+# Mount point for MP3/OGG streaming. (REQUIRED)
+# REMEMBER TO SET A VIRTUAL MOUNT POINT HERE FOR OGG STREAMING. MANY 
+# PLAYERS (LIKE WINAMP, XMMS, ETC.) CAN'T AUTO RECOGNIZE OGG STREAMING
+# WITHOUT .OGG EXTENSION.
+MOUNT=/
+
+
+
+#######################################################
+# User section
+#######################################################
+
+# Source user name (usually IceCast is configured for "source"). (REQUIRED)
+SOURCE=source
+
+# Server connection password (REQUIRED)
+PASSWORD=mypassword
+
+
+
+#######################################################
+# File and playlist section
+#######################################################
+
+# Format (REQUIRED)
+# 0 - Ogg Vorbis
+# 1 - MP3
+FORMAT=1
+
+# Path for MP3s/OGGs. (REQUIRED)
+# This variable has the following format:
+#       playlist_type:playlist_data
+# where playlist_type is
+#       pth: list of dirs
+#       sql: MySQL server table
+#       pql: PostGreSQL server table
+#       pls: PLS file
+#       m3u: M3U file
+#
+# pth case
+#       playlist_data is your mp3's directories separated with full commas
+#       eg: pth:/path1;/path2;path3
+#
+# pql/sql case
+#       playlist_data is your PostGreSQL/MySQL connection data (separated with
+#       full commas) in the following order:
+#       sql:host;port;user;password;database;table;field       where:
+#               host is SQL server hostname or IP
+#               port is SQL server port. If 0, default port will be used
+#               user is SQL user authorized to database read access
+#               password is SQL user password
+#               database is SQL db name that contains mp3 data
+#               table is SQL table of database that contains mp3 data
+#               field is SQL table's field that contains mp3 pathname
+#
+# m3u/pls case
+#       you have to specify a M3U/PLS standard playlist file path.
+#       eg: pls:/my_path/my_playlist.pls
+MP3PATH=pth:/your_mp3_path;/your_2nd_mp3_path
+
+# Set this flag to search recursively from root directories specified (default is disabled)
+RECURSIVE=0
+
+# File to record the stream to on the server (default is none)
+DUMPFILE=
+
+# Loop playlist (default is enabled)
+LOOP=1
+
+# Set this flag to play your music in random order (default is enabled), otherwise
+# alphabetic order will be used
+SHUFFLE=1
+
+#######################################################
+# Information
+#######################################################
+	
+# In next four variables u can put your metadata information that will be
+# sent to clients. You can use any string you want.
+
+# Name of the stream (default none).
+NAME=Your radio name
+
+# Genre of the stream (default none).
+GENRE=Your radio genre
+
+# Description of the stream (default none).
+DESCRIPTION=Your radio description
+
+# Url of the stream (default none).
+URL=Your radio URL
+
+# Bitrate of the stream. Its value is purely informational. It doesn't
+# affect real bitrate of your MP3s (default 24000).
+BITRATE=24000
+
+# Flag to list the stream in directories (default 0)
+PUBLIC=0
+
+# Set this flag to specify time elapsed between META information update in seconds 
+# (default is 5). A value of 0 disables META information, and only NAME value
+# will be transmitted.
+METAUPDATE=5
+
+# This set global MetaDataFile path for your songs. See README.IceMetal 
+# for more info.
+MDFPATH=/mypath/global.mdf
+
+
+#######################################################
+# Debug and logging information
+#######################################################
+
+# Log 
+# 0 - None
+# 1 - System logger
+# 2 - File
+LOG=2
+
+# Log path
+# Specify where you want to log IceG actions. Defaults to /var/log/icegenerator.log
+# if not specified
+LOGPATH=/var/log/icegenerator.log
+
+#######################################################
+# Telnet interface
+#######################################################
+
+# Now IceGenerator has a minimal telnet interface that
+# receives run-time commands to change IceGenerator
+# behaviour while streaming. Case is insensitive.
+# ALL COMMAND MUST BE FOLLOWED BY A TRAILING DOT!!!
+# Telnet commands are:
+#      TRACK
+#           Returns information about current track
+#      LOOP
+#           Returns information about current LOOP setting
+#      LOOPON
+#           Turns on playlist loop
+#      LOOPOFF
+#           Turns off playlist loop
+#      SHUFFLE
+#           Returns informations about current SHUFFLE setting
+#      SHUFFLEON
+#           Turns on shuffle
+#      SHUFFLEOFF
+#           Turns off shuffle
+#
+# DATAPORT is used to specify telnet port. If not specified, telnet
+# interface will be disabled. If 0, 8796 (default port) will be used.
+DATAPORT=8796
