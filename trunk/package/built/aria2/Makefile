@@ -1,54 +1,54 @@
+#
+# Copyright (C) 2012 OpenWrt.org
+#
+# This is free software, licensed under the GNU General Public License v2.
+# See /LICENSE for more information.
+#
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=aria2
-PKG_VERSION:=1.13.0
+PKG_VERSION:=1.16.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=@SF/aria2
-PKG_MD5SUM:=b86a5bd4a94e465a58656f71b48c90b9
-
-
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
-
-PKG_BUILD_DEPENDS:=libopenssl zlib
-
-
+PKG_MD5SUM:=0a8e1dbfe1725a02de8271589d622739
+PKG_INSTALL:=1
+PKG_BUILD_DEPENDS:= zlib libopenssl
 
 include $(INCLUDE_DIR)/package.mk
 
-
 define Package/aria2
-SECTION:=net
-CATEGORY:=Network
-TITLE:=download manager
-URL:=http://aria2.sourceforge.net/
-DEPENDS:=+libxml2 +libstdcpp
+  SECTION:=net
+  CATEGORY:=Network
+  SUBMENU:=File Transfer
+  TITLE:=lightweight download utility
+  URL:=http://aria2.sourceforge.net/
+  DEPENDS:=+libxml2 +libstdcpp \
+    $(INTL_DEPENDS) $(ICONV_DEPENDS)
 endef
 
 define Package/aria2/description
-	download manager
-endef
-
-define Package/aria2/conffiles
-/etc/aria2/aria2.conf
+ aria2 is a lightweight multi-protocol & multi-source command-line download
+ utility
 endef
 
 CONFIGURE_ARGS += \
-	--with-openssl-prefix="$(STAGING_DIR)/usr/include/openssl" \
-	--with-libz-prefix="$(STAGING_DIR)/usr/include" \
+	--disable-nls \
 	--without-gnutls \
+	--without-libnettle \
+	--without-libgmp \
+	--without-libgcrypt \
 	--without-libexpat \
-	--with-openssl \
-	--with-libxml2 \
 	--without-libcares \
 	--without-sqlite3 \
-	--disable-nls \
-	--disable-static \
-	--oldincludedir=$(PKG_BUILD_DIR)/.
+	--with-openssl \
+	--with-libxml2 \
+	--with-libz
 
-
-
+CONFIGURE_VARS += \
+	ZLIB_CFLAGS="-I$(STAGING_DIR)/usr/include" \
+	ZLIB_LIBS="-L$(STAGING_DIR)/usr/lib"
 
 define Package/aria2/install
 	$(INSTALL_DIR) $(1)/usr/bin
