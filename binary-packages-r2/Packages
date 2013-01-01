@@ -21,11 +21,11 @@ Description:  3proxy is universal proxy server. It can be used to provide intern
  access to external resources or to provide external users with access to internal resources.
 
 Package: aria2
-Version: 1.13.0-1
+Version: 1.16.0-1
 Depends: libxml2, libstdcpp
 Provides: 
 Source: package/built/aria2
-SourceFile: aria2-1.13.0.tar.bz2
+SourceFile: aria2-1.16.0.tar.bz2
 SourceURL: @SF/aria2
 License: 
 LicenseFiles: 
@@ -35,11 +35,12 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1139309
-Filename: aria2_1.13.0-1_keenetic.ipk
-Size: 1136610
-MD5Sum: 45da5bf4d486fcecbced583376ae4064
-Description:  download manager
+Installed-Size: 1098453
+Filename: aria2_1.16.0-1_keenetic.ipk
+Size: 1096385
+MD5Sum: 0e5bd1fa06f4ac4c250be2b658087850
+Description:  aria2 is a lightweight multi-protocol & multi-source command-line download
+ utility
 
 Package: automatic
 Version: 0.8.0-1
@@ -544,6 +545,36 @@ Description:  You can wake up WOL compliant Computers which have been powered do
  to turn on a computer from another location over a network connection.
  ether-wake also supports WOL passwords.
 
+Package: ezstream
+Version: 0.5.6-1
+Depends: libshout, taglib, libiconv-full, libxml2
+Provides: 
+Source: package/built/ezstream
+SourceFile: ezstream-0.5.6.tar.gz
+SourceURL: http://downloads.xiph.org/releases/ezstream/
+License: 
+LicenseFiles: 
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 28045
+Filename: ezstream_0.5.6-1_keenetic.ipk
+Size: 29080
+MD5Sum: 6093e626a5c9f6bb42ee4b7b338228f2
+Description:  Ezstream is a command line source client for Icecast media 
+ streaming servers. It began as the successor of the old "shout" 
+ utility, and has since gained a lot of useful features.
+ In its basic mode of operation, it streams media files or data 
+ from standard input without reencoding and thus requires only 
+ very little CPU resources. It can also use various external 
+ decoders and encoders to reencode from one format to another, 
+ and stream the result to an Icecast server. Additional features 
+ include scriptable playlist and metadata handling. All of its 
+ features make ezstream a very flexible source client.
+
 Package: faad2
 Version: 2.7-1
 Depends: libfaad2
@@ -853,6 +884,30 @@ Description:  Icecast is a streaming media server which currently supports Ogg
  between. It is very versatile in that new formats can be added 
  relatively easily and supports open standards for commuincation and 
  interaction.
+
+Package: icegenerator
+Version: 0.5.5-pre2-1
+Depends: libshout, id3lib, libstdcpp
+Provides: 
+Source: package/built/icegenerator
+SourceFile: icegenerator-0.5.5-pre2.tar.gz
+SourceURL: @SF/icegenerator
+License: 
+LicenseFiles: 
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19529
+Filename: icegenerator_0.5.5-pre2-1_keenetic.ipk
+Size: 20259
+MD5Sum: 0b478f8c2fdb1636c51e22c65cd0c3c0
+Description:  IceGenerator is a direct stream generator for Icecast/Shoutcast 
+ servers. Streams MP3 to an Icecast/Shoutcast server without 
+ resampling it, saving CPU. Features directories search, ID3, 
+ M3U/PLS, META dynamic info and telnet interface.
 
 Package: iconv
 Version: 1.11.1-1
@@ -2400,6 +2455,31 @@ Description:  The Readline library provides a set of functions for use by applic
  lines, to recall and perhaps reedit those lines, and perform csh-like 
  history expansion on previous commands.
 
+Package: libshout
+Version: 2.2.2-2
+Depends: libspeex, libtheora, libvorbis, libvorbisidec
+Provides: 
+Source: package/built/libshout
+SourceFile: libshout-2.2.2.tar.gz
+SourceURL: http://downloads.us.xiph.org/releases/libshout/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 23583
+Filename: libshout_2.2.2-2_keenetic.ipk
+Size: 24340
+MD5Sum: 7a794d71d62b6238b8295d421b8df70e
+Description:  libshout allows applications to easily communicate and broadcast
+ to an Icecast streaming media server. It handles the socket connections,
+ metadata communication, and data streaming for the calling application,
+ and lets developers focus on feature sets instead of implementation
+ details.
+
 Package: libslang2
 Version: 2.2.4-1
 Depends: libncurses
@@ -2421,6 +2501,35 @@ Size: 300687
 MD5Sum: 812edc03089fbaf6f5b7ae6aa9141127
 Description:  This is a shell which is mostly just a wrapper around the S-Lang Interpreter,
  which is part of the S-Lang Library.
+
+Package: libspeex
+Version: 1.2rc1-1
+Depends: 
+Provides: 
+Source: package/built/speex
+SourceFile: speex-1.2rc1.tar.gz
+SourceURL: http://downloads.us.xiph.org/releases/speex/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 44933
+Filename: libspeex_1.2rc1-1_keenetic.ipk
+Size: 45885
+MD5Sum: 203431db2a25b36cb6b2581906a88778
+Description:  Open source patent-free speech compression codec library.
+ Speex is an Open Source/Free Software patent-free audio compression 
+ format designed for speech. The Speex Project aims to lower the 
+ barrier of entry for voice applications by providing a free 
+ alternative to expensive proprietary speech codecs. Moreover, Speex 
+ is well-adapted to Internet applications and provides useful features 
+ that are not present in most other codecs.
+ 
+ This package contains the shared codec library, needed by other programs.
 
 Package: libsqlite2
 Version: 2.8.17-2
@@ -2489,6 +2598,32 @@ Filename: libstdcpp_4.1.2-60_keenetic.ipk
 Size: 160589
 MD5Sum: e96756e73e426c671f368369ae7dfbbd
 Description:  GNU Standard C++ Library v3
+
+Package: libtheora
+Version: 1.1.1-1
+Depends: libogg
+Provides: 
+Source: package/built/libtheora
+SourceFile: libtheora-1.1.1.tar.bz2
+SourceURL: http://downloads.xiph.org/releases/theora/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 328559
+Filename: libtheora_1.1.1-1_keenetic.ipk
+Size: 329326
+MD5Sum: fce4594a4f429133f09ed997e02dca19
+Description:  Theora is Xiph.Org's first publicly released video codec, intended
+ for use within the Foundation's Ogg multimedia streaming system.
+ Theora is derived directly from On2's VP3 codec; Currently the
+ encoders are nearly identical, but Theora will make use of new
+ features supported by the decoder to improve over what is
+ is possible with VP3.
 
 Package: libtiff
 Version: 3.9.2-1
@@ -2616,6 +2751,30 @@ Description:  Vorbis is a general purpose audio and music encoding format
  All the technical details are published and documented, and any
  software entity may make full use of the format without license
  fee, royalty or patent concerns.
+
+Package: libvorbisidec
+Version: 1.0.2+svn14261-1
+Depends: 
+Provides: 
+Source: package/built/libvorbisidec
+SourceFile: libvorbisidec_1.0.2+svn14261.orig.tar.gz
+SourceURL: http://ftp.de.debian.org/debian/pool/main/libv/libvorbisidec/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 77309
+Filename: libvorbisidec_1.0.2+svn14261-1_keenetic.ipk
+Size: 78157
+MD5Sum: 666fa0e8234a914a62dddf4398f78aef
+Description:  libvorbisidec is "tremor", a fixed-point implementation of libvorbis.
+ It also has libogg built-in. It is suitable as a replacement for 
+ libvorbis and libogg in tremor-aware applications.
+ Tremor is a decoder only.
 
 Package: libwrap
 Version: 7.6-1
@@ -8525,6 +8684,27 @@ Description:  Subversion is a free/open-source version control system. That is,
  examine the history of how your data changed. In this regard, many
  people think of a version control system as a sort of time machine.
  This package contains the subversion server.
+
+Package: taglib
+Version: 1.6.3-2
+Depends: uclibcxx
+Provides: 
+Source: package/built/taglib
+SourceFile: taglib-1.6.3.tar.gz
+SourceURL: http://developer.kde.org/~wheeler/files/src/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 154676
+Filename: taglib_1.6.3-2_keenetic.ipk
+Size: 154688
+MD5Sum: 28ed0c6dbd78ff096c7b1e4256bf3944
+Description:  Audio output library
 
 Package: tc
 Version: 2.6.35-2
