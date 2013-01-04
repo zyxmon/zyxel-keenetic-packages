@@ -792,11 +792,11 @@ MD5Sum: e967cae9276590473cd56ab5536d461e
 Description:  This is a successor of the well-known GoldED Fidonet Mail Reader/Editor.
 
 Package: htop
-Version: 1.0.1-1
+Version: 1.0.2-1
 Depends: libncurses
 Provides: 
 Source: package/built/htop
-SourceFile: htop-1.0.1.tar.gz
+SourceFile: htop-1.0.2.tar.gz
 SourceURL: @SF/htop
 License: 
 LicenseFiles: 
@@ -806,10 +806,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 48509
-Filename: htop_1.0.1-1_keenetic.ipk
-Size: 49210
-MD5Sum: 50bd2eb41513440a41d9e89e796e6f3a
+Installed-Size: 50522
+Filename: htop_1.0.2-1_keenetic.ipk
+Size: 51230
+MD5Sum: acf43130b26cbe2524b6d3d7c543c4e8
 Description:  Htop is an ncursed-based process viewer similar to top, but
  it allows to scroll the list vertically and horizontally to
  see all processes and their full command lines.
@@ -9130,12 +9130,12 @@ MD5Sum: 79a5e924812de47b2e67ad992393dbff
 Description:  C++ library for embedded systems
 
 Package: udpxy
-Version: 1.0-Chipmunk-21-2
+Version: 1.0.23-7-1
 Depends: 
 Provides: 
 Source: package/built/udpxy
-SourceFile: udpxy.1.0-Chipmunk-build21.tgz
-SourceURL: @SF/udpxy
+SourceFile: udpxy.1.0.23-7-prod.tar.gz
+SourceURL: http://www.udpxy.com/download/1_23
 License: 
 LicenseFiles: 
 Section: net
@@ -9144,10 +9144,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 34057
-Filename: udpxy_1.0-Chipmunk-21-2_keenetic.ipk
-Size: 34985
-MD5Sum: 5d7bca4a8631c4eff3ef71ff2746c30f
+Installed-Size: 37139
+Filename: udpxy_1.0.23-7-1_keenetic.ipk
+Size: 38100
+MD5Sum: 82c85b4276279540cf4fd591125532d9
 Description:  udproxy makes it possible to convert UDP IPTV streams into http
  streams which can be viewed even over wlans. http streams do
  not generate huge amounts of multicast traffic, so a sd stream
