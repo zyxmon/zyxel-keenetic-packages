@@ -3800,6 +3800,32 @@ Size: 102962
 MD5Sum: 0a3d5156b0072be5a280f763811b43b3
 Description:  webcam motion sensing and logging
 
+Package: msmtp
+Version: 1.4.27-1
+Depends: 
+Provides: 
+Source: package/built/msmtp
+SourceFile: msmtp-1.4.27.tar.bz2
+SourceURL: @SF/msmtp
+License: 
+LicenseFiles: 
+Section: mail
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 42923
+Filename: msmtp_1.4.27-1_keenetic.ipk
+Size: 43949
+MD5Sum: 6c9a2668e82931ac504aaa2a6a32d49c
+Description:  msmtp is an SMTP client. In the default mode, it transmits a mail to
+ an SMTP server (for example at a free mail provider) which does the
+ delivery. To use this program with your mail user agent (MUA), create
+ a configuration file with your mail account(s) and tell your MUA to
+ call msmtp instead of /usr/sbin/sendmail.
+ This package is built with SSL support.
+
 Package: mtr
 Version: 0.82-1
 Depends: libncurses
