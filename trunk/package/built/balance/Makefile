@@ -13,10 +13,12 @@ define Package/balance
   SECTION:=net
   CATEGORY:=Network
   TITLE:=balance
+  URL:=http://www.inlab.de/balance.html
 endef
 
 define Package/balance/description
-  Balance
+  Balance is a load balancing solution being a simple but powerful generic tcp proxy with round robin load
+  balancing and failover mechanisms. Its behaviour can be controlled at runtime using a simple command line syntax.
 endef
 
 define Build/Prepare
