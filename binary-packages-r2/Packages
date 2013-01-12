@@ -84,6 +84,28 @@ Size: 9687
 MD5Sum: 43c272fc493e553b3c4ede4c3f4258cf
 Description:  Ext2 Filesystem badblocks utility
 
+Package: balance
+Version: 3.54-1
+Depends: 
+Provides: 
+Source: package/built/balance
+SourceFile: 
+SourceURL: 
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13503
+Filename: balance_3.54-1_keenetic.ipk
+Size: 14239
+MD5Sum: 02c7bc191849cdb2f75b97fe03a8a833
+Description:  Balance is a load balancing solution being a simple but powerful generic tcp proxy with round robin load
+ balancing and failover mechanisms. Its behaviour can be controlled at runtime using a simple command line syntax.
+
 Package: bash
 Version: 4.2-2
 Depends: libncurses
@@ -7659,6 +7681,27 @@ Size: 100404
 MD5Sum: 437635ec78090efc14f014b1d1cf6513
 Description:  SOAP shared module
 
+Package: php5-mod-sockets
+Version: 5.4.5-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+SourceFile: php-5.4.5.tar.bz2
+SourceURL: http://www.php.net/distributions/
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 15000
+Filename: php5-mod-sockets_5.4.5-1_keenetic.ipk
+Size: 15594
+MD5Sum: e9f469c34a617c5f2bd1db906881d790
+Description:  Sockets shared module
+
 Package: php5-mod-sqlite3
 Version: 5.4.5-1
 Depends: php5, libsqlite3
@@ -8838,11 +8881,11 @@ MD5Sum: 44bd8ea1ec5eb6aadff2c34672525e39
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.74-1
+Version: 2.76-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.74.tar.bz2
+SourceFile: transmission-2.76.tar.bz2
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -8852,18 +8895,18 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 837948
-Filename: transmission-cli_2.74-1_keenetic.ipk
-Size: 837250
-MD5Sum: 732ba68eef1740dad0d5d8524fdecfc0
+Installed-Size: 838228
+Filename: transmission-cli_2.76-1_keenetic.ipk
+Size: 837628
+MD5Sum: 2fe5bd70f2d4463650171207f3db10d3
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.74-1
+Version: 2.76-1
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.74.tar.bz2
+SourceFile: transmission-2.76.tar.bz2
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -8873,21 +8916,21 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 214172
-Filename: transmission-daemon_2.74-1_keenetic.ipk
-Size: 214721
-MD5Sum: c2fedab301549628dbc477c7ea08fcd5
+Installed-Size: 214261
+Filename: transmission-daemon_2.76-1_keenetic.ipk
+Size: 214852
+MD5Sum: 35005fae73bde8d0a494215c46f251cc
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.74-1
+Version: 2.76-1
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.74.tar.bz2
+SourceFile: transmission-2.76.tar.bz2
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -8897,18 +8940,18 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 223958
-Filename: transmission-remote_2.74-1_keenetic.ipk
-Size: 224342
-MD5Sum: 0357ab0e7f04471c969ba5b0927dc3d2
+Installed-Size: 224036
+Filename: transmission-remote_2.76-1_keenetic.ipk
+Size: 224456
+MD5Sum: 31ba4c7935db7ecb8d55fb21cc675874
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.74-1
+Version: 2.76-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.74.tar.bz2
+SourceFile: transmission-2.76.tar.bz2
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -8918,10 +8961,10 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 216631
-Filename: transmission-web_2.74-1_keenetic.ipk
-Size: 217439
-MD5Sum: 7e46ae5baaea84194d514108fb4e50bd
+Installed-Size: 216638
+Filename: transmission-web_2.76-1_keenetic.ipk
+Size: 217447
+MD5Sum: 90cfa07c30007e45fd79afc989dc8a3c
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
