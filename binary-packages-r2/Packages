@@ -567,6 +567,30 @@ Description:  You can wake up WOL compliant Computers which have been powered do
  to turn on a computer from another location over a network connection.
  ether-wake also supports WOL passwords.
 
+Package: ettercap
+Version: NG-0.7.3-2
+Depends: libpcap, libnet1, libpcre, libncurses, libltdl, libiconv-full
+Provides: 
+Source: package/built/ettercap
+SourceFile: ettercap-NG-0.7.3.tar.gz
+SourceURL: @SF/ettercap
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 420318
+Filename: ettercap_NG-0.7.3-2_keenetic.ipk
+Size: 420992
+MD5Sum: 1e7f367cb7530962e61e9827b9e4f37c
+Description:  It features sniffing of live connections, content filtering on the fly 
+ and many other interesting tricks. 
+ It supports active and passive dissection of many protocols (even 
+ ciphered ones) and includes many feature for network and host analysis.
+
 Package: ezstream
 Version: 0.5.6-1
 Depends: libshout, taglib, libiconv-full, libxml2
@@ -2119,6 +2143,27 @@ Size: 568621
 MD5Sum: 0ebc19d28bd397a267a6c855184e7469
 Description:  A library for efficient image processing and image analysis operations
 
+Package: libltdl
+Version: 2.4-1
+Depends: 
+Provides: 
+Source: package/libtool
+SourceFile: libtool-2.4.tar.gz
+SourceURL: @GNU/libtool
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13031
+Filename: libltdl_2.4-1_keenetic.ipk
+Size: 13680
+MD5Sum: 68d18cc465c8713d894185e27acc435e
+Description:  A generic dynamic object loading library
+
 Package: liblua
 Version: 5.1.5-1
 Depends: 
@@ -2293,6 +2338,27 @@ Filename: libneon_0.29.6-2_keenetic.ipk
 Size: 57257
 MD5Sum: 7f3c18a2927a2e678aa89d22c00156c8
 Description:  HTTP and WebDAV client library
+
+Package: libnet1
+Version: 1.1.2.1-2
+Depends: libpcap
+Provides: 
+Source: package/built/libnet-1.1.x
+SourceFile: libnet.tar.gz
+SourceURL: http://www.packetfactory.net/libnet/dist/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 32863
+Filename: libnet1_1.1.2.1-2_keenetic.ipk
+Size: 33568
+MD5Sum: 3c78126c4f9425d8784cbacd0b472f5b
+Description:  Low-level packet creation library (v1.1.x)
 
 Package: libogg
 Version: 1.1.4-2
@@ -9556,11 +9622,11 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 355-1
+Version: 372-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
-SourceFile: xupnpd-355.tar.gz
+SourceFile: xupnpd-372.tar.gz
 SourceURL: http://tsdemuxer.googlecode.com/svn/trunk/xupnpd/src/
 License: 
 LicenseFiles: 
@@ -9570,10 +9636,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 138409
-Filename: xupnpd_355-1_keenetic.ipk
-Size: 139114
-MD5Sum: a81322cd7fcf9d5feb5e6768305d1cf9
+Installed-Size: 138862
+Filename: xupnpd_372-1_keenetic.ipk
+Size: 139602
+MD5Sum: 9b418451d5048d11d9169f81c5e9e8b0
 Description:  eXtensible UPnP agent
 
 Package: zip
