@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nginx
-PKG_VERSION:=1.2.5
+PKG_VERSION:=1.2.6
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://nginx.org/download/
-PKG_MD5SUM:=4f5a55187a3d45fa37d99d07ddd90800
+PKG_MD5SUM:=1350d26eb9b66364d9143fb3c4366ab6
 
 PKG_BUILD_PARALLEL:=1
 PKG_INSTALL:=1
@@ -25,6 +25,7 @@ PKG_CONFIG_DEPENDS := \
 	CONFIG_NGINX_FLV \
 	CONFIG_NGINX_SSL \
 	CONFIG_NGINX_DAV \
+	CONFIG_NGINX_MODULE_LUA \
 	CONFIG_NGINX_DISABLE_PCRE \
 	CONFIG_NGINX_DISABLE_HTTP_CHARSET_MODULE \
 	CONFIG_NGINX_DISABLE_HTTP_GZIP_MODULE \
@@ -57,7 +58,7 @@ define Package/nginx
   SUBMENU:=Web Servers/Proxies
   TITLE:=Nginx web server
   URL:=http://nginx.org/
-  DEPENDS:=+libpcre
+  DEPENDS:=+!NGINX_DISABLE_PCRE:libpcre  +NGINX_MODULE_LUA:liblua
   MENU:=1
 endef
 
@@ -94,6 +95,9 @@ else
 endif
 ifeq ($(CONFIG_NGINX_DAV),y)
   ADDITIONAL_MODULES += --with-http_dav_module
+endif
+ifeq ($(CONFIG_NGINX_MODULE_LUA),y)
+  ADDITIONAL_MODULES += --add-module=$(PKG_BUILD_DIR)/lua-nginx
 endif
 ifeq ($(CONFIG_NGINX_DISABLE_HTTP_CACHE),y)
   ADDITIONAL_MODULES += --without-http-cache
@@ -171,6 +175,7 @@ endif
 define Build/Configure
 	# TODO: fix --crossbuild
 	(cd $(PKG_BUILD_DIR) ;\
+		$(if $(CONFIG_NGINX_MODULE_LUA),LUA_INC=$(STAGING_DIR)/usr/include LUA_LIB=$(STAGING_DIR)/usr/lib) \
 		./configure \
 			--crossbuild=Linux::$(ARCH) \
 			--prefix="$(PREFIX_ZYX)" \
@@ -193,10 +198,6 @@ define Package/nginx/install
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)$(PREFIX_ZYX)/sbin/nginx $(1)/usr/sbin/
 	$(INSTALL_DIR) $(1)/etc/nginx
 	$(INSTALL_DATA) $(addprefix $(PKG_INSTALL_DIR)$(ROOT_ZYX)/etc/nginx/,$(config_files)) $(1)/etc/nginx/
-	# make nginx bind on both IPv4 and IPv6 by default, when available
-  ifeq ($(CONFIG_IPV6),y)
-	$(SED) 's/listen\( \+\)80;/listen\1[::]:80;/' $(1)/etc/nginx/nginx.conf
-  endif
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_DIR) $(1)/var/log/nginx
 	$(INSTALL_DIR) $(1)/var/lib/nginx
@@ -206,6 +207,25 @@ define Package/nginx/install
 	$(INSTALL_BIN) ./files/K50nginx $(1)/etc/init.d/K50nginx
 	$(INSTALL_DATA) ./files/nginx.conf $(1)/etc/nginx/
 	$(INSTALL_DATA) $(PKG_INSTALL_DIR)$(PREFIX_ZYX)/html/* $(1)/var/www/
+endef
+
+define Build/Prepare
+	$(call Build/Prepare/Default)
+	$(if $(CONFIG_NGINX_MODULE_LUA),$(call Prepare/lua-nginx))
+endef
+
+define Download/lua-nginx
+	VERSION:=7c0948a08e8449f7a9ffbc35244954e6aaddac5b
+	SUBDIR:=lua-nginx
+	FILE:=lua-nginx-module-$(PKG_VERSION)-$$(VERSION).tar.gz
+	URL:=https://github.com/chaoslawful/lua-nginx-module.git
+	PROTO:=git
+endef
+
+define  Prepare/lua-nginx
+	$(eval $(call Download,lua-nginx))
+	gzip -dc $(DL_DIR)/$(FILE) | tar -C $(PKG_BUILD_DIR) $(TAR_OPTIONS)
+	$(call PatchDir,$(PKG_BUILD_DIR),./patches-lua-nginx)
 endef
 
 $(eval $(call BuildPackage,nginx))

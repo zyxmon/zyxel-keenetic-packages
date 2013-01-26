@@ -36,6 +36,13 @@ config NGINX_DAV
 	help
 		Enable the HTTP and WebDAV methods PUT, DELETE, MKCOL, COPY and MOVE.
 
+config NGINX_MODULE_LUA
+	bool
+	prompt "Enable LUA module"
+	default n
+	help
+		Enable support for LUA scripts.
+
 	menu "Disable features"
 
 	config NGINX_DISABLE_PCRE
