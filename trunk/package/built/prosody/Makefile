@@ -58,6 +58,8 @@ MAKE_FLAGS += \
 	PREFIX="/usr" \
 
 define Package/prosody/install
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/K60prosody $(1)/etc/init.d/K60prosody
 	$(INSTALL_DIR) $(1)/var/log/prosody/
 	$(INSTALL_DIR) $(1)/etc/prosody
 	$(INSTALL_CONF) ./files/prosody.cfg.lua $(1)/etc/prosody/
