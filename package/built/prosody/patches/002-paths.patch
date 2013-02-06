@@ -1,0 +1,47 @@
+--- a/prosody.orig	2013-02-06 11:48:28.000000000 +0400
++++ b/prosody	2013-02-06 11:50:17.000000000 +0400
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env lua
++#!/media/DISK_A1/system/usr/bin/env lua
+ -- Prosody IM
+ -- Copyright (C) 2008-2010 Matthew Wild
+ -- Copyright (C) 2008-2010 Waqas Hussain
+@@ -9,11 +9,10 @@
+ 
+ -- Will be modified by configure script if run --
+ 
+-CFG_SOURCEDIR=os.getenv("PROSODY_SRCDIR");
+-CFG_CONFIGDIR=os.getenv("PROSODY_CFGDIR");
+-CFG_PLUGINDIR=os.getenv("PROSODY_PLUGINDIR");
+-CFG_DATADIR=os.getenv("PROSODY_DATADIR");
+-
++CFG_SOURCEDIR='/media/DISK_A1/system/usr/lib/prosody';
++CFG_CONFIGDIR='/media/DISK_A1/system/etc/prosody';
++CFG_PLUGINDIR='/media/DISK_A1/system/usr/lib/prosody/modules/';
++CFG_DATADIR='/media/DISK_A1/system/etc/prosody/data';
+ -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+ 
+ if CFG_SOURCEDIR then
+--- a/prosodyctl.orig	2013-02-06 11:50:32.000000000 +0400
++++ b/prosodyctl	2013-02-06 11:51:59.000000000 +0400
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env lua
++#!/media/DISK_A1/system/usr/bin/env lua
+ -- Prosody IM
+ -- Copyright (C) 2008-2009 Matthew Wild
+ -- Copyright (C) 2008-2009 Waqas Hussain
+@@ -11,10 +11,10 @@
+ 
+ -- Will be modified by configure script if run --
+ 
+-CFG_SOURCEDIR=nil;
+-CFG_CONFIGDIR=os.getenv("PROSODY_CFGDIR");
+-CFG_PLUGINDIR=nil;
+-CFG_DATADIR=os.getenv("PROSODY_DATADIR");
++CFG_SOURCEDIR='/media/DISK_A1/system/usr/lib/prosody';
++CFG_CONFIGDIR='/media/DISK_A1/system/etc/prosody';
++CFG_PLUGINDIR='/media/DISK_A1/system/usr/lib/prosody/modules/';
++CFG_DATADIR='/media/DISK_A1/system/etc/prosody/data';
+ 
+ -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- --
+ 

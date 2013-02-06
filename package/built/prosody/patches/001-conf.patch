@@ -1,0 +1,38 @@
+--- a/prosody.cfg.lua.dist
++++ b/prosody.cfg.lua.dist
+@@ -11,6 +11,7 @@
+ -- The only thing left to do is rename this file to remove the .dist ending, and fill in the
+ -- blanks. Good luck, and happy Jabbering!
+ 
++run_as_root = true
+ 
+ ---------- Server-wide settings ----------
+ -- Settings in this section apply to the whole server and are the default settings
+@@ -65,12 +66,24 @@
+ -- Disable account creation by default, for security
+ -- For more information see http://prosody.im/doc/creating_accounts
+ allow_registration = false;
+-	
++
++-- File to write pid in
++pidfile = "/media/DISK_A1/system/var/run/prosody/prosody.pid";
++
+ -- These are the SSL/TLS-related settings. If you don't want
+ -- to use SSL/TLS, you may comment or remove this
+ ssl = {
+-	key = "certs/localhost.key";
+-	certificate = "certs/localhost.cert";
++	key = "/media/DISK_A1/system/etc/prosody/certs/localhost.key";
++	certificate = "/media/DISK_A1/system/etc/prosody/certs/localhost.cert";
++}
++
++-- Errors to syslog
++-- All to /var/log/prosody/
++log = {
++	{ levels = { "error" }; to = "syslog";  };
++	{ levels = { "error" }; to = "file"; filename = "/meida/DISK_A1/system/var/log/prosody/prosody.err";  };
++	-- Change "info" to "debug" for more verbose logging
++	{ levels = { min = "info" }; to = "file"; filename = "/media/DISK_A1/system/var/log/prosody/prosody.log";  };
+ }
+ 
+ ----------- Virtual hosts -----------

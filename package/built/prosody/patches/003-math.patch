@@ -1,0 +1,11 @@
+--- a/net/dns.lua.orig	2013-02-06 11:55:55.000000000 +0400
++++ b/net/dns.lua	2013-02-06 11:56:37.000000000 +0400
+@@ -183,7 +183,7 @@
+ 
+ 
+ function dns.random(...)    -- - - - - - - - - - - - - - - - - - -  dns.random
+-	math.randomseed(math.floor(10000*socket.gettime()));
++	math.randomseed(math.floor(10000*socket.gettime()) % 0x80000000);
+ 	dns.random = math.random;
+ 	return dns.random(...);
+ end
