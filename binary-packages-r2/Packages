@@ -2038,6 +2038,29 @@ MD5Sum: 51ec0a987d271a0868c2c2fa2d22534c
 Description:  libid3tag is a library for reading and (eventually) writing ID3 tags, both 
  ID3v1 and the various versions of ID3v2.
 
+Package: libidn
+Version: 1.18-1
+Depends: 
+Provides: 
+Source: package/built/libidn
+SourceFile: libidn-1.18.tar.gz
+SourceURL: @GNU/libidn
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 62403
+Filename: libidn_1.18-1_keenetic.ipk
+Size: 60749
+MD5Sum: 64867bdda52a9773e4cb065db310f419
+Description:  GNU Libidn is a fully documented implementation of the Stringprep,
+ Punycode and IDNA specifications. Libidn's purpose is to encode and
+ decode internationalized domain names.
+
 Package: libintl-full
 Version: 0.18.1.1-1
 Depends: 
@@ -3601,6 +3624,94 @@ Description:  Lua is a powerful light-weight programming language designed for e
  applications. Lua is also frequently used as a general-purpose, stand-alone 
  language. Lua is free software.
  This package contains the Lua language interpreter.
+
+Package: luaexpat
+Version: 1.1-2
+Depends: lua, libexpat
+Provides: 
+Source: package/built/luaexpat
+SourceFile: luaexpat-1.1.tar.gz
+SourceURL: http://luaforge.net/frs/download.php/2469
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6927
+Filename: luaexpat_1.1-2_keenetic.ipk
+Size: 7647
+MD5Sum: e8ed62c1aae11f0df79cdf194969b69a
+Description:  LuaExpat is a SAX XML parser based on the Expat library.
+
+Package: luafilesystem
+Version: 1.5.0-1
+Depends: liblua
+Provides: 
+Source: package/built/luafilesystem
+SourceFile: luafilesystem-1.5.0.tar.gz
+SourceURL: http://github.com/downloads/keplerproject/luafilesystem/
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4932
+Filename: luafilesystem_1.5.0-1_keenetic.ipk
+Size: 5662
+MD5Sum: d70a8fa43d821e844eb1ad3d422f5d82
+Description:  This package contains the LuaFileSystem library, a set of portable
+ functions for directory creation, listing and deletion and for file
+ locking.
+
+Package: luasec
+Version: 0.4-1
+Depends: lua, luasocket
+Provides: 
+Source: package/built/luasec
+SourceFile: luasec-0.4.tar.gz
+SourceURL: http://luaforge.net/frs/download.php/4255
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 11028
+Filename: luasec_0.4-1_keenetic.ipk
+Size: 11696
+MD5Sum: 33b3c56f330844a4880defe18dc3167a
+Description:  LuaSec is a binding for OpenSSL library to provide TLS/SSL communication.
+
+Package: luasocket
+Version: 2.0.2-3
+Depends: lua
+Provides: 
+Source: package/built/luasocket
+SourceFile: luasocket-2.0.2.tar.gz
+SourceURL: http://luaforge.net/frs/download.php/2664
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 32357
+Filename: luasocket_2.0.2-3_keenetic.ipk
+Size: 33139
+MD5Sum: 53e864c6b4641afa1be02faf5e6883de
+Description:  LuaSocket is the most comprehensive networking support
+ library for the Lua language. It provides easy access to
+ TCP, UDP, DNS, SMTP, FTP, HTTP, MIME and much more.
 
 Package: lynx
 Version: 2.8.7rel.2-1
@@ -7991,6 +8102,29 @@ MD5Sum: fc05506943d0b2980307dd31e9447178
 Description:  procps is the package that has a bunch of small useful utilities that give 
  information about processes using the /proc filesystem. The package 
  includes the programs ps, top, vmstat, w, kill, free, slabtop, and skill.
+
+Package: prosody
+Version: 0.6.2-2
+Depends: luafilesystem, libidn, luaexpat, luasec
+Provides: 
+Source: package/built/prosody
+SourceFile: prosody-0.6.2.tar.gz
+SourceURL: http://prosody.im/downloads/source
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 129476
+Filename: prosody_0.6.2-2_keenetic.ipk
+Size: 130304
+MD5Sum: 29b983c02c6c15b13ab8c23584ccc1d0
+Description:  Prosody is an exciting new server for Jabber/XMPP
+ written in Lua. It aims to be easy to use, and light
+ on resources
 
 Package: pshare
 Version: 0.0.2rc2-1
