@@ -1,0 +1,17 @@
+--- a/Makefile.orig	2013-02-13 17:13:12.000000000 +0400
++++ b/Makefile	2013-02-13 17:14:49.000000000 +0400
+@@ -8,10 +8,10 @@
+ DATA = $(DESTDIR)$(DATADIR)
+ MAN = $(DESTDIR)$(PREFIX)/share/man
+ 
+-INSTALLEDSOURCE = $(PREFIX)/lib/prosody
+-INSTALLEDCONFIG = $(SYSCONFDIR)
+-INSTALLEDMODULES = $(PREFIX)/lib/prosody/modules
+-INSTALLEDDATA = $(DATADIR)
++INSTALLEDSOURCE = /media/DISK_A1/system/usr/lib/prosody
++INSTALLEDCONFIG = /media/DISK_A1/system/etc/prosody
++INSTALLEDMODULES = /media/DISK_A1/system/usr/lib/prosody/modules
++INSTALLEDDATA = /media/DISK_A1/system/etc/prosody/data
+ 
+ all: prosody.install prosodyctl.install prosody.cfg.lua.install prosody.version
+ 	$(MAKE) -C util-src install
