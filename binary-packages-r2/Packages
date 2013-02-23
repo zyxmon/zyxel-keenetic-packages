@@ -21,11 +21,11 @@ Description:  3proxy is universal proxy server. It can be used to provide intern
  access to external resources or to provide external users with access to internal resources.
 
 Package: aria2
-Version: 1.16.0-1
+Version: 1.16.3-1
 Depends: libxml2, libstdcpp
 Provides: 
 Source: package/built/aria2
-SourceFile: aria2-1.16.0.tar.bz2
+SourceFile: aria2-1.16.3.tar.bz2
 SourceURL: @SF/aria2
 License: 
 LicenseFiles: 
@@ -35,10 +35,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1098453
-Filename: aria2_1.16.0-1_keenetic.ipk
-Size: 1096385
-MD5Sum: 0e5bd1fa06f4ac4c250be2b658087850
+Installed-Size: 1119012
+Filename: aria2_1.16.3-1_keenetic.ipk
+Size: 1116845
+MD5Sum: aca1233e3ed8781dd2b55081775eb137
 Description:  aria2 is a lightweight multi-protocol & multi-source command-line download
  utility
 
@@ -2473,12 +2473,12 @@ MD5Sum: 977bb0192379aaf0d39c7131f58ad0a7
 Description:  A PNG format files handling library
 
 Package: libpolarssl
-Version: 1.1.3-1
+Version: 1.2.5-1
 Depends: 
 Provides: 
 Source: package/built/polarssl
-SourceFile: polarssl-1.1.3-gpl.tgz
-SourceURL: http://polarssl.org/code/releases
+SourceFile: polarssl-1.2.5-gpl.tgz
+SourceURL: https://polarssl.org/code/releases
 License: 
 LicenseFiles: 
 Section: libs
@@ -2487,10 +2487,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 115120
-Filename: libpolarssl_1.1.3-1_keenetic.ipk
-Size: 115594
-MD5Sum: 8e311e130ebca4ab6db7761dddff9890
+Installed-Size: 98132
+Filename: libpolarssl_1.2.5-1_keenetic.ipk
+Size: 98668
+MD5Sum: 059fa186f0ea71a0cbf6beffc7552ce9
 Description:  The aim of the PolarSSL project is to provide a quality, open-source
  cryptographic library written in C and targeted at embedded systems.
  This package contains the PolarSSL library.
@@ -3826,11 +3826,11 @@ Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user
  with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
 Package: microdc2
-Version: 0.15.6-20121011-1
+Version: 0.15.6-20130122-1
 Depends: libiconv-full, libxml2, libreadline, libncurses
 Provides: 
 Source: package/built/microdc2
-SourceFile: microdc2-0.15.6-20121011.tar.bz2
+SourceFile: microdc2-0.15.6-20130122.tar.bz2
 SourceURL: git://github.com/jnwatts/microdc2.git
 License: 
 LicenseFiles: 
@@ -3840,10 +3840,10 @@ Essential: no
 Priority: optional
 Maintainer: Entware team, wl500g-repo.googlecode.com
 Architecture: keenetic
-Installed-Size: 149098
-Filename: microdc2_0.15.6-20121011-1_keenetic.ipk
-Size: 149580
-MD5Sum: 7f04c57b9a90770d4d44b870194973f2
+Installed-Size: 149206
+Filename: microdc2_0.15.6-20130122-1_keenetic.ipk
+Size: 149691
+MD5Sum: 1577290799fa050fb3e39a43ac6677e3
 Description:  A command-line based Direct Connect client.
 
 Package: microperl
@@ -3936,11 +3936,11 @@ MD5Sum: ace63d389099efb8dc6acb678e0335f2
 Description:  Terminal emulation program
 
 Package: minidlna
-Version: 1.0.24-5
+Version: 1.0.25-1
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
 Provides: 
 Source: package/built/minidlna
-SourceFile: minidlna_1.0.24_src.tar.gz
+SourceFile: minidlna_1.0.25_src.tar.gz
 SourceURL: @SF/minidlna
 License: 
 LicenseFiles: 
@@ -3950,10 +3950,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 139453
-Filename: minidlna_1.0.24-5_keenetic.ipk
-Size: 140080
-MD5Sum: 4042d7eb916cefb304d4c57a6592e07f
+Installed-Size: 123235
+Filename: minidlna_1.0.25-1_keenetic.ipk
+Size: 123906
+MD5Sum: eaae975dd9b8dbb0ff34576ecc050340
 Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
  being fully compliant with DLNA/UPnP-AV clients.
 
@@ -4318,12 +4318,12 @@ Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  This package contains the OpenSSL command-line utility.
 
 Package: openvpn-easy-rsa
-Version: 2.2.2-1
+Version: 2013-01-30-1
 Depends: openssl-util
 Provides: 
-Source: package/built/openvpn
-SourceFile: openvpn-2.2.2.tar.gz
-SourceURL: http://swupdate.openvpn.net/community/releases @SF/openvpn
+Source: package/built/openvpn-easy-rsa
+SourceFile: openvpn-easy-rsa-2013-01-30-ff5bfd1dd8e548cb24d302742af3894f893ef92f.tar.gz
+SourceURL: git://github.com/OpenVPN/easy-rsa.git
 License: 
 LicenseFiles: 
 Section: net
@@ -4332,32 +4332,53 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 10008
-Filename: openvpn-easy-rsa_2.2.2-1_keenetic.ipk
-Size: 10782
-MD5Sum: 7de00e73487db38b15fb2bb4396ec9c4
+Installed-Size: 10106
+Filename: openvpn-easy-rsa_2013-01-30-1_keenetic.ipk
+Size: 10914
+MD5Sum: aa9728af4a49889b783b67a93b9a0f1e
 Description:  Simple shell scripts to manage a Certificate Authority
 
-Package: openvpn
-Version: 2.2.2-1
+Package: openvpn-openssl
+Version: 2.3.0-1
 Depends: kmod-tun, liblzo
 Provides: 
 Source: package/built/openvpn
-SourceFile: openvpn-2.2.2.tar.gz
-SourceURL: http://swupdate.openvpn.net/community/releases @SF/openvpn
+SourceFile: openvpn-2.3.0.tar.gz
+SourceURL: http://swupdate.openvpn.net/community/releases
 License: 
 LicenseFiles: 
 Section: net
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Maintainer: Mirko Vogt <mirko@openwrt.org>
 Architecture: keenetic
-Installed-Size: 165199
-Filename: openvpn_2.2.2-1_keenetic.ipk
-Size: 165871
-MD5Sum: e111fe77266789a9731c9e631f803fff
-Description:  Open source VPN solution using SSL
+Installed-Size: 185030
+Filename: openvpn-openssl_2.3.0-1_keenetic.ipk
+Size: 185628
+MD5Sum: 139e275125f6a3db9c3120006050f329
+Description:  Open source VPN solution using OpenSSL
+
+Package: openvpn-polarssl
+Version: 2.3.0-1
+Depends: kmod-tun, liblzo, libpolarssl
+Provides: 
+Source: package/built/openvpn
+SourceFile: openvpn-2.3.0.tar.gz
+SourceURL: http://swupdate.openvpn.net/community/releases
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Mirko Vogt <mirko@openwrt.org>
+Architecture: keenetic
+Installed-Size: 181398
+Filename: openvpn-polarssl_2.3.0-1_keenetic.ipk
+Size: 182095
+MD5Sum: d5c19bed0f233667bbbf2548514de869
+Description:  Open source VPN solution using PolarSSL
 
 Package: opkg
 Version: 618-3
@@ -9081,11 +9102,11 @@ MD5Sum: 44bd8ea1ec5eb6aadff2c34672525e39
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.76-1
+Version: 2.77-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.76.tar.bz2
+SourceFile: transmission-2.77.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -9095,18 +9116,18 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 838228
-Filename: transmission-cli_2.76-1_keenetic.ipk
-Size: 837628
-MD5Sum: 2fe5bd70f2d4463650171207f3db10d3
+Installed-Size: 838581
+Filename: transmission-cli_2.77-1_keenetic.ipk
+Size: 837865
+MD5Sum: 2861eb798aced13ef4897b1366e2b7b9
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.76-1
+Version: 2.77-1
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.76.tar.bz2
+SourceFile: transmission-2.77.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -9116,21 +9137,21 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 214261
-Filename: transmission-daemon_2.76-1_keenetic.ipk
-Size: 214852
-MD5Sum: 35005fae73bde8d0a494215c46f251cc
+Installed-Size: 214309
+Filename: transmission-daemon_2.77-1_keenetic.ipk
+Size: 214894
+MD5Sum: c47d19351d26dc2537a5efed8fcc7fbf
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.76-1
+Version: 2.77-1
 Depends: libevent2, libminiupnpc
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.76.tar.bz2
+SourceFile: transmission-2.77.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -9140,18 +9161,18 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 224036
-Filename: transmission-remote_2.76-1_keenetic.ipk
-Size: 224456
-MD5Sum: 31ba4c7935db7ecb8d55fb21cc675874
+Installed-Size: 224093
+Filename: transmission-remote_2.77-1_keenetic.ipk
+Size: 224512
+MD5Sum: a1d86d1ed3307f16ebe1bddefe30a786
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.76-1
+Version: 2.77-1
 Depends: transmission-daemon
 Provides: 
 Source: package/built/transmission
-SourceFile: transmission-2.76.tar.bz2
+SourceFile: transmission-2.77.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 License: 
 LicenseFiles: 
@@ -9161,10 +9182,10 @@ Essential: no
 Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 216638
-Filename: transmission-web_2.76-1_keenetic.ipk
-Size: 217447
-MD5Sum: 90cfa07c30007e45fd79afc989dc8a3c
+Installed-Size: 216625
+Filename: transmission-web_2.77-1_keenetic.ipk
+Size: 217433
+MD5Sum: 995c30304deb75b065e53c3a37da40c5
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
@@ -9426,7 +9447,7 @@ Description:  udproxy makes it possible to convert UDP IPTV streams into http
  popcornhour/mediatomb/vlc/etc.
 
 Package: umurmur-polarssl
-Version: 0.2.10-1
+Version: 0.2.10-2
 Depends: libconfig, libprotobuf-c, libstdcpp, libpolarssl
 Provides: 
 Source: package/built/umurmur
@@ -9440,10 +9461,10 @@ Essential: no
 Priority: optional
 Maintainer: Martin Johansson <martin@fatbob.nu>
 Architecture: keenetic
-Installed-Size: 41308
-Filename: umurmur-polarssl_0.2.10-1_keenetic.ipk
-Size: 41995
-MD5Sum: ac879de6bf70c3669188d9bdc1156cd1
+Installed-Size: 41208
+Filename: umurmur-polarssl_0.2.10-2_keenetic.ipk
+Size: 41932
+MD5Sum: 22c44750ca60b1b4536569266c7f0165
 Description:  Minimalistic Mumble server daemon.
  Uses the PolarSSL library for SSL and crypto.
 
@@ -9756,11 +9777,11 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 372-1
+Version: 378-1
 Depends: liblua
 Provides: 
 Source: package/built/xupnpd
-SourceFile: xupnpd-372.tar.gz
+SourceFile: xupnpd-378.tar.gz
 SourceURL: http://tsdemuxer.googlecode.com/svn/trunk/xupnpd/src/
 License: 
 LicenseFiles: 
@@ -9770,10 +9791,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 138862
-Filename: xupnpd_372-1_keenetic.ipk
-Size: 139602
-MD5Sum: 9b418451d5048d11d9169f81c5e9e8b0
+Installed-Size: 141152
+Filename: xupnpd_378-1_keenetic.ipk
+Size: 141940
+MD5Sum: 0b5826f6601b55a42db650d409f49d89
 Description:  eXtensible UPnP agent
 
 Package: zip
