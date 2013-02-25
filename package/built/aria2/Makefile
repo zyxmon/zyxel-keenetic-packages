@@ -33,6 +33,10 @@ define Package/aria2/description
  utility
 endef
 
+define Package/aria2/conffiles
+/etc/aria2/aria2.conf
+endef
+
 CONFIGURE_ARGS += \
 	--disable-nls \
 	--without-gnutls \
