@@ -1043,12 +1043,12 @@ MD5Sum: 1adedc35cdbeca22f28ebf21551467a7
 Description:  Inetd based web server
 
 Package: inadyn
-Version: 1.98.0-2
+Version: 1.99.2-20121212-1
 Depends: 
 Provides: 
 Source: package/built/inadyn
-SourceFile: inadyn-1.98.0.tar.bz2
-SourceURL: http://keenetic.zyxmon.org/sources ftp://ftp.vmlinux.org/pub/People/jocke/inadyn
+SourceFile: inadyn-1.99.2-20121212.tar.bz2
+SourceURL: git://github.com/vampik/inadyn.git
 License: 
 LicenseFiles: 
 Section: net
@@ -1057,11 +1057,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 22678
-Filename: inadyn_1.98.0-2_keenetic.ipk
-Size: 23382
-MD5Sum: 272818be9239ffe99d425c5ce55ddb07
-Description:  inadyn - a client for open DNS servers.
+Installed-Size: 28850
+Filename: inadyn_1.99.2-20121212-1_keenetic.ipk
+Size: 29730
+MD5Sum: 08ecfe08c1f49ee5aad87b44308be23f
+Description:  Inadyn is a simple and small DDNS client written in the C language. It can
+ maintain multiple host names with the same IP address, and has a web based
+ IP detection which runs well behind a NAT router. This is a fork by
+ Andrey Tikhomirov.
 
 Package: ip
 Version: 2.6.35-2
@@ -7648,6 +7651,27 @@ Size: 41451
 MD5Sum: 907944ce2ac11cc74a269aec5699dad1
 Description:  DOM shared module
 
+Package: php5-mod-ftp
+Version: 5.4.11-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+SourceFile: php-5.4.11.tar.bz2
+SourceURL: http://www.php.net/distributions/
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 13408
+Filename: php5-mod-ftp_5.4.11-1_keenetic.ipk
+Size: 14030
+MD5Sum: 6dc98217434f28623882192da498e233
+Description:  FTP shared module
+
 Package: php5-mod-gd
 Version: 5.4.11-1
 Depends: php5, libjpeg, libpng
@@ -7752,6 +7776,27 @@ Filename: php5-mod-mbstring_5.4.11-1_keenetic.ipk
 Size: 579302
 MD5Sum: a415c8a65ae95b76bfbe3af2748bd50b
 Description:  MBString shared module
+
+Package: php5-mod-openssl
+Version: 5.4.11-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+SourceFile: php-5.4.11.tar.bz2
+SourceURL: http://www.php.net/distributions/
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 34386
+Filename: php5-mod-openssl_5.4.11-1_keenetic.ipk
+Size: 34721
+MD5Sum: 4edf0b5eb33ff7a36dedea4f5dea91d2
+Description:  OpenSSL shared module
 
 Package: php5-mod-pdo-sqlite
 Version: 5.4.11-1
