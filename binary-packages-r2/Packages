@@ -1767,24 +1767,24 @@ Description:  The libffi library provides a portable, high level programming int
  between the two languages.
 
 Package: libffmpeg
-Version: 0.10.2-1
+Version: 0.11.2-1
 Depends: 
 Provides: 
 Source: package/built/ffmpeg
-SourceFile: ffmpeg-0.10.2.tar.bz2
+SourceFile: ffmpeg-0.11.2.tar.bz2
 SourceURL: http://ffmpeg.org/releases/
-License: 
-LicenseFiles: 
+License: LGPLv2.1+ GPLv2+ LGPLv3
+LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
 Section: libs
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 878736
-Filename: libffmpeg_0.10.2-1_keenetic.ipk
-Size: 875021
-MD5Sum: 2190ef526277135b8702b99b907a5dcd
+Installed-Size: 903799
+Filename: libffmpeg_0.11.2-1_keenetic.ipk
+Size: 900335
+MD5Sum: b91be51a055edddde18a420f4fbb3f96
 Description:  libraries
 
 Package: libflac
@@ -3807,7 +3807,7 @@ MD5Sum: 11b4e1afee719ef8f8267f67f14633f6
 Description:  mcprobe is a test utility for multicast.
 
 Package: mediatomb
-Version: 0.12.1-8
+Version: 0.12.1-9
 Depends: libexif, libsqlite3, id3lib, file, libjs, libexpat, libffmpeg, uclibcxx, libiconv-full
 Provides: 
 Source: package/built/mediatomb
@@ -3821,10 +3821,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 633179
-Filename: mediatomb_0.12.1-8_keenetic.ipk
-Size: 633167
-MD5Sum: 49c3563519cde2095705c8ae39f3c216
+Installed-Size: 632799
+Filename: mediatomb_0.12.1-9_keenetic.ipk
+Size: 632769
+MD5Sum: d369d8004527134b74f2d2984254d629
 Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user interface and
  with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
@@ -3939,7 +3939,7 @@ MD5Sum: ace63d389099efb8dc6acb678e0335f2
 Description:  Terminal emulation program
 
 Package: minidlna
-Version: 1.0.25-1
+Version: 1.0.25-2
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
 Provides: 
 Source: package/built/minidlna
@@ -3953,10 +3953,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 123235
-Filename: minidlna_1.0.25-1_keenetic.ipk
-Size: 123906
-MD5Sum: eaae975dd9b8dbb0ff34576ecc050340
+Installed-Size: 123241
+Filename: minidlna_1.0.25-2_keenetic.ipk
+Size: 123939
+MD5Sum: cf1209e58ae6356035319a4d4a6564dc
 Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
  being fully compliant with DLNA/UPnP-AV clients.
 
