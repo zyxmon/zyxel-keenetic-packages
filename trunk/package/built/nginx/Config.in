@@ -36,6 +36,13 @@ config NGINX_DAV
 	help
 		Enable the HTTP and WebDAV methods PUT, DELETE, MKCOL, COPY and MOVE.
 
+config NGINX_MODULE_RTMP
+	bool
+	prompt "Enable RTMP module"
+	default n
+	help
+		Enable live streaming of video/audio.
+
 config NGINX_MODULE_LUA
 	bool
 	prompt "Enable LUA module"
