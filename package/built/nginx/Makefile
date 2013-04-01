@@ -26,6 +26,7 @@ PKG_CONFIG_DEPENDS := \
 	CONFIG_NGINX_SSL \
 	CONFIG_NGINX_DAV \
 	CONFIG_NGINX_MODULE_LUA \
+	CONFIG_NGINX_MODULE_RTMP \
 	CONFIG_NGINX_DISABLE_PCRE \
 	CONFIG_NGINX_DISABLE_HTTP_CHARSET_MODULE \
 	CONFIG_NGINX_DISABLE_HTTP_GZIP_MODULE \
@@ -98,6 +99,9 @@ ifeq ($(CONFIG_NGINX_DAV),y)
 endif
 ifeq ($(CONFIG_NGINX_MODULE_LUA),y)
   ADDITIONAL_MODULES += --add-module=$(PKG_BUILD_DIR)/lua-nginx
+endif
+ifeq ($(CONFIG_NGINX_MODULE_RTMP),y)
+  ADDITIONAL_MODULES += --add-module=$(PKG_BUILD_DIR)/rtmp-nginx
 endif
 ifeq ($(CONFIG_NGINX_DISABLE_HTTP_CACHE),y)
   ADDITIONAL_MODULES += --without-http-cache
@@ -212,13 +216,14 @@ endef
 define Build/Prepare
 	$(call Build/Prepare/Default)
 	$(if $(CONFIG_NGINX_MODULE_LUA),$(call Prepare/lua-nginx))
+	$(if $(CONFIG_NGINX_MODULE_RTMP),$(call Prepare/rtmp-nginx))
 endef
 
 define Download/lua-nginx
 	VERSION:=7c0948a08e8449f7a9ffbc35244954e6aaddac5b
 	SUBDIR:=lua-nginx
 	FILE:=lua-nginx-module-$(PKG_VERSION)-$$(VERSION).tar.gz
-	URL:=https://github.com/chaoslawful/lua-nginx-module.git
+	URL:=git://github.com/chaoslawful/lua-nginx-module.git
 	PROTO:=git
 endef
 
@@ -226,6 +231,19 @@ define  Prepare/lua-nginx
 	$(eval $(call Download,lua-nginx))
 	gzip -dc $(DL_DIR)/$(FILE) | tar -C $(PKG_BUILD_DIR) $(TAR_OPTIONS)
 	$(call PatchDir,$(PKG_BUILD_DIR),./patches-lua-nginx)
+endef
+
+define Download/rtmp-nginx
+	VERSION:=9aa030f51c6c82611f8d2df6e663a6a48100ace7
+	SUBDIR:=rtmp-nginx
+	FILE:=rtmp-nginx-module-$(PKG_VERSION)-$$(VERSION).tar.gz
+	URL:=git://github.com/arut/nginx-rtmp-module.git
+	PROTO:=git
+endef
+
+define  Prepare/rtmp-nginx
+	$(eval $(call Download,rtmp-nginx))
+	gzip -dc $(DL_DIR)/$(FILE) | tar -C $(PKG_BUILD_DIR) $(TAR_OPTIONS)
 endef
 
 $(eval $(call BuildPackage,nginx))
