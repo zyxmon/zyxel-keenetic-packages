@@ -21,11 +21,11 @@ Description:  3proxy is universal proxy server. It can be used to provide intern
  access to external resources or to provide external users with access to internal resources.
 
 Package: aria2
-Version: 1.16.3-1
+Version: 1.16.5-1
 Depends: libxml2, libstdcpp
 Provides: 
 Source: package/built/aria2
-SourceFile: aria2-1.16.3.tar.bz2
+SourceFile: aria2-1.16.5.tar.bz2
 SourceURL: @SF/aria2
 License: 
 LicenseFiles: 
@@ -35,10 +35,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1119012
-Filename: aria2_1.16.3-1_keenetic.ipk
-Size: 1116845
-MD5Sum: aca1233e3ed8781dd2b55081775eb137
+Installed-Size: 1151013
+Filename: aria2_1.16.5-1_keenetic.ipk
+Size: 1148620
+MD5Sum: 65207a11d54db73f0f2ad5a5d68664b6
 Description:  aria2 is a lightweight multi-protocol & multi-source command-line download
  utility
 
@@ -794,6 +794,29 @@ MD5Sum: d368410cfa3d55e3886347fd0ba1c722
 Description:  giflib is a library for reading and writing gif images.
  It is API and ABI compatible with libungif which was in wide use while
  the LZW compression algorithm was patented. 
+
+Package: git
+Version: 1.7.11.2-1
+Depends: 
+Provides: 
+Source: package/built/git
+SourceFile: git-1.7.11.2.tar.gz
+SourceURL: http://git-core.googlecode.com/files/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 739581
+Filename: git_1.7.11.2-1_keenetic.ipk
+Size: 738897
+MD5Sum: 51f17f82c9f7107e8d857bc2f325e2ba
+Description:  Git is a free & open source, distributed version control system
+ designed to handle everything from small to very large projects
+ with speed and efficiency.
 
 Package: glib2
 Version: 2.26.1-2
@@ -7609,6 +7632,27 @@ MD5Sum: 520fc2bb296c0f7a354b4ec2ee6e95fe
 Description:  As FastCGI support is now a core feature the php5-fastcgi package now depends
  on the php5-cgi package, containing just the startup script.
 
+Package: php5-mod-ctype
+Version: 5.4.11-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+SourceFile: php-5.4.11.tar.bz2
+SourceURL: http://www.php.net/distributions/
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 2224
+Filename: php5-mod-ctype_5.4.11-1_keenetic.ipk
+Size: 2885
+MD5Sum: 3205f0287ac7dcb0d3fdcc45b2a2685d
+Description:  Ctype shared module
+
 Package: php5-mod-curl
 Version: 5.4.11-1
 Depends: php5
@@ -8007,6 +8051,27 @@ Filename: php5-mod-xmlwriter_5.4.11-1_keenetic.ipk
 Size: 9089
 MD5Sum: 3e912082aa6603da9530e8e4b1a587b3
 Description:  XMLWriter shared module
+
+Package: php5-mod-zip
+Version: 5.4.11-1
+Depends: php5
+Provides: 
+Source: package/built/php5
+SourceFile: php-5.4.11.tar.bz2
+SourceURL: http://www.php.net/distributions/
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 32997
+Filename: php5-mod-zip_5.4.11-1_keenetic.ipk
+Size: 33629
+MD5Sum: 94533d9dc1af2bcb0b5a38bc9a2d4e96
+Description:  ZIP shared module
 
 Package: php5-pecl-apc
 Version: 3.1.13-1
