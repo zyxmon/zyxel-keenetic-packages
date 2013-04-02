@@ -298,3 +298,36 @@ session.bug_compat_warn = Off
 
 P.S.:
 За время написания статьи был выпущен новый релиз - Drupal 7.2. Все что было сказано выше - отлично работает и на нем :)
+
+P.P.S.:
+(Решение от одного из владельцев кинетика). Если при установке возникают ошибки в файле query.inc, то следует этот файл отредактировать. Заменить
+
+{{{
+protected function removeFieldsInCondition(&$fields, QueryConditionInterface $condition) {
+    foreach ($condition->conditions() as $child_condition) {
+        if ($child_condition['field'] instanceof QueryConditionInterface) {
+          $this->removeFieldsInCondition($fields, $child_condition['field']);
+        }
+        else {
+          unset($fields[$child_condition['field']]);
+        }
+    }
+}}}
+на
+{{{
+protected function removeFieldsInCondition(&$fields, QueryConditionInterface $condition) {
+    foreach ($condition->conditions() as $child_condition) {
+      if (isset($child_condition['field'])) {
+        if ($child_condition['field'] instanceof QueryConditionInterface) {
+          $this->removeFieldsInCondition($fields, $child_condition['field']);
+        }
+        else {
+          unset($fields[$child_condition['field']]);
+        }
+      }
+    }
+  }
+}}}
+Файл находиться в папке /media/DISK_A1/net/www/includes/database/sqlite/query.inc
+
+Лечение взято здесь http://www.drupal.ru/node/86646, http://drupal.org/node/1611828.
