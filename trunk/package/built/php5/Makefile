@@ -209,7 +209,7 @@ endif
 ifneq ($(SDK)$(CONFIG_PACKAGE_php5-mod-gd),)
   CONFIGURE_ARGS+= \
 	--with-gd=shared \
-	--without-freetype-dir \
+	--with-freetype-dir="$(STAGING_DIR)/usr" \
 	--with-jpeg-dir="$(STAGING_DIR)/usr" \
 	--with-png-dir="$(STAGING_DIR)/usr" \
 	--without-xpm-dir \
@@ -518,7 +518,7 @@ $(eval $(call BuildModule,dom,DOM,+@PHP5_LIBXML +PACKAGE_php5-mod-dom:libxml2))
 $(eval $(call BuildModule,exif,EXIF))
 $(eval $(call BuildModule,ftp,FTP))
 $(eval $(call BuildModule,gettext,Gettext,+PACKAGE_php5-mod-gettext:libintl-full))
-$(eval $(call BuildModule,gd,GD graphics,+PACKAGE_php5-mod-gd:libjpeg +PACKAGE_php5-mod-gd:libpng))
+$(eval $(call BuildModule,gd,GD graphics,+PACKAGE_php5-mod-gd:libjpeg +PACKAGE_php5-mod-gd:libpng +PACKAGE_php5-mod-gd:libfreetype))
 $(eval $(call BuildModule,gmp,GMP,+PACKAGE_php5-mod-gmp:libgmp))
 $(eval $(call BuildModule,hash,Hash))
 $(eval $(call BuildModule,iconv,iConv,+PACKAGE_php5-mod-iconv:libiconv-full))
