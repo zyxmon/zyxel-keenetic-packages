@@ -1,13 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=Automatic
-PKG_VERSION:=0.8.0
+PKG_VERSION:=0.8.2
 PKG_RELEASE:=1
 
-PKG_BUILD_DIR:=$(BUILD_DIR)/1100101-$(PKG_NAME)-ae2ed5f/
-PKG_SOURCE_URL:=https://github.com/1100101/Automatic/zipball/v$(PKG_VERSION)
-PKG_SOURCE:=1100101-$(PKG_NAME)-v$(PKG_VERSION)-0-g95ada5c.zip
-#PKG_MD5SUM:=c3fc1b16586940ad120b0c241b08a8ed
+PKG_SOURCE_URL:=https://github.com/1100101/Automatic/archive
+PKG_SOURCE:=v$(PKG_VERSION).tar.gz
+PKG_MD5SUM:=8245e9765d043180266755111499f794
 
 PKG_BUILD_DEPENDS:=libcurl
 PKG_FIXUP:=autoreconf
@@ -25,7 +24,7 @@ define Package/automatic/description
 	Automatic is an RSS downloader for Linux based systems, that grabs your favorite torrents based on filters you specify.
 endef
 
-define Package/aria2/conffiles
+define Package/automatic/conffiles
 /etc/automatic.conf
 endef
 
