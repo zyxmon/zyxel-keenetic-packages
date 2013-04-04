@@ -43,12 +43,12 @@ Description:  aria2 is a lightweight multi-protocol & multi-source command-line 
  utility
 
 Package: automatic
-Version: 0.8.0-1
+Version: 0.8.2-1
 Depends: libpcre, libxml2
 Provides: 
 Source: package/built/automatic
-SourceFile: 1100101-Automatic-v0.8.0-0-g95ada5c.zip
-SourceURL: https://github.com/1100101/Automatic/zipball/v0.8.0
+SourceFile: v0.8.2.tar.gz
+SourceURL: https://github.com/1100101/Automatic/archive
 License: 
 LicenseFiles: 
 Section: utils
@@ -57,10 +57,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 39852
-Filename: automatic_0.8.0-1_keenetic.ipk
-Size: 40666
-MD5Sum: 15dac7df092e16adc7d1b784891465b7
+Installed-Size: 40959
+Filename: automatic_0.8.2-1_keenetic.ipk
+Size: 41771
+MD5Sum: 3d50a12e9d6881151661c9ff8f8b7250
 Description:  Automatic is an RSS downloader for Linux based systems, that grabs your favorite torrents based on filters you specify.
 
 Package: badblocks
@@ -522,11 +522,11 @@ Description:  This package contains essential ext2 filesystem utilities which co
  filesystem utilities.
 
 Package: elinks
-Version: 0.12pre5-1
+Version: 0.12pre6-1
 Depends: 
 Provides: 
 Source: package/built/elinks
-SourceFile: elinks-0.12pre5.tar.bz2
+SourceFile: elinks-0.12pre6.tar.bz2
 SourceURL: http://elinks.or.cz/download
 License: 
 LicenseFiles: 
@@ -536,10 +536,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 358798
-Filename: elinks_0.12pre5-1_keenetic.ipk
-Size: 358432
-MD5Sum: 5e8319a43f46556df28e860b5345f625
+Installed-Size: 359167
+Filename: elinks_0.12pre6-1_keenetic.ipk
+Size: 358817
+MD5Sum: 91db7fc77592faa9b61301873fa818d5
 Description:  An advanced text based web browser
 
 Package: etherwake
@@ -2325,6 +2325,27 @@ Size: 15779
 MD5Sum: 212b5d2c191382ee047dd5a59317328c
 Description:  Lightweight UPnP library
 
+Package: libmysqlclient
+Version: 5.1.68-1
+Depends: uclibcxx
+Provides: 
+Source: package/built/mysql
+SourceFile: mysql-5.1.68.tar.gz
+SourceURL: http://mysql.he.net/Downloads/MySQL-5.1/ http://www.linorg.usp.br/mysql/Downloads/MySQL-5.1/ http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQL-5.1/ http://mirror.switch.ch/ftp/mirror/mysql/Downloads/MySQL-5.1/ http://downloads.mysql.com/archives/mysql-5.1/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 162481
+Filename: libmysqlclient_5.1.68-1_keenetic.ipk
+Size: 157804
+MD5Sum: 547455f9ff8c254114f04188d1639645
+Description:  MySQL client library
+
 Package: libncurses
 Version: 5.7-4
 Depends: 
@@ -2478,13 +2499,13 @@ MD5Sum: 4c837c34f6a27ac255c19c40bf4ad7e4
 Description:  A Perl Compatible Regular Expression library
 
 Package: libpng
-Version: 1.2.46-2
+Version: 1.2.50-1
 Depends: 
 Provides: 
 Source: package/built/libpng
-SourceFile: libpng-1.2.46.tar.bz2
+SourceFile: libpng-1.2.50.tar.xz
 SourceURL: @SF/libpng
-License: 
+License: LIBPNG GPLv2
 LicenseFiles: 
 Section: libs
 Status: unknown ok not-installed
@@ -2492,10 +2513,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 117812
-Filename: libpng_1.2.46-2_keenetic.ipk
-Size: 118446
-MD5Sum: 977bb0192379aaf0d39c7131f58ad0a7
+Installed-Size: 116066
+Filename: libpng_1.2.50-1_keenetic.ipk
+Size: 116696
+MD5Sum: 8f64878335df323f4a81de0349006ecf
 Description:  A PNG format files handling library
 
 Package: libpolarssl
@@ -4078,6 +4099,27 @@ Description:  mtr combines the functionality of the 'traceroute' and 'ping' prog
  it sends a sequence ICMP ECHO requests to each one to determine the
  quality of the link to each machine. As it does this, it prints
  running statistics about each machine.
+
+Package: mysql-server
+Version: 5.1.68-1
+Depends: libmysqlclient, libncursesw, libreadline
+Provides: 
+Source: package/built/mysql
+SourceFile: mysql-5.1.68.tar.gz
+SourceURL: http://mysql.he.net/Downloads/MySQL-5.1/ http://www.linorg.usp.br/mysql/Downloads/MySQL-5.1/ http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQL-5.1/ http://mirror.switch.ch/ftp/mirror/mysql/Downloads/MySQL-5.1/ http://downloads.mysql.com/archives/mysql-5.1/
+License: 
+LicenseFiles: 
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2314980
+Filename: mysql-server_5.1.68-1_keenetic.ipk
+Size: 2296266
+MD5Sum: 7009a6d0310d68a2e27b2c3775246beb
+Description:  MySQL Server
 
 Package: nano
 Version: 2.2.6-1
@@ -7565,7 +7607,7 @@ MD5Sum: 8f113ae2e15fb7ce5587d5489b03b832
 Description:  XSLoader perl module
 
 Package: php5-cgi
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7579,16 +7621,16 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 1003537
-Filename: php5-cgi_5.4.11-1_keenetic.ipk
-Size: 1002038
-MD5Sum: 55326ce933e14cebe847d34132560f3d
+Installed-Size: 1003326
+Filename: php5-cgi_5.4.11-2_keenetic.ipk
+Size: 1001734
+MD5Sum: 2fd32e8d5998674012e70996da4e2eef
 Description:  PHP is a widely-used general-purpose scripting language that is especially
  suited for Web development and can be embedded into HTML.
  This package contains the CGI version of the PHP5 interpreter.
 
 Package: php5-cli
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7602,16 +7644,16 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 1009088
-Filename: php5-cli_5.4.11-1_keenetic.ipk
-Size: 1007544
-MD5Sum: 56bb2d0f4278904a8322f512eec4aeca
+Installed-Size: 1009363
+Filename: php5-cli_5.4.11-2_keenetic.ipk
+Size: 1007796
+MD5Sum: 3bfa404363e0ef5d89cf2f886c8e3464
 Description:  PHP is a widely-used general-purpose scripting language that is especially
  suited for Web development and can be embedded into HTML.
  This package contains the CLI version of the PHP5 interpreter.
 
 Package: php5-fastcgi
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5, php5-cgi
 Provides: 
 Source: package/built/php5
@@ -7625,15 +7667,15 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 589
-Filename: php5-fastcgi_5.4.11-1_keenetic.ipk
-Size: 1302
-MD5Sum: 520fc2bb296c0f7a354b4ec2ee6e95fe
+Installed-Size: 591
+Filename: php5-fastcgi_5.4.11-2_keenetic.ipk
+Size: 1307
+MD5Sum: 5f4c8bd568680de79d0af1d963b16d79
 Description:  As FastCGI support is now a core feature the php5-fastcgi package now depends
  on the php5-cgi package, containing just the startup script.
 
 Package: php5-mod-ctype
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7647,14 +7689,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 2224
-Filename: php5-mod-ctype_5.4.11-1_keenetic.ipk
-Size: 2885
-MD5Sum: 3205f0287ac7dcb0d3fdcc45b2a2685d
+Installed-Size: 2223
+Filename: php5-mod-ctype_5.4.11-2_keenetic.ipk
+Size: 2872
+MD5Sum: 2fb45f16a107b3b018f196ae2abeca6f
 Description:  Ctype shared module
 
 Package: php5-mod-curl
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7668,14 +7710,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 21844
-Filename: php5-mod-curl_5.4.11-1_keenetic.ipk
-Size: 22436
-MD5Sum: 7c3f3336ee8639656c1e10a0334cf308
+Installed-Size: 21843
+Filename: php5-mod-curl_5.4.11-2_keenetic.ipk
+Size: 22427
+MD5Sum: 4ec3cc5b22e3de5ada71a6b44b92775f
 Description:  cURL shared module
 
 Package: php5-mod-dom
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5, libxml2
 Provides: 
 Source: package/built/php5
@@ -7689,14 +7731,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 40960
-Filename: php5-mod-dom_5.4.11-1_keenetic.ipk
-Size: 41451
-MD5Sum: 907944ce2ac11cc74a269aec5699dad1
+Installed-Size: 40957
+Filename: php5-mod-dom_5.4.11-2_keenetic.ipk
+Size: 41465
+MD5Sum: 158fd2e60a1e19210a5d7e27d40afc84
 Description:  DOM shared module
 
 Package: php5-mod-ftp
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7710,15 +7752,15 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 13408
-Filename: php5-mod-ftp_5.4.11-1_keenetic.ipk
-Size: 14030
-MD5Sum: 6dc98217434f28623882192da498e233
+Installed-Size: 13410
+Filename: php5-mod-ftp_5.4.11-2_keenetic.ipk
+Size: 14025
+MD5Sum: 988f2ec083f99ae9b80704135065127d
 Description:  FTP shared module
 
 Package: php5-mod-gd
-Version: 5.4.11-1
-Depends: php5, libjpeg, libpng
+Version: 5.4.11-2
+Depends: php5, libjpeg, libpng, libfreetype
 Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
@@ -7731,14 +7773,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 70032
-Filename: php5-mod-gd_5.4.11-1_keenetic.ipk
-Size: 70416
-MD5Sum: 0bb104901f0f67bf6ebc598368db2980
+Installed-Size: 76375
+Filename: php5-mod-gd_5.4.11-2_keenetic.ipk
+Size: 76646
+MD5Sum: c7c5c3a45b451f3d9cd9cdc089e9e31f
 Description:  GD graphics shared module
 
 Package: php5-mod-hash
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7753,13 +7795,13 @@ Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
 Installed-Size: 109367
-Filename: php5-mod-hash_5.4.11-1_keenetic.ipk
-Size: 109172
-MD5Sum: 0c317319be066eb2d7453089c0d10193
+Filename: php5-mod-hash_5.4.11-2_keenetic.ipk
+Size: 109150
+MD5Sum: 370140c8a12c1a2324f37032633eb6bc
 Description:  Hash shared module
 
 Package: php5-mod-iconv
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5, libiconv-full
 Provides: 
 Source: package/built/php5
@@ -7773,14 +7815,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 12368
-Filename: php5-mod-iconv_5.4.11-1_keenetic.ipk
-Size: 13022
-MD5Sum: 7b629f1c9ee59b74292f1fcb335ad831
+Installed-Size: 12370
+Filename: php5-mod-iconv_5.4.11-2_keenetic.ipk
+Size: 13027
+MD5Sum: 66378901a031bd2a5c8fffb10fba337d
 Description:  iConv shared module
 
 Package: php5-mod-json
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7794,14 +7836,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 11289
-Filename: php5-mod-json_5.4.11-1_keenetic.ipk
-Size: 11967
-MD5Sum: 04b9248f319c901bc9f852a7ddb4a366
+Installed-Size: 11288
+Filename: php5-mod-json_5.4.11-2_keenetic.ipk
+Size: 11960
+MD5Sum: c8bac8491e018aec23386b2ddbda666a
 Description:  JSON shared module
 
 Package: php5-mod-mbstring
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7815,14 +7857,56 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 582550
-Filename: php5-mod-mbstring_5.4.11-1_keenetic.ipk
-Size: 579302
-MD5Sum: a415c8a65ae95b76bfbe3af2748bd50b
+Installed-Size: 582553
+Filename: php5-mod-mbstring_5.4.11-2_keenetic.ipk
+Size: 579237
+MD5Sum: 3d6cc57964f8aebe920d08b2dded8bf8
 Description:  MBString shared module
 
+Package: php5-mod-mysql
+Version: 5.4.11-2
+Depends: php5, libmysqlclient
+Provides: 
+Source: package/built/php5
+SourceFile: php-5.4.11.tar.bz2
+SourceURL: http://www.php.net/distributions/
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 14486
+Filename: php5-mod-mysql_5.4.11-2_keenetic.ipk
+Size: 15086
+MD5Sum: 41fdfff9aa81e5d34624af6bedeb5ece
+Description:  MySQL shared module
+
+Package: php5-mod-mysqli
+Version: 5.4.11-2
+Depends: php5, libmysqlclient
+Provides: 
+Source: package/built/php5
+SourceFile: php-5.4.11.tar.bz2
+SourceURL: http://www.php.net/distributions/
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 33842
+Filename: php5-mod-mysqli_5.4.11-2_keenetic.ipk
+Size: 34288
+MD5Sum: ee0bba4d524f6371d4b4864bfd27cb53
+Description:  MySQL Improved Extension shared module
+
 Package: php5-mod-openssl
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7836,14 +7920,35 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 34386
-Filename: php5-mod-openssl_5.4.11-1_keenetic.ipk
-Size: 34721
-MD5Sum: 4edf0b5eb33ff7a36dedea4f5dea91d2
+Installed-Size: 34388
+Filename: php5-mod-openssl_5.4.11-2_keenetic.ipk
+Size: 34690
+MD5Sum: 4e828678edb3363df2c2bc8accbf2060
 Description:  OpenSSL shared module
 
+Package: php5-mod-pdo-mysql
+Version: 5.4.11-2
+Depends: php5, php5-mod-pdo, libmysqlclient
+Provides: 
+Source: package/built/php5
+SourceFile: php-5.4.11.tar.bz2
+SourceURL: http://www.php.net/distributions/
+License: 
+LicenseFiles: 
+Section: lang
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 9989
+Filename: php5-mod-pdo-mysql_5.4.11-2_keenetic.ipk
+Size: 10672
+MD5Sum: 6ac77568023f7930fa684b3668e5c970
+Description:  PDO driver for MySQL shared module
+
 Package: php5-mod-pdo-sqlite
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5, php5-mod-pdo, libsqlite3
 Provides: 
 Source: package/built/php5
@@ -7857,14 +7962,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 8657
-Filename: php5-mod-pdo-sqlite_5.4.11-1_keenetic.ipk
-Size: 9350
-MD5Sum: 039f8c10a22a4f1a83a71e36d3c754e4
+Installed-Size: 8659
+Filename: php5-mod-pdo-sqlite_5.4.11-2_keenetic.ipk
+Size: 9361
+MD5Sum: e4a0a6a918e9d7fba17558af1be0f3f0
 Description:  PDO driver for SQLite 3.x shared module
 
 Package: php5-mod-pdo
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7879,13 +7984,13 @@ Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
 Installed-Size: 33942
-Filename: php5-mod-pdo_5.4.11-1_keenetic.ipk
-Size: 34555
-MD5Sum: f3e007f304b5d5e1ed6b16f111cf0607
+Filename: php5-mod-pdo_5.4.11-2_keenetic.ipk
+Size: 34574
+MD5Sum: 3f94462a5463d21e0c0f63024acab9be
 Description:  PHP Data Objects shared module
 
 Package: php5-mod-session
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7899,14 +8004,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 22260
-Filename: php5-mod-session_5.4.11-1_keenetic.ipk
-Size: 22837
-MD5Sum: 75b0423b13abdb645fb56f38d73db74c
+Installed-Size: 22259
+Filename: php5-mod-session_5.4.11-2_keenetic.ipk
+Size: 22833
+MD5Sum: f760fdcb362476fd298676cadb3f5ed3
 Description:  Session shared module
 
 Package: php5-mod-simplexml
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5, libxml2
 Provides: 
 Source: package/built/php5
@@ -7920,14 +8025,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 15428
-Filename: php5-mod-simplexml_5.4.11-1_keenetic.ipk
-Size: 16038
-MD5Sum: 8d8604cbef24bdf2b354d11597f65db9
+Installed-Size: 15426
+Filename: php5-mod-simplexml_5.4.11-2_keenetic.ipk
+Size: 16032
+MD5Sum: 50c51764160165f3ee6074eeb855e80b
 Description:  SimpleXML shared module
 
 Package: php5-mod-soap
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5, libxml2
 Provides: 
 Source: package/built/php5
@@ -7941,14 +8046,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 99828
-Filename: php5-mod-soap_5.4.11-1_keenetic.ipk
-Size: 100292
-MD5Sum: 53233fd32f0f5eebdfde91364d53aeb3
+Installed-Size: 99827
+Filename: php5-mod-soap_5.4.11-2_keenetic.ipk
+Size: 100332
+MD5Sum: efd06e47af9290d67541d0c175b675a0
 Description:  SOAP shared module
 
 Package: php5-mod-sockets
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -7962,14 +8067,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 14996
-Filename: php5-mod-sockets_5.4.11-1_keenetic.ipk
-Size: 15589
-MD5Sum: b8ac66584743f4cab55d8a4227942607
+Installed-Size: 14998
+Filename: php5-mod-sockets_5.4.11-2_keenetic.ipk
+Size: 15588
+MD5Sum: 0a216f0354b1462a84ace751010fe867
 Description:  Sockets shared module
 
 Package: php5-mod-sqlite3
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5, libsqlite3
 Provides: 
 Source: package/built/php5
@@ -7983,14 +8088,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 13437
-Filename: php5-mod-sqlite3_5.4.11-1_keenetic.ipk
-Size: 14051
-MD5Sum: 59f88ef354a18f7330651586bb98f777
+Installed-Size: 13441
+Filename: php5-mod-sqlite3_5.4.11-2_keenetic.ipk
+Size: 14056
+MD5Sum: a3516d0eeed8de8c57aff8d70e10cb1d
 Description:  SQLite3 shared module
 
 Package: php5-mod-xml
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5, libxml2
 Provides: 
 Source: package/built/php5
@@ -8004,14 +8109,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 13922
-Filename: php5-mod-xml_5.4.11-1_keenetic.ipk
-Size: 14552
-MD5Sum: 8ea69882f653165792340e0ac7a8e6f2
+Installed-Size: 13931
+Filename: php5-mod-xml_5.4.11-2_keenetic.ipk
+Size: 14559
+MD5Sum: b3564b7089fd6f1e253525e11418e7f0
 Description:  XML shared module
 
 Package: php5-mod-xmlreader
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5, libxml2, libiconv-full
 Provides: 
 Source: package/built/php5
@@ -8025,14 +8130,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 8230
-Filename: php5-mod-xmlreader_5.4.11-1_keenetic.ipk
-Size: 8906
-MD5Sum: 10a4e4e9707080b40bed73ecf074f240
+Installed-Size: 8231
+Filename: php5-mod-xmlreader_5.4.11-2_keenetic.ipk
+Size: 8905
+MD5Sum: 62771e504ff1b47e0d89e88985ea9b71
 Description:  XMLReader shared module
 
 Package: php5-mod-xmlwriter
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5, libxml2, libiconv-full
 Provides: 
 Source: package/built/php5
@@ -8046,14 +8151,14 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 8452
-Filename: php5-mod-xmlwriter_5.4.11-1_keenetic.ipk
-Size: 9089
-MD5Sum: 3e912082aa6603da9530e8e4b1a587b3
+Installed-Size: 8453
+Filename: php5-mod-xmlwriter_5.4.11-2_keenetic.ipk
+Size: 9102
+MD5Sum: 87790d282dba21b25918a49b66390a09
 Description:  XMLWriter shared module
 
 Package: php5-mod-zip
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: php5
 Provides: 
 Source: package/built/php5
@@ -8067,10 +8172,10 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 32997
-Filename: php5-mod-zip_5.4.11-1_keenetic.ipk
-Size: 33629
-MD5Sum: 94533d9dc1af2bcb0b5a38bc9a2d4e96
+Installed-Size: 32995
+Filename: php5-mod-zip_5.4.11-2_keenetic.ipk
+Size: 33611
+MD5Sum: 64a8df3bc34aca65d871574d480aa156
 Description:  ZIP shared module
 
 Package: php5-pecl-apc
@@ -8095,7 +8200,7 @@ MD5Sum: f819a3a0587b5f2028b960c473780ae1
 Description:  Alternative PHP Cache
 
 Package: php5
-Version: 5.4.11-1
+Version: 5.4.11-2
 Depends: libpcre, libiconv-full, libxml2
 Provides: 
 Source: package/built/php5
@@ -8109,10 +8214,10 @@ Essential: no
 Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 3332
-Filename: php5_5.4.11-1_keenetic.ipk
-Size: 4153
-MD5Sum: 2fdddcfa8a031dc2a5f97f689b499f30
+Installed-Size: 3333
+Filename: php5_5.4.11-2_keenetic.ipk
+Size: 4155
+MD5Sum: 3b4bef5a7368809bd39a15d5e27b2e9b
 Description:  PHP is a widely-used general-purpose scripting language that is especially
  suited for Web development and can be embedded into HTML.
  This package contains only the PHP config file. You must actually choose
