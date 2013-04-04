@@ -6,7 +6,7 @@
 #
 
 menu "Configuration"
-        depends on PACKAGE_nginx
+        depends on PACKAGE_nginx-custom
 
 config NGINX_STUB_STATUS
 	bool
