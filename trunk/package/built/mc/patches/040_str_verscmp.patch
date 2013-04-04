@@ -1,0 +1,24 @@
+diff -Naur mc-4.8.8/src/filemanager/filegui.c mc-4.8.8.new/src/filemanager/filegui.c
+--- mc-4.8.8/src/filemanager/filegui.c	2013-03-21 14:01:18.000000000 +0400
++++ mc-4.8.8.new/src/filemanager/filegui.c	2013-04-04 17:12:32.000000000 +0400
+@@ -120,7 +120,7 @@
+     struct utsname name;
+ 
+     if (statvfs_works_cache < 0)
+-        statvfs_works_cache = (uname (&name) == 0 && 0 <= strverscmp (name.release, "2.6.36"));
++        statvfs_works_cache = (uname (&name) == 0 && 0 <= str_verscmp (name.release, "2.6.36"));
+     return statvfs_works_cache;
+ }
+ #endif
+diff -Naur mc-4.8.8/src/filemanager/mountlist.c mc-4.8.8.new/src/filemanager/mountlist.c
+--- mc-4.8.8/src/filemanager/mountlist.c	2013-03-21 14:01:18.000000000 +0400
++++ mc-4.8.8.new/src/filemanager/mountlist.c	2013-04-04 17:12:56.000000000 +0400
+@@ -320,7 +320,7 @@
+     struct utsname name;
+ 
+     if (statvfs_works_cache < 0)
+-        statvfs_works_cache = (uname (&name) == 0 && 0 <= strverscmp (name.release, "2.6.36"));
++        statvfs_works_cache = (uname (&name) == 0 && 0 <= str_verscmp (name.release, "2.6.36"));
+     return statvfs_works_cache;
+ }
+ #endif
