@@ -41,7 +41,7 @@ stop_daemon ()
     do
         daemon_status || break
         let counter=counter-1
-		if [ counter = 1 ]; then
+		if [ $counter = 1 ]; then
 			killall -9 transmission-daemon 2> /dev/null
 		fi
         sleep 1
