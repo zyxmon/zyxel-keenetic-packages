@@ -4296,8 +4296,8 @@ Size: 108458
 MD5Sum: ab4c1685f67b816fe164eecf43a72683
 Description:  Kernel NFS server support
 
-Package: nginx
-Version: 1.2.6-1
+Package: nginx-basic
+Version: 1.2.6-3
 Depends: libpcre
 Provides: 
 Source: package/built/nginx
@@ -4311,12 +4311,56 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 249499
-Filename: nginx_1.2.6-1_keenetic.ipk
-Size: 249933
-MD5Sum: eedb6ab0fe6f74983eebcb647afd3c6f
+Installed-Size: 249501
+Filename: nginx-basic_1.2.6-3_keenetic.ipk
+Size: 249978
+MD5Sum: fc90fa81f46631c13f2bf83de12b0f79
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
- written by Igor Sysoev.
+ written by Igor Sysoev. Built with basic set of modules
+
+Package: nginx-custom
+Version: 1.2.6-3
+Depends: libpcre
+Provides: 
+Source: package/built/nginx
+SourceFile: nginx-1.2.6.tar.gz
+SourceURL: http://nginx.org/download/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 249501
+Filename: nginx-custom_1.2.6-3_keenetic.ipk
+Size: 249943
+MD5Sum: 31020a2c71f370e337d4ee7f69134160
+Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
+ written by Igor Sysoev. Built with custom set of modules
+
+Package: nginx-full
+Version: 1.2.6-3
+Depends: libpcre, liblua
+Provides: 
+Source: package/built/nginx
+SourceFile: nginx-1.2.6.tar.gz
+SourceURL: http://nginx.org/download/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 394873
+Filename: nginx-full_1.2.6-3_keenetic.ipk
+Size: 395130
+MD5Sum: 63022da78ec4401564c2c5af20b13517
+Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
+ written by Igor Sysoev. Built with full set of modules
 
 Package: nmap
 Version: 5.51-3
