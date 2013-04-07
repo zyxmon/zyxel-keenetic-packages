@@ -2,6 +2,8 @@
 
 = Полезные ссылки =
 
+Новый wiki, посвященный пакетам на кинетике, развиваемый владельцами роутеров - http://keenetic.zyxmon.org/wiki/doku.php
+
 Готовые пакеты и систему сборки можно обсудить на [http://forum.zyxmon.org/forum6-marshrutizatory-zyxel-keenetic.html форуме].
 
 Неплохая статья на 3dnews.ru об установке пакетов: [http://www.3dnews.ru/workshop/612504/ Расширяем функциональность ZyXel Keenetic].
