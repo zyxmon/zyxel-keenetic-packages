@@ -173,7 +173,7 @@ MD5Sum: a50573bb18ab3c118810990af53c5e12
 Description:  Fidonet mailer
 
 Package: busybox
-Version: 1.19.4-3
+Version: 1.19.4-4
 Depends: 
 Provides: 
 Source: package/busybox
@@ -187,10 +187,10 @@ Essential: no
 Priority: optional
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keenetic
-Installed-Size: 171564
-Filename: busybox_1.19.4-3_keenetic.ipk
-Size: 172156
-MD5Sum: 729204c62c79bd10f670066bda3f0d2b
+Installed-Size: 174464
+Filename: busybox_1.19.4-4_keenetic.ipk
+Size: 174974
+MD5Sum: 351f171a15ab515b7aa927985bf9504e
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
  This package is built for usb.
@@ -4317,28 +4317,6 @@ Size: 249978
 MD5Sum: fc90fa81f46631c13f2bf83de12b0f79
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev. Built with basic set of modules
-
-Package: nginx-custom
-Version: 1.2.6-3
-Depends: libpcre
-Provides: 
-Source: package/built/nginx
-SourceFile: nginx-1.2.6.tar.gz
-SourceURL: http://nginx.org/download/
-License: 
-LicenseFiles: 
-Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: keenetic
-Installed-Size: 249501
-Filename: nginx-custom_1.2.6-3_keenetic.ipk
-Size: 249943
-MD5Sum: 31020a2c71f370e337d4ee7f69134160
-Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
- written by Igor Sysoev. Built with custom set of modules
 
 Package: nginx-full
 Version: 1.2.6-3
@@ -10055,6 +10033,31 @@ Filename: xupnpd_378-1_keenetic.ipk
 Size: 141940
 MD5Sum: 0b5826f6601b55a42db650d409f49d89
 Description:  eXtensible UPnP agent
+
+Package: yamdi
+Version: 1.9-1
+Depends: 
+Provides: 
+Source: package/built/yamdi
+SourceFile: yamdi-1.9.tar.gz
+SourceURL: @SF/yamdi
+License: 
+LicenseFiles: 
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 13414
+Filename: yamdi_1.9-1_keenetic.ipk
+Size: 14148
+MD5Sum: d497b3b9df6550f273aac3dcde7e4ac2
+Description:  yamdi stands for Yet Another MetaData Injector
+ and is a metadata injector for FLV files.
+ It adds the onMetaData event to your FLV files.
+ yamdi should run under *BSD, Linux and Windows
+ and is published under the BSD license.
 
 Package: zip
 Version: 2.32-1
