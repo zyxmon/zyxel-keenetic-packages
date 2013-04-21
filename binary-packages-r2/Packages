@@ -666,6 +666,78 @@ Size: 49177
 MD5Sum: 60d5046cea82732383eb63bb8b1e5a14
 Description:  a menu-driven program for creation and manipulation of partition tables
 
+Package: ffmpeg
+Version: 0.11.2-2
+Depends: libffmpeg
+Provides: 
+Source: package/built/ffmpeg
+SourceFile: ffmpeg-0.11.2.tar.bz2
+SourceURL: http://ffmpeg.org/releases/
+License: LGPLv2.1+ GPLv2+ LGPLv3
+LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 59595
+Filename: ffmpeg_0.11.2-2_keenetic.ipk
+Size: 60377
+MD5Sum: 4ad2792cd99faf57e74196561e19a3da
+Description:  FFmpeg is a a software package that can record, convert and stream digital 
+ audio and video in numerous formats.
+ .
+ This package contains the FFmpeg command line tool.
+
+Package: ffprobe
+Version: 0.11.2-2
+Depends: libffmpeg
+Provides: 
+Source: package/built/ffmpeg
+SourceFile: ffmpeg-0.11.2.tar.bz2
+SourceURL: http://ffmpeg.org/releases/
+License: LGPLv2.1+ GPLv2+ LGPLv3
+LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 24985
+Filename: ffprobe_0.11.2-2_keenetic.ipk
+Size: 25749
+MD5Sum: 2aa074bbf1a4d8223ea5437f241555ee
+Description:  FFmpeg is a a software package that can record, convert and stream digital 
+ audio and video in numerous formats.
+ .
+ This package contains the FFprobe command line tool.
+
+Package: ffserver
+Version: 0.11.2-2
+Depends: libffmpeg
+Provides: 
+Source: package/built/ffmpeg
+SourceFile: ffmpeg-0.11.2.tar.bz2
+SourceURL: http://ffmpeg.org/releases/
+License: LGPLv2.1+ GPLv2+ LGPLv3
+LicenseFiles: COPYING.GPLv2 COPYING.GPLv3 COPYING.LGPLv2.1 COPYING.LGPLv3
+Section: multimedia
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 40575
+Filename: ffserver_0.11.2-2_keenetic.ipk
+Size: 41350
+MD5Sum: 3ed2df0e3fba9e83b00f32815c667895
+Description:  FFmpeg is a a software package that can record, convert and stream digital 
+ audio and video in numerous formats.
+ .
+ This package contains the FFmpeg streaming server.
+
 Package: file
 Version: 5.11-1
 Depends: libmagic
@@ -1790,8 +1862,8 @@ Description:  The libffi library provides a portable, high level programming int
  between the two languages.
 
 Package: libffmpeg
-Version: 0.11.2-1
-Depends: 
+Version: 0.11.2-2
+Depends: libbz2
 Provides: 
 Source: package/built/ffmpeg
 SourceFile: ffmpeg-0.11.2.tar.bz2
@@ -1804,11 +1876,11 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 903799
-Filename: libffmpeg_0.11.2-1_keenetic.ipk
-Size: 900335
-MD5Sum: b91be51a055edddde18a420f4fbb3f96
-Description:  libraries
+Installed-Size: 3028010
+Filename: libffmpeg_0.11.2-2_keenetic.ipk
+Size: 3017335
+MD5Sum: b568317ba5610ee3248799eabae41514
+Description:  FFmpeg libraries
 
 Package: libflac
 Version: 1.2.1-1
@@ -3851,7 +3923,7 @@ MD5Sum: 11b4e1afee719ef8f8267f67f14633f6
 Description:  mcprobe is a test utility for multicast.
 
 Package: mediatomb
-Version: 0.12.1-9
+Version: 0.12.1-10
 Depends: libexif, libsqlite3, id3lib, file, libjs, libexpat, libffmpeg, uclibcxx, libiconv-full
 Provides: 
 Source: package/built/mediatomb
@@ -3865,10 +3937,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 632799
-Filename: mediatomb_0.12.1-9_keenetic.ipk
-Size: 632769
-MD5Sum: d369d8004527134b74f2d2984254d629
+Installed-Size: 680506
+Filename: mediatomb_0.12.1-10_keenetic.ipk
+Size: 679958
+MD5Sum: 52d2ac9f532cf6fc316563cdd846fc1c
 Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user interface and
  with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
