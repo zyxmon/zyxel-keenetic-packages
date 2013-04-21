@@ -12,11 +12,12 @@ include $(INCLUDE_DIR)/nls.mk
 
 PKG_NAME:=mediatomb
 PKG_VERSION:=0.12.1
-PKG_RELEASE:=9
+PKG_RELEASE:=10
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/mediatomb
 PKG_MD5SUM:=e927dd5dc52d3cfcebd8ca1af6f0d3c2
+PKG_BUILD_DEPENDS:=libcurl libopenssl
 
 PKG_BUILD_PARALLEL:=0
 
@@ -42,6 +43,8 @@ define Package/mediatomb/conffiles
 /etc/mediatomb/config.xml
 endef
 
+TARGET_LDFLAGS += -Wl,-rpath-link=$(STAGING_DIR)/usr/lib
+
 CONFIGURE_ARGS += \
 	--prefix=/usr \
 	--enable-pthread-lib \
@@ -51,6 +54,7 @@ CONFIGURE_ARGS += \
 	--disable-taglib \
 	--enable-libexif \
 	--enable-libmagic \
+	--enable-external-transcoding \
 	--enable-protocolinfo-extension \
 	--disable-libextractor \
 	--enable-ffmpeg \
@@ -61,16 +65,15 @@ CONFIGURE_ARGS += \
 	--disable-youtube \
 	--disable-weborama \
 	--disable-atrailers \
-	--disable-curl \
 	--enable-sqlite3 \
 	--enable-sqlite-backup-defaults \
 	--disable-mysql \
-	--disable-external-transcoding \
 	--disable-ffmpegthumbnailer \
 	--disable-libmp4v2 \
 	--disable-lastfmlib \
 	--disable-ImageMagick \
 	--enable-libexif \
+	--enable-curl \
 	--with-iconv-libs=$(ICONV_PREFIX)/lib \
 	--with-js-h=$(STAGING_DIR)/usr/include/js
 

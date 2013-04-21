@@ -1,6 +1,5 @@
-diff -u orig/configure mod/configure
---- orig/configure	2010-04-08 02:40:17.000000000 +0400
-+++ mod/configure	2011-06-02 00:21:30.000000000 +0400
+--- a/configure	2010-04-08 02:40:17.000000000 +0400
++++ b/configure	2013-04-15 13:43:02.000000000 +0400
 @@ -24093,7 +24093,7 @@
  else
  
@@ -10,6 +9,60 @@ diff -u orig/configure mod/configure
                              { $as_echo "$as_me:$LINENO: checking for JS_NewObject in -ljs" >&5
  $as_echo_n "checking for JS_NewObject in -ljs... " >&6; }
  if test "${ac_cv_lib_js_JS_NewObject+set}" = set; then
+@@ -30804,7 +30804,7 @@
+    { (exit 1); exit 1; }; }
+ fi
+ 
+-if ((test "x$YOUTUBE_OPTION_ENABLED" != xyes) && (test "x$SOPCAST_OPTION_ENABLED" != xyes) && (test "x$EXTERNAL_TRANSCODING_OPTION" != xyes) && (test "x$ATRAILERS_OPTION_ENABLED" != xyes) && (test "x$WEBORAMA_OPTION_ENABLED" != xyes)); then
++if ((test "x$YOUTUBE_OPTION_ENABLED" != xyes) && (test "x$SOPCAST_OPTION_ENABLED" != xyes) && (test "x$EXTERNAL_TRANSCODING_OPTION_ENABLED" != xyes) && (test "x$ATRAILERS_OPTION_ENABLED" != xyes) && (test "x$WEBORAMA_OPTION_ENABLED" != xyes)); then
+     if test $USE_CURL -eq 1; then
+         if test $CURL_REQUESTED -eq 1; then
+             { { $as_echo "$as_me:$LINENO: error: You enabled curl support but the external transcoding, YouTube and SopCast features are disabled - curl is not needed without it" >&5
+@@ -30817,7 +30817,7 @@
+     fi
+ fi
+ 
+-if (((test "x$YOUTUBE_OPTION_ENABLED" = xyes) || (test "x$SOPCAST_OPTION_ENABLED" = xyes) || (test "x$ATRAILERS_OPTION_ENABLED" = xyes) || (test "x$WEBORAMA_OPTION_ENABLED" = xyes) || (test "x$EXTERNAL_TRANSCODING_OPTION" = xyes)) && (test $USE_CURL -eq 1)); then
++if (((test "x$YOUTUBE_OPTION_ENABLED" = xyes) || (test "x$SOPCAST_OPTION_ENABLED" = xyes) || (test "x$ATRAILERS_OPTION_ENABLED" = xyes) || (test "x$WEBORAMA_OPTION_ENABLED" = xyes) || (test "x$EXTERNAL_TRANSCODING_OPTION_ENABLED" = xyes)) && (test $USE_CURL -eq 1)); then
+     { $as_echo "$as_me:$LINENO: Checking for curl (needed for extended external transcoding/YouTube support)" >&5
+ $as_echo "$as_me: Checking for curl (needed for extended external transcoding/YouTube support)" >&6;}
+     CURL_OK=yes
+@@ -31124,7 +31124,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lcurl  $LIBS"
++LIBS="-lcurl  -lssl -lcrypto $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -31188,7 +31188,7 @@
+ #define HAVE_LIBCURL 1
+ _ACEOF
+ 
+-  LIBS="-lcurl $LIBS"
++  LIBS="-lcurl -lssl -lcrypto $LIBS"
+ 
+ else
+   CURL_OK=missing
+@@ -31254,7 +31254,7 @@
+         SOPCAST_OPTION_ENABLED="missing"
+     fi
+ 
+-    if test "x$EXTERNAL_TRANSCODING_OPTION" = xyes; then
++    if test "x$EXTERNAL_TRANSCODING_OPTION_ENABLED" = xyes; then
+         if ((test $USE_CURL -eq 1) && (test $CURL_REQUESTED -eq 0)); then
+             { $as_echo "$as_me:$LINENO: WARNING: unable to configure curl, external transcoding will have limited functionality!" >&5
+ $as_echo "$as_me: WARNING: unable to configure curl, external transcoding will have limited functionality!" >&2;}
+@@ -31267,7 +31267,7 @@
+         fi
+     fi
+ 
+-    if (test "x$YOUTUBE_OPTION_ENABLED" != xyes) && (test "x$WEBORAMA_OPTION_ENABLED" != xyes) && (test "x$ATRAILERS_OPTION_ENABLED" != xyes) && (test "x$EXTERNAL_TRANSCODING_OPTION" = !xyes) && (test "x$SOPCAST_OPTION_ENABLED" != xyes); then
++    if (test "x$YOUTUBE_OPTION_ENABLED" != xyes) && (test "x$WEBORAMA_OPTION_ENABLED" != xyes) && (test "x$ATRAILERS_OPTION_ENABLED" != xyes) && (test "x$EXTERNAL_TRANSCODING_OPTION_ENABLED" = !xyes) && (test "x$SOPCAST_OPTION_ENABLED" != xyes); then
+         CURL_CFLAGS=
+         CURL_LIBS=
+     fi
 @@ -31425,7 +31425,7 @@
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -93,3 +146,4 @@ diff -u orig/configure mod/configure
 +	fi
      AVFORMAT_LDFLAGS=${mt_avformat_ldflags}
      AVFORMAT_STATUS=${mt_avformat_library_status}
+ 
