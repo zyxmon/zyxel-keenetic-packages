@@ -4283,6 +4283,339 @@ Description:  NcFTP Client (also known as just NcFTP) is a set of FREE applicati
  programs implementing the File Transfer Protocol (FTP).
  Main program.
 
+Package: net-tools-arp
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 14836
+Filename: net-tools-arp_1.60-3_keenetic.ipk
+Size: 15540
+MD5Sum: 410d19680e4ea6b280b8ae9db81aa8c9
+Description:  Program arp from net-tools. Manipulate kernel's ARP cache.
+ Add, delete an entry, or to dump the entire cache.
+
+Package: net-tools-dnsdomainname
+Version: 1.60-3
+Depends: net-tools-hostname
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 172
+Filename: net-tools-dnsdomainname_1.60-3_keenetic.ipk
+Size: 857
+MD5Sum: 2bb47f39c1deff1da7cd52117b5cac6b
+Description:  Program dnsdomainname from net-tools.
+ Reports the system's DNS domain name.
+
+Package: net-tools-domainname
+Version: 1.60-3
+Depends: net-tools-hostname
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 172
+Filename: net-tools-domainname_1.60-3_keenetic.ipk
+Size: 865
+MD5Sum: 6b8406b2e38c0d6d289802c4e26afdf4
+Description:  Program domainname from net-tools.			       
+ Reports the system's NIS/YP domain name.
+
+Package: net-tools-hostname
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3722
+Filename: net-tools-hostname_1.60-3_keenetic.ipk
+Size: 4398
+MD5Sum: f8d85293f6f3d76ad95a3c8682f41f65
+Description:  Program hostname from net-tools.
+ Reports or sets the name of the current host system.
+
+Package: net-tools-ifconfig
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 20238
+Filename: net-tools-ifconfig_1.60-3_keenetic.ipk
+Size: 20895
+MD5Sum: 8bdb0d3f43f33af485804c9a0165a6f2
+Description:  Program ifconfig from net-tools.
+ Configure network interfaces.
+
+Package: net-tools-ipmaddr
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5372
+Filename: net-tools-ipmaddr_1.60-3_keenetic.ipk
+Size: 6059
+MD5Sum: 360ed1a9df120528e24e7fbddb9ff1a9
+Description:  Program ipmaddr from net-tools.  Adds,
+ deletes and shows an interface's multicast addresses.
+
+Package: net-tools-iptunnel
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6794
+Filename: net-tools-iptunnel_1.60-3_keenetic.ipk
+Size: 7542
+MD5Sum: 774d56563fd738e757e4fbee8dfc680e
+Description:  Program iptunnel from net-tools.
+ Adds, changes, deletes and shows an interface's tunnels. 
+
+Package: net-tools-mii-tool
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5436
+Filename: net-tools-mii-tool_1.60-3_keenetic.ipk
+Size: 6144
+MD5Sum: 7ba33aefa1ed85367f22853bd91ee1a9
+Description:  Program mii-tool from net-tools.  Checks or sets 
+ the status of a network interface's Media Independent 
+ Interface (MII) unit.
+
+Package: net-tools-nameif
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4118
+Filename: net-tools-nameif_1.60-3_keenetic.ipk
+Size: 4783
+MD5Sum: a148fd2e973e122259883b4be3bcf0ac
+Description:  Program nameif from net-tools
+ Trivial File Transfer Protocol server.
+
+Package: net-tools-netstat
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 32087
+Filename: net-tools-netstat_1.60-3_keenetic.ipk
+Size: 32779
+MD5Sum: 0302a508e80935eaa1b2e08b2b72701a
+Description:  Program netstat from net-tools. Report network 
+ connections, routing tables, and interface statistics.
+
+Package: net-tools-nisdomainname
+Version: 1.60-3
+Depends: net-tools-hostname
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 175
+Filename: net-tools-nisdomainname_1.60-3_keenetic.ipk
+Size: 845
+MD5Sum: b57663ad6f118cc6c2d7cb2d7dcd712d
+Description:  Program nisdomainname from net-tools.
+ Same as domainname.
+
+Package: net-tools-plipconfig
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2191
+Filename: net-tools-plipconfig_1.60-3_keenetic.ipk
+Size: 2920
+MD5Sum: 6f7e82b3eadf7e40fc22231b6ad478b5
+Description:  Program plipconfig from net-tools.  Fine tune the 
+ PLIP device parameters, to improve its performance.
+
+Package: net-tools-rarp
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4739
+Filename: net-tools-rarp_1.60-3_keenetic.ipk
+Size: 5416
+MD5Sum: 8fbf4902d50f6c82ed81e01762fbd258
+Description:  Program rarp from net-tools.
+ Manipulate the kernel's RARP table.
+
+Package: net-tools-slattach
+Version: 1.60-3
+Depends: 
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 7476
+Filename: net-tools-slattach_1.60-3_keenetic.ipk
+Size: 8224
+MD5Sum: 41ad0a0f98022ffbf42931809d90b792
+Description:  Program slattach from net-tools.  Attaches a 
+ network interface to a serial line. This allows 
+ to use normal terminal lines for point-to-point 
+ links to other computers.
+
+Package: net-tools-ypdomainname
+Version: 1.60-3
+Depends: net-tools-hostname
+Provides: 
+Source: package/built/net-tools
+SourceFile: net-tools-1.60.tar.bz2
+SourceURL: http://www.tazenda.demon.co.uk/phil/net-tools/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 178
+Filename: net-tools-ypdomainname_1.60-3_keenetic.ipk
+Size: 851
+MD5Sum: cfbba8650f6365e78d47f198c2402c00
+Description:  Program route from net-tools.
+ Same as domainname.
+
 Package: netatalk
 Version: 2.2.1-2
 Depends: libdb51, libgcrypt
