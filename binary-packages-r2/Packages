@@ -1682,11 +1682,11 @@ MD5Sum: a6c5a4f2f1ff657e6e2f5171802dfd4d
 Description:  Berkeley DB library (5.1).
 
 Package: libevent2
-Version: 2.0.19-1
+Version: 2.0.21-1
 Depends: 
 Provides: 
 Source: package/built/libevent2
-SourceFile: libevent-2.0.19-stable.tar.gz
+SourceFile: libevent-2.0.21-stable.tar.gz
 SourceURL: http://www.monkey.org/~provos/ @SF/levent
 License: 
 LicenseFiles: 
@@ -1694,12 +1694,12 @@ Section: libs
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
 Architecture: keenetic
-Installed-Size: 96692
-Filename: libevent2_2.0.19-1_keenetic.ipk
-Size: 97595
-MD5Sum: 36e058083628b9c2bc8cbf0d090eae5e
+Installed-Size: 96789
+Filename: libevent2_2.0.21-1_keenetic.ipk
+Size: 97700
+MD5Sum: 39b0e565af7865f9b0acc0124b016d3d
 Description:  The libevent API provides a mechanism to execute a callback function
  when a specific event occurs on a file descriptor or after a timeout
  has been reached. Furthermore, libevent also support callbacks due
