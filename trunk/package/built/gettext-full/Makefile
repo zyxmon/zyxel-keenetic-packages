@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2006-2010 OpenWrt.org
+# Copyright (C) 2006-2013 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,19 +8,24 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gettext-full
-PKG_VERSION:=0.18.1.1
+PKG_VERSION:=0.18.2.1
 PKG_RELEASE:=1
 
 PKG_SOURCE:=gettext-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@GNU/gettext
-PKG_MD5SUM:=3dd55b952826d2b32f51308f2f91aa89
+PKG_MD5SUM:=034c8103b14654ebd300fadac44d6f14
 PKG_BUILD_DIR:=$(BUILD_DIR)/gettext-$(PKG_VERSION)
+HOST_BUILD_DIR:=$(BUILD_DIR_HOST)/gettext-$(PKG_VERSION)
 
-PKG_FIXUP:=libtool
+PKG_MAINTAINER:=Jo-Philipp Wich <jow@openwrt.org>
+
+PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=0
+PKG_BUILD_DEPENDS:=gettext-full/host
 
 include $(INCLUDE_DIR)/package.mk
+include $(INCLUDE_DIR)/host-build.mk
 
 define Package/libintl-full
   SECTION:=libs
@@ -44,6 +49,9 @@ CONFIGURE_ARGS += \
 	--without-libexpat-prefix \
 	--without-emacs
 
+HOST_CONFIGURE_ARGS += \
+	--with-included-libxml
+
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/lib/libintl-full/include
 	$(CP) $(PKG_INSTALL_DIR)/usr/include/libintl.h $(1)/usr/lib/libintl-full/include/
@@ -57,7 +65,8 @@ endef
 
 define Package/libintl-full/install
 	$(INSTALL_DIR) $(1)/usr/lib
-	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/usr/lib/libintl.so.* $(1)/usr/lib/
+	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libintl.so* $(1)/usr/lib/
 endef
 
+$(eval $(call HostBuild))
 $(eval $(call BuildPackage,libintl-full))
