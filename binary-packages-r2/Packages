@@ -2592,11 +2592,11 @@ MD5Sum: 8f64878335df323f4a81de0349006ecf
 Description:  A PNG format files handling library
 
 Package: libpolarssl
-Version: 1.2.5-1
+Version: 1.2.6-1
 Depends: 
 Provides: 
 Source: package/built/polarssl
-SourceFile: polarssl-1.2.5-gpl.tgz
+SourceFile: polarssl-1.2.6-gpl.tgz
 SourceURL: https://polarssl.org/code/releases
 License: 
 LicenseFiles: 
@@ -2606,10 +2606,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 98132
-Filename: libpolarssl_1.2.5-1_keenetic.ipk
-Size: 98668
-MD5Sum: 059fa186f0ea71a0cbf6beffc7552ce9
+Installed-Size: 99750
+Filename: libpolarssl_1.2.6-1_keenetic.ipk
+Size: 100278
+MD5Sum: 031269dc24cd9a1e85d3e9652b0569e1
 Description:  The aim of the PolarSSL project is to provide a quality, open-source
  cryptographic library written in C and targeted at embedded systems.
  This package contains the PolarSSL library.
@@ -8718,24 +8718,24 @@ MD5Sum: ab233398beaee7cfac36d33c9493a0c5
 Description:  PopTop pptp server
 
 Package: privoxy
-Version: 3.0.19-1
+Version: 3.0.21-1
 Depends: libpcre
 Provides: 
 Source: package/built/privoxy
-SourceFile: privoxy-3.0.19-stable-src.tar.gz
+SourceFile: privoxy-3.0.21-stable-src.tar.gz
 SourceURL: @SF/ijbswa
-License: 
-LicenseFiles: 
+License: GPLv2
+LicenseFiles: LICENSE
 Section: net
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 176281
-Filename: privoxy_3.0.19-1_keenetic.ipk
-Size: 176920
-MD5Sum: 996b3f3b724b214273499dc7d5e7453e
+Installed-Size: 181712
+Filename: privoxy_3.0.21-1_keenetic.ipk
+Size: 182350
+MD5Sum: 57e9a3112a7b67bb5e33971bcce9f636
 Description:  Privoxy is a web proxy with advanced filtering capabilities for 
  protecting privacy, modifying web page content, managing cookies, 
  controlling access, and removing ads, banners, pop-ups and other 
