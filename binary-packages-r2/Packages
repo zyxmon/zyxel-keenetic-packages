@@ -2160,11 +2160,11 @@ Description:  GNU Libidn is a fully documented implementation of the Stringprep,
  decode internationalized domain names.
 
 Package: libintl-full
-Version: 0.18.1.1-1
+Version: 0.18.2.1-1
 Depends: 
 Provides: 
 Source: package/built/gettext-full
-SourceFile: gettext-0.18.1.1.tar.gz
+SourceFile: gettext-0.18.2.1.tar.gz
 SourceURL: @GNU/gettext
 License: 
 LicenseFiles: 
@@ -2172,12 +2172,12 @@ Section: libs
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
 Architecture: keenetic
-Installed-Size: 14941
-Filename: libintl-full_0.18.1.1-1_keenetic.ipk
-Size: 15281
-MD5Sum: a90e7b2cad0099cefb154bd0f0a4fa92
+Installed-Size: 14135
+Filename: libintl-full_0.18.2.1-1_keenetic.ipk
+Size: 14722
+MD5Sum: e6c0a456090e1ab85f0845c3cf11da60
 Description:  GNU Internationalization library
 
 Package: libjpeg
