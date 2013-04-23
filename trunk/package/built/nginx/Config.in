@@ -44,7 +44,7 @@ config NGINX_LUA
 	help
 		Enable support for LUA scripts.
 
-config NGINX_DISABLE_PCRE
+config NGINX_PCRE
 	bool
 	prompt "Enable PCRE library usage"
 	default y

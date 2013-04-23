@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nginx
 PKG_VERSION:=1.2.8
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://nginx.org/download/
@@ -76,7 +76,7 @@ endef
 
 Package/nginx-basic=$(call Package/nginx/Default,basic,0,+libpcre)
 Package/nginx-full=$(call Package/nginx/Default,full,0,+libpcre +liblua)
-Package/nginx-custom=$(call Package/nginx/Default,custom,1,+NGINX_PCRE:libpcre +NGINX_MODULE_LUA:liblua)
+Package/nginx-custom=$(call Package/nginx/Default,custom,1,+NGINX_PCRE:libpcre +NGINX_LUA:liblua)
 
 ################################################################################################
 
@@ -112,28 +112,28 @@ CONFIG_NGINX_LUA:=n
 CONFIG_NGINX_RTMP:=n
 
 CONFIG_NGINX_HTTP_CACHE:=n
-CONFIG_NGINX_HTTP_CHARSET_MODULE:=y
-CONFIG_NGINX_HTTP_GZIP_MODULE:=y
-CONFIG_NGINX_HTTP_SSI_MODULE:=y
-CONFIG_NGINX_HTTP_USERID_MODULE:=y
-CONFIG_NGINX_HTTP_ACCESS_MODULE:=y
-CONFIG_NGINX_HTTP_AUTH_BASIC_MODULE:=y
-CONFIG_NGINX_HTTP_AUTOINDEX_MODULE:=y
-CONFIG_NGINX_HTTP_GEO_MODULE:=y
-CONFIG_NGINX_HTTP_MAP_MODULE:=y
-CONFIG_NGINX_HTTP_SPLIT_CLIENTS_MODULE:=y
-CONFIG_NGINX_HTTP_REFERER_MODULE:=y
-CONFIG_NGINX_HTTP_REWRITE_MODULE:=y
-CONFIG_NGINX_HTTP_PROXY_MODULE:=y
-CONFIG_NGINX_HTTP_FASTCGI_MODULE:=y
-CONFIG_NGINX_HTTP_UWSGI_MODULE:=y
-CONFIG_NGINX_HTTP_SCGI_MODULE:=y
-CONFIG_NGINX_HTTP_MEMCACHED_MODULE:=y
-CONFIG_NGINX_HTTP_LIMIT_CONN_MODULE:=y
-CONFIG_NGINX_HTTP_LIMIT_REQ_MODULE:=y
-CONFIG_NGINX_HTTP_EMPTY_GIF_MODULE:=y
-CONFIG_NGINX_HTTP_BROWSER_MODULE:=y
-CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH_MODULE:=y
+CONFIG_NGINX_HTTP_CHARSET:=y
+CONFIG_NGINX_HTTP_GZIP:=y
+CONFIG_NGINX_HTTP_SSI:=y
+CONFIG_NGINX_HTTP_USERID:=y
+CONFIG_NGINX_HTTP_ACCESS:=y
+CONFIG_NGINX_HTTP_AUTH_BASIC:=y
+CONFIG_NGINX_HTTP_AUTOINDEX:=y
+CONFIG_NGINX_HTTP_GEO:=y
+CONFIG_NGINX_HTTP_MAP:=y
+CONFIG_NGINX_HTTP_SPLIT_CLIENTS:=y
+CONFIG_NGINX_HTTP_REFERER:=y
+CONFIG_NGINX_HTTP_REWRITE:=y
+CONFIG_NGINX_HTTP_PROXY:=y
+CONFIG_NGINX_HTTP_FASTCGI:=y
+CONFIG_NGINX_HTTP_UWSGI:=y
+CONFIG_NGINX_HTTP_SCGI:=y
+CONFIG_NGINX_HTTP_MEMCACHED:=y
+CONFIG_NGINX_HTTP_LIMIT_CONN:=y
+CONFIG_NGINX_HTTP_LIMIT_REQ:=y
+CONFIG_NGINX_HTTP_EMPTY_GIF:=y
+CONFIG_NGINX_HTTP_BROWSER:=y
+CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH:=y
 endif
 
 ifeq ($(BUILD_VARIANT),full)
@@ -150,28 +150,28 @@ CONFIG_NGINX_LUA:=y
 CONFIG_NGINX_RTMP:=y
 
 CONFIG_NGINX_HTTP_CACHE:=n
-CONFIG_NGINX_HTTP_CHARSET_MODULE:=y
-CONFIG_NGINX_HTTP_GZIP_MODULE:=y
-CONFIG_NGINX_HTTP_SSI_MODULE:=y
-CONFIG_NGINX_HTTP_USERID_MODULE:=y
-CONFIG_NGINX_HTTP_ACCESS_MODULE:=y
-CONFIG_NGINX_HTTP_AUTH_BASIC_MODULE:=y
-CONFIG_NGINX_HTTP_AUTOINDEX_MODULE:=y
-CONFIG_NGINX_HTTP_GEO_MODULE:=y
-CONFIG_NGINX_HTTP_MAP_MODULE:=y
-CONFIG_NGINX_HTTP_SPLIT_CLIENTS_MODULE:=y
-CONFIG_NGINX_HTTP_REFERER_MODULE:=y
-CONFIG_NGINX_HTTP_REWRITE_MODULE:=y
-CONFIG_NGINX_HTTP_PROXY_MODULE:=y
-CONFIG_NGINX_HTTP_FASTCGI_MODULE:=y
-CONFIG_NGINX_HTTP_UWSGI_MODULE:=y
-CONFIG_NGINX_HTTP_SCGI_MODULE:=y
-CONFIG_NGINX_HTTP_MEMCACHED_MODULE:=y
-CONFIG_NGINX_HTTP_LIMIT_CONN_MODULE:=y
-CONFIG_NGINX_HTTP_LIMIT_REQ_MODULE:=y
-CONFIG_NGINX_HTTP_EMPTY_GIF_MODULE:=y
-CONFIG_NGINX_HTTP_BROWSER_MODULE:=y
-CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH_MODULE:=y
+CONFIG_NGINX_HTTP_CHARSET:=y
+CONFIG_NGINX_HTTP_GZIP:=y
+CONFIG_NGINX_HTTP_SSI:=y
+CONFIG_NGINX_HTTP_USERID:=y
+CONFIG_NGINX_HTTP_ACCESS:=y
+CONFIG_NGINX_HTTP_AUTH_BASIC:=y
+CONFIG_NGINX_HTTP_AUTOINDEX:=y
+CONFIG_NGINX_HTTP_GEO:=y
+CONFIG_NGINX_HTTP_MAP:=y
+CONFIG_NGINX_HTTP_SPLIT_CLIENTS:=y
+CONFIG_NGINX_HTTP_REFERER:=y
+CONFIG_NGINX_HTTP_REWRITE:=y
+CONFIG_NGINX_HTTP_PROXY:=y
+CONFIG_NGINX_HTTP_FASTCGI:=y
+CONFIG_NGINX_HTTP_UWSGI:=y
+CONFIG_NGINX_HTTP_SCGI:=y
+CONFIG_NGINX_HTTP_MEMCACHED:=y
+CONFIG_NGINX_HTTP_LIMIT_CONN:=y
+CONFIG_NGINX_HTTP_LIMIT_REQ:=y
+CONFIG_NGINX_HTTP_EMPTY_GIF:=y
+CONFIG_NGINX_HTTP_BROWSER:=y
+CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH:=y
 endif
 
 
@@ -190,97 +190,99 @@ endef
 ADDITIONAL_MODULES:=
 
 ifeq ($(CONFIG_IPV6),y)
-  ADDITIONAL_MODULES += --with-ipv6
+	ADDITIONAL_MODULES += --with-ipv6
 endif
 ifeq ($(CONFIG_NGINX_STUB_STATUS),y)
-  ADDITIONAL_MODULES += --with-http_stub_status_module
+	ADDITIONAL_MODULES += --with-http_stub_status_module
 endif
 ifeq ($(CONFIG_NGINX_FLV),y)
-  ADDITIONAL_MODULES += --with-http_flv_module
+	ADDITIONAL_MODULES += --with-http_flv_module
 endif
 ifeq ($(CONFIG_NGINX_SSL),y)
-  ADDITIONAL_MODULES += --with-http_ssl_module
+	ADDITIONAL_MODULES += --with-http_ssl_module
+else
+	ADDITIONAL_MODULES += --without-http-cache
 endif
 ifeq ($(CONFIG_NGINX_DAV),y)
-  ADDITIONAL_MODULES += --with-http_dav_module
+	ADDITIONAL_MODULES += --with-http_dav_module
 endif
-ifeq ($(CONFIG_NGINX_MODULE_LUA),y)
-  ADDITIONAL_MODULES += --add-module=$(PKG_BUILD_DIR)/lua-nginx
+ifeq ($(CONFIG_NGINX_LUA),y)
+	ADDITIONAL_MODULES += --add-module=$(PKG_BUILD_DIR)/lua-nginx
 endif
-ifeq ($(CONFIG_NGINX_MODULE_RTMP),y)
-  ADDITIONAL_MODULES += --add-module=$(PKG_BUILD_DIR)/rtmp-nginx
+ifeq ($(CONFIG_NGINX_RTMP),y)
+	ADDITIONAL_MODULES += --add-module=$(PKG_BUILD_DIR)/rtmp-nginx
 endif
 ifneq ($(CONFIG_NGINX_HTTP_CACHE),y)
-  ADDITIONAL_MODULES += --without-http-cache
+	ADDITIONAL_MODULES += --without-http-cache
 endif
 ifneq ($(CONFIG_NGINX_PCRE),y)
-  ADDITIONAL_MODULES += --without-pcre
+	ADDITIONAL_MODULES += --without-pcre
 endif
 ifneq ($(CONFIG_NGINX_HTTP_CHARSET),y)
-  ADDITIONAL_MODULES += --without-http_charset_module
+	ADDITIONAL_MODULES += --without-http_charset_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_GZIP),y)
-  ADDITIONAL_MODULES += --without-http_gzip_module
+	ADDITIONAL_MODULES += --without-http_gzip_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_SSI),y)
-  ADDITIONAL_MODULES += --without-http_ssi_module
+	ADDITIONAL_MODULES += --without-http_ssi_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_USERID),y)
-  ADDITIONAL_MODULES += --without-http_userid_module
+	ADDITIONAL_MODULES += --without-http_userid_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_ACCESS),y)
-  ADDITIONAL_MODULES += --without-http_access_module
+	ADDITIONAL_MODULES += --without-http_access_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_AUTH_BASIC),y)
-  ADDITIONAL_MODULES += --without-http_auth_basic_module
+	ADDITIONAL_MODULES += --without-http_auth_basic_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_AUTOINDEX),y)
-  ADDITIONAL_MODULES += --without-http_autoindex_module
+	ADDITIONAL_MODULES += --without-http_autoindex_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_GEO),y)
-  ADDITIONAL_MODULES += --without-http_geo_module
+	ADDITIONAL_MODULES += --without-http_geo_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_MAP),y)
-  ADDITIONAL_MODULES += --without-http_map_module
+	ADDITIONAL_MODULES += --without-http_map_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_SPLIT_CLIENTS),y)
-  ADDITIONAL_MODULES += --without-http_split_clients_module
+	ADDITIONAL_MODULES += --without-http_split_clients_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_REFERER),y)
-  ADDITIONAL_MODULES += --without-http_referer_module
+	ADDITIONAL_MODULES += --without-http_referer_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_REWRITE),y)
-  ADDITIONAL_MODULES += --without-http_rewrite_module
+	ADDITIONAL_MODULES += --without-http_rewrite_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_PROXY),y)
-  ADDITIONAL_MODULES += --without-http_proxy_module
+	ADDITIONAL_MODULES += --without-http_proxy_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_FASTCGI),y)
-  ADDITIONAL_MODULES += --without-http_fastcgi_module
+	ADDITIONAL_MODULES += --without-http_fastcgi_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_UWSGI),y)
-  ADDITIONAL_MODULES += --without-http_uwsgi_module
+	ADDITIONAL_MODULES += --without-http_uwsgi_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_SCGI),y)
-  ADDITIONAL_MODULES += --without-http_scgi_module
+	ADDITIONAL_MODULES += --without-http_scgi_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_MEMCACHED),y)
-  ADDITIONAL_MODULES += --without-http_memcached_module
+	ADDITIONAL_MODULES += --without-http_memcached_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_LIMIT_CONN),y)
-  ADDITIONAL_MODULES += --without-http_limit_conn_module
+	ADDITIONAL_MODULES += --without-http_limit_conn_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_LIMIT_REQ),y)
-  ADDITIONAL_MODULES += --without-http_limit_req_module
+	ADDITIONAL_MODULES += --without-http_limit_req_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_EMPTY_GIF),y)
-  ADDITIONAL_MODULES += --without-http_empty_gif_module
+	ADDITIONAL_MODULES += --without-http_empty_gif_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_BROWSER),y)
-  ADDITIONAL_MODULES += --without-http_browser_module
+	ADDITIONAL_MODULES += --without-http_browser_module
 endif
 ifneq ($(CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH),y)
-  ADDITIONAL_MODULES += --without-http_upstream_ip_hash_module
+	ADDITIONAL_MODULES += --without-http_upstream_ip_hash_module
 endif
 
 
@@ -289,7 +291,7 @@ endif
 define Build/Configure
     # TODO: fix --crossbuild
 	(cd $(PKG_BUILD_DIR) ;\
-		$(if $(CONFIG_NGINX_MODULE_LUA),LUA_INC=$(STAGING_DIR)/usr/include LUA_LIB=$(STAGING_DIR)/usr/lib) \
+		$(if $(CONFIG_NGINX_LUA),LUA_INC=$(STAGING_DIR)/usr/include LUA_LIB=$(STAGING_DIR)/usr/lib) \
 		./configure \
 		--crossbuild=Linux::$(ARCH) \
 		--prefix="$(PREFIX_ZYX)" \
