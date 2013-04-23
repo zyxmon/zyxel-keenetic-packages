@@ -4702,11 +4702,11 @@ MD5Sum: ab4c1685f67b816fe164eecf43a72683
 Description:  Kernel NFS server support
 
 Package: nginx-basic
-Version: 1.2.6-3
+Version: 1.2.8-1
 Depends: libpcre
 Provides: 
 Source: package/built/nginx
-SourceFile: nginx-1.2.6.tar.gz
+SourceFile: nginx-1.2.8.tar.gz
 SourceURL: http://nginx.org/download/
 License: 
 LicenseFiles: 
@@ -4716,19 +4716,19 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 249501
-Filename: nginx-basic_1.2.6-3_keenetic.ipk
-Size: 249978
-MD5Sum: fc90fa81f46631c13f2bf83de12b0f79
+Installed-Size: 183394
+Filename: nginx-basic_1.2.8-1_keenetic.ipk
+Size: 184021
+MD5Sum: 0b8acc73b30ee0e577b8605ad47de173
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev. Built with basic set of modules
 
 Package: nginx-full
-Version: 1.2.6-3
+Version: 1.2.8-1
 Depends: libpcre, liblua
 Provides: 
 Source: package/built/nginx
-SourceFile: nginx-1.2.6.tar.gz
+SourceFile: nginx-1.2.8.tar.gz
 SourceURL: http://nginx.org/download/
 License: 
 LicenseFiles: 
@@ -4738,10 +4738,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 394873
-Filename: nginx-full_1.2.6-3_keenetic.ipk
-Size: 395130
-MD5Sum: 63022da78ec4401564c2c5af20b13517
+Installed-Size: 188449
+Filename: nginx-full_1.2.8-1_keenetic.ipk
+Size: 189012
+MD5Sum: efda9d3a80a12c849cd6ae515d0d6a39
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev. Built with full set of modules
 
