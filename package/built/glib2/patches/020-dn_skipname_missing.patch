@@ -1,0 +1,37 @@
+--- a/gio/gresolver.c	2012-11-26 20:52:48.000000000 +0400
++++ b/gio/gresolver.c	2013-04-24 13:11:28.000000000 +0400
+@@ -70,8 +70,32 @@
+ #endif
+ };
+ 
+-/**
+- * GResolver:
++int __dn_skipname(const u_char *comp_dn, const u_char *eom)
++{
++	const u_char *cp;
++	int n;
++
++	cp = comp_dn;
++	while (cp < eom && (n = *cp++)) {
++		switch (n & INDIR_MASK) {
++		case 0:			/* normal case, n == len */
++			cp += n;
++			continue;
++		case INDIR_MASK:	/* indirection */
++			cp++;
++			break;
++		default:		/* illegal type */
++			return (-1);
++		}
++		break;
++	}
++	if (cp > eom)
++		return (-1);
++	return (cp - comp_dn);
++}
++
++
++/** * GResolver:
+  *
+  * The object that handles DNS resolution. Use g_resolver_get_default()
+  * to get the default resolver.
