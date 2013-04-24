@@ -17,7 +17,7 @@ PKG_SOURCE_URL:=@GNOME/glib/2.34
 PKG_MD5SUM:=a4ca31e258273c3761e3de2edd607661
 
 PKG_BUILD_DEPENDS:=glib2/host zlib libintl libffi
-HOST_BUILD_DEPENDS:=libintl/host libiconv/host
+HOST_BUILD_DEPENDS:=libintl/host libiconv/host libffi/host
 PKG_INSTALL:=1
 
 HOST_BUILD_DIR:=$(BUILD_DIR_HOST)/glib-$(PKG_VERSION)
