@@ -4702,7 +4702,7 @@ MD5Sum: ab4c1685f67b816fe164eecf43a72683
 Description:  Kernel NFS server support
 
 Package: nginx-basic
-Version: 1.2.8-2
+Version: 1.2.8-4
 Depends: libpcre
 Provides: 
 Source: package/built/nginx
@@ -4717,14 +4717,14 @@ Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 250697
-Filename: nginx-basic_1.2.8-2_keenetic.ipk
-Size: 251155
-MD5Sum: 8bb6ed384c3ce25ce844e0c2b1ee0a04
+Filename: nginx-basic_1.2.8-4_keenetic.ipk
+Size: 251172
+MD5Sum: 4c0defcb121d86c4eb1df8c2414217b8
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev. Built with basic set of modules
 
 Package: nginx-full
-Version: 1.2.8-2
+Version: 1.2.8-4
 Depends: libpcre, liblua
 Provides: 
 Source: package/built/nginx
@@ -4738,10 +4738,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 397187
-Filename: nginx-full_1.2.8-2_keenetic.ipk
-Size: 397456
-MD5Sum: 7e7e04a8cd643b16336afd961f1d7fa2
+Installed-Size: 397190
+Filename: nginx-full_1.2.8-4_keenetic.ipk
+Size: 397417
+MD5Sum: 6d3a8142c827ec6cb8751c15e3748755
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev. Built with full set of modules
 
