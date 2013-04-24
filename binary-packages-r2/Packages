@@ -891,12 +891,12 @@ Description:  Git is a free & open source, distributed version control system
  with speed and efficiency.
 
 Package: glib2
-Version: 2.26.1-2
-Depends: libiconv-full, libintl-full
+Version: 2.34.3-1
+Depends: libiconv-full, libintl-full, libffi
 Provides: 
 Source: package/built/glib2
-SourceFile: glib-2.26.1.tar.bz2
-SourceURL: @GNOME/glib/2.26
+SourceFile: glib-2.34.3.tar.xz
+SourceURL: @GNOME/glib/2.34
 License: 
 LicenseFiles: 
 Section: libs
@@ -905,10 +905,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 682674
-Filename: glib2_2.26.1-2_keenetic.ipk
-Size: 680768
-MD5Sum: 3f7efb6f6dc92abc865861aa1bd9e146
+Installed-Size: 791275
+Filename: glib2_2.34.3-1_keenetic.ipk
+Size: 788742
+MD5Sum: 71e7e3d66cf8001baafb617e99162515
 Description:  The GLib library of C routines
 
 Package: golded
@@ -1832,24 +1832,24 @@ Description:  FAAD2 is the fastest ISO AAC audio decoder available.
  This package contains the library.
 
 Package: libffi
-Version: 3.0.9-1
+Version: 3.0.11-1
 Depends: 
 Provides: 
 Source: package/built/libffi
-SourceFile: libffi-3.0.9.tar.gz
+SourceFile: libffi-3.0.11.tar.gz
 SourceURL: ftp://sourceware.org/pub/libffi/
-License: 
-LicenseFiles: 
+License: MIT
+LicenseFiles: LICENSE
 Section: libs
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 11680
-Filename: libffi_3.0.9-1_keenetic.ipk
-Size: 12648
-MD5Sum: 2d2b9291eaf3fe742678f7c7df378f94
+Installed-Size: 11656
+Filename: libffi_3.0.11-1_keenetic.ipk
+Size: 12629
+MD5Sum: dedb7e3f7a59b5dc7eb49d79de65b322
 Description:  The libffi library provides a portable, high level programming interface to
  various calling conventions. This allows a programmer to call any function
  specified by a call interface description at run-time.
@@ -8964,7 +8964,7 @@ Description:  The SDKs contain platform-specific libraries that wrap the raw HTT
  your application and integrating Dropbox.
 
 Package: python-expat
-Version: 2.7.3-2
+Version: 2.7.3-2a
 Depends: python-mini, libexpat
 Provides: 
 Source: package/built/python
@@ -8978,14 +8978,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 59364
-Filename: python-expat_2.7.3-2_keenetic.ipk
-Size: 60106
-MD5Sum: 5e8c407f1d5506a77f83159fa18694a8
+Installed-Size: 59366
+Filename: python-expat_2.7.3-2a_keenetic.ipk
+Size: 60036
+MD5Sum: 3909953d9df1b01bb5adb32653c347ea
 Description:  Python support for expat
 
 Package: python-mini
-Version: 2.7.3-2
+Version: 2.7.3-2a
 Depends: 
 Provides: 
 Source: package/built/python
@@ -8999,10 +8999,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1386039
-Filename: python-mini_2.7.3-2_keenetic.ipk
-Size: 1364801
-MD5Sum: c3acfecc36649974f288a68b91d1668a
+Installed-Size: 1384075
+Filename: python-mini_2.7.3-2a_keenetic.ipk
+Size: 1362351
+MD5Sum: a626d303557353d9805a84cb33d41919
 Description:  Python is a dynamic object-oriented programming language that can be used
  for many kinds of software development. It offers strong support for
  integration with other languages and tools, comes with extensive standard
@@ -9034,7 +9034,7 @@ MD5Sum: c6fa7f057c77e6c802cd824883aafc15
 Description:  Library for OAuth version 1.0a.
 
 Package: python-openssl
-Version: 2.7.3-2
+Version: 2.7.3-2a
 Depends: python-mini
 Provides: 
 Source: package/built/python
@@ -9048,10 +9048,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 11202
-Filename: python-openssl_2.7.3-2_keenetic.ipk
-Size: 11842
-MD5Sum: 4d122998036765c64bc7def73d79804f
+Installed-Size: 11203
+Filename: python-openssl_2.7.3-2a_keenetic.ipk
+Size: 11850
+MD5Sum: 7bea2655926bf39da03268c880c57dec
 Description:  Python support for OpenSSL
 
 Package: python-pil
@@ -9085,7 +9085,7 @@ Description:  The Python Imaging Library adds image processing capabilities to y
  general image processing tool.
 
 Package: python-sqlite3
-Version: 2.7.3-2
+Version: 2.7.3-2a
 Depends: python, libsqlite3
 Provides: 
 Source: package/built/python
@@ -9099,14 +9099,14 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 40234
-Filename: python-sqlite3_2.7.3-2_keenetic.ipk
-Size: 41056
-MD5Sum: e240350f175ed5449d116e9ade7ec774
+Installed-Size: 39323
+Filename: python-sqlite3_2.7.3-2a_keenetic.ipk
+Size: 40178
+MD5Sum: 50019dba506bcbe3629bb58491332437
 Description:  Python support for sqlite3
 
 Package: python
-Version: 2.7.3-2
+Version: 2.7.3-2a
 Depends: libffi, python-mini
 Provides: 
 Source: package/built/python
@@ -9120,10 +9120,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1901378
-Filename: python_2.7.3-2_keenetic.ipk
-Size: 1901065
-MD5Sum: 1c1deade76a443cbeb15442c4a158239
+Installed-Size: 1902952
+Filename: python_2.7.3-2a_keenetic.ipk
+Size: 1902328
+MD5Sum: eeabb38e3a07a4b8845cbdceb8c5a188
 Description:  Python is a dynamic object-oriented programming language that can be used
  for many kinds of software development. It offers strong support for
  integration with other languages and tools, comes with extensive standard
