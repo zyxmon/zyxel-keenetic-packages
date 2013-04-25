@@ -8,13 +8,16 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ncurses
-PKG_VERSION:=5.7
-PKG_RELEASE:=4
+PKG_VERSION:=5.9
+PKG_RELEASE:=1
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@GNU/ncurses
-PKG_MD5SUM:=cce05daf61a64501ef6cd8da1f727ec6
+PKG_MD5SUM:=8cb9c412e5f2d96bc6f459aa8c6282a1
+
+PKG_LICENSE:=FREE
+PKG_LICENSE_FILES:=README
 
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
@@ -55,6 +58,11 @@ CONFIGURE_ARGS += \
 	--with-shared \
 	--with-terminfo-dirs=/usr/share/terminfo \
 	--with-default-terminfo-dir=/usr/share/terminfo
+
+ifneq ($(CONFIG_INSTALL_LIBSTDCPP),y)
+CONFIGURE_ARGS += \
+	--without-cxx-binding
+endif
 
 ifeq ($(HOST_OS),FreeBSD)
 	CONFIGURE_ARGS +=
