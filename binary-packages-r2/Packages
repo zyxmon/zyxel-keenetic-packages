@@ -42,6 +42,1506 @@ MD5Sum: 65207a11d54db73f0f2ad5a5d68664b6
 Description:  aria2 is a lightweight multi-protocol & multi-source command-line download
  utility
 
+Package: asterisk18-app-alarmreceiver
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6483
+Filename: asterisk18-app-alarmreceiver_1.8.10.1-4_keenetic.ipk
+Size: 7404
+MD5Sum: fd0427e00a6cd69216f70926a4b3b1f9
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Central Station Alarm receiver for Ademco Contact ID in Asterisk.
+
+Package: asterisk18-app-authenticate
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3164
+Filename: asterisk18-app-authenticate_1.8.10.1-4_keenetic.ipk
+Size: 4026
+MD5Sum: f92d18b96e1eaa6afd0e9512aeb63d0d
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for executing arbitrary authenticate commands in Asterisk.
+
+Package: asterisk18-app-chanisavail
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2705
+Filename: asterisk18-app-chanisavail_1.8.10.1-4_keenetic.ipk
+Size: 3584
+MD5Sum: 483ec323f9b83fc44c33df2973fd2d0e
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for checking if a channel is available in Asterisk.
+
+Package: asterisk18-app-chanspy
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 9077
+Filename: asterisk18-app-chanspy_1.8.10.1-4_keenetic.ipk
+Size: 9938
+MD5Sum: 1d724483f8e8c5190f22422085c9f3fe
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for listening in on any channel in Asterisk.
+
+Package: asterisk18-app-directed-pickup
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3636
+Filename: asterisk18-app-directed-pickup_1.8.10.1-4_keenetic.ipk
+Size: 4487
+MD5Sum: b1172e4131220ce36d46f6a1db3e4113
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for directed call pickup in Asterisk.
+
+Package: asterisk18-app-disa
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4652
+Filename: asterisk18-app-disa_1.8.10.1-4_keenetic.ipk
+Size: 5508
+MD5Sum: dcc72dd5727817ec2ce1824c81b6aeab
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Direct Inward System Access in Asterisk.
+
+Package: asterisk18-app-exec
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2977
+Filename: asterisk18-app-exec_1.8.10.1-4_keenetic.ipk
+Size: 3860
+MD5Sum: 4989b2715e978880cfe75d399cab7cf6
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for application execution in Asterisk.
+
+Package: asterisk18-app-minivm
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 25904
+Filename: asterisk18-app-minivm_1.8.10.1-4_keenetic.ipk
+Size: 26695
+MD5Sum: d5fbdcbe7caa1d2be030634c7cd70baa
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support a voicemail system in small building blocks working together based on the Comedian Mail voicemail system in Asterisk.
+
+Package: asterisk18-app-mixmonitor
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 7192
+Filename: asterisk18-app-mixmonitor_1.8.10.1-4_keenetic.ipk
+Size: 8083
+MD5Sum: 78ab9a9f7caf589e36ed395016d2bccb
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support record a call and mix the audio during the recording in Asterisk.
+
+Package: asterisk18-app-originate
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2945
+Filename: asterisk18-app-originate_1.8.10.1-4_keenetic.ipk
+Size: 3861
+MD5Sum: d9994c0b037eb58a9d42767bd5a35334
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support originating an outbound call and connecting it to a specified extension or application in Asterisk.
+
+Package: asterisk18-app-playtones
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1948
+Filename: asterisk18-app-playtones_1.8.10.1-4_keenetic.ipk
+Size: 2821
+MD5Sum: faeed1667853b9885f3c25a9da59cfce
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support play a tone list in Asterisk.
+
+Package: asterisk18-app-read
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3440
+Filename: asterisk18-app-read_1.8.10.1-4_keenetic.ipk
+Size: 4282
+MD5Sum: 13464a188be90bd387dd7a73b38c0151
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support a trivial application to read a variable in Asterisk.
+
+Package: asterisk18-app-readexten
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3765
+Filename: asterisk18-app-readexten_1.8.10.1-4_keenetic.ipk
+Size: 4627
+MD5Sum: a6dbdaa415e5ae708b61bd4fa2fc4153
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support a trivial application to read an extension into a variable in Asterisk.
+
+Package: asterisk18-app-record
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4292
+Filename: asterisk18-app-record_1.8.10.1-4_keenetic.ipk
+Size: 5153
+MD5Sum: 253d07f7794482df76e22e5bcb0aa145
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support to record a sound file in Asterisk.
+
+Package: asterisk18-app-sayunixtime
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2011
+Filename: asterisk18-app-sayunixtime_1.8.10.1-4_keenetic.ipk
+Size: 2893
+MD5Sum: 6f736c246c78328f40b10bfda11bb21a
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support an application to say Unix time in Asterisk.
+
+Package: asterisk18-app-senddtmf
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2550
+Filename: asterisk18-app-senddtmf_1.8.10.1-4_keenetic.ipk
+Size: 3437
+MD5Sum: 0f5a129bc96c9d293ef2312185d226fb
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Sends arbitrary DTMF digits in Asterisk.
+
+Package: asterisk18-app-setcallerid
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1929
+Filename: asterisk18-app-setcallerid_1.8.10.1-4_keenetic.ipk
+Size: 2804
+MD5Sum: 9e8df145cf07ad08390366847b3c6764
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for setting callerid in Asterisk.
+
+Package: asterisk18-app-sms
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 16547
+Filename: asterisk18-app-sms_1.8.10.1-4_keenetic.ipk
+Size: 17445
+MD5Sum: 5f4e6edcb4f05d19db00e484de116af2
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support SMS support (ETSI ES 201 912 protocol 1) in Asterisk.
+
+Package: asterisk18-app-stack
+Version: 1.8.10.1-4
+Depends: asterisk18, asterisk18-res-agi
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6975
+Filename: asterisk18-app-stack_1.8.10.1-4_keenetic.ipk
+Size: 7889
+MD5Sum: c8b1e6ef507324e5fcf2e4268d479ed4
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support  stack applications Gosub Return etc. in Asterisk.
+
+Package: asterisk18-app-system
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2451
+Filename: asterisk18-app-system_1.8.10.1-4_keenetic.ipk
+Size: 3335
+MD5Sum: e643d21397d2cab916878cf5cb5a6b64
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for executing system commands in Asterisk.
+
+Package: asterisk18-app-talkdetect
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3797
+Filename: asterisk18-app-talkdetect_1.8.10.1-4_keenetic.ipk
+Size: 4652
+MD5Sum: 2c916f54ee3eb796d4c8f2a828053586
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support for file playback with audio detect in Asterisk.
+
+Package: asterisk18-app-verbose
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2550
+Filename: asterisk18-app-verbose_1.8.10.1-4_keenetic.ipk
+Size: 3439
+MD5Sum: 8a6fed9985795bb7890f6d1eaef8080a
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Verbose logging application in Asterisk.
+
+Package: asterisk18-app-waituntil
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2123
+Filename: asterisk18-app-waituntil_1.8.10.1-4_keenetic.ipk
+Size: 3008
+MD5Sum: da3e1ec952b344fc0d654e16de15390e
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support sleeping until the given epoch in Asterisk.
+
+Package: asterisk18-app-while
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4121
+Filename: asterisk18-app-while_1.8.10.1-4_keenetic.ipk
+Size: 4971
+MD5Sum: c004b3a7959acd1b81535ae4b55cad04
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support a while loop implementation in Asterisk.
+
+Package: asterisk18-chan-agent
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 21922
+Filename: asterisk18-chan-agent_1.8.10.1-4_keenetic.ipk
+Size: 22705
+MD5Sum: c5e77bc247ac13882a9f3b981cc8c3fd
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support  an implementation of agents proxy channel in Asterisk.
+
+Package: asterisk18-chan-gtalk
+Version: 1.8.10.1-4
+Depends: asterisk18, libiksemel
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 59224
+Filename: asterisk18-chan-gtalk_1.8.10.1-4_keenetic.ipk
+Size: 60104
+MD5Sum: 498fed0b1af5d1d494a2ccbb9ecca4e6
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides the channel chan_gtalk and res_jabber for GTalk
+ support to Asterisk.
+
+Package: asterisk18-chan-iax2
+Version: 1.8.10.1-4
+Depends: asterisk18, asterisk18-res-crypto
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 130809
+Filename: asterisk18-chan-iax2_1.8.10.1-4_keenetic.ipk
+Size: 131219
+MD5Sum: a8fdd29c0fb85b437539d2a925dd5a53
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides IAX support to
+ Asterisk.
+
+Package: asterisk18-chan-local
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10644
+Filename: asterisk18-chan-local_1.8.10.1-4_keenetic.ipk
+Size: 11526
+MD5Sum: bb6ff3b546aabda74d4d17124f82e9da
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support  an implementation of local proxy channel in Asterisk.
+
+Package: asterisk18-chan-mgcp
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 41264
+Filename: asterisk18-chan-mgcp_1.8.10.1-4_keenetic.ipk
+Size: 42152
+MD5Sum: a1a2d2bfe0baf4de1d029c5065362bbf
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides the channel chan_mgcp support to Asterisk.
+
+Package: asterisk18-chan-skinny
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 48636
+Filename: asterisk18-chan-skinny_1.8.10.1-4_keenetic.ipk
+Size: 49543
+MD5Sum: 3af292899697d61ae43695d7cf02a355
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides the channel chan_skinny support to Asterisk.
+
+Package: asterisk18-codec-alaw
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2201
+Filename: asterisk18-codec-alaw_1.8.10.1-4_keenetic.ipk
+Size: 3097
+MD5Sum: c9379c3ee43b22f6e40ce16d11793321
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support translation between signed linear and alaw codecs in Asterisk.
+
+Package: asterisk18-codec-g722
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5594
+Filename: asterisk18-codec-g722_1.8.10.1-4_keenetic.ipk
+Size: 6451
+MD5Sum: 83a5777b8f45a12e0c1a2dc37436600b
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support a high bit rate 48/56/64Kbps ITU standard codec in Asterisk.
+
+Package: asterisk18-codec-g726
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 4147
+Filename: asterisk18-codec-g726_1.8.10.1-4_keenetic.ipk
+Size: 5021
+MD5Sum: 429814ec9e063602974b8938085b7c98
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support translation between signed linear and ITU G.726-32kbps codecs in Asterisk.
+
+Package: asterisk18-curl
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 7524
+Filename: asterisk18-curl_1.8.10.1-4_keenetic.ipk
+Size: 8391
+MD5Sum: a8bc57657a78859d1a0dc8954496d4b8
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides CURL
+ support to Asterisk.
+
+Package: asterisk18-format-g726
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2912
+Filename: asterisk18-format-g726_1.8.10.1-4_keenetic.ipk
+Size: 3775
+MD5Sum: 4f69ad80b18ff3266c385babc5b5ece3
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for headerless G.726 16/24/32/40kbps data format in Asterisk.
+
+Package: asterisk18-format-g729
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3569
+Filename: asterisk18-format-g729_1.8.10.1-4_keenetic.ipk
+Size: 4418
+MD5Sum: ee9f82d58272620f4f28447ab7ef446a
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for raw headerless G729 data in Asterisk.
+
+Package: asterisk18-format-sln16
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2629
+Filename: asterisk18-format-sln16_1.8.10.1-4_keenetic.ipk
+Size: 3512
+MD5Sum: c64afcab86aefd1d23cf31124c92ef10
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for Raw slinear 16 format in Asterisk.
+
+Package: asterisk18-format-sln
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2627
+Filename: asterisk18-format-sln_1.8.10.1-4_keenetic.ipk
+Size: 3521
+MD5Sum: c8731789da016b06ff25d1a3636a2025
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for raw slinear format in Asterisk.
+
+Package: asterisk18-func-blacklist
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2074
+Filename: asterisk18-func-blacklist_1.8.10.1-4_keenetic.ipk
+Size: 2971
+MD5Sum: be87745dc5eae8e62f5af93e51bbe1d2
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support looking up the callerid number and see if it is blacklisted in Asterisk.
+
+Package: asterisk18-func-channel
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6307
+Filename: asterisk18-func-channel_1.8.10.1-4_keenetic.ipk
+Size: 7160
+MD5Sum: 89e954f6cc91211b8edb4eacf82fee30
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Channel info dialplan function in Asterisk.
+
+Package: asterisk18-func-cut
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3617
+Filename: asterisk18-func-cut_1.8.10.1-4_keenetic.ipk
+Size: 4434
+MD5Sum: 47b0411d9f91e351e4eb968b969ec015
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support CUT function in Asterisk.
+
+Package: asterisk18-func-db
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2709
+Filename: asterisk18-func-db_1.8.10.1-4_keenetic.ipk
+Size: 3596
+MD5Sum: 5ad16a9c416072c084f3ab8dc6470039
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support functions for interaction with the database in Asterisk.
+
+Package: asterisk18-func-devstate
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3759
+Filename: asterisk18-func-devstate_1.8.10.1-4_keenetic.ipk
+Size: 4636
+MD5Sum: 59d91d3a26e56dca8d154be1491626b0
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support functions for manually controlled blinky lights in Asterisk.
+
+Package: asterisk18-func-extstate
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2063
+Filename: asterisk18-func-extstate_1.8.10.1-4_keenetic.ipk
+Size: 2963
+MD5Sum: bde6bb09822ba21286454a2cf6b16e06
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support retrieving the state of a hinted extension for dialplan control in Asterisk.
+
+Package: asterisk18-func-global
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3603
+Filename: asterisk18-func-global_1.8.10.1-4_keenetic.ipk
+Size: 4450
+MD5Sum: aa853c2c9762a79768d630a7ab4dee85
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support global variable dialplan functions in Asterisk.
+
+Package: asterisk18-func-shell
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 2055
+Filename: asterisk18-func-shell_1.8.10.1-4_keenetic.ipk
+Size: 2931
+MD5Sum: 820279ff339a16b490d1d3a98f1e295f
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for shell execution in Asterisk.
+
+Package: asterisk18-func-uri
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1903
+Filename: asterisk18-func-uri_1.8.10.1-4_keenetic.ipk
+Size: 2788
+MD5Sum: a80a911aeb76a6ea547ba75adc3efb4a
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Encodes and decodes URI-safe strings in Asterisk.
+
+Package: asterisk18-func-vmcount
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1910
+Filename: asterisk18-func-vmcount_1.8.10.1-4_keenetic.ipk
+Size: 2791
+MD5Sum: a6b9389856a354267f812e4cab4cc2f9
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support a vmcount dialplan function in Asterisk.
+
+Package: asterisk18-mysql
+Version: 1.8.10.1-4
+Depends: asterisk18, libmysqlclient
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 34726
+Filename: asterisk18-mysql_1.8.10.1-4_keenetic.ipk
+Size: 35678
+MD5Sum: 14415493b548b8b52483e86d98303577
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides MySQL
+ support to Asterisk.
+
+Package: asterisk18-pbx-ael
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3545
+Filename: asterisk18-pbx-ael_1.8.10.1-4_keenetic.ipk
+Size: 4392
+MD5Sum: f9cf6f7da3a750ad7990b9527ef8c1b0
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for symbolic Asterisk Extension Logic in Asterisk.
+
+Package: asterisk18-pbx-spool
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 8392
+Filename: asterisk18-pbx-spool_1.8.10.1-4_keenetic.ipk
+Size: 9247
+MD5Sum: 41eb5747fcaaa00e69cd10e91da993a0
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support outgoing call spool support in Asterisk.
+
+Package: asterisk18-res-ael-share
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 40162
+Filename: asterisk18-res-ael-share_1.8.10.1-4_keenetic.ipk
+Size: 41011
+MD5Sum: 85a05222aa97a4aa17cb92aeb616b7a7
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for shareable AEL code mainly between internal and external modules in Asterisk.
+
+Package: asterisk18-res-agi
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 24817
+Filename: asterisk18-res-agi_1.8.10.1-4_keenetic.ipk
+Size: 25645
+MD5Sum: 82dbd0b5efc1bdcc9a61528448768be8
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support support for the Asterisk Gateway Interface extension in Asterisk.
+
+Package: asterisk18-res-clioriginate
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 3500
+Filename: asterisk18-res-clioriginate_1.8.10.1-4_keenetic.ipk
+Size: 4348
+MD5Sum: a65f5893a7d277a561a9b5da06e625bd
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Originate calls via the CLI in Asterisk.
+
+Package: asterisk18-res-crypto
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6637
+Filename: asterisk18-res-crypto_1.8.10.1-4_keenetic.ipk
+Size: 7543
+MD5Sum: b439ede8de0207485a0714b86585505c
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides support Cryptographic Signature capability in Asterisk.
+
+Package: asterisk18-res-musiconhold
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 16849
+Filename: asterisk18-res-musiconhold_1.8.10.1-4_keenetic.ipk
+Size: 17720
+MD5Sum: 8f2335747fb4cd0e9d62196aae8a57e2
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package provides Music On Hold support to
+ Asterisk.
+
+Package: asterisk18-res-timing-pthread
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 5459
+Filename: asterisk18-res-timing-pthread_1.8.10.1-4_keenetic.ipk
+Size: 6153
+MD5Sum: a5607999a4ea7018cc8e64ce16cdcadf
+Description:  pthread Timing Interface
+
+Package: asterisk18-sounds
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1319059
+Filename: asterisk18-sounds_1.8.10.1-4_keenetic.ipk
+Size: 1319854
+MD5Sum: 60dd35dca7206171215093de8128ab34
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package contains sound files for Asterisk.
+
+Package: asterisk18-voicemail
+Version: 1.8.10.1-4
+Depends: asterisk18
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 593839
+Filename: asterisk18-voicemail_1.8.10.1-4_keenetic.ipk
+Size: 594693
+MD5Sum: ef0781e6ce3b9f9172005d7c557c31bf
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+ This package contains voicemail related modules for Asterisk.
+
+Package: asterisk18
+Version: 1.8.10.1-4
+Depends: libncurses, libpopt
+Provides: 
+Source: package/built/asterisk-1.8.x
+SourceFile: asterisk-1.8.10.1.tar.gz
+SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
+License: 
+LicenseFiles: 
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1073135
+Filename: asterisk18_1.8.10.1-4_keenetic.ipk
+Size: 1071335
+MD5Sum: 4f1254171576222f41bbc064e5697375
+Description:  Asterisk is a complete PBX in software. It provides all of the features
+ you would expect from a PBX and more. Asterisk does voice over IP in three
+ protocols, and can interoperate with almost all standards-based telephony
+ equipment using relatively inexpensive hardware.
+
 Package: automatic
 Version: 0.8.2-1
 Depends: libpcre, libxml2
@@ -2159,6 +3659,30 @@ Description:  GNU Libidn is a fully documented implementation of the Stringprep,
  Punycode and IDNA specifications. Libidn's purpose is to encode and
  decode internationalized domain names.
 
+Package: libiksemel
+Version: 1.4-1
+Depends: libgnutls, libtasn1
+Provides: 
+Source: package/built/iksemel
+SourceFile: iksemel-1.4.tar.gz
+SourceURL: http://iksemel.googlecode.com/files/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 19156
+Filename: libiksemel_1.4-1_keenetic.ipk
+Size: 19980
+MD5Sum: 267abd77aa260833085d43179a1c9bdb
+Description:  Iksemel is an XML parser library mainly designed for Jabber applications.
+ It provides SAX, DOM, and special Jabber stream APIs. Library is coded
+ in ANSI C except the network code (which is POSIX compatible), thus
+ highly portable.
+
 Package: libintl-full
 Version: 0.18.2.1-1
 Depends: 
@@ -2828,6 +4352,28 @@ Filename: libstdcpp_4.1.2-60_keenetic.ipk
 Size: 160589
 MD5Sum: e96756e73e426c671f368369ae7dfbbd
 Description:  GNU Standard C++ Library v3
+
+Package: libtasn1
+Version: 1.4-1
+Depends: 
+Provides: 
+Source: package/built/libtasn1
+SourceFile: libtasn1-1.4.tar.gz
+SourceURL: ftp://ftp.gnutls.org/pub/gnutls/libtasn1/ ftp://ftp.gnupg.org/gcrypt/alpha/gnutls/libtasn1/ http://www.mirrors.wiretapped.net/security/network-security/gnutls/libtasn1/ ftp://ftp.mirrors.wiretapped.net/pub/security/network-security/gnutls/libtasn1/ http://josefsson.org/gnutls/releases/libtasn1/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 25742
+Filename: libtasn1_1.4-1_keenetic.ipk
+Size: 26439
+MD5Sum: 37f3e6f8ac4fbf9c399a93599827866a
+Description:  This is a library for Abstract Syntax Notation One (ASN.1) and 
+ Distinguish Encoding Rules (DER) manipulation.
 
 Package: libtheora
 Version: 1.1.1-1
@@ -10133,6 +11679,28 @@ Description:  UNFS3 is a user-space implementation of the NFSv3 server
  specification. It provides a daemon for the MOUNT and NFS
  protocols, which are used by NFS clients for accessing files
  on the server.
+
+Package: unixodbc
+Version: 2.3.1-1
+Depends: libltdl
+Provides: 
+Source: package/built/unixodbc
+SourceFile: unixODBC-2.3.1.tar.gz
+SourceURL: ftp://ftp.unixodbc.org/pub/unixODBC/
+License: 
+LicenseFiles: 
+Section: libs
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 180631
+Filename: unixodbc_2.3.1-1_keenetic.ipk
+Size: 180529
+MD5Sum: e2fe74c0ea5a346fa192c5f1f93500af
+Description:  unixODBC is an Open Source ODBC sub-system and an ODBC SDK for Linux,
+ Mac OSX, and UNIX.
 
 Package: unrar
 Version: 4.0.7-2
