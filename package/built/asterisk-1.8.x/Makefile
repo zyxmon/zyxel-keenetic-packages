@@ -16,7 +16,7 @@ PKG_SOURCE_URL:=http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 PKG_MD5SUM:=415738d347b9037cbe5f8bfbe66843de
 
 PKG_BUILD_DIR=$(BUILD_DIR)/asterisk-$(PKG_VERSION)
-PKG_BUIL_DEPENDS:=libopenssl zlib libcurl
+PKG_BUILD_DEPENDS:=libopenssl zlib libcurl
 
 include $(INCLUDE_DIR)/ltqtapi.mk
 include $(INCLUDE_DIR)/package.mk
