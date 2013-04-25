@@ -2419,45 +2419,45 @@ MD5Sum: 547455f9ff8c254114f04188d1639645
 Description:  MySQL client library
 
 Package: libncurses
-Version: 5.7-4
+Version: 5.9-1
 Depends: 
 Provides: 
 Source: package/ncurses
-SourceFile: ncurses-5.7.tar.gz
+SourceFile: ncurses-5.9.tar.gz
 SourceURL: @GNU/ncurses
-License: 
-LicenseFiles: 
+License: FREE
+LicenseFiles: README
 Section: libs
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 116443
-Filename: libncurses_5.7-4_keenetic.ipk
-Size: 115103
-MD5Sum: 7ee6dd868caa7fc8b02dbabb1e899d4c
+Installed-Size: 128865
+Filename: libncurses_5.9-1_keenetic.ipk
+Size: 127135
+MD5Sum: ce145ff284663633c844b88da5ce04fa
 Description:  Terminal handling library
 
 Package: libncursesw
-Version: 5.7-4
+Version: 5.9-1
 Depends: libncurses
 Provides: 
 Source: package/ncurses
-SourceFile: ncurses-5.7.tar.gz
+SourceFile: ncurses-5.9.tar.gz
 SourceURL: @GNU/ncurses
-License: 
-LicenseFiles: 
+License: FREE
+LicenseFiles: README
 Section: libs
 Status: unknown ok not-installed
 Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 132970
-Filename: libncursesw_5.7-4_keenetic.ipk
-Size: 131314
-MD5Sum: aaaace24844de1a2eb8ba7a9fc62a9b3
+Installed-Size: 146912
+Filename: libncursesw_5.9-1_keenetic.ipk
+Size: 144790
+MD5Sum: 89051a2a92c65364a21a2b50b111a7ef
 Description:  Terminal handling library (Unicode)
 
 Package: libneon
