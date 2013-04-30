@@ -5714,7 +5714,7 @@ MD5Sum: ace63d389099efb8dc6acb678e0335f2
 Description:  Terminal emulation program
 
 Package: minidlna
-Version: 1.0.25-2
+Version: 1.0.25-3
 Depends: libexif, libjpeg, libsqlite3, libffmpeg, libid3tag, libflac, libvorbis, libuuid, libiconv-full, libintl-full
 Provides: 
 Source: package/built/minidlna
@@ -5728,10 +5728,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 123241
-Filename: minidlna_1.0.25-2_keenetic.ipk
-Size: 123939
-MD5Sum: cf1209e58ae6356035319a4d4a6564dc
+Installed-Size: 123596
+Filename: minidlna_1.0.25-3_keenetic.ipk
+Size: 124228
+MD5Sum: 4271121845ecc194d36e888722b25142
 Description:  MiniDLNA (aka ReadyDLNA) is server software with the aim of
  being fully compliant with DLNA/UPnP-AV clients.
 
