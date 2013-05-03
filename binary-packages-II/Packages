@@ -2082,10 +2082,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 142544
+Installed-Size: 144342
 Filename: kmod-fs-cifs_2.6.22-tc-1_keeneticII.ipk
-Size: 141265
-MD5Sum: a6484c9288abba57b6ba4cf3b2193eeb
+Size: 143158
+MD5Sum: bceaad4b50179114a89a74fa34cca3cc
 Description:  Kernel module for CIFS support
 
 Package: kmod-fs-exportfs
@@ -4567,18 +4567,18 @@ MD5Sum: 060d99a9ab0c13005f001c8a7e6bdd8f
 Description:  The Nettle package contains the low-level cryptographic library that is designed to fit easily in many contexts.
 
 Package: nfs-kernel-server
-Version: 1.2.5-3
+Version: 1.2.7-1
 Depends: libwrap, libblkid, libuuid, kmod-fs-nfsd, kmod-fs-nfs, portmap
 Source: package/built/nfs-kernel-server
-SourceFile: nfs-utils-1.2.5.tar.bz2
+SourceFile: nfs-utils-1.2.7.tar.bz2
 SourceURL: @SF/nfs
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 108153
-Filename: nfs-kernel-server_1.2.5-3_keeneticII.ipk
-Size: 108306
-MD5Sum: 8d861826190ac20926cf701c0df9a937
+Installed-Size: 108534
+Filename: nfs-kernel-server_1.2.7-1_keeneticII.ipk
+Size: 108648
+MD5Sum: fc51295865c5a278dad09138822cd75c
 Description:  Kernel NFS server support
 
 Package: nginx-basic
