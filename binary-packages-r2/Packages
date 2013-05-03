@@ -2810,10 +2810,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 144231
+Installed-Size: 145167
 Filename: kmod-fs-cifs_2.6.23-rt-1_keenetic.ipk
-Size: 143049
-MD5Sum: 5c4a998e6707880cbd4d3122b3a88880
+Size: 144096
+MD5Sum: 3bc1f684a4596cae7f390068ea4089d2
 Description:  Kernel module for CIFS support
 
 Package: kmod-fs-exportfs
@@ -2831,10 +2831,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3192
+Installed-Size: 3194
 Filename: kmod-fs-exportfs_2.6.23-rt-2_keenetic.ipk
-Size: 3858
-MD5Sum: b7711f9427ae834f793075b46b305204
+Size: 3861
+MD5Sum: 579ff1ff58365fec06d444bedb8a3ceb
 Description:  Kernel module for exportfs. Needed for some other modules.
 
 Package: kmod-fs-nfs-common
@@ -2852,10 +2852,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 139480
+Installed-Size: 120270
 Filename: kmod-fs-nfs-common_2.6.23-rt-1_keenetic.ipk
-Size: 139521
-MD5Sum: 06bd9b1b111ec103b5eb96b9bc6ac237
+Size: 120387
+MD5Sum: ee025f6affebc9016116a838227225ba
 Description:  Common NFS filesystem modules
 
 Package: kmod-fs-nfs
@@ -2873,10 +2873,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 75133
+Installed-Size: 75671
 Filename: kmod-fs-nfs_2.6.23-rt-2_keenetic.ipk
-Size: 75470
-MD5Sum: f50cc57ed8095c67fb9fb16c89f6d501
+Size: 75979
+MD5Sum: f4ed90ac1848c6562009f7017c66159c
 Description:  Kernel module for NFS support
 
 Package: kmod-fs-nfsd
@@ -2894,10 +2894,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 53170
+Installed-Size: 53668
 Filename: kmod-fs-nfsd_2.6.23-rt-2_keenetic.ipk
-Size: 53640
-MD5Sum: c156532cd0f4551412713be60082dd0c
+Size: 54126
+MD5Sum: d33341dca21b0def8fe1455a82a58969
 Description:  Kernel module for NFS kernel server support
 
 Package: kmod-gre
@@ -2915,10 +2915,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7825
+Installed-Size: 7835
 Filename: kmod-gre_2.6.23-rt-1_keenetic.ipk
-Size: 8507
-MD5Sum: e070a6b9495258d89fb48d0e8e54b91a
+Size: 8516
+MD5Sum: da7cb9429f2d86ee83b4c7c0da450f25
 Description:  Generic Routing Encapsulation support
 
 Package: kmod-tun
@@ -2936,10 +2936,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 5858
+Installed-Size: 5862
 Filename: kmod-tun_2.6.23-rt-1_keenetic.ipk
-Size: 6498
-MD5Sum: 753eb82a7b25e2502e7eb7b2b0153b38
+Size: 6500
+MD5Sum: 7e67adc4c8f9124b7f9f41d931daa66e
 Description:  Kernel support for the TUN/TAP tunneling device
 
 Package: kmod-usb-serial-cp2101
@@ -2957,10 +2957,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7795
+Installed-Size: 7815
 Filename: kmod-usb-serial-cp2101_2.6.23-rt-1_keenetic.ipk
-Size: 8450
-MD5Sum: 7e1e3f12e3ea2b62b8cdb4d04187a5bf
+Size: 8464
+MD5Sum: 717a6f4f4560175396b50199ffde3162
 Description:  Support for Silicon Labs cp210x devices
 
 Package: kmod-video-core
@@ -2980,8 +2980,8 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 28647
 Filename: kmod-video-core_2.6.23-rt-1_keenetic.ipk
-Size: 29171
-MD5Sum: 4a377275d1211414a852b48b7c1d9afe
+Size: 29203
+MD5Sum: 95bf66e66ccfe2b5a382de13cfc2e7c3
 Description:  Kernel modules for Video4Linux support
 
 Package: kmod-video-uvc
@@ -2999,10 +2999,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 34393
+Installed-Size: 34560
 Filename: kmod-video-uvc_2.6.23-rt-1_keenetic.ipk
-Size: 35038
-MD5Sum: ebe4facc3e80e26d309be393483e9d9e
+Size: 35209
+MD5Sum: 62fcefb554f36b5f7df0b43e74870d56
 Description:  Kernel modules for supporting USB Video Class (UVC) devices.
 
 Package: ldd
@@ -10426,7 +10426,7 @@ Description:  procps is the package that has a bunch of small useful utilities t
  includes the programs ps, top, vmstat, w, kill, free, slabtop, and skill.
 
 Package: prosody
-Version: 0.6.2-2
+Version: 0.6.2-3
 Depends: luafilesystem, libidn, luaexpat, luasec
 Provides: 
 Source: package/built/prosody
@@ -10440,10 +10440,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 129476
-Filename: prosody_0.6.2-2_keenetic.ipk
-Size: 130304
-MD5Sum: 29b983c02c6c15b13ab8c23584ccc1d0
+Installed-Size: 131031
+Filename: prosody_0.6.2-3_keenetic.ipk
+Size: 131888
+MD5Sum: 5db62eb9106745dd5f90b92253dd47f1
 Description:  Prosody is an exciting new server for Jabber/XMPP
  written in Lua. It aims to be easy to use, and light
  on resources
