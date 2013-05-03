@@ -4575,10 +4575,10 @@ SourceURL: @SF/nfs
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 108534
+Installed-Size: 108536
 Filename: nfs-kernel-server_1.2.7-1_keeneticII.ipk
-Size: 108648
-MD5Sum: fc51295865c5a278dad09138822cd75c
+Size: 108654
+MD5Sum: fee22bead766695bfebd9f702586d27f
 Description:  Kernel NFS server support
 
 Package: nginx-basic
