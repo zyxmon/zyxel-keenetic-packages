@@ -234,8 +234,7 @@ define KernelPackage/fs-nfs-common
 	CONFIG_SUNRPC
   FILES:= \
 	$(LINUX_DIR)/fs/lockd/lockd.ko \
-	$(LINUX_DIR)/net/sunrpc/sunrpc.ko \
-	$(LINUX_DIR)/net/sunrpc/auth_gss/auth_rpcgss.ko
+	$(LINUX_DIR)/net/sunrpc/sunrpc.ko
   PKG_RELEASE:=1
 endef
 
