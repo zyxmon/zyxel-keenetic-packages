@@ -2082,10 +2082,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 141647
+Installed-Size: 142544
 Filename: kmod-fs-cifs_2.6.22-tc-1_keeneticII.ipk
-Size: 140367
-MD5Sum: 8160f29409bbe33cb8a3c6798b13b8a2
+Size: 141265
+MD5Sum: a6484c9288abba57b6ba4cf3b2193eeb
 Description:  Kernel module for CIFS support
 
 Package: kmod-fs-exportfs
@@ -2094,10 +2094,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 3382
+Installed-Size: 3381
 Filename: kmod-fs-exportfs_2.6.22-tc-2_keeneticII.ipk
 Size: 3917
-MD5Sum: 21c5ecec54a788f9078b472034f6e4c3
+MD5Sum: 3bdf715c41d3495a89ccb420e3dc04c7
 Description:  Kernel module for exportfs. Needed for some other modules.
 
 Package: kmod-fs-nfs-common
@@ -2106,10 +2106,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 115351
+Installed-Size: 115660
 Filename: kmod-fs-nfs-common_2.6.22-tc-1_keeneticII.ipk
-Size: 115372
-MD5Sum: 5cdc4f23557d44b4f3d5ec88c5e23546
+Size: 115694
+MD5Sum: 14d886e57fcbee85a4aa0d42c6237b20
 Description:  Common NFS filesystem modules
 
 Package: kmod-fs-nfs
@@ -2119,10 +2119,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 59631
+Installed-Size: 59973
 Filename: kmod-fs-nfs_2.6.22-tc-2_keeneticII.ipk
-Size: 60004
-MD5Sum: 06ed2ca03bd37c3b3bebfeb830e8ba4b
+Size: 60340
+MD5Sum: 0399a6954f74b5a59d220b4cee83fb7e
 Description:  Kernel module for NFS support
 
 Package: kmod-fs-nfsd
@@ -2132,10 +2132,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 40758
+Installed-Size: 41012
 Filename: kmod-fs-nfsd_2.6.22-tc-2_keeneticII.ipk
-Size: 41211
-MD5Sum: cd0c8c8c313801f06d7e2e5ab4a7164e
+Size: 41507
+MD5Sum: 26b9102581765d5a1462252b23d6abed
 Description:  Kernel module for NFS kernel server support
 
 Package: kmod-gre
@@ -2144,10 +2144,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 7653
+Installed-Size: 7666
 Filename: kmod-gre_2.6.22-tc-1_keeneticII.ipk
-Size: 8238
-MD5Sum: b5c0aa434fb34ad954339976a3745ffe
+Size: 8255
+MD5Sum: 8bb57590bc5d09840f2b5e3abf506a47
 Description:  Generic Routing Encapsulation support
 
 Package: kmod-tun
@@ -2156,10 +2156,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 5808
+Installed-Size: 5812
 Filename: kmod-tun_2.6.22-tc-1_keeneticII.ipk
-Size: 6370
-MD5Sum: 4c8119817c56a1d00c2f164682701d4e
+Size: 6377
+MD5Sum: 8657a91eb172665e9a4392b0056180e1
 Description:  Kernel support for the TUN/TAP tunneling device
 
 Package: kmod-usb-serial-cp2101
@@ -2168,10 +2168,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 8091
+Installed-Size: 8097
 Filename: kmod-usb-serial-cp2101_2.6.22-tc-1_keeneticII.ipk
-Size: 8677
-MD5Sum: 1dc69ebf0b787174ca05d8a3176be559
+Size: 8674
+MD5Sum: a72b211f815f3d82b3df64414079ca37
 Description:  Support for Silicon Labs cp210x devices
 
 Package: kmod-video-core
@@ -2180,10 +2180,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 28537
+Installed-Size: 28561
 Filename: kmod-video-core_2.6.22-tc-1_keeneticII.ipk
-Size: 29004
-MD5Sum: b7ffed4a2d2bd358ebb9d5396100317f
+Size: 29032
+MD5Sum: 1872baa42f18e4ac21b0753539c03c21
 Description:  Kernel modules for Video4Linux support
 
 Package: ldd
