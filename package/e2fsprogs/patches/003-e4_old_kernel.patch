@@ -1,0 +1,84 @@
+--- a/misc/Makefile.in.orig	2013-05-02 16:32:09.000000000 +0400
++++ b/misc/Makefile.in	2013-05-02 16:34:02.971712233 +0400
+@@ -11,9 +11,6 @@
+ 
+ @MCONFIG@
+ 
+-@DEFRAG_CMT@@LINUX_CMT@E4DEFRAG_PROG= e4defrag
+-@DEFRAG_CMT@@LINUX_CMT@E4DEFRAG_MAN= e4defrag.8
+-
+ @IMAGER_CMT@E2IMAGE_PROG= e2image
+ @IMAGER_CMT@E2IMAGE_MAN= e2image.8
+ 
+@@ -28,11 +25,11 @@
+ 
+ SPROGS=		mke2fs badblocks tune2fs dumpe2fs $(BLKID_PROG) logsave \
+ 			$(E2IMAGE_PROG) @FSCK_PROG@ e2undo
+-USPROGS=	mklost+found filefrag e2freefrag $(UUIDD_PROG) $(E4DEFRAG_PROG)
++USPROGS=	mklost+found filefrag e2freefrag $(UUIDD_PROG)
+ SMANPAGES=	tune2fs.8 mklost+found.8 mke2fs.8 dumpe2fs.8 badblocks.8 \
+ 			e2label.8 $(FINDFS_MAN) $(BLKID_MAN) $(E2IMAGE_MAN) \
+ 			logsave.8 filefrag.8 e2freefrag.8 e2undo.8 \
+-			$(UUIDD_MAN) $(E4DEFRAG_MAN) @FSCK_MAN@
++			$(UUIDD_MAN) @FSCK_MAN@
+ FMANPAGES=	mke2fs.conf.5
+ 
+ UPROGS=		chattr lsattr @UUID_CMT@ uuidgen
+@@ -54,7 +51,6 @@
+ BLKID_OBJS=	blkid.o
+ FILEFRAG_OBJS=	filefrag.o
+ E2UNDO_OBJS=  e2undo.o
+-E4DEFRAG_OBJS=	e4defrag.o
+ E2FREEFRAG_OBJS= e2freefrag.o
+ 
+ PROFILED_TUNE2FS_OBJS=	profiled/tune2fs.o profiled/util.o
+@@ -73,7 +69,6 @@
+ PROFILED_BLKID_OBJS=	profiled/blkid.o
+ PROFILED_FILEFRAG_OBJS=	profiled/filefrag.o
+ PROFILED_E2UNDO_OBJS=	profiled/e2undo.o
+-PROFILED_E4DEFRAG_OBJS=	profiled/e4defrag.o
+ 
+ SRCS=	$(srcdir)/tune2fs.c $(srcdir)/mklost+found.c $(srcdir)/mke2fs.c \
+ 		$(srcdir)/chattr.c $(srcdir)/lsattr.c $(srcdir)/dumpe2fs.c \
+@@ -102,12 +97,12 @@
+ @PROFILE_CMT@	$(Q) $(CC) $(ALL_CFLAGS) -g -pg -o profiled/$*.o -c $<
+ 
+ all:: profiled $(SPROGS) $(UPROGS) $(USPROGS) $(SMANPAGES) $(UMANPAGES) \
+-	$(FMANPAGES) $(LPROGS) $(E4DEFRAG_PROG)
++	$(FMANPAGES) $(LPROGS)
+ 
+ @PROFILE_CMT@all:: tune2fs.profiled blkid.profiled e2image.profiled \
+ 	e2undo.profiled mke2fs.profiled dumpe2fs.profiled fsck.profiled \
+ 	logsave.profiled filefrag.profiled uuidgen.profiled uuidd.profiled \
+-	e2image.profiled e4defrag.profiled
++	e2image.profiled
+ 
+ profiled:
+ @PROFILE_CMT@	$(E) "	MKDIR $@"
+@@ -207,15 +202,6 @@
+ 	$(Q) $(CC) $(ALL_LDFLAGS) -g -pg -o e2undo.profiled \
+ 		$(PROFILED_E2UNDO_OBJS) $(PROFILED_LIBS) $(LIBINTL)
+ 
+-e4defrag: $(E4DEFRAG_OBJS) $(DEPLIBS)
+-	$(E) "	LD $@"
+-	$(Q) $(CC) $(ALL_LDFLAGS) -o e4defrag $(E4DEFRAG_OBJS) $(LIBS)
+-
+-e4defrag.profiled: $(PROFILED_E4DEFRAG_OBJS) $(PROFILED_DEPLIBS)
+-	$(E) "	LD $@"
+-	$(Q) $(CC) $(ALL_LDFLAGS) -g -pg -o e4defrag.profiled \
+-		$(PROFILED_E4DEFRAG_OBJS) $(PROFILED_LIBS)
+-
+ base_device: base_device.c
+ 	$(E) "	LD $@"
+ 	$(Q) $(CC) $(ALL_CFLAGS) $(ALL_LDFLAGS) $(srcdir)/base_device.c \
+@@ -365,10 +351,6 @@
+ 	$(E) "	SUBST $@"
+ 	$(Q) $(SUBSTITUTE_UPTIME) $(srcdir)/e2image.8.in e2image.8
+ 
+-e4defrag.8: $(DEP_SUBSTITUTE) $(srcdir)/e4defrag.8.in
+-	$(E) "	SUBST $@"
+-	$(Q) $(SUBSTITUTE_UPTIME) $(srcdir)/e4defrag.8.in e4defrag.8
+-
+ dumpe2fs.8: $(DEP_SUBSTITUTE) $(srcdir)/dumpe2fs.8.in 
+ 	$(E) "	SUBST $@"
+ 	$(Q) $(SUBSTITUTE_UPTIME) $(srcdir)/dumpe2fs.8.in dumpe2fs.8

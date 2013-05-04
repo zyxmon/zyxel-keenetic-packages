@@ -39,7 +39,7 @@ endef
 
 define Package/dropbear
   $(call Package/dropbear/Default)
-  DEPENDS:=@TARGET_keenetic
+  DEPENDS:=@TARGET_keenetic||TARGET_keeneticII
   VARIANT:=usb
 endef
 
@@ -55,7 +55,7 @@ endef
 define Package/dropbear-storage
   $(call Package/dropbear/Default)
   TITLE+= (for internal storage)
-  DEPENDS:=@TARGET_keenetic_storage
+  DEPENDS:=@TARGET_keenetic_storage||TARGET_keeneticII_storage
   VARIANT:=storage
 endef
 

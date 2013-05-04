@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=motion
 PKG_VERSION:=20110826-051001
-PKG_RELEASE:=3
+PKG_RELEASE:=3a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://www.lavrsen.dk/sources/motion-daily \
@@ -23,7 +23,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/motion
   SECTION:=multimedia
   CATEGORY:=Multimedia
-  DEPENDS:=+libjpeg +kmod-video-core
+  DEPENDS:=+libjpeg
   TITLE:=webcam motion sensing and logging
   URL:=http://www.lavrsen.dk/twiki/bin/view/Motion/WebHome
 endef

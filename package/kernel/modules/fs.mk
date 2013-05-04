@@ -25,7 +25,10 @@ $(eval $(call KernelPackage,fs-autofs4))
 define KernelPackage/fs-cifs
   SUBMENU:=$(FS_MENU)
   TITLE:=CIFS support
-  KCONFIG:=CONFIG_CIFS
+  KCONFIG:=\
+	CONFIG_CIFS \
+	CONFIG_CIFS_STATS=y \
+	CONFIG_CIFS_STATS2=n
   FILES:=$(LINUX_DIR)/fs/cifs/cifs.ko
   PKG_RELEASE:=1
 $(call AddDepends/nls)
