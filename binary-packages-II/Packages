@@ -8850,6 +8850,18 @@ Description:  The uuidd daemon is used by the UUID library to generate universal
  guaranteed-unique fashion, even in the face of large numbers of threads
  running on different CPUs trying to grab UUIDs.
 
+Package: v4l-info
+Version: 3.102-2
+Source: package/built/v4l-info
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 7576
+Filename: v4l-info_3.102-2_keeneticII.ipk
+Size: 8197
+MD5Sum: cc97a514dab657c6d5d071f582ab2d5c
+Description:  Video 4 Linux info/ sourses are taken from xawtv version 3.102 http://linuxtv.org/downloads/xawtv/
+
 Package: vncrepeater
 Version: 0.12-4
 Depends: uclibcxx
