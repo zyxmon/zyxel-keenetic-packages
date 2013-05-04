@@ -1,5 +1,5 @@
 # 
-# Copyright (C) 2006-2012 OpenWrt.org
+# Copyright (C) 2006-2013 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -31,8 +31,13 @@ ifeq ($(DUMP),)
   STAMP_CONFIGURED:=$(strip $(STAMP_CONFIGURED))_$(shell $(SH_FUNC) grep '^CONFIG_BUSYBOX_' $(TOPDIR)/.config | md5s)
 endif
 
+ifneq ($(findstring c,$(OPENWRT_VERBOSE)),)
+  BB_MAKE_VERBOSE := V=1
+else
+  BB_MAKE_VERBOSE :=
+endif
+
 init-y :=
-init-$(CONFIG_BUSYBOX_CONFIG_HTTPD) += httpd
 init-$(CONFIG_BUSYBOX_CONFIG_CROND) += cron
 init-$(CONFIG_BUSYBOX_CONFIG_TELNETD) += telnet
 
@@ -47,13 +52,13 @@ endef
 
 define Package/busybox
   $(call Package/busybox/Default)
-  DEPENDS:=@TARGET_keenetic
+  DEPENDS:=@TARGET_keenetic||TARGET_keeneticII
   VARIANT:=usb
 endef
 
 define Package/busybox-storage
   $(call Package/busybox/Default)
-  DEPENDS:=@TARGET_keenetic_storage
+  DEPENDS:=@TARGET_keenetic_storage||TARGET_keeneticII_storage
   VARIANT:=storage
 endef
 
@@ -83,11 +88,12 @@ endef
 define Build/Configure
 	rm -f $(PKG_BUILD_DIR)/.configured*
 	grep 'CONFIG_BUSYBOX_' $(TOPDIR)/.config | sed -e "s,\\(# \)\\?CONFIG_BUSYBOX_\\(.*\\),\\1\\2,g" > $(PKG_BUILD_DIR)/.config
-	yes '' | $(MAKE) -C $(PKG_BUILD_DIR) \
+	yes 'n' | $(MAKE) -C $(PKG_BUILD_DIR) \
 		CC="$(TARGET_CC)" \
 		CROSS_COMPILE="$(TARGET_CROSS)" \
 		KBUILD_HAVE_NLS=no \
 		ARCH="$(ARCH)" \
+		$(BB_MAKE_VERBOSE) \
 		oldconfig
 endef
 
@@ -98,7 +104,7 @@ endif
 LDLIBS:=m crypt
 
 define Build/Compile
-	$(MAKE) $(PKG_JOBS) -C $(PKG_BUILD_DIR) \
+	+$(MAKE) $(PKG_JOBS) -C $(PKG_BUILD_DIR) \
 		CC="$(TARGET_CC)" \
 		CROSS_COMPILE="$(TARGET_CROSS)" \
 		KBUILD_HAVE_NLS=no \
@@ -106,6 +112,7 @@ define Build/Compile
 		ARCH="$(ARCH)" \
 		SKIP_STRIP=y \
 		LDLIBS="$(LDLIBS)" \
+		$(BB_MAKE_VERBOSE) \
 		all
 	rm -rf $(PKG_INSTALL_DIR)
 	$(FIND) $(PKG_BUILD_DIR) -lname "*busybox" -exec rm \{\} \;
@@ -116,6 +123,7 @@ define Build/Compile
 		ARCH="$(ARCH)" \
 		CONFIG_PREFIX="$(PKG_INSTALL_DIR)" \
 		LDLIBS="$(LDLIBS)" \
+		$(BB_MAKE_VERBOSE) \
 		install
 endef
 

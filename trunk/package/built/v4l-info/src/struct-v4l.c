@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <sys/ioctl.h>
 
+#include <sys/time.h>
 #include <linux/videodev.h>
 
 #include "struct-dump.h"

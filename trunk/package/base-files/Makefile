@@ -82,19 +82,19 @@ endef
 
 define Package/libgcc/config
 	menu "Configuration"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libgcc
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libgcc
 
 	config LIBGCC_ROOT_DIR
 		string
 		prompt "libgcc shared library base directory"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libgcc
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libgcc
 		default TOOLCHAIN_ROOT  if !NATIVE_TOOLCHAIN
 		default "/"  if NATIVE_TOOLCHAIN
 
 	config LIBGCC_FILE_SPEC
 		string
 		prompt "libgcc shared library files (use wildcards)"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libgcc
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libgcc
 		default "./lib/libgcc_s.so.*"
 
 	endmenu
@@ -109,19 +109,19 @@ endef
 
 define Package/libssp/config
 	menu "Configuration"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libssp
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libssp
 
 	config LIBSPP_ROOT_DIR
 		string
 		prompt "libssp shared library base directory"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libssp
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libssp
 		default TOOLCHAIN_ROOT  if !NATIVE_TOOLCHAIN
 		default "/"  if NATIVE_TOOLCHAIN
 
 	config LIBSSP_FILE_SPEC
 		string
 		prompt "libssp shared library files (use wildcards)"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libssp
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libssp
 		default "./lib/libssp.so.*"
 
 	endmenu
@@ -137,19 +137,19 @@ endef
 
 define Package/libstdcpp/config
 	menu "Configuration"
-	depends EXTERNAL_TOOLCHAIN && PACKAGE_libstdcpp
+	depends on EXTERNAL_TOOLCHAIN && PACKAGE_libstdcpp
 
 	config LIBSTDCPP_ROOT_DIR
 		string
 		prompt "libstdcpp shared library base directory"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libstdcpp
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libstdcpp
 		default TOOLCHAIN_ROOT  if !NATIVE_TOOLCHAIN
 		default "/"  if NATIVE_TOOLCHAIN
 
 	config LIBSTDCPP_FILE_SPEC
 		string
 		prompt "libstdc++ shared library files (use wildcards)"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libstdcpp
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libstdcpp
 		default "./lib/libstdc++.so.*"
 
 	endmenu
@@ -174,19 +174,19 @@ endef
 
 define Package/libc/config
 	menu "Configuration"
-	depends EXTERNAL_TOOLCHAIN && PACKAGE_libc
+	depends on EXTERNAL_TOOLCHAIN && PACKAGE_libc
 
 	config LIBC_ROOT_DIR
 		string
 		prompt "libc shared library base directory"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libc
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libc
 		default TOOLCHAIN_ROOT  if !NATIVE_TOOLCHAIN
 		default "/"  if NATIVE_TOOLCHAIN
 
 	config LIBC_FILE_SPEC
 		string
 		prompt "libc shared library files (use wildcards)"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libc
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libc
 		default "./lib/ld{-*.so,-linux*.so.*} ./lib/lib{anl,c,cidn,crypt,dl,m,nsl,nss_dns,nss_files,resolv,util}{-*.so,.so.*}"
 
 	endmenu
@@ -201,19 +201,19 @@ endef
 
 define Package/libpthread/config
 	menu "Configuration"
-	depends EXTERNAL_TOOLCHAIN && PACKAGE_libpthread
+	depends on EXTERNAL_TOOLCHAIN && PACKAGE_libpthread
 
 	config LIBPTHREAD_ROOT_DIR
 		string
 		prompt "libpthread shared library base directory"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libpthread
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libpthread
 		default TOOLCHAIN_ROOT  if !NATIVE_TOOLCHAIN
 		default "/"  if NATIVE_TOOLCHAIN
 
 	config LIBPTHREAD_FILE_SPEC
 		string
 		prompt "libpthread shared library files (use wildcards)"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_libpthread
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_libpthread
 		default "./lib/libpthread{-*.so,.so.*}"
 
 	endmenu
@@ -227,19 +227,19 @@ endef
 
 define Package/librt/config
 	menu "Configuration"
-	depends EXTERNAL_TOOLCHAIN && PACKAGE_librt
+	depends on EXTERNAL_TOOLCHAIN && PACKAGE_librt
 
 	config LIBRT_ROOT_DIR
 		string
 		prompt "librt shared library base directory"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_librt
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_librt
 		default TOOLCHAIN_ROOT  if !NATIVE_TOOLCHAIN
 		default "/"  if NATIVE_TOOLCHAIN
 
 	config LIBRT_FILE_SPEC
 		string
 		prompt "librt shared library files (use wildcards)"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_librt
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_librt
 		default "./lib/librt{-*.so,.so.*}"
 
 	endmenu
@@ -255,19 +255,19 @@ endef
 
 define Package/ldconfig/config
 	menu "Configuration"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_ldconfig
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_ldconfig
 
 	config LDCONFIG_ROOT_DIR
 		string
 		prompt "ldconfig base directory"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_ldconfig
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_ldconfig
 		default TOOLCHAIN_ROOT  if !NATIVE_TOOLCHAIN
 		default "/"  if NATIVE_TOOLCHAIN
 
 	config LDCONFIG_FILE_SPEC
 		string
 		prompt "ldconfig file"
-		depends EXTERNAL_TOOLCHAIN && PACKAGE_ldconfig
+		depends on EXTERNAL_TOOLCHAIN && PACKAGE_ldconfig
 		default "./sbin/ldconfig"
 
 	endmenu

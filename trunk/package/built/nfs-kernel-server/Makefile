@@ -126,7 +126,11 @@ endef
 define Package/nfs-kernel-server/install
 	$(INSTALL_DIR) $(1)/etc/init.d $(1)/usr/sbin
 	$(INSTALL_DATA) ./files/exports $(1)/etc/exports
+ifeq ($(CONFIG_TARGET_keeneticII),y)
+	$(INSTALL_BIN) ./files/K20nfsdII $(1)/etc/init.d/K20nfsd
+else
 	$(INSTALL_BIN) ./files/K20nfsd $(1)/etc/init.d/K20nfsd
+endif
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/utils/statd/sm-notify $(1)/usr/sbin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/utils/statd/statd $(1)/usr/sbin/rpc.statd
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/utils/nfsd/nfsd $(1)/usr/sbin/rpc.nfsd

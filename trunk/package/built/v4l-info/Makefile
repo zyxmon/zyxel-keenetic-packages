@@ -5,7 +5,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=v4l-info
 PKG_VERSION:=3.102
-PKG_RELEASE:=2
+PKG_RELEASE:=2a
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -25,7 +25,7 @@ define Build/Prepare
 endef
 
 define Build/Compile
-	"$(TARGET_CC)" $(TARGET_CFLAGS) -I $(STAGING_DIR)/include/ \
+	"$(TARGET_CC)" $(TARGET_CFLAGS) -I $(PKG_BUILD_DIR) -I $(STAGING_DIR)/include/ \
 		-I $(STAGING_DIR)/usr/include/ -L $(STAGING_DIR)/lib/ \
 		-s -o $(PKG_BUILD_DIR)/v4l-info \
 				$(PKG_BUILD_DIR)/v4l-info.c \
