@@ -5757,8 +5757,8 @@ MD5Sum: 616c964f7b6304970dd9210fd2325122
 Description:  Streaming application for Linux-UVC compatible webcams
 
 Package: motion
-Version: 20110826-051001-3
-Depends: libjpeg, kmod-video-core
+Version: 20110826-051001-3a
+Depends: libjpeg
 Provides: 
 Source: package/built/motion
 SourceFile: motion-20110826-051001.tar.gz
@@ -5771,10 +5771,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 102349
-Filename: motion_20110826-051001-3_keenetic.ipk
-Size: 102962
-MD5Sum: 0a3d5156b0072be5a280f763811b43b3
+Installed-Size: 102103
+Filename: motion_20110826-051001-3a_keenetic.ipk
+Size: 102702
+MD5Sum: 8e8ded7adef8dd7899ff955dbde54859
 Description:  webcam motion sensing and logging
 
 Package: msmtp
@@ -11907,7 +11907,7 @@ Description:  The uuidd daemon is used by the UUID library to generate universal
  running on different CPUs trying to grab UUIDs.
 
 Package: v4l-info
-Version: 3.102-2
+Version: 3.102-2a
 Depends: 
 Provides: 
 Source: package/built/v4l-info
@@ -11921,10 +11921,10 @@ Essential: no
 Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7588
-Filename: v4l-info_3.102-2_keenetic.ipk
-Size: 8277
-MD5Sum: bb5bcbb1150f236e82d9565cf8ab79ee
+Installed-Size: 7586
+Filename: v4l-info_3.102-2a_keenetic.ipk
+Size: 8279
+MD5Sum: d1ef0a5407da23c2fb3c432971d29fcf
 Description:  Video 4 Linux info/ sourses are taken from xawtv version 3.102 http://linuxtv.org/downloads/xawtv/
 
 Package: vncrepeater
