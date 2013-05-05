@@ -5,22 +5,7 @@ include ../common.mk
 GCC_CONFIGURE += \
 	--enable-languages=$(TARGET_LANGUAGES) \
 	--enable-shared \
-	--enable-threads \
 	--with-slibdir=$(TOOLCHAIN_DIR)/lib
-
-ifneq ($(CONFIG_GCC_VERSION_4_5),)
-  GCC_CONFIGURE += \
-	--enable-lto \
-	--with-libelf=$(TOPDIR)/staging_dir/host
-endif
-
-ifneq ($(CONFIG_TLS_SUPPORT),)
-  GCC_CONFIGURE += \
-	--enable-tls
-else
-  GCC_CONFIGURE += \
-	--disable-tls
-endif
 
 define Host/Configure
 	mkdir -p $(GCC_BUILD_DIR) $(TOOLCHAIN_DIR)/$(REAL_GNU_TARGET_NAME)

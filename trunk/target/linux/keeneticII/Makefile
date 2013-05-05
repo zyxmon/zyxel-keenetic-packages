@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 ARCH:=mipsel
-BOARD:=keeneticCS
-BOARDNAME:=ZyXEL Keenetic CodeSourcery
+BOARD:=keeneticII
+BOARDNAME:=ZyXEL KeeneticII
 FEATURES:=squashfs
-CFLAGS:=-Os -pipe -mips32r2 -mtune=mips32r2 -funit-at-a-time
 
-LINUX_VERSION:=2.6.23-rt
+LINUX_VERSION:=2.6.22-tc
 UCLIBC_VERSION:=0.9.30.3
+CFLAGS:=-Os -pipe -mips32r2 -mtune=mips32r2 -funit-at-a-time -msoft-float
 
 # include the profiles
 include $(INCLUDE_DIR)/target.mk

@@ -32,17 +32,24 @@
 #define HEADER_VERSION_V1	0x01000000
 #define HWID_TL_MR3020_V1	0x30200001
 #define HWID_TL_MR3220_V1	0x32200001
+#define HWID_TL_MR3220_V2	0x32200002
 #define HWID_TL_MR3420_V1	0x34200001
+#define HWID_TL_MR3420_V2	0x34200002
 #define HWID_TL_WA701N_V1	0x07010001
 #define HWID_TL_WA7510N_V1	0x75100001
+#define HWID_TL_WA801ND_V1	0x08010001
+#define HWID_TL_WA830RE_V1	0x08300010
+#define HWID_TL_WA830RE_V2	0x08300002
 #define HWID_TL_WA901ND_V1	0x09010001
 #define HWID_TL_WA901ND_V2	0x09010002
+#define HWID_TL_WDR4900_V1	0x49000001
 #define HWID_TL_WR703N_V1	0x07030101
 #define HWID_TL_WR741ND_V1	0x07410001
 #define HWID_TL_WR741ND_V4	0x07410004
 #define HWID_TL_WR740N_V1	0x07400001
 #define HWID_TL_WR740N_V3	0x07400003
 #define HWID_TL_WR743ND_V1	0x07430001
+#define HWID_TL_WR743ND_V2	0x07430002
 #define HWID_TL_WR841N_V1_5	0x08410002
 #define HWID_TL_WR841ND_V3	0x08410003
 #define HWID_TL_WR841ND_V5	0x08410005
@@ -173,6 +180,12 @@ static struct flash_layout layouts[] = {
 		.kernel_ep	= 0x80060000,
 		.rootfs_ofs	= 0x100000,
 	}, {
+		.id		= "16Mppc",
+		.fw_max_len	= 0xf80000,
+		.kernel_la	= 0x00000000,
+		.kernel_ep	= 0xc0000000,
+		.rootfs_ofs	= 0x2a0000,
+	}, {
 		/* terminating entry */
 	}
 };
@@ -189,10 +202,20 @@ static struct board_info boards[] = {
 		.hw_rev		= 1,
 		.layout_id	= "4M",
 	}, {
+		.id		= "TL-MR3220v2",
+		.hw_id		= HWID_TL_MR3220_V2,
+		.hw_rev		= 1,
+		.layout_id	= "4Mlzma",
+	}, {
 		.id		= "TL-MR3420v1",
 		.hw_id		= HWID_TL_MR3420_V1,
 		.hw_rev		= 1,
 		.layout_id	= "4M",
+	}, {
+		.id		= "TL-MR3420v2",
+		.hw_id		= HWID_TL_MR3420_V2,
+		.hw_rev		= 1,
+		.layout_id	= "4Mlzma",
 	}, {
 		.id		= "TL-WA701Nv1",
 		.hw_id		= HWID_TL_WA701N_V1,
@@ -201,6 +224,21 @@ static struct board_info boards[] = {
 	}, {
 		.id		= "TL-WA7510N",
 		.hw_id		= HWID_TL_WA7510N_V1,
+		.hw_rev		= 1,
+		.layout_id	= "4M",
+	}, {
+		.id		= "TL-WA801NDv1",
+		.hw_id		= HWID_TL_WA801ND_V1,
+		.hw_rev		= 1,
+		.layout_id	= "4M",
+	}, {
+		.id		= "TL-WA830REv1",
+		.hw_id		= HWID_TL_WA830RE_V1,
+		.hw_rev		= 1,
+		.layout_id	= "4M",
+	}, {
+		.id		= "TL-WA830REv2",
+		.hw_id		= HWID_TL_WA830RE_V2,
 		.hw_rev		= 1,
 		.layout_id	= "4M",
 	}, {
@@ -213,6 +251,11 @@ static struct board_info boards[] = {
 		.hw_id          = HWID_TL_WA901ND_V2,
 		.hw_rev         = 1,
 		.layout_id	= "4M",
+	}, {
+		.id             = "TL-WDR4900v1",
+		.hw_id          = HWID_TL_WDR4900_V1,
+		.hw_rev         = 1,
+		.layout_id	= "16Mppc",
 	}, {
 		.id		= "TL-WR741NDv1",
 		.hw_id		= HWID_TL_WR741ND_V1,
@@ -238,6 +281,11 @@ static struct board_info boards[] = {
 		.hw_id		= HWID_TL_WR743ND_V1,
 		.hw_rev		= 1,
 		.layout_id	= "4M",
+	}, {
+		.id		= "TL-WR743NDv2",
+		.hw_id		= HWID_TL_WR743ND_V2,
+		.hw_rev		= 1,
+		.layout_id	= "4Mlzma",
 	}, {
 		.id		= "TL-WR841Nv1.5",
 		.hw_id		= HWID_TL_WR841N_V1_5,

@@ -2,13 +2,15 @@ source "tmp/.config-target.in"
 
 # Kernel/Hardware features
 
+config HAS_SPE_FPU
+	depends on powerpc
+	select HAS_FPU
+	bool
+
 config HAS_FPU
 	bool
 
 config AUDIO_SUPPORT
-	bool
-
-config DISPLAY_SUPPORT
 	bool
 
 config GPIO_SUPPORT
@@ -31,6 +33,9 @@ config USB_SUPPORT
 config USB_GADGET_SUPPORT
 	bool
 
+config RTC_SUPPORT
+	bool
+
 config BIG_ENDIAN
 	bool
 
@@ -43,7 +48,7 @@ config USES_SQUASHFS
 config USES_JFFS2
 	bool
 
-config USES_EXT2
+config USES_EXT4
 	bool
 
 config USES_TARGZ
@@ -59,6 +64,13 @@ config PROFILE_KCONFIG
 	bool
 
 config NOMMU
+	bool
+
+config HAS_MIPS16
+	depends on (mips || mipsel || mips64 || mips64el)
+	bool
+
+config ARCH_64BIT
 	bool
 
 # Architecture selection
@@ -95,9 +107,11 @@ config mipsel
 
 config mips64
 	select BIG_ENDIAN
+	select ARCH_64BIT
 	bool
 
 config mips64el
+	select ARCH_64BIT
 	bool
 
 config powerpc
@@ -106,6 +120,7 @@ config powerpc
 
 config powerpc64
 	select BIG_ENDIAN
+	select ARCH_64BIT
 	bool
 
 config sh3
@@ -126,11 +141,8 @@ config sparc
 	select BIG_ENDIAN
 	bool
 
-config ubicom32
-	select BIG_ENDIAN
-	bool
-
 config x86_64
+	select ARCH_64BIT
 	bool
 
 config ARCH
@@ -152,6 +164,5 @@ config ARCH
 	default "sh4"       if sh4
 	default "sh4eb"     if sh4eb
 	default "sparc"     if sparc
-	default "ubicom32"  if ubicom32
 	default "x86_64"    if x86_64
 

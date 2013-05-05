@@ -8,6 +8,7 @@ GCC_CONFIGURE += \
 	--enable-languages=c \
 	--disable-shared \
 	--disable-threads \
+	--disable-libssp \
 
 define Host/Compile
 	$(CP) $(BUILD_DIR_TOOLCHAIN)/linux-dev/* $(BUILD_DIR_TOOLCHAIN)/$(LIBC)-dev/

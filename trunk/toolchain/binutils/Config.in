@@ -11,7 +11,7 @@ choice
 		bool "binutils 2.19.1"
 
 	config BINUTILS_VERSION_2_20_1
-		depends !ubicom32
+		depends on !ubicom32
 		bool "binutils 2.20.1"
 
 endchoice

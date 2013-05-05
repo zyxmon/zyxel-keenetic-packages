@@ -2,18 +2,12 @@
 
 choice
 	prompt "GCC compiler Version" if TOOLCHAINOPTS
-	default GCC_VERSION_4_3_3_CS if (mips || mipsel) && !(TARGET_octeon || TARGET_sibyte)
 	default GCC_VERSION_4_1_2
 	help
 	  Select the version of gcc you wish to use.
 
 	config GCC_VERSION_4_1_2
 		bool "gcc 4.1.2"
-
-	config GCC_VERSION_4_3_3_CS
-		bool "gcc 4.3.3 with CodeSourcery enhancements"
-
-
 endchoice
 
 config EXTRA_GCC_CONFIG_OPTIONS
@@ -29,14 +23,6 @@ config SSP_SUPPORT
 	default n
 	help
 	    Enable Stack-Smashing Protection support
-
-config TLS_SUPPORT
-	bool
-	depends UCLIBC_VERSION_NPTL
-	prompt "Enable Thread-local storage (TLS) support" if TOOLCHAINOPTS
-	default n
-	help
-	    Enable Thread-local storage support
 
 config INSTALL_LIBSTDCPP
 	bool
