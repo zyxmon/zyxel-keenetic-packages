@@ -75,7 +75,11 @@ define Package/opkg/install
 	$(INSTALL_DIR) $(1)/bin
 	$(INSTALL_DIR) $(1)/etc
 	$(INSTALL_DIR) $(1)/var/lock
+ifeq ($(CONFIG_TARGET_keeneticII),y)
+	$(INSTALL_DATA) ./files/opkg.confII $(1)/etc/opkg.conf
+else
 	$(INSTALL_DATA) ./files/opkg.conf $(1)/etc/
+endif
 	$(VERSION_SED) $(1)/etc/opkg.conf
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/opkg-cl $(1)/bin/opkg
 endef
