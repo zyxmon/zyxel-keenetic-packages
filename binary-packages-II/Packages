@@ -4703,10 +4703,10 @@ LicenseFiles: COPYING
 Section: base
 Maintainer: Jo-Philipp Wich <xm@subsignal.org>
 Architecture: keeneticII
-Installed-Size: 64380
+Installed-Size: 64392
 Filename: opkg_618-3_keeneticII.ipk
-Size: 65142
-MD5Sum: 00bbdb35143ddb60f3ce66018b7ed80b
+Size: 65154
+MD5Sum: 2dffc67a84b39def711eb1b0a4fb13ee
 Description:  Lightweight package management system
  opkg is the opkg Package Management System, for handling
  installation and removal of packages on a system. It can
