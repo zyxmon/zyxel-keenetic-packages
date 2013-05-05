@@ -2174,18 +2174,6 @@ Size: 8674
 MD5Sum: a72b211f815f3d82b3df64414079ca37
 Description:  Support for Silicon Labs cp210x devices
 
-Package: kmod-video-core
-Version: 2.6.22-tc-1
-Source: package/kernel
-Section: kernel
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: keeneticII
-Installed-Size: 28561
-Filename: kmod-video-core_2.6.22-tc-1_keeneticII.ipk
-Size: 29032
-MD5Sum: 1872baa42f18e4ac21b0753539c03c21
-Description:  Kernel modules for Video4Linux support
-
 Package: ldd
 Version: 0.9.30.3-61
 Source: package/built/ldd
