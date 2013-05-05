@@ -251,7 +251,8 @@ static int modifyheaders ## CLASS (Elf ## CLASS ## _Ehdr *ehdr, \
 			ESET(phdr->p_offset,newsize); \
 			ESET(phdr->p_filesz,0); \
 		} else if (EGET(phdr->p_offset) + EGET(phdr->p_filesz) > newsize) { \
-			ESET(phdr->p_filesz, newsize - EGET(phdr->p_offset)); \
+			newsize -= EGET(phdr->p_offset); \
+			ESET(phdr->p_filesz, newsize); \
 		} \
 	} \
  \
