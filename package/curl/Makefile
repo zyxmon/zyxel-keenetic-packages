@@ -1,5 +1,5 @@
 # 
-# Copyright (C) 2007-2009 OpenWrt.org
+# Copyright (C) 2007-2012 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=curl
-PKG_VERSION:=7.21.3
+PKG_VERSION:=7.27.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
@@ -19,7 +19,7 @@ PKG_SOURCE_URL:=http://curl.haxx.se/download/ \
 	ftp://ftp.planetmirror.com/pub/curl/ \
 	http://www.mirrormonster.com/curl/download/ \
 	http://curl.mirrors.cyberservers.net/download/
-PKG_MD5SUM:=5b57fee22090b5c43a6886fdd35af2ce
+PKG_MD5SUM:=11fcbfc0de9c12512e607e7d72d500a0
 
 PKG_FIXUP:=libtool
 PKG_BUILD_PARALLEL:=1
@@ -84,13 +84,6 @@ CONFIGURE_VARS += \
 	LDFLAGS="$$$$LDFLAGS -lcrypto -lssl -lz" \
 	CC="$(filter-out ccache,$(TARGET_CC))"
 
-#define Build/Configure
-#	(cd $(PKG_BUILD_DIR); \
-#		autoreconf -v --install || exit 1 \
-#	);
-#	$(call Build/Configure/Default)
-#endef
-
 define Build/Compile
 	$(MAKE) $(PKG_JOBS) -C $(PKG_BUILD_DIR) \
 		DESTDIR="$(PKG_INSTALL_DIR)" \
@@ -105,7 +98,7 @@ define Build/InstallDev
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libcurl.{a,so*} $(1)/usr/lib/
 	$(CP) $(PKG_BUILD_DIR)/libcurl.pc $(1)/usr/lib/pkgconfig/
 	$(SED) 's,-L$$$${exec_prefix}/lib,,g' $(1)/usr/bin/curl-config
-	$(SED) 's#$(TARGET_LDFLAGS)##g' $(1)/usr/lib/pkgconfig/libcurl.pc
+	[ -n "$(TARGET_LDFLAGS)" ] && $(SED) 's#$(TARGET_LDFLAGS)##g' $(1)/usr/lib/pkgconfig/libcurl.pc || true
 	ln -sf $(STAGING_DIR)/usr/bin/curl-config $(2)/bin/
 endef
 
