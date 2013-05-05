@@ -50,6 +50,7 @@ ifneq ($(if $(CONFIG_SRC_TREE_OVERRIDE),$(wildcard ./git-src)),)
   USE_GIT_TREE:=1
   QUILT:=1
 endif
+
 PKG_DIR_NAME:=$(lastword $(subst /,$(space),$(CURDIR)))
 PKG_INSTALL_STAMP:=$(PKG_INFO_DIR)/$(PKG_DIR_NAME).$(if $(BUILD_VARIANT),$(BUILD_VARIANT),default).install
 
@@ -214,7 +215,7 @@ define Package/$(1)/description
 endef
 endif
 
-  $(foreach FIELD, TITLE CATEGORY PRIORITY SECTION VERSION,
+  $(foreach FIELD, TITLE CATEGORY SECTION VERSION,
     ifeq ($($(FIELD)),)
       $$(error Package/$(1) is missing the $(FIELD) field)
     endif

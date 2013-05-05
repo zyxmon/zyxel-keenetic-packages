@@ -109,36 +109,8 @@ GCC_CONFIGURE:= \
 		--disable-libmudflap \
 		--disable-multilib \
 		--disable-nls \
-		$(GRAPHITE_CONFIGURE) \
-		$(if $(CONFIG_GCC_USE_GRAPHITE),--with-host-libstdcxx=-lstdc++) \
 		$(SOFT_FLOAT_CONFIG_OPTION) \
 		$(call qstrip,$(CONFIG_EXTRA_GCC_CONFIG_OPTIONS)) \
-		$(if $(CONFIG_mips64)$(CONFIG_mips64el),--with-arch=mips64 --with-abi=64) \
-		$(if $(CONFIG_GCC_VERSION_LLVM),--enable-llvm=$(BUILD_DIR_BASE)/host/llvm) \
-		$(if $(CONFIG_GCC_VERSION_4_3_3_CS)$(CONFIG_GCC_VERSION_4_4_1_CS),--enable-poison-system-directories)
-
-ifneq ($(CONFIG_GCC_VERSION_4_4)$(CONFIG_GCC_VERSION_4_5),)
-  ifneq ($(CONFIG_mips)$(CONFIG_mipsel),)
-    GCC_CONFIGURE += --with-mips-plt
-  endif
-endif
-
-ifneq ($(CONFIG_GCC_VERSION_4_3)$(CONFIG_GCC_VERSION_4_4)$(CONFIG_GCC_VERSION_4_5),)
-  GCC_BUILD_TARGET_LIBGCC:=y
-  GCC_CONFIGURE+= \
-		--with-gmp=$(TOPDIR)/staging_dir/host \
-		--with-mpfr=$(TOPDIR)/staging_dir/host \
-		--disable-decimal-float
-endif
-
-ifneq ($(CONFIG_GCC_VERSION_4_5),)
-  GCC_BUILD_TARGET_LIBGCC:=y
-  GCC_CONFIGURE+= \
-                --with-gmp=$(TOPDIR)/staging_dir/host \
-                --with-mpc=$(TOPDIR)/staging_dir/host \
-                --with-mpfr=$(TOPDIR)/staging_dir/host \
-                --disable-decimal-float
-endif
 
 ifneq ($(CONFIG_SSP_SUPPORT),)
   GCC_CONFIGURE+= \

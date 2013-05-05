@@ -29,8 +29,8 @@ $(strip \
 endef
 
 # code for creating tarballs from cvs/svn/git/bzr/hg/darcs checkouts - useful for mirror support
-dl_pack/bz2=$(TAR) cfj $(1) $(2)
-dl_pack/gz=$(TAR) cfz $(1) $(2)
+dl_pack/bz2=$(TAR) cjf $(1) $(2)
+dl_pack/gz=$(TAR) czf $(1) $(2)
 dl_pack/unknown=echo "ERROR: Unknown pack format for file $(1)"; false
 define dl_pack
 	$(if $(dl_pack/$(call ext,$(1))),$(dl_pack/$(call ext,$(1))),$(dl_pack/unknown))
@@ -87,7 +87,7 @@ define DownloadMethod/git
 		cd $(TMP_DIR)/dl && \
 		rm -rf $(SUBDIR) && \
 		[ \! -d $(SUBDIR) ] && \
-		git clone $(URL) $(SUBDIR) && \
+		git clone $(URL) $(SUBDIR) --recursive && \
 		(cd $(SUBDIR) && git checkout $(VERSION)) && \
 		echo "Packing checkout..." && \
 		rm -rf $(SUBDIR)/.git && \

@@ -1,0 +1,12 @@
+diff -ruN uClibc-0.9.30.3.orig/libc/misc/time/time.c uClibc-0.9.30.3/libc/misc/time/time.c
+--- uClibc-0.9.30.3.orig/libc/misc/time/time.c	2010-03-12 22:32:42.000000000 +0300
++++ uClibc-0.9.30.3/libc/misc/time/time.c	2012-03-29 01:22:42.000000000 +0400
+@@ -705,7 +705,7 @@
+ 					++day;
+ 				}
+ 				monlen = 31 + day_cor[r->month -1] - day_cor[r->month];
+-				if (isleap && (r->month > 1)) {
++				if (isleap && (r->month == 2)) {
+ 					++monlen;
+ 				}
+ 				/* Wweekday (0 is Sunday) of 1st of the month
