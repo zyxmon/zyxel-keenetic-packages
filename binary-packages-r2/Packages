@@ -1919,24 +1919,17 @@ MD5Sum: 927f99dc1a2774eafa4d4a89a3dd7faf
 Description:  cpulimit is a simple program which attempts to limit the cpu usage of a process
 
 Package: curl
-Version: 7.21.3-1
-Depends: 
-Provides: 
+Version: 7.27.0-1
 Source: package/curl
-SourceFile: curl-7.21.3.tar.bz2
+SourceFile: curl-7.27.0.tar.bz2
 SourceURL: http://curl.haxx.se/download/ http://www.mirrorspace.org/curl/ http://curl.mirror.internet.tp/download/ ftp://ftp.sunet.se/pub/www/utilities/curl/ ftp://ftp.planetmirror.com/pub/curl/ http://www.mirrormonster.com/curl/download/ http://curl.mirrors.cyberservers.net/download/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 33288
-Filename: curl_7.21.3-1_keenetic.ipk
-Size: 34026
-MD5Sum: e5c35326cfba91985fbfd9419769e07b
+Installed-Size: 39854
+Filename: curl_7.27.0-1_keenetic.ipk
+Size: 40625
+MD5Sum: e6886fbade51c54f1e369c272cbe3eaa
 Description:  A client-side URL transfer utility
 
 Package: curlftpfs
