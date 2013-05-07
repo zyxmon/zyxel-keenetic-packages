@@ -106,11 +106,11 @@ define Package/openvpn-$(BUILD_VARIANT)/install
 	$(INSTALL_BIN) \
 		$(PKG_INSTALL_DIR)/usr/sbin/openvpn \
 		$(1)/usr/sbin/
-
-	$(INSTALL_BIN) \
-		files/K11openvpn \
-		$(1)/etc/init.d/K11openvpn
-
+ifeq ($(CONFIG_TARGET_keeneticII),y)
+	$(INSTALL_BIN) ./files/K11openvpnII $(1)/etc/init.d/K11openvpn
+else
+	$(INSTALL_BIN) ./files/K11openvpn $(1)/etc/init.d/K11openvpn
+endif
 	$(INSTALL_CONF) files/openvpn.config \
 		$(1)/etc/config/openvpn
 
