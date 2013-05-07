@@ -5662,6 +5662,20 @@ Description:  mini_sendmail reads its standard input up to an end-of-file and se
  The message is sent by connecting to a local SMTP server. This means
  mini_sendmail can be used to send email from inside a chroot(2) area.
 
+Package: mini-snmpd
+Version: 1.2b-7
+Source: package/built/mini_snmpd
+SourceFile: mini_snmpd-1.2b.tar.gz
+SourceURL: http://members.aon.at/linuxfreak/linux/
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18455
+Filename: mini-snmpd_1.2b-7_keenetic.ipk
+Size: 19144
+MD5Sum: 48beb29242033e226f2a068f0d1f555d
+Description:  SNMP server for embedded systems
+
 Package: mini_inetd
 Version: 1.0.0-1
 Depends: 
