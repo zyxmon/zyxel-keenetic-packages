@@ -4672,10 +4672,10 @@ SourceURL: http://swupdate.openvpn.net/community/releases
 Section: net
 Maintainer: Mirko Vogt <mirko@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 186841
+Installed-Size: 186843
 Filename: openvpn-openssl_2.3.0-1_keeneticII.ipk
-Size: 187301
-MD5Sum: 3ae280468b00a62bd77b78f165eba9f6
+Size: 187324
+MD5Sum: 62c406546c3481a544a545043cc72f30
 Description:  Open source VPN solution using OpenSSL
 
 Package: openvpn-polarssl
@@ -4687,10 +4687,10 @@ SourceURL: http://swupdate.openvpn.net/community/releases
 Section: net
 Maintainer: Mirko Vogt <mirko@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 183455
+Installed-Size: 183460
 Filename: openvpn-polarssl_2.3.0-1_keeneticII.ipk
-Size: 184040
-MD5Sum: 99be1de877ab6f92097b23593e6adbca
+Size: 184058
+MD5Sum: c1609bba1faebd99b07a0cf0a8e1003b
 Description:  Open source VPN solution using PolarSSL
 
 Package: opkg
