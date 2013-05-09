@@ -14,18 +14,18 @@ Description:  3proxy is universal proxy server. It can be used to provide intern
  access to external resources or to provide external users with access to internal resources.
 
 Package: aria2
-Version: 1.16.5-1
+Version: 1.17.0-1
 Depends: libxml2, libstdcpp
 Source: package/built/aria2
-SourceFile: aria2-1.16.5.tar.bz2
+SourceFile: aria2-1.17.0.tar.bz2
 SourceURL: @SF/aria2
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 1152071
-Filename: aria2_1.16.5-1_keeneticII.ipk
-Size: 1149741
-MD5Sum: d096741f17fc0e8c37f154404923d64b
+Installed-Size: 1160782
+Filename: aria2_1.17.0-1_keeneticII.ipk
+Size: 1158548
+MD5Sum: 0eb7e648c4817d1fa0d195cbca79ada4
 Description:  aria2 is a lightweight multi-protocol & multi-source command-line download
  utility
 
@@ -4631,17 +4631,17 @@ MD5Sum: 6f062aef6d6f246fbcf4110d943bf702
 Description:  Utility for network exploration or security auditing
 
 Package: openssh-sftp-server
-Version: 6.1p1-1
+Version: 6.2p1-1
 Source: package/built/openssh
-SourceFile: openssh-6.1p1.tar.gz
+SourceFile: openssh-6.2p1.tar.gz
 SourceURL: ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/ ftp://openbsd.wiretapped.net/pub/OpenBSD/OpenSSH/portable/ ftp://ftp.belnet.be/packages/openbsd/OpenSSH/portable/ ftp://ftp.de.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/
 Section: net
 Maintainer: Peter Wagner <tripolar@gmx.at>
 Architecture: keeneticII
-Installed-Size: 30411
-Filename: openssh-sftp-server_6.1p1-1_keeneticII.ipk
-Size: 31039
-MD5Sum: 20737f85d6c75838a5cc814898fb2eb9
+Installed-Size: 30613
+Filename: openssh-sftp-server_6.2p1-1_keeneticII.ipk
+Size: 31226
+MD5Sum: 485218411f84ee8876752f7553056db9
 Description:  OpenSSH SFTP server.
 
 Package: openssl-util
