@@ -15,7 +15,7 @@ PKG_SOURCE_URL:=http://umurmur.googlecode.com/files
 PKG_MD5SUM:=4d71a699bddce3df0996b5dd0a279b47
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
-PKG_BUILD_DEPENDS:= libopenssl
+#PKG_BUILD_DEPENDS:= libopenssl
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -36,6 +36,7 @@ endef
 define Package/umurmur-openssl
   $(call Package/umurmur/Default)
   TITLE+= (with OpenSSL support)
+  DEPENDS+= libopenssl
   VARIANT:=openssl
 endef
 

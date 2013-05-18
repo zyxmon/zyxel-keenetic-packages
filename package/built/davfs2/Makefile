@@ -9,12 +9,12 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=davfs2
 PKG_VERSION:=1.4.7
-PKG_RELEASE:=1
+PKG_RELEASE:=1a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://download.savannah.gnu.org/releases/davfs2/
 #PKG_BUILD_DEPENDS:=gperf/host libopenssl
-PKG_BUILD_DEPENDS:=libopenssl
+#PKG_BUILD_DEPENDS:=libopenssl
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
@@ -28,7 +28,7 @@ define Package/davfs2
   SECTION:=net
   CATEGORY:=Network
   SUBMENU:=Filesystem
-  DEPENDS:=+libneon +libfuse +libexpat $(ICONV_DEPENDS) $(INTL_DEPENDS)
+  DEPENDS:=+libopenssl +libneon +libfuse +libexpat $(ICONV_DEPENDS) $(INTL_DEPENDS)
   TITLE:=Mounts a WebDAV resource
   URL:=http://savannah.nongnu.org/projects/davfs2
 endef
@@ -53,6 +53,10 @@ CONFIGURE_ARGS += \
 
 CONFIGURE_VARS += LIBS="-liconv" 
 
+define Package/davfs2/conffiles
+/etc/davfs2/davfs2.conf
+/etc/davfs2/secrets
+endef
 #
 # If gnulib is installed on the host system one can remove 100-gnulib-big.patch
 # and uncomment Build/Prepare 'section' to build package

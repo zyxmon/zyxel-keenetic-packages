@@ -9,13 +9,13 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=pyOpenSSL
 PKG_VERSION:=0.12
-PKG_RELEASE:=2
+PKG_RELEASE:=2a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://pypi.python.org/packages/source/p/pyOpenSSL/
 PKG_MD5SUM:=
 
-PKG_BUILD_DEPENDS:=libopenssl
+#PKG_BUILD_DEPENDS:=libopenssl
 
 include $(INCLUDE_DIR)/package.mk
 $(call include_mk, python-package.mk)
@@ -26,7 +26,7 @@ define Package/py-openssl
 	SUBMENU:=Python
 	TITLE:=py-OpenSSL
 	URL:=http://pypi.python.org
-	DEPENDS:=+python
+	DEPENDS:=+python +libopenssl
 endef
 
 define Package/py-openssl/description

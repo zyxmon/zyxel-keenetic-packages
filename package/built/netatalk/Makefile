@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=netatalk
 PKG_VERSION:=2.2.1
-PKG_RELEASE:=2
+PKG_RELEASE:=2a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=@SF/netatalk
@@ -18,14 +18,14 @@ PKG_MD5SUM:=4a371025daf96adb73fa491efdbfef28
 PKG_BUILD_PARALLEL:=1
 PKG_INSTALL:=1
 
-PKG_BUILD_DEPENDS:=libopenssl
+#PKG_BUILD_DEPENDS:=libopenssl
 
 include $(INCLUDE_DIR)/package.mk
 define Package/netatalk
   SECTION:=net
   CATEGORY:=Network
   SUBMENU:=Filesystem
-  DEPENDS:=+libdb51 +libgcrypt
+  DEPENDS:=+libopenssl +libdb51 +libgcrypt
   TITLE:=netatalk
   URL:=http://netatalk.sourceforge.net
   MAINTAINER:=W. Michael Petullo <mike@flyn.org>

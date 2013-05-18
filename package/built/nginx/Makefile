@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nginx
-PKG_VERSION:=1.2.8
-PKG_RELEASE:=4
+PKG_VERSION:=1.4.1
+PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://nginx.org/download/
-PKG_MD5SUM:=b9f7640cca35196d0e719ac5da24c7bd
+PKG_MD5SUM:=fea7dfab995545ce27fe4c49dc21a972
 
 ################################################################################################
 
@@ -21,11 +21,10 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSI
 
 ################################################################################################
 
-
 PKG_BUILD_PARALLEL:=1
 PKG_INSTALL:=1
 
-PKG_BUILD_DEPENDS:=libopenssl zlib
+PKG_BUILD_DEPENDS:=zlib
 
 PKG_CONFIG_DEPENDS := \
 	CONFIG_NGINX_STUB_STATUS \
@@ -57,7 +56,24 @@ PKG_CONFIG_DEPENDS := \
 	CONFIG_NGINX_HTTP_LIMIT_REQ \
 	CONFIG_NGINX_HTTP_EMPTY_GIF \
 	CONFIG_NGINX_HTTP_BROWSER \
-	CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH
+	CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH \
+	CONFIG_NGINX_SPDY \
+	CONFIG_NGINX_REALIP \
+	CONFIG_NGINX_ADDITION \
+	CONFIG_NGINX_XSLT \
+	CONFIG_NGINX_IMAGE_FILTER \
+	CONFIG_NGINX_GEOIP \
+	CONFIG_NGINX_SUB \
+	CONFIG_NGINX_MP4 \
+	CONFIG_NGINX_GUNZIP \
+	CONFIG_NGINX_GZIP_STATIC \
+	CONFIG_NGINX_RANDOM_INDEX \
+	CONFIG_NGINX_SECURE_LINK \
+	CONFIG_NGINX_DEGRADATION \
+	CONFIG_NGINX_PERL \
+	CONFIG_NGINX_GOOGLE_PERFTOOLS \
+	CONFIG_NGINX_HTTP_UPSTREAM_LEAST_CONN \
+	CONFIG_NGINX_HTTP_UPSTREAM_KEEPALIVE
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -72,11 +88,13 @@ define Package/nginx/Default
 	DEPENDS:=$(3)
 	MENU:=$(2)
 	VARIANT:=$(1)
+        TARGET_LDFLAGS += -Wl,-rpath-link=$(STAGING_DIR)/usr/lib
 endef
 
-Package/nginx-basic=$(call Package/nginx/Default,basic,0,+libpcre)
-Package/nginx-full=$(call Package/nginx/Default,full,0,+libpcre +liblua)
-Package/nginx-custom=$(call Package/nginx/Default,custom,1,+NGINX_PCRE:libpcre +NGINX_LUA:liblua)
+# FIXME: +NGINX_XSLT:libxslt, +NGINX_IMAGE_FILTER:libgd - nginx don't see libraries
+Package/nginx-basic=$(call Package/nginx/Default,basic,0,+libpcre +libopenssl)
+Package/nginx-custom=$(call Package/nginx/Default,custom,1,+NGINX_PCRE:libpcre +NGINX_LUA:liblua +NGINX_SSL:libopenssl)
+Package/nginx-full=$(call Package/nginx/Default,full,0,+libpcre +liblua +libgd +libopenssl)
 
 ################################################################################################
 
@@ -88,7 +106,6 @@ endef
 Package/nginx-basic/description=$(call Package/nginx/description/Default,Built with basic set of modules)
 Package/nginx-full/description=$(call Package/nginx/description/Default,Built with full set of modules)
 Package/nginx-custom/description=$(call Package/nginx/description/Default,Built with custom set of modules)
-
 
 ################################################################################################
 
@@ -134,6 +151,28 @@ CONFIG_NGINX_HTTP_LIMIT_REQ:=y
 CONFIG_NGINX_HTTP_EMPTY_GIF:=y
 CONFIG_NGINX_HTTP_BROWSER:=y
 CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH:=y
+
+CONFIG_NGINX_SPDY:=n
+CONFIG_NGINX_REALIP:=n
+CONFIG_NGINX_ADDITION:=n
+CONFIG_NGINX_IMAGE_FILTER:=n
+CONFIG_NGINX_SUB:=n
+CONFIG_NGINX_MP4:=n
+CONFIG_NGINX_GUNZIP:=n
+CONFIG_NGINX_GZIP_STATIC:=n
+CONFIG_NGINX_RANDOM_INDEX:=n
+CONFIG_NGINX_SECURE_LINK:=n
+CONFIG_NGINX_DEGRADATION:=n
+
+CONFIG_NGINX_HTTP_UPSTREAM_LEAST_CONN:=y
+CONFIG_NGINX_HTTP_UPSTREAM_KEEPALIVE:=y
+
+CONFIG_NGINX_XSLT:=n
+
+CONFIG_NGINX_GEOIP:=n
+CONFIG_NGINX_GOOGLE_PERFTOOLS:=n
+
+CONFIG_NGINX_PERL:=n
 endif
 
 ifeq ($(BUILD_VARIANT),full)
@@ -172,8 +211,34 @@ CONFIG_NGINX_HTTP_LIMIT_REQ:=y
 CONFIG_NGINX_HTTP_EMPTY_GIF:=y
 CONFIG_NGINX_HTTP_BROWSER:=y
 CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH:=y
-endif
 
+CONFIG_NGINX_REALIP:=y
+CONFIG_NGINX_ADDITION:=y
+CONFIG_NGINX_IMAGE_FILTER:=y
+CONFIG_NGINX_SUB:=y
+CONFIG_NGINX_MP4:=y
+CONFIG_NGINX_GUNZIP:=y
+CONFIG_NGINX_GZIP_STATIC:=y
+CONFIG_NGINX_RANDOM_INDEX:=y
+CONFIG_NGINX_SECURE_LINK:=y
+CONFIG_NGINX_DEGRADATION:=y
+
+CONFIG_NGINX_HTTP_UPSTREAM_LEAST_CONN:=y
+CONFIG_NGINX_HTTP_UPSTREAM_KEEPALIVE:=y
+
+# OpenSSL 1.0.1 required!
+CONFIG_NGINX_SPDY:=n
+
+# Bug: failed to detect libraries. FIXME!!!
+CONFIG_NGINX_XSLT:=n
+
+# LibGeoIP not in repo
+CONFIG_NGINX_GEOIP:=n
+CONFIG_NGINX_GOOGLE_PERFTOOLS:=n
+
+# TODO: разобраться, какого хрена warning'и обрывают сборку. И починить, ессно, чтобы без Warning'ов собиралось.
+CONFIG_NGINX_PERL:=n
+endif
 
 ################################################################################################
 
@@ -186,8 +251,11 @@ define Package/nginx-$(BUILD_VARIANT)/conffiles
 endef
 
 ################################################################################################
+################################################################################################
 
 ADDITIONAL_MODULES:=
+
+#### 1.2.x config here:
 
 ifeq ($(CONFIG_IPV6),y)
 	ADDITIONAL_MODULES += --with-ipv6
@@ -207,9 +275,11 @@ ifeq ($(CONFIG_NGINX_DAV),y)
 	ADDITIONAL_MODULES += --with-http_dav_module
 endif
 ifeq ($(CONFIG_NGINX_LUA),y)
+# WARNING!!! External files required...
 	ADDITIONAL_MODULES += --add-module=$(PKG_BUILD_DIR)/lua-nginx
 endif
 ifeq ($(CONFIG_NGINX_RTMP),y)
+# WARNING!!! External files required...
 	ADDITIONAL_MODULES += --add-module=$(PKG_BUILD_DIR)/rtmp-nginx
 endif
 ifneq ($(CONFIG_NGINX_HTTP_CACHE),y)
@@ -285,7 +355,68 @@ ifneq ($(CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH),y)
 	ADDITIONAL_MODULES += --without-http_upstream_ip_hash_module
 endif
 
+################################################################################################
 
+#### 1.4.0 modules here:
+
+ifeq ($(CONFIG_NGINX_SPDY),y)
+# WARNING!!! OpenSSL 1.0.1 required!
+	ADDITIONAL_MODULES += --with-http_spdy_module
+endif
+ifeq ($(CONFIG_NGINX_REALIP),y)
+	ADDITIONAL_MODULES += --with-http_realip_module
+endif
+ifeq ($(CONFIG_NGINX_ADDITION),y)
+	ADDITIONAL_MODULES += --with-http_addition_module
+endif
+ifeq ($(CONFIG_NGINX_XSLT),y)
+	ADDITIONAL_MODULES += --with-http_xslt_module
+endif
+ifeq ($(CONFIG_NGINX_IMAGE_FILTER),y)
+	ADDITIONAL_MODULES += --with-http_image_filter_module
+endif
+ifeq ($(CONFIG_NGINX_GEOIP),y)
+	ADDITIONAL_MODULES += --with-http_geoip_module
+endif
+ifeq ($(CONFIG_NGINX_SUB),y)
+	ADDITIONAL_MODULES += --with-http_sub_module
+endif
+ifeq ($(CONFIG_NGINX_MP4),y)
+	ADDITIONAL_MODULES += --with-http_mp4_module
+endif
+ifeq ($(CONFIG_NGINX_GUNZIP),y)
+	ADDITIONAL_MODULES += --with-http_gunzip_module
+endif
+ifeq ($(CONFIG_NGINX_GZIP_STATIC),y)
+	ADDITIONAL_MODULES += --with-http_gzip_static_module
+endif
+ifeq ($(CONFIG_NGINX_RANDOM_INDEX),y)
+	ADDITIONAL_MODULES += --with-http_random_index_module
+endif
+ifeq ($(CONFIG_NGINX_SECURE_LINK),y)
+	ADDITIONAL_MODULES += --with-http_secure_link_module
+endif
+ifeq ($(CONFIG_NGINX_DEGRADATION),y)
+	ADDITIONAL_MODULES += --with-http_degradation_module
+endif
+ifeq ($(CONFIG_NGINX_PERL),y)
+# WARNING!!! External binary & libs required... (possibly)
+	ADDITIONAL_MODULES += --with-http_perl_module
+endif
+ifeq ($(CONFIG_NGINX_GOOGLE_PERFTOOLS),y)
+	ADDITIONAL_MODULES += --with-google_perftools_module
+endif
+
+#### 1.4.0 "http disables" here:
+
+ifneq ($(CONFIG_NGINX_HTTP_UPSTREAM_LEAST_CONN),y)
+	ADDITIONAL_MODULES += --without-http_upstream_least_conn_module
+endif
+ifneq ($(CONFIG_NGINX_HTTP_UPSTREAM_KEEPALIVE),y)
+	ADDITIONAL_MODULES += --without-http_upstream_keepalive_module
+endif
+
+################################################################################################
 ################################################################################################
 
 define Build/Configure
@@ -336,7 +467,7 @@ endif
 endef
 
 define Download/lua-nginx
-	VERSION:=7c0948a08e8449f7a9ffbc35244954e6aaddac5b
+	VERSION:=c558c4347b289ac96e8ad09501629f79251b3911
 	SUBDIR:=lua-nginx
 	FILE:=lua-nginx-module-$(PKG_VERSION)-$$(VERSION).tar.gz
 	URL:=git://github.com/chaoslawful/lua-nginx-module.git
@@ -350,7 +481,7 @@ define  Prepare/lua-nginx
 endef
 
 define Download/rtmp-nginx
-	VERSION:=7b5c5e99327c19600ab2bab89960ba217be52949
+	VERSION:=c61e99a36878fc618e29633db0e9652be13f6284
 	SUBDIR:=rtmp-nginx
 	FILE:=rtmp-nginx-module-$(PKG_VERSION)-$$(VERSION).tar.gz
 	URL:=git://github.com/arut/nginx-rtmp-module.git

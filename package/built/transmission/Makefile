@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=transmission
 PKG_VERSION:=2.77
-PKG_RELEASE:=1
+PKG_RELEASE:=1a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://mirrors.m0k.org/transmission/files
@@ -18,8 +18,6 @@ PKG_MD5SUM:=60c0e77a1852656215f7102a437b2a3d
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
-
-PKG_BUILD_DEPENDS:=libcurl libopenssl
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -34,7 +32,7 @@ endef
 
 define Package/transmission-daemon
   $(call Package/transmission/template)
-  DEPENDS:=+libevent2 +libminiupnpc
+  DEPENDS:= +libcurl +libopenssl +libevent2 +libminiupnpc
   MENU:=1
 endef
 
@@ -45,7 +43,7 @@ endef
 
 define Package/transmission-remote
   $(call Package/transmission/template)
-  DEPENDS:=+libevent2 +libminiupnpc
+  DEPENDS:=+libcurl +libopenssl +libevent2 +libminiupnpc
 endef
 
 define Package/transmission-web

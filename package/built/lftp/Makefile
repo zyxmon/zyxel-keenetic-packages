@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=lftp
 PKG_VERSION:=4.3.6
-PKG_RELEASE:=2
+PKG_RELEASE:=2a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=http://lftp.cybermirror.org \
@@ -17,7 +17,7 @@ PKG_SOURCE_URL:=http://lftp.cybermirror.org \
 PKG_MD5SUM:=ffcdbaec5d1416cb6dd754efd43fa61a
 
 PKG_INSTALL:=1
-PKG_BUILD_DEPENDS:=libopenssl
+#PKG_BUILD_DEPENDS:=libopenssl
 
 include $(INCLUDE_DIR)/uclibc++.mk
 include $(INCLUDE_DIR)/package.mk
@@ -26,7 +26,7 @@ define Package/lftp
   SUBMENU:=File Transfer
   SECTION:=net
   CATEGORY:=Network
-  DEPENDS:=+libncurses +libreadline $(CXX_DEPENDS) +libexpat
+  DEPENDS:=+libopenssl +libncurses +libreadline $(CXX_DEPENDS) +libexpat
   TITLE:=Sophisticated file transfer program
   URL:=http://lftp.yar.ru/
 endef

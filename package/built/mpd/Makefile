@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mpd
 PKG_VERSION:=0.16.5
-PKG_RELEASE:=2
+PKG_RELEASE:=2a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=@SF/musicpd
@@ -17,8 +17,6 @@ PKG_MD5SUM:=f7564cff12035f6a1112cce770655df7
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_BUILD_PARALLEL:=1
-
-PKG_BUILD_DEPENDS:=libcurl
 
 PKG_CONFIG_DEPENDS:= \
 	CONFIG_IPV6 \
@@ -33,7 +31,8 @@ define Package/mpd/Default
   CATEGORY:=Sound
   TITLE:=Music Player Daemon
   URL:=http://www.musicpd.org/
-  DEPENDS:= +glib2 +libflac +BUILD_PATENTED:libmad +libvorbisidec
+  DEPENDS:= +glib2 +libcurl +libpthread \
+	+libflac +BUILD_PATENTED:libmad +libvorbisidec
 endef
 
 define Package/mpd/Default/description

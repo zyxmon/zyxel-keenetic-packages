@@ -22,7 +22,7 @@ PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
 
-PKG_BUILD_DEPENDS:=libopenssl
+#PKG_BUILD_DEPENDS:=libopenssl
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -84,6 +84,7 @@ endef
 define Package/libevent2-openssl
   $(call Package/libevent2/Default)
   TITLE+= OpenSSL library (version 2.0)
+  DEPENDS+=+libopenssl
 endef
 
 define Package/libevent2-openssl/description

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 Nuno Goncalves <nunojpg@gmail.com>
+# Copyright (C) 2006-2012 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -13,18 +13,18 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nmap
-PKG_VERSION:=5.51
-PKG_RELEASE:=3
+PKG_VERSION:=6.01
+PKG_RELEASE:=4a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://nmap.org/dist/
-PKG_MD5SUM:=0b80d2cb92ace5ebba8095a4c2850275
+PKG_MD5SUM:=a1a71940f238abb835dbf3ee7412bcea
 
 PKG_INSTALL:=1
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
 
-PKG_BUILD_DEPENDS:=libopenssl
+#PKG_BUILD_DEPENDS:=libopenssl
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -50,7 +50,7 @@ endef
 
 define Package/nmap-ssl
 $(call Package/nmap/default)
-  DEPENDS:=$(NMAP_DEPENDS)
+  DEPENDS:=$(NMAP_DEPENDS) +libopenssl
   VARIANT:=ssl
   TITLE:=Nmap (with OpenSSL support)
 endef
@@ -64,7 +64,7 @@ endef
 
 define Package/ncat-ssl
 $(call Package/nmap/default)
-  DEPENDS:=$(NCAT_DEPENDS)
+  DEPENDS:=$(NCAT_DEPENDS) +libopenssl
   VARIANT:=ssl
   TITLE:=Ncat (with OpenSSL support)
 endef

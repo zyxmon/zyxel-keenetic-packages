@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=git
 PKG_VERSION:=1.7.11.2
-PKG_RELEASE:=1
+PKG_RELEASE:=1a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://git-core.googlecode.com/files/
@@ -17,7 +17,7 @@ PKG_MD5SUM:=91e01a22032f5d0ca2941ae7fd49d587
 
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
-PKG_BUILD_DEPENDS:=libopenssl
+#PKG_BUILD_DEPENDS:=libopenssl
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -25,6 +25,7 @@ define Package/git
   SECTION:=net
   CATEGORY:=Network
   SUBMENU:=Version Control Systems
+  DEPENDS:=+libopenssl
   TITLE:=The fast version control system
   URL:=http://git-scm.com
 endef

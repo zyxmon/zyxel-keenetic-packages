@@ -9,13 +9,11 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=pycurl
 PKG_VERSION:=7.19.0
-PKG_RELEASE:=2
+PKG_RELEASE:=2a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://pycurl.sourceforge.net/download/
 PKG_MD5SUM:=
-
-PKG_BUILD_DEPENDS:=libcurl
 
 include $(INCLUDE_DIR)/package.mk
 $(call include_mk, python-package.mk)
@@ -26,7 +24,7 @@ define Package/python-curl
   SUBMENU:=Python
   TITLE:=python-curl
   URL:=http://sourceforge.net/projects/pycurl
-  DEPENDS:=+python
+  DEPENDS:=+python +libcurl
 endef
 
 define Package/python-curl/description
