@@ -9,13 +9,13 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=httping
 PKG_VERSION:=1.5.2
-PKG_RELEASE:=1
+PKG_RELEASE:=1a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tgz
 PKG_SOURCE_URL:=http://www.vanheusden.com/httping
 PKG_MD5SUM:=49f72b124afb8a60f152ec674a162ad6
 
-PKG_BUILD_DEPENDS:=libopenssl
+#PKG_BUILD_DEPENDS:=libopenssl
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_INSTALL:=1
@@ -38,6 +38,7 @@ endef
 define Package/httping
   $(call Package/httping/Default)
   TITLE+= (with SSL support)
+  DEPENDS+= +libopenssl
   VARIANT:=ssl
 endef
 

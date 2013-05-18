@@ -9,14 +9,14 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=asterisk18
 PKG_VERSION:=1.8.10.1
-PKG_RELEASE:=5
+PKG_RELEASE:=5a
 
 PKG_SOURCE:=asterisk-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 PKG_MD5SUM:=415738d347b9037cbe5f8bfbe66843de
 
 PKG_BUILD_DIR=$(BUILD_DIR)/asterisk-$(PKG_VERSION)
-PKG_BUILD_DEPENDS:=libopenssl zlib libcurl
+PKG_BUILD_DEPENDS:=zlib
 
 include $(INCLUDE_DIR)/ltqtapi.mk
 include $(INCLUDE_DIR)/package.mk
@@ -40,7 +40,7 @@ define Package/asterisk18
 $(call Package/asterisk18/Default)
   TITLE:=Complete open source PBX, v1.8x
   MENU:=1
-  DEPENDS:= +libncurses +libpopt @!TARGET_avr32
+  DEPENDS:= +libopenssl +libncurses +libpopt @!TARGET_avr32
 endef
 
 define Package/asterisk18/description
@@ -201,7 +201,7 @@ endef
 define Package/asterisk18-curl
 $(call Package/asterisk18/Default)
   TITLE:=CURL support
-  DEPENDS:= asterisk18
+  DEPENDS:= asterisk18 +libcurl
 endef
 
 define Package/asterisk18-curl/description

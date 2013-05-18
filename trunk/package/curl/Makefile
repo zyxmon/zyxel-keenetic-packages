@@ -1,5 +1,5 @@
 # 
-# Copyright (C) 2007-2012 OpenWrt.org
+# Copyright (C) 2007-2011 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=curl
-PKG_VERSION:=7.27.0
+PKG_VERSION:=7.29.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
@@ -19,9 +19,12 @@ PKG_SOURCE_URL:=http://curl.haxx.se/download/ \
 	ftp://ftp.planetmirror.com/pub/curl/ \
 	http://www.mirrormonster.com/curl/download/ \
 	http://curl.mirrors.cyberservers.net/download/
-PKG_MD5SUM:=11fcbfc0de9c12512e607e7d72d500a0
+PKG_MD5SUM:=fa5f37f38a8042020e292ce7ec5341ce
 
-PKG_FIXUP:=libtool
+PKG_LICENSE:=MIT
+PKG_LICENSE_FILES:=COPYING
+
+PKG_FIXUP:=autoreconf
 PKG_BUILD_PARALLEL:=1
 
 include $(INCLUDE_DIR)/package.mk
@@ -35,6 +38,7 @@ endef
 define Package/curl
   $(call Package/curl/Default)
   SUBMENU:=File Transfer
+  DEPENDS:=+libcurl
   TITLE:=A client-side URL transfer utility
 endef
 
@@ -42,7 +46,7 @@ define Package/libcurl
   $(call Package/curl/Default)
   SECTION:=libs
   CATEGORY:=Libraries
-  DEPENDS:=+libopenssl +zlib
+  DEPENDS:=+libopenssl
   TITLE:=A client-side URL transfer library
 endef
 
@@ -81,11 +85,11 @@ CONFIGURE_ARGS += \
 	$(call autoconf_bool,CONFIG_IPV6,ipv6) \
 
 CONFIGURE_VARS += \
-	LDFLAGS="$$$$LDFLAGS -lcrypto -lssl -lz" \
+	LIBS="-lcrypto -lssl -lz" \
 	CC="$(filter-out ccache,$(TARGET_CC))"
 
 define Build/Compile
-	$(MAKE) $(PKG_JOBS) -C $(PKG_BUILD_DIR) \
+	+$(MAKE) $(PKG_JOBS) -C $(PKG_BUILD_DIR) \
 		DESTDIR="$(PKG_INSTALL_DIR)" \
 		CC="$(TARGET_CC)" \
 		install
@@ -107,10 +111,10 @@ define Package/curl/install
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/curl $(1)/usr/bin/
 endef
 
-#define Package/libcurl/install
-#	$(INSTALL_DIR) $(1)/usr/lib
-#	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libcurl.so.* $(1)/usr/lib/
-#endef
+define Package/libcurl/install
+	$(INSTALL_DIR) $(1)/usr/lib
+	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libcurl.so.* $(1)/usr/lib/
+endef
 
 $(eval $(call BuildPackage,curl))
 $(eval $(call BuildPackage,libcurl))

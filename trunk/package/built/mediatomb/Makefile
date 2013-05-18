@@ -12,12 +12,11 @@ include $(INCLUDE_DIR)/nls.mk
 
 PKG_NAME:=mediatomb
 PKG_VERSION:=0.12.1
-PKG_RELEASE:=10
+PKG_RELEASE:=10a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/mediatomb
 PKG_MD5SUM:=e927dd5dc52d3cfcebd8ca1af6f0d3c2
-PKG_BUILD_DEPENDS:=libcurl libopenssl
 
 PKG_BUILD_PARALLEL:=0
 
@@ -30,7 +29,7 @@ define Package/mediatomb
   CATEGORY:=Multimedia
   TITLE:=A powerfull UPNP media server
   URL:=http://www.mediatomb.cc/
-  DEPENDS:=+libexif +libsqlite3 +id3lib +file \
+  DEPENDS:=+libcurl +libexif +libsqlite3 +id3lib +file \
         +libjs +libexpat +libffmpeg +$(CXX_DEPENDS) +$(ICONV_DEPENDS)
 endef
 

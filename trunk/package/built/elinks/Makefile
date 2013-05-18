@@ -9,19 +9,20 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=elinks
 PKG_VERSION:=0.12pre6
-PKG_RELEASE:=1
+PKG_RELEASE:=1a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://elinks.or.cz/download
 PKG_MD5SUM:=3d0962f4b65fb039342fefd3ada050a9
 
-PKG_BUILD_DEPENDS:=libopenssl zlib
+PKG_BUILD_DEPENDS:=zlib
 
 include $(INCLUDE_DIR)/package.mk
 
 define Package/elinks
   SECTION:=net
   CATEGORY:=Network
+  DEPENDS:=+libopenssl
   TITLE:=A text based web browser
   URL:=http://elinks.or.cz/
 endef

@@ -10,12 +10,12 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=msmtp
 PKG_VERSION:=1.4.27
-PKG_RELEASE:=1
+PKG_RELEASE:=1a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=@SF/msmtp
 PKG_MD5SUM:=2d6d10d9c59ed2b2635554ed35fb9226
-PCK_BUILD_DEPENDS:= libopenssl
+#PCK_BUILD_DEPENDS:= libopenssl
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
@@ -42,6 +42,7 @@ endef
 define Package/msmtp
 $(call Package/msmtp/Default)
   TITLE+= (with SSL support)
+  DEPENDS+= +libopenssl
   VARIANT:=ssl
 endef
 

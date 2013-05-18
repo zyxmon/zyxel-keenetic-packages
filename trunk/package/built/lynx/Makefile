@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=lynx
 PKG_VERSION:=2.8.7rel.2
-PKG_RELEASE:=1
+PKG_RELEASE:=1a
 
 PKG_SOURCE:=$(PKG_NAME)$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://lynx.isc.org/current
@@ -18,14 +18,14 @@ PKG_MD5SUM:=cb936aef812e4e463ab86cbbe14d4db9
 PKG_INSTALL:=1
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)2-8-7
-PKG_BUILD_DEPENDS:=libopenssl zlib
+PKG_BUILD_DEPENDS:=zlib
 
 include $(INCLUDE_DIR)/package.mk
 
 define Package/lynx
 	SECTION:=net
 	CATEGORY:=Network
-	DEPENDS:=+libbz2 +libslang2
+	DEPENDS:=+libopenssl +libbz2 +libslang2
 	TITLE:=a text web browser
 	URL:=http://lynx.isc.org/
 	MAINTAINER:=Entware team, wl500g-repo.googlecode.com

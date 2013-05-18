@@ -9,12 +9,12 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ettercap
 PKG_VERSION:=NG-0.7.3
-PKG_RELEASE:=2
+PKG_RELEASE:=2a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/ettercap
 PKG_MD5SUM:=28fb15cd024162c55249888fe1b97820
-PKG_BUILD_DEPENDS:=libopenssl zlib
+PKG_BUILD_DEPENDS:=zlib
 
 PKG_FIXUP:=autoreconf
 PKG_INSTALL:=1
@@ -26,7 +26,7 @@ include $(INCLUDE_DIR)/nls.mk
 define Package/ettercap
   SECTION:=net
   CATEGORY:=Network
-  DEPENDS:=+libpcap +libnet1 +libpcre +libncurses +libltdl +$(ICONV_DEPENDS)
+  DEPENDS:=+libopenssl +libpcap +libnet1 +libpcre +libncurses +libltdl +$(ICONV_DEPENDS)
   TITLE:=Ettercap is a suite for man in the middle attacks on LAN.
   URL:=http://ettercap.sourceforge.net
 endef

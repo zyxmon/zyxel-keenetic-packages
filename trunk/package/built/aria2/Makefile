@@ -8,13 +8,13 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=aria2
 PKG_VERSION:=1.17.0
-PKG_RELEASE:=1
+PKG_RELEASE:=1a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=@SF/aria2
 PKG_MD5SUM:=9e2b4f1103a05c6b087b8f380a82df5b
 PKG_INSTALL:=1
-PKG_BUILD_DEPENDS:= zlib libopenssl
+PKG_BUILD_DEPENDS:= zlib
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -24,7 +24,7 @@ define Package/aria2
   SUBMENU:=File Transfer
   TITLE:=lightweight download utility
   URL:=http://aria2.sourceforge.net/
-  DEPENDS:=+libxml2 +libstdcpp \
+  DEPENDS:=+libopenssl +libxml2 +libstdcpp \
     $(INTL_DEPENDS) $(ICONV_DEPENDS)
 endef
 

@@ -9,12 +9,12 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=icecast
 PKG_VERSION:=2.3.3
-PKG_RELEASE:=1
+PKG_RELEASE:=1a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://downloads.us.xiph.org/releases/icecast/
 PKG_MD5SUM:=2b5d1b40778922e5f6431b7758c359ad
-PKG_BUILD_DEPENDS:=libcurl libvorbis
+PKG_BUILD_DEPENDS:=libvorbis
 
 PKG_FIXUP:=autoreconf
 
@@ -26,7 +26,7 @@ TREMOR_DIR=$(TREMOR_BUILD_DIR)/ipkg-install/usr
 define Package/icecast
   SECTION:=multimedia
   CATEGORY:=Multimedia
-  DEPENDS:=+libxml2 +libxslt +libogg
+  DEPENDS:=+libcurl +libxml2 +libxslt +libogg
   TITLE:=A streaming media server for Ogg/Vorbis and MP3 audio streams
   URL:=http://www.icecast.org/
 endef

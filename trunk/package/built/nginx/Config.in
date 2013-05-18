@@ -111,6 +111,7 @@ config NGINX_HTTP_REFERER
 config NGINX_HTTP_REWRITE
 	bool
 	prompt "Enable HTTP rewrite module"
+	select NGINX_PCRE
 	default y
 
 config NGINX_HTTP_PROXY

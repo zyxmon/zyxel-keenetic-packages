@@ -5,14 +5,14 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=curlftpfs
 PKG_VERSION:=0.9.2
-PKG_RELEASE:=2
+PKG_RELEASE:=2a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/curlftpfs
 PKG_MD5SUM:=b452123f755114cd4461d56c648d9f12
 
-PKG_BUILD_DEPENDS:=libcurl libiconv
-PKG_FIXUP:=libtool
+PKG_BUILD_DEPENDS:=libiconv
+PKG_FIXUP:=autoreconf
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/nls.mk
@@ -21,7 +21,7 @@ define Package/curlftpfs
   SECTION:=net
   CATEGORY:=Network
   SUBMENU:=Filesystem
-  DEPENDS:=+libfuse +glib2
+  DEPENDS:=+libcurl +libfuse +glib2
   TITLE:=CurlFtpFS
   URL:=http://curlftpfs.sourceforge.net/
 endef
@@ -38,7 +38,8 @@ EXTRA_CFLAGS += \
 
 EXTRA_LDFLAGS += \
 	-L$(INTL_PREFIX)/lib \
-	-L$(ICONV_PREFIX)/lib
+	-L$(ICONV_PREFIX)/lib \
+	-lpthread
 
 define Package/curlftpfs/install
 	$(INSTALL_DIR) $(1)/usr/bin

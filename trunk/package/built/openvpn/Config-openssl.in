@@ -44,10 +44,6 @@ config OPENVPN_openssl_ENABLE_PORT_SHARE
 	bool "Enable TCP server port-share support (--port-share)"
 	default y
 
-config OPENVPN_openssl_ENABLE_PASSWORD_SAVE
-	bool "Allow --askpass and --auth-user-pass passwords to be read from a file"
-	default n
-
 config OPENVPN_openssl_ENABLE_DEF_AUTH
 	bool "Enable deferred authentication"
 	default y
