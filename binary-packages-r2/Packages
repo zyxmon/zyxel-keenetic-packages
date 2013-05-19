@@ -21,40 +21,34 @@ Description:  3proxy is universal proxy server. It can be used to provide intern
  access to external resources or to provide external users with access to internal resources.
 
 Package: aria2
-Version: 1.17.0-1
-Depends: libxml2, libstdcpp
+Version: 1.17.0-1a
+Depends: libopenssl, libxml2, libstdcpp
 Source: package/built/aria2
 SourceFile: aria2-1.17.0.tar.bz2
 SourceURL: @SF/aria2
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1159920
-Filename: aria2_1.17.0-1_keenetic.ipk
-Size: 1157627
-MD5Sum: 514000aab587e0b5409615f99ba8f3af
+Installed-Size: 1160171
+Filename: aria2_1.17.0-1a_keenetic.ipk
+Size: 1157966
+MD5Sum: 845985073346e16b189081b2b83da4ea
 Description:  aria2 is a lightweight multi-protocol & multi-source command-line download
  utility
 
 Package: asterisk18-app-alarmreceiver
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6483
-Filename: asterisk18-app-alarmreceiver_1.8.10.1-5_keenetic.ipk
-Size: 7410
-MD5Sum: 76ad210f3f5f0450f428f527c2ab288c
+Installed-Size: 6482
+Filename: asterisk18-app-alarmreceiver_1.8.10.1-5a_keenetic.ipk
+Size: 7353
+MD5Sum: 005f09df5424516fabcf543301c1214f
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -62,24 +56,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support Central Station Alarm receiver for Ademco Contact ID in Asterisk.
 
 Package: asterisk18-app-authenticate
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3162
-Filename: asterisk18-app-authenticate_1.8.10.1-5_keenetic.ipk
-Size: 4004
-MD5Sum: c0529ac57258538acf0b6f192a193849
+Installed-Size: 3163
+Filename: asterisk18-app-authenticate_1.8.10.1-5a_keenetic.ipk
+Size: 3960
+MD5Sum: d1d6f05ba929fe82a63d1a3524f4f10b
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -87,24 +75,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for executing arbitrary authenticate commands in Asterisk.
 
 Package: asterisk18-app-chanisavail
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2705
-Filename: asterisk18-app-chanisavail_1.8.10.1-5_keenetic.ipk
-Size: 3585
-MD5Sum: 8f9fb54217aafa776280f6a66247f817
+Installed-Size: 2706
+Filename: asterisk18-app-chanisavail_1.8.10.1-5a_keenetic.ipk
+Size: 3536
+MD5Sum: 91f862d3b744c393264124e876ac909e
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -112,24 +94,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for checking if a channel is available in Asterisk.
 
 Package: asterisk18-app-chanspy
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 9076
-Filename: asterisk18-app-chanspy_1.8.10.1-5_keenetic.ipk
-Size: 9945
-MD5Sum: 043de443e1c8aa8fbd5536d484b6450d
+Installed-Size: 9073
+Filename: asterisk18-app-chanspy_1.8.10.1-5a_keenetic.ipk
+Size: 9882
+MD5Sum: ebd5aacd9e01ae0c8e7393af29e68c66
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -137,24 +113,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for listening in on any channel in Asterisk.
 
 Package: asterisk18-app-directed-pickup
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3636
-Filename: asterisk18-app-directed-pickup_1.8.10.1-5_keenetic.ipk
-Size: 4484
-MD5Sum: 6baad453b2b4f408121843c9805aedec
+Installed-Size: 3635
+Filename: asterisk18-app-directed-pickup_1.8.10.1-5a_keenetic.ipk
+Size: 4430
+MD5Sum: c4ff6b388ac512adc4be9dd514b5abcc
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -162,24 +132,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for directed call pickup in Asterisk.
 
 Package: asterisk18-app-disa
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4653
-Filename: asterisk18-app-disa_1.8.10.1-5_keenetic.ipk
-Size: 5515
-MD5Sum: 243833de3e44320d0998d508ad258fef
+Installed-Size: 4652
+Filename: asterisk18-app-disa_1.8.10.1-5a_keenetic.ipk
+Size: 5461
+MD5Sum: fe80c0331470d8143b21bf5f9eff387c
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -187,24 +151,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support Direct Inward System Access in Asterisk.
 
 Package: asterisk18-app-exec
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2978
-Filename: asterisk18-app-exec_1.8.10.1-5_keenetic.ipk
-Size: 3868
-MD5Sum: a5050c25297b1aecae97d13b242ffca3
+Installed-Size: 2977
+Filename: asterisk18-app-exec_1.8.10.1-5a_keenetic.ipk
+Size: 3809
+MD5Sum: d35dcffde5f6f843a63437970b0d9101
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -212,24 +170,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for application execution in Asterisk.
 
 Package: asterisk18-app-minivm
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 25904
-Filename: asterisk18-app-minivm_1.8.10.1-5_keenetic.ipk
-Size: 26703
-MD5Sum: 5a6434de6dd76a7e5c549b3f6e905e49
+Installed-Size: 25903
+Filename: asterisk18-app-minivm_1.8.10.1-5a_keenetic.ipk
+Size: 26648
+MD5Sum: b27554c73ca5f8aaff0ec30b76103f5c
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -237,24 +189,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support a voicemail system in small building blocks working together based on the Comedian Mail voicemail system in Asterisk.
 
 Package: asterisk18-app-mixmonitor
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7191
-Filename: asterisk18-app-mixmonitor_1.8.10.1-5_keenetic.ipk
-Size: 8085
-MD5Sum: 62a6b1ace3d0ce4beab83b6ea8cd1273
+Installed-Size: 7185
+Filename: asterisk18-app-mixmonitor_1.8.10.1-5a_keenetic.ipk
+Size: 8017
+MD5Sum: bdc23e5083e6a6abbc021b272864752d
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -262,24 +208,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support record a call and mix the audio during the recording in Asterisk.
 
 Package: asterisk18-app-originate
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2940
-Filename: asterisk18-app-originate_1.8.10.1-5_keenetic.ipk
-Size: 3859
-MD5Sum: c1c755b50a65c4f599aab3ff51386620
+Installed-Size: 2938
+Filename: asterisk18-app-originate_1.8.10.1-5a_keenetic.ipk
+Size: 3797
+MD5Sum: aeafdbe81b15afa4624b7345765b9d59
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -287,24 +227,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support originating an outbound call and connecting it to a specified extension or application in Asterisk.
 
 Package: asterisk18-app-playtones
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1947
-Filename: asterisk18-app-playtones_1.8.10.1-5_keenetic.ipk
-Size: 2825
-MD5Sum: fb39550d58483fb7f0298fb205c09676
+Installed-Size: 1955
+Filename: asterisk18-app-playtones_1.8.10.1-5a_keenetic.ipk
+Size: 2780
+MD5Sum: d4355d42cb59fe84e1e814c985df6b1e
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -312,24 +246,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support play a tone list in Asterisk.
 
 Package: asterisk18-app-read
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3437
-Filename: asterisk18-app-read_1.8.10.1-5_keenetic.ipk
-Size: 4279
-MD5Sum: a72c9b37f23080f65c018d7fee77d391
+Installed-Size: 3436
+Filename: asterisk18-app-read_1.8.10.1-5a_keenetic.ipk
+Size: 4218
+MD5Sum: cd0048de0b20b936ffb8769022f498c0
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -337,24 +265,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support a trivial application to read a variable in Asterisk.
 
 Package: asterisk18-app-readexten
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3771
-Filename: asterisk18-app-readexten_1.8.10.1-5_keenetic.ipk
-Size: 4635
-MD5Sum: 037611e59318c97eabc43df15f357f78
+Installed-Size: 3765
+Filename: asterisk18-app-readexten_1.8.10.1-5a_keenetic.ipk
+Size: 4572
+MD5Sum: 1b66e2227b41c9a4e862feb56cb6b546
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -362,24 +284,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support a trivial application to read an extension into a variable in Asterisk.
 
 Package: asterisk18-app-record
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4291
-Filename: asterisk18-app-record_1.8.10.1-5_keenetic.ipk
-Size: 5142
-MD5Sum: ef183a759b54ddf074a3fd033652dda0
+Installed-Size: 4290
+Filename: asterisk18-app-record_1.8.10.1-5a_keenetic.ipk
+Size: 5086
+MD5Sum: 10c53de11ca217f61fa54d6b0163625d
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -387,24 +303,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support to record a sound file in Asterisk.
 
 Package: asterisk18-app-sayunixtime
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2010
-Filename: asterisk18-app-sayunixtime_1.8.10.1-5_keenetic.ipk
-Size: 2901
-MD5Sum: cecb7c0248406b5f29d035ad8049db28
+Installed-Size: 2012
+Filename: asterisk18-app-sayunixtime_1.8.10.1-5a_keenetic.ipk
+Size: 2850
+MD5Sum: e141938c3089087c7ebb37511dcb3e56
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -412,24 +322,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support an application to say Unix time in Asterisk.
 
 Package: asterisk18-app-senddtmf
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2549
-Filename: asterisk18-app-senddtmf_1.8.10.1-5_keenetic.ipk
-Size: 3435
-MD5Sum: 9cb6f3d0a17cf338e8093e9de52c5dfc
+Installed-Size: 2548
+Filename: asterisk18-app-senddtmf_1.8.10.1-5a_keenetic.ipk
+Size: 3375
+MD5Sum: 543d509d1925f34d764e9fd333e1262b
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -437,24 +341,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support Sends arbitrary DTMF digits in Asterisk.
 
 Package: asterisk18-app-setcallerid
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1929
-Filename: asterisk18-app-setcallerid_1.8.10.1-5_keenetic.ipk
-Size: 2811
-MD5Sum: 6bda5dd232452c5c09afc534a5de1e72
+Installed-Size: 1932
+Filename: asterisk18-app-setcallerid_1.8.10.1-5a_keenetic.ipk
+Size: 2754
+MD5Sum: 66a437c1f13388d356310c5f802f15a8
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -462,24 +360,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for setting callerid in Asterisk.
 
 Package: asterisk18-app-sms
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 16546
-Filename: asterisk18-app-sms_1.8.10.1-5_keenetic.ipk
-Size: 17455
-MD5Sum: c441ad09b170c89e96bff2972279c5c9
+Installed-Size: 16547
+Filename: asterisk18-app-sms_1.8.10.1-5a_keenetic.ipk
+Size: 17404
+MD5Sum: c93a937e8279de03639bbaab4558c33f
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -487,24 +379,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support SMS support (ETSI ES 201 912 protocol 1) in Asterisk.
 
 Package: asterisk18-app-stack
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18, asterisk18-res-agi
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6973
-Filename: asterisk18-app-stack_1.8.10.1-5_keenetic.ipk
-Size: 7893
-MD5Sum: f4d10fa204f1090e5b3330bc0df2b781
+Installed-Size: 6972
+Filename: asterisk18-app-stack_1.8.10.1-5a_keenetic.ipk
+Size: 7835
+MD5Sum: b0a701f4687869dc317e4af30b58075a
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -512,24 +398,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support  stack applications Gosub Return etc. in Asterisk.
 
 Package: asterisk18-app-system
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 2451
-Filename: asterisk18-app-system_1.8.10.1-5_keenetic.ipk
-Size: 3341
-MD5Sum: 115b0da8a8fec3d7baa2a56b3d39f064
+Filename: asterisk18-app-system_1.8.10.1-5a_keenetic.ipk
+Size: 3282
+MD5Sum: c7b91990b1808f0a4a2d1f8139f1df3e
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -537,24 +417,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for executing system commands in Asterisk.
 
 Package: asterisk18-app-talkdetect
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 3803
-Filename: asterisk18-app-talkdetect_1.8.10.1-5_keenetic.ipk
-Size: 4655
-MD5Sum: 00c17109da9c4d012551b4bf7779aec9
+Filename: asterisk18-app-talkdetect_1.8.10.1-5a_keenetic.ipk
+Size: 4602
+MD5Sum: a5d1c828f110d0f2d05314ccd46c571b
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -562,24 +436,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support for file playback with audio detect in Asterisk.
 
 Package: asterisk18-app-verbose
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 2550
-Filename: asterisk18-app-verbose_1.8.10.1-5_keenetic.ipk
-Size: 3438
-MD5Sum: 4d82694e4701aa20ad494471ec619692
+Filename: asterisk18-app-verbose_1.8.10.1-5a_keenetic.ipk
+Size: 3388
+MD5Sum: b2d1cf1ad7e41de917a0d650250b65a1
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -587,24 +455,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support Verbose logging application in Asterisk.
 
 Package: asterisk18-app-waituntil
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2122
-Filename: asterisk18-app-waituntil_1.8.10.1-5_keenetic.ipk
-Size: 3012
-MD5Sum: 005d1beba0bfb7ef550b8ba47347ce60
+Installed-Size: 2123
+Filename: asterisk18-app-waituntil_1.8.10.1-5a_keenetic.ipk
+Size: 2961
+MD5Sum: 71d12046cc7e499acf292627a6774f9a
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -612,24 +474,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support sleeping until the given epoch in Asterisk.
 
 Package: asterisk18-app-while
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 4119
-Filename: asterisk18-app-while_1.8.10.1-5_keenetic.ipk
-Size: 4965
-MD5Sum: 1a38510335e8f87b814c2a2a80155f1a
+Filename: asterisk18-app-while_1.8.10.1-5a_keenetic.ipk
+Size: 4912
+MD5Sum: a12cdae2a84897b4a843e1c67bc02acc
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -637,24 +493,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support a while loop implementation in Asterisk.
 
 Package: asterisk18-chan-agent
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 21919
-Filename: asterisk18-chan-agent_1.8.10.1-5_keenetic.ipk
-Size: 22733
-MD5Sum: 4543edc7dc12eb05629e68d4d0593a72
+Filename: asterisk18-chan-agent_1.8.10.1-5a_keenetic.ipk
+Size: 22670
+MD5Sum: ac7bc250b6be16b65c81ba60442812d4
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -662,24 +512,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support  an implementation of agents proxy channel in Asterisk.
 
 Package: asterisk18-chan-gtalk
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18, libiksemel
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 59219
-Filename: asterisk18-chan-gtalk_1.8.10.1-5_keenetic.ipk
-Size: 60094
-MD5Sum: 889479291683e2835f8d317e5ef8ccdc
+Installed-Size: 59213
+Filename: asterisk18-chan-gtalk_1.8.10.1-5a_keenetic.ipk
+Size: 60028
+MD5Sum: 6584ea9a379fcaccef6f1a38e332af0f
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -688,24 +532,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  support to Asterisk.
 
 Package: asterisk18-chan-iax2
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18, asterisk18-res-crypto
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 130803
-Filename: asterisk18-chan-iax2_1.8.10.1-5_keenetic.ipk
-Size: 131191
-MD5Sum: 159b4215057212ef0ed1c5ec3a548181
+Installed-Size: 130798
+Filename: asterisk18-chan-iax2_1.8.10.1-5a_keenetic.ipk
+Size: 131160
+MD5Sum: 9e5b5708c76380d83ed6bc61c42f595a
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -714,24 +552,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  Asterisk.
 
 Package: asterisk18-chan-local
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 10644
-Filename: asterisk18-chan-local_1.8.10.1-5_keenetic.ipk
-Size: 11525
-MD5Sum: a665087147ed8e11413734cc1aa11116
+Installed-Size: 10643
+Filename: asterisk18-chan-local_1.8.10.1-5a_keenetic.ipk
+Size: 11471
+MD5Sum: cba1e2de66d1dd4f175407376d15d7ff
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -739,24 +571,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support  an implementation of local proxy channel in Asterisk.
 
 Package: asterisk18-chan-mgcp
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 41266
-Filename: asterisk18-chan-mgcp_1.8.10.1-5_keenetic.ipk
-Size: 42148
-MD5Sum: b9500ea1d6ae24decaae2cae5633fb1e
+Installed-Size: 41263
+Filename: asterisk18-chan-mgcp_1.8.10.1-5a_keenetic.ipk
+Size: 42096
+MD5Sum: cefa92e170fc81b5ce8b8c7568b24de6
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -764,24 +590,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides the channel chan_mgcp support to Asterisk.
 
 Package: asterisk18-chan-skinny
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 48634
-Filename: asterisk18-chan-skinny_1.8.10.1-5_keenetic.ipk
-Size: 49574
-MD5Sum: 37a6eb9156c06538356cefe0aaf52fe5
+Installed-Size: 48632
+Filename: asterisk18-chan-skinny_1.8.10.1-5a_keenetic.ipk
+Size: 49504
+MD5Sum: fa515adbf2dd6eafa17aafe021008da7
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -789,24 +609,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides the channel chan_skinny support to Asterisk.
 
 Package: asterisk18-codec-a-mu
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2064
-Filename: asterisk18-codec-a-mu_1.8.10.1-5_keenetic.ipk
-Size: 2956
-MD5Sum: 98f1511a9e0ce1ad1ca46c68fe8c6957
+Installed-Size: 2065
+Filename: asterisk18-codec-a-mu_1.8.10.1-5a_keenetic.ipk
+Size: 2898
+MD5Sum: 9c6fbe7312c4962250e928ac0dfc7eb2
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -814,24 +628,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support translation between alaw and ulaw codecs in Asterisk.
 
 Package: asterisk18-codec-alaw
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2200
-Filename: asterisk18-codec-alaw_1.8.10.1-5_keenetic.ipk
-Size: 3101
-MD5Sum: dda82d718d873af0d9240c83c62096f3
+Installed-Size: 2201
+Filename: asterisk18-codec-alaw_1.8.10.1-5a_keenetic.ipk
+Size: 3043
+MD5Sum: 93ba1f39477fcb9c64da4f6d197586c4
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -839,24 +647,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support translation between signed linear and alaw codecs in Asterisk.
 
 Package: asterisk18-codec-g722
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 5592
-Filename: asterisk18-codec-g722_1.8.10.1-5_keenetic.ipk
-Size: 6450
-MD5Sum: 8e4d0a1c98575054e1ffee95b7c4e5bb
+Installed-Size: 5594
+Filename: asterisk18-codec-g722_1.8.10.1-5a_keenetic.ipk
+Size: 6400
+MD5Sum: a56245a62f576ab3efbf15424df671ed
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -864,24 +666,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support a high bit rate 48/56/64Kbps ITU standard codec in Asterisk.
 
 Package: asterisk18-codec-g726
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4140
-Filename: asterisk18-codec-g726_1.8.10.1-5_keenetic.ipk
-Size: 5009
-MD5Sum: de25083768173c01c94d1e9d0b5e2baa
+Installed-Size: 4143
+Filename: asterisk18-codec-g726_1.8.10.1-5a_keenetic.ipk
+Size: 4963
+MD5Sum: 2a26eef21193de27c1c6f91208d05688
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -889,24 +685,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support translation between signed linear and ITU G.726-32kbps codecs in Asterisk.
 
 Package: asterisk18-curl
-Version: 1.8.10.1-5
-Depends: asterisk18
-Provides: 
+Version: 1.8.10.1-5a
+Depends: asterisk18, libcurl
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7521
-Filename: asterisk18-curl_1.8.10.1-5_keenetic.ipk
-Size: 8389
-MD5Sum: be773c216051711047c5d0a45923fc95
+Installed-Size: 7529
+Filename: asterisk18-curl_1.8.10.1-5a_keenetic.ipk
+Size: 8344
+MD5Sum: 2409b5843313a77c7a7255b2c161cb77
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -915,24 +705,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  support to Asterisk.
 
 Package: asterisk18-format-g726
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2909
-Filename: asterisk18-format-g726_1.8.10.1-5_keenetic.ipk
-Size: 3773
-MD5Sum: c1379b187ff8bc309bef37b70d6f6257
+Installed-Size: 2910
+Filename: asterisk18-format-g726_1.8.10.1-5a_keenetic.ipk
+Size: 3716
+MD5Sum: 554f8e6d19fd552413ccba52cb144927
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -940,24 +724,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for headerless G.726 16/24/32/40kbps data format in Asterisk.
 
 Package: asterisk18-format-g729
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3566
-Filename: asterisk18-format-g729_1.8.10.1-5_keenetic.ipk
-Size: 4420
-MD5Sum: 8e5b218afbd1799f0315c758c4dc9356
+Installed-Size: 3568
+Filename: asterisk18-format-g729_1.8.10.1-5a_keenetic.ipk
+Size: 4364
+MD5Sum: 7d68646aa907e8bc87dc570af4445e2f
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -965,24 +743,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for raw headerless G729 data in Asterisk.
 
 Package: asterisk18-format-sln16
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2626
-Filename: asterisk18-format-sln16_1.8.10.1-5_keenetic.ipk
-Size: 3512
-MD5Sum: 0de2a5b63bb6eb2f327538fa4c1fa3ec
+Installed-Size: 2629
+Filename: asterisk18-format-sln16_1.8.10.1-5a_keenetic.ipk
+Size: 3462
+MD5Sum: 5d7aa37932800db66bdc5018bb32db46
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -990,24 +762,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for Raw slinear 16 format in Asterisk.
 
 Package: asterisk18-format-sln
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2624
-Filename: asterisk18-format-sln_1.8.10.1-5_keenetic.ipk
-Size: 3512
-MD5Sum: 6fa6cfa84be38352a8d723f89b8d2790
+Installed-Size: 2626
+Filename: asterisk18-format-sln_1.8.10.1-5a_keenetic.ipk
+Size: 3463
+MD5Sum: 05a01f110df7852b3a720c862b6c409f
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1015,24 +781,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for raw slinear format in Asterisk.
 
 Package: asterisk18-func-blacklist
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2074
-Filename: asterisk18-func-blacklist_1.8.10.1-5_keenetic.ipk
-Size: 2974
-MD5Sum: fca91a269e9c5dfd634d5a83d407dd89
+Installed-Size: 2072
+Filename: asterisk18-func-blacklist_1.8.10.1-5a_keenetic.ipk
+Size: 2911
+MD5Sum: 2f3751f2564033e632e2d078adcf9dcc
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1040,24 +800,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support looking up the callerid number and see if it is blacklisted in Asterisk.
 
 Package: asterisk18-func-channel
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6307
-Filename: asterisk18-func-channel_1.8.10.1-5_keenetic.ipk
-Size: 7165
-MD5Sum: abb233a6f49608ae66c1699ce4e80d98
+Installed-Size: 6304
+Filename: asterisk18-func-channel_1.8.10.1-5a_keenetic.ipk
+Size: 7102
+MD5Sum: 4cbfdfcc5473ea2d8ae425202b1e2c4b
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1065,24 +819,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support Channel info dialplan function in Asterisk.
 
 Package: asterisk18-func-cut
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3617
-Filename: asterisk18-func-cut_1.8.10.1-5_keenetic.ipk
-Size: 4432
-MD5Sum: 12982b25d8f13d634425b5d2bac181fb
+Installed-Size: 3619
+Filename: asterisk18-func-cut_1.8.10.1-5a_keenetic.ipk
+Size: 4382
+MD5Sum: 998f11382f52ebc4f3ffff0ec8705a55
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1090,24 +838,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support CUT function in Asterisk.
 
 Package: asterisk18-func-db
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2705
-Filename: asterisk18-func-db_1.8.10.1-5_keenetic.ipk
-Size: 3596
-MD5Sum: 390a5e62d045ff2795a841429a8ebf32
+Installed-Size: 2709
+Filename: asterisk18-func-db_1.8.10.1-5a_keenetic.ipk
+Size: 3543
+MD5Sum: 5b32af921edbced0cbc79da0a2cd430f
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1115,24 +857,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support functions for interaction with the database in Asterisk.
 
 Package: asterisk18-func-devstate
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3756
-Filename: asterisk18-func-devstate_1.8.10.1-5_keenetic.ipk
-Size: 4634
-MD5Sum: 7f2f24fb56676fc5e0ec5689267dbb52
+Installed-Size: 3758
+Filename: asterisk18-func-devstate_1.8.10.1-5a_keenetic.ipk
+Size: 4584
+MD5Sum: f7fa93d730206bb552efc64d4fc2c740
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1140,24 +876,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support functions for manually controlled blinky lights in Asterisk.
 
 Package: asterisk18-func-extstate
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2062
-Filename: asterisk18-func-extstate_1.8.10.1-5_keenetic.ipk
-Size: 2963
-MD5Sum: 33dce5147592c99889a9852ffa5e82b0
+Installed-Size: 2061
+Filename: asterisk18-func-extstate_1.8.10.1-5a_keenetic.ipk
+Size: 2907
+MD5Sum: 2151936ac1a6d1264703834e74888ac9
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1165,24 +895,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support retrieving the state of a hinted extension for dialplan control in Asterisk.
 
 Package: asterisk18-func-global
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3600
-Filename: asterisk18-func-global_1.8.10.1-5_keenetic.ipk
-Size: 4455
-MD5Sum: bf18f1a25610c73dee18ef2ea7e6d141
+Installed-Size: 3603
+Filename: asterisk18-func-global_1.8.10.1-5a_keenetic.ipk
+Size: 4398
+MD5Sum: aae7b572f9592b7a355ecb6e7a76be6d
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1190,24 +914,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support global variable dialplan functions in Asterisk.
 
 Package: asterisk18-func-shell
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2055
-Filename: asterisk18-func-shell_1.8.10.1-5_keenetic.ipk
-Size: 2934
-MD5Sum: 9122f215e07a39c707f0dc8af580c225
+Installed-Size: 2056
+Filename: asterisk18-func-shell_1.8.10.1-5a_keenetic.ipk
+Size: 2883
+MD5Sum: 2d9a50d11ebea73e89e416afa5e2555e
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1215,24 +933,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for shell execution in Asterisk.
 
 Package: asterisk18-func-uri
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1895
-Filename: asterisk18-func-uri_1.8.10.1-5_keenetic.ipk
-Size: 2782
-MD5Sum: 99133e3bee9b9feee98ac19721614e94
+Installed-Size: 1894
+Filename: asterisk18-func-uri_1.8.10.1-5a_keenetic.ipk
+Size: 2726
+MD5Sum: 3700af30d8e853c2df71f3d049642b84
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1240,24 +952,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support Encodes and decodes URI-safe strings in Asterisk.
 
 Package: asterisk18-func-vmcount
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1907
-Filename: asterisk18-func-vmcount_1.8.10.1-5_keenetic.ipk
-Size: 2792
-MD5Sum: 9ee0c33fc2190df11682432bb2bb0b09
+Installed-Size: 1900
+Filename: asterisk18-func-vmcount_1.8.10.1-5a_keenetic.ipk
+Size: 2724
+MD5Sum: 86162f72f98478ce1b6c4f6be78be4b6
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1265,24 +971,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support a vmcount dialplan function in Asterisk.
 
 Package: asterisk18-mysql
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18, libmysqlclient
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 34720
-Filename: asterisk18-mysql_1.8.10.1-5_keenetic.ipk
-Size: 35688
-MD5Sum: ef00ff9f6f50a12788787b341d98490b
+Installed-Size: 34727
+Filename: asterisk18-mysql_1.8.10.1-5a_keenetic.ipk
+Size: 35627
+MD5Sum: cdb6e1a7356cd2593634b786b468a232
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1291,24 +991,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  support to Asterisk.
 
 Package: asterisk18-odbc
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18, unixodbc
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 60151
-Filename: asterisk18-odbc_1.8.10.1-5_keenetic.ipk
-Size: 60886
-MD5Sum: 67efd0dec22f94404000253d151f4868
+Installed-Size: 60154
+Filename: asterisk18-odbc_1.8.10.1-5a_keenetic.ipk
+Size: 60840
+MD5Sum: 280ba721403b6d928be0995717b4c7e3
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1316,24 +1010,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides ODBC support for Asterisk.
 
 Package: asterisk18-pbx-ael
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3543
-Filename: asterisk18-pbx-ael_1.8.10.1-5_keenetic.ipk
-Size: 4391
-MD5Sum: 5c225b31a8c48cfc200a438297f9a4d4
+Installed-Size: 3544
+Filename: asterisk18-pbx-ael_1.8.10.1-5a_keenetic.ipk
+Size: 4339
+MD5Sum: 1b7c753dd4dd0d7b245b70aac4f6b361
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1341,24 +1029,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for symbolic Asterisk Extension Logic in Asterisk.
 
 Package: asterisk18-pbx-spool
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 8394
-Filename: asterisk18-pbx-spool_1.8.10.1-5_keenetic.ipk
-Size: 9246
-MD5Sum: 77282eca288d72032d560d62b07bf83a
+Installed-Size: 8393
+Filename: asterisk18-pbx-spool_1.8.10.1-5a_keenetic.ipk
+Size: 9193
+MD5Sum: 97afd06b911afb4fe66c592bf589f7e0
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1366,24 +1048,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support outgoing call spool support in Asterisk.
 
 Package: asterisk18-res-ael-share
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 40163
-Filename: asterisk18-res-ael-share_1.8.10.1-5_keenetic.ipk
-Size: 40983
-MD5Sum: 3a3970e5f791ecd08075d45eb9f5b084
+Installed-Size: 40164
+Filename: asterisk18-res-ael-share_1.8.10.1-5a_keenetic.ipk
+Size: 40933
+MD5Sum: 761d4d5b4cb21346e3c78bab9900b4d7
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1391,24 +1067,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for shareable AEL code mainly between internal and external modules in Asterisk.
 
 Package: asterisk18-res-agi
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 24824
-Filename: asterisk18-res-agi_1.8.10.1-5_keenetic.ipk
-Size: 25668
-MD5Sum: 649e885618b0f305fd61d73f09748cc1
+Installed-Size: 24823
+Filename: asterisk18-res-agi_1.8.10.1-5a_keenetic.ipk
+Size: 25613
+MD5Sum: 2517d42217922b83beea54d6f757fba5
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1416,24 +1086,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support support for the Asterisk Gateway Interface extension in Asterisk.
 
 Package: asterisk18-res-clioriginate
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3501
-Filename: asterisk18-res-clioriginate_1.8.10.1-5_keenetic.ipk
-Size: 4352
-MD5Sum: a87c709c8810ca5902309b5b1036857b
+Installed-Size: 3499
+Filename: asterisk18-res-clioriginate_1.8.10.1-5a_keenetic.ipk
+Size: 4294
+MD5Sum: 1ba8b25aa6bf037bf7af46049afbc9f6
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1441,24 +1105,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support Originate calls via the CLI in Asterisk.
 
 Package: asterisk18-res-crypto
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6636
-Filename: asterisk18-res-crypto_1.8.10.1-5_keenetic.ipk
-Size: 7543
-MD5Sum: 437ab091caef402c371cbfe85910ce4a
+Installed-Size: 6634
+Filename: asterisk18-res-crypto_1.8.10.1-5a_keenetic.ipk
+Size: 7489
+MD5Sum: a033408e1fe7a68df121869f071c1dda
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1466,66 +1124,48 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package provides support Cryptographic Signature capability in Asterisk.
 
 Package: asterisk18-res-fax-spandsp
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18, asterisk18-res-fax, libspandsp
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7334
-Filename: asterisk18-res-fax-spandsp_1.8.10.1-5_keenetic.ipk
-Size: 8050
-MD5Sum: 45242994487a2957431e88817d5bc9fe
+Installed-Size: 7332
+Filename: asterisk18-res-fax-spandsp_1.8.10.1-5a_keenetic.ipk
+Size: 7988
+MD5Sum: d563d204573e9d2a4d519981e8572be8
 Description:  Spandsp T.38 and G.711 FAX Resource
 
 Package: asterisk18-res-fax
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18, asterisk18-res-timing-pthread
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 21802
-Filename: asterisk18-res-fax_1.8.10.1-5_keenetic.ipk
-Size: 22565
-MD5Sum: 6ed7c9a5f07c60e0d587a2a9b27d2320
+Installed-Size: 21797
+Filename: asterisk18-res-fax_1.8.10.1-5a_keenetic.ipk
+Size: 22507
+MD5Sum: 4e790e0aee8746301fcab219a981bb89
 Description:  Generic FAX Resource for FAX technology resource modules
 
 Package: asterisk18-res-musiconhold
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 16845
-Filename: asterisk18-res-musiconhold_1.8.10.1-5_keenetic.ipk
-Size: 17719
-MD5Sum: 73d38db8753c241a4bfb00d552c179f9
+Installed-Size: 16838
+Filename: asterisk18-res-musiconhold_1.8.10.1-5a_keenetic.ipk
+Size: 17638
+MD5Sum: fc620f3c7b9d7a868c54d682df275a01
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1534,45 +1174,33 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  Asterisk.
 
 Package: asterisk18-res-timing-pthread
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 5458
-Filename: asterisk18-res-timing-pthread_1.8.10.1-5_keenetic.ipk
-Size: 6154
-MD5Sum: 6add72e52ac3232e550f545c4b6f4e38
+Installed-Size: 5459
+Filename: asterisk18-res-timing-pthread_1.8.10.1-5a_keenetic.ipk
+Size: 6101
+MD5Sum: 78de9fe670d66d876f13e31fb9314e50
 Description:  pthread Timing Interface
 
 Package: asterisk18-sounds
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 1319059
-Filename: asterisk18-sounds_1.8.10.1-5_keenetic.ipk
-Size: 1319857
-MD5Sum: b1ece52a5948ebc3ebdb787607c712bb
+Filename: asterisk18-sounds_1.8.10.1-5a_keenetic.ipk
+Size: 1319801
+MD5Sum: 1e5270edbad1b14b257d16ac3943ea79
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1580,24 +1208,18 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package contains sound files for Asterisk.
 
 Package: asterisk18-voicemail
-Version: 1.8.10.1-5
+Version: 1.8.10.1-5a
 Depends: asterisk18
-Provides: 
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 593847
-Filename: asterisk18-voicemail_1.8.10.1-5_keenetic.ipk
-Size: 594686
-MD5Sum: 74b6d506cd28104f360d9b7eb83a60ed
+Installed-Size: 593840
+Filename: asterisk18-voicemail_1.8.10.1-5a_keenetic.ipk
+Size: 594644
+MD5Sum: 74195c49750043ed8295a29097f1539e
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1605,48 +1227,36 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  This package contains voicemail related modules for Asterisk.
 
 Package: asterisk18
-Version: 1.8.10.1-5
-Depends: libncurses, libpopt
-Provides: 
+Version: 1.8.10.1-5a
+Depends: libopenssl, libncurses, libpopt
 Source: package/built/asterisk-1.8.x
 SourceFile: asterisk-1.8.10.1.tar.gz
 SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1073127
-Filename: asterisk18_1.8.10.1-5_keenetic.ipk
-Size: 1071312
-MD5Sum: 7ece5337fe428c939ce83863facec345
+Installed-Size: 1073190
+Filename: asterisk18_1.8.10.1-5a_keenetic.ipk
+Size: 1071504
+MD5Sum: 41335a08f07958a724bb9c71e4841cc5
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
  equipment using relatively inexpensive hardware.
 
 Package: automatic
-Version: 0.8.2-1
-Depends: libpcre, libxml2
-Provides: 
+Version: 0.8.2-1a
+Depends: libcurl, libpcre, libxml2
 Source: package/built/automatic
 SourceFile: v0.8.2.tar.gz
 SourceURL: https://github.com/1100101/Automatic/archive
-License: 
-LicenseFiles: 
 Section: utils
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 40959
-Filename: automatic_0.8.2-1_keenetic.ipk
-Size: 41771
-MD5Sum: 3d50a12e9d6881151661c9ff8f8b7250
+Installed-Size: 40924
+Filename: automatic_0.8.2-1a_keenetic.ipk
+Size: 41760
+MD5Sum: 6b9201fb4216d4ab937a6b88c1417fbc
 Description:  Automatic is an RSS downloader for Linux based systems, that grabs your favorite torrents based on filters you specify.
 
 Package: badblocks
@@ -1913,38 +1523,35 @@ MD5Sum: 927f99dc1a2774eafa4d4a89a3dd7faf
 Description:  cpulimit is a simple program which attempts to limit the cpu usage of a process
 
 Package: curl
-Version: 7.27.0-1
+Version: 7.29.0-1
+Depends: libcurl
 Source: package/curl
-SourceFile: curl-7.27.0.tar.bz2
+SourceFile: curl-7.29.0.tar.bz2
 SourceURL: http://curl.haxx.se/download/ http://www.mirrorspace.org/curl/ http://curl.mirror.internet.tp/download/ ftp://ftp.sunet.se/pub/www/utilities/curl/ ftp://ftp.planetmirror.com/pub/curl/ http://www.mirrormonster.com/curl/download/ http://curl.mirrors.cyberservers.net/download/
+License: MIT
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 39854
-Filename: curl_7.27.0-1_keenetic.ipk
-Size: 40625
-MD5Sum: e6886fbade51c54f1e369c272cbe3eaa
+Installed-Size: 40333
+Filename: curl_7.29.0-1_keenetic.ipk
+Size: 41155
+MD5Sum: 23ea5ddabc636513bcb120cbffdc045b
 Description:  A client-side URL transfer utility
 
 Package: curlftpfs
-Version: 0.9.2-2
-Depends: libfuse, glib2
-Provides: 
+Version: 0.9.2-2a
+Depends: libcurl, libfuse, glib2
 Source: package/built/curlftpfs
 SourceFile: curlftpfs-0.9.2.tar.gz
 SourceURL: @SF/curlftpfs
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 19105
-Filename: curlftpfs_0.9.2-2_keenetic.ipk
-Size: 19796
-MD5Sum: 9388ff7465ca45cabb6ddc0ca0fe401e
+Installed-Size: 19106
+Filename: curlftpfs_0.9.2-2a_keenetic.ipk
+Size: 19748
+MD5Sum: 8c6230da0676b79b9449abb6cdbdeb56
 Description:  CurlFtpFS is a filesystem for accessing FTP hosts
  based on FUSE and libcurl.
 
@@ -1970,24 +1577,18 @@ MD5Sum: ad232cdb54731f629fe541999b1a23ca
 Description:  A tool to run a command as a daemon.
 
 Package: davfs2
-Version: 1.4.7-1
-Depends: libneon, libfuse, libexpat, libiconv-full, libintl-full
-Provides: 
+Version: 1.4.7-1a
+Depends: libopenssl, libneon, libfuse, libexpat, libiconv-full, libintl-full
 Source: package/built/davfs2
 SourceFile: davfs2-1.4.7.tar.gz
 SourceURL: http://download.savannah.gnu.org/releases/davfs2/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 57969
-Filename: davfs2_1.4.7-1_keenetic.ipk
-Size: 58776
-MD5Sum: 7188de8afe5caed79f9bfd398c83933b
+Installed-Size: 57798
+Filename: davfs2_1.4.7-1a_keenetic.ipk
+Size: 58621
+MD5Sum: 99b93a5a9b93c91505723e574b86534d
 Description:  Mount a WebDAV resource as a regular file system. davfs2 will work with
  most WebDAV servers needing little or no configuration.
 
@@ -2101,24 +1702,18 @@ Description:  This package contains essential ext2 filesystem utilities which co
  filesystem utilities.
 
 Package: elinks
-Version: 0.12pre6-1
-Depends: 
-Provides: 
+Version: 0.12pre6-1a
+Depends: libopenssl
 Source: package/built/elinks
 SourceFile: elinks-0.12pre6.tar.bz2
 SourceURL: http://elinks.or.cz/download
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 359167
-Filename: elinks_0.12pre6-1_keenetic.ipk
-Size: 358817
-MD5Sum: 91db7fc77592faa9b61301873fa818d5
+Installed-Size: 359091
+Filename: elinks_0.12pre6-1a_keenetic.ipk
+Size: 358657
+MD5Sum: 898f5bb17b0279c87d29fb3a7c3930a1
 Description:  An advanced text based web browser
 
 Package: etherwake
@@ -2147,24 +1742,18 @@ Description:  You can wake up WOL compliant Computers which have been powered do
  ether-wake also supports WOL passwords.
 
 Package: ettercap
-Version: NG-0.7.3-2
-Depends: libpcap, libnet1, libpcre, libncurses, libltdl, libiconv-full
-Provides: 
+Version: NG-0.7.3-2a
+Depends: libopenssl, libpcap, libnet1, libpcre, libncurses, libltdl, libiconv-full
 Source: package/built/ettercap
 SourceFile: ettercap-NG-0.7.3.tar.gz
 SourceURL: @SF/ettercap
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 420318
-Filename: ettercap_NG-0.7.3-2_keenetic.ipk
-Size: 420992
-MD5Sum: 1e7f367cb7530962e61e9827b9e4f37c
+Installed-Size: 421834
+Filename: ettercap_NG-0.7.3-2a_keenetic.ipk
+Size: 422459
+MD5Sum: d144326def78a8fe7a7a004db401abc7
 Description:  It features sniffing of live connections, content filtering on the fly 
  and many other interesting tricks. 
  It supports active and passive dissection of many protocols (even 
@@ -2447,24 +2036,18 @@ Description:  giflib is a library for reading and writing gif images.
  the LZW compression algorithm was patented. 
 
 Package: git
-Version: 1.7.11.2-1
-Depends: 
-Provides: 
+Version: 1.7.11.2-1a
+Depends: libopenssl
 Source: package/built/git
 SourceFile: git-1.7.11.2.tar.gz
 SourceURL: http://git-core.googlecode.com/files/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 739581
-Filename: git_1.7.11.2-1_keenetic.ipk
-Size: 738897
-MD5Sum: 51f17f82c9f7107e8d857bc2f325e2ba
+Installed-Size: 740330
+Filename: git_1.7.11.2-1a_keenetic.ipk
+Size: 739531
+MD5Sum: 9c72b8371a39066c27436f2e83822e2d
 Description:  Git is a free & open source, distributed version control system
  designed to handle everything from small to very large projects
  with speed and efficiency.
@@ -2535,24 +2118,17 @@ Description:  Htop is an ncursed-based process viewer similar to top, but
  see all processes and their full command lines.
 
 Package: httping-nossl
-Version: 1.5.2-1
-Depends: 
-Provides: 
+Version: 1.5.2-1a
 Source: package/built/httping
 SourceFile: httping-1.5.2.tgz
 SourceURL: http://www.vanheusden.com/httping
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 13100
-Filename: httping-nossl_1.5.2-1_keenetic.ipk
-Size: 13853
-MD5Sum: 8ea5ebc220555ef03ffe8807d29c87f3
+Installed-Size: 13097
+Filename: httping-nossl_1.5.2-1a_keenetic.ipk
+Size: 13785
+MD5Sum: 09c6db22e3b052c631cc92093b722337
 Description:  Give it an url, and it'll show you how long it takes to connect, send a
  request and retrieve the reply (only the headers). Be aware that the
  transmission across the network also takes time!
@@ -2580,24 +2156,18 @@ MD5Sum: e510a6cf9e620ea86d29c4e9c66e824d
 Description:  husky is a bunch of os-independent software for fidonet. It consitsts of tosser hpt, fileechoprocessor htick, message editor msged TE, libraries fidoconfig, smapi etc.
 
 Package: icecast
-Version: 2.3.3-1
-Depends: libxml2, libxslt, libogg
-Provides: 
+Version: 2.3.3-1a
+Depends: libcurl, libxml2, libxslt, libogg
 Source: package/built/icecast
 SourceFile: icecast-2.3.3.tar.gz
 SourceURL: http://downloads.us.xiph.org/releases/icecast/
-License: 
-LicenseFiles: 
 Section: multimedia
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 174545
-Filename: icecast_2.3.3-1_keenetic.ipk
-Size: 175371
-MD5Sum: a069f9a593676a447f42fb04229cfcec
+Installed-Size: 175846
+Filename: icecast_2.3.3-1a_keenetic.ipk
+Size: 176518
+MD5Sum: 729f00e0e9ed916ebfabc9b630e4a75d
 Description:  Icecast is a streaming media server which currently supports Ogg 
  Vorbis and MP3 audio streams. It can be used to create an Internet 
  radio station or a privately running jukebox and many things in 
@@ -2908,6 +2478,18 @@ Size: 8516
 MD5Sum: da7cb9429f2d86ee83b4c7c0da450f25
 Description:  Generic Routing Encapsulation support
 
+Package: kmod-mini_fo
+Version: 2.6.23-rt+1-1
+Source: package/mini_fo
+Section: kernel
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 30719
+Filename: kmod-mini_fo_2.6.23-rt+1-1_keenetic.ipk
+Size: 31030
+MD5Sum: b2902ce580131ca03eabf3481caf8256
+Description:  Kernel module for Mini fanout overlay filesystem support
+
 Package: kmod-tun
 Version: 2.6.23-rt-1
 Depends: 
@@ -3014,24 +2596,18 @@ MD5Sum: 083c994ba4beab9bf0fa4730f3d51ba1
 Description:  LDD trace utility
 
 Package: lftp
-Version: 4.3.6-2
-Depends: libncurses, libreadline, uclibcxx, libexpat
-Provides: 
+Version: 4.3.6-2a
+Depends: libopenssl, libncurses, libreadline, uclibcxx, libexpat
 Source: package/built/lftp
 SourceFile: lftp-4.3.6.tar.xz
 SourceURL: http://lftp.cybermirror.org http://lftp.cybermirror.org/old
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 446062
-Filename: lftp_4.3.6-2_keenetic.ipk
-Size: 446110
-MD5Sum: 0509fd47b49430780154af55c6874a36
+Installed-Size: 446069
+Filename: lftp_4.3.6-2a_keenetic.ipk
+Size: 446062
+MD5Sum: 89b22d426726d1650bdae252b4a02ec1
 Description:  lftp is sophisticated file transfer program with command line interface. It
  supports FTP, HTTP, FISH, SFTP and FILE (local FS) protocols. GNU Readline
  library is used for input. BitTorrent protocol is supported as built-in
@@ -3217,6 +2793,23 @@ Description:  Libconfig is a simple library for manipulating structured configur
  library (less than one-fourth the size of the expat XML parser library)
  and 66K for the stripped C++ shared library. This makes it well-suited
  for memory-constrained systems like handheld devices.
+
+Package: libcurl
+Version: 7.29.0-1
+Depends: libopenssl
+Source: package/curl
+SourceFile: curl-7.29.0.tar.bz2
+SourceURL: http://curl.haxx.se/download/ http://www.mirrorspace.org/curl/ http://curl.mirror.internet.tp/download/ ftp://ftp.sunet.se/pub/www/utilities/curl/ ftp://ftp.planetmirror.com/pub/curl/ http://www.mirrormonster.com/curl/download/ http://curl.mirrors.cyberservers.net/download/
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 131422
+Filename: libcurl_7.29.0-1_keenetic.ipk
+Size: 131719
+MD5Sum: 00e725e984cbfa37d452a5e4ac61c29e
+Description:  A client-side URL transfer library
 
 Package: libdb47
 Version: 4.7.25.NC-6
@@ -4064,24 +3657,18 @@ MD5Sum: 89051a2a92c65364a21a2b50b111a7ef
 Description:  Terminal handling library (Unicode)
 
 Package: libneon
-Version: 0.29.6-2
-Depends: libexpat
-Provides: 
+Version: 0.29.6-2a
+Depends: libopenssl, libexpat
 Source: package/built/neon
 SourceFile: neon-0.29.6.tar.gz
 SourceURL: http://www.webdav.org/neon
-License: 
-LicenseFiles: 
 Section: libs
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 56566
-Filename: libneon_0.29.6-2_keenetic.ipk
-Size: 57257
-MD5Sum: 7f3c18a2927a2e678aa89d22c00156c8
+Installed-Size: 56553
+Filename: libneon_0.29.6-2a_keenetic.ipk
+Size: 57114
+MD5Sum: a1c0f95e7bca7ee35afa61b1acc38d07
 Description:  HTTP and WebDAV client library
 
 Package: libnet1
@@ -4129,6 +3716,26 @@ Description:  Ogg project codecs use the Ogg bitstream format to arrange the raw
  the Ogg bitstream makes seeking, time stamping and error recovery
  possible, as well as mixing several sepearate, concurrent media
  streams into a single physical bitstream.
+
+Package: libopenssl
+Version: 1.0.1e-1
+Source: package/openssl
+SourceFile: openssl-1.0.1e.tar.gz
+SourceURL: http://www.openssl.org/source/ ftp://ftp.funet.fi/pub/crypt/mirrors/ftp.openssl.org/source ftp://ftp.sunet.se/pub/security/tools/net/openssl/source/
+License: SSLEAY OPENSSL
+LicenseFiles: LICENSE
+Section: libs
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 617201
+Filename: libopenssl_1.0.1e-1_keenetic.ipk
+Size: 611195
+MD5Sum: 13be9630b000641e43f271a152516f8f
+Description:  The OpenSSL Project is a collaborative effort to develop a robust,
+ commercial-grade, full-featured, and Open Source toolkit implementing the Secure
+ Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well
+ as a full-strength general purpose cryptography library.
+ This package contains the OpenSSL shared libraries, needed by other programs.
 
 Package: libpcap
 Version: 1.1.1-1
@@ -4716,612 +4323,438 @@ MD5Sum: fa45b7ce852f5ca8747cd8b7fee894ed
 Description:  A library for XML transformation using XSLT.
 
 Package: lighttpd-mod-access
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2279
-Filename: lighttpd-mod-access_1.4.30-2_keenetic.ipk
-Size: 2964
-MD5Sum: 09a2fd3258e7bda90925e2a7dc6f7753
+Installed-Size: 2284
+Filename: lighttpd-mod-access_1.4.30-2a_keenetic.ipk
+Size: 2905
+MD5Sum: c6454ade313869e9930ba338723adf01
 Description:  Access restrictions module
 
 Package: lighttpd-mod-accesslog
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 5784
-Filename: lighttpd-mod-accesslog_1.4.30-2_keenetic.ipk
-Size: 6419
-MD5Sum: f9ef1da9b61cc0c186e952b395c7beb9
+Installed-Size: 5791
+Filename: lighttpd-mod-accesslog_1.4.30-2a_keenetic.ipk
+Size: 6377
+MD5Sum: 2f75b9490def54c94bcd6b961e745424
 Description:  Access logging module
 
 Package: lighttpd-mod-alias
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2530
-Filename: lighttpd-mod-alias_1.4.30-2_keenetic.ipk
-Size: 3201
-MD5Sum: 02af478cc1500dfe3f34587aca521be6
+Installed-Size: 2532
+Filename: lighttpd-mod-alias_1.4.30-2a_keenetic.ipk
+Size: 3150
+MD5Sum: 0d9def725a36a3d97c9a3c95c5d7f8c1
 Description:  Directory alias module
 
 Package: lighttpd-mod-auth
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 10130
-Filename: lighttpd-mod-auth_1.4.30-2_keenetic.ipk
-Size: 10804
-MD5Sum: 174194722218af5417bab4953d2fe392
+Installed-Size: 10131
+Filename: lighttpd-mod-auth_1.4.30-2a_keenetic.ipk
+Size: 10750
+MD5Sum: 733c7fe717cfccc6e8c8e3da425f0c30
 Description:  Authentication module
 
 Package: lighttpd-mod-cgi
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 8713
-Filename: lighttpd-mod-cgi_1.4.30-2_keenetic.ipk
-Size: 9383
-MD5Sum: 1daf8c5e6dea822bc1268580c752a1e1
+Installed-Size: 8716
+Filename: lighttpd-mod-cgi_1.4.30-2a_keenetic.ipk
+Size: 9320
+MD5Sum: 6e367f117e5213842ecf1dbf6f02667a
 Description:  CGI module
 
 Package: lighttpd-mod-cml
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2863
-Filename: lighttpd-mod-cml_1.4.30-2_keenetic.ipk
-Size: 3556
-MD5Sum: 79ca335bcb4679aa00a6d2c90318994f
+Installed-Size: 2868
+Filename: lighttpd-mod-cml_1.4.30-2a_keenetic.ipk
+Size: 3503
+MD5Sum: 38205d6f0c5eee312b2b21dd82dd975d
 Description:  Cache Meta Language module
 
 Package: lighttpd-mod-compress
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6201
-Filename: lighttpd-mod-compress_1.4.30-2_keenetic.ipk
-Size: 6855
-MD5Sum: be541491b200449fa95c4a682a28e5e9
+Installed-Size: 6208
+Filename: lighttpd-mod-compress_1.4.30-2a_keenetic.ipk
+Size: 6804
+MD5Sum: 2d5e4f2a42864f0783411b08a394eed1
 Description:  Compress output module
 
 Package: lighttpd-mod-evasive
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2212
-Filename: lighttpd-mod-evasive_1.4.30-2_keenetic.ipk
-Size: 2892
-MD5Sum: f357efe89403d022c94eaa819cb3db3b
+Installed-Size: 2216
+Filename: lighttpd-mod-evasive_1.4.30-2a_keenetic.ipk
+Size: 2832
+MD5Sum: 6e68d3216d3df26dc6a4003a83d3891d
 Description:  Evasive module
 
 Package: lighttpd-mod-evhost
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3222
-Filename: lighttpd-mod-evhost_1.4.30-2_keenetic.ipk
-Size: 3921
-MD5Sum: 7ff05aeefc19a1deac66c8ba9f4c3da8
+Installed-Size: 3227
+Filename: lighttpd-mod-evhost_1.4.30-2a_keenetic.ipk
+Size: 3869
+MD5Sum: b5462e910c9ea8d4d73841e5be4b05dd
 Description:  Exnhanced Virtual-Hosting module
 
 Package: lighttpd-mod-expire
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3528
-Filename: lighttpd-mod-expire_1.4.30-2_keenetic.ipk
-Size: 4169
-MD5Sum: 122d319855833f7404153893eef6f184
+Installed-Size: 3530
+Filename: lighttpd-mod-expire_1.4.30-2a_keenetic.ipk
+Size: 4108
+MD5Sum: 25ae01e47411b2900224c83b7dfd933f
 Description:  Expire module
 
 Package: lighttpd-mod-extforward
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3361
-Filename: lighttpd-mod-extforward_1.4.30-2_keenetic.ipk
-Size: 3992
-MD5Sum: a18b3afb7849b04fd4e3ba5a2664036f
+Installed-Size: 3365
+Filename: lighttpd-mod-extforward_1.4.30-2a_keenetic.ipk
+Size: 3948
+MD5Sum: 1fab8c62988e0ff4ceb4d9102242101b
 Description:  Extract client IP module
 
 Package: lighttpd-mod-fastcgi
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 21141
-Filename: lighttpd-mod-fastcgi_1.4.30-2_keenetic.ipk
-Size: 21782
-MD5Sum: 704c50e2c9831c11dbaed10b31fbf81a
+Installed-Size: 21145
+Filename: lighttpd-mod-fastcgi_1.4.30-2a_keenetic.ipk
+Size: 21735
+MD5Sum: 15bc45962c2d7ad55455479c5da6065d
 Description:  FastCGI module
 
 Package: lighttpd-mod-flv-streaming
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2891
-Filename: lighttpd-mod-flv-streaming_1.4.30-2_keenetic.ipk
-Size: 3578
-MD5Sum: 831e34c5f65aa70f6d17242996f2bde3
+Installed-Size: 2897
+Filename: lighttpd-mod-flv-streaming_1.4.30-2a_keenetic.ipk
+Size: 3523
+MD5Sum: 70e2f447171f69f6d8ff303b6b2f3fcb
 Description:  flv streaming module
 
 Package: lighttpd-mod-magnet
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1090
-Filename: lighttpd-mod-magnet_1.4.30-2_keenetic.ipk
-Size: 1762
-MD5Sum: 8f439b8bebffc1dc479ef15eb48ce69f
+Installed-Size: 1094
+Filename: lighttpd-mod-magnet_1.4.30-2a_keenetic.ipk
+Size: 1701
+MD5Sum: addb81dcf3351e4a9e5a366006fea873
 Description:  magnet module
 
 Package: lighttpd-mod-proxy
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 8641
-Filename: lighttpd-mod-proxy_1.4.30-2_keenetic.ipk
-Size: 9272
-MD5Sum: 3943f2c42648a7d32760cad6ea942c9f
+Installed-Size: 8642
+Filename: lighttpd-mod-proxy_1.4.30-2a_keenetic.ipk
+Size: 9220
+MD5Sum: 7f408922d0a13b5415c10e14deb41051
 Description:  Proxy module
 
 Package: lighttpd-mod-redirect
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd, libpcre
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3119
-Filename: lighttpd-mod-redirect_1.4.30-2_keenetic.ipk
-Size: 3804
-MD5Sum: c49d80076ce73e77eddbe3c91bfe5e87
+Installed-Size: 3124
+Filename: lighttpd-mod-redirect_1.4.30-2a_keenetic.ipk
+Size: 3747
+MD5Sum: 33e463d044ac01964384caa74a9465c9
 Description:  URL redirection module
 
 Package: lighttpd-mod-rewrite
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd, libpcre
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4224
-Filename: lighttpd-mod-rewrite_1.4.30-2_keenetic.ipk
-Size: 4868
-MD5Sum: f5bb03fdf9d0df58b0656bb217e30932
+Installed-Size: 4223
+Filename: lighttpd-mod-rewrite_1.4.30-2a_keenetic.ipk
+Size: 4816
+MD5Sum: 38a490e479f7675656f54de80aaf4ae4
 Description:  URL rewriting module
 
 Package: lighttpd-mod-rrdtool
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 4343
-Filename: lighttpd-mod-rrdtool_1.4.30-2_keenetic.ipk
-Size: 4995
-MD5Sum: 41e90930fd051aed52f42b1cea457d81
+Filename: lighttpd-mod-rrdtool_1.4.30-2a_keenetic.ipk
+Size: 4931
+MD5Sum: 2f976dbbaa4215a7b94996e24bc2672b
 Description:  rrdtool module
 
 Package: lighttpd-mod-scgi
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 15960
-Filename: lighttpd-mod-scgi_1.4.30-2_keenetic.ipk
-Size: 16588
-MD5Sum: 1bbe876d1a692b8469c5309c927f142a
+Installed-Size: 15961
+Filename: lighttpd-mod-scgi_1.4.30-2a_keenetic.ipk
+Size: 16523
+MD5Sum: 0546bf28deb53d802fd3b9d6aec8ae17
 Description:  SCGI module
 
 Package: lighttpd-mod-secdownload
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2968
-Filename: lighttpd-mod-secdownload_1.4.30-2_keenetic.ipk
-Size: 3644
-MD5Sum: 8d47abd412c885805c54b2545f39a850
+Installed-Size: 2969
+Filename: lighttpd-mod-secdownload_1.4.30-2a_keenetic.ipk
+Size: 3604
+MD5Sum: 78573ad1bc11f3134b190d618f19af09
 Description:  Secure and fast download module
 
 Package: lighttpd-mod-setenv
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2438
-Filename: lighttpd-mod-setenv_1.4.30-2_keenetic.ipk
-Size: 3143
-MD5Sum: 721dad4e3a66512bf483726dc9b7d962
+Installed-Size: 2441
+Filename: lighttpd-mod-setenv_1.4.30-2a_keenetic.ipk
+Size: 3080
+MD5Sum: c298bf4a67c620e49e4b9158aa4a7c66
 Description:  Environment variable setting module
 
 Package: lighttpd-mod-simple-vhost
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 2898
-Filename: lighttpd-mod-simple-vhost_1.4.30-2_keenetic.ipk
-Size: 3606
-MD5Sum: 08218a1770d5847d7415692d8399047f
+Filename: lighttpd-mod-simple-vhost_1.4.30-2a_keenetic.ipk
+Size: 3544
+MD5Sum: 7de5f0a9a3380b703fed8b65fa0502bd
 Description:  Simple virtual hosting module
 
 Package: lighttpd-mod-ssi
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd, libpcre
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 10613
-Filename: lighttpd-mod-ssi_1.4.30-2_keenetic.ipk
-Size: 11280
-MD5Sum: ee1cefc04e2d57da1c0907b3a5d2a1cd
+Installed-Size: 10612
+Filename: lighttpd-mod-ssi_1.4.30-2a_keenetic.ipk
+Size: 11213
+MD5Sum: cedcb03f0f9b6971f7c967b64f7120a8
 Description:  SSI module
 
 Package: lighttpd-mod-status
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7283
-Filename: lighttpd-mod-status_1.4.30-2_keenetic.ipk
-Size: 7976
-MD5Sum: a66a5453460f7fb7fd4c989df2014bc8
+Installed-Size: 7288
+Filename: lighttpd-mod-status_1.4.30-2a_keenetic.ipk
+Size: 7914
+MD5Sum: e31b90ec3a3e20fed410936c8058a8c7
 Description:  Server status display module
 
 Package: lighttpd-mod-trigger-b4-dl
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd, libpcre
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2729
-Filename: lighttpd-mod-trigger-b4-dl_1.4.30-2_keenetic.ipk
-Size: 3428
-MD5Sum: c076abc726264a8450a4140df6fb0413
+Installed-Size: 2732
+Filename: lighttpd-mod-trigger-b4-dl_1.4.30-2a_keenetic.ipk
+Size: 3373
+MD5Sum: 8c933e05008484c39b17ffff6ac978d9
 Description:  Trigger before download module
 
 Package: lighttpd-mod-userdir
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2959
-Filename: lighttpd-mod-userdir_1.4.30-2_keenetic.ipk
-Size: 3628
-MD5Sum: 72d3b5117727d426ace72920e2f2a0ce
+Installed-Size: 2960
+Filename: lighttpd-mod-userdir_1.4.30-2a_keenetic.ipk
+Size: 3570
+MD5Sum: 19e071ff24fb8198ba7f5dd33f0c97cb
 Description:  User directory module
 
 Package: lighttpd-mod-usertrack
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3060
-Filename: lighttpd-mod-usertrack_1.4.30-2_keenetic.ipk
-Size: 3726
-MD5Sum: c707a69fbb8fbfd9cc83ace9e55ef2eb
+Installed-Size: 3061
+Filename: lighttpd-mod-usertrack_1.4.30-2a_keenetic.ipk
+Size: 3668
+MD5Sum: fb768089f2fe8fb53fac4a92bc9af9cc
 Description:  User tracking module
 
 Package: lighttpd-mod-webdav
-Version: 1.4.30-2
+Version: 1.4.30-2a
 Depends: lighttpd, libsqlite3, libuuid, libxml2
-Provides: 
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 16989
-Filename: lighttpd-mod-webdav_1.4.30-2_keenetic.ipk
-Size: 17631
-MD5Sum: 0b8f12d3c544f975f160e94dc7c3e9d1
+Installed-Size: 16986
+Filename: lighttpd-mod-webdav_1.4.30-2a_keenetic.ipk
+Size: 17576
+MD5Sum: 6055031fcf99adce809bfc6e8d285993
 Description:  WebDAV module
 
 Package: lighttpd
-Version: 1.4.30-2
-Depends: libpcre
-Provides: 
+Version: 1.4.30-2a
+Depends: libopenssl, libpcre
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.30.tar.bz2
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 89059
-Filename: lighttpd_1.4.30-2_keenetic.ipk
-Size: 89864
-MD5Sum: 756e2ee24dc297e73760606a3646cd6d
+Installed-Size: 89175
+Filename: lighttpd_1.4.30-2a_keenetic.ipk
+Size: 89902
+MD5Sum: 66dd9ded849ba9be1cb86847969ad87e
 Description:  A flexible and lightweight web server
 
 Package: look
@@ -5435,24 +4868,18 @@ Description:  This package contains the LuaFileSystem library, a set of portable
  locking.
 
 Package: luasec
-Version: 0.4-1
-Depends: lua, luasocket
-Provides: 
+Version: 0.4-1a
+Depends: libopenssl, lua, luasocket
 Source: package/built/luasec
 SourceFile: luasec-0.4.tar.gz
 SourceURL: http://luaforge.net/frs/download.php/4255
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 11028
-Filename: luasec_0.4-1_keenetic.ipk
-Size: 11696
-MD5Sum: 33b3c56f330844a4880defe18dc3167a
+Installed-Size: 11012
+Filename: luasec_0.4-1a_keenetic.ipk
+Size: 11636
+MD5Sum: c383d17194c34a38d4841a91028688aa
 Description:  LuaSec is a binding for OpenSSL library to provide TLS/SSL communication.
 
 Package: luasocket
@@ -5479,24 +4906,18 @@ Description:  LuaSocket is the most comprehensive networking support
  TCP, UDP, DNS, SMTP, FTP, HTTP, MIME and much more.
 
 Package: lynx
-Version: 2.8.7rel.2-1
-Depends: libbz2, libslang2
-Provides: 
+Version: 2.8.7rel.2-1a
+Depends: libopenssl, libbz2, libslang2
 Source: package/built/lynx
 SourceFile: lynx2.8.7rel.2.tar.bz2
 SourceURL: http://lynx.isc.org/current
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Entware team, wl500g-repo.googlecode.com
 Architecture: keenetic
-Installed-Size: 577003
-Filename: lynx_2.8.7rel.2-1_keenetic.ipk
-Size: 574156
-MD5Sum: 0b1a8da4db1fef097e5842db96df4b6b
+Installed-Size: 577637
+Filename: lynx_2.8.7rel.2-1a_keenetic.ipk
+Size: 574930
+MD5Sum: b1e9edb2b672322e553b96d430887730
 Description:  Lynx is the text web browser
 
 Package: make
@@ -5569,24 +4990,18 @@ MD5Sum: 11b4e1afee719ef8f8267f67f14633f6
 Description:  mcprobe is a test utility for multicast.
 
 Package: mediatomb
-Version: 0.12.1-10
-Depends: libexif, libsqlite3, id3lib, file, libjs, libexpat, libffmpeg, uclibcxx, libiconv-full
-Provides: 
+Version: 0.12.1-10a
+Depends: libcurl, libexif, libsqlite3, id3lib, file, libjs, libexpat, libffmpeg, uclibcxx, libiconv-full
 Source: package/built/mediatomb
 SourceFile: mediatomb-0.12.1.tar.gz
 SourceURL: @SF/mediatomb
-License: 
-LicenseFiles: 
 Section: multimedia
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 680506
-Filename: mediatomb_0.12.1-10_keenetic.ipk
-Size: 679958
-MD5Sum: 52d2ac9f532cf6fc316563cdd846fc1c
+Installed-Size: 680438
+Filename: mediatomb_0.12.1-10a_keenetic.ipk
+Size: 679889
+MD5Sum: dfeabb9c93273d216443d97b1ed39559
 Description:  MediaTomb is an open source (GPL) UPnP MediaServer with a web user interface and
  with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
@@ -5779,24 +5194,18 @@ MD5Sum: 8e8ded7adef8dd7899ff955dbde54859
 Description:  webcam motion sensing and logging
 
 Package: msmtp
-Version: 1.4.27-1
-Depends: 
-Provides: 
+Version: 1.4.27-1a
+Depends: libopenssl
 Source: package/built/msmtp
 SourceFile: msmtp-1.4.27.tar.bz2
 SourceURL: @SF/msmtp
-License: 
-LicenseFiles: 
 Section: mail
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 42923
-Filename: msmtp_1.4.27-1_keenetic.ipk
-Size: 43949
-MD5Sum: 6c9a2668e82931ac504aaa2a6a32d49c
+Installed-Size: 42873
+Filename: msmtp_1.4.27-1a_keenetic.ipk
+Size: 43827
+MD5Sum: 3cd58dadeb91e23a93c81842596c5968
 Description:  msmtp is an SMTP client. In the default mode, it transmits a mail to
  an SMTP server (for example at a free mail provider) which does the
  delivery. To use this program with your mail user agent (MUA), create
@@ -6277,24 +5686,18 @@ Description:  Program route from net-tools.
  Same as domainname.
 
 Package: netatalk
-Version: 2.2.1-2
-Depends: libdb51, libgcrypt
-Provides: 
+Version: 2.2.1-2a
+Depends: libopenssl, libdb51, libgcrypt
 Source: package/built/netatalk
 SourceFile: netatalk-2.2.1.tar.bz2
 SourceURL: @SF/netatalk
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: W. Michael Petullo <mike@flyn.org>
 Architecture: keenetic
-Installed-Size: 354894
-Filename: netatalk_2.2.1-2_keenetic.ipk
-Size: 354013
-MD5Sum: 21bb59462f9eed604331faa81427d359
+Installed-Size: 354982
+Filename: netatalk_2.2.1-2a_keenetic.ipk
+Size: 353984
+MD5Sum: 00e93d488288c276c084198821c80644
 Description:  netatalk
 
 Package: netcat
@@ -6362,68 +5765,50 @@ MD5Sum: bc74c1ecc7300df14be8e33458029842
 Description:  Kernel NFS server support
 
 Package: nginx-basic
-Version: 1.2.8-4
-Depends: libpcre
-Provides: 
+Version: 1.4.1-1
+Depends: libpcre, libopenssl
 Source: package/built/nginx
-SourceFile: nginx-1.2.8.tar.gz
+SourceFile: nginx-1.4.1.tar.gz
 SourceURL: http://nginx.org/download/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 250697
-Filename: nginx-basic_1.2.8-4_keenetic.ipk
-Size: 251172
-MD5Sum: 4c0defcb121d86c4eb1df8c2414217b8
+Installed-Size: 261784
+Filename: nginx-basic_1.4.1-1_keenetic.ipk
+Size: 262167
+MD5Sum: 5c25441a13ea08c7c27a063696710e7b
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev. Built with basic set of modules
 
 Package: nginx-full
-Version: 1.2.8-4
-Depends: libpcre, liblua
-Provides: 
+Version: 1.4.1-1
+Depends: libpcre, liblua, libgd, libopenssl
 Source: package/built/nginx
-SourceFile: nginx-1.2.8.tar.gz
+SourceFile: nginx-1.4.1.tar.gz
 SourceURL: http://nginx.org/download/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 397190
-Filename: nginx-full_1.2.8-4_keenetic.ipk
-Size: 397417
-MD5Sum: 6d3a8142c827ec6cb8751c15e3748755
+Installed-Size: 438216
+Filename: nginx-full_1.4.1-1_keenetic.ipk
+Size: 438376
+MD5Sum: 56bd2cc763c8e65140b1dbd02c24fc31
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev. Built with full set of modules
 
 Package: nmap
-Version: 5.51-3
+Version: 6.01-4a
 Depends: libpcap, libstdcpp
-Provides: 
 Source: package/built/nmap
-SourceFile: nmap-5.51.tar.bz2
+SourceFile: nmap-6.01.tar.bz2
 SourceURL: http://nmap.org/dist/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Nuno Goncalves <nunojpg@gmail.com>
 Architecture: keenetic
-Installed-Size: 1222422
-Filename: nmap_5.51-3_keenetic.ipk
-Size: 1220487
-MD5Sum: 1379dda905c937388831f076621e91a7
+Installed-Size: 1586075
+Filename: nmap_6.01-4a_keenetic.ipk
+Size: 1581191
+MD5Sum: 82b1084562494c562c5173ff3ff60557
 Description:  Utility for network exploration or security auditing
 
 Package: openssh-sftp-server
@@ -6441,28 +5826,24 @@ MD5Sum: 16be5e23bb2ab069cdd791e0e5b6b54e
 Description:  OpenSSH SFTP server.
 
 Package: openssl-util
-Version: 0.9.8l-2
-Depends: 
-Provides: 
+Version: 1.0.1e-1
+Depends: libopenssl
 Source: package/openssl
-SourceFile: openssl-0.9.8l.tar.gz
-SourceURL: http://www.openssl.org/source/ ftp://ftp.funet.fi/pub/crypt/cryptography/libs/openssl/source/ ftp://ftp.webmonster.de/pub/openssl/source/ ftp://ftp.sunet.se/pub/security/tools/net/openssl/source/
-License: 
-LicenseFiles: 
+SourceFile: openssl-1.0.1e.tar.gz
+SourceURL: http://www.openssl.org/source/ ftp://ftp.funet.fi/pub/crypt/mirrors/ftp.openssl.org/source ftp://ftp.sunet.se/pub/security/tools/net/openssl/source/
+License: SSLEAY OPENSSL
+LicenseFiles: LICENSE
 Section: utils
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 139000
-Filename: openssl-util_0.9.8l-2_keenetic.ipk
-Size: 139286
-MD5Sum: ae6f253e652214f46aeedc065243a36b
+Installed-Size: 170356
+Filename: openssl-util_1.0.1e-1_keenetic.ipk
+Size: 170651
+MD5Sum: 9080f73f5148577792eccda69b1a4a16
 Description:  The OpenSSL Project is a collaborative effort to develop a robust,
- commercial-grade, full-featured, and Open Source toolkit implementing the
- Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1)
- protocols as well as a full-strength general purpose cryptography library.
+ commercial-grade, full-featured, and Open Source toolkit implementing the Secure
+ Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well
+ as a full-strength general purpose cryptography library.
  This package contains the OpenSSL command-line utility.
 
 Package: openvpn-easy-rsa
@@ -6487,45 +5868,33 @@ MD5Sum: aa9728af4a49889b783b67a93b9a0f1e
 Description:  Simple shell scripts to manage a Certificate Authority
 
 Package: openvpn-openssl
-Version: 2.3.0-1
-Depends: kmod-tun, liblzo
-Provides: 
+Version: 2.3.0-1a
+Depends: kmod-tun, liblzo, libopenssl
 Source: package/built/openvpn
 SourceFile: openvpn-2.3.0.tar.gz
 SourceURL: http://swupdate.openvpn.net/community/releases
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Mirko Vogt <mirko@openwrt.org>
 Architecture: keenetic
-Installed-Size: 185030
-Filename: openvpn-openssl_2.3.0-1_keenetic.ipk
-Size: 185628
-MD5Sum: 139e275125f6a3db9c3120006050f329
+Installed-Size: 184700
+Filename: openvpn-openssl_2.3.0-1a_keenetic.ipk
+Size: 185167
+MD5Sum: e0388055f4068f5e9e16db0c36cd619d
 Description:  Open source VPN solution using OpenSSL
 
 Package: openvpn-polarssl
-Version: 2.3.0-1
+Version: 2.3.0-1a
 Depends: kmod-tun, liblzo, libpolarssl
-Provides: 
 Source: package/built/openvpn
 SourceFile: openvpn-2.3.0.tar.gz
 SourceURL: http://swupdate.openvpn.net/community/releases
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Mirko Vogt <mirko@openwrt.org>
 Architecture: keenetic
-Installed-Size: 181398
-Filename: openvpn-polarssl_2.3.0-1_keenetic.ipk
-Size: 182095
-MD5Sum: d5c19bed0f233667bbbf2548514de869
+Installed-Size: 181091
+Filename: openvpn-polarssl_2.3.0-1a_keenetic.ipk
+Size: 181670
+MD5Sum: f3ed3e5cdeded481db55e7fdc5b4707f
 Description:  Open source VPN solution using PolarSSL
 
 Package: opkg
@@ -6745,24 +6114,18 @@ MD5Sum: bfae818ff8b127e460151275ba1fb598
 Description:  Manipulates and accesses URI strings
 
 Package: perl-www-curl
-Version: 4.00-1
-Depends: perl
-Provides: 
+Version: 4.00-1a
+Depends: perl, libcurl
 Source: package/built/perl-www-curl
 SourceFile: WWW-Curl-4.00.tar.gz
 SourceURL: http://search.cpan.org/CPAN/authors/id/S/SZ/SZBALINT
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 17635
-Filename: perl-www-curl_4.00-1_keenetic.ipk
-Size: 18356
-MD5Sum: 9f1728d945feba3b918362a3349fe17b
+Installed-Size: 17297
+Filename: perl-www-curl_4.00-1a_keenetic.ipk
+Size: 17955
+MD5Sum: 12824098378545a9a12d84ccf714f4b7
 Description:  Perl bindings to libcurl
 
 Package: perl-www-mechanize
@@ -9687,575 +9050,413 @@ MD5Sum: 8f113ae2e15fb7ce5587d5489b03b832
 Description:  XSLoader perl module
 
 Package: php5-cgi
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 1003326
-Filename: php5-cgi_5.4.11-2_keenetic.ipk
-Size: 1001734
-MD5Sum: 2fd32e8d5998674012e70996da4e2eef
+Installed-Size: 1003479
+Filename: php5-cgi_5.4.11-2a_keenetic.ipk
+Size: 1001763
+MD5Sum: a4b6b0c2a1b7a6cff020b478ea866274
 Description:  PHP is a widely-used general-purpose scripting language that is especially
  suited for Web development and can be embedded into HTML.
  This package contains the CGI version of the PHP5 interpreter.
 
 Package: php5-cli
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 1009363
-Filename: php5-cli_5.4.11-2_keenetic.ipk
-Size: 1007796
-MD5Sum: 3bfa404363e0ef5d89cf2f886c8e3464
+Installed-Size: 1008699
+Filename: php5-cli_5.4.11-2a_keenetic.ipk
+Size: 1007202
+MD5Sum: ec053d993a2b892a7f878f4b6e9d275f
 Description:  PHP is a widely-used general-purpose scripting language that is especially
  suited for Web development and can be embedded into HTML.
  This package contains the CLI version of the PHP5 interpreter.
 
 Package: php5-fastcgi
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, php5-cgi
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 591
-Filename: php5-fastcgi_5.4.11-2_keenetic.ipk
-Size: 1307
-MD5Sum: 5f4c8bd568680de79d0af1d963b16d79
+Installed-Size: 593
+Filename: php5-fastcgi_5.4.11-2a_keenetic.ipk
+Size: 1248
+MD5Sum: a62dda710cc5124da6f2edbfab3d944b
 Description:  As FastCGI support is now a core feature the php5-fastcgi package now depends
  on the php5-cgi package, containing just the startup script.
 
 Package: php5-mod-ctype
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 2223
-Filename: php5-mod-ctype_5.4.11-2_keenetic.ipk
-Size: 2872
-MD5Sum: 2fb45f16a107b3b018f196ae2abeca6f
+Installed-Size: 2233
+Filename: php5-mod-ctype_5.4.11-2a_keenetic.ipk
+Size: 2825
+MD5Sum: a04870df13f95c8fd156ebb1df3838c2
 Description:  Ctype shared module
 
 Package: php5-mod-curl
-Version: 5.4.11-2
-Depends: php5
-Provides: 
+Version: 5.4.11-2a
+Depends: php5, libopenssl
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 21843
-Filename: php5-mod-curl_5.4.11-2_keenetic.ipk
-Size: 22427
-MD5Sum: 4ec3cc5b22e3de5ada71a6b44b92775f
+Installed-Size: 21886
+Filename: php5-mod-curl_5.4.11-2a_keenetic.ipk
+Size: 22415
+MD5Sum: 9de5397dd99ce0b42eac427665296d8c
 Description:  cURL shared module
 
 Package: php5-mod-dom
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libxml2
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 40957
-Filename: php5-mod-dom_5.4.11-2_keenetic.ipk
-Size: 41465
-MD5Sum: 158fd2e60a1e19210a5d7e27d40afc84
+Installed-Size: 41016
+Filename: php5-mod-dom_5.4.11-2a_keenetic.ipk
+Size: 41389
+MD5Sum: c976fc4cb65ab1ea65f869209c20d8a9
 Description:  DOM shared module
 
 Package: php5-mod-ftp
-Version: 5.4.11-2
-Depends: php5
-Provides: 
+Version: 5.4.11-2a
+Depends: php5, libopenssl
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 13410
-Filename: php5-mod-ftp_5.4.11-2_keenetic.ipk
-Size: 14025
-MD5Sum: 988f2ec083f99ae9b80704135065127d
+Installed-Size: 13464
+Filename: php5-mod-ftp_5.4.11-2a_keenetic.ipk
+Size: 14030
+MD5Sum: b0070cc3311d16c83c1ebf6ff5b7dbe0
 Description:  FTP shared module
 
 Package: php5-mod-gd
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libjpeg, libpng, libfreetype
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 76375
-Filename: php5-mod-gd_5.4.11-2_keenetic.ipk
-Size: 76646
-MD5Sum: c7c5c3a45b451f3d9cd9cdc089e9e31f
+Installed-Size: 76453
+Filename: php5-mod-gd_5.4.11-2a_keenetic.ipk
+Size: 76700
+MD5Sum: b47118220c9daa5fc9ab88a6565d9a25
 Description:  GD graphics shared module
 
 Package: php5-mod-hash
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 109367
-Filename: php5-mod-hash_5.4.11-2_keenetic.ipk
-Size: 109150
-MD5Sum: 370140c8a12c1a2324f37032633eb6bc
+Installed-Size: 109324
+Filename: php5-mod-hash_5.4.11-2a_keenetic.ipk
+Size: 109063
+MD5Sum: ada5ab74b8da9c01e2f3c3a0bbf985de
 Description:  Hash shared module
 
 Package: php5-mod-iconv
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libiconv-full
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 12370
-Filename: php5-mod-iconv_5.4.11-2_keenetic.ipk
-Size: 13027
-MD5Sum: 66378901a031bd2a5c8fffb10fba337d
+Installed-Size: 12362
+Filename: php5-mod-iconv_5.4.11-2a_keenetic.ipk
+Size: 12942
+MD5Sum: 50c49a595994ad69c5e71ced12a03e77
 Description:  iConv shared module
 
 Package: php5-mod-json
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 11288
-Filename: php5-mod-json_5.4.11-2_keenetic.ipk
-Size: 11960
-MD5Sum: c8bac8491e018aec23386b2ddbda666a
+Installed-Size: 11319
+Filename: php5-mod-json_5.4.11-2a_keenetic.ipk
+Size: 11928
+MD5Sum: 9b25364e704b240b32a8556df2ecff4a
 Description:  JSON shared module
 
 Package: php5-mod-mbstring
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 582553
-Filename: php5-mod-mbstring_5.4.11-2_keenetic.ipk
-Size: 579237
-MD5Sum: 3d6cc57964f8aebe920d08b2dded8bf8
+Installed-Size: 582647
+Filename: php5-mod-mbstring_5.4.11-2a_keenetic.ipk
+Size: 579219
+MD5Sum: e7ce34307fd17559d9962a76b519b45f
 Description:  MBString shared module
 
 Package: php5-mod-mysql
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libmysqlclient
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 14486
-Filename: php5-mod-mysql_5.4.11-2_keenetic.ipk
-Size: 15086
-MD5Sum: 41fdfff9aa81e5d34624af6bedeb5ece
+Installed-Size: 14555
+Filename: php5-mod-mysql_5.4.11-2a_keenetic.ipk
+Size: 15102
+MD5Sum: a38a52e98a0f7d302b727195b28db82a
 Description:  MySQL shared module
 
 Package: php5-mod-mysqli
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libmysqlclient
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 33842
-Filename: php5-mod-mysqli_5.4.11-2_keenetic.ipk
-Size: 34288
-MD5Sum: ee0bba4d524f6371d4b4864bfd27cb53
+Installed-Size: 33885
+Filename: php5-mod-mysqli_5.4.11-2a_keenetic.ipk
+Size: 34402
+MD5Sum: 18620ec384b78e11add8ed6f31725134
 Description:  MySQL Improved Extension shared module
 
 Package: php5-mod-openssl
-Version: 5.4.11-2
-Depends: php5
-Provides: 
+Version: 5.4.11-2a
+Depends: php5, libopenssl
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 34388
-Filename: php5-mod-openssl_5.4.11-2_keenetic.ipk
-Size: 34690
-MD5Sum: 4e828678edb3363df2c2bc8accbf2060
+Installed-Size: 34471
+Filename: php5-mod-openssl_5.4.11-2a_keenetic.ipk
+Size: 34900
+MD5Sum: 8c9d63962121db05debdf2e04675b1d5
 Description:  OpenSSL shared module
 
 Package: php5-mod-pdo-mysql
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, php5-mod-pdo, libmysqlclient
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 9989
-Filename: php5-mod-pdo-mysql_5.4.11-2_keenetic.ipk
-Size: 10672
-MD5Sum: 6ac77568023f7930fa684b3668e5c970
+Installed-Size: 9996
+Filename: php5-mod-pdo-mysql_5.4.11-2a_keenetic.ipk
+Size: 10625
+MD5Sum: 9f9c20d658b49edb7b2fd2e5f1ce81c6
 Description:  PDO driver for MySQL shared module
 
 Package: php5-mod-pdo-sqlite
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, php5-mod-pdo, libsqlite3
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 8659
-Filename: php5-mod-pdo-sqlite_5.4.11-2_keenetic.ipk
-Size: 9361
-MD5Sum: e4a0a6a918e9d7fba17558af1be0f3f0
+Installed-Size: 8661
+Filename: php5-mod-pdo-sqlite_5.4.11-2a_keenetic.ipk
+Size: 9317
+MD5Sum: c12ec66356c71faf1fa86b1f0cb080ff
 Description:  PDO driver for SQLite 3.x shared module
 
 Package: php5-mod-pdo
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 33942
-Filename: php5-mod-pdo_5.4.11-2_keenetic.ipk
-Size: 34574
-MD5Sum: 3f94462a5463d21e0c0f63024acab9be
+Installed-Size: 33987
+Filename: php5-mod-pdo_5.4.11-2a_keenetic.ipk
+Size: 34597
+MD5Sum: 89ee1d4ef2720bc1011dadb6b5c722b7
 Description:  PHP Data Objects shared module
 
 Package: php5-mod-session
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 22259
-Filename: php5-mod-session_5.4.11-2_keenetic.ipk
-Size: 22833
-MD5Sum: f760fdcb362476fd298676cadb3f5ed3
+Installed-Size: 22305
+Filename: php5-mod-session_5.4.11-2a_keenetic.ipk
+Size: 22840
+MD5Sum: 357fe6214040e75c6ae9207f6bb17bb2
 Description:  Session shared module
 
 Package: php5-mod-simplexml
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libxml2
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 15426
-Filename: php5-mod-simplexml_5.4.11-2_keenetic.ipk
-Size: 16032
-MD5Sum: 50c51764160165f3ee6074eeb855e80b
+Installed-Size: 15537
+Filename: php5-mod-simplexml_5.4.11-2a_keenetic.ipk
+Size: 16045
+MD5Sum: 1769789bcddd0b339e6a2ec921a4e2b0
 Description:  SimpleXML shared module
 
 Package: php5-mod-soap
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libxml2
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 99827
-Filename: php5-mod-soap_5.4.11-2_keenetic.ipk
-Size: 100332
-MD5Sum: efd06e47af9290d67541d0c175b675a0
+Installed-Size: 99879
+Filename: php5-mod-soap_5.4.11-2a_keenetic.ipk
+Size: 100354
+MD5Sum: 6f4feb1e2c348ce1fad9cced6fcb8ee5
 Description:  SOAP shared module
 
 Package: php5-mod-sockets
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 14998
-Filename: php5-mod-sockets_5.4.11-2_keenetic.ipk
+Installed-Size: 15058
+Filename: php5-mod-sockets_5.4.11-2a_keenetic.ipk
 Size: 15588
-MD5Sum: 0a216f0354b1462a84ace751010fe867
+MD5Sum: a713605919191dffe715116210135228
 Description:  Sockets shared module
 
 Package: php5-mod-sqlite3
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libsqlite3
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 13441
-Filename: php5-mod-sqlite3_5.4.11-2_keenetic.ipk
-Size: 14056
-MD5Sum: a3516d0eeed8de8c57aff8d70e10cb1d
+Installed-Size: 13495
+Filename: php5-mod-sqlite3_5.4.11-2a_keenetic.ipk
+Size: 14035
+MD5Sum: 19689decc49306ef1e1f9ac6f26e2ecb
 Description:  SQLite3 shared module
 
 Package: php5-mod-xml
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libxml2
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 13931
-Filename: php5-mod-xml_5.4.11-2_keenetic.ipk
-Size: 14559
-MD5Sum: b3564b7089fd6f1e253525e11418e7f0
+Installed-Size: 13982
+Filename: php5-mod-xml_5.4.11-2a_keenetic.ipk
+Size: 14527
+MD5Sum: ce9609a56dcabc2429c4b44006a8d029
 Description:  XML shared module
 
 Package: php5-mod-xmlreader
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libxml2, libiconv-full
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 8231
-Filename: php5-mod-xmlreader_5.4.11-2_keenetic.ipk
-Size: 8905
-MD5Sum: 62771e504ff1b47e0d89e88985ea9b71
+Installed-Size: 8226
+Filename: php5-mod-xmlreader_5.4.11-2a_keenetic.ipk
+Size: 8851
+MD5Sum: 6f0e68104511b1e75dcf47087bbec321
 Description:  XMLReader shared module
 
 Package: php5-mod-xmlwriter
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5, libxml2, libiconv-full
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 8453
-Filename: php5-mod-xmlwriter_5.4.11-2_keenetic.ipk
-Size: 9102
-MD5Sum: 87790d282dba21b25918a49b66390a09
+Installed-Size: 8457
+Filename: php5-mod-xmlwriter_5.4.11-2a_keenetic.ipk
+Size: 9051
+MD5Sum: 942ec582404b3c8234e24dc182ad80cb
 Description:  XMLWriter shared module
 
 Package: php5-mod-zip
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: php5
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 32995
-Filename: php5-mod-zip_5.4.11-2_keenetic.ipk
-Size: 33611
-MD5Sum: 64a8df3bc34aca65d871574d480aa156
+Installed-Size: 33042
+Filename: php5-mod-zip_5.4.11-2a_keenetic.ipk
+Size: 33597
+MD5Sum: 67101fe4e5e148e8ab738358a4e286ac
 Description:  ZIP shared module
 
 Package: php5-pecl-apc
@@ -10280,24 +9481,18 @@ MD5Sum: f819a3a0587b5f2028b960c473780ae1
 Description:  Alternative PHP Cache
 
 Package: php5
-Version: 5.4.11-2
+Version: 5.4.11-2a
 Depends: libpcre, libiconv-full, libxml2
-Provides: 
 Source: package/built/php5
 SourceFile: php-5.4.11.tar.bz2
 SourceURL: http://www.php.net/distributions/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
 Installed-Size: 3333
-Filename: php5_5.4.11-2_keenetic.ipk
-Size: 4155
-MD5Sum: 3b4bef5a7368809bd39a15d5e27b2e9b
+Filename: php5_5.4.11-2a_keenetic.ipk
+Size: 4101
+MD5Sum: bb524109905f8dd45c0443b089ddacc6
 Description:  PHP is a widely-used general-purpose scripting language that is especially
  suited for Web development and can be embedded into HTML.
  This package contains only the PHP config file. You must actually choose
@@ -10486,24 +9681,18 @@ Description:  psmisc is a set of additional small useful utilities that use
  the proc filesystem: fuser, killall, pstree, and prtstat
 
 Package: py-openssl
-Version: 0.12-2
-Depends: python
-Provides: 
+Version: 0.12-2a
+Depends: python, libopenssl
 Source: package/built/py-openssl
 SourceFile: pyOpenSSL-0.12.tar.gz
 SourceURL: http://pypi.python.org/packages/source/p/pyOpenSSL/
-License: 
-LicenseFiles: 
 Section: lang-python
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 80794
-Filename: py-openssl_0.12-2_keenetic.ipk
-Size: 81332
-MD5Sum: 8a03bbe289fde8743997d3515871cde0
+Installed-Size: 80541
+Filename: py-openssl_0.12-2a_keenetic.ipk
+Size: 81089
+MD5Sum: 0846ca36d015aea0f689577e577cd6fb
 Description:  Python wrapper around a small subset of the OpenSSL library.
 
 Package: pyload
@@ -10551,24 +9740,18 @@ Description:  A collection of both secure hash functions (such as MD5 and SHA),
  and various encryption algorithms (AES, DES, IDEA, RSA, ElGamal, etc.).
 
 Package: python-curl
-Version: 7.19.0-2
-Depends: python
-Provides: 
+Version: 7.19.0-2a
+Depends: python, libcurl
 Source: package/built/python-curl
 SourceFile: pycurl-7.19.0.tar.gz
 SourceURL: http://pycurl.sourceforge.net/download/
-License: 
-LicenseFiles: 
 Section: language-python
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 23165
-Filename: python-curl_7.19.0-2_keenetic.ipk
-Size: 23843
-MD5Sum: edc4cb4007842a71a47afd219a0db2d3
+Installed-Size: 23204
+Filename: python-curl_7.19.0-2a_keenetic.ipk
+Size: 23803
+MD5Sum: 57781ec73f8f88456fe945bd0e8f6051
 Description:  Python module interface to the cURL library.
 
 Package: python-django
@@ -10617,45 +9800,36 @@ Description:  The SDKs contain platform-specific libraries that wrap the raw HTT
  your application and integrating Dropbox.
 
 Package: python-expat
-Version: 2.7.3-2a
+Version: 2.7.3-2b
 Depends: python-mini, libexpat
-Provides: 
 Source: package/built/python
 SourceFile: Python-2.7.3.tar.xz
 SourceURL: http://www.python.org/ftp/python/2.7.3
 License: PSF
 LicenseFiles: LICENSE Modules/_ctypes/libffi_msvc/LICENSE Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi/LICENSE Modules/_ctypes/libffi_osx/LICENSE Tools/pybench/LICENSE
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 59366
-Filename: python-expat_2.7.3-2a_keenetic.ipk
-Size: 60036
-MD5Sum: 3909953d9df1b01bb5adb32653c347ea
+Installed-Size: 59364
+Filename: python-expat_2.7.3-2b_keenetic.ipk
+Size: 59989
+MD5Sum: d2a6bffff95eced7428f78a5a583a497
 Description:  Python support for expat
 
 Package: python-mini
-Version: 2.7.3-2a
-Depends: 
-Provides: 
+Version: 2.7.3-2b
 Source: package/built/python
 SourceFile: Python-2.7.3.tar.xz
 SourceURL: http://www.python.org/ftp/python/2.7.3
 License: PSF
 LicenseFiles: LICENSE Modules/_ctypes/libffi_msvc/LICENSE Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi/LICENSE Modules/_ctypes/libffi_osx/LICENSE Tools/pybench/LICENSE
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1384075
-Filename: python-mini_2.7.3-2a_keenetic.ipk
-Size: 1362351
-MD5Sum: a626d303557353d9805a84cb33d41919
+Installed-Size: 1384087
+Filename: python-mini_2.7.3-2b_keenetic.ipk
+Size: 1362509
+MD5Sum: ee1c62fd44f8e8e32e8f039a3e957f27
 Description:  Python is a dynamic object-oriented programming language that can be used
  for many kinds of software development. It offers strong support for
  integration with other languages and tools, comes with extensive standard
@@ -10687,24 +9861,20 @@ MD5Sum: c6fa7f057c77e6c802cd824883aafc15
 Description:  Library for OAuth version 1.0a.
 
 Package: python-openssl
-Version: 2.7.3-2a
-Depends: python-mini
-Provides: 
+Version: 2.7.3-2b
+Depends: python-mini, libopenssl
 Source: package/built/python
 SourceFile: Python-2.7.3.tar.xz
 SourceURL: http://www.python.org/ftp/python/2.7.3
 License: PSF
 LicenseFiles: LICENSE Modules/_ctypes/libffi_msvc/LICENSE Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi/LICENSE Modules/_ctypes/libffi_osx/LICENSE Tools/pybench/LICENSE
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 11203
-Filename: python-openssl_2.7.3-2a_keenetic.ipk
-Size: 11850
-MD5Sum: 7bea2655926bf39da03268c880c57dec
+Installed-Size: 11210
+Filename: python-openssl_2.7.3-2b_keenetic.ipk
+Size: 11815
+MD5Sum: e3ebd95a626cfd6e82faa1365150ec73
 Description:  Python support for OpenSSL
 
 Package: python-pil
@@ -10738,45 +9908,37 @@ Description:  The Python Imaging Library adds image processing capabilities to y
  general image processing tool.
 
 Package: python-sqlite3
-Version: 2.7.3-2a
+Version: 2.7.3-2b
 Depends: python, libsqlite3
-Provides: 
 Source: package/built/python
 SourceFile: Python-2.7.3.tar.xz
 SourceURL: http://www.python.org/ftp/python/2.7.3
 License: PSF
 LicenseFiles: LICENSE Modules/_ctypes/libffi_msvc/LICENSE Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi/LICENSE Modules/_ctypes/libffi_osx/LICENSE Tools/pybench/LICENSE
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 39323
-Filename: python-sqlite3_2.7.3-2a_keenetic.ipk
-Size: 40178
-MD5Sum: 50019dba506bcbe3629bb58491332437
+Installed-Size: 39320
+Filename: python-sqlite3_2.7.3-2b_keenetic.ipk
+Size: 40128
+MD5Sum: f1f96b87806fa60eb43cf5fe7b1bfcfd
 Description:  Python support for sqlite3
 
 Package: python
-Version: 2.7.3-2a
+Version: 2.7.3-2b
 Depends: libffi, python-mini
-Provides: 
 Source: package/built/python
 SourceFile: Python-2.7.3.tar.xz
 SourceURL: http://www.python.org/ftp/python/2.7.3
 License: PSF
 LicenseFiles: LICENSE Modules/_ctypes/libffi_msvc/LICENSE Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi/LICENSE Modules/_ctypes/libffi_osx/LICENSE Tools/pybench/LICENSE
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1902952
-Filename: python_2.7.3-2a_keenetic.ipk
-Size: 1902328
-MD5Sum: eeabb38e3a07a4b8845cbdceb8c5a188
+Installed-Size: 1902933
+Filename: python_2.7.3-2b_keenetic.ipk
+Size: 1902115
+MD5Sum: 9c94f3303c5acbf8885ba339756a495b
 Description:  Python is a dynamic object-oriented programming language that can be used
  for many kinds of software development. It offers strong support for
  integration with other languages and tools, comes with extensive standard
@@ -11193,24 +10355,18 @@ MD5Sum: d456d638c898b524010e5465e74e0da9
 Description:  Streamripper is an Open Source application that lets you record streaming mp3 to your hard drive.
 
 Package: subversion-client
-Version: 1.6.17-3
+Version: 1.6.17-3a
 Depends: libneon, libaprutil, subversion-libs
-Provides: 
 Source: package/built/subversion
 SourceFile: subversion-1.6.17.tar.bz2
 SourceURL: http://subversion.tigris.org/downloads
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 70430
-Filename: subversion-client_1.6.17-3_keenetic.ipk
-Size: 71360
-MD5Sum: ae824724fd0b2b7db754f235f628d374
+Installed-Size: 70951
+Filename: subversion-client_1.6.17-3a_keenetic.ipk
+Size: 71768
+MD5Sum: 4e22f0394818f2ba02bf89824e0fadb4
 Description:  Subversion is a free/open-source version control system. That is,
  Subversion manages files and directories, and the changes made to them,
  over time. This allows you to recover older versions of your data, or
@@ -11219,24 +10375,18 @@ Description:  Subversion is a free/open-source version control system. That is,
  This package contains the subversion client tools.
 
 Package: subversion-libs
-Version: 1.6.17-3
+Version: 1.6.17-3a
 Depends: libneon, libaprutil
-Provides: 
 Source: package/built/subversion
 SourceFile: subversion-1.6.17.tar.bz2
 SourceURL: http://subversion.tigris.org/downloads
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 578057
-Filename: subversion-libs_1.6.17-3_keenetic.ipk
-Size: 577984
-MD5Sum: e186c53489a870045324e5a560e38212
+Installed-Size: 577721
+Filename: subversion-libs_1.6.17-3a_keenetic.ipk
+Size: 577496
+MD5Sum: 551b54ae08793b0ab24a14a6d04afbd4
 Description:  Subversion is a free/open-source version control system. That is,
  Subversion manages files and directories, and the changes made to them,
  over time. This allows you to recover older versions of your data, or
@@ -11245,24 +10395,18 @@ Description:  Subversion is a free/open-source version control system. That is,
  This package contains the subversion libraries.
 
 Package: subversion-server
-Version: 1.6.17-3
+Version: 1.6.17-3a
 Depends: libneon, libaprutil, subversion-libs
-Provides: 
 Source: package/built/subversion
 SourceFile: subversion-1.6.17.tar.bz2
 SourceURL: http://subversion.tigris.org/downloads
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 57712
-Filename: subversion-server_1.6.17-3_keenetic.ipk
-Size: 58468
-MD5Sum: d8928e061decf5409c69dd36fc393539
+Installed-Size: 56731
+Filename: subversion-server_1.6.17-3a_keenetic.ipk
+Size: 57443
+MD5Sum: d67a4a25cfce6df874400cffa5a831bb
 Description:  Subversion is a free/open-source version control system. That is,
  Subversion manages files and directories, and the changes made to them,
  over time. This allows you to recover older versions of your data, or
@@ -11397,90 +10541,66 @@ MD5Sum: 44bd8ea1ec5eb6aadff2c34672525e39
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.77-1
+Version: 2.77-1a
 Depends: transmission-daemon
-Provides: 
 Source: package/built/transmission
 SourceFile: transmission-2.77.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 838581
-Filename: transmission-cli_2.77-1_keenetic.ipk
-Size: 837865
-MD5Sum: 2861eb798aced13ef4897b1366e2b7b9
+Installed-Size: 838767
+Filename: transmission-cli_2.77-1a_keenetic.ipk
+Size: 837909
+MD5Sum: 42f13439968229c1126b821876e63b07
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.77-1
-Depends: libevent2, libminiupnpc
-Provides: 
+Version: 2.77-1a
+Depends: libcurl, libopenssl, libevent2, libminiupnpc
 Source: package/built/transmission
 SourceFile: transmission-2.77.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 214309
-Filename: transmission-daemon_2.77-1_keenetic.ipk
-Size: 214894
-MD5Sum: c47d19351d26dc2537a5efed8fcc7fbf
+Installed-Size: 214445
+Filename: transmission-daemon_2.77-1a_keenetic.ipk
+Size: 214943
+MD5Sum: 9ab25596c20678fea566d19412983a33
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.77-1
-Depends: libevent2, libminiupnpc
-Provides: 
+Version: 2.77-1a
+Depends: libcurl, libopenssl, libevent2, libminiupnpc
 Source: package/built/transmission
 SourceFile: transmission-2.77.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 224093
-Filename: transmission-remote_2.77-1_keenetic.ipk
-Size: 224512
-MD5Sum: a1d86d1ed3307f16ebe1bddefe30a786
+Installed-Size: 224104
+Filename: transmission-remote_2.77-1a_keenetic.ipk
+Size: 224504
+MD5Sum: c14dfd4d2d16dc379b9e542db378609f
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.77-1
+Version: 2.77-1a
 Depends: transmission-daemon
-Provides: 
 Source: package/built/transmission
 SourceFile: transmission-2.77.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keenetic
-Installed-Size: 216625
-Filename: transmission-web_2.77-1_keenetic.ipk
-Size: 217433
-MD5Sum: 995c30304deb75b065e53c3a37da40c5
+Installed-Size: 218864
+Filename: transmission-web_2.77-1a_keenetic.ipk
+Size: 219623
+MD5Sum: 56df7f9db2e7c255a25a281c6befa73f
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
