@@ -7889,6 +7889,22 @@ MD5Sum: 4c684759ef0b954eab859763bc1fa389
 Description:  psmisc is a set of additional small useful utilities that use
  the proc filesystem: fuser, killall, pstree, and prtstat
 
+Package: ptokax
+Version: 0.5.0.0-1
+Depends: liblua, libstdcpp
+Source: package/built/ptokax
+SourceFile: 0.5.0.0-nix-src.tgz
+SourceURL: http://www.czdc.org/PtokaX
+Section: net
+Maintainer: Entware team, wl500g-repo.googlecode.com
+Architecture: keeneticII
+Installed-Size: 261333
+Filename: ptokax_0.5.0.0-1_keeneticII.ipk
+Size: 261447
+MD5Sum: 5777ffc5bc497c5de46ee9f0b1cec508
+Description:  PtokaX Direct Connect Hub is a multi-platform server application
+ for Neo-Modus Direct Connect Peer-To-Peer sharing network.
+
 Package: py-openssl
 Version: 0.12-2a
 Depends: python, libopenssl
