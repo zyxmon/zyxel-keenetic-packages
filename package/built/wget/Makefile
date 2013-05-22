@@ -8,13 +8,14 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=wget
-PKG_VERSION:=1.13.4
+PKG_VERSION:=1.14
 PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=@GNU/$(PKG_NAME)
-PKG_MD5SUM:=12115c3750a4d92f9c6ac62bac372e85
+PKG_MD5SUM:=316f6f59292c9098ad81fd54f658c579
 
+PKG_BUILD_DEPENDS:=zlib
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
 
 include $(INCLUDE_DIR)/package.mk
@@ -22,6 +23,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/wget/Default
   SECTION:=net
   CATEGORY:=Network
+  DEPENDS:=+libpcre
   SUBMENU:=File Transfer
   TITLE:=Non-interactive network downloader
   URL:=http://www.gnu.org/software/wget/index.html
@@ -38,6 +40,7 @@ endef
 
 define Package/wget
 $(call Package/wget/Default)
+  DEPENDS+= +libopenssl
   TITLE+= (with SSL support)
   VARIANT:=ssl
 endef
@@ -80,8 +83,9 @@ define Package/wget/install
 endef
 
 define Package/wget-nossl/install
-	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/wget $(1)/usr/bin/wget-nossl
+	$(INSTALL_DIR) $(1)/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/wget $(1)/bin/wget-nossl
+	ln -nsf wget-nossl $(1)/bin/wget
 endef
 
 $(eval $(call BuildPackage,wget))
