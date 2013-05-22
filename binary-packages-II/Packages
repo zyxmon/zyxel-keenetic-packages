@@ -8995,17 +8995,18 @@ Description:  The purpose of vnstati is to provide image output support for stat
  output.
 
 Package: wget
-Version: 1.13.4-1
+Version: 1.14-1
+Depends: libpcre, libopenssl
 Source: package/built/wget
-SourceFile: wget-1.13.4.tar.bz2
+SourceFile: wget-1.14.tar.xz
 SourceURL: @GNU/wget
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 150592
-Filename: wget_1.13.4-1_keeneticII.ipk
-Size: 150866
-MD5Sum: 0f262c6add0d20396924fb372cc1a051
+Installed-Size: 200262
+Filename: wget_1.14-1_keeneticII.ipk
+Size: 200389
+MD5Sum: bbd34ccc09ac44d0392476ddf15716b4
 Description:  Wget is a network utility to retrieve files from the Web using http
  and ftp, the two most widely used Internet protocols. It works
  non-interactively, so it will work in the background, after having
