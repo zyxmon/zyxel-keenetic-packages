@@ -504,6 +504,22 @@ Description:  Asterisk is a complete PBX in software. It provides all of the fea
  equipment using relatively inexpensive hardware.
  This package provides support  an implementation of agents proxy channel in Asterisk.
 
+Package: asterisk18-chan-dongle
+Version: r29-1
+Depends: asterisk18, libiconv-full, libintl-full
+Source: package/built/asterisk-chan-dongle
+SourceFile: asterisk18-chan-dongle-r29.tar.gz
+SourceURL: http://asterisk-chan-dongle.googlecode.com/svn/trunk/
+Section: net
+Maintainer: Entware team, wl500g-repo.googlecode.com
+Architecture: keeneticII
+Installed-Size: 68549
+Filename: asterisk18-chan-dongle_r29-1_keeneticII.ipk
+Size: 69123
+MD5Sum: a76b820c32eb89b0ef62bc36e3d6e3e6
+Description:  Asterisk channel driver for Huawei UMTS cards.
+ This channel driver is in alpha stage.
+
 Package: asterisk18-chan-gtalk
 Version: 1.8.10.1-5a
 Depends: asterisk18, libiksemel
