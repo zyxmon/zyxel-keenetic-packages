@@ -1275,6 +1275,20 @@ Size: 41760
 MD5Sum: 6b9201fb4216d4ab937a6b88c1417fbc
 Description:  Automatic is an RSS downloader for Linux based systems, that grabs your favorite torrents based on filters you specify.
 
+Package: autossh
+Version: 1.4b-5
+Source: package/built/autossh
+SourceFile: autossh-1.4b.tgz
+SourceURL: http://www.harding.motd.ca/autossh/
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 10011
+Filename: autossh_1.4b-5_keenetic.ipk
+Size: 10590
+MD5Sum: 68f86fecd8fa31c878047e4ddd74dcae
+Description:  Autossh client
+
 Package: badblocks
 Version: 1.42.4-1
 Depends: e2fsprogs
@@ -5826,6 +5840,22 @@ Filename: nmap_6.01-4a_keenetic.ipk
 Size: 1581191
 MD5Sum: 82b1084562494c562c5173ff3ff60557
 Description:  Utility for network exploration or security auditing
+
+Package: opendchub
+Version: 0.8.2-1
+Depends: libopenssl
+Source: package/built/opendchub
+SourceFile: opendchub-0.8.2.tar.gz
+SourceURL: @SF/opendchub
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 51181
+Filename: opendchub_0.8.2-1_keenetic.ipk
+Size: 51825
+MD5Sum: 0efb5d93a8854cdd9af596a3c0c16651
+Description:  Open DC hub is a Unix/Linux version of the hub software
+ for the Direct Connect network
 
 Package: openssh-sftp-server
 Version: 6.2p1-1
