@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=php
 PKG_VERSION:=5.4.11
-PKG_RELEASE:=2a
+PKG_RELEASE:=2b
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=http://www.php.net/distributions/
@@ -17,7 +17,7 @@ PKG_MD5SUM:=9975e68c22b86b013b934743ad2d2276
 
 PKG_FIXUP:=libtool no-autoreconf
 PKG_BUILD_PARALLEL:=1
-PKG_BUILD_DEPENDS:=libcurl zlib
+PKG_BUILD_DEPENDS:=zlib
 
 PHP5_MODULES = \
 	calendar ctype curl \
@@ -511,7 +511,7 @@ $(eval $(call BuildPackage,php5-fastcgi))
 #$(eval $(call BuildModule,NAME,TITLE[,PKG DEPENDS]))
 $(eval $(call BuildModule,calendar,Calendar))
 $(eval $(call BuildModule,ctype,Ctype))
-$(eval $(call BuildModule,curl,cURL,+PACKAGE_php5-mod-curl:libopenssl))
+$(eval $(call BuildModule,curl,cURL,+PACKAGE_php5-mod-curl:libcurl))
 $(eval $(call BuildModule,fileinfo,Fileinfo,+PACKAGE_php5-mod-fileinfo:libmagic))
 $(eval $(call BuildModule,dom,DOM,+@PHP5_LIBXML +PACKAGE_php5-mod-dom:libxml2))
 $(eval $(call BuildModule,exif,EXIF))
