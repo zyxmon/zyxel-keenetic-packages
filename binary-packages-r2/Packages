@@ -45,10 +45,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6482
+Installed-Size: 6473
 Filename: asterisk18-app-alarmreceiver_1.8.10.1-5a_keenetic.ipk
-Size: 7353
-MD5Sum: 005f09df5424516fabcf543301c1214f
+Size: 7345
+MD5Sum: 37b02ddbf921b5fdeb20d8dc8abfe9b1
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -64,10 +64,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3163
+Installed-Size: 3154
 Filename: asterisk18-app-authenticate_1.8.10.1-5a_keenetic.ipk
-Size: 3960
-MD5Sum: d1d6f05ba929fe82a63d1a3524f4f10b
+Size: 3950
+MD5Sum: 35457d2945c9b633b8585ecf731c2b6b
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -83,10 +83,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2706
+Installed-Size: 2695
 Filename: asterisk18-app-chanisavail_1.8.10.1-5a_keenetic.ipk
-Size: 3536
-MD5Sum: 91f862d3b744c393264124e876ac909e
+Size: 3519
+MD5Sum: 70ea94a3d5d4275a85423797b23a5b75
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -102,10 +102,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 9073
+Installed-Size: 9069
 Filename: asterisk18-app-chanspy_1.8.10.1-5a_keenetic.ipk
-Size: 9882
-MD5Sum: ebd5aacd9e01ae0c8e7393af29e68c66
+Size: 9876
+MD5Sum: 3349b83407cbe2c7e8605466f06076f4
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -121,10 +121,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3635
+Installed-Size: 3624
 Filename: asterisk18-app-directed-pickup_1.8.10.1-5a_keenetic.ipk
-Size: 4430
-MD5Sum: c4ff6b388ac512adc4be9dd514b5abcc
+Size: 4416
+MD5Sum: dd77afc935fbfc6db101361501425721
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -140,10 +140,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4652
+Installed-Size: 4642
 Filename: asterisk18-app-disa_1.8.10.1-5a_keenetic.ipk
-Size: 5461
-MD5Sum: fe80c0331470d8143b21bf5f9eff387c
+Size: 5443
+MD5Sum: b3332b1dd861c9cf1e5961ea89cd8473
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -159,10 +159,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2977
+Installed-Size: 2968
 Filename: asterisk18-app-exec_1.8.10.1-5a_keenetic.ipk
-Size: 3809
-MD5Sum: d35dcffde5f6f843a63437970b0d9101
+Size: 3799
+MD5Sum: 651edc308fc409cea5a58bf5a060ed1a
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -178,10 +178,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 25903
+Installed-Size: 25884
 Filename: asterisk18-app-minivm_1.8.10.1-5a_keenetic.ipk
-Size: 26648
-MD5Sum: b27554c73ca5f8aaff0ec30b76103f5c
+Size: 26619
+MD5Sum: 3ff67fe2d9cac0afe136efa0564bd3db
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -197,10 +197,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7185
+Installed-Size: 7175
 Filename: asterisk18-app-mixmonitor_1.8.10.1-5a_keenetic.ipk
-Size: 8017
-MD5Sum: bdc23e5083e6a6abbc021b272864752d
+Size: 8011
+MD5Sum: ec1964ea306ee142b81097f31bfd74d8
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -216,10 +216,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2938
+Installed-Size: 2930
 Filename: asterisk18-app-originate_1.8.10.1-5a_keenetic.ipk
-Size: 3797
-MD5Sum: aeafdbe81b15afa4624b7345765b9d59
+Size: 3794
+MD5Sum: 236e8cfa6f010b7094cc7aa22e70fed9
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -235,10 +235,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1955
+Installed-Size: 1947
 Filename: asterisk18-app-playtones_1.8.10.1-5a_keenetic.ipk
-Size: 2780
-MD5Sum: d4355d42cb59fe84e1e814c985df6b1e
+Size: 2766
+MD5Sum: f2ef40467b9ad2a0bb1b812a7e3a0af8
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -254,10 +254,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3436
+Installed-Size: 3422
 Filename: asterisk18-app-read_1.8.10.1-5a_keenetic.ipk
-Size: 4218
-MD5Sum: cd0048de0b20b936ffb8769022f498c0
+Size: 4208
+MD5Sum: e37fbf140005f0ed4718a9cbe9c5c243
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -273,10 +273,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3765
+Installed-Size: 3752
 Filename: asterisk18-app-readexten_1.8.10.1-5a_keenetic.ipk
-Size: 4572
-MD5Sum: 1b66e2227b41c9a4e862feb56cb6b546
+Size: 4561
+MD5Sum: 99810f5d7e8426e7ce72437053f325f5
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -292,10 +292,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4290
+Installed-Size: 4279
 Filename: asterisk18-app-record_1.8.10.1-5a_keenetic.ipk
-Size: 5086
-MD5Sum: 10c53de11ca217f61fa54d6b0163625d
+Size: 5074
+MD5Sum: c8bfb25d9d5257fdd635cdf5f99050e0
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -311,10 +311,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2012
+Installed-Size: 2000
 Filename: asterisk18-app-sayunixtime_1.8.10.1-5a_keenetic.ipk
-Size: 2850
-MD5Sum: e141938c3089087c7ebb37511dcb3e56
+Size: 2837
+MD5Sum: 0c4e486af4b930eab786a442a6ffbd81
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -330,10 +330,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2548
+Installed-Size: 2540
 Filename: asterisk18-app-senddtmf_1.8.10.1-5a_keenetic.ipk
-Size: 3375
-MD5Sum: 543d509d1925f34d764e9fd333e1262b
+Size: 3371
+MD5Sum: 2505131aad9ebea006c682846faf95ba
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -349,10 +349,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1932
+Installed-Size: 1923
 Filename: asterisk18-app-setcallerid_1.8.10.1-5a_keenetic.ipk
-Size: 2754
-MD5Sum: 66a437c1f13388d356310c5f802f15a8
+Size: 2743
+MD5Sum: ecefdd7ac83f877568d4ffddf7e0498e
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -368,10 +368,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 16547
+Installed-Size: 16529
 Filename: asterisk18-app-sms_1.8.10.1-5a_keenetic.ipk
-Size: 17404
-MD5Sum: c93a937e8279de03639bbaab4558c33f
+Size: 17381
+MD5Sum: ebeb01d88fcab70112ce9a14155e8824
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -387,10 +387,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6972
+Installed-Size: 6960
 Filename: asterisk18-app-stack_1.8.10.1-5a_keenetic.ipk
-Size: 7835
-MD5Sum: b0a701f4687869dc317e4af30b58075a
+Size: 7830
+MD5Sum: 2f0987f09f3b0f4ede5d85b178b7c9f7
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -406,10 +406,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2451
+Installed-Size: 2435
 Filename: asterisk18-app-system_1.8.10.1-5a_keenetic.ipk
-Size: 3282
-MD5Sum: c7b91990b1808f0a4a2d1f8139f1df3e
+Size: 3269
+MD5Sum: 4bbade7687c0791dfe57080ac57c3cf6
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -425,10 +425,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3803
+Installed-Size: 3788
 Filename: asterisk18-app-talkdetect_1.8.10.1-5a_keenetic.ipk
-Size: 4602
-MD5Sum: a5d1c828f110d0f2d05314ccd46c571b
+Size: 4583
+MD5Sum: 68551c690a7716cf0dde56bd89081b42
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -444,10 +444,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2550
+Installed-Size: 2539
 Filename: asterisk18-app-verbose_1.8.10.1-5a_keenetic.ipk
-Size: 3388
-MD5Sum: b2d1cf1ad7e41de917a0d650250b65a1
+Size: 3362
+MD5Sum: e64d102e1e97a156076509d93505ed7b
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -463,10 +463,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2123
+Installed-Size: 2110
 Filename: asterisk18-app-waituntil_1.8.10.1-5a_keenetic.ipk
-Size: 2961
-MD5Sum: 71d12046cc7e499acf292627a6774f9a
+Size: 2943
+MD5Sum: 615088921be49e8be67730d12bb93f45
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -482,10 +482,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4119
+Installed-Size: 4105
 Filename: asterisk18-app-while_1.8.10.1-5a_keenetic.ipk
-Size: 4912
-MD5Sum: a12cdae2a84897b4a843e1c67bc02acc
+Size: 4891
+MD5Sum: f733688cba97f00f862a78a879386eff
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -501,10 +501,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 21919
+Installed-Size: 21904
 Filename: asterisk18-chan-agent_1.8.10.1-5a_keenetic.ipk
-Size: 22670
-MD5Sum: ac7bc250b6be16b65c81ba60442812d4
+Size: 22642
+MD5Sum: 8b441c1f130293de33cf07626f862f81
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -520,10 +520,10 @@ SourceURL: http://asterisk-chan-dongle.googlecode.com/svn/trunk/
 Section: net
 Maintainer: Entware team, wl500g-repo.googlecode.com
 Architecture: keenetic
-Installed-Size: 68723
+Installed-Size: 68705
 Filename: asterisk18-chan-dongle_r29-1_keenetic.ipk
-Size: 69319
-MD5Sum: ce450a7b6993a0dbeb5ac90ca30f6ab8
+Size: 69295
+MD5Sum: 380e51d34a36dec7bc6b6507997b9f56
 Description:  Asterisk channel driver for Huawei UMTS cards.
  This channel driver is in alpha stage.
 
@@ -536,10 +536,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 59213
+Installed-Size: 59194
 Filename: asterisk18-chan-gtalk_1.8.10.1-5a_keenetic.ipk
-Size: 60028
-MD5Sum: 6584ea9a379fcaccef6f1a38e332af0f
+Size: 60007
+MD5Sum: 758159bf969d355d2b48117b70532849
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -558,8 +558,8 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 130798
 Filename: asterisk18-chan-iax2_1.8.10.1-5a_keenetic.ipk
-Size: 131160
-MD5Sum: 9e5b5708c76380d83ed6bc61c42f595a
+Size: 131158
+MD5Sum: 8b30f5d9adc88923c8d09cfc5cfe2580
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -576,10 +576,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 10643
+Installed-Size: 10629
 Filename: asterisk18-chan-local_1.8.10.1-5a_keenetic.ipk
-Size: 11471
-MD5Sum: cba1e2de66d1dd4f175407376d15d7ff
+Size: 11459
+MD5Sum: 8b6f16f35c216ff7db2c701e0dae5cb5
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -595,10 +595,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 41263
+Installed-Size: 41274
 Filename: asterisk18-chan-mgcp_1.8.10.1-5a_keenetic.ipk
-Size: 42096
-MD5Sum: cefa92e170fc81b5ce8b8c7568b24de6
+Size: 42044
+MD5Sum: 51739c1804c3c03b5a62a63b60b366e1
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -614,10 +614,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 48632
+Installed-Size: 48616
 Filename: asterisk18-chan-skinny_1.8.10.1-5a_keenetic.ipk
-Size: 49504
-MD5Sum: fa515adbf2dd6eafa17aafe021008da7
+Size: 49508
+MD5Sum: 62590761d0714866c65c36bc08ca6fdd
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -633,10 +633,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2065
+Installed-Size: 2054
 Filename: asterisk18-codec-a-mu_1.8.10.1-5a_keenetic.ipk
-Size: 2898
-MD5Sum: 9c6fbe7312c4962250e928ac0dfc7eb2
+Size: 2886
+MD5Sum: 11a9f992da89e9bc9a1feb2dbcad3519
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -652,10 +652,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2201
+Installed-Size: 2191
 Filename: asterisk18-codec-alaw_1.8.10.1-5a_keenetic.ipk
-Size: 3043
-MD5Sum: 93ba1f39477fcb9c64da4f6d197586c4
+Size: 3034
+MD5Sum: bba45a8e2bef611dc1f6a0b050296835
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -671,10 +671,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 5594
+Installed-Size: 5580
 Filename: asterisk18-codec-g722_1.8.10.1-5a_keenetic.ipk
-Size: 6400
-MD5Sum: a56245a62f576ab3efbf15424df671ed
+Size: 6394
+MD5Sum: 21281ee9ee08a4496a37bb5d9b5dd17b
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -690,10 +690,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4143
+Installed-Size: 4129
 Filename: asterisk18-codec-g726_1.8.10.1-5a_keenetic.ipk
-Size: 4963
-MD5Sum: 2a26eef21193de27c1c6f91208d05688
+Size: 4947
+MD5Sum: 27efcb6d1d8d086f0ee8b17fcf95eff7
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -709,10 +709,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7529
+Installed-Size: 7508
 Filename: asterisk18-curl_1.8.10.1-5a_keenetic.ipk
-Size: 8344
-MD5Sum: 2409b5843313a77c7a7255b2c161cb77
+Size: 8324
+MD5Sum: f47322455190e393e29d284f1f4535bc
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -729,10 +729,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2910
+Installed-Size: 2901
 Filename: asterisk18-format-g726_1.8.10.1-5a_keenetic.ipk
-Size: 3716
-MD5Sum: 554f8e6d19fd552413ccba52cb144927
+Size: 3706
+MD5Sum: a5a4f0269f5d5724b9de0e0101eca554
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -748,10 +748,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3568
+Installed-Size: 3556
 Filename: asterisk18-format-g729_1.8.10.1-5a_keenetic.ipk
-Size: 4364
-MD5Sum: 7d68646aa907e8bc87dc570af4445e2f
+Size: 4355
+MD5Sum: 5bb7b75f228a92de87755604db7ed4d2
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -767,10 +767,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2629
+Installed-Size: 2618
 Filename: asterisk18-format-sln16_1.8.10.1-5a_keenetic.ipk
-Size: 3462
-MD5Sum: 5d7aa37932800db66bdc5018bb32db46
+Size: 3440
+MD5Sum: e723a573142e3ff565bbfd2ee19050b1
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -786,10 +786,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2626
+Installed-Size: 2612
 Filename: asterisk18-format-sln_1.8.10.1-5a_keenetic.ipk
-Size: 3463
-MD5Sum: 05a01f110df7852b3a720c862b6c409f
+Size: 3444
+MD5Sum: 90b71fa0041fc8a1a6cabcca0df3cbf0
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -805,10 +805,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2072
+Installed-Size: 2062
 Filename: asterisk18-func-blacklist_1.8.10.1-5a_keenetic.ipk
-Size: 2911
-MD5Sum: 2f3751f2564033e632e2d078adcf9dcc
+Size: 2908
+MD5Sum: b2de58d0563979fd96b910ada06abf01
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -824,10 +824,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6304
+Installed-Size: 6294
 Filename: asterisk18-func-channel_1.8.10.1-5a_keenetic.ipk
-Size: 7102
-MD5Sum: 4cbfdfcc5473ea2d8ae425202b1e2c4b
+Size: 7083
+MD5Sum: 48003d0aeab168a77f503ef52b700d38
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -843,10 +843,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3619
+Installed-Size: 3607
 Filename: asterisk18-func-cut_1.8.10.1-5a_keenetic.ipk
-Size: 4382
-MD5Sum: 998f11382f52ebc4f3ffff0ec8705a55
+Size: 4373
+MD5Sum: b632cdd5ad3d4a36384f0ac31ecd9208
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -862,10 +862,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2709
+Installed-Size: 2697
 Filename: asterisk18-func-db_1.8.10.1-5a_keenetic.ipk
-Size: 3543
-MD5Sum: 5b32af921edbced0cbc79da0a2cd430f
+Size: 3530
+MD5Sum: 3057691bdee177f8b972c56defc32db8
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -881,10 +881,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3758
+Installed-Size: 3747
 Filename: asterisk18-func-devstate_1.8.10.1-5a_keenetic.ipk
-Size: 4584
-MD5Sum: f7fa93d730206bb552efc64d4fc2c740
+Size: 4571
+MD5Sum: 93bc433022ca0b5fca61752465fff8de
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -900,10 +900,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2061
+Installed-Size: 2050
 Filename: asterisk18-func-extstate_1.8.10.1-5a_keenetic.ipk
-Size: 2907
-MD5Sum: 2151936ac1a6d1264703834e74888ac9
+Size: 2898
+MD5Sum: 86368479c7013ff5c38c31bd3b960bc7
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -919,10 +919,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3603
+Installed-Size: 3593
 Filename: asterisk18-func-global_1.8.10.1-5a_keenetic.ipk
-Size: 4398
-MD5Sum: aae7b572f9592b7a355ecb6e7a76be6d
+Size: 4387
+MD5Sum: bd05576cef12ac2ea764c294c889537e
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -938,10 +938,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2056
+Installed-Size: 2046
 Filename: asterisk18-func-shell_1.8.10.1-5a_keenetic.ipk
-Size: 2883
-MD5Sum: 2d9a50d11ebea73e89e416afa5e2555e
+Size: 2871
+MD5Sum: 98a71cc37aee8f94e1f607ed16a0ed1e
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -957,10 +957,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1894
+Installed-Size: 1886
 Filename: asterisk18-func-uri_1.8.10.1-5a_keenetic.ipk
-Size: 2726
-MD5Sum: 3700af30d8e853c2df71f3d049642b84
+Size: 2712
+MD5Sum: 9bd4373a4fdd0741bb8e9f28078b2726
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -978,8 +978,8 @@ Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 1900
 Filename: asterisk18-func-vmcount_1.8.10.1-5a_keenetic.ipk
-Size: 2724
-MD5Sum: 86162f72f98478ce1b6c4f6be78be4b6
+Size: 2723
+MD5Sum: 34cda36a04f7218d2bc1abcdec28ee45
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -995,10 +995,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 34727
+Installed-Size: 34692
 Filename: asterisk18-mysql_1.8.10.1-5a_keenetic.ipk
-Size: 35627
-MD5Sum: cdb6e1a7356cd2593634b786b468a232
+Size: 35597
+MD5Sum: 8717f5adcb1c7ccd7ddf91d5a77facd5
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1015,10 +1015,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 60154
+Installed-Size: 60095
 Filename: asterisk18-odbc_1.8.10.1-5a_keenetic.ipk
-Size: 60840
-MD5Sum: 280ba721403b6d928be0995717b4c7e3
+Size: 60765
+MD5Sum: e3dcaee1b06f382e70d546726d01e10c
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1034,10 +1034,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3544
+Installed-Size: 3534
 Filename: asterisk18-pbx-ael_1.8.10.1-5a_keenetic.ipk
-Size: 4339
-MD5Sum: 1b7c753dd4dd0d7b245b70aac4f6b361
+Size: 4331
+MD5Sum: 79abe3dd4581e17d0040c49d56351947
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1053,10 +1053,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 8393
+Installed-Size: 8381
 Filename: asterisk18-pbx-spool_1.8.10.1-5a_keenetic.ipk
-Size: 9193
-MD5Sum: 97afd06b911afb4fe66c592bf589f7e0
+Size: 9185
+MD5Sum: fe95c3596348c8fa915cec87057afcbf
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1072,10 +1072,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 40164
+Installed-Size: 40152
 Filename: asterisk18-res-ael-share_1.8.10.1-5a_keenetic.ipk
-Size: 40933
-MD5Sum: 761d4d5b4cb21346e3c78bab9900b4d7
+Size: 40904
+MD5Sum: d9b03f482cf6587ea9e3e8e16ce3f607
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1091,10 +1091,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 24823
+Installed-Size: 24805
 Filename: asterisk18-res-agi_1.8.10.1-5a_keenetic.ipk
-Size: 25613
-MD5Sum: 2517d42217922b83beea54d6f757fba5
+Size: 25581
+MD5Sum: 3a416e3486484dee8cfc380c42bb6f21
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1110,10 +1110,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3499
+Installed-Size: 3489
 Filename: asterisk18-res-clioriginate_1.8.10.1-5a_keenetic.ipk
-Size: 4294
-MD5Sum: 1ba8b25aa6bf037bf7af46049afbc9f6
+Size: 4284
+MD5Sum: ed1f6545a2f3afaf00e6b6976c00a3f3
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1129,10 +1129,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6634
+Installed-Size: 6618
 Filename: asterisk18-res-crypto_1.8.10.1-5a_keenetic.ipk
-Size: 7489
-MD5Sum: a033408e1fe7a68df121869f071c1dda
+Size: 7465
+MD5Sum: 156aec702770fa305b8bfd3fb76350b7
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1148,10 +1148,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7332
+Installed-Size: 7318
 Filename: asterisk18-res-fax-spandsp_1.8.10.1-5a_keenetic.ipk
-Size: 7988
-MD5Sum: d563d204573e9d2a4d519981e8572be8
+Size: 7979
+MD5Sum: d7844743ce857d643b0c43ee7a07717d
 Description:  Spandsp T.38 and G.711 FAX Resource
 
 Package: asterisk18-res-fax
@@ -1163,10 +1163,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 21797
+Installed-Size: 21791
 Filename: asterisk18-res-fax_1.8.10.1-5a_keenetic.ipk
-Size: 22507
-MD5Sum: 4e790e0aee8746301fcab219a981bb89
+Size: 22526
+MD5Sum: 124cc7b06685f39574ccf06abdebe6da
 Description:  Generic FAX Resource for FAX technology resource modules
 
 Package: asterisk18-res-musiconhold
@@ -1178,10 +1178,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 16838
+Installed-Size: 16826
 Filename: asterisk18-res-musiconhold_1.8.10.1-5a_keenetic.ipk
-Size: 17638
-MD5Sum: fc620f3c7b9d7a868c54d682df275a01
+Size: 17661
+MD5Sum: caba4140fd8f652f33ef66bef1c6d598
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1198,10 +1198,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 5459
+Installed-Size: 5455
 Filename: asterisk18-res-timing-pthread_1.8.10.1-5a_keenetic.ipk
-Size: 6101
-MD5Sum: 78de9fe670d66d876f13e31fb9314e50
+Size: 6092
+MD5Sum: 8aed7505ebe303fbc39ead5cdc71cbf8
 Description:  pthread Timing Interface
 
 Package: asterisk18-sounds
@@ -1213,10 +1213,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1319059
+Installed-Size: 1319058
 Filename: asterisk18-sounds_1.8.10.1-5a_keenetic.ipk
-Size: 1319801
-MD5Sum: 1e5270edbad1b14b257d16ac3943ea79
+Size: 1319812
+MD5Sum: 23493a09ba8e383a2e607d144854b86e
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1232,10 +1232,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 593840
+Installed-Size: 593795
 Filename: asterisk18-voicemail_1.8.10.1-5a_keenetic.ipk
-Size: 594644
-MD5Sum: 74195c49750043ed8295a29097f1539e
+Size: 594614
+MD5Sum: 0a39ed831698ba510eedcb17897b7a92
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
@@ -1251,10 +1251,10 @@ SourceURL: http://downloads.asterisk.org/pub/telephony/asterisk/releases/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1073190
+Installed-Size: 1075955
 Filename: asterisk18_1.8.10.1-5a_keenetic.ipk
-Size: 1071504
-MD5Sum: 41335a08f07958a724bb9c71e4841cc5
+Size: 1074361
+MD5Sum: 583fcaa779e56bdd3b418f711f71c796
 Description:  Asterisk is a complete PBX in software. It provides all of the features
  you would expect from a PBX and more. Asterisk does voice over IP in three
  protocols, and can interoperate with almost all standards-based telephony
