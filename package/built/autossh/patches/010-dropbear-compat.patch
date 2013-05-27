@@ -1,0 +1,11 @@
+--- a/autossh.c.orig	2013-05-24 12:50:44.148608094 +0400
++++ b/autossh.c	2013-05-24 12:51:02.736606285 +0400
+@@ -104,7 +104,7 @@
+ 
+ #define NO_RD_SOCK	-2	/* magic flag for echo: no read socket */
+ 
+-#define	OPTION_STRING "M:V1246ab:c:e:fgi:kl:m:no:p:qstvw:xACD:F:I:L:NO:PR:S:TXY"
++#define	OPTION_STRING "M:V1246ab:c:e:fgi:kl:m:no:p:qstvw:xyAB:CD:F:I:J:K:L:NO:PR:S:TW:XY"
+ 
+ int	logtype  = L_SYSLOG;	/* default log to syslog */
+ int	loglevel = LOG_INFO;	/* default loglevel */
