@@ -1359,17 +1359,17 @@ MD5Sum: 9e2281dffd8840d4fdfbf1b4485f0c67
 Description:  Fidonet mailer
 
 Package: busybox
-Version: 1.19.4-4
+Version: 1.19.4-5
 Source: package/busybox
 SourceFile: busybox-1.19.4.tar.bz2
 SourceURL: http://www.busybox.net/downloads http://distfiles.gentoo.org/distfiles/
 Section: base
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 177937
-Filename: busybox_1.19.4-4_keeneticII.ipk
-Size: 178260
-MD5Sum: 232afd72f5a864e97fe7ca5ca2c1e253
+Installed-Size: 179163
+Filename: busybox_1.19.4-5_keeneticII.ipk
+Size: 179533
+MD5Sum: a1726d552cd22a6fd60fca645eb699da
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
  This package is built for usb.
@@ -4732,17 +4732,18 @@ Description:  Open DC hub is a Unix/Linux version of the hub software
  for the Direct Connect network
 
 Package: openssh-sftp-server
-Version: 6.2p1-1
+Version: 6.2p2-1
+Depends: libopenssl
 Source: package/built/openssh
-SourceFile: openssh-6.2p1.tar.gz
+SourceFile: openssh-6.2p2.tar.gz
 SourceURL: ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/ ftp://openbsd.wiretapped.net/pub/OpenBSD/OpenSSH/portable/ ftp://ftp.belnet.be/packages/openbsd/OpenSSH/portable/ ftp://ftp.de.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/
 Section: net
 Maintainer: Peter Wagner <tripolar@gmx.at>
 Architecture: keeneticII
-Installed-Size: 30613
-Filename: openssh-sftp-server_6.2p1-1_keeneticII.ipk
-Size: 31226
-MD5Sum: 485218411f84ee8876752f7553056db9
+Installed-Size: 30623
+Filename: openssh-sftp-server_6.2p2-1_keeneticII.ipk
+Size: 31271
+MD5Sum: d2a57484088f9fa66369a26761447d98
 Description:  OpenSSH SFTP server.
 
 Package: openssl-util
@@ -9161,6 +9162,773 @@ Description:  This is InfoZIP's zip program. It produces files that are fully
  compatible with the popular PKZIP program; however, the command line 
  options are not identical. In other words, the end result is the same, 
  but the methods differ.
+
+Package: znc-mod-adminlog
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 12508
+Filename: znc-mod-adminlog_1.0-1_keeneticII.ipk
+Size: 13147
+MD5Sum: f0920b2bc860c4eab3210ad78b3d2eda
+Description:  Log user connects and disconnects and failed logins to file or syslog.
+
+Package: znc-mod-autoattach
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 13221
+Filename: znc-mod-autoattach_1.0-1_keeneticII.ipk
+Size: 13839
+MD5Sum: c3f4a07f2801f7da132a60e51fc73396
+Description:  Reattaches you to channels on activity.
+
+Package: znc-mod-autocycle
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 14847
+Filename: znc-mod-autocycle_1.0-1_keeneticII.ipk
+Size: 15443
+MD5Sum: ea2de40c1379832b0fe814f39e012d12
+Description:  Cycles a channel when you are the only one in there and you don't have op.
+
+Package: znc-mod-autoop
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 24224
+Filename: znc-mod-autoop_1.0-1_keeneticII.ipk
+Size: 24783
+MD5Sum: 2e70b5e67332f7f54cfb84d9b2ec146c
+Description:  Auto op the good guys.
+
+Package: znc-mod-autoreply
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 11450
+Filename: znc-mod-autoreply_1.0-1_keeneticII.ipk
+Size: 12058
+MD5Sum: 116db629bad28f0a9fb550329f58e1d5
+Description:  Gives a automatic reply if someone messages you if you are away.
+
+Package: znc-mod-autovoice
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 17810
+Filename: znc-mod-autovoice_1.0-1_keeneticII.ipk
+Size: 18423
+MD5Sum: a7a6e6839ee842cb16f096b15bdab444
+Description:  Autovoices everyone who joins some channel.
+
+Package: znc-mod-awaynick
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 10464
+Filename: znc-mod-awaynick_1.0-1_keeneticII.ipk
+Size: 11062
+MD5Sum: fe2c5d1190d74334b285a1480d021625
+Description:  Change your nick while you are away.
+
+Package: znc-mod-awaystore
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 20851
+Filename: znc-mod-awaystore_1.0-1_keeneticII.ipk
+Size: 21430
+MD5Sum: 726f8105e1abda3d3f6794a78d94c733
+Description:  Stores messages while away, also auto away.
+
+Package: znc-mod-block-motd
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 6942
+Filename: znc-mod-block-motd_1.0-1_keeneticII.ipk
+Size: 7567
+MD5Sum: 72b6971825167ddfe55135eb720d87bc
+Description:  This module blocks the server's Message of the Day.
+
+Package: znc-mod-blockuser
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 14978
+Filename: znc-mod-blockuser_1.0-1_keeneticII.ipk
+Size: 15609
+MD5Sum: 786e96b7b6cdfb0f1c6d17a31e72f51a
+Description:  Blocks certain users from using ZNC saying their account was disabled.
+
+Package: znc-mod-bouncedcc
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 24284
+Filename: znc-mod-bouncedcc_1.0-1_keeneticII.ipk
+Size: 24810
+MD5Sum: 5efc7716f93bb84bdf34a3559ea32fab
+Description:  Bounces dcc transfers through the znc server instead of sending them directly to the user.
+
+Package: znc-mod-buffextras
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 8547
+Filename: znc-mod-buffextras_1.0-1_keeneticII.ipk
+Size: 9182
+MD5Sum: c0046104352f50cace572c73aaad969b
+Description:  Add nick changes, joins, parts, topic changes etc. to your playback buffer.
+
+Package: znc-mod-cert
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 10898
+Filename: znc-mod-cert_1.0-1_keeneticII.ipk
+Size: 11512
+MD5Sum: b545cf45bc0a78b548bafa52ef7d22d2
+Description:  Use a SSL certificate for connecting to a server.
+
+Package: znc-mod-certauth
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 21095
+Filename: znc-mod-certauth_1.0-1_keeneticII.ipk
+Size: 21724
+MD5Sum: 7a8b076bc05950591f42580e831aeb72
+Description:  This module allows users to log in to ZNC via SSL client keys.
+
+Package: znc-mod-chansaver
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 7052
+Filename: znc-mod-chansaver_1.0-1_keeneticII.ipk
+Size: 7690
+MD5Sum: d63ffdbe72d68caaf1a4eefc070327d9
+Description:  Keeping config up to date when user joins and parts.
+
+Package: znc-mod-clearbufferonmsg
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 6701
+Filename: znc-mod-clearbufferonmsg_1.0-1_keeneticII.ipk
+Size: 7353
+MD5Sum: cad720868763a3f985e92c8ba9c904a5
+Description:  This module keeps the buffer until the next message from the client.
+
+Package: znc-mod-clientnotify
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 11394
+Filename: znc-mod-clientnotify_1.0-1_keeneticII.ipk
+Size: 11988
+MD5Sum: 57c77473d8c1017fb745b12e7d4ed712
+Description:  Notify about new incoming connections to your user.
+
+Package: znc-mod-controlpanel
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 35913
+Filename: znc-mod-controlpanel_1.0-1_keeneticII.ipk
+Size: 36571
+MD5Sum: ad04af09153b803b3916f8d40165887c
+Description:  Allows you to add/remove/edit users and settings on the fly via IRC messages.
+
+Package: znc-mod-crypt
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 12171
+Filename: znc-mod-crypt_1.0-1_keeneticII.ipk
+Size: 12770
+MD5Sum: 5480aeaa2df6bfaa6a3a6bfddb2ee546
+Description:  Encryption for channel/private messages.
+
+Package: znc-mod-ctcpflood
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 9004
+Filename: znc-mod-ctcpflood_1.0-1_keeneticII.ipk
+Size: 9624
+MD5Sum: 8793617ddeb17de50649ceb56af135c4
+Description:  This module tries to block ctcp floods.
+
+Package: znc-mod-dcc
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 23629
+Filename: znc-mod-dcc_1.0-1_keeneticII.ipk
+Size: 24211
+MD5Sum: 1f87106f0b09a64e06e95c39a215cbde
+Description:  Allows you to transfer files to and from ZNC.
+
+Package: znc-mod-disconkick
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 6869
+Filename: znc-mod-disconkick_1.0-1_keeneticII.ipk
+Size: 7549
+MD5Sum: 1d8a4e1f6af105e40cd24b72f7127b67
+Description:  This module will kick your client from all channels where you are, in case if ZNC disconnects from server.
+
+Package: znc-mod-fail2ban
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 11492
+Filename: znc-mod-fail2ban_1.0-1_keeneticII.ipk
+Size: 12127
+MD5Sum: d3938d8e39d4805faf4acf4e1a59b2f3
+Description:  Block IPs for some time after a failed login.
+
+Package: znc-mod-flooddetach
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 11872
+Filename: znc-mod-flooddetach_1.0-1_keeneticII.ipk
+Size: 12508
+MD5Sum: 9ad7396004a1b7ce52cda8d1d2446e72
+Description:  This module detaches you from channels which are flooded.
+
+Package: znc-mod-identfile
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 13638
+Filename: znc-mod-identfile_1.0-1_keeneticII.ipk
+Size: 14238
+MD5Sum: cbd4b8d9720be1cac60128c621225dd8
+Description:  Places the ident of a user to a file when they are trying to connect.
+
+Package: znc-mod-keepnick
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 10376
+Filename: znc-mod-keepnick_1.0-1_keeneticII.ipk
+Size: 10957
+MD5Sum: e9bfd76c67b1d37fc526d85404bb4ac2
+Description:  Tries to get you your primary nick.
+
+Package: znc-mod-kickrejoin
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 8793
+Filename: znc-mod-kickrejoin_1.0-1_keeneticII.ipk
+Size: 9415
+MD5Sum: 9d280c2dae7bccbdd733c2c14ca13eaa
+Description:  Implements auto-rejoin-on-kick.
+
+Package: znc-mod-lastseen
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 13516
+Filename: znc-mod-lastseen_1.0-1_keeneticII.ipk
+Size: 14101
+MD5Sum: 8c679f6dccae505ebdadb0975a1ac30e
+Description:  Logs when a user last logged in to ZNC.
+
+Package: znc-mod-listsockets
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 14595
+Filename: znc-mod-listsockets_1.0-1_keeneticII.ipk
+Size: 15197
+MD5Sum: a18811a94ad6ed82130ae61497afdfc5
+Description:  This module displays a list of all open sockets in ZNC.
+
+Package: znc-mod-log
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 14404
+Filename: znc-mod-log_1.0-1_keeneticII.ipk
+Size: 14961
+MD5Sum: 12192fb141d564d8d2986620137eea28
+Description:  Log conversations to file.
+
+Package: znc-mod-nickserv
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 14155
+Filename: znc-mod-nickserv_1.0-1_keeneticII.ipk
+Size: 14737
+MD5Sum: b826db34122207b6525160c37519fa70
+Description:  Auths you with NickServ.
+
+Package: znc-mod-notes
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 15163
+Filename: znc-mod-notes_1.0-1_keeneticII.ipk
+Size: 15796
+MD5Sum: 8fde023cef67f711557d263953643362
+Description:  This modules stores and displays short notes using a key/note pairs and shows them to you on connect.
+
+Package: znc-mod-notify-connect
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 6795
+Filename: znc-mod-notify-connect_1.0-1_keeneticII.ipk
+Size: 7442
+MD5Sum: 1ce8a694cdb748cce28ad9ea3bd17184
+Description:  Sends a notice to all admins when a user logs in or out.
+
+Package: znc-mod-partyline
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 31009
+Filename: znc-mod-partyline_1.0-1_keeneticII.ipk
+Size: 31602
+MD5Sum: 4986c7b9c3ebf1fd7794495ef76e4dba
+Description:  Allows ZNC users to join internal channels and query other ZNC users on the same ZNC.
+
+Package: znc-mod-perform
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 15715
+Filename: znc-mod-perform_1.0-1_keeneticII.ipk
+Size: 16284
+MD5Sum: fba6d7c9c60907d736de7e72982ed046
+Description:  Performs commands on connect.
+
+Package: znc-mod-q
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 22961
+Filename: znc-mod-q_1.0-1_keeneticII.ipk
+Size: 23558
+MD5Sum: bf396e58b8efa1a53c3c800163ab6b1b
+Description:  Auths you with Q (and a little more).
+
+Package: znc-mod-raw
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 6612
+Filename: znc-mod-raw_1.0-1_keeneticII.ipk
+Size: 7197
+MD5Sum: 919d79f6a6dd8f77f440ca0dbf03a0d1
+Description:  View all of the raw traffic.
+
+Package: znc-mod-route-replies
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 14328
+Filename: znc-mod-route-replies_1.0-1_keeneticII.ipk
+Size: 14941
+MD5Sum: 929d80197c1e6f0359e00ea71be7fa1f
+Description:  Routes back answers to the right client when connected with multiple clients.
+
+Package: znc-mod-sasl
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 18500
+Filename: znc-mod-sasl_1.0-1_keeneticII.ipk
+Size: 19115
+MD5Sum: bd31e5995a54cc42f39078e8605bc5df
+Description:  The SASL module allows you to authenticate to an IRC network via SASL.
+
+Package: znc-mod-savebuff
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 13748
+Filename: znc-mod-savebuff_1.0-1_keeneticII.ipk
+Size: 14387
+MD5Sum: e7521fbac2f0e909ab7577f427eec9be
+Description:  Saves your channel buffers into an encrypted file so they can survive restarts and reboots.
+
+Package: znc-mod-schat
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 22614
+Filename: znc-mod-schat_1.0-1_keeneticII.ipk
+Size: 23192
+MD5Sum: 00eb59bb1386191cd60b4d9d8998cfbc
+Description:  SSL (encrypted) DCC chats.
+
+Package: znc-mod-send-raw
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 14307
+Filename: znc-mod-send-raw_1.0-1_keeneticII.ipk
+Size: 14904
+MD5Sum: 2e2b62daeee446e3de4c367eefc9f80b
+Description:  Allows you to send raw traffic to IRC from other users.
+
+Package: znc-mod-shell
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 11584
+Filename: znc-mod-shell_1.0-1_keeneticII.ipk
+Size: 12227
+MD5Sum: 8d3f41ba9d3ea54077b3e9dfee5ecd88
+Description:  Have your unix shell in a query window right inside of your IRC client.
+
+Package: znc-mod-simple-away
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 12138
+Filename: znc-mod-simple-away_1.0-1_keeneticII.ipk
+Size: 12788
+MD5Sum: b0e25520247440c0d08324908db446ab
+Description:  This module will automatically set you away on IRC while you are disconnected from the bouncer.
+
+Package: znc-mod-stickychan
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 15345
+Filename: znc-mod-stickychan_1.0-1_keeneticII.ipk
+Size: 15915
+MD5Sum: 5a4eaf5b542f6518299283c60b9716a2
+Description:  Keeps you sticked to specific channels.
+
+Package: znc-mod-watch
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 26585
+Filename: znc-mod-watch_1.0-1_keeneticII.ipk
+Size: 27137
+MD5Sum: 630ce2daffeec8a83622759cbf499ff1
+Description:  Monitor activity for specific text patterns from specific users and have the text sent to a special query window.
+
+Package: znc-mod-webadmin
+Version: 1.0-1
+Depends: znc
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 72395
+Filename: znc-mod-webadmin_1.0-1_keeneticII.ipk
+Size: 72977
+MD5Sum: 8a58667b323d98d5d75a84744fc0e791
+Description:  Allows you to add/remove/edit users and settings on the fly via a web browser.
+
+Package: znc-webskin-dark-clouds
+Version: 1.0-1
+Depends: znc-mod-webadmin
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 32537
+Filename: znc-webskin-dark-clouds_1.0-1_keeneticII.ipk
+Size: 33234
+MD5Sum: aef61ba26aec779b79b2aabb52aba99e
+Description:  dark-clouds webskin for webadmin
+
+Package: znc-webskin-forest
+Version: 1.0-1
+Depends: znc-mod-webadmin
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 221178
+Filename: znc-webskin-forest_1.0-1_keeneticII.ipk
+Size: 221913
+MD5Sum: 603ce2bcb4f7107aa1db7b36c8332a56
+Description:  forest webskin for webadmin
+
+Package: znc-webskin-ice
+Version: 1.0-1
+Depends: znc-mod-webadmin
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 4517
+Filename: znc-webskin-ice_1.0-1_keeneticII.ipk
+Size: 5095
+MD5Sum: dc8f97dfd3c99a34271f2a503575ebdb
+Description:  ice webskin for webadmin
+
+Package: znc
+Version: 1.0-1
+Depends: libopenssl, uclibcxx
+Source: package/built/znc
+SourceFile: znc-1.0.tar.gz
+SourceURL: http://znc.in/releases http://znc.in/releases/archive
+Section: net
+Maintainer: Jonas Gorski <jonas.gorski+openwrt@gmail.com>
+Architecture: keeneticII
+Installed-Size: 449479
+Filename: znc_1.0-1_keeneticII.ipk
+Size: 449380
+MD5Sum: b9d5219dadbf1932b7ab77c6a5596525
+Description:  ZNC is an IRC bouncer with many advanced features like detaching,
+ multiple users, per channel playback buffer, SSL, IPv6, transparent DCC
+ bouncing, and c++ module support to name a few.
 
 Package: zope-interface
 Version: 2.5.0-1
