@@ -49,6 +49,8 @@ define Package/znc/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/znc $(1)/usr/bin/
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_DATA) ./files/znc.conf $(1)/etc/config/znc
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/K60znc $(1)/etc/init.d/
 	$(INSTALL_DIR) $(1)/usr/lib/znc/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/modules/droproot.so $(1)/usr/lib/znc/
 endef
