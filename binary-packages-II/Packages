@@ -4654,18 +4654,18 @@ MD5Sum: 060d99a9ab0c13005f001c8a7e6bdd8f
 Description:  The Nettle package contains the low-level cryptographic library that is designed to fit easily in many contexts.
 
 Package: nfs-kernel-server
-Version: 1.2.7-1
+Version: 1.2.8-1
 Depends: libwrap, libblkid, libuuid, kmod-fs-nfsd, kmod-fs-nfs, portmap
 Source: package/built/nfs-kernel-server
-SourceFile: nfs-utils-1.2.7.tar.bz2
+SourceFile: nfs-utils-1.2.8.tar.bz2
 SourceURL: @SF/nfs
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 108536
-Filename: nfs-kernel-server_1.2.7-1_keeneticII.ipk
-Size: 108654
-MD5Sum: fee22bead766695bfebd9f702586d27f
+Installed-Size: 108905
+Filename: nfs-kernel-server_1.2.8-1_keeneticII.ipk
+Size: 109017
+MD5Sum: 060828bee074473668de1d8ab82ac966
 Description:  Kernel NFS server support
 
 Package: nginx-basic
