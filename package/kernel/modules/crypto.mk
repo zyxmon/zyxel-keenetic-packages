@@ -25,7 +25,7 @@ define KernelPackage/crypto-core
   TITLE:=Core CryptoAPI modules
   KCONFIG:= \
 	CONFIG_CRYPTO=y \
-	CONFIG_CRYPTO_ALGAPI \
+	CONFIG_CRYPTO_ALGAPI=\
 	CONFIG_CRYPTO_BLKCIPHER \
 	CONFIG_CRYPTO_CBC \
 	CONFIG_CRYPTO_DEFLATE \
@@ -33,28 +33,20 @@ define KernelPackage/crypto-core
 	CONFIG_CRYPTO_HASH \
 	CONFIG_CRYPTO_HMAC \
 	CONFIG_CRYPTO_MANAGER
+ifeq ($(CONFIG_TARGET_keeneticII),y)
   FILES:= \
-	$(LINUX_DIR)/crypto/crypto_algapi.$(LINUX_KMOD_SUFFIX) \
-	$(LINUX_DIR)/crypto/blkcipher.$(LINUX_KMOD_SUFFIX) \
-	$(LINUX_DIR)/crypto/cbc.$(LINUX_KMOD_SUFFIX) \
 	$(LINUX_DIR)/crypto/deflate.$(LINUX_KMOD_SUFFIX) \
-	$(LINUX_DIR)/crypto/ecb.$(LINUX_KMOD_SUFFIX) \
-	$(LINUX_DIR)/crypto/crypto_hash.$(LINUX_KMOD_SUFFIX) \
-	$(LINUX_DIR)/crypto/cryptomgr.$(LINUX_KMOD_SUFFIX)
-  AUTOLOAD:=$(call AutoLoad,01, \
-	crypto_algapi \
-	cryptomgr \
-	crypto_hash \
-	blkcipher \
-	cbc \
-	ecb \
-	deflate \
-  )
+	$(LINUX_DIR)/crypto/hmac.$(LINUX_KMOD_SUFFIX) \
+	$(LINUX_DIR)/crypto/crypto_hash.$(LINUX_KMOD_SUFFIX)
+else
+  FILES:= \
+	$(LINUX_DIR)/crypto/deflate.$(LINUX_KMOD_SUFFIX) \
+	$(LINUX_DIR)/crypto/ecb.$(LINUX_KMOD_SUFFIX)
+endif
 endef
 
 define KernelPackage/crypto-core/2.4
   FILES:=$(LINUX_DIR)/crypto/deflate.$(LINUX_KMOD_SUFFIX)
-  AUTOLOAD:=$(call AutoLoad,01, deflate)
 endef
 
 $(eval $(call KernelPackage,crypto-core))
@@ -98,22 +90,9 @@ define KernelPackage/crypto-des
   DEPENDS:=+kmod-crypto-core
   KCONFIG:=CONFIG_CRYPTO_DES
   FILES:=$(LINUX_DIR)/crypto/des$(CRYPTO_GENERIC).$(LINUX_KMOD_SUFFIX)
-  AUTOLOAD:=$(call AutoLoad,09,des$(CRYPTO_GENERIC))
 endef
 
 $(eval $(call KernelPackage,crypto-des))
-
-
-define KernelPackage/crypto-hmac
-  SUBMENU:=$(CRYPTO_MENU)
-  TITLE:=HMAC digest CryptoAPI module
-  DEPENDS:=+kmod-crypto-core
-  KCONFIG:=CONFIG_CRYPTO_HMAC
-  FILES:=$(LINUX_DIR)/crypto/hmac.$(LINUX_KMOD_SUFFIX)
-  AUTOLOAD:=$(call AutoLoad,09,hmac)
-endef
-
-$(eval $(call KernelPackage,crypto-hmac))
 
 
 define KernelPackage/crypto-md5
