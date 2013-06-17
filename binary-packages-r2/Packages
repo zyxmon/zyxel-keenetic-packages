@@ -3741,7 +3741,7 @@ Description:  Ogg project codecs use the Ogg bitstream format to arrange the raw
  streams into a single physical bitstream.
 
 Package: libopenssl
-Version: 1.0.1e-1
+Version: 1.0.1e-1a
 Source: package/openssl
 SourceFile: openssl-1.0.1e.tar.gz
 SourceURL: http://www.openssl.org/source/ ftp://ftp.funet.fi/pub/crypt/mirrors/ftp.openssl.org/source ftp://ftp.sunet.se/pub/security/tools/net/openssl/source/
@@ -3750,10 +3750,10 @@ LicenseFiles: LICENSE
 Section: libs
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 617201
-Filename: libopenssl_1.0.1e-1_keenetic.ipk
-Size: 611195
-MD5Sum: 13be9630b000641e43f271a152516f8f
+Installed-Size: 617192
+Filename: libopenssl_1.0.1e-1a_keenetic.ipk
+Size: 611036
+MD5Sum: f9d3a7cd2a82558e07ed8a2226e65044
 Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  commercial-grade, full-featured, and Open Source toolkit implementing the Secure
  Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well
@@ -5860,7 +5860,7 @@ MD5Sum: 8beb6905d138cf07352db576630589bf
 Description:  OpenSSH SFTP server.
 
 Package: openssl-util
-Version: 1.0.1e-1
+Version: 1.0.1e-1a
 Depends: libopenssl
 Source: package/openssl
 SourceFile: openssl-1.0.1e.tar.gz
@@ -5870,10 +5870,10 @@ LicenseFiles: LICENSE
 Section: utils
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 170356
-Filename: openssl-util_1.0.1e-1_keenetic.ipk
-Size: 170651
-MD5Sum: 9080f73f5148577792eccda69b1a4a16
+Installed-Size: 170242
+Filename: openssl-util_1.0.1e-1a_keenetic.ipk
+Size: 170507
+MD5Sum: f09789f22b4883536a7d3cd32ba99cc5
 Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  commercial-grade, full-featured, and Open Source toolkit implementing the Secure
  Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well
