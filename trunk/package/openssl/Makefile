@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=openssl
 PKG_VERSION:=1.0.1e
-PKG_RELEASE:=1
+PKG_RELEASE:=1a
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://www.openssl.org/source/ \
@@ -170,9 +170,9 @@ endef
 define Package/openssl-util/install
 	$(INSTALL_DIR) $(1)/etc/ssl
 	$(CP) $(PKG_INSTALL_DIR)$(ROOT_ZYX)/etc/ssl/openssl.cnf $(1)/etc/ssl/
-	$(INSTALL_DIR) $(1)$(ROOT_ZYX)/etc/ssl/certs
-	$(INSTALL_DIR) $(1)$(ROOT_ZYX)/etc/ssl/private
-	chmod 0700 $(1)$(ROOT_ZYX)/etc/ssl/private
+	$(INSTALL_DIR) $(1)/etc/ssl/certs
+	$(INSTALL_DIR) $(1)/etc/ssl/private
+	chmod 0700 $(1)/etc/ssl/private
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)$(ROOT_ZYX)/usr/bin/openssl $(1)/usr/bin/
 endef
