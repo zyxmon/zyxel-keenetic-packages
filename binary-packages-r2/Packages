@@ -1765,7 +1765,7 @@ Description:  You can wake up WOL compliant Computers which have been powered do
  ether-wake also supports WOL passwords.
 
 Package: ettercap
-Version: NG-0.7.3-2a
+Version: NG-0.7.3-2b
 Depends: libopenssl, libpcap, libnet1, libpcre, libncurses, libltdl, libiconv-full
 Source: package/built/ettercap
 SourceFile: ettercap-NG-0.7.3.tar.gz
@@ -1773,10 +1773,10 @@ SourceURL: @SF/ettercap
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 421834
-Filename: ettercap_NG-0.7.3-2a_keenetic.ipk
-Size: 422459
-MD5Sum: d144326def78a8fe7a7a004db401abc7
+Installed-Size: 421522
+Filename: ettercap_NG-0.7.3-2b_keenetic.ipk
+Size: 422133
+MD5Sum: 7485f20ce7924a29cccdb827618bec9f
 Description:  It features sniffing of live connections, content filtering on the fly 
  and many other interesting tricks. 
  It supports active and passive dissection of many protocols (even 
@@ -2265,24 +2265,18 @@ MD5Sum: 6805709e3ad42176cceec19f1a217c59
 Description:  An ID3v1/ID3v2 tag manipulation library
 
 Package: iftop
-Version: 0.17-2
+Version: 0.17-2a
 Depends: libpcap, libncurses
-Provides: 
 Source: package/built/iftop
 SourceFile: iftop-0.17.tar.gz
 SourceURL: http://www.ex-parrot.com/~pdw/iftop/download
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 21186
-Filename: iftop_0.17-2_keenetic.ipk
-Size: 22014
-MD5Sum: 70298d7dd8307f97c2d3aa10ddd61c87
+Installed-Size: 21176
+Filename: iftop_0.17-2a_keenetic.ipk
+Size: 21952
+MD5Sum: 5e0db5e5eae0102ee471273ca98ddf19
 Description:  iftop does for network usage what top(1) does for CPU usage. It 
  listens to network traffic on a named interface and displays a 
  table of current bandwidth usage by pairs of hosts. Handy for 
@@ -3761,24 +3755,17 @@ Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  This package contains the OpenSSL shared libraries, needed by other programs.
 
 Package: libpcap
-Version: 1.1.1-1
-Depends: 
-Provides: 
+Version: 1.3.0-1
 Source: package/libpcap
-SourceFile: libpcap-1.1.1.tar.gz
+SourceFile: libpcap-1.3.0.tar.gz
 SourceURL: http://www.tcpdump.org/release/
-License: 
-LicenseFiles: 
 Section: libs
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Maintainer: Felix Fietkau <nbd@openwrt.org>
 Architecture: keenetic
-Installed-Size: 78447
-Filename: libpcap_1.1.1-1_keenetic.ipk
-Size: 79161
-MD5Sum: 42a5e8097e3b5bb4593c2250f02adb7d
+Installed-Size: 82711
+Filename: libpcap_1.3.0-1_keenetic.ipk
+Size: 83356
+MD5Sum: 4101448259fc78488a1c1c120f36f914
 Description:  This package contains a system-independent library for user-level network packet
  capture.
 
@@ -5814,7 +5801,7 @@ Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy
  written by Igor Sysoev. Built with full set of modules
 
 Package: nmap
-Version: 6.01-4a
+Version: 6.01-4b
 Depends: libpcap, libstdcpp
 Source: package/built/nmap
 SourceFile: nmap-6.01.tar.bz2
@@ -5822,10 +5809,10 @@ SourceURL: http://nmap.org/dist/
 Section: net
 Maintainer: Nuno Goncalves <nunojpg@gmail.com>
 Architecture: keenetic
-Installed-Size: 1586075
-Filename: nmap_6.01-4a_keenetic.ipk
-Size: 1581191
-MD5Sum: 82b1084562494c562c5173ff3ff60557
+Installed-Size: 1586124
+Filename: nmap_6.01-4b_keenetic.ipk
+Size: 1581249
+MD5Sum: d1db67a715128b5f7de28cc51963e053
 Description:  Utility for network exploration or security auditing
 
 Package: opendchub
@@ -10507,24 +10494,18 @@ MD5Sum: 75bd3d88cf52eee31fcffaec139e419e
 Description:  Traffic control utility
 
 Package: tcpdump-mini
-Version: 4.1.1-2
+Version: 4.2.1-3
 Depends: libpcap
-Provides: 
 Source: package/built/tcpdump
-SourceFile: tcpdump-4.1.1.tar.gz
+SourceFile: tcpdump-4.2.1.tar.gz
 SourceURL: http://www.tcpdump.org/release/ http://ftp.gwdg.de/pub/misc/tcpdump/ http://www.at.tcpdump.org/ http://www.br.tcpdump.org/
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Maintainer: Felix Fietkau <nbd@openwrt.org>
 Architecture: keenetic
-Installed-Size: 139496
-Filename: tcpdump-mini_4.1.1-2_keenetic.ipk
-Size: 139969
-MD5Sum: b07a45e2a7d0f0feba77485e1d2d25a2
+Installed-Size: 142855
+Filename: tcpdump-mini_4.2.1-3_keenetic.ipk
+Size: 143277
+MD5Sum: ebab9560e74d6cd96b595917f35ad4ec
 Description:  Network monitoring and data acquisition tool (minimal version)
 
 Package: tesseract-eng-data
