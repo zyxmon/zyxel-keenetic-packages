@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ettercap
 PKG_VERSION:=NG-0.7.3
-PKG_RELEASE:=2a
+PKG_RELEASE:=2b
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SF/ettercap
