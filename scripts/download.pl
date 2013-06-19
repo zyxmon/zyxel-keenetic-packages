@@ -194,6 +194,8 @@ foreach my $mirror (@ARGV) {
 #push @mirrors, 'http://mirror1.openwrt.org';
 push @mirrors, 'http://mirror2.openwrt.org/sources';
 push @mirrors, 'http://downloads.openwrt.org/sources';
+push @mirrors, 'http://x.vm0.ru/wl500g-repo/sources-mirror';
+
 
 while (!$ok) {
 	my $mirror = shift @mirrors;
