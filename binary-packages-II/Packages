@@ -1873,18 +1873,18 @@ Description:  giflib is a library for reading and writing gif images.
  the LZW compression algorithm was patented. 
 
 Package: git
-Version: 1.7.11.2-1a
-Depends: libopenssl
+Version: 1.7.11.2-1b
+Depends: libcurl, libexpat
 Source: package/built/git
 SourceFile: git-1.7.11.2.tar.gz
 SourceURL: http://git-core.googlecode.com/files/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 744998
-Filename: git_1.7.11.2-1a_keeneticII.ipk
-Size: 744266
-MD5Sum: 63140184bec341a525df2a0c20095f42
+Installed-Size: 3225816
+Filename: git_1.7.11.2-1b_keeneticII.ipk
+Size: 3220210
+MD5Sum: 7431793b6550835792837fb761dabe32
 Description:  Git is a free & open source, distributed version control system
  designed to handle everything from small to very large projects
  with speed and efficiency.
