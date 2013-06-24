@@ -2141,10 +2141,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 115660
+Installed-Size: 120019
 Filename: kmod-fs-nfs-common_2.6.22-tc-1_keeneticII.ipk
-Size: 115694
-MD5Sum: 14d886e57fcbee85a4aa0d42c6237b20
+Size: 120069
+MD5Sum: 5e73f41a741960d60ded5e70184cd8b2
 Description:  Common NFS filesystem modules
 
 Package: kmod-fs-nfs
@@ -2167,10 +2167,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 41012
+Installed-Size: 53983
 Filename: kmod-fs-nfsd_2.6.22-tc-2_keeneticII.ipk
-Size: 41507
-MD5Sum: 26b9102581765d5a1462252b23d6abed
+Size: 54369
+MD5Sum: 84ef41e269461c43c961a197e6e52279
 Description:  Kernel module for NFS kernel server support
 
 Package: kmod-gre
