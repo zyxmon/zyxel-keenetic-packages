@@ -266,7 +266,12 @@ define KernelPackage/fs-nfsd
   SUBMENU:=$(FS_MENU)
   TITLE:=NFS kernel server support
   DEPENDS:=+kmod-fs-nfs-common +kmod-fs-exportfs
-  KCONFIG:=CONFIG_NFSD
+  KCONFIG+=\
+	CONFIG_NFSD\
+	CONFIG_NFSD_TCP=y\
+	CONFIG_NFSD_V3=y\
+	CONFIG_NFSD_V3_ACL=n\
+	CONFIG_NFSD_V4=n
   FILES:=$(LINUX_DIR)/fs/nfsd/nfsd.ko
   PKG_RELEASE:=2
 endef
