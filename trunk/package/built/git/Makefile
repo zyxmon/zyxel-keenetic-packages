@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=git
 PKG_VERSION:=1.7.11.2
-PKG_RELEASE:=1b
+PKG_RELEASE:=1c
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://git-core.googlecode.com/files/
@@ -50,7 +50,9 @@ CONFIGURE_VARS += \
 
 MAKE_FLAGS += \
 	NO_INSTALL_HARDLINKS="Yes" \
-	NO_PERL="Yes"
+	NO_PERL="Yes" \
+	NEEDS_SSL_WITH_CURL="Yes" \
+	NEEDS_CRYPTO_WITH_SSL="Yes"
 
 define Package/git/install
 	$(INSTALL_DIR) $(1)

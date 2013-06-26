@@ -1,0 +1,11 @@
+--- a/configure.orig	2013-06-26 11:53:00.421420514 +0400
++++ b/configure	2013-06-26 11:55:04.573374979 +0400
+@@ -4048,7 +4048,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lcurl  $LIBS"
++LIBS="-lcurl -lcrypto -lssl -lz $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
