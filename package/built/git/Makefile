@@ -8,23 +8,24 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=git
-PKG_VERSION:=1.7.11.2
-PKG_RELEASE:=1c
+PKG_VERSION:=1.8.3.1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://git-core.googlecode.com/files/
-PKG_MD5SUM:=91e01a22032f5d0ca2941ae7fd49d587
+PKG_MD5SUM:=35401b410e7f248b13e35a1069aca2e2
 
 PKG_INSTALL:=1
 PKG_BUILD_PARALLEL:=1
 
 include $(INCLUDE_DIR)/package.mk
+include $(INCLUDE_DIR)/nls.mk
 
 define Package/git
   SECTION:=net
   CATEGORY:=Network
   SUBMENU:=Version Control Systems
-  DEPENDS:=+libcurl +libexpat
+  DEPENDS:=$(ICONV_DEPENDS) $(INTL_DEPENDS) +libcurl +libexpat
   TITLE:=The fast version control system
   URL:=http://git-scm.com
 endef
@@ -38,9 +39,9 @@ endef
 CONFIGURE_PREFIX:=$(PREFIX_ZYX)
 
 CONFIGURE_ARGS += \
-	--without-iconv \
+	--with-iconv="$(ICONV_PREFIX)" \
 	--with-gitconfig="$(ROOT_ZYX)/etc/gitconfig" \
-	--with-gitattributes="$(ROOT_ZYX)/opt/etc/gitattributes" \
+	--with-gitattributes="$(ROOT_ZYX)/etc/gitattributes" \
 	--without-python \
 	--without-tcltk \
 
@@ -48,11 +49,17 @@ CONFIGURE_VARS += \
 	ac_cv_fread_reads_directories=no \
 	ac_cv_snprintf_returns_bogus=no
 
+TARGET_LDFLAGS += \
+	-Wl,-rpath,$(PREFIX_ZYX)/lib
+
 MAKE_FLAGS += \
 	NO_INSTALL_HARDLINKS="Yes" \
 	NO_PERL="Yes" \
 	NEEDS_SSL_WITH_CURL="Yes" \
-	NEEDS_CRYPTO_WITH_SSL="Yes"
+	NEEDS_CRYPTO_WITH_SSL="Yes" \
+	NO_PYTHON="Yes" \
+	NO_TCLTK="Yes"
+	
 
 define Package/git/install
 	$(INSTALL_DIR) $(1)
