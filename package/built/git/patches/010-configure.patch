@@ -1,0 +1,47 @@
+--- a/configure.orig	2013-06-11 00:01:55.000000000 +0400
++++ b/configure	2013-06-27 15:24:15.633476454 +0400
+@@ -3440,7 +3440,7 @@
+ else
+ 
+       SAVE_LDFLAGS="${LDFLAGS}"
+-      LDFLAGS="${SAVE_LDFLAGS} -Wl,-rpath,/"
++      LDFLAGS="${SAVE_LDFLAGS}"
+       cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -3465,7 +3465,7 @@
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $git_cv_ld_wl_rpath" >&5
+ $as_echo "$git_cv_ld_wl_rpath" >&6; }
+    if test "$git_cv_ld_wl_rpath" = "yes"; then
+-      CC_LD_DYNPATH=-Wl,-rpath,
++      CC_LD_DYNPATH=
+    else
+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking if linker supports -rpath" >&5
+ $as_echo_n "checking if linker supports -rpath... " >&6; }
+@@ -3474,7 +3474,7 @@
+ else
+ 
+          SAVE_LDFLAGS="${LDFLAGS}"
+-         LDFLAGS="${SAVE_LDFLAGS} -rpath /"
++         LDFLAGS="${SAVE_LDFLAGS}"
+          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -3499,7 +3499,7 @@
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $git_cv_ld_rpath" >&5
+ $as_echo "$git_cv_ld_rpath" >&6; }
+       if test "$git_cv_ld_rpath" = "yes"; then
+-         CC_LD_DYNPATH=-rpath
++         CC_LD_DYNPATH=
+       else
+          CC_LD_DYNPATH=
+          { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: linker does not support runtime path to dynamic libraries" >&5
+@@ -4016,7 +4016,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lcurl  $LIBS"
++LIBS="-lcurl -lcrypto -lssl -lz $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
