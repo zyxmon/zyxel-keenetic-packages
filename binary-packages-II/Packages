@@ -2435,10 +2435,10 @@ SourceURL: http://www.monkey.org/~provos/ @SF/levent
 Section: libs
 Maintainer: Jo-Philipp Wich <jow@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 98969
+Installed-Size: 98973
 Filename: libevent2_2.0.21-1_keeneticII.ipk
 Size: 99874
-MD5Sum: 46e9fbff1a0fb2fdcf03d7b2b739583c
+MD5Sum: 33897a11018fd80b8b3e272e462e1d69
 Description:  The libevent API provides a mechanism to execute a callback function
  when a specific event occurs on a file descriptor or after a timeout
  has been reached. Furthermore, libevent also support callbacks due
@@ -8609,66 +8609,66 @@ MD5Sum: 5bcfb9dca1b6743655aea241176a06a9
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.77-1a
+Version: 2.80-1
 Depends: transmission-daemon
 Source: package/built/transmission
-SourceFile: transmission-2.77.tar.xz
+SourceFile: transmission-2.80.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 859229
-Filename: transmission-cli_2.77-1a_keeneticII.ipk
-Size: 858707
-MD5Sum: 2282a791374ed7b7fd1234b37752dcca
+Installed-Size: 879736
+Filename: transmission-cli_2.80-1_keeneticII.ipk
+Size: 878897
+MD5Sum: 5fd9c64c2f9f4a2b5d32c1a0b5bfb278
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.77-1a
+Version: 2.80-1
 Depends: libcurl, libopenssl, libevent2, libminiupnpc
 Source: package/built/transmission
-SourceFile: transmission-2.77.tar.xz
+SourceFile: transmission-2.80.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 219308
-Filename: transmission-daemon_2.77-1a_keeneticII.ipk
-Size: 219856
-MD5Sum: dd0290ef39353a412118d2f277e1eed6
+Installed-Size: 224450
+Filename: transmission-daemon_2.80-1_keeneticII.ipk
+Size: 224970
+MD5Sum: f3f6077fa32420955b0e5681867cf60b
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.77-1a
+Version: 2.80-1
 Depends: libcurl, libopenssl, libevent2, libminiupnpc
 Source: package/built/transmission
-SourceFile: transmission-2.77.tar.xz
+SourceFile: transmission-2.80.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 229106
-Filename: transmission-remote_2.77-1a_keeneticII.ipk
-Size: 229385
-MD5Sum: 490341f16502317356b93d100e5abeda
+Installed-Size: 234256
+Filename: transmission-remote_2.80-1_keeneticII.ipk
+Size: 234557
+MD5Sum: 0d0de723e25093efb985680c775648a6
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.77-1a
+Version: 2.80-1
 Depends: transmission-daemon
 Source: package/built/transmission
-SourceFile: transmission-2.77.tar.xz
+SourceFile: transmission-2.80.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 218861
-Filename: transmission-web_2.77-1a_keeneticII.ipk
-Size: 219630
-MD5Sum: b221f6c6d973e116d1308cc7b60ae634
+Installed-Size: 206077
+Filename: transmission-web_2.80-1_keeneticII.ipk
+Size: 206827
+MD5Sum: bdedbedbfba42c30024495460e65d923
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
