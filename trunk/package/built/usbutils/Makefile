@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2007-2012 OpenWrt.org
+# Copyright (C) 2007-2013 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,13 +8,18 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=usbutils
-PKG_VERSION:=005
+PKG_VERSION:=007
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=@KERNEL/linux/utils/usb/usbutils
-PKG_MD5SUM:=6a21f7b6c02b76df5e8a7c208d746654
+PKG_MD5SUM:=a6bd63d5c44cebb717a960eae22a3ca9
 
+USB_IDS_VERSION:=2013-01-16
+USB_IDS_MD5SUM:=2a2344907b6344f0935c86efaf9de620
+USB_IDS_FILE:=usb.ids.$(USB_IDS_VERSION).gz
+
+PKG_BUILD_PARALLEL:=1
 PKG_INSTALL:=1
 
 PKG_BUILD_DEPENDS:=zlib libusb
@@ -27,6 +32,19 @@ define Package/usbutils
   DEPENDS:=+libusb-1.0
   TITLE:=USB devices listing utilities
   URL:=http://www.linux-usb.org/
+endef
+
+define Download/usb_ids
+  FILE:=$(USB_IDS_FILE)
+  URL:=http://mirror2.openwrt.org/sources
+  MD5SUM:=$(USB_IDS_MD5SUM)
+endef
+$(eval $(call Download,usb_ids))
+
+define Build/Prepare
+	$(Build/Prepare/Default)
+	echo '#!/bin/sh' > $(PKG_BUILD_DIR)/update-usbids.sh.in
+	echo 'cp $(DL_DIR)/$(USB_IDS_FILE) usb.ids.gz' >> $(PKG_BUILD_DIR)/update-usbids.sh.in
 endef
 
 define Package/usbutils/install
