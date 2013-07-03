@@ -11007,24 +11007,18 @@ Description:  InfoZIP's unzip program. With the exception of multi-volume archiv
  InfoZIP zip program.
 
 Package: usbutils
-Version: 005-1
+Version: 007-1
 Depends: libusb-1.0
-Provides: 
 Source: package/built/usbutils
-SourceFile: usbutils-005.tar.bz2
+SourceFile: usbutils-007.tar.bz2
 SourceURL: @KERNEL/linux/utils/usb/usbutils
-License: 
-LicenseFiles: 
 Section: utils
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 191909
-Filename: usbutils_005-1_keenetic.ipk
-Size: 192683
-MD5Sum: 3bc8224658c23c3a9307862908fcd179
+Installed-Size: 208242
+Filename: usbutils_007-1_keenetic.ipk
+Size: 208964
+MD5Sum: 3ee494bb644d12ef1ad7d3edbba66540
 Description:  USB devices listing utilities
 
 Package: uuidd
