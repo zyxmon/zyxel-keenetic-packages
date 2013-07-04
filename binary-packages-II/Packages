@@ -8519,6 +8519,21 @@ Description:  Subversion is a free/open-source version control system. That is,
  people think of a version control system as a sort of time machine.
  This package contains the subversion server.
 
+Package: sysstat
+Version: 9.0.6-1
+Source: package/built/sysstat
+SourceFile: sysstat-9.0.6.tar.bz2
+SourceURL: http://pagesperso-orange.fr/sebastien.godard
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 207781
+Filename: sysstat_9.0.6-1_keeneticII.ipk
+Size: 207844
+MD5Sum: 8cc2a5de9c591b527727ed931039de50
+Description:  The sysstat utilities are a collection of performance monitoring tools for
+ Linux. These include sar, sadf, mpstat, iostat, pidstat and sa tools.
+
 Package: taglib
 Version: 1.6.3-2
 Depends: uclibcxx
