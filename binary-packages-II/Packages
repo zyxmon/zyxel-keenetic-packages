@@ -8899,6 +8899,22 @@ Description:  udproxy makes it possible to convert UDP IPTV streams into http
  provider but just use their own streaming client for example
  popcornhour/mediatomb/vlc/etc.
 
+Package: umurmur-openssl
+Version: 0.2.10-2
+Depends: libconfig, libprotobuf-c, libstdcpp, libopenssl
+Source: package/built/umurmur
+SourceFile: umurmur-0.2.10.tar.gz
+SourceURL: http://umurmur.googlecode.com/files
+Section: net
+Maintainer: Martin Johansson <martin@fatbob.nu>
+Architecture: keeneticII
+Installed-Size: 42793
+Filename: umurmur-openssl_0.2.10-2_keeneticII.ipk
+Size: 43398
+MD5Sum: af512689479d0e51e9c237792242e3ae
+Description:  Minimalistic Mumble server daemon.
+ Uses OpenSSL library for SSL and crypto.
+
 Package: umurmur-polarssl
 Version: 0.2.10-2
 Depends: libconfig, libprotobuf-c, libstdcpp, libpolarssl
