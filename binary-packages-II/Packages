@@ -1873,18 +1873,18 @@ Description:  giflib is a library for reading and writing gif images.
  the LZW compression algorithm was patented. 
 
 Package: git
-Version: 1.8.3.2-1
+Version: 1.8.3.3-1
 Depends: libiconv-full, libintl-full, libcurl, libexpat
 Source: package/built/git
-SourceFile: git-1.8.3.2.tar.gz
+SourceFile: git-1.8.3.3.tar.gz
 SourceURL: http://git-core.googlecode.com/files/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 5829173
-Filename: git_1.8.3.2-1_keeneticII.ipk
-Size: 5817714
-MD5Sum: 69397f08303999f2a7cf5c7a75f8dd2e
+Installed-Size: 5833709
+Filename: git_1.8.3.3-1_keeneticII.ipk
+Size: 5822848
+MD5Sum: 0300a95170f188ec581c5ec586d5964a
 Description:  Git is a free & open source, distributed version control system
  designed to handle everything from small to very large projects
  with speed and efficiency.
@@ -8653,66 +8653,66 @@ MD5Sum: 5bcfb9dca1b6743655aea241176a06a9
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.80-1
+Version: 2.81-1
 Depends: transmission-daemon
 Source: package/built/transmission
-SourceFile: transmission-2.80.tar.xz
+SourceFile: transmission-2.81.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 879736
-Filename: transmission-cli_2.80-1_keeneticII.ipk
-Size: 878897
-MD5Sum: 5fd9c64c2f9f4a2b5d32c1a0b5bfb278
+Installed-Size: 880623
+Filename: transmission-cli_2.81-1_keeneticII.ipk
+Size: 879729
+MD5Sum: 06b4b214867e8b316b210a883c25e776
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.80-1
+Version: 2.81-1
 Depends: libcurl, libopenssl, libevent2, libminiupnpc
 Source: package/built/transmission
-SourceFile: transmission-2.80.tar.xz
+SourceFile: transmission-2.81.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 224450
-Filename: transmission-daemon_2.80-1_keeneticII.ipk
-Size: 224970
-MD5Sum: f3f6077fa32420955b0e5681867cf60b
+Installed-Size: 225071
+Filename: transmission-daemon_2.81-1_keeneticII.ipk
+Size: 225630
+MD5Sum: 8fa95bf237acff2f90ee59204ab484b3
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.80-1
+Version: 2.81-1
 Depends: libcurl, libopenssl, libevent2, libminiupnpc
 Source: package/built/transmission
-SourceFile: transmission-2.80.tar.xz
+SourceFile: transmission-2.81.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 234256
-Filename: transmission-remote_2.80-1_keeneticII.ipk
-Size: 234557
-MD5Sum: 0d0de723e25093efb985680c775648a6
+Installed-Size: 234637
+Filename: transmission-remote_2.81-1_keeneticII.ipk
+Size: 234942
+MD5Sum: c203e0358a22caa25d232f5ae0b5dee8
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.80-1
+Version: 2.81-1
 Depends: transmission-daemon
 Source: package/built/transmission
-SourceFile: transmission-2.80.tar.xz
+SourceFile: transmission-2.81.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 206077
-Filename: transmission-web_2.80-1_keeneticII.ipk
-Size: 206827
-MD5Sum: bdedbedbfba42c30024495460e65d923
+Installed-Size: 205871
+Filename: transmission-web_2.81-1_keeneticII.ipk
+Size: 206635
+MD5Sum: acdb0ad39b76e5a84de3f81b68c58746
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
