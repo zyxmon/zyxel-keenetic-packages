@@ -3812,24 +3812,17 @@ MD5Sum: 8f64878335df323f4a81de0349006ecf
 Description:  A PNG format files handling library
 
 Package: libpolarssl
-Version: 1.2.6-1
-Depends: 
-Provides: 
+Version: 1.2.8-1
 Source: package/built/polarssl
-SourceFile: polarssl-1.2.6-gpl.tgz
+SourceFile: polarssl-1.2.8-gpl.tgz
 SourceURL: https://polarssl.org/code/releases
-License: 
-LicenseFiles: 
 Section: libs
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 99750
-Filename: libpolarssl_1.2.6-1_keenetic.ipk
-Size: 100278
-MD5Sum: 031269dc24cd9a1e85d3e9652b0569e1
+Installed-Size: 103136
+Filename: libpolarssl_1.2.8-1_keenetic.ipk
+Size: 103644
+MD5Sum: f2f2a53fd1f23c68012bdd77f9fb2f95
 Description:  The aim of the PolarSSL project is to provide a quality, open-source
  cryptographic library written in C and targeted at embedded systems.
  This package contains the PolarSSL library.
@@ -5912,10 +5905,10 @@ SourceURL: http://swupdate.openvpn.net/community/releases
 Section: net
 Maintainer: Mirko Vogt <mirko@openwrt.org>
 Architecture: keenetic
-Installed-Size: 181091
+Installed-Size: 181139
 Filename: openvpn-polarssl_2.3.0-1a_keenetic.ipk
-Size: 181670
-MD5Sum: f3ed3e5cdeded481db55e7fdc5b4707f
+Size: 181706
+MD5Sum: fb850b6b63a406b5b20faa16f9486a11
 Description:  Open source VPN solution using PolarSSL
 
 Package: opkg
@@ -10926,22 +10919,16 @@ Description:  Minimalistic Mumble server daemon.
 Package: umurmur-polarssl
 Version: 0.2.10-2
 Depends: libconfig, libprotobuf-c, libstdcpp, libpolarssl
-Provides: 
 Source: package/built/umurmur
 SourceFile: umurmur-0.2.10.tar.gz
 SourceURL: http://umurmur.googlecode.com/files
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Martin Johansson <martin@fatbob.nu>
 Architecture: keenetic
-Installed-Size: 41208
+Installed-Size: 41076
 Filename: umurmur-polarssl_0.2.10-2_keenetic.ipk
-Size: 41932
-MD5Sum: 22c44750ca60b1b4536569266c7f0165
+Size: 41745
+MD5Sum: 839e1bb2d7834e3f3234dd083d55f035
 Description:  Minimalistic Mumble server daemon.
  Uses the PolarSSL library for SSL and crypto.
 
