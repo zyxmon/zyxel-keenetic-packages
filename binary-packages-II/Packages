@@ -3130,17 +3130,17 @@ MD5Sum: 74847ad83370fd319f5972f554bfb7a3
 Description:  A PNG format files handling library
 
 Package: libpolarssl
-Version: 1.2.6-1
+Version: 1.2.8-1
 Source: package/built/polarssl
-SourceFile: polarssl-1.2.6-gpl.tgz
+SourceFile: polarssl-1.2.8-gpl.tgz
 SourceURL: https://polarssl.org/code/releases
 Section: libs
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 99742
-Filename: libpolarssl_1.2.6-1_keeneticII.ipk
-Size: 100275
-MD5Sum: 4c25eea1afc6c49eba0790b74862821a
+Installed-Size: 103062
+Filename: libpolarssl_1.2.8-1_keeneticII.ipk
+Size: 103539
+MD5Sum: a14b7a1f6fd8480ceb39d084d4a300b6
 Description:  The aim of the PolarSSL project is to provide a quality, open-source
  cryptographic library written in C and targeted at embedded systems.
  This package contains the PolarSSL library.
@@ -4835,10 +4835,10 @@ SourceURL: http://swupdate.openvpn.net/community/releases
 Section: net
 Maintainer: Mirko Vogt <mirko@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 183417
+Installed-Size: 183413
 Filename: openvpn-polarssl_2.3.0-1a_keeneticII.ipk
-Size: 184054
-MD5Sum: 1d4dd2b8848e71cb29fbcd5f1e11f2e7
+Size: 184014
+MD5Sum: c21d50c39afd9fcbfb95b513cdce7563
 Description:  Open source VPN solution using PolarSSL
 
 Package: opkg
@@ -8924,10 +8924,10 @@ SourceURL: http://umurmur.googlecode.com/files
 Section: net
 Maintainer: Martin Johansson <martin@fatbob.nu>
 Architecture: keeneticII
-Installed-Size: 41064
+Installed-Size: 41065
 Filename: umurmur-polarssl_0.2.10-2_keeneticII.ipk
-Size: 41738
-MD5Sum: 93cb902c150d4286a6610a27e2aca57c
+Size: 41732
+MD5Sum: 26f75d7558241b45c7e6211b0a2d8a52
 Description:  Minimalistic Mumble server daemon.
  Uses the PolarSSL library for SSL and crypto.
 
