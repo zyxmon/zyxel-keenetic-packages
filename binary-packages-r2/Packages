@@ -5882,33 +5882,33 @@ MD5Sum: aa9728af4a49889b783b67a93b9a0f1e
 Description:  Simple shell scripts to manage a Certificate Authority
 
 Package: openvpn-openssl
-Version: 2.3.0-1a
+Version: 2.3.2-1
 Depends: kmod-tun, liblzo, libopenssl
 Source: package/built/openvpn
-SourceFile: openvpn-2.3.0.tar.gz
+SourceFile: openvpn-2.3.2.tar.gz
 SourceURL: http://swupdate.openvpn.net/community/releases
 Section: net
 Maintainer: Mirko Vogt <mirko@openwrt.org>
 Architecture: keenetic
-Installed-Size: 184700
-Filename: openvpn-openssl_2.3.0-1a_keenetic.ipk
-Size: 185167
-MD5Sum: e0388055f4068f5e9e16db0c36cd619d
+Installed-Size: 187248
+Filename: openvpn-openssl_2.3.2-1_keenetic.ipk
+Size: 187753
+MD5Sum: 326a2a8d9071e5a551c88e550b290298
 Description:  Open source VPN solution using OpenSSL
 
 Package: openvpn-polarssl
-Version: 2.3.0-1a
+Version: 2.3.2-1
 Depends: kmod-tun, liblzo, libpolarssl
 Source: package/built/openvpn
-SourceFile: openvpn-2.3.0.tar.gz
+SourceFile: openvpn-2.3.2.tar.gz
 SourceURL: http://swupdate.openvpn.net/community/releases
 Section: net
 Maintainer: Mirko Vogt <mirko@openwrt.org>
 Architecture: keenetic
-Installed-Size: 181139
-Filename: openvpn-polarssl_2.3.0-1a_keenetic.ipk
-Size: 181706
-MD5Sum: fb850b6b63a406b5b20faa16f9486a11
+Installed-Size: 184037
+Filename: openvpn-polarssl_2.3.2-1_keenetic.ipk
+Size: 184611
+MD5Sum: 16a20f18d65ffebba11a32d681ce77f1
 Description:  Open source VPN solution using PolarSSL
 
 Package: opkg
