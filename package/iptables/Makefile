@@ -179,7 +179,6 @@ endef
 
 define Package/iptables-utils
 $(call Package/iptables/Default)
-  DEPENDS:=iptables
   TITLE:=iptables save and restore utilities
 endef
 
@@ -230,17 +229,17 @@ define Build/InstallDev
 	$(CP) $(PKG_BUILD_DIR)/libiptc/libiptc.a $(1)/usr/lib
 endef
 
-define Package/iptables/install
-	# $(INSTALL_DIR) $(1)/etc/config
-	# $(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_DIR) $(1)/usr/lib
-	$(INSTALL_DIR) $(1)/usr/sbin
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/sbin/iptables $(1)/usr/sbin/
-	$(INSTALL_DIR) $(1)/usr/lib/iptables
-	(cd $(PKG_INSTALL_DIR)/usr/lib/iptables ; \
-		$(CP) libipt_*.so $(1)/usr/lib/iptables/ \
-	)
-endef
+#define Package/iptables/install
+#	# $(INSTALL_DIR) $(1)/etc/config
+#	# $(INSTALL_DIR) $(1)/etc/init.d
+#	$(INSTALL_DIR) $(1)/usr/lib
+#	$(INSTALL_DIR) $(1)/usr/sbin
+#	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/sbin/iptables $(1)/usr/sbin/
+#	$(INSTALL_DIR) $(1)/usr/lib/iptables
+#	(cd $(PKG_INSTALL_DIR)/usr/lib/iptables ; \
+#		$(CP) libipt_*.so $(1)/usr/lib/iptables/ \
+#	)
+#endef
 
 define Package/iptables-utils/install
 	$(INSTALL_DIR) $(1)/usr/sbin
