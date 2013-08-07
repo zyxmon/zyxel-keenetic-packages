@@ -2096,6 +2096,42 @@ Size: 87567
 MD5Sum: 390c9f83efe0324ed044cf8752bd6f5e
 Description:  Routing control utility
 
+Package: iperf-mt
+Version: 2.0.5-1
+Depends: uclibcxx
+Source: package/iperf
+SourceFile: iperf-2.0.5.tar.gz
+SourceURL: @SF/iperf
+Section: net
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 31124
+Filename: iperf-mt_2.0.5-1_keeneticII.ipk
+Size: 31802
+MD5Sum: 0571effce18dd5f433ef8b5837a721ff
+Description:  Iperf is a modern alternative for measuring TCP and UDP bandwidth
+ performance, allowing the tuning of various parameters and
+ characteristics.
+ This package is built with multithread support.
+
+Package: iperf
+Version: 2.0.5-1
+Depends: uclibcxx
+Source: package/iperf
+SourceFile: iperf-2.0.5.tar.gz
+SourceURL: @SF/iperf
+Section: net
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 29837
+Filename: iperf_2.0.5-1_keeneticII.ipk
+Size: 30509
+MD5Sum: 4bb88867f8dc128f56bd42b204f67d86
+Description:  Iperf is a modern alternative for measuring TCP and UDP bandwidth
+ performance, allowing the tuning of various parameters and
+ characteristics.
+ This package is built with single thread support.
+
 Package: iptables-utils
 Version: 1.3.8-2
 Source: package/iptables
