@@ -14,18 +14,18 @@ Description:  3proxy is universal proxy server. It can be used to provide intern
  access to external resources or to provide external users with access to internal resources.
 
 Package: aria2
-Version: 1.17.0-1a
+Version: 1.17.1-1
 Depends: libopenssl, libxml2, libstdcpp
 Source: package/built/aria2
-SourceFile: aria2-1.17.0.tar.bz2
+SourceFile: aria2-1.17.1.tar.bz2
 SourceURL: @SF/aria2
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 1160966
-Filename: aria2_1.17.0-1a_keeneticII.ipk
-Size: 1158752
-MD5Sum: 3279fd0aa6e2d27df65a2f29deef06ec
+Installed-Size: 1176604
+Filename: aria2_1.17.1-1_keeneticII.ipk
+Size: 1173812
+MD5Sum: 0476228e76544ffb73c20a5457b35944
 Description:  aria2 is a lightweight multi-protocol & multi-source command-line download
  utility
 
