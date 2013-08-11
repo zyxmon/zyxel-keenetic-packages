@@ -8703,66 +8703,66 @@ MD5Sum: 5bcfb9dca1b6743655aea241176a06a9
 Description:  An enhanced version of the BSD TFTP server
 
 Package: transmission-cli
-Version: 2.81-1
+Version: 2.82-1
 Depends: transmission-daemon
 Source: package/built/transmission
-SourceFile: transmission-2.81.tar.xz
+SourceFile: transmission-2.82.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 880623
-Filename: transmission-cli_2.81-1_keeneticII.ipk
-Size: 879729
-MD5Sum: 06b4b214867e8b316b210a883c25e776
+Installed-Size: 882422
+Filename: transmission-cli_2.82-1_keeneticII.ipk
+Size: 881484
+MD5Sum: 87cc9ff41871924d9d385d8f2e8754d4
 Description:  CLI utilities for transmission.
 
 Package: transmission-daemon
-Version: 2.81-1
+Version: 2.82-1
 Depends: libcurl, libopenssl, libevent2, libminiupnpc
 Source: package/built/transmission
-SourceFile: transmission-2.81.tar.xz
+SourceFile: transmission-2.82.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 225071
-Filename: transmission-daemon_2.81-1_keeneticII.ipk
-Size: 225630
-MD5Sum: 8fa95bf237acff2f90ee59204ab484b3
+Installed-Size: 225355
+Filename: transmission-daemon_2.82-1_keeneticII.ipk
+Size: 225852
+MD5Sum: 786fe75ae7b55f3ee8ff0987409be376
 Description:  Transmission is a simple BitTorrent client.
  It features a very simple, intuitive interface
  on top on an efficient, cross-platform back-end.
  This package contains the daemon itself.
 
 Package: transmission-remote
-Version: 2.81-1
+Version: 2.82-1
 Depends: libcurl, libopenssl, libevent2, libminiupnpc
 Source: package/built/transmission
-SourceFile: transmission-2.81.tar.xz
+SourceFile: transmission-2.82.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 234637
-Filename: transmission-remote_2.81-1_keeneticII.ipk
-Size: 234942
-MD5Sum: c203e0358a22caa25d232f5ae0b5dee8
+Installed-Size: 235059
+Filename: transmission-remote_2.82-1_keeneticII.ipk
+Size: 235378
+MD5Sum: 805b3f43e89a454e175431b5f40b4ce0
 Description:  CLI remote interface for transmission.
 
 Package: transmission-web
-Version: 2.81-1
+Version: 2.82-1
 Depends: transmission-daemon
 Source: package/built/transmission
-SourceFile: transmission-2.81.tar.xz
+SourceFile: transmission-2.82.tar.xz
 SourceURL: http://mirrors.m0k.org/transmission/files
 Section: net
 Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
 Architecture: keeneticII
-Installed-Size: 205871
-Filename: transmission-web_2.81-1_keeneticII.ipk
-Size: 206635
-MD5Sum: acdb0ad39b76e5a84de3f81b68c58746
+Installed-Size: 205873
+Filename: transmission-web_2.82-1_keeneticII.ipk
+Size: 206639
+MD5Sum: 436a906a2d9f26daf59e51baa2a8f648
 Description:  Webinterface resources for transmission.
 
 Package: tune2fs
