@@ -9,7 +9,7 @@
 Создадим в домашней директории папку `openwrt/packages' и "сольем в нее" набор Makefile'ов openwrt для пакетов:
 {{{
 cd ~/openwrt/packages
-svn svn co svn://svn.openwrt.org/openwrt/packages/ .
+svn co svn://svn.openwrt.org/openwrt/packages/ .
 }}}
 
 После этого руками перенесем нужный пакет из `~/openwrt/packages` в `~/keenetic/package/build`. После этого запустим `make menuconfig` и добавим пакет в сборку через меню. Для того, чтобы не создавать вторые копии библиотек из прошивки следует в Makefile перенесенного пакета удалить зависимости от `libpthread` и `librt`. Зависимости от библиотек `zlib, libcurl, libopenssl, libusb` следует перенести из определения пакета в переменную `PKG_BUILD_DEPENDS`.
