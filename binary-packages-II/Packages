@@ -13,6 +13,21 @@ MD5Sum: 9f7d037ceb98039ac12a52c541dce9a0
 Description:  3proxy is universal proxy server. It can be used to provide internal users with fully controllable 
  access to external resources or to provide external users with access to internal resources.
 
+Package: aircrack-ng
+Version: 1.1-3
+Depends: libopenssl, libpcap
+Source: package/built/aircrack-ng
+SourceFile: aircrack-ng-1.1.tar.gz
+SourceURL: http://download.aircrack-ng.org/ http://archive.aircrack-ng.org/aircrack-ng/1.1/
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 527664
+Filename: aircrack-ng_1.1-3_keeneticII.ipk
+Size: 527492
+MD5Sum: a01d2b7b8a6608559e3c9ef99b9655d2
+Description:  Aircrack-ng is the next generation of aircrack with new features
+
 Package: aria2
 Version: 1.17.1-1
 Depends: libopenssl, libxml2, libstdcpp
@@ -9124,6 +9139,70 @@ Filename: v4l-info_3.102-2a_keeneticII.ipk
 Size: 8191
 MD5Sum: 94394c013f6dcc0217990bb581bc7c6d
 Description:  Video 4 Linux info/ sourses are taken from xawtv version 3.102 http://linuxtv.org/downloads/xawtv/
+
+Package: vim-full
+Version: 7.4-1
+Depends: libncurses
+Source: package/built/vim
+SourceFile: vim-7.4.tar.bz2
+SourceURL: ftp://ftp.vim.org/pub/vim/unix/
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 833033
+Filename: vim-full_7.4-1_keeneticII.ipk
+Size: 832262
+MD5Sum: 5c2caf593373c1b98d79c4ec65227762
+Description:  Vim is an almost compatible version of the UNIX editor Vi.
+ (Normal build)
+
+Package: vim-help
+Version: 7.4-1
+Depends: libncurses
+Source: package/built/vim
+SourceFile: vim-7.4.tar.bz2
+SourceURL: ftp://ftp.vim.org/pub/vim/unix/
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 1874031
+Filename: vim-help_7.4-1_keeneticII.ipk
+Size: 1874352
+MD5Sum: 71fb8b1be04573c0c0e9c48b4360bf97
+Description:  Vim is an almost compatible version of the UNIX editor Vi.
+ (Help files)
+
+Package: vim-runtime
+Version: 7.4-1
+Depends: libncurses
+Source: package/built/vim
+SourceFile: vim-7.4.tar.bz2
+SourceURL: ftp://ftp.vim.org/pub/vim/unix/
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 1767542
+Filename: vim-runtime_7.4-1_keeneticII.ipk
+Size: 1764886
+MD5Sum: 0cf7d873cdab7c561ef44cc44103c52c
+Description:  Vim is an almost compatible version of the UNIX editor Vi.
+ (Runtime files)
+
+Package: vim
+Version: 7.4-1
+Depends: libncurses
+Source: package/built/vim
+SourceFile: vim-7.4.tar.bz2
+SourceURL: ftp://ftp.vim.org/pub/vim/unix/
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 304338
+Filename: vim_7.4-1_keeneticII.ipk
+Size: 304591
+MD5Sum: 9ca5cc7e8d5fadf9adedb2f796c567f0
+Description:  Vim is an almost compatible version of the UNIX editor Vi.
+ (Tiny build)
 
 Package: vncrepeater
 Version: 0.12-4
