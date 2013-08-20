@@ -2238,6 +2238,19 @@ Size: 54369
 MD5Sum: 84ef41e269461c43c961a197e6e52279
 Description:  Kernel module for NFS kernel server support
 
+Package: kmod-fs-xfs
+Version: 2.6.22-tc-2
+Depends: kmod-fs-exportfs
+Source: package/kernel
+Section: kernel
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 330430
+Filename: kmod-fs-xfs_2.6.22-tc-2_keeneticII.ipk
+Size: 329320
+MD5Sum: abbf45e775a3462d9d66bbd13be45c0b
+Description:  Kernel module for XFS support
+
 Package: kmod-gre
 Version: 2.6.22-tc-1
 Source: package/kernel
@@ -9313,6 +9326,51 @@ Description:  Wput is a tiny ftp-client, that uploads files or directories
  to a remote ftp-server.  Main features are: resuming,
  time-stamping, wget-like interface, proxy-support and
  speed-limit.
+
+Package: xfs-fsck
+Version: 3.1.7-1
+Depends: libuuid
+Source: package/built/xfsprogs
+SourceFile: xfsprogs-3.1.7.tar.gz
+SourceURL: ftp://oss.sgi.com/projects/xfs/previous/
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 535940
+Filename: xfs-fsck_3.1.7-1_keeneticII.ipk
+Size: 536100
+MD5Sum: 0fdad51678ce9f417f9be1aff544c1db
+Description:  Utilities for checking and repairing XFS filesystems
+
+Package: xfs-growfs
+Version: 3.1.7-1
+Depends: libuuid
+Source: package/built/xfsprogs
+SourceFile: xfsprogs-3.1.7.tar.gz
+SourceURL: ftp://oss.sgi.com/projects/xfs/previous/
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 151227
+Filename: xfs-growfs_3.1.7-1_keeneticII.ipk
+Size: 151796
+MD5Sum: 40ea689cf4f3dbc5c3c155c45666e7e1
+Description:  Utility for increasing the size of XFS filesystems
+
+Package: xfs-mkfs
+Version: 3.1.7-1
+Depends: libuuid
+Source: package/built/xfsprogs
+SourceFile: xfsprogs-3.1.7.tar.gz
+SourceURL: ftp://oss.sgi.com/projects/xfs/previous/
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 177362
+Filename: xfs-mkfs_3.1.7-1_keeneticII.ipk
+Size: 177884
+MD5Sum: bff2c365b7fde096c2dd321a74b1e714
+Description:  Utility for creating XFS filesystems
 
 Package: xinetd
 Version: 2.3.15-1
