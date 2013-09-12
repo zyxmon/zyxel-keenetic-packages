@@ -11,7 +11,7 @@ PECL_NAME:=APC
 PECL_LONGNAME:=Alternative PHP Cache
 
 PKG_VERSION:=3.1.13
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 PKG_MD5SUM:=c9e47002e3a67ebde3a6f81437c7b6e0
 
 PKG_NAME:=php5-pecl-apc
@@ -29,5 +29,5 @@ CONFIGURE_ARGS+= \
 	--enable-apc=shared \
 	--disable-apc-mmap \
 
-$(eval $(call PECLPackage,apc,$(PECL_LONGNAME),+librt))
+$(eval $(call PECLPackage,apc,$(PECL_LONGNAME)))
 $(eval $(call BuildPackage,$(PKG_NAME)))
