@@ -9552,24 +9552,18 @@ MD5Sum: 00c5e911c39979c0decab9bf1b0cf16b
 Description:  ZIP shared module
 
 Package: php5-pecl-apc
-Version: 3.1.13-1
-Depends: php5, librt
-Provides: 
+Version: 3.1.13-2
+Depends: php5
 Source: package/built/php5-pecl-apc
 SourceFile: APC-3.1.13.tgz
 SourceURL: http://pecl.php.net/get/
-License: 
-LicenseFiles: 
 Section: lang
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 52028
-Filename: php5-pecl-apc_3.1.13-1_keenetic.ipk
-Size: 52710
-MD5Sum: f819a3a0587b5f2028b960c473780ae1
+Installed-Size: 52058
+Filename: php5-pecl-apc_3.1.13-2_keenetic.ipk
+Size: 52668
+MD5Sum: 979af999b6ebfea206cec1d95207f3b5
 Description:  Alternative PHP Cache
 
 Package: php5
