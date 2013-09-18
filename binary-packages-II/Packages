@@ -8536,6 +8536,21 @@ Description:  SQLite is a small C library that implements a self-contained, embe
  that can evaluate queries interactively and display the results in multiple
  formats.
 
+Package: srelay
+Version: 0.4.8b3-2
+Depends: libwrap
+Source: package/built/srelay
+SourceFile: srelay-0.4.8b3.tar.gz
+SourceURL: @SF/socks-relay
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 23106
+Filename: srelay_0.4.8b3-2_keeneticII.ipk
+Size: 23672
+MD5Sum: e0077dcb70c6c24dc532b332e65cfe1b
+Description:  A socks 4/5 proxy server
+
 Package: strace
 Version: 4.5.20-1
 Source: package/built/strace
