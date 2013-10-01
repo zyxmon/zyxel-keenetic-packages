@@ -28,6 +28,20 @@ Size: 527492
 MD5Sum: a01d2b7b8a6608559e3c9ef99b9655d2
 Description:  Aircrack-ng is the next generation of aircrack with new features
 
+Package: apcupsd
+Version: 3.14.7-2
+Source: package/built/apcupsd
+SourceFile: apcupsd-3.14.7.tar.gz
+SourceURL: @SF/apcupsd
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 134139
+Filename: apcupsd_3.14.7-2_keeneticII.ipk
+Size: 134719
+MD5Sum: 039b24e904e50927d00eb3630b41baad
+Description:  UPS control software
+
 Package: aria2
 Version: 1.17.1-1
 Depends: libopenssl, libxml2, libstdcpp
