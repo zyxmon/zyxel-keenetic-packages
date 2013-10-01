@@ -2297,6 +2297,81 @@ Description:  iftop does for network usage what top(1) does for CPU usage. It
  table of current bandwidth usage by pairs of hosts. Handy for 
  answering the question 'why is our ADSL link so slow?'.
 
+Package: imagemagick-jpeg
+Version: 6.7.8-1
+Depends: imagemagick
+Source: package/built/imagemagick
+SourceFile: ImageMagick-6.7.8-10.tar.bz2
+SourceURL: ftp://ftp.fifi.org/pub/ImageMagick/
+Section: multimedia
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 16906
+Filename: imagemagick-jpeg_6.7.8-1_keenetic.ipk
+Size: 17522
+MD5Sum: 284c91607e353ff04c4d428b9c43df98
+Description:  imagemagick JPEG module
+
+Package: imagemagick-png
+Version: 6.7.8-1
+Depends: imagemagick, libpng
+Source: package/built/imagemagick
+SourceFile: ImageMagick-6.7.8-10.tar.bz2
+SourceURL: ftp://ftp.fifi.org/pub/ImageMagick/
+Section: multimedia
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 53224
+Filename: imagemagick-png_6.7.8-1_keenetic.ipk
+Size: 53804
+MD5Sum: 597328df2d14d4c36f45099467894c60
+Description:  imagemagick tools (mogrify,convert)
+
+Package: imagemagick-tiff
+Version: 6.7.8-1
+Depends: imagemagick
+Source: package/built/imagemagick
+SourceFile: ImageMagick-6.7.8-10.tar.bz2
+SourceURL: ftp://ftp.fifi.org/pub/ImageMagick/
+Section: multimedia
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 18897
+Filename: imagemagick-tiff_6.7.8-1_keenetic.ipk
+Size: 19430
+MD5Sum: 49f9dfd5dacabda2a0bb72fbfe0bd12f
+Description:  imagemagick TIFF module
+
+Package: imagemagick-tools
+Version: 6.7.8-1
+Depends: imagemagick
+Source: package/built/imagemagick
+SourceFile: ImageMagick-6.7.8-10.tar.bz2
+SourceURL: ftp://ftp.fifi.org/pub/ImageMagick/
+Section: multimedia
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 1713
+Filename: imagemagick-tools_6.7.8-1_keenetic.ipk
+Size: 2302
+MD5Sum: 6a7a7b686bf624d6649289ea97cd2670
+Description:  imagemagick (tools)
+
+Package: imagemagick
+Version: 6.7.8-1
+Depends: libltdl, libjpeg, libtiff, liblcms
+Source: package/built/imagemagick
+SourceFile: ImageMagick-6.7.8-10.tar.bz2
+SourceURL: ftp://ftp.fifi.org/pub/ImageMagick/
+Section: multimedia
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 741395
+Filename: imagemagick_6.7.8-1_keenetic.ipk
+Size: 735730
+MD5Sum: 071d92f45b7d17e15cd06964d80d7f0c
+Description:  An image manipulation library.
+
 Package: in.www
 Version: 1.0.0-1
 Depends: 
