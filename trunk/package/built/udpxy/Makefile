@@ -8,14 +8,14 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=udpxy
-PKG_VERSION:=1.0.23-7
+PKG_REV:=1.0.23
+PKG_TAG:=9
+PKG_VERSION:=$(PKG_REV)-$(PKG_TAG)
 PKG_RELEASE:=1
 
-#http://www.udpxy.com/download/1_23/udpxy.1.0.23-7-prod.tar.gz
-PKG_SOURCE:=$(PKG_NAME).$(PKG_VERSION)-prod.tar.gz
-#PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_REV)
+PKG_SOURCE:=$(PKG_NAME).$(PKG_REV)-$(patsubst %,%-prod,$(PKG_TAG)).tar.gz
 PKG_SOURCE_URL:=http://www.udpxy.com/download/1_23
-#PKG_MD5SUM:=81f43d742e218aeb8c19fdfae5b7403c
+PKG_MD5SUM:=0c953f7dd80329c1a062997afb9b6744
 
 PKG_INSTALL:=1
 
@@ -25,7 +25,7 @@ define Package/udpxy
   SECTION:=net
   CATEGORY:=Network
   TITLE:=convert UDP IPTV streams into http stream
-  URL:=http://sourceforge.net/projects/udpxy
+  URL:=http://www.udpxy.com/index-en.html
 endef
 
 define Package/udpxy/description
