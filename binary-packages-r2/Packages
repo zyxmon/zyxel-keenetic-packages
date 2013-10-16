@@ -11127,24 +11127,17 @@ MD5Sum: 79a5e924812de47b2e67ad992393dbff
 Description:  C++ library for embedded systems
 
 Package: udpxy
-Version: 1.0.23-7-1
-Depends: 
-Provides: 
+Version: 1.0.23-9-1
 Source: package/built/udpxy
-SourceFile: udpxy.1.0.23-7-prod.tar.gz
+SourceFile: udpxy.1.0.23-9-prod.tar.gz
 SourceURL: http://www.udpxy.com/download/1_23
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 37139
-Filename: udpxy_1.0.23-7-1_keenetic.ipk
-Size: 38100
-MD5Sum: 82c85b4276279540cf4fd591125532d9
+Installed-Size: 37254
+Filename: udpxy_1.0.23-9-1_keenetic.ipk
+Size: 38124
+MD5Sum: 360d35ca10ed0d1f292c59c76e7c5964
 Description:  udproxy makes it possible to convert UDP IPTV streams into http
  streams which can be viewed even over wlans. http streams do
  not generate huge amounts of multicast traffic, so a sd stream
