@@ -1428,17 +1428,17 @@ MD5Sum: a50573bb18ab3c118810990af53c5e12
 Description:  Fidonet mailer
 
 Package: busybox
-Version: 1.19.4-5
+Version: 1.19.4-6
 Source: package/busybox
 SourceFile: busybox-1.19.4.tar.bz2
 SourceURL: http://www.busybox.net/downloads http://distfiles.gentoo.org/distfiles/
 Section: base
 Maintainer: Nicolas Thill <nico@openwrt.org>
 Architecture: keenetic
-Installed-Size: 175672
-Filename: busybox_1.19.4-5_keenetic.ipk
-Size: 176098
-MD5Sum: 8584d942a95724a0f8af3d6d342dc63a
+Installed-Size: 182552
+Filename: busybox_1.19.4-6_keenetic.ipk
+Size: 182984
+MD5Sum: 69b9b1147a44d637d5a1e05bd19a60e4
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
  This package is built for usb.
@@ -3815,6 +3815,21 @@ Filename: libmagic_5.11-1_keenetic.ipk
 Size: 93834
 MD5Sum: cfa3eda2a1d73f73e95d05a076be34e1
 Description:  library
+
+Package: libmcrypt
+Version: 2.5.8-2
+Source: package/built/libmcrypt
+SourceFile: libmcrypt-2.5.8.tar.bz2
+SourceURL: @SF/mcrypt
+Section: libs
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 62762
+Filename: libmcrypt_2.5.8-2_keenetic.ipk
+Size: 62939
+MD5Sum: fb60fc0dc856b73acfba2e16c43e563e
+Description:  libmcrypt is a cryptographic library that conveniently brings
+ together a variety of ciphers for convenient use.
 
 Package: libminiupnpc
 Version: 1.6-1
@@ -9491,6 +9506,21 @@ Filename: php5-mod-mbstring_5.4.19-1_keenetic.ipk
 Size: 579298
 MD5Sum: 1cc8e0faf9ef5d31ddf83810191c0a7f
 Description:  MBString shared module
+
+Package: php5-mod-mcrypt
+Version: 5.4.19-1
+Depends: php5, libmcrypt, libltdl
+Source: package/built/php5
+SourceFile: php-5.4.19.tar.bz2
+SourceURL: http://www.php.net/distributions/
+Section: lang
+Maintainer: Michael Heimpold <mhei@heimpold.de>
+Architecture: keenetic
+Installed-Size: 10688
+Filename: php5-mod-mcrypt_5.4.19-1_keenetic.ipk
+Size: 11214
+MD5Sum: e19cc1fda3c86d2cfcc0fdcb8efbea0b
+Description:  Mcrypt shared module
 
 Package: php5-mod-mysql
 Version: 5.4.19-1
