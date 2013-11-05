@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=bind
 PKG_VERSION:=9.9.4
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:= \
@@ -132,7 +132,7 @@ define Package/bind-server/install
 		$(1)/etc/bind/
 	$(CP) ./files/bind/named.conf.example $(1)/etc/named.conf
 	$(INSTALL_DIR) $(1)/etc/init.d
-	find $(1)/etc/bind/ -name ".svn" | xargs rm -rf
+	$(INSTALL_BIN) ./files/K29bind $(1)/etc/init.d
 endef
 
 define Package/bind-server/conffiles
