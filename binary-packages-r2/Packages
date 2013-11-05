@@ -1407,7 +1407,7 @@ Description:  bc is a language that supports arbitrary precision numbers with
  interactive execution of statements.
 
 Package: bind-check
-Version: 9.9.4-1
+Version: 9.9.4-2
 Depends: bind-libs
 Source: package/built/bind
 SourceFile: bind-9.9.4.tar.gz
@@ -1415,14 +1415,14 @@ SourceURL: ftp://ftp.isc.org/isc/bind9/9.9.4 http://www.mirrorservice.org/sites/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 13429
-Filename: bind-check_9.9.4-1_keenetic.ipk
-Size: 14035
-MD5Sum: 71f84b21d78d1ed668b783c4eb444ad9
+Installed-Size: 13431
+Filename: bind-check_9.9.4-2_keenetic.ipk
+Size: 14030
+MD5Sum: 92589469c9c7015d0a54de38a649f933
 Description:  bind administration tools (named-checkconf and named-checkzone only)
 
 Package: bind-client
-Version: 9.9.4-1
+Version: 9.9.4-2
 Depends: bind-libs
 Source: package/built/bind
 SourceFile: bind-9.9.4.tar.gz
@@ -1431,13 +1431,13 @@ Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 18713
-Filename: bind-client_9.9.4-1_keenetic.ipk
-Size: 19359
-MD5Sum: a2fffbd3642c3418a91d093192847b59
+Filename: bind-client_9.9.4-2_keenetic.ipk
+Size: 19362
+MD5Sum: 8ed05107c47afad0ef4a74dec5a1fac1
 Description:  bind dynamic DNS client
 
 Package: bind-dig
-Version: 9.9.4-1
+Version: 9.9.4-2
 Depends: bind-libs
 Source: package/built/bind
 SourceFile: bind-9.9.4.tar.gz
@@ -1445,14 +1445,14 @@ SourceURL: ftp://ftp.isc.org/isc/bind9/9.9.4 http://www.mirrorservice.org/sites/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 34762
-Filename: bind-dig_9.9.4-1_keenetic.ipk
-Size: 35385
-MD5Sum: 86cd92b34da4eebf7b3c5859b0721548
+Installed-Size: 34763
+Filename: bind-dig_9.9.4-2_keenetic.ipk
+Size: 35391
+MD5Sum: 5f64a2940e45ebe4a35e0a1512c21d9f
 Description:  bind DNS excavation tool
 
 Package: bind-dnssec
-Version: 9.9.4-1
+Version: 9.9.4-2
 Depends: bind-libs
 Source: package/built/bind
 SourceFile: bind-9.9.4.tar.gz
@@ -1460,14 +1460,14 @@ SourceURL: ftp://ftp.isc.org/isc/bind9/9.9.4 http://www.mirrorservice.org/sites/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 58167
-Filename: bind-dnssec_9.9.4-1_keenetic.ipk
-Size: 58723
-MD5Sum: 126cfbd1f36c24490199f5deadae7f31
+Installed-Size: 58168
+Filename: bind-dnssec_9.9.4-2_keenetic.ipk
+Size: 58712
+MD5Sum: b3521ac04276875848afa76eeb0b98b6
 Description:  bind administration tools (dnssec-keygen and dnssec-signzone only)
 
 Package: bind-host
-Version: 9.9.4-1
+Version: 9.9.4-2
 Depends: bind-libs
 Source: package/built/bind
 SourceFile: bind-9.9.4.tar.gz
@@ -1475,14 +1475,14 @@ SourceURL: ftp://ftp.isc.org/isc/bind9/9.9.4 http://www.mirrorservice.org/sites/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 29162
-Filename: bind-host_9.9.4-1_keenetic.ipk
-Size: 29751
-MD5Sum: 77f507d2bdb2cea0de2f392e41c21e36
+Installed-Size: 29160
+Filename: bind-host_9.9.4-2_keenetic.ipk
+Size: 29760
+MD5Sum: 1cc34dcbb34a27935fed218038c83b6e
 Description:  bind simple DNS client
 
 Package: bind-libs
-Version: 9.9.4-1
+Version: 9.9.4-2
 Depends: libopenssl
 Source: package/built/bind
 SourceFile: bind-9.9.4.tar.gz
@@ -1490,14 +1490,14 @@ SourceURL: ftp://ftp.isc.org/isc/bind9/9.9.4 http://www.mirrorservice.org/sites/
 Section: libs
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 791735
-Filename: bind-libs_9.9.4-1_keenetic.ipk
-Size: 789552
-MD5Sum: 0f5c26af30a0a31169087cc437962ccf
+Installed-Size: 791740
+Filename: bind-libs_9.9.4-2_keenetic.ipk
+Size: 789640
+MD5Sum: 2e082f9f58ac159e541f84293a153e9c
 Description:  bind shared libraries
 
 Package: bind-rndc
-Version: 9.9.4-1
+Version: 9.9.4-2
 Depends: bind-libs
 Source: package/built/bind
 SourceFile: bind-9.9.4.tar.gz
@@ -1506,13 +1506,13 @@ Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
 Installed-Size: 14363
-Filename: bind-rndc_9.9.4-1_keenetic.ipk
+Filename: bind-rndc_9.9.4-2_keenetic.ipk
 Size: 14988
-MD5Sum: c9e71366de5442af8ed91d980e714ab8
+MD5Sum: 6bc5a9d6748f793f78295bf70d440507
 Description:  bind administration tools (rndc and rndc-confgen only)
 
 Package: bind-server
-Version: 9.9.4-1
+Version: 9.9.4-2
 Depends: bind-libs
 Source: package/built/bind
 SourceFile: bind-9.9.4.tar.gz
@@ -1520,14 +1520,14 @@ SourceURL: ftp://ftp.isc.org/isc/bind9/9.9.4 http://www.mirrorservice.org/sites/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 187600
-Filename: bind-server_9.9.4-1_keenetic.ipk
-Size: 187487
-MD5Sum: a946635cf81c4139f781443d1bf99407
+Installed-Size: 187829
+Filename: bind-server_9.9.4-2_keenetic.ipk
+Size: 187749
+MD5Sum: 78c51cc19370385a39ab1fcde376317c
 Description:  bind DNS server
 
 Package: bind-tools
-Version: 9.9.4-1
+Version: 9.9.4-2
 Depends: bind-libs
 Source: package/built/bind
 SourceFile: bind-9.9.4.tar.gz
@@ -1535,10 +1535,10 @@ SourceURL: ftp://ftp.isc.org/isc/bind9/9.9.4 http://www.mirrorservice.org/sites/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 148346
-Filename: bind-tools_9.9.4-1_keenetic.ipk
-Size: 148666
-MD5Sum: 4d7800f6533990662d389fd425770711
+Installed-Size: 148347
+Filename: bind-tools_9.9.4-2_keenetic.ipk
+Size: 148677
+MD5Sum: 35647a43ec8f2e9092335df5f03fb76a
 Description:  bind administration tools (all)
 
 Package: binkd
