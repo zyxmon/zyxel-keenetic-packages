@@ -5126,18 +5126,18 @@ Description:  Open DC hub is a Unix/Linux version of the hub software
  for the Direct Connect network
 
 Package: openssh-sftp-server
-Version: 6.3p1-1
+Version: 6.4p1-3
 Depends: libopenssl
 Source: package/built/openssh
-SourceFile: openssh-6.3p1.tar.gz
+SourceFile: openssh-6.4p1.tar.gz
 SourceURL: ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/ ftp://openbsd.wiretapped.net/pub/OpenBSD/OpenSSH/portable/ ftp://ftp.belnet.be/packages/openbsd/OpenSSH/portable/ ftp://ftp.de.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/
 Section: net
 Maintainer: Peter Wagner <tripolar@gmx.at>
 Architecture: keeneticII
-Installed-Size: 31685
-Filename: openssh-sftp-server_6.3p1-1_keeneticII.ipk
-Size: 32268
-MD5Sum: 47594c381b90c4a86b8107116394f32b
+Installed-Size: 31688
+Filename: openssh-sftp-server_6.4p1-3_keeneticII.ipk
+Size: 32276
+MD5Sum: 6b38c9855790d9bf0f1bace55f3059cf
 Description:  OpenSSH SFTP server.
 
 Package: openssl-util
