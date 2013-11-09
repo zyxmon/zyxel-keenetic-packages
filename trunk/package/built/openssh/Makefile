@@ -8,15 +8,15 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=openssh
-PKG_VERSION:=6.3p1
-PKG_RELEASE:=1
+PKG_VERSION:=6.4p1
+PKG_RELEASE:=3
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/ \
 		ftp://openbsd.wiretapped.net/pub/OpenBSD/OpenSSH/portable/ \
 		ftp://ftp.belnet.be/packages/openbsd/OpenSSH/portable/ \
 		ftp://ftp.de.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/
-PKG_MD5SUM:=225e75c9856f76011966013163784038
+PKG_MD5SUM:=a62b88b884df0b09b8a8c5789ac9e51b
 
 PKG_BUILD_DEPENDS:=libopenssl zlib
 
@@ -34,14 +34,13 @@ endef
 
 define Package/openssh-moduli
   $(call Package/openssh/Default)
-  DEPENDS+= +openssh-server
+  DEPENDS+= +openssh-keygen
   TITLE+= moduli file
 endef
 
 define Package/openssh-moduli/description
 OpenSSH server moduli file.
 endef
-
 
 define Package/openssh-client
   $(call Package/openssh/Default)
@@ -152,7 +151,7 @@ endef
 
 define Package/openssh-moduli/install
 	$(INSTALL_DIR) $(1)/etc/ssh
-	$(CP) $(PKG_INSTALL_DIR)/etc/ssh/moduli $(1)/etc/ssh/
+	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/etc/ssh/moduli $(1)/etc/ssh/
 endef
 
 define Package/openssh-client/install
@@ -174,11 +173,10 @@ define Package/openssh-keygen/install
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/ssh-keygen $(1)/usr/bin/
 endef
 
-
 define Package/openssh-server/install
 	$(INSTALL_DIR) $(1)/etc/ssh
 	chmod 0700 $(1)/etc/ssh
-	$(CP) $(PKG_INSTALL_DIR)/etc/ssh/sshd_config $(1)/etc/ssh/
+	$(INSTALL_DATA) $(PKG_INSTALL_DIR)/etc/ssh/sshd_config $(1)/etc/ssh/
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/sshd.init $(1)/etc/init.d/sshd
 	$(INSTALL_DIR) $(1)/usr/sbin
