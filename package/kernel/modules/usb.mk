@@ -58,3 +58,18 @@ endef
 $(eval $(call KernelPackage,usb-serial-cp2101))
 
 
+define KernelPackage/usb-hid
+  DEPENDS:=kmod-input-core kmod-hid
+  TITLE:=Support for USB Human Input Devices
+  KCONFIG:=CONFIG_HID_SUPPORT=y CONFIG_USB_HID CONFIG_USB_HIDDEV=y
+  FILES:=$(LINUX_DIR)/drivers/hid/usbhid/usbhid.ko
+endef
+
+
+define KernelPackage/usb-hid/description
+ Kernel support for USB HID devices such as keyboards and mice
+endef
+
+$(eval $(call KernelPackage,usb-hid))
+
+
