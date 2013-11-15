@@ -1,0 +1,94 @@
+#!/bin/sh
+
+MOUNT="/media/DISK_A1/system"
+export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
+export PHP_FCGI_CHILDREN=''
+PORT=/tmp/php-fastcgi.socket
+
+NGINX_BIN=$MOUNT/usr/sbin/nginx
+BIN=$MOUNT/usr/bin/php-fcgi
+NETHELPER_PID="/var/run/nethelperd_webphp.pid"
+EXTENDED_WEB_DIRECTORY="/media/DISK_A1/system/web"
+
+start_services(){
+    $BIN -b $PORT -c /media/DISK_A1/system/etc/php.ini &
+    $NGINX_BIN
+}
+
+stop_services(){
+    $NGINX_BIN -s quit
+    killall php-fcgi
+}
+
+start() {
+    if [[ -f $NETHELPER_PID  ]] ; then echo "$0 already started!" ; exit 1 ; fi
+    echo "Starting `basename $0`"
+    eval `flash WEB_TIMEOUT`
+    INACTIVE_TIMEOUT=$((WEB_TIMEOUT*60))
+    eval `flash FIRMWARE_VERSION`
+    if [[ -f "$EXTENDED_WEB_DIRECTORY/.firmware_version" ]] ; then 
+      NEEDED_FIRMWARE=`cat "$EXTENDED_WEB_DIRECTORY/.firmware_version"`
+      if [[ $NEEDED_FIRMWARE != $FIRMWARE_VERSION ]] ; then 
+        echo "WARNING: firmware upgrate detected"
+        echo "Please update Your $EXTENDED_WEB_DIRECTORY"
+        echo "Then remove $EXTENDED_WEB_DIRECTORY/.firmware_version file"
+        echo "And restart this service. Refusung to start `basename $0`"
+        exit 1
+      fi
+    else
+      echo "$FIRMWARE_VERSION" > "$EXTENDED_WEB_DIRECTORY/.firmware_version" 
+    fi
+    
+    mount --bind "$EXTENDED_WEB_DIRECTORY" /web
+    iptables -A INPUT -p tcp --dport 88 -j ACCEPT
+    until pidof httpd > /dev/null ; do sleep 1; done
+    nethelperd -p `pidof httpd` --script `which "$0"` --up start_services --down stop_services -t $INACTIVE_TIMEOUT --pidfile $NETHELPER_PID -b
+}
+
+stop() {
+    echo "Stopping $0"
+    if [[ -f $NETHELPER_PID ]] ; then 
+      echo "Stopping nethelperd"
+      kill `cat $NETHELPER_PID`
+    fi
+    if grep /web /proc/mounts -q ; then
+      umount /web
+    fi
+    iptables -D INPUT -p tcp --dport 88 -j ACCEPT 2> /dev/null
+}
+
+reload() {
+    $NGINX_BIN -s reload
+}
+
+case $1 in
+    start)
+      start
+    ;;
+    stop)
+      stop
+    ;;
+    restart)
+      stop
+      sleep 3
+      start
+    ;;
+    reload)
+        reload
+    ;;
+    start_services)
+        start_services
+    ;;
+    stop_services)
+        stop_services
+    ;;
+    link_down)
+    ;;
+    ppp_down)
+    ;;
+    *)
+#     echo "Usage: $0 {start|stop|restart|reload|link_up|link_down|ppp_up|ppp_down}"
+    echo "Usage: $0 {start|stop|restart|reload|start_services|stop_services}"
+    ;;
+esac

@@ -1,0 +1,46 @@
+--- a/config.c.orig
++++ b/config.c
+@@ -153,7 +153,7 @@
+ 
+ static const char *config_ca_dir(void)
+ {
+-	return "/etc/ssl/certs";
++	return "/media/DISK_A1/system/etc/ssl/certs";
+ }
+ 
+ static const char *config_def_auth_mode(void)
+@@ -173,12 +173,12 @@
+ 
+ static const char *config_def_script(void)
+ {
+-	return "/etc/vpnc/vpnc-script";
++	return "/media/DISK_A1/system/etc/vpnc/vpnc-script";
+ }
+ 
+ static const char *config_def_pid_file(void)
+ {
+-	return "/var/run/vpnc/pid";
++	return "/var/run/vpnc.pid";
+ }
+ 
+ static const char *config_def_vendor(void)
+@@ -456,7 +456,7 @@
+ {
+ 	char *realname;
+ 	
+-	asprintf(&realname, "%s%s%s", index(name, '/') ? "" : "/etc/vpnc/", name, add_dot_conf ? ".conf" : "");
++	asprintf(&realname, "%s%s%s", index(name, '/') ? "" : "/media/DISK_A1/system/etc/vpnc/", name, add_dot_conf ? ".conf" : "");
+ 	return realname;
+ }
+ 
+@@ -675,8 +675,8 @@
+ 	}
+ 	
+ 	if (!got_conffile) {
+-		read_config_file("/etc/vpnc/default.conf", config, 1);
+-		read_config_file("/etc/vpnc.conf", config, 1);
++		read_config_file("/media/DISK_A1/system/etc/vpnc/default.conf", config, 1);
++		read_config_file("/media/DISK_A1/system/etc/vpnc.conf", config, 1);
+ 	}
+ 	
+ 	if (!print_config) {
