@@ -11679,6 +11679,40 @@ Description:  The purpose of vnstati is to provide image output support for stat
  features. The image can be outputted either to a file or to standard
  output.
 
+Package: vpnc-scripts
+Version: 20120423-1
+Depends: ip
+Source: package/built/vpnc-scripts
+SourceFile: vpnc-scripts-20120423.tar.gz
+SourceURL: ftp://ftp.infradead.org/pub/vpnc-scripts/
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 6102
+Filename: vpnc-scripts_20120423-1_keenetic.ipk
+Size: 6727
+MD5Sum: 3b160e8ca480ff2184bc24dab151ce9a
+Description:  VPN configuration script for vpnc and OpenConnect
+
+Package: vpnc
+Version: 0.5.3-3
+Depends: libgpg-error, libgcrypt, kmod-tun, vpnc-scripts
+Source: package/built/vpnc
+SourceFile: vpnc-0.5.3.tar.gz
+SourceURL: http://www.unix-ag.uni-kl.de/~massar/vpnc/
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 46592
+Filename: vpnc_0.5.3-3_keenetic.ipk
+Size: 47491
+MD5Sum: 911511fe833210a00c1944e39b5306dd
+Description:  A VPN client compatible with Cisco's EasyVPN equipment.
+ 
+ Supports IPSec (ESP) with Mode Configuration and Xauth.  Supports only
+ shared-secret IPSec authentication with Xauth, AES (256, 192, 128),
+ 3DES, 1DES, MD5, SHA1, DH1/2/5 and IP tunneling.
+
 Package: wget
 Version: 1.14-1
 Depends: libpcre, libopenssl
