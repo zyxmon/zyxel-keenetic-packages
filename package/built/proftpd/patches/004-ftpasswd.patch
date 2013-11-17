@@ -1,0 +1,8 @@
+--- a/contrib/ftpasswd.orig
++++ b/contrib/ftpasswd
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/media/DISK_A1/system/usr/bin/perl
+ # ---------------------------------------------------------------------------
+ # Copyright (C) 2000-2013 TJ Saunders <tj@castaglia.org>
+ #
