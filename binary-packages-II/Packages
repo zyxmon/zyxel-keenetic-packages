@@ -1960,6 +1960,21 @@ Size: 101348
 MD5Sum: 492c401bf416adb8f02d18b6cc3d8523
 Description:  utility
 
+Package: ftpasswd
+Version: 1.3.4c-1
+Depends: perl, perlbase-essential, perlbase-file, perlbase-getopt
+Source: package/built/proftpd
+SourceFile: proftpd-1.3.4c.tar.gz
+SourceURL: ftp://ftp.proftpd.org/distrib/source
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 7618
+Filename: ftpasswd_1.3.4c-1_keeneticII.ipk
+Size: 8255
+MD5Sum: 7d3d9d4fc496ff7d28fc24ca9bcaa5f1
+Description:  ProFTPD FTP server password generator
+
 Package: fuse-convmvfs
 Version: 0.2.6-1
 Depends: libiconv-full, libfuse, libstdcpp
@@ -8281,6 +8296,20 @@ MD5Sum: 418c377452005a0e255c5071cc8570cf
 Description:  procps is the package that has a bunch of small useful utilities that give 
  information about processes using the /proc filesystem. The package 
  includes the programs ps, top, vmstat, w, kill, free, slabtop, and skill.
+
+Package: proftpd
+Version: 1.3.4c-1
+Source: package/built/proftpd
+SourceFile: proftpd-1.3.4c.tar.gz
+SourceURL: ftp://ftp.proftpd.org/distrib/source
+Section: net
+Maintainer: Cezary Jackiewicz <cezary@eko.one.pl>
+Architecture: keeneticII
+Installed-Size: 243199
+Filename: proftpd_1.3.4c-1_keeneticII.ipk
+Size: 243233
+MD5Sum: 6ae20f4687a248e9afef038dd3ba3d68
+Description:  ProFTPD FTP server
 
 Package: prosody
 Version: 0.6.2-3
