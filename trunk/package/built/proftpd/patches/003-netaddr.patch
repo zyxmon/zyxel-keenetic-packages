@@ -1,0 +1,13 @@
+--- a/scr/netaddr.c.orig
++++ b/src/netaddr.c
+@@ -690,9 +690,8 @@
+         pr_freeaddrinfo(info);
+       }
+     }
+-#endif /* PR_USE_IPV6 */
+   }
+-
++#endif /* PR_USE_IPV6 */
+   return na;
+ }
+ 
