@@ -9473,428 +9473,428 @@ MD5Sum: 8f113ae2e15fb7ce5587d5489b03b832
 Description:  XSLoader perl module
 
 Package: php5-cgi
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 1009189
-Filename: php5-cgi_5.4.19-1_keenetic.ipk
-Size: 1007569
-MD5Sum: fedb37c293805b0e37a32a5bc9612f73
+Installed-Size: 1009398
+Filename: php5-cgi_5.4.22-2_keenetic.ipk
+Size: 1007909
+MD5Sum: af4e6230963ed596cbb900d8919ce1f5
 Description:  PHP is a widely-used general-purpose scripting language that is especially
  suited for Web development and can be embedded into HTML.
  This package contains the CGI version of the PHP5 interpreter.
 
 Package: php5-cli
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 1015223
-Filename: php5-cli_5.4.19-1_keenetic.ipk
-Size: 1013871
-MD5Sum: 4359687b8fd32c084285365a83bf37cc
+Installed-Size: 1015400
+Filename: php5-cli_5.4.22-2_keenetic.ipk
+Size: 1014091
+MD5Sum: 86880caf99537703f6f3429a0b6a21b9
 Description:  PHP is a widely-used general-purpose scripting language that is especially
  suited for Web development and can be embedded into HTML.
  This package contains the CLI version of the PHP5 interpreter.
 
 Package: php5-fastcgi
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, php5-cgi
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 587
-Filename: php5-fastcgi_5.4.19-1_keenetic.ipk
-Size: 1239
-MD5Sum: 17d4e7a2b1e7713bd08755ffe7e595a6
+Installed-Size: 592
+Filename: php5-fastcgi_5.4.22-2_keenetic.ipk
+Size: 1247
+MD5Sum: 49622228a57f868bd49efde12922d092
 Description:  As FastCGI support is now a core feature the php5-fastcgi package now depends
  on the php5-cgi package, containing just the startup script.
 
 Package: php5-mod-ctype
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 2212
-Filename: php5-mod-ctype_5.4.19-1_keenetic.ipk
-Size: 2800
-MD5Sum: 6771ba429e927efd264f196904bb6792
+Installed-Size: 2218
+Filename: php5-mod-ctype_5.4.22-2_keenetic.ipk
+Size: 2812
+MD5Sum: 982d49d00fd0cc3898273ecbc7e0b9ac
 Description:  Ctype shared module
 
 Package: php5-mod-curl
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libcurl
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 21873
-Filename: php5-mod-curl_5.4.19-1_keenetic.ipk
-Size: 22406
-MD5Sum: 3f1f5144bc789fc3e203fce7f5973f28
+Installed-Size: 21982
+Filename: php5-mod-curl_5.4.22-2_keenetic.ipk
+Size: 22503
+MD5Sum: 513df9a5a776e311ea91437bc260070f
 Description:  cURL shared module
 
 Package: php5-mod-dom
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libxml2
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 41003
-Filename: php5-mod-dom_5.4.19-1_keenetic.ipk
-Size: 41448
-MD5Sum: 0ed5000f9629a6552b1356c9ee9d1ea7
+Installed-Size: 41037
+Filename: php5-mod-dom_5.4.22-2_keenetic.ipk
+Size: 41499
+MD5Sum: b2c78621aae033d9f11381b7dbd63374
 Description:  DOM shared module
 
 Package: php5-mod-ftp
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libopenssl
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 13514
-Filename: php5-mod-ftp_5.4.19-1_keenetic.ipk
-Size: 14092
-MD5Sum: 5e30ab6062e8823cd1198d59942efdc1
+Installed-Size: 13523
+Filename: php5-mod-ftp_5.4.22-2_keenetic.ipk
+Size: 14103
+MD5Sum: b974cde5dd17d33f73ec8792d2e7bea1
 Description:  FTP shared module
 
 Package: php5-mod-gd
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libjpeg, libpng, libfreetype
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
 Installed-Size: 76434
-Filename: php5-mod-gd_5.4.19-1_keenetic.ipk
-Size: 76680
-MD5Sum: 624c68d23ad9d4a7392109ab27d4b5bc
+Filename: php5-mod-gd_5.4.22-2_keenetic.ipk
+Size: 76685
+MD5Sum: f5f3849e2e71440f6ba8912f091205d5
 Description:  GD graphics shared module
 
 Package: php5-mod-hash
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 110334
-Filename: php5-mod-hash_5.4.19-1_keenetic.ipk
-Size: 109927
-MD5Sum: bebfb00708d68c5fa3d7cc0d035162f0
+Installed-Size: 109310
+Filename: php5-mod-hash_5.4.22-2_keenetic.ipk
+Size: 109054
+MD5Sum: d6bb2df3808c073380192ee8d04aa20e
 Description:  Hash shared module
 
 Package: php5-mod-iconv
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libiconv-full
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 12353
-Filename: php5-mod-iconv_5.4.19-1_keenetic.ipk
-Size: 12941
-MD5Sum: 22d15b9433c735d4f29c329bb8d67751
+Installed-Size: 12356
+Filename: php5-mod-iconv_5.4.22-2_keenetic.ipk
+Size: 12947
+MD5Sum: 5c9754de4be59338e65bd1b805e78465
 Description:  iConv shared module
 
 Package: php5-mod-json
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 11305
-Filename: php5-mod-json_5.4.19-1_keenetic.ipk
-Size: 11903
-MD5Sum: dde9e1b916dbb9e62873fe5673e35d1e
+Installed-Size: 11307
+Filename: php5-mod-json_5.4.22-2_keenetic.ipk
+Size: 11920
+MD5Sum: 5b9f4089bf10f2e12765932b8d7e5f20
 Description:  JSON shared module
 
 Package: php5-mod-mbstring
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 582659
-Filename: php5-mod-mbstring_5.4.19-1_keenetic.ipk
-Size: 579298
-MD5Sum: 1cc8e0faf9ef5d31ddf83810191c0a7f
+Installed-Size: 582393
+Filename: php5-mod-mbstring_5.4.22-2_keenetic.ipk
+Size: 579051
+MD5Sum: 559e2c378989b1dc15c432141f29d9ea
 Description:  MBString shared module
 
 Package: php5-mod-mcrypt
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libmcrypt, libltdl
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 10688
-Filename: php5-mod-mcrypt_5.4.19-1_keenetic.ipk
-Size: 11214
-MD5Sum: e19cc1fda3c86d2cfcc0fdcb8efbea0b
+Installed-Size: 10682
+Filename: php5-mod-mcrypt_5.4.22-2_keenetic.ipk
+Size: 11249
+MD5Sum: 56961268f7cb37e23fc5586a30f4df50
 Description:  Mcrypt shared module
 
 Package: php5-mod-mysql
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libmysqlclient
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 14547
-Filename: php5-mod-mysql_5.4.19-1_keenetic.ipk
-Size: 15100
-MD5Sum: 481d011617d90decb89ec57f7a6552d0
+Installed-Size: 14553
+Filename: php5-mod-mysql_5.4.22-2_keenetic.ipk
+Size: 15102
+MD5Sum: 6d9b7db28f3094ad88a8e6183e11517f
 Description:  MySQL shared module
 
 Package: php5-mod-mysqli
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libmysqlclient
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 33865
-Filename: php5-mod-mysqli_5.4.19-1_keenetic.ipk
-Size: 34292
-MD5Sum: bcbcb6d33448d3201dde57f148ee1812
+Installed-Size: 33871
+Filename: php5-mod-mysqli_5.4.22-2_keenetic.ipk
+Size: 34323
+MD5Sum: f7fd6d196b29b3c65e62226da1cfc2b5
 Description:  MySQL Improved Extension shared module
 
 Package: php5-mod-openssl
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libopenssl
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 34908
-Filename: php5-mod-openssl_5.4.19-1_keenetic.ipk
-Size: 35143
-MD5Sum: 5cd5b051b7065417ae21f4e893baac51
+Installed-Size: 34751
+Filename: php5-mod-openssl_5.4.22-2_keenetic.ipk
+Size: 34976
+MD5Sum: 8347b4bec247333e34cf13374a73cbcf
 Description:  OpenSSL shared module
 
 Package: php5-mod-pdo-mysql
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, php5-mod-pdo, libmysqlclient
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 10037
-Filename: php5-mod-pdo-mysql_5.4.19-1_keenetic.ipk
-Size: 10664
-MD5Sum: c35e50e122d49d0f87edb95f15cf8d19
+Installed-Size: 10039
+Filename: php5-mod-pdo-mysql_5.4.22-2_keenetic.ipk
+Size: 10672
+MD5Sum: be009107d238b537b5d20304351d0cd4
 Description:  PDO driver for MySQL shared module
 
 Package: php5-mod-pdo-sqlite
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, php5-mod-pdo, libsqlite3
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 8646
-Filename: php5-mod-pdo-sqlite_5.4.19-1_keenetic.ipk
-Size: 9292
-MD5Sum: c806c6408a5dba25aed479ee82a1a429
+Installed-Size: 8650
+Filename: php5-mod-pdo-sqlite_5.4.22-2_keenetic.ipk
+Size: 9302
+MD5Sum: 9b39a01ffa077bb398a611dd5dbc3d6a
 Description:  PDO driver for SQLite 3.x shared module
 
 Package: php5-mod-pdo
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 33979
-Filename: php5-mod-pdo_5.4.19-1_keenetic.ipk
-Size: 34557
-MD5Sum: 5ac3e2a0a46abb211d5718091bfc162a
+Installed-Size: 33992
+Filename: php5-mod-pdo_5.4.22-2_keenetic.ipk
+Size: 34478
+MD5Sum: 5af2a031048a06c0f0c6287f5e3716b4
 Description:  PHP Data Objects shared module
 
 Package: php5-mod-session
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 22791
-Filename: php5-mod-session_5.4.19-1_keenetic.ipk
-Size: 23294
-MD5Sum: ae791cef0d898ee801a539145b0797c0
+Installed-Size: 22819
+Filename: php5-mod-session_5.4.22-2_keenetic.ipk
+Size: 23352
+MD5Sum: 01be8e3571b5eb710c7d50702995f646
 Description:  Session shared module
 
 Package: php5-mod-simplexml
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libxml2
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 15487
-Filename: php5-mod-simplexml_5.4.19-1_keenetic.ipk
-Size: 16007
-MD5Sum: 6a6bdc75ecc6c5e2d4d59212d20f189e
+Installed-Size: 15448
+Filename: php5-mod-simplexml_5.4.22-2_keenetic.ipk
+Size: 16014
+MD5Sum: c8df64470d823834b260a5600f50d083
 Description:  SimpleXML shared module
 
 Package: php5-mod-soap
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libxml2
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 100132
-Filename: php5-mod-soap_5.4.19-1_keenetic.ipk
-Size: 100528
-MD5Sum: d9f983d0058cb586adc97a3da8f9de35
+Installed-Size: 100428
+Filename: php5-mod-soap_5.4.22-2_keenetic.ipk
+Size: 100858
+MD5Sum: ba1e84eb2f72ea37a1071c75e8b48bc3
 Description:  SOAP shared module
 
 Package: php5-mod-sockets
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 15054
-Filename: php5-mod-sockets_5.4.19-1_keenetic.ipk
-Size: 15591
-MD5Sum: ac103a343ec67ba36b5aedfd8217a8ee
+Installed-Size: 15067
+Filename: php5-mod-sockets_5.4.22-2_keenetic.ipk
+Size: 15612
+MD5Sum: 0d4eb3d5afdd62fc5f571c982c3da3dc
 Description:  Sockets shared module
 
 Package: php5-mod-sqlite3
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libsqlite3
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 13476
-Filename: php5-mod-sqlite3_5.4.19-1_keenetic.ipk
-Size: 14010
-MD5Sum: ebca7a224d894770d6ac7ceee7348c39
+Installed-Size: 13479
+Filename: php5-mod-sqlite3_5.4.22-2_keenetic.ipk
+Size: 14028
+MD5Sum: 49720f73a7fdcaf4cc2b88774b5cb813
 Description:  SQLite3 shared module
 
 Package: php5-mod-xml
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libxml2
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 14077
-Filename: php5-mod-xml_5.4.19-1_keenetic.ipk
-Size: 14628
-MD5Sum: d702f5a386f69c64602cbda967d24ebe
+Installed-Size: 14083
+Filename: php5-mod-xml_5.4.22-2_keenetic.ipk
+Size: 14627
+MD5Sum: da86e0b2268c89161a52e9051fa9e7af
 Description:  XML shared module
 
 Package: php5-mod-xmlreader
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libxml2, libiconv-full
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 8212
-Filename: php5-mod-xmlreader_5.4.19-1_keenetic.ipk
-Size: 8838
-MD5Sum: 5ef14db6c73aab894f94518041bff2c0
+Installed-Size: 8208
+Filename: php5-mod-xmlreader_5.4.22-2_keenetic.ipk
+Size: 8832
+MD5Sum: e4dea62915d1aca8fa246bb2ca3e01f1
 Description:  XMLReader shared module
 
 Package: php5-mod-xmlwriter
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5, libxml2, libiconv-full
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 8436
-Filename: php5-mod-xmlwriter_5.4.19-1_keenetic.ipk
-Size: 8984
-MD5Sum: a9560a845509c659f9fb9880c32a88ca
+Installed-Size: 8438
+Filename: php5-mod-xmlwriter_5.4.22-2_keenetic.ipk
+Size: 9026
+MD5Sum: d4b6b6b471140153f6cf59acc1a8c058
 Description:  XMLWriter shared module
 
 Package: php5-mod-zip
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: php5
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 33027
-Filename: php5-mod-zip_5.4.19-1_keenetic.ipk
-Size: 33539
-MD5Sum: ce435fdd6add9a207fd50b0072fd563e
+Installed-Size: 33076
+Filename: php5-mod-zip_5.4.22-2_keenetic.ipk
+Size: 33612
+MD5Sum: 326a421beb42413facac730b1a85504b
 Description:  ZIP shared module
 
 Package: php5-pecl-apc
@@ -9913,18 +9913,18 @@ MD5Sum: 979af999b6ebfea206cec1d95207f3b5
 Description:  Alternative PHP Cache
 
 Package: php5
-Version: 5.4.19-1
+Version: 5.4.22-2
 Depends: libpcre, libiconv-full, libxml2
 Source: package/built/php5
-SourceFile: php-5.4.19.tar.bz2
+SourceFile: php-5.4.22.tar.bz2
 SourceURL: http://www.php.net/distributions/
 Section: lang
 Maintainer: Michael Heimpold <mhei@heimpold.de>
 Architecture: keenetic
-Installed-Size: 3330
-Filename: php5_5.4.19-1_keenetic.ipk
-Size: 4093
-MD5Sum: de7c018d7d7a1af697f5ac42722583ef
+Installed-Size: 3333
+Filename: php5_5.4.22-2_keenetic.ipk
+Size: 4102
+MD5Sum: 08fb9e2a7b7bdc795e83fad2aaf41996
 Description:  PHP is a widely-used general-purpose scripting language that is especially
  suited for Web development and can be embedded into HTML.
  This package contains only the PHP config file. You must actually choose
