@@ -1,0 +1,10 @@
+v.1.0   - 25volt original tool for monitoring ups POWERCOM Imperial IMD-1025AP and maybe other for FreeBSD and Linux.
+
+v.1.0.1 - corrected for Powercom WOW-xxxU series, some changed and bugs removed
+
+v.1.0.2 - added switch off beeper (experimental)
+
+v.1.0.3 - minor changes
+          added -s arg
+          removed claim interface bug - syslog libusb warning:
+             kernel: usb x-x: usbfs: process xxxx (usb_ups_powerco) did not claim interface 0 before use

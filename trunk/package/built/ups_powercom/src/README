@@ -1,0 +1,17 @@
+25volt - A lightweight tool for monitoring ups POWERCOM Imperial IMD-1025AP and maybe other for FreeBSD and Linux.
+
+Corrected for Powercom WOW-xxxU series by <c61@yandex.ru> 2013
+
+Requirements for build:
+
+libusb (http://libusb.org/)
+
+Please edit Makefile for CFLAGS/LIBS
+
+Program options:
+ <empty>  - get and show UPS data
+ -u       - get and show unformatted UPS data
+ -s       - get and show UPS data for bash script
+ -t       - test UPS
+ -b       - switch off beeper (audible alarm control; experimental - for models after 2010)
+ -? or -h - this help
