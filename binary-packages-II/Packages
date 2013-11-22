@@ -2052,18 +2052,18 @@ Description:  giflib is a library for reading and writing gif images.
  the LZW compression algorithm was patented. 
 
 Package: git
-Version: 1.8.3.4-1
+Version: 1.8.4.4-1
 Depends: libiconv-full, libintl-full, libcurl, libexpat
 Source: package/built/git
-SourceFile: git-1.8.3.4.tar.gz
+SourceFile: git-1.8.4.4.tar.gz
 SourceURL: http://git-core.googlecode.com/files/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 5834101
-Filename: git_1.8.3.4-1_keeneticII.ipk
-Size: 5822921
-MD5Sum: a217a55d235b3fa84f4674fab26022e6
+Installed-Size: 6134947
+Filename: git_1.8.4.4-1_keeneticII.ipk
+Size: 6123205
+MD5Sum: 1370f73a30f1d3555e32678212d1bdec
 Description:  Git is a free & open source, distributed version control system
  designed to handle everything from small to very large projects
  with speed and efficiency.
@@ -9783,18 +9783,18 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 387-1
+Version: 391-1
 Depends: liblua
 Source: package/built/xupnpd
-SourceFile: xupnpd-387.tar.gz
+SourceFile: xupnpd-391.tar.gz
 SourceURL: http://tsdemuxer.googlecode.com/svn/trunk/xupnpd/src/
 Section: multimedia
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 147888
-Filename: xupnpd_387-1_keeneticII.ipk
-Size: 148488
-MD5Sum: de71b0320bf7157ae9cb61191a0c9933
+Installed-Size: 149622
+Filename: xupnpd_391-1_keeneticII.ipk
+Size: 150255
+MD5Sum: 972a8c70bb9d02711dc6f51c5a1ef67b
 Description:  eXtensible UPnP agent
 
 Package: yamdi
