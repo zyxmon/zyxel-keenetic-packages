@@ -11879,18 +11879,18 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xupnpd
-Version: 391-1
+Version: 392-1
 Depends: liblua
 Source: package/built/xupnpd
-SourceFile: xupnpd-391.tar.gz
+SourceFile: xupnpd-392.tar.gz
 SourceURL: http://tsdemuxer.googlecode.com/svn/trunk/xupnpd/src/
 Section: multimedia
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 146250
-Filename: xupnpd_391-1_keenetic.ipk
-Size: 146906
-MD5Sum: b61b0aa2a6dd02d8c05eb1ac9c8155c4
+Installed-Size: 146400
+Filename: xupnpd_392-1_keenetic.ipk
+Size: 147033
+MD5Sum: bb7d912eadeb7b4d254e308213dd596d
 Description:  eXtensible UPnP agent
 
 Package: yamdi
