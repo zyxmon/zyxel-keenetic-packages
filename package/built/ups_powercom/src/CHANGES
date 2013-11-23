@@ -8,3 +8,8 @@ v.1.0.3 - minor changes
           added -s arg
           removed claim interface bug - syslog libusb warning:
              kernel: usb x-x: usbfs: process xxxx (usb_ups_powerco) did not claim interface 0 before use
+
+v.1.0.4 - removed error: detach and not attach driver
+          added -v VID and -p PID args
+          from this version:
+             Powercom BNT, IMPERIAL, SKP, WOW series supported
