@@ -3,6 +3,8 @@
 **  Copyright (C) 2009 Dmitry Schedrin <dmx@dmx.org.ru>
 **
 **  Corrected for Powercom WOW-xxxU by c61 <mail@c61.su> 2013
+**  From program version 1.0.4 Powercom BNT, IMPERIAL, SKP, WOW series are supported
+**  (see -v and -p options)
 **
 **  This program is free software; you can redistribute it and/or modify
 **  it under the terms of the GNU General Public License as published by
@@ -63,7 +65,9 @@
 
 uint16_t status;
 
-char version[] ="1.0.3";
+char version[] ="1.0.4";
+
+int vendor = IMD_VID, product = IMD_PID;
 
 usb_dev_handle * usb_open_imd(void);
 
@@ -124,8 +128,8 @@ usb_dev_handle* usb_open_imd(void) {
 
 	for (bus = usb_get_busses(); bus; bus = bus->next) {
 		for (dev = bus->devices; dev; dev = dev->next) {
-			if ((dev->descriptor.idVendor == IMD_VID)
-			    && (dev->descriptor.idProduct == IMD_PID)) {
+			if ((dev->descriptor.idVendor == vendor)
+			    && (dev->descriptor.idProduct == product)) {
 				return usb_open(dev);
 			}
 		}
@@ -234,26 +238,17 @@ int main(int argc, char ** argv) {
 	usb_dev_handle *hdev = NULL;
 	unsigned char onoff[2][4] = {"off\0", "on\0"};
 
-	while ((ch = getopt(argc, argv, "ustbh?")) != EOF) {
+	while ((ch = getopt(argc, argv, "ustbv:p:h?")) != EOF) {
 		switch (ch) {
-			case 'u':
-				hflag = 1;
-				break;
-			case 's':
-				hflag = 2;
-				break;
-			case 't':
-				tflag = 1;
-				break;
-			case 'b':
-				bflag = 1;
-				break;
+			case 'v':	vendor = strtol(optarg,NULL,16);	break;
+			case 'p':	product = strtol(optarg,NULL,16);	break;
+			case 'u':	hflag = 1;	break;
+			case 's':	hflag = 2;	break;
+			case 't':	tflag = 1;	break;
+			case 'b':	bflag = 1;	break;
 			case 'h':
-			case '?':
-				help = 1;
-				break;
-			default:
-			break;
+			case '?':	help = 1;	break;
+			default:	break;
 		}
 	}
 
@@ -261,12 +256,14 @@ int main(int argc, char ** argv) {
 	{
 		printf("USB UPS Powercom WOW-xxxU monitoring, v.%s\n", version);
 		printf(" no args - get and show ups data\n");
-		printf("      -u - get and show unformatted ups data\n");
-		printf("      -s - get and show UPS data for bash script\n");
-		printf("      -t - test ups\n");
-		printf("      -b - switch off beeper (audible alarm control; experimental, for models after 2008)\n");
-		printf("   -h -? - this help\n");
-		exit(1);
+		printf(" -u      - get and show unformatted ups data\n");
+		printf(" -s      - get and show UPS data for bash script\n");
+		printf(" -t      - test ups\n");
+		printf(" -b      - switch off beeper (audible alarm control; experimental)\n");
+		printf(" -v VID  - vendor ID (default: 0d9f - Powercom)\n");
+		printf(" -p PID  - product ID (default: 00a4 - Powercom WOW)\n");
+		printf(" -h -?   - this help\n");
+		exit(0);
 	}
 
 	//usb_set_debug(4);
@@ -274,7 +271,7 @@ int main(int argc, char ** argv) {
 
 	if ((hdev = usb_open_imd()) == NULL) {
 		printf("open failed\n");
-		return 1;
+		exit(1);
 	}
 
 
@@ -382,7 +379,12 @@ release:;
 		ret = 1;
 	}
 
+#ifdef LIBUSB_HAS_ATTACH_KERNEL_DRIVER_NP
+	if(usb_attach_kernel_driver_np(hdev, 0) < 0) {
+		; //fprintf(stderr, "Warning: could not attach kernel driver: %s\n", usb_strerror());
+	}
+#endif 
 	usb_close(hdev);
 
-	return ret ? 1 : 0;
+	exit(ret ? 1 : 0);
 }

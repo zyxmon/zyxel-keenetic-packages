@@ -1,6 +1,8 @@
 25volt - A lightweight tool for monitoring ups POWERCOM Imperial IMD-1025AP and maybe other for FreeBSD and Linux.
 
 Corrected for Powercom WOW-xxxU series by <c61@yandex.ru> 2013
+From program version 1.0.4 Powercom BNT, IMPERIAL, SKP, WOW series supported
+(see -v and -p options)
 
 Requirements for build:
 
@@ -8,10 +10,18 @@ libusb (http://libusb.org/)
 
 Please edit Makefile for CFLAGS/LIBS
 
+Dependencies:
+
+kernel modules input-core, hid, usbhid
+package libusb
+package usbutils (use lsusb for obtaining ID's)
+
 Program options:
  <empty>  - get and show UPS data
  -u       - get and show unformatted UPS data
  -s       - get and show UPS data for bash script
  -t       - test UPS
  -b       - switch off beeper (audible alarm control; experimental - for models after 2010)
+ -v VID   - vendor ID (default: 0d9f - Powercom)
+ -p PID   - product ID (default: 00a4 - Powercom WOW)
  -? or -h - this help
