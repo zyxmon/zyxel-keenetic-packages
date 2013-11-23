@@ -9423,15 +9423,15 @@ Description:  InfoZIP's unzip program. With the exception of multi-volume archiv
  InfoZIP zip program.
 
 Package: usb_ups_powercom_wow
-Version: 1.0.3-1
+Version: 1.0.4-1
 Source: package/built/ups_powercom
 Section: utils
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 3622
-Filename: usb_ups_powercom_wow_1.0.3-1_keeneticII.ipk
-Size: 4165
-MD5Sum: caa2de90e226e6647812471b7208e9df
+Installed-Size: 3794
+Filename: usb_ups_powercom_wow_1.0.4-1_keeneticII.ipk
+Size: 4348
+MD5Sum: dadc94f35cc9ad4b0d1d91009d515230
 Description:  USB UPS Powercom WOW monitor.
 
 Package: usbip-server
