@@ -5,6 +5,8 @@
 }
 
 MODULE="$1"
+${CROSS}strip --strip-unneeded --remove-section=.comment -w -K '__param*' -K '__mod*' $MODULE
+exit 0
 
 [ "$#" -ne 1 ] && {
 	echo "Usage: $0 <module>"
