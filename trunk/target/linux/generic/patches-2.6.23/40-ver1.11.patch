@@ -1,0 +1,1694 @@
+--- a/arch/mips/Kconfig
++++ b/arch/mips/Kconfig
+@@ -23,6 +23,10 @@
+ 	bool
+ config RALINK_RT3883_MP
+ 	bool
++config RALINK_MT7620_MP
++	bool
++config RALINK_MT7621_MP
++	bool
+ 
+ choice
+ 	prompt "System type"
+@@ -113,6 +117,36 @@
+ 		help
+          Ralink evaluation board based on RT3883
+ 
++config RALINK_MT7620
++		bool "Ralink MT7620 board"
++	select DMA_NONCOHERENT
++	select IRQ_CPU
++	select HW_HAS_PCI
++	select SWAP_IO_SPACE
++	select SYS_HAS_CPU_MIPS32_R1
++	select SYS_HAS_CPU_MIPS32_R2
++	select SYS_SUPPORTS_LITTLE_ENDIAN
++	select BOOT_ELF32
++	select SYS_SUPPORTS_32BIT_KERNEL
++	select RALINK_MT7620_MP
++		help
++		 Ralink evaluation board based on MT7620
++
++config RALINK_MT7621
++		bool "Ralink MT7621 board"
++	select DMA_NONCOHERENT
++	select IRQ_CPU
++	select HW_HAS_PCI
++	select SWAP_IO_SPACE
++	select SYS_HAS_CPU_MIPS32_R1
++	select SYS_HAS_CPU_MIPS32_R2
++	select SYS_SUPPORTS_LITTLE_ENDIAN
++	select BOOT_ELF32
++	select SYS_SUPPORTS_32BIT_KERNEL
++	select RALINK_MT7621_MP
++		help
++		 Ralink evaluation board based on MT7621
++
+ config MACH_ALCHEMY
+ 	bool "Alchemy processor based machines"
+ 
+--- a/arch/mips/Makefile
++++ b/arch/mips/Makefile
+@@ -203,6 +203,20 @@
+ load-$(CONFIG_RALINK_RT3883)   += 0x80000000
+ 
+ #
++# Ralink MT7620 board
++#
++core-$(CONFIG_RALINK_MT7620)   += arch/mips/rt2880/
++cflags-$(CONFIG_RALINK_MT7620) += -Iinclude/asm-mips/rt2880
++load-$(CONFIG_RALINK_MT7620)   += 0x80000000
++
++#
++# Ralink MT7621 board
++#
++core-$(CONFIG_RALINK_MT7621)   += arch/mips/rt2880/
++cflags-$(CONFIG_RALINK_MT7621) += -Iinclude/asm-mips/rt2880
++load-$(CONFIG_RALINK_MT7621)   += 0x80000000
++
++#
+ # Acer PICA 61, Mips Magnum 4000 and Olivetti M700.
+ #
+ core-$(CONFIG_MACH_JAZZ)	+= arch/mips/jazz/
+--- a/arch/mips/rt2880/Kconfig
++++ b/arch/mips/rt2880/Kconfig
+@@ -93,6 +93,37 @@
+ 
+ #--------------------------
+ 
++if RALINK_MT7620
++
++choice
++    prompt "Soc Hardware Type"
++	default MT7620_ASIC
++
++config  MT7620_ASIC 
++	bool "MT7620-ASIC"
++	select USB_ARCH_HAS_OHCI
++	select USB_ARCH_HAS_EHCI
++
++endchoice
++
++endif
++#--------------------------
++
++if RALINK_MT7621
++
++choice
++    prompt "Soc Hardware Type"
++	default MT7621_ASIC
++
++config  MT7621_ASIC 
++	bool "MT7621-ASIC"
++	select USB_ARCH_HAS_OHCI
++	select USB_ARCH_HAS_EHCI
++
++endchoice
++
++endif
++#--------------------------
+ config FLASH_REMAP_NEED
+        bool
+        default y if (RALINK_RT2880)
+@@ -136,6 +167,7 @@
+ 
+ config MTD_ANY_RALINK
+        bool "ANY (NOR/SPI/NAND)"
++       depends on  !RALINK_RT3352 && !RALINK_RT5350
+ 
+ endchoice
+ 
+@@ -191,6 +223,8 @@
+        default 0x1C000000 if !FLASH_REMAP_NEED && RALINK_RT3352
+        default 0x1C000000 if !FLASH_REMAP_NEED && RALINK_RT5350
+        default 0x1C000000 if !FLASH_REMAP_NEED && RALINK_RT3883
++       default 0x1C000000 if !FLASH_REMAP_NEED && RALINK_MT7620
++       default 0x1C000000 if !FLASH_REMAP_NEED && RALINK_MT7621
+ 
+ config MTD_PHYSMAP_LEN
+        hex 
+--- a/arch/mips/rt2880/Makefile
++++ b/arch/mips/rt2880/Makefile
+@@ -23,3 +23,4 @@
+ obj-$(CONFIG_RALINK_RT3883) +=  ehci_ohci.o
+ obj-$(CONFIG_RALINK_RT3352) +=  ehci_ohci.o
+ obj-$(CONFIG_RALINK_RT5350) +=  ehci_ohci.o
++obj-$(CONFIG_RALINK_MT7620) +=  ehci_ohci.o
+--- a/arch/mips/rt2880/rt_timer.h
++++ b/arch/mips/rt2880/rt_timer.h
+@@ -55,7 +55,25 @@
+ #define SYSCFG1     RALINK_SYSCTL_BASE + 0x14  /* System Configuration Register1 */
+ #define GPIOMODE    RALINK_SYSCTL_BASE + 0x60  
+ #define CLKCFG      RALINK_SYSCTL_BASE + 0x30  /* Clock Configuration Register */
++#define RSTSTAT     RALINK_SYSCTL_BASE + 0x38
+ #define TMRSTAT     (RALINK_TIMER_BASE)  /* Timer Status Register */
++
++#if defined (CONFIG_RALINK_RT6855A)
++#define TMR1CTL     (TMRSTAT + 0x0)  /* WDG Timer Control */
++#define TMR1LOAD    (TMRSTAT + 0x2C) /* WDG Timer Load Value Register */
++#define TMR1VAL     (TMRSTAT + 0x30) /* WDG Timer Current Value Register */
++#define RLDWDOG     (TMRSTAT + 0x38) /* Reload Watchdog */
++#elif defined (CONFIG_RALINK_MT7621)
++#define TMR0LOAD    (TMRSTAT + 0x14)  /* Timer0 Load Value */
++#define TMR0VAL     (TMRSTAT + 0x18)  /* Timer0 Counter Value */
++#define TMR0CTL     (TMRSTAT + 0x10)  /* Timer0 Control */
++#define TMR1LOAD    (TMRSTAT + 0x24)  /* Timer1 Load Value */
++#define TMR1VAL     (TMRSTAT + 0x28)  /* Timer1 Counter Value */
++#define TMR1CTL     (TMRSTAT + 0x20)  /* Timer1 Control */
++#define TMR2LOAD    (TMRSTAT + 0x34)  /* Timer2 Load Value */
++#define TMR2VAL     (TMRSTAT + 0x38)  /* Timer2 Counter Value */
++#define TMR2CTL     (TMRSTAT + 0x30)  /* Timer2 Control */
++#else
+ #define TMR0LOAD    (TMRSTAT + 0x10)  /* Timer0 Load Value */
+ #define TMR0VAL     (TMRSTAT + 0x14)  /* Timer0 Counter Value */
+ #define TMR0CTL     (TMRSTAT + 0x18)  /* Timer0 Control */
+@@ -63,13 +81,15 @@
+ #define TMR1VAL     (TMRSTAT + 0x24)  /* Timer1 Counter Value */
+ #define TMR1CTL     (TMRSTAT + 0x28)  /* Timer1 Control */
+ 
++#endif
++
+ #define INTENA      (RALINK_INTCL_BASE + 0x34)  /* Interrupt Enable */
+ 
+-struct timer0_data {
++struct timer_data {
+ 	unsigned long expires;
+ 	unsigned long data;
+-	void (*tmr0_callback_function)(unsigned long);
+-	spinlock_t      tmr0_lock;
++	void (*tmr_callback_function)(unsigned long);
++	spinlock_t    tmr_lock;
+ };
+ 
+ 
+@@ -102,6 +122,9 @@
+ int request_tmr_service(int interval, void (*function)(unsigned long), unsigned long data);
+ int unregister_tmr_service(void);
+ 
++int request_tmr1_service(int interval, void (*function)(unsigned long), unsigned long data);
++int unregister_tmr1_service(void);
++
+ #endif
+ 
+ 
+--- a/arch/mips/rt2880/serial_rt2880.h
++++ b/arch/mips/rt2880/serial_rt2880.h
+@@ -36,11 +36,49 @@
+  **************************************************************************
+  */
+ 
++#if defined (CONFIG_RALINK_MT7621)
++#define RT2880_UART_RBR_OFFSET  0x00
++#define RT2880_UART_TBR_OFFSET  0x00
++#define RT2880_UART_IER_OFFSET  0x04
++#define RT2880_UART_IIR_OFFSET  0x08
++#define RT2880_UART_FCR_OFFSET  0x08
++#define RT2880_UART_LCR_OFFSET  0x0C
++#define RT2880_UART_MCR_OFFSET  0x10
++#define RT2880_UART_LSR_OFFSET  0x14
++#define RT2880_UART_DLL_OFFSET  0x00
++#define RT2880_UART_DLM_OFFSET  0x04
++#else
++#define RT2880_UART_RBR_OFFSET  0x00
++#define RT2880_UART_TBR_OFFSET  0x04
++#define RT2880_UART_IER_OFFSET  0x08
++#define RT2880_UART_IIR_OFFSET  0x0C
++#define RT2880_UART_FCR_OFFSET  0x10
++#define RT2880_UART_LCR_OFFSET  0x14
++#define RT2880_UART_MCR_OFFSET  0x18
++#define RT2880_UART_LSR_OFFSET  0x1C
++#define RT2880_UART_DLL_OFFSET  0x2C
++#define RT2880_UART_DLM_OFFSET  0x30
++#endif
++
++#define RBR(x)          *(volatile u32 *)((x)+RT2880_UART_RBR_OFFSET)
++#define TBR(x)          *(volatile u32 *)((x)+RT2880_UART_TBR_OFFSET)
++#define IER(x)          *(volatile u32 *)((x)+RT2880_UART_IER_OFFSET)
++#define IIR(x)          *(volatile u32 *)((x)+RT2880_UART_IIR_OFFSET)
++#define FCR(x)          *(volatile u32 *)((x)+RT2880_UART_FCR_OFFSET)
++#define LCR(x)          *(volatile u32 *)((x)+RT2880_UART_LCR_OFFSET)
++#define MCR(x)          *(volatile u32 *)((x)+RT2880_UART_MCR_OFFSET)
++#define LSR(x)          *(volatile u32 *)((x)+RT2880_UART_LSR_OFFSET)
++#define DLL(x)          *(volatile u32 *)((x)+RT2880_UART_DLL_OFFSET)
++#define DLM(x)          *(volatile u32 *)((x)+RT2880_UART_DLM_OFFSET)
++
++
+ #if defined (CONFIG_RALINK_RT2880) || \
+     defined (CONFIG_RALINK_RT2883) || \
+     defined (CONFIG_RALINK_RT3883) || \
+     defined (CONFIG_RALINK_RT3352) || \
+     defined (CONFIG_RALINK_RT5350) || \
++    defined (CONFIG_RALINK_RT6855) || \
++    defined (CONFIG_RALINK_MT7620) || \
+     defined (CONFIG_RALINK_RT3052)
+ 
+ #define UART_RX		0	/* In:  Receive buffer (DLAB=0) */
+@@ -67,11 +105,11 @@
+ #define UART_LSR	28	/* In:  Line Status Register */
+ #define UART_MSR	32	/* In:  Modem Status Register */
+ #define UART_SCR	36	/* I/O: Scratch Register */
+-#define UART_DLL	40	/* Out: Divisor Latch Low (DLAB=1) */
++#define UART_DLL	44	/* Out: Divisor Latch Low (DLAB=1) */
+ /* Since surfboard uart cannot be accessed by byte, using UART_DLM will cause
+  * unpredictable values to be written to the Divisor Latch
+  */
+-#define UART_DLM	41	/* Out: Divisor Latch High (DLAB=1) */
++#define UART_DLM	48	/* Out: Divisor Latch High (DLAB=1) */
+ 
+ #else
+ 
+@@ -82,20 +120,20 @@
+ 				 * In: Fifo count
+ 				 * Out: Fifo custom trigger levels */
+ 
+-#define UART_DLM	1	/* Out: Divisor Latch High */
+-#define UART_IER	1	/* Out: Interrupt Enable Register */
+-#define UART_FCTR	1	/* Feature Control Register */
+-
+-#define UART_IIR	2	/* In:  Interrupt ID Register */
+-#define UART_FCR	2	/* Out: FIFO Control Register */
+-#define UART_EFR	2	/* I/O: Extended Features Register */
+-
+-#define UART_LCR	3	/* Out: Line Control Register */
+-#define UART_MCR	4	/* Out: Modem Control Register */
+-#define UART_LSR	5	/* In:  Line Status Register */
+-#define UART_MSR	6	/* In:  Modem Status Register */
+-#define UART_SCR	7	/* I/O: Scratch Register */
+-#define UART_EMSR	7	/* Extended Mode Select Register */
++#define UART_DLM	4	/* Out: Divisor Latch High */
++#define UART_IER	4	/* Out: Interrupt Enable Register */
++#define UART_FCTR	4	/* Feature Control Register */
++
++#define UART_IIR	8	/* In:  Interrupt ID Register */
++#define UART_FCR	8	/* Out: FIFO Control Register */
++#define UART_EFR	8	/* I/O: Extended Features Register */
++
++#define UART_LCR	12	/* Out: Line Control Register */
++#define UART_MCR	16	/* Out: Modem Control Register */
++#define UART_LSR	20	/* In:  Line Status Register */
++#define UART_MSR	24	/* In:  Modem Status Register */
++#define UART_SCR	28	/* I/O: Scratch Register */
++#define UART_EMSR	28	/* Extended Mode Select Register */
+ 
+ #endif
+ /*
+@@ -401,5 +439,3 @@
+ #define UART_OMAP_MVER		0x14	/* Module version register */
+ #define UART_OMAP_SYSC		0x15	/* System configuration register */
+ #define UART_OMAP_SYSS		0x16	/* System status register */
+-
+-
+--- a/include/asm-mips/pci.h
++++ b/include/asm-mips/pci.h
+@@ -56,8 +56,11 @@
+ /*
+  * board supplied pci irq fixup routine
+  */
++#if defined(CONFIG_RALINK_RT2883) || defined(CONFIG_RALINK_RT3883) || defined(CONFIG_RALINK_RT6855) ||  defined(CONFIG_RALINK_MT7620) ||  defined(CONFIG_RALINK_MT7621)
++extern int pcibios_map_irq(struct pci_dev *dev, u8 slot, u8 pin);
++#else
+ extern int pcibios_map_irq(const struct pci_dev *dev, u8 slot, u8 pin);
+-
++#endif
+ 
+ /* Can be used to override the logic in pci_scan_bus for skipping
+    already-configured bus numbers - to be used for buggy BIOSes
+--- a/include/asm-mips/rt2880/eureka_ep430.h
++++ b/include/asm-mips/rt2880/eureka_ep430.h
+@@ -110,7 +110,7 @@
+ #define RALINK_PCI1_SUBID 		*(volatile u32 *)(RALINK_PCI_BASE + RT3883_PCIE_OFFSET + 0x0038)
+ #define RALINK_PCI1_STATUS		*(volatile u32 *)(RALINK_PCI_BASE + RT3883_PCIE_OFFSET + 0x0050)
+ 
+-#elif defined(CONFIG_RALINK_RT6855)
++#elif defined(CONFIG_RALINK_RT6855) || defined (CONFIG_RALINK_MT7620) || defined (CONFIG_RALINK_MT7621)
+ 
+ #define RALINK_PCI_PCICFG_ADDR 		*(volatile u32 *)(RALINK_PCI_BASE + 0x0000)
+ #define RALINK_PCI_PCIRAW_ADDR 		*(volatile u32 *)(RALINK_PCI_BASE + 0x0004)
+@@ -134,6 +134,8 @@
+ #define RALINK_PCI0_CLASS 		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0034)
+ #define RALINK_PCI0_SUBID 		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0038)
+ #define RALINK_PCI0_STATUS		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0050)
++#define RALINK_PCI0_DERR		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0060)
++#define RALINK_PCI0_ECRC		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0064)
+ 
+ #define RALINK_PCI1_BAR0SETUP_ADDR 	*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE1_OFFSET + 0x0010)
+ #define RALINK_PCI1_IMBASEBAR0_ADDR 	*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE1_OFFSET + 0x0018)
+@@ -141,6 +143,28 @@
+ #define RALINK_PCI1_CLASS 		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE1_OFFSET + 0x0034)
+ #define RALINK_PCI1_SUBID 		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE1_OFFSET + 0x0038)
+ #define RALINK_PCI1_STATUS		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE1_OFFSET + 0x0050)
++#define RALINK_PCI1_DERR		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE1_OFFSET + 0x0060)
++#define RALINK_PCI1_ECRC		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE1_OFFSET + 0x0064)
++
++#elif defined (CONFIG_RALINK_MT7620) || defined (CONFIG_RALINK_MT7621)
++
++#define RALINK_PCI_PCICFG_ADDR 		*(volatile u32 *)(RALINK_PCI_BASE + 0x0000)
++#define RALINK_PCI_PCIRAW_ADDR 		*(volatile u32 *)(RALINK_PCI_BASE + 0x0004)
++#define RALINK_PCI_PCIINT_ADDR 		*(volatile u32 *)(RALINK_PCI_BASE + 0x0008)
++#define RALINK_PCI_PCIMSK_ADDR 		*(volatile u32 *)(RALINK_PCI_BASE + 0x000C)
++#define RALINK_PCI_IMBASEBAR1_ADDR 	*(volatile u32 *)(RALINK_PCI_BASE + 0x001C)
++#define RALINK_PCI_MEMBASE 		*(volatile u32 *)(RALINK_PCI_BASE + 0x0028)
++#define RALINK_PCI_IOBASE 		*(volatile u32 *)(RALINK_PCI_BASE + 0x002C)
++#define RALINK_PCI_ARBCTL 		*(volatile u32 *)(RALINK_PCI_BASE + 0x0080)
++
++#define RT6855_PCIE0_OFFSET	0x2000
++
++#define RALINK_PCI0_BAR0SETUP_ADDR 	*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0010)
++#define RALINK_PCI0_IMBASEBAR0_ADDR 	*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0018)
++#define RALINK_PCI0_ID 			*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0030)
++#define RALINK_PCI0_CLASS 		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0034)
++#define RALINK_PCI0_SUBID 		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0038)
++#define RALINK_PCI0_STATUS		*(volatile u32 *)(RALINK_PCI_BASE + RT6855_PCIE0_OFFSET + 0x0050)
+ 
+ #elif defined(CONFIG_RALINK_RT3052) || defined(CONFIG_RALINK_RT3352) || defined(CONFIG_RALINK_RT5350) 
+ #else
+--- a/include/asm-mips/rt2880/rt_mmap.h
++++ b/include/asm-mips/rt2880/rt_mmap.h
+@@ -191,7 +191,6 @@
+ #define RALINK_USB_DEV_BASE		0x10120000
+ #define RALINK_11N_MAC_BASE		0xB0180000
+ #define RALINK_USB_HOST_BASE		0x101C0000
+-#define RALINK_USB_OTG_BASE		0x101C0000
+ 
+ #define RALINK_MCNT_CFG			0xB0000D00
+ #define RALINK_COMPARE			0xB0000D04
+@@ -211,7 +210,6 @@
+ #define RALINK_INTCTL_UARTLITE		(1<<12)
+ #define RALINK_INTCTL_ESW		(1<<17)
+ #define RALINK_INTCTL_OTG		(1<<18)
+-#define RALINK_INTCTL_OTG_IRQN		18
+ #define RALINK_INTCTL_GLOBAL		(1<<31)
+ 
+ //Reset Control Register
+@@ -234,11 +232,13 @@
+ #define RALINK_EPHY_RST			(1<<24)
+ #define RALINK_UDEV_RST			(1<<25)
+ 
++
+ //Clock Conf Register
+ #define RALINK_UPHY1_CLK_EN		(1<<20)
+ #define RALINK_UPHY0_CLK_EN		(1<<18)
+ #define RALINK_GE1_CLK_EN		(1<<16)
+ 
++
+ #elif defined (CONFIG_RALINK_RT5350)
+ 
+ #define RALINK_SYSCTL_BASE		0xB0000000
+@@ -301,12 +301,10 @@
+ #define RALINK_UDEV_RST			(1<<25)
+ #define RALINK_MIPSC_RST		(1<<28)
+ 
+-
+ //Clock Conf Register
+ #define RALINK_UPHY0_CLK_EN		(1<<18)
+ #define RALINK_GE1_CLK_EN		(1<<16)
+ 
+-
+ #elif defined (CONFIG_RALINK_RT2883)
+ 
+ #define RALINK_SYSCTL_BASE		0xB0000000
+@@ -450,7 +448,7 @@
+ #define RALINK_ETH_SW_BASE		0xB0110000
+ #define RALINK_PCI_BASE                 0xB0140000
+ #define RALINK_USB_DEV_BASE		0x10120000
+-#define RALINK_11N_MAC_BASE		0x00000000
++#define RALINK_11N_MAC_BASE		0xB0180000
+ #define RALINK_USB_HOST_BASE		0x101C0000
+ 
+ #define RALINK_MCNT_CFG			0xB0000D00
+@@ -496,10 +494,181 @@
+ 
+ //Clock Conf Register
+ #define RALINK_UPHY0_CLK_EN		(1<<25)
+-#define RALINK_GE1_CLK_EN		(1<<16)
+ #define RALINK_PCIE0_CLK_EN		(1<<26)
+ #define RALINK_PCIE1_CLK_EN		(1<<27)
+ 
+ 
++#elif defined (CONFIG_RALINK_MT7620)
++
++#define RALINK_SYSCTL_BASE		0xB0000000
++#define RALINK_TIMER_BASE		0xB0000100
++#define RALINK_INTCL_BASE		0xB0000200
++#define RALINK_MEMCTRL_BASE		0xB0000300
++#define RALINK_RBUS_MATRIXCTL_BASE	0xB0000400
++#define RALINK_UART_BASE		0x10000500
++#define RALINK_PIO_BASE			0xB0000600
++#define RALINK_NAND_CTRL_BASE		0xB0000810
++#define RALINK_I2C_BASE			0xB0000900
++#define RALINK_I2S_BASE			0xB0000A00
++#define RALINK_SPI_BASE			0xB0000B00
++#define RALINK_UART_LITE_BASE		0x10000C00
++#define RALINK_MIPS_CNT_BASE		0x10000D00
++#define RALINK_PCM_BASE			0xB0002000
++#define RALINK_GDMA_BASE		0xB0002800
++#define RALINK_CRYPTO_ENGINE_BASE	0xB0004000
++#define RALINK_FRAME_ENGINE_BASE	0xB0100000
++#define RALINK_PPE_BASE			0xB0100C00
++#define RALINK_ETH_SW_BASE		0xB0110000
++#define RALINK_USB_DEV_BASE		0x10120000
++#define RALINK_PCI_BASE                 0xB0140000
++#define RALINK_11N_MAC_BASE		0xB0180000
++#define RALINK_USB_HOST_BASE		0x101C0000
++
++#define RALINK_MCNT_CFG			0xB0000D00
++#define RALINK_COMPARE			0xB0000D04
++#define RALINK_COUNT			0xB0000D08
++
++//Interrupt Controller
++#define RALINK_INTCTL_SYSCTL		(1<<0)
++#define RALINK_INTCTL_TIMER0		(1<<1)
++#define RALINK_INTCTL_WDTIMER		(1<<2)
++#define RALINK_INTCTL_ILL_ACCESS	(1<<3)
++#define RALINK_INTCTL_PCM		(1<<4)
++#define RALINK_INTCTL_UART		(1<<5)
++#define RALINK_INTCTL_PIO		(1<<6)
++#define RALINK_INTCTL_DMA		(1<<7)
++#define RALINK_INTCTL_PC		(1<<9)
++#define RALINK_INTCTL_I2S		(1<<10)
++#define RALINK_INTCTL_SPI		(1<<11)
++#define RALINK_INTCTL_UARTLITE		(1<<12)
++#define RALINK_INTCTL_CRYPTO		(1<<13)
++#define RALINK_INTCTL_ESW		(1<<17)
++#define RALINK_INTCTL_UHST		(1<<18)
++#define RALINK_INTCTL_UDEV		(1<<19)
++#define RALINK_INTCTL_GLOBAL		(1<<31)
++
++//Reset Control Register
++#define RALINK_SYS_RST			(1<<0)
++#define RALINK_TIMER_RST		(1<<8)
++#define RALINK_INTC_RST			(1<<9)
++#define RALINK_MC_RST			(1<<10)
++#define RALINK_PCM_RST			(1<<11)
++#define RALINK_UART_RST			(1<<12)
++#define RALINK_PIO_RST			(1<<13)
++#define RALINK_DMA_RST			(1<<14)
++#define RALINK_I2C_RST			(1<<16)
++#define RALINK_I2S_RST			(1<<17)
++#define RALINK_SPI_RST			(1<<18)
++#define RALINK_UARTL_RST		(1<<19)
++#define RALINK_FE_RST			(1<<21)
++#define RALINK_UHST_RST			(1<<22)
++#define RALINK_ESW_RST			(1<<23)
++#define RALINK_EPHY_RST			(1<<24)
++#define RALINK_UDEV_RST			(1<<25)
++#define RALINK_PCIE0_RST		(1<<26)
++#define RALINK_PCIE1_RST		(1<<27)
++#define RALINK_MIPS_CNT_RST		(1<<28)
++#define RALINK_CRYPTO_RST		(1<<29)
++
++//Clock Conf Register
++#define RALINK_UPHY0_CLK_EN		(1<<25)
++#define RALINK_UPHY1_CLK_EN		(1<<22)
++#define RALINK_PCIE0_CLK_EN		(1<<26)
++#define RALINK_PCIE1_CLK_EN		(1<<27)
++
++//CPU PLL CFG Register
++#define CPLL_SW_CONFIG                  (0x1UL << 31)
++#define CPLL_MULT_RATIO_SHIFT           16
++#define CPLL_MULT_RATIO                 (0x7UL << CPLL_MULT_RATIO_SHIFT)
++#define CPLL_DIV_RATIO_SHIFT            10
++#define CPLL_DIV_RATIO                  (0x3UL << CPLL_DIV_RATIO_SHIFT)
++#define BASE_CLOCK                      40      /* Mhz */
++
++#elif defined (CONFIG_RALINK_MT7621)
++
++#define RALINK_SYSCTL_BASE		0xB0000000
++#define RALINK_TIMER_BASE		0xB0000100
++#define RALINK_INTCL_BASE		0xB0000200
++#define RALINK_MEMCTRL_BASE		0xB0000300
++#define RALINK_RBUS_MATRIXCTL_BASE	0xB0000400
++#define RALINK_UART_BASE		0x10000500
++#define RALINK_PIO_BASE			0xB0000600
++#define RALINK_NAND_CTRL_BASE		0xB0000810
++#define RALINK_I2C_BASE			0xB0000900
++#define RALINK_I2S_BASE			0xB0000A00
++#define RALINK_SPI_BASE			0xB0000B00
++#define RALINK_UART_LITE_BASE		0x10000C00
++#define RALINK_MIPS_CNT_BASE		0x10000D00
++#define RALINK_PCM_BASE			0xB0002000
++#define RALINK_GDMA_BASE		0xB0002800
++#define RALINK_CRYPTO_ENGINE_BASE	0xB0004000
++#define RALINK_FRAME_ENGINE_BASE	0xB0100000
++#define RALINK_PPE_BASE			0xB0100C00
++#define RALINK_ETH_SW_BASE		0xB0110000
++#define RALINK_USB_DEV_BASE		0x10120000
++#define RALINK_PCI_BASE                 0xB0140000
++#define RALINK_11N_MAC_BASE		0xB0180000
++#define RALINK_USB_HOST_BASE		0x101C0000
++
++#define RALINK_MCNT_CFG			0xB0000D00
++#define RALINK_COMPARE			0xB0000D04
++#define RALINK_COUNT			0xB0000D08
++
++//Interrupt Controller
++#define RALINK_INTCTL_SYSCTL		(1<<0)
++#define RALINK_INTCTL_TIMER0		(1<<1)
++#define RALINK_INTCTL_WDTIMER		(1<<2)
++#define RALINK_INTCTL_ILL_ACCESS	(1<<3)
++#define RALINK_INTCTL_PCM		(1<<4)
++#define RALINK_INTCTL_UART		(1<<5)
++#define RALINK_INTCTL_PIO		(1<<6)
++#define RALINK_INTCTL_DMA		(1<<7)
++#define RALINK_INTCTL_PC		(1<<9)
++#define RALINK_INTCTL_I2S		(1<<10)
++#define RALINK_INTCTL_SPI		(1<<11)
++#define RALINK_INTCTL_UARTLITE		(1<<12)
++#define RALINK_INTCTL_CRYPTO		(1<<13)
++#define RALINK_INTCTL_ESW		(1<<17)
++#define RALINK_INTCTL_UHST		(1<<18)
++#define RALINK_INTCTL_UDEV		(1<<19)
++#define RALINK_INTCTL_GLOBAL		(1<<31)
++
++//Reset Control Register
++#define RALINK_SYS_RST			(1<<0)
++#define RALINK_TIMER_RST		(1<<8)
++#define RALINK_INTC_RST			(1<<9)
++#define RALINK_MC_RST			(1<<10)
++#define RALINK_PCM_RST			(1<<11)
++#define RALINK_UART_RST			(1<<12)
++#define RALINK_PIO_RST			(1<<13)
++#define RALINK_DMA_RST			(1<<14)
++#define RALINK_I2C_RST			(1<<16)
++#define RALINK_I2S_RST			(1<<17)
++#define RALINK_SPI_RST			(1<<18)
++#define RALINK_UARTL_RST		(1<<19)
++#define RALINK_FE_RST			(1<<21)
++#define RALINK_UHST_RST			(1<<22)
++#define RALINK_ESW_RST			(1<<23)
++#define RALINK_EPHY_RST			(1<<24)
++#define RALINK_UDEV_RST			(1<<25)
++#define RALINK_PCIE0_RST		(1<<26)
++#define RALINK_PCIE1_RST		(1<<27)
++#define RALINK_MIPS_CNT_RST		(1<<28)
++#define RALINK_CRYPTO_RST		(1<<29)
++
++//Clock Conf Register
++#define RALINK_UPHY0_CLK_EN		(1<<25)
++#define RALINK_UPHY1_CLK_EN		(1<<22)
++#define RALINK_PCIE0_CLK_EN		(1<<26)
++#define RALINK_PCIE1_CLK_EN		(1<<27)
++
++//CPU PLL CFG Register
++#define CPLL_SW_CONFIG                  (0x1UL << 31)
++#define CPLL_MULT_RATIO_SHIFT           16
++#define CPLL_MULT_RATIO                 (0x7UL << CPLL_MULT_RATIO_SHIFT)
++#define CPLL_DIV_RATIO_SHIFT            10
++#define CPLL_DIV_RATIO                  (0x3UL << CPLL_DIV_RATIO_SHIFT)
++#define BASE_CLOCK                      40      /* Mhz */
++
+ #endif
+ #endif
+--- a/include/asm-mips/rt2880/surfboardint.h
++++ b/include/asm-mips/rt2880/surfboardint.h
+@@ -31,7 +31,7 @@
+ #define SURFBOARDINT_UART1	 8	/* UART Lite */
+ #define SURFBOARDINT_UART	 9	/* UART */
+ #define SURFBOARDINT_TIMER0	 10	/* timer0 */
+-#elif defined (CONFIG_RALINK_RT3052) || defined (CONFIG_RALINK_RT3352) || defined (CONFIG_RALINK_RT2883) || defined (CONFIG_RALINK_RT5350) || defined (CONFIG_RALINK_RT6855)
++#elif defined (CONFIG_RALINK_RT3052) || defined (CONFIG_RALINK_RT3352) || defined (CONFIG_RALINK_RT2883) || defined (CONFIG_RALINK_RT5350) || defined (CONFIG_RALINK_RT6855) || defined (CONFIG_RALINK_MT7620) || defined (CONFIG_RALINK_MT7621)
+ #define RALINK_CPU_TIMER_IRQ 	 5	/* mips timer */
+ #define SURFBOARDINT_GPIO	 6	/* GPIO */
+ #define SURFBOARDINT_DMA	 7	/* DMA */
+@@ -40,6 +40,8 @@
+ #define SURFBOARDINT_I2S 	 10	/* I2S */
+ #define SURFBOARDINT_ESW	 17	/* ESW */
+ #define SURFBOARDINT_UART1	 12 	/* UART Lite */
++#define SURFBOARDINT_CRYPTO      13     /* CryptoEngine */
++#define SURFBOARDINT_PLC	 24     /* PLC */
+ #define SURFBOARDINT_SYSCTL 	 32	/* SYSCTL */
+ #define SURFBOARDINT_TIMER0	 33	/* timer0 */
+ #define SURFBOARDINT_WDG	 34	/* watch dog */
+@@ -82,16 +84,21 @@
+  * Surfboard registers are memory mapped on 32-bit aligned boundaries and
+  * only word access are allowed.
+  */
+-struct surfboard_ictrl_regs {
+-        volatile unsigned long irq0Status;
+-        volatile unsigned long irq1Status;
+-	long reserved[6];
+-	volatile unsigned long intType;
+-	long reserved1[3];
+-	volatile unsigned long rawStatus;
+-	volatile unsigned long intEnable;
+-	volatile unsigned long intDisable;
+-};
++#if defined (CONFIG_RALINK_MT7621)
++#define RALINK_IRQ0STAT		(RALINK_INTCL_BASE + 0x9C) //IRQ_STAT
++#define RALINK_IRQ1STAT		(RALINK_INTCL_BASE + 0xA0) //FIQ_STAT
++#define RALINK_INTTYPE		(RALINK_INTCL_BASE + 0x6C) //FIQ_SEL
++#define RALINK_INTRAW		(RALINK_INTCL_BASE + 0xA4) //INT_PURE
++#define RALINK_INTENA		(RALINK_INTCL_BASE + 0x80) //IRQ_MASK_SET
++#define RALINK_INTDIS		(RALINK_INTCL_BASE + 0x78) //IRQ_MASK_CLR
++#else
++#define RALINK_IRQ0STAT		(RALINK_INTCL_BASE + 0x0)
++#define RALINK_IRQ1STAT		(RALINK_INTCL_BASE + 0x4)
++#define RALINK_INTTYPE		(RALINK_INTCL_BASE + 0x20)
++#define RALINK_INTRAW		(RALINK_INTCL_BASE + 0x30)
++#define RALINK_INTENA		(RALINK_INTCL_BASE + 0x34)
++#define RALINK_INTDIS		(RALINK_INTCL_BASE + 0x38)
++#endif
+ 
+ /* bobtseng added ++, 2006.3.6. */
+ #define read_32bit_cp0_register(source)                         \
+--- a/include/asm-mips/termios.h
++++ b/include/asm-mips/termios.h
+@@ -96,7 +96,7 @@
+  */
+ #define user_termio_to_kernel_termios(termios, termio) \
+ ({ \
+-	unsigned short tmp; \
++	unsigned short tmp = 0; \
+ 	get_user(tmp, &(termio)->c_iflag); \
+ 	(termios)->c_iflag = (0xffff0000 & ((termios)->c_iflag)) | tmp; \
+ 	get_user(tmp, &(termio)->c_oflag); \
+--- a/include/linux/if_pppol2tp.h
++++ b/include/linux/if_pppol2tp.h
+@@ -31,6 +31,7 @@
+ 	int	fd;			/* FD of UDP socket to use */
+ 
+ 	struct sockaddr_in addr;	/* IP address and port to send to */
++	struct sockaddr_in bind_addr;	/* IP address and port to send from */
+ 
+ 	__u16 s_tunnel, s_session;	/* For matching incoming packets */
+ 	__u16 d_tunnel, d_session;	/* For sending outgoing packets */
+--- a/include/linux/if_pppox.h
++++ b/include/linux/if_pppox.h
+@@ -67,7 +67,7 @@
+        union{ 
+                struct pppoe_addr       pppoe;
+ 	       struct pptp_addr        pptp; 
+-       }sa_addr; 
++       } sa_addr; 
+ }__attribute__ ((packed)); 
+ 
+ /* The use of the above union isn't viable because the size of this
+--- a/include/linux/license.h
++++ b/include/linux/license.h
+@@ -8,7 +8,8 @@
+ 		|| strcmp(license, "GPL and additional rights") == 0
+ 		|| strcmp(license, "Dual BSD/GPL") == 0
+ 		|| strcmp(license, "Dual MIT/GPL") == 0
+-		|| strcmp(license, "Dual MPL/GPL") == 0);
++		|| strcmp(license, "Dual MPL/GPL") == 0
++		|| strcmp(license, "Artistic") == 0);
+ }
+ 
+ #endif
+--- a/include/linux/magic.h
++++ b/include/linux/magic.h
+@@ -13,6 +13,7 @@
+ #define HPFS_SUPER_MAGIC	0xf995e849
+ #define ISOFS_SUPER_MAGIC	0x9660
+ #define JFFS2_SUPER_MAGIC	0x72b6
++#define SQUASHFS_MAGIC		0x73717368
+ #define ANON_INODE_FS_MAGIC	0x09041934
+ 
+ #define MINIX_SUPER_MAGIC	0x137F		/* original minix fs */
+--- a/include/linux/mmc/card.h
++++ b/include/linux/mmc/card.h
+@@ -24,12 +24,14 @@
+ };
+ 
+ struct mmc_csd {
++	unsigned char		structure;
+ 	unsigned char		mmca_vsn;
+ 	unsigned short		cmdclass;
+ 	unsigned short		tacc_clks;
+ 	unsigned int		tacc_ns;
+ 	unsigned int		r2w_factor;
+ 	unsigned int		max_dtr;
++	unsigned int		erase_size;		/* In sectors */
+ 	unsigned int		read_blkbits;
+ 	unsigned int		write_blkbits;
+ 	unsigned int		capacity;
+@@ -40,8 +42,17 @@
+ };
+ 
+ struct mmc_ext_csd {
++	u8			rev;
++	u8			erase_group_def;
++	u8			sec_feature_support;
++	unsigned int		sa_timeout;		/* Units: 100ns */
+ 	unsigned int		hs_max_dtr;
+ 	unsigned int		sectors;
++	unsigned int		hc_erase_size;		/* In sectors */
++	unsigned int		hc_erase_timeout;	/* In milliseconds */
++	unsigned int		sec_trim_mult;	/* Secure trim multiplier  */
++	unsigned int		sec_erase_mult;	/* Secure erase multiplier */
++	unsigned int		trim_timeout;		/* In milliseconds */
+ };
+ 
+ struct sd_scr {
+@@ -51,11 +62,39 @@
+ #define SD_SCR_BUS_WIDTH_4	(1<<2)
+ };
+ 
++struct sd_ssr {
++	unsigned int		au;			/* In sectors */
++	unsigned int		erase_timeout;		/* In milliseconds */
++	unsigned int		erase_offset;		/* In milliseconds */
++};
++
+ struct sd_switch_caps {
+ 	unsigned int		hs_max_dtr;
+ };
+ 
++struct sdio_cccr {
++	unsigned int		sdio_vsn;
++	unsigned int		sd_vsn;
++	unsigned int		multi_block:1,
++				low_speed:1,
++				wide_bus:1,
++				high_power:1,
++				high_speed:1,
++				disable_cd:1;
++};
++
++struct sdio_cis {
++	unsigned short		vendor;
++	unsigned short		device;
++	unsigned short		blksize;
++	unsigned int		max_dtr;
++};
++
+ struct mmc_host;
++struct sdio_func;
++struct sdio_func_tuple;
++
++#define SDIO_MAX_FUNCS		7
+ 
+ /*
+  * MMC device
+@@ -67,11 +106,25 @@
+ 	unsigned int		type;		/* card type */
+ #define MMC_TYPE_MMC		0		/* MMC card */
+ #define MMC_TYPE_SD		1		/* SD card */
++#define MMC_TYPE_SDIO		2		/* SDIO card */
++#define MMC_TYPE_SD_COMBO	3		/* SD combo (IO+mem) card */
+ 	unsigned int		state;		/* (our) card state */
+ #define MMC_STATE_PRESENT	(1<<0)		/* present in sysfs */
+ #define MMC_STATE_READONLY	(1<<1)		/* card is read-only */
+ #define MMC_STATE_HIGHSPEED	(1<<2)		/* card is in high speed mode */
+ #define MMC_STATE_BLOCKADDR	(1<<3)		/* card uses block-addressing */
++	unsigned int		quirks; 	/* card quirks */
++#define MMC_QUIRK_LENIENT_FN0	(1<<0)		/* allow SDIO FN0 writes outside of the VS CCCR range */
++#define MMC_QUIRK_BLKSZ_FOR_BYTE_MODE (1<<1)	/* use func->cur_blksize */
++						/* for byte mode */
++#define MMC_QUIRK_NONSTD_SDIO	(1<<2)		/* non-standard SDIO card attached */
++						/* (missing CIA registers) */
++
++	unsigned int		erase_size;	/* erase size in sectors */
++ 	unsigned int		erase_shift;	/* if erase unit is power 2 */
++ 	unsigned int		pref_erase;	/* in sectors */
++ 	u8			erased_byte;	/* value of erased bytes */
++
+ 	u32			raw_cid[4];	/* raw card CID */
+ 	u32			raw_csd[4];	/* raw card CSD */
+ 	u32			raw_scr[2];	/* raw card SCR */
+@@ -79,11 +132,23 @@
+ 	struct mmc_csd		csd;		/* card specific */
+ 	struct mmc_ext_csd	ext_csd;	/* mmc v4 extended card specific */
+ 	struct sd_scr		scr;		/* extra SD information */
++	struct sd_ssr		ssr;		/* yet more SD information */
+ 	struct sd_switch_caps	sw_caps;	/* switch (CMD6) caps */
++
++	unsigned int		sdio_funcs;	/* number of SDIO functions */
++	struct sdio_cccr	cccr;		/* common card info */
++	struct sdio_cis		cis;		/* common tuple info */
++	struct sdio_func	*sdio_func[SDIO_MAX_FUNCS]; /* SDIO functions (devices) */
++	unsigned		num_info;	/* number of info strings */
++	const char		**info;		/* info strings */
++	struct sdio_func_tuple	*tuples;	/* unknown common tuples */
++
++	struct dentry		*debugfs_root;
+ };
+ 
+ #define mmc_card_mmc(c)		((c)->type == MMC_TYPE_MMC)
+ #define mmc_card_sd(c)		((c)->type == MMC_TYPE_SD)
++#define mmc_card_sdio(c)	((c)->type == MMC_TYPE_SDIO)
+ 
+ #define mmc_card_present(c)	((c)->state & MMC_STATE_PRESENT)
+ #define mmc_card_readonly(c)	((c)->state & MMC_STATE_READONLY)
+@@ -95,6 +160,16 @@
+ #define mmc_card_set_highspeed(c) ((c)->state |= MMC_STATE_HIGHSPEED)
+ #define mmc_card_set_blockaddr(c) ((c)->state |= MMC_STATE_BLOCKADDR)
+ 
++static inline int mmc_card_lenient_fn0(const struct mmc_card *c)
++{
++	return c->quirks & MMC_QUIRK_LENIENT_FN0;
++}
++
++static inline int mmc_blksz_for_byte_mode(const struct mmc_card *c)
++{
++	return c->quirks & MMC_QUIRK_BLKSZ_FOR_BYTE_MODE;
++}
++
+ #define mmc_card_name(c)	((c)->cid.prod_name)
+ #define mmc_card_id(c)		((c)->dev.bus_id)
+ 
+--- a/include/linux/mmc/core.h
++++ b/include/linux/mmc/core.h
+@@ -25,14 +25,20 @@
+ #define MMC_RSP_CRC	(1 << 2)		/* expect valid crc */
+ #define MMC_RSP_BUSY	(1 << 3)		/* card may send busy */
+ #define MMC_RSP_OPCODE	(1 << 4)		/* response contains opcode */
+-#define MMC_CMD_MASK	(3 << 5)		/* command type */
++
++#define MMC_CMD_MASK	(3 << 5)		/* non-SPI command type */
+ #define MMC_CMD_AC	(0 << 5)
+ #define MMC_CMD_ADTC	(1 << 5)
+ #define MMC_CMD_BC	(2 << 5)
+ #define MMC_CMD_BCR	(3 << 5)
+ 
++#define MMC_RSP_SPI_S1	(1 << 7)		/* one status byte */
++#define MMC_RSP_SPI_S2	(1 << 8)		/* second byte */
++#define MMC_RSP_SPI_B4	(1 << 9)		/* four data bytes */
++#define MMC_RSP_SPI_BUSY (1 << 10)		/* card may send busy */
++
+ /*
+- * These are the response types, and correspond to valid bit
++ * These are the native response types, and correspond to valid bit
+  * patterns of the above flags.  One additional valid pattern
+  * is all zeros, which means we don't expect a response.
+  */
+@@ -41,12 +47,30 @@
+ #define MMC_RSP_R1B	(MMC_RSP_PRESENT|MMC_RSP_CRC|MMC_RSP_OPCODE|MMC_RSP_BUSY)
+ #define MMC_RSP_R2	(MMC_RSP_PRESENT|MMC_RSP_136|MMC_RSP_CRC)
+ #define MMC_RSP_R3	(MMC_RSP_PRESENT)
++#define MMC_RSP_R4	(MMC_RSP_PRESENT)
++#define MMC_RSP_R5	(MMC_RSP_PRESENT|MMC_RSP_CRC|MMC_RSP_OPCODE)
+ #define MMC_RSP_R6	(MMC_RSP_PRESENT|MMC_RSP_CRC|MMC_RSP_OPCODE)
+ #define MMC_RSP_R7	(MMC_RSP_PRESENT|MMC_RSP_CRC|MMC_RSP_OPCODE)
+ 
+ #define mmc_resp_type(cmd)	((cmd)->flags & (MMC_RSP_PRESENT|MMC_RSP_136|MMC_RSP_CRC|MMC_RSP_BUSY|MMC_RSP_OPCODE))
+ 
+ /*
++ * These are the SPI response types for MMC, SD, and SDIO cards.
++ * Commands return R1, with maybe more info.  Zero is an error type;
++ * callers must always provide the appropriate MMC_RSP_SPI_Rx flags.
++ */
++#define MMC_RSP_SPI_R1	(MMC_RSP_SPI_S1)
++#define MMC_RSP_SPI_R1B	(MMC_RSP_SPI_S1|MMC_RSP_SPI_BUSY)
++#define MMC_RSP_SPI_R2	(MMC_RSP_SPI_S1|MMC_RSP_SPI_S2)
++#define MMC_RSP_SPI_R3	(MMC_RSP_SPI_S1|MMC_RSP_SPI_B4)
++#define MMC_RSP_SPI_R4	(MMC_RSP_SPI_S1|MMC_RSP_SPI_B4)
++#define MMC_RSP_SPI_R5	(MMC_RSP_SPI_S1|MMC_RSP_SPI_S2)
++#define MMC_RSP_SPI_R7	(MMC_RSP_SPI_S1|MMC_RSP_SPI_B4)
++
++#define mmc_spi_resp_type(cmd)	((cmd)->flags & \
++		(MMC_RSP_SPI_S1|MMC_RSP_SPI_BUSY|MMC_RSP_SPI_S2|MMC_RSP_SPI_B4))
++
++/*
+  * These are the command types.
+  */
+ #define mmc_cmd_type(cmd)	((cmd)->flags & MMC_CMD_MASK)
+@@ -54,12 +78,21 @@
+ 	unsigned int		retries;	/* max number of retries */
+ 	unsigned int		error;		/* command error */
+ 
+-#define MMC_ERR_NONE	0
+-#define MMC_ERR_TIMEOUT	1
+-#define MMC_ERR_BADCRC	2
+-#define MMC_ERR_FIFO	3
+-#define MMC_ERR_FAILED	4
+-#define MMC_ERR_INVALID	5
++/*
++ * Standard errno values are used for errors, but some have specific
++ * meaning in the MMC layer:
++ *
++ * ETIMEDOUT    Card took too long to respond
++ * EILSEQ       Basic format problem with the received or sent data
++ *              (e.g. CRC check failed, incorrect opcode in response
++ *              or bad end bit)
++ * EINVAL       Request cannot be performed because of restrictions
++ *              in hardware and/or the driver
++ * ENOMEDIUM    Host can determine that the slot is empty and is
++ *              actively failing requests
++ */
++
++	unsigned int		erase_timeout;	/* in milliseconds */
+ 
+ 	struct mmc_data		*data;		/* data segment associated with cmd */
+ 	struct mmc_request	*mrq;		/* associated request */
+@@ -76,7 +109,6 @@
+ #define MMC_DATA_WRITE	(1 << 8)
+ #define MMC_DATA_READ	(1 << 9)
+ #define MMC_DATA_STREAM	(1 << 10)
+-#define MMC_DATA_MULTI	(1 << 11)
+ 
+ 	unsigned int		bytes_xfered;
+ 
+@@ -104,9 +136,41 @@
+ extern int mmc_wait_for_app_cmd(struct mmc_host *, struct mmc_card *,
+ 	struct mmc_command *, int);
+ 
+-extern void mmc_set_data_timeout(struct mmc_data *, const struct mmc_card *, int);
++#define MMC_ERASE_ARG		0x00000000
++#define MMC_SECURE_ERASE_ARG	0x80000000
++#define MMC_TRIM_ARG		0x00000001
++#define MMC_SECURE_TRIM1_ARG	0x80000001
++#define MMC_SECURE_TRIM2_ARG	0x80008000
++
++#define MMC_SECURE_ARGS		0x80000000
++#define MMC_TRIM_ARGS		0x00008001
++
++extern int mmc_erase(struct mmc_card *card, unsigned int from, unsigned int nr,
++		     unsigned int arg);
++extern int mmc_can_erase(struct mmc_card *card);
++extern int mmc_can_trim(struct mmc_card *card);
++extern int mmc_can_secure_erase_trim(struct mmc_card *card);
++extern int mmc_erase_group_aligned(struct mmc_card *card, unsigned int from,
++				   unsigned int nr);
++
++extern void mmc_set_data_timeout(struct mmc_data *, const struct mmc_card *);
++extern unsigned int mmc_align_data_size(struct mmc_card *, unsigned int);
+ 
+-extern void mmc_claim_host(struct mmc_host *host);
++extern int __mmc_claim_host(struct mmc_host *host, atomic_t *abort);
+ extern void mmc_release_host(struct mmc_host *host);
++extern int mmc_try_claim_host(struct mmc_host *host);
++
++/**
++ *	mmc_claim_host - exclusively claim a host
++ *	@host: mmc host to claim
++ *
++ *	Claim a host for a set of operations.
++ */
++static inline void mmc_claim_host(struct mmc_host *host)
++{
++	__mmc_claim_host(host, NULL);
++}
++
++extern u32 mmc_vddrange_to_ocrmask(int vdd_min, int vdd_max);
+ 
+ #endif
+--- a/include/linux/mmc/host.h
++++ b/include/linux/mmc/host.h
+@@ -10,7 +10,11 @@
+ #ifndef LINUX_MMC_HOST_H
+ #define LINUX_MMC_HOST_H
+ 
++#include <linux/leds.h>
++#include <linux/sched.h>
++
+ #include <linux/mmc/core.h>
++#include <linux/mmc/pm.h>
+ 
+ struct mmc_ios {
+ 	unsigned int	clock;			/* clock rate */
+@@ -39,6 +43,7 @@
+ 
+ #define MMC_BUS_WIDTH_1		0
+ #define MMC_BUS_WIDTH_4		2
++#define MMC_BUS_WIDTH_8		3
+ 
+ 	unsigned char	timing;			/* timing specification used */
+ 
+@@ -48,9 +53,64 @@
+ };
+ 
+ struct mmc_host_ops {
++	/*
++	 * Hosts that support power saving can use the 'enable' and 'disable'
++	 * methods to exit and enter power saving states. 'enable' is called
++	 * when the host is claimed and 'disable' is called (or scheduled with
++	 * a delay) when the host is released. The 'disable' is scheduled if
++	 * the disable delay set by 'mmc_set_disable_delay()' is non-zero,
++	 * otherwise 'disable' is called immediately. 'disable' may be
++	 * scheduled repeatedly, to permit ever greater power saving at the
++	 * expense of ever greater latency to re-enable. Rescheduling is
++	 * determined by the return value of the 'disable' method. A positive
++	 * value gives the delay in milliseconds.
++	 *
++	 * In the case where a host function (like set_ios) may be called
++	 * with or without the host claimed, enabling and disabling can be
++	 * done directly and will nest correctly. Call 'mmc_host_enable()' and
++	 * 'mmc_host_lazy_disable()' for this purpose, but note that these
++	 * functions must be paired.
++	 *
++	 * Alternatively, 'mmc_host_enable()' may be paired with
++	 * 'mmc_host_disable()' which calls 'disable' immediately.  In this
++	 * case the 'disable' method will be called with 'lazy' set to 0.
++	 * This is mainly useful for error paths.
++	 *
++	 * Because lazy disable may be called from a work queue, the 'disable'
++	 * method must claim the host when 'lazy' != 0, which will work
++	 * correctly because recursion is detected and handled.
++	 */
++	int (*enable)(struct mmc_host *host);
++	int (*disable)(struct mmc_host *host, int lazy);
+ 	void	(*request)(struct mmc_host *host, struct mmc_request *req);
++	/*
++	 * Avoid calling these three functions too often or in a "fast path",
++	 * since underlaying controller might implement them in an expensive
++	 * and/or slow way.
++	 *
++	 * Also note that these functions might sleep, so don't call them
++	 * in the atomic contexts!
++	 *
++	 * Return values for the get_ro callback should be:
++	 *   0 for a read/write card
++	 *   1 for a read-only card
++	 *   -ENOSYS when not supported (equal to NULL callback)
++	 *   or a negative errno value when something bad happened
++	 *
++	 * Return values for the get_cd callback should be:
++	 *   0 for a absent card
++	 *   1 for a present card
++	 *   -ENOSYS when not supported (equal to NULL callback)
++	 *   or a negative errno value when something bad happened
++	 */
+ 	void	(*set_ios)(struct mmc_host *host, struct mmc_ios *ios);
+ 	int	(*get_ro)(struct mmc_host *host);
++	int	(*get_cd)(struct mmc_host *host);
++
++	void	(*enable_sdio_irq)(struct mmc_host *host, int enable);
++
++	/* optional callback for HC quirks */
++	void	(*init_card)(struct mmc_host *host, struct mmc_card *card);
+ };
+ 
+ struct mmc_card;
+@@ -64,6 +124,7 @@
+ 	unsigned int		f_min;
+ 	unsigned int		f_max;
+ 	u32			ocr_avail;
++	struct notifier_block	pm_notify;
+ 
+ #define MMC_VDD_165_195		0x00000080	/* VDD voltage 1.65 - 1.95 */
+ #define MMC_VDD_20_21		0x00000100	/* VDD voltage 2.0 ~ 2.1 */
+@@ -86,10 +147,18 @@
+ 	unsigned long		caps;		/* Host capabilities */
+ 
+ #define MMC_CAP_4_BIT_DATA	(1 << 0)	/* Can the host do 4 bit transfers */
+-#define MMC_CAP_MULTIWRITE	(1 << 1)	/* Can accurately report bytes sent to card on error */
+-#define MMC_CAP_BYTEBLOCK	(1 << 2)	/* Can do non-log2 block sizes */
+-#define MMC_CAP_MMC_HIGHSPEED	(1 << 3)	/* Can do MMC high-speed timing */
+-#define MMC_CAP_SD_HIGHSPEED	(1 << 4)	/* Can do SD high-speed timing */
++#define MMC_CAP_MMC_HIGHSPEED	(1 << 1)	/* Can do MMC high-speed timing */
++#define MMC_CAP_SD_HIGHSPEED	(1 << 2)	/* Can do SD high-speed timing */
++#define MMC_CAP_SDIO_IRQ	(1 << 3)	/* Can signal pending SDIO IRQs */
++#define MMC_CAP_SPI		(1 << 4)	/* Talks only SPI protocols */
++#define MMC_CAP_NEEDS_POLL	(1 << 5)	/* Needs polling for card-detection */
++#define MMC_CAP_8_BIT_DATA	(1 << 6)	/* Can the host do 8 bit transfers */
++#define MMC_CAP_DISABLE		(1 << 7)	/* Can the host be disabled */
++#define MMC_CAP_NONREMOVABLE	(1 << 8)	/* Nonremovable e.g. eMMC */
++#define MMC_CAP_WAIT_WHILE_BUSY	(1 << 9)	/* Waits while card is busy */
++#define MMC_CAP_ERASE		(1 << 10)	/* Allow erase/trim commands */
++
++	mmc_pm_flag_t		pm_caps;	/* supported pm features */
+ 
+ 	/* host specific block data */
+ 	unsigned int		max_seg_size;	/* see blk_queue_max_segment_size */
+@@ -106,23 +175,44 @@
+ 	struct mmc_ios		ios;		/* current io bus settings */
+ 	u32			ocr;		/* the current OCR setting */
+ 
+-	unsigned int		mode;		/* current card mode of host */
+-#define MMC_MODE_MMC		0
+-#define MMC_MODE_SD		1
++	/* group bitfields together to minimize padding */
++	unsigned int		use_spi_crc:1;
++	unsigned int		claimed:1;	/* host exclusively claimed */
++	unsigned int		bus_dead:1;	/* bus has been released */
++#ifdef CONFIG_MMC_DEBUG
++	unsigned int		removed:1;	/* host is being removed */
++#endif
++
++	/* Only used with MMC_CAP_DISABLE */
++	int			enabled;	/* host is enabled */
++	int			rescan_disable;	/* disable card detection */
++	int			nesting_cnt;	/* "enable" nesting count */
++	int			en_dis_recurs;	/* detect recursion */
++	unsigned int		disable_delay;	/* disable delay in msecs */
++	struct delayed_work	disable;	/* disabling work */
+ 
+ 	struct mmc_card		*card;		/* device attached to this host */
+ 
+ 	wait_queue_head_t	wq;
+-	unsigned int		claimed:1;	/* host exclusively claimed */
++	struct task_struct	*claimer;	/* task that has host claimed */
++	int			claim_cnt;	/* "claim" nesting count */
+ 
+ 	struct delayed_work	detect;
+-#ifdef CONFIG_MMC_DEBUG
+-	unsigned int		removed:1;	/* host is being removed */
+-#endif
+ 
+ 	const struct mmc_bus_ops *bus_ops;	/* current bus driver */
+ 	unsigned int		bus_refs;	/* reference counter */
+-	unsigned int		bus_dead:1;	/* bus has been released */
++
++	unsigned int		sdio_irqs;
++	struct task_struct	*sdio_irq_thread;
++	atomic_t		sdio_irq_thread_abort;
++
++	mmc_pm_flag_t		pm_flags;	/* requested pm features */
++
++#ifdef CONFIG_LEDS_TRIGGERS
++	struct led_trigger	*led;		/* activity led */
++#endif
++
++	struct dentry		*debugfs_root;
+ 
+ 	unsigned long		private[0] ____cacheline_aligned;
+ };
+@@ -137,15 +227,46 @@
+ 	return (void *)host->private;
+ }
+ 
++#define mmc_host_is_spi(host)	((host)->caps & MMC_CAP_SPI)
++
+ #define mmc_dev(x)	((x)->parent)
+ #define mmc_classdev(x)	(&(x)->class_dev)
+ #define mmc_hostname(x)	((x)->class_dev.bus_id)
+ 
+-extern int mmc_suspend_host(struct mmc_host *, pm_message_t);
++extern int mmc_suspend_host(struct mmc_host *);
+ extern int mmc_resume_host(struct mmc_host *);
+ 
++extern void mmc_power_save_host(struct mmc_host *host);
++extern void mmc_power_restore_host(struct mmc_host *host);
++
+ extern void mmc_detect_change(struct mmc_host *, unsigned long delay);
+ extern void mmc_request_done(struct mmc_host *, struct mmc_request *);
+ 
++static inline void mmc_signal_sdio_irq(struct mmc_host *host)
++{
++	host->ops->enable_sdio_irq(host, 0);
++	wake_up_process(host->sdio_irq_thread);
++}
++
++struct regulator;
++
++int mmc_regulator_get_ocrmask(struct regulator *supply);
++int mmc_regulator_set_ocr(struct regulator *supply, unsigned short vdd_bit);
++
++int mmc_card_awake(struct mmc_host *host);
++int mmc_card_sleep(struct mmc_host *host);
++int mmc_card_can_sleep(struct mmc_host *host);
++
++int mmc_host_enable(struct mmc_host *host);
++int mmc_host_disable(struct mmc_host *host);
++int mmc_host_lazy_disable(struct mmc_host *host);
++int mmc_pm_notify(struct notifier_block *notify_block, unsigned long, void *);
++
++static inline void mmc_set_disable_delay(struct mmc_host *host,
++					 unsigned int disable_delay)
++{
++	host->disable_delay = disable_delay;
++}
++
+ #endif
+ 
+--- a/include/linux/mmc/mmc.h
++++ b/include/linux/mmc/mmc.h
+@@ -16,7 +16,6 @@
+  * Based strongly on code by:
+  *
+  * Author: Yong-iL Joh <tolkien@mizi.com>
+- * Date  : $Date: 2002/06/18 12:37:30 $
+  *
+  * Author:  Andrew Christian
+  *          15 May 2002
+@@ -27,11 +26,12 @@
+ 
+ /* Standard MMC commands (4.1)           type  argument     response */
+    /* class 1 */
+-#define	MMC_GO_IDLE_STATE         0   /* bc                          */
++#define MMC_GO_IDLE_STATE         0   /* bc                          */
+ #define MMC_SEND_OP_COND          1   /* bcr  [31:0] OCR         R3  */
+ #define MMC_ALL_SEND_CID          2   /* bcr                     R2  */
+ #define MMC_SET_RELATIVE_ADDR     3   /* ac   [31:16] RCA        R1  */
+ #define MMC_SET_DSR               4   /* bc   [31:16] RCA            */
++#define MMC_SLEEP_AWAKE		  5   /* ac   [31:16] RCA 15:flg R1b */
+ #define MMC_SWITCH                6   /* ac   [31:0] See below   R1b */
+ #define MMC_SELECT_CARD           7   /* ac   [31:16] RCA        R1  */
+ #define MMC_SEND_EXT_CSD          8   /* adtc                    R1  */
+@@ -39,8 +39,10 @@
+ #define MMC_SEND_CID             10   /* ac   [31:16] RCA        R2  */
+ #define MMC_READ_DAT_UNTIL_STOP  11   /* adtc [31:0] dadr        R1  */
+ #define MMC_STOP_TRANSMISSION    12   /* ac                      R1b */
+-#define MMC_SEND_STATUS	         13   /* ac   [31:16] RCA        R1  */
++#define MMC_SEND_STATUS          13   /* ac   [31:16] RCA        R1  */
+ #define MMC_GO_INACTIVE_STATE    15   /* ac   [31:16] RCA            */
++#define MMC_SPI_READ_OCR         58   /* spi                  spi_R3 */
++#define MMC_SPI_CRC_ON_OFF       59   /* spi  [0:0] flag      spi_R1 */
+ 
+   /* class 2 */
+ #define MMC_SET_BLOCKLEN         16   /* ac   [31:0] block len   R1  */
+@@ -90,15 +92,15 @@
+  */
+ 
+ /*
+-  MMC status in R1
++  MMC status in R1, for native mode (SPI bits are different)
+   Type
+-  	e : error bit
++	e : error bit
+ 	s : status bit
+ 	r : detected and set for the actual command response
+ 	x : detected and set during command execution. the host must poll
+             the card by sending status command in order to read these bits.
+   Clear condition
+-  	a : according to the card state
++	a : according to the card state
+ 	b : always related to the previous command. Reception of
+             a valid command will clear it (with a delay of one command)
+ 	c : clear by read
+@@ -124,10 +126,34 @@
+ #define R1_CARD_ECC_DISABLED	(1 << 14)	/* sx, a */
+ #define R1_ERASE_RESET		(1 << 13)	/* sr, c */
+ #define R1_STATUS(x)            (x & 0xFFFFE000)
+-#define R1_CURRENT_STATE(x)    	((x & 0x00001E00) >> 9)	/* sx, b (4 bits) */
++#define R1_CURRENT_STATE(x)	((x & 0x00001E00) >> 9)	/* sx, b (4 bits) */
+ #define R1_READY_FOR_DATA	(1 << 8)	/* sx, a */
++#define R1_SWITCH_ERROR		(1 << 7)	/* sx, c */
+ #define R1_APP_CMD		(1 << 5)	/* sr, c */
+ 
++/*
++ * MMC/SD in SPI mode reports R1 status always, and R2 for SEND_STATUS
++ * R1 is the low order byte; R2 is the next highest byte, when present.
++ */
++#define R1_SPI_IDLE		(1 << 0)
++#define R1_SPI_ERASE_RESET	(1 << 1)
++#define R1_SPI_ILLEGAL_COMMAND	(1 << 2)
++#define R1_SPI_COM_CRC		(1 << 3)
++#define R1_SPI_ERASE_SEQ	(1 << 4)
++#define R1_SPI_ADDRESS		(1 << 5)
++#define R1_SPI_PARAMETER	(1 << 6)
++/* R1 bit 7 is always zero */
++#define R2_SPI_CARD_LOCKED	(1 << 8)
++#define R2_SPI_WP_ERASE_SKIP	(1 << 9)	/* or lock/unlock fail */
++#define R2_SPI_LOCK_UNLOCK_FAIL	R2_SPI_WP_ERASE_SKIP
++#define R2_SPI_ERROR		(1 << 10)
++#define R2_SPI_CC_ERROR		(1 << 11)
++#define R2_SPI_CARD_ECC_ERROR	(1 << 12)
++#define R2_SPI_WP_VIOLATION	(1 << 13)
++#define R2_SPI_ERASE_PARAM	(1 << 14)
++#define R2_SPI_OUT_OF_RANGE	(1 << 15)	/* or CSD overwrite */
++#define R2_SPI_CSD_OVERWRITE	R2_SPI_OUT_OF_RANGE
++
+ /* These are unpacked versions of the actual responses */
+ 
+ struct _mmc_csd {
+@@ -182,6 +208,7 @@
+  */
+ #define CCC_BASIC		(1<<0)	/* (0) Basic protocol functions */
+ 					/* (CMD0,1,2,3,4,7,9,10,12,13,15) */
++					/* (and for SPI, CMD58,59) */
+ #define CCC_STREAM_READ		(1<<1)	/* (1) Stream read commands */
+ 					/* (CMD11) */
+ #define CCC_BLOCK_READ		(1<<2)	/* (2) Block read commands */
+@@ -224,10 +251,21 @@
+  * EXT_CSD fields
+  */
+ 
+-#define EXT_CSD_BUS_WIDTH	183	/* R/W */
+-#define EXT_CSD_HS_TIMING	185	/* R/W */
+-#define EXT_CSD_CARD_TYPE	196	/* RO */
+-#define EXT_CSD_SEC_CNT		212	/* RO, 4 bytes */
++#define EXT_CSD_ERASE_GROUP_DEF		175	/* R/W */
++#define EXT_CSD_ERASED_MEM_CONT		181	/* RO */
++#define EXT_CSD_BUS_WIDTH		183	/* R/W */
++#define EXT_CSD_HS_TIMING		185	/* R/W */
++#define EXT_CSD_REV			192	/* RO */
++#define EXT_CSD_STRUCTURE		194	/* RO */
++#define EXT_CSD_CARD_TYPE		196	/* RO */
++#define EXT_CSD_SEC_CNT			212	/* RO, 4 bytes */
++#define EXT_CSD_S_A_TIMEOUT		217	/* RO */
++#define EXT_CSD_ERASE_TIMEOUT_MULT	223	/* RO */
++#define EXT_CSD_HC_ERASE_GRP_SIZE	224	/* RO */
++#define EXT_CSD_SEC_TRIM_MULT		229	/* RO */
++#define EXT_CSD_SEC_ERASE_MULT		230	/* RO */
++#define EXT_CSD_SEC_FEATURE_SUPPORT	231	/* RO */
++#define EXT_CSD_TRIM_MULT		232	/* RO */
+ 
+ /*
+  * EXT_CSD field definitions
+@@ -239,11 +277,16 @@
+ 
+ #define EXT_CSD_CARD_TYPE_26	(1<<0)	/* Card can run at 26MHz */
+ #define EXT_CSD_CARD_TYPE_52	(1<<1)	/* Card can run at 52MHz */
++#define EXT_CSD_CARD_TYPE_MASK	0x3	/* Mask out reserved and DDR bits */
+ 
+ #define EXT_CSD_BUS_WIDTH_1	0	/* Card is in 1 bit mode */
+ #define EXT_CSD_BUS_WIDTH_4	1	/* Card is in 4 bit mode */
+ #define EXT_CSD_BUS_WIDTH_8	2	/* Card is in 8 bit mode */
+ 
++#define EXT_CSD_SEC_ER_EN	BIT(0)
++#define EXT_CSD_SEC_BD_BLK_EN	BIT(2)
++#define EXT_CSD_SEC_GB_CL_EN	BIT(4)
++
+ /*
+  * MMC_SWITCH access modes
+  */
+--- a/include/linux/mmc/sd.h
++++ b/include/linux/mmc/sd.h
+@@ -21,8 +21,13 @@
+   /* class 10 */
+ #define SD_SWITCH                 6   /* adtc [31:0] See below   R1  */
+ 
++  /* class 5 */
++#define SD_ERASE_WR_BLK_START    32   /* ac   [31:0] data addr   R1  */
++#define SD_ERASE_WR_BLK_END      33   /* ac   [31:0] data addr   R1  */
++
+   /* Application commands */
+ #define SD_APP_SET_BUS_WIDTH      6   /* ac   [1:0] bus width    R1  */
++#define SD_APP_SD_STATUS         13   /* adtc                    R1  */
+ #define SD_APP_SEND_NUM_WR_BLKS  22   /* adtc                    R1  */
+ #define SD_APP_OP_COND           41   /* bcr  [31:0] OCR         R3  */
+ #define SD_APP_SEND_SCR          51   /* adtc                    R1  */
+--- a/include/linux/mod_devicetable.h
++++ b/include/linux/mod_devicetable.h
+@@ -21,6 +21,16 @@
+ 	kernel_ulong_t driver_data;	/* Data private to the driver */
+ };
+ 
++/* SDIO */
++
++#define SDIO_ANY_ID (~0)
++
++struct sdio_device_id {
++	__u8    class;          /* Standard interface or SDIO_ANY_ID */
++	__u16   vendor;         /* Vendor or SDIO_ANY_ID */
++	__u16   device;         /* Device ID or SDIO_ANY_ID */
++	kernel_ulong_t driver_data; /* Data private to the driver */
++};
+ 
+ #define IEEE1394_MATCH_VENDOR_ID	0x0001
+ #define IEEE1394_MATCH_MODEL_ID		0x0002
+@@ -114,6 +124,9 @@
+ 	__u8		bInterfaceClass;
+ 	__u8		bInterfaceSubClass;
+ 	__u8		bInterfaceProtocol;
++	
++	/* Used for vendor-specific interface matches */
++	__u8		bInterfaceNumber;
+ 
+ 	/* not matched against */
+ 	kernel_ulong_t	driver_info;
+@@ -130,6 +143,7 @@
+ #define USB_DEVICE_ID_MATCH_INT_CLASS		0x0080
+ #define USB_DEVICE_ID_MATCH_INT_SUBCLASS	0x0100
+ #define USB_DEVICE_ID_MATCH_INT_PROTOCOL	0x0200
++#define USB_DEVICE_ID_MATCH_INT_NUMBER		0x0400
+ 
+ /* s390 CCW devices */
+ struct ccw_device_id {
+--- a/include/linux/pkt_sched.h
++++ b/include/linux/pkt_sched.h
+@@ -159,6 +159,33 @@
+  *	to change these parameters in compile time.
+  */
+ 
++/* ESFQ section */
++
++enum
++{
++        /* traditional */
++	TCA_ESFQ_HASH_CLASSIC,
++	TCA_ESFQ_HASH_DST,
++	TCA_ESFQ_HASH_SRC,
++	TCA_ESFQ_HASH_FWMARK,
++	/* conntrack */
++	TCA_ESFQ_HASH_CTORIGDST,
++	TCA_ESFQ_HASH_CTORIGSRC,
++	TCA_ESFQ_HASH_CTREPLDST,
++	TCA_ESFQ_HASH_CTREPLSRC,
++	TCA_ESFQ_HASH_CTNATCHG,
++};
++
++struct tc_esfq_qopt
++{
++	unsigned	quantum;	/* Bytes per round allocated to flow */
++	int		perturb_period;	/* Period of hash perturbation */
++	__u32		limit;		/* Maximal packets in queue */
++	unsigned	divisor;	/* Hash divisor  */
++	unsigned	flows;		/* Maximal number of flows  */
++	unsigned	hash_kind;	/* Hash function to use for flow identification */
++};
++
+ /* RED section */
+ 
+ enum
+--- a/include/linux/scatterlist.h
++++ b/include/linux/scatterlist.h
+@@ -2,22 +2,126 @@
+ #define _LINUX_SCATTERLIST_H
+ 
+ #include <asm/scatterlist.h>
++#include <asm/io.h>
+ #include <linux/mm.h>
+ #include <linux/string.h>
+ 
++/**
++ * sg_set_page - Set sg entry to point at given page
++ * @sg:		 SG entry
++ * @page:	 The page
++ *
++ * Description:
++ *   Use this function to set an sg entry pointing at a page, never assign
++ *   the page directly. We encode sg table information in the lower bits
++ *   of the page pointer. See sg_page() for looking up the page belonging
++ *   to an sg entry.
++ *
++ **/
++static inline void sg_set_page(struct scatterlist *sg, struct page *page)
++{
++	sg->page = page;
++}
++
++#define sg_page(sg)	((sg)->page)
++
+ static inline void sg_set_buf(struct scatterlist *sg, const void *buf,
+ 			      unsigned int buflen)
+ {
+-	sg->page = virt_to_page(buf);
++	sg_set_page(sg, virt_to_page(buf));
+ 	sg->offset = offset_in_page(buf);
+ 	sg->length = buflen;
+ }
+ 
++#define sg_next(sg)		((sg) + 1)
++#define sg_last(sg, nents)	(&(sg[(nents) - 1]))
++
++/*
++ * Loop over each sg element, following the pointer to a new list if necessary
++ */
++#define for_each_sg(sglist, sg, nr, __i)	\
++	for (__i = 0, sg = (sglist); __i < (nr); __i++, sg = sg_next(sg))
++
++/**
++ * sg_mark_end - Mark the end of the scatterlist
++ * @sgl:	Scatterlist
++ * @nents:	Number of entries in sgl
++ *
++ * Description:
++ *   Marks the last entry as the termination point for sg_next()
++ *
++ **/
++static inline void sg_mark_end(struct scatterlist *sgl, unsigned int nents)
++{
++}
++
++static inline void __sg_mark_end(struct scatterlist *sg)
++{
++}
++
++/**
++ * sg_init_one - Initialize a single entry sg list
++ * @sg:		 SG entry
++ * @buf:	 Virtual address for IO
++ * @buflen:	 IO length
++ *
++ * Notes:
++ *   This should not be used on a single entry that is part of a larger
++ *   table. Use sg_init_table() for that.
++ *
++ **/
+ static inline void sg_init_one(struct scatterlist *sg, const void *buf,
+ 			       unsigned int buflen)
+ {
+ 	memset(sg, 0, sizeof(*sg));
++	sg_mark_end(sg, 1);
+ 	sg_set_buf(sg, buf, buflen);
+ }
+ 
++/**
++ * sg_init_table - Initialize SG table
++ * @sgl:	   The SG table
++ * @nents:	   Number of entries in table
++ *
++ * Notes:
++ *   If this is part of a chained sg table, sg_mark_end() should be
++ *   used only on the last table part.
++ *
++ **/
++static inline void sg_init_table(struct scatterlist *sgl, unsigned int nents)
++{
++	memset(sgl, 0, sizeof(*sgl) * nents);
++	sg_mark_end(sgl, nents);
++}
++
++/**
++ * sg_phys - Return physical address of an sg entry
++ * @sg:	     SG entry
++ *
++ * Description:
++ *   This calls page_to_phys() on the page in this sg entry, and adds the
++ *   sg offset. The caller must know that it is legal to call page_to_phys()
++ *   on the sg page.
++ *
++ **/
++static inline unsigned long sg_phys(struct scatterlist *sg)
++{
++	return page_to_phys(sg_page(sg)) + sg->offset;
++}
++
++/**
++ * sg_virt - Return virtual address of an sg entry
++ * @sg:	     SG entry
++ *
++ * Description:
++ *   This calls page_address() on the page in this sg entry, and adds the
++ *   sg offset. The caller must know that the sg page has a valid virtual
++ *   mapping.
++ *
++ **/
++static inline void *sg_virt(struct scatterlist *sg)
++{
++	return page_address(sg_page(sg)) + sg->offset;
++}
++
+ #endif /* _LINUX_SCATTERLIST_H */
+--- a/include/linux/skbuff.h
++++ b/include/linux/skbuff.h
+@@ -1190,7 +1190,7 @@
+  * headroom, you should not reduce this.
+  */
+ #ifndef NET_SKB_PAD
+-#define NET_SKB_PAD	16
++#define NET_SKB_PAD	80
+ #endif
+ 
+ extern int ___pskb_trim(struct sk_buff *skb, unsigned int len);
+--- a/include/linux/usb.h
++++ b/include/linux/usb.h
+@@ -806,6 +806,13 @@
+ 	.bInterfaceClass = (cl), \
+ 	.bInterfaceSubClass = (sc), .bInterfaceProtocol = (pr)
+ 
++#define USB_DEVICE_INTERFACE_NUMBER(vend, prod, num) \
++	.match_flags = USB_DEVICE_ID_MATCH_DEVICE \
++		| USB_DEVICE_ID_MATCH_INT_NUMBER, \
++	.idVendor = (vend), \
++	.idProduct = (prod), \
++	.bInterfaceNumber = (num)
++
+ /* ----------------------------------------------------------------------- */
+ 
+ /* Stuff for dynamic usb ids */
+--- a/include/net/netfilter/nf_conntrack_expect.h
++++ b/include/net/netfilter/nf_conntrack_expect.h
+@@ -82,5 +82,7 @@
+ void nf_ct_expect_put(struct nf_conntrack_expect *exp);
+ int nf_ct_expect_related(struct nf_conntrack_expect *expect);
+ 
++int nf_ct_expect_update_timer(struct nf_conntrack_expect *expect);
++
+ #endif /*_NF_CONNTRACK_EXPECT_H*/
+ 
+--- a/include/net/netfilter/nf_nat_helper.h
++++ b/include/net/netfilter/nf_nat_helper.h
+@@ -7,13 +7,14 @@
+ struct sk_buff;
+ 
+ /* These return true or false. */
+-extern int nf_nat_mangle_tcp_packet(struct sk_buff **skb,
++extern int __nf_nat_mangle_tcp_packet(struct sk_buff **skb,
+ 				    struct nf_conn *ct,
+ 				    enum ip_conntrack_info ctinfo,
+ 				    unsigned int match_offset,
+ 				    unsigned int match_len,
+ 				    const char *rep_buffer,
+-				    unsigned int rep_len);
++				    unsigned int rep_len,
++				    bool force_seq);
+ extern int nf_nat_mangle_udp_packet(struct sk_buff **skb,
+ 				    struct nf_conn *ct,
+ 				    enum ip_conntrack_info ctinfo,
+@@ -29,4 +30,17 @@
+  * to port ct->master->saved_proto. */
+ extern void nf_nat_follow_master(struct nf_conn *ct,
+ 				 struct nf_conntrack_expect *this);
++
++static inline int nf_nat_mangle_tcp_packet(struct sk_buff **skb,
++				    struct nf_conn *ct,
++				    enum ip_conntrack_info ctinfo,
++				    unsigned int match_offset,
++				    unsigned int match_len,
++				    const char *rep_buffer,
++				    unsigned int rep_len) {
++	return __nf_nat_mangle_tcp_packet(skb, ct, ctinfo,
++					  match_offset, match_len,
++					  rep_buffer, rep_len, false);
++}
++				 
+ #endif
+--- a/include/net/sock.h
++++ b/include/net/sock.h
+@@ -210,6 +210,7 @@
+ 	struct {
+ 		struct sk_buff *head;
+ 		struct sk_buff *tail;
++		int len;
+ 	} sk_backlog;
+ 	wait_queue_head_t	*sk_sleep;
+ 	struct dst_entry	*sk_dst_cache;
+@@ -470,7 +471,14 @@
+ }
+ 
+ /* The per-socket spinlock must be held here. */
+-static inline void sk_add_backlog(struct sock *sk, struct sk_buff *skb)
++static inline bool sk_rcvqueues_full(const struct sock *sk, const struct sk_buff *skb)
++{
++	unsigned int qsize = sk->sk_backlog.len + atomic_read(&sk->sk_rmem_alloc);
++
++	return ((qsize + skb->truesize > sk->sk_rcvbuf));
++}
++
++static inline void __sk_add_backlog(struct sock *sk, struct sk_buff *skb)
+ {
+ 	if (!sk->sk_backlog.tail) {
+ 		sk->sk_backlog.head = sk->sk_backlog.tail = skb;
+@@ -481,6 +489,16 @@
+ 	skb->next = NULL;
+ }
+ 
++static inline int sk_add_backlog(struct sock *sk, struct sk_buff *skb)
++{
++	if (sk_rcvqueues_full(sk, skb))
++		return -ENOBUFS;
++
++	__sk_add_backlog(sk, skb);
++	sk->sk_backlog.len += skb->truesize;
++	return 0;
++}
++
+ #define sk_wait_event(__sk, __timeo, __condition)		\
+ ({	int rc;							\
+ 	release_sock(__sk);					\
+--- a/Makefile
++++ b/Makefile
+@@ -491,6 +491,8 @@
+ CFLAGS		+= -O2
+ endif
+ 
++#CFLAGS		+= -Werror
++
+ include $(srctree)/arch/$(ARCH)/Makefile
+ 
+ ifdef CONFIG_FRAME_POINTER

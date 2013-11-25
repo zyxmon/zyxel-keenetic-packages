@@ -1,0 +1,98 @@
+--- a/arch/mips/pci/Makefile
++++ b/arch/mips/pci/Makefile
+@@ -17,9 +17,6 @@
+ obj-$(CONFIG_NEC_CMBVR4133)	+= fixup-vr4133.o
+ obj-$(CONFIG_MARKEINS)		+= ops-emma2rh.o pci-emma2rh.o fixup-emma2rh.o
+ obj-$(CONFIG_MIPS_TC3162)	+= ops-tc3162.o pci-tc3162.o fixup-tc3162.o
+-ifdef CONFIG_MIPS_RT63365
+-obj-$(CONFIG_MIPS_RT63365)	+= pci-rt6xxxx.o
+-else
+ ifdef CONFIG_MIPS_TC3262 
+ CFLAGS += -DPCIE_PCI_COEXIT
+ endif
+@@ -28,7 +25,6 @@
+ ifdef CONFIG_MIPS_TC3162U
+ CFLAGS += -DPCIE_PCI_COEXIT
+ endif
+-endif
+ obj-$(CONFIG_MIPS_TC3162U)	+= ops-tc3162u.o pci-tc3162u.o fixup-tc3162u.o
+ obj-$(CONFIG_MIPS_TC3162U)	+= ops-tc3162.o pci-tc3162.o fixup-tc3162.o
+ 
+--- a/arch/mips/trendchip/Kconfig
++++ b/arch/mips/trendchip/Kconfig
+@@ -85,9 +85,6 @@
+ config TCSUPPORT_MEMORY_CONTROL
+ 	bool "TCSUPPORT_MEMORY_CONTROL"
+ 
+-config TCSUPPORT_NAT_SESSION_RESERVE
+-	bool "TCSUPPORT_NAT_SESSION_RESERVE"
+-
+ config TCSUPPORT_SBTHROUGHPUT_ENHANCE
+ 	bool "TCSUPPORT_SBTHROUGHPUT_ENHANCE"
+ 
+@@ -154,6 +151,9 @@
+ config TCSUPPORT_RAETH_TSO
+ 	bool "TCSUPPORT_RAETH_TSO"
+ 
++config TCSUPPORT_RAETH_HW_VLAN_TX
++	bool "TCSUPPORT_RAETH_HW_VLAN_TX"
++
+ config TCSUPPORT_DOUBLE_VLAN_TAG
+ 	bool "TCSUPPORT_DOUBLE_VLAN_TAG"
+ 
+--- a/include/linux/squashfs_fs.h
++++ b/include/linux/squashfs_fs.h
+@@ -236,6 +236,7 @@
+ 	long long		directory_table_start;
+ 	long long		fragment_table_start;
+ 	long long		unused;
++	unsigned int	pad;
+ } __attribute__ ((packed));
+ 
+ struct squashfs_dir_index {
+@@ -392,6 +393,7 @@
+ 	SQUASHFS_SWAP((s)->directory_table_start, d, 760, 64);\
+ 	SQUASHFS_SWAP((s)->fragment_table_start, d, 824, 64);\
+ 	SQUASHFS_SWAP((s)->unused, d, 888, 64);\
++	SQUASHFS_SWAP((s)->pad, d, 952, 32);\
+ }
+ 
+ #define SQUASHFS_SWAP_BASE_INODE_CORE(s, d, n)\
+--- a/include/linux/sysctl.h
++++ b/include/linux/sysctl.h
+@@ -351,11 +351,6 @@
+ 	NET_NF_CONNTRACK_L2TP_ENABLE=37,
+ 	NET_NF_CONNTRACK_IPSEC_ENABLE=38,
+     	NET_NF_FULLCONE_ENABLE=39,
+-#if defined(CONFIG_TCSUPPORT_NAT_SESSION_RESERVE)
+-	NET_NF_CONNTRACK_RESERVE=40,
+-	NET_NF_CONNTRACK_RESERVE_PROTO=41,
+-	NET_NF_CONNTRACK_RESERVE_PORT=42,
+-#endif
+ };
+ 
+ /* /proc/sys/net/ipv4 */
+--- a/include/net/netfilter/nf_conntrack_expect.h
++++ b/include/net/netfilter/nf_conntrack_expect.h
+@@ -76,5 +76,7 @@
+ void nf_conntrack_expect_put(struct nf_conntrack_expect *exp);
+ int nf_conntrack_expect_related(struct nf_conntrack_expect *expect);
+ 
++int nf_conntrack_expect_update_timer(struct nf_conntrack_expect *expect);
++
+ #endif /*_NF_CONNTRACK_EXPECT_H*/
+ 
+--- a/include/net/netfilter/nf_conntrack.h
++++ b/include/net/netfilter/nf_conntrack.h
+@@ -281,11 +281,6 @@
+ extern int nf_conntrack_checksum;
+ extern atomic_t nf_conntrack_count;
+ extern int nf_conntrack_max;
+-#if defined(CONFIG_TCSUPPORT_NAT_SESSION_RESERVE)
+-extern int nf_conntrack_reserve;
+-extern int nf_conntrack_reserve_port;
+-extern int nf_conntrack_reserve_proto;
+-#endif
+ /*for alg switch*/
+ extern int nf_conntrack_ftp_enable;
+ extern int nf_conntrack_sip_enable;
