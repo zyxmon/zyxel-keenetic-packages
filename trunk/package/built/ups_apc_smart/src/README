@@ -4,6 +4,10 @@ Corrected for Powercom WOW-xxxU series by <c61@yandex.ru> 2013
 From program version 1.0.4 Powercom BNT, IMPERIAL, SKP, WOW series supported
 (see -v and -p options)
 
+Corrected for APC Smart-UPS.
+
+This program NOT FOR POWERCOM UPS'es NOW !!!
+
 Requirements for build:
 
 libusb (http://libusb.org/)
@@ -14,14 +18,14 @@ Dependencies:
 
 package libusb
 
-Dependencies for test purposes:
+Dependencies for test purposes only:
 
 kernel modules input-core, hid, usbhid
 package usbutils (use lsusb for obtaining ID's)
 
-install kernel modules and use "lsusb -v" to see vendor and product ID's + Report Descriptors
-if your don't to see all Product Descriptors, unbind usb interface
-remove kernel modules after tests.
+install kernel modules use "lsusb -v" to see vendor and product ID's + Report Descriptors
+if you don't see all Report Descriptors, unbind usb interface
+remove kernel modules after tests
 
 Program options:
  <empty>  - get and show UPS data
@@ -31,6 +35,6 @@ Program options:
  -b       - switch off beeper (audible alarm control; experimental - for models after 2010)
  -d       - detach kernel driver before use interface
  -a       - attach kernel driver after use interface
- -v VID   - vendor ID (default: 0d9f - Powercom)
- -p PID   - product ID (default: 00a4 - Powercom WOW)
+ -v VID   - vendor ID (default: 051d - APC)
+ -p PID   - product ID (default: 0002 - APC Smart-UPS)
  -? or -h - this help
