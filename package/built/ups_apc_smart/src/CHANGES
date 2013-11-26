@@ -15,3 +15,7 @@ v.1.0.4 - removed error: detach and not attach driver
              Powercom BNT, IMPERIAL, SKP, WOW series supported
 
 v.1.0.5 - added -d and -a for detach and attach kernel driver
+          corrected for APC Smart-UPS series, some changed and bugs removed
+
+          This program NOT FOR POWERCOM UPS'es !!!
+

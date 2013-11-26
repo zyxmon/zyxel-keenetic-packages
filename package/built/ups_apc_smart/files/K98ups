@@ -1,0 +1,230 @@
+#!/bin/sh
+# USB HID UPS: usb_ups_apc_smart monitor script
+# v.0.0.4 20131126
+# A) Dependencies:
+#  1) for test: kernel modules input-core, hid, usbhid
+#  2) for work: diff util
+# B) Insert to crontab:
+#  1) for monitoring: */1 * * * * /media/DISK_A1/system/etc/init.d/S98ups monitor > /dev/null &
+#  2) for log rotate: 0 0 * * * /media/DISK_A1/system/etc/init.d/S98ups rotate > /dev/null &
+
+MOUNTPNT="/media/DISK_A1"
+MOUNT="$MOUNTPNT/system"
+
+export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
+
+# Critical capacity OR run time to empty for shutdown (if less)
+CAPACITY_LOW=25
+RUN_TIME_LOW=300
+
+# Delay for reboot after shutdown.sh
+DELAY=1200
+
+# Kernel modules path
+KMOD=$MOUNT/lib/modules/2.6.22-tc/
+
+# Log file/dirs
+LOG=$MOUNT/var/log
+LOGF=$LOG/ups.log
+LOGD=$LOG/ups
+
+#Binary file
+BIN="usb_ups_apc_smart"
+
+# Temporary files
+TMP="/tmp/"$BIN".tmp"
+TMPERR="/tmp/"$BIN"_error.tmp"
+TMPLOG0="/tmp/"$BIN"_log0.tmp"
+TMPLOG1="/tmp/"$BIN"_log1.tmp"
+
+# Get value from program output
+get_value () {
+    value=`grep -is $1: $TMP`
+    value=`expr "$value" : '.*\: \(.*\)'`
+    if [ -z $value ] ; then
+	value=0
+    else
+        if [ $value == "off" ] ; then
+	    value=0
+        else
+    	    if [ $value == "on" ] ; then
+		value=1
+	    fi
+        fi
+    fi
+    return $value
+}
+
+# Load/unload kernel modules
+load() {
+	echo "loading kernel modules..."
+	insmod $KMOD/input-core.ko
+	insmod $KMOD/hid.ko
+	insmod $KMOD/usbhid.ko
+	sleep 1
+	hiddev=`ls /dev/* | grep -c 'hiddev'`
+	if [ $hiddev -gt 0 ] ; then
+	    echo "kernel modules loaded, hiddev device present."
+	else
+	    echo "kernel modules loaded, but ERROR: hiddev device NOT present !"
+	fi
+}
+unload() {
+	echo "unloading kernel modules..."
+	rmmod usbhid
+	rmmod hid
+	rmmod input-core
+	sleep 1
+	echo "kernel modules unloaded."
+}
+
+# Start: load modules, search hiddev, unload
+start() {
+	load
+	unload
+}
+
+# Stop: do nothing
+stop() {
+	echo "stop - do nothing"
+}
+
+# Monitor: UPS monitoring
+monitor() {
+	$BIN -u > $TMP
+	get_value "voltage_out" ;		voltage_out=$?
+	if [ $voltage_out -gt 0 ] ; then
+		get_value "voltage_in" ;		voltage_in=$?
+		get_value "frequency_out" ;		frequency_out=$?
+		get_value "load" ;			load=$?
+		get_value "capacity" ;			capacity=$?
+		get_value "run_time_to_empty" ;		run_time_to_empty=$?
+		datestr=`date +%Y.%m.%d/%H:%M:%S`
+		if [ ! -e $LOGF ] ; then
+			printf "%s" $datestr > $LOGF
+			printf "%8s" "Vin" >> $LOGF
+			printf "%8s" "Vout" >> $LOGF
+			printf "%8s" "Fout" >> $LOGF
+			printf "%8s" "Load" >> $LOGF
+			printf "%8s" "Cap" >> $LOGF
+			printf "%8s" "RTTE" >> $LOGF
+			printf "\n" >> $LOGF
+			rm -f $TMPLOG0
+		fi
+		printf "%8d" $voltage_in > $TMPLOG1
+		printf "%8d" $voltage_out >> $TMPLOG1
+		printf "%8d" $frequency_out >> $TMPLOG1
+		printf "%8d" $load >> $TMPLOG1
+		printf "%8d" $capacity >> $TMPLOG1
+		printf "%8d" $run_time_to_empty >> $TMPLOG1
+		printf "\n"  >> $TMPLOG1
+		if [ ! -e $TMPLOG0 ] ; then
+			mv $TMPLOG1 $TMPLOG0
+			printf "%s" $datestr >> $LOGF
+			cat $TMPLOG0 >> $LOGF
+		else
+			identical=`diff -qs $TMPLOG0 $TMPLOG1 | grep -c identical`
+			if [ $identical -eq 0 ] ; then
+				printf "%s" $datestr >> $LOGF
+				cat $TMPLOG1 >> $LOGF
+			fi
+			rm -f $TMPLOG0
+			mv $TMPLOG1 $TMPLOG0
+		fi
+		if [ $voltage_in -lt 170 ] ; then
+			# On batteries !
+			echo "Voltage in = "$voltage_in
+			echo "Voltage out = "$voltage_out
+			echo "Capacity = "$capacity
+			echo "Run time to empty = "$run_time_to_empty
+			if [ $capacity -lt $CAPACITY_LOW ] ; then
+				echo "Capacity LOW !"
+				# Shutdown script here...
+				logger -t S98ups "Capacity LOW !"
+				logger -t S98ups "Shutdown and wait Reboot "$DELAY" sec"
+				shutdown.sh > /dev/null &
+				reboot -d $DELAY
+				#
+			fi
+			if [ $run_time_to_empty -lt $RUN_TIME_LOW ] ; then
+				echo "Run time to empty LOW !"
+				# Shutdown script here...
+				logger -t S98ups "Run time to empty LOW !"
+				logger -t S98ups "Shutdown and wait Reboot "$DELAY" sec"
+				shutdown.sh > /dev/null &
+				reboot -d $DELAY
+				#
+			fi
+		else
+			# On AC input
+			echo "Voltage in = "$voltage_in
+		fi
+		return 0
+	else
+		echo "ERROR: UPS data not received!"
+		return 1
+	fi
+}
+
+# Clean: delete temporary files
+clean () {
+	rm -f $TMP
+	rm -f $TMPERR
+	rm -f $TMPLOG0
+	rm -f $TMPLOG1
+}
+
+case "$1" in
+	load)
+		load
+		;;
+	unload)
+		unload
+		;;
+	start)
+		logger -t S98ups "Start"
+		clean
+		start
+		;;
+	stop)
+		logger -t S98ups "Stop"
+		stop
+		clean
+		;;
+	restart)
+		logger -t S98ups "restart"
+		stop
+		clean
+		start
+		;;
+	monitor)
+		monitor
+		if [ $? -eq 0 ] ; then
+			if [ -e $TMPERR ] ; then
+				rm -f $TMPERR
+				logger -t S98ups "UPS connected"
+			fi
+		else
+			if [ ! -e $TMPERR ] ; then
+				logger -t S98ups "UPS disconnected or ERROR!"
+			fi
+		fi
+		;;
+	rotate)
+		echo "Rotate ups logfile"
+		mkdir -p $LOGD/`date +%Y`/`date +%m`
+		mv $LOGF $LOGD/`date +%Y`/`date +%m`/`date +%d`.log
+		;;
+	link_up)
+		;;
+	ppp_up)
+		;;
+	link_down)
+		;;
+	ppp_down)
+		;;
+	*)
+		echo "Usage: $0 {load|unload|start|stop|restart|monitor|rotate|link_up|link_down|ppp_up|ppp_down}"
+		;;
+esac

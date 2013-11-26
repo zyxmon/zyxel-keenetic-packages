@@ -6,6 +6,9 @@
 **  From program version 1.0.4 Powercom BNT, IMPERIAL, SKP, WOW series are supported
 **  (see -v and -p options)
 **
+**  Corrected for APC Smart UPS by c61 <mail@c61.su> 2013
+**  DO NOT USE FOR POWERCOM UPSes !!!
+**
 **  This program is free software; you can redistribute it and/or modify
 **  it under the terms of the GNU General Public License as published by
 **  the Free Software Foundation; either version 2 of the License, or
@@ -28,40 +31,45 @@
 #include <usb.h>
 #include <unistd.h>
 
+//#define DEBUG
+
 #define HID_GET_REPORT 			0x01
 #define HID_INPUT_REPORT 		0x01
 
 #define HID_INTERFACE 			0x00
 #define HID_CONFIGURATION 		0x00
 
-#define IMD_VID 			0x0d9f
-#define IMD_PID				0x00a4
+#define IMD_VID 			0x051d
+#define IMD_PID				0x0002
 
 #define USBRQ_HID_GET_REPORT    	0x01
 #define USBRQ_HID_SET_REPORT    	0x09
 
 #define USB_HID_REPORT_TYPE_FEATURE 	3
 
-#define UPS_REPORT_VOLTAGE_IN 		29
-#define UPS_REPORT_VOLTAGE_OUT		33
-#define UPS_REPORT_FREQUENCY_IN		30
-#define UPS_REPORT_FREQUENCY_OUT	34
-#define UPS_REPORT_LOAD			31
-#define UPS_REPORT_CAPACITY		24
-#define UPS_REPORT_STATUS		20
+#define UPS_REPORT_VOLTAGE_IN 		32
+#define UPS_REPORT_VOLTAGE_OUT		43
+#define UPS_REPORT_FREQUENCY_IN		42
+#define UPS_REPORT_FREQUENCY_OUT	42
+#define UPS_REPORT_LOAD			44
+#define UPS_RUN_TIME_TO_EMPTY		25//13
+#define UPS_REPORT_CAPACITY		24//12
+#define UPS_REPORT_STATUS		7//51
+
+//#define PRINT_STATUS
 
 #define CHARGING			1
 #define DISCHARGING			(1 << 1)
 #define ACPRESENT			(1 << 2)
 #define BATTERYPRESENT			(1 << 3)
 #define BELOWREMAININGCAPACITYLIMIT	(1 << 4)
-#define REMAININGTIMELIMITEXPIRED 	(1 << 5)
-#define NEEDREPLACEMENT			(1 << 6)
-#define VOLTAGENOTREGULATED 		(1 << 7)
-#define SHUTDOWNREQUESTED 		(1 << 8)
-#define SHUTDOWNIMMINENT		(1 << 9)
-#define COMMUNICATIONLOST		(1 << 10)
-#define OVERLOAD			(1 << 11)
+#define SHUTDOWNREQUESTED 		(1 << 5)
+#define SHUTDOWNIMMINENT		(1 << 6)
+#define REMAININGTIMELIMITEXPIRED 	(1 << 7)
+#define COMMUNICATIONLOST		(1 << 8)
+#define NEEDREPLACEMENT			(1 << 9)
+#define OVERLOAD			(1 << 10)
+#define VOLTAGENOTREGULATED 		(1 << 11)
 
 uint16_t status;
 
@@ -163,7 +171,13 @@ uint16_t get_report16(usb_dev_handle *hdev, uint8_t report) {
 		printf("retrieving hid report succeeded, read %d bytes\n", ret);
 		print_data(tmp, ret);
 		#endif
-		data = tmp[1];
+		if(ret==2) {
+			data = tmp[1];
+		} else if(ret==3) {
+			data = tmp[1]|(tmp[2]<<8);
+		} else {
+			data = 0;
+		}
 		return data;
 	}
 }
@@ -184,7 +198,11 @@ uint8_t get_report8(usb_dev_handle *hdev, uint8_t report) {
 		printf("retrieving hid report succeeded, read %d bytes\n", ret);
 		print_data(tmp, ret);
 		#endif
-		data = tmp[1];
+		if(ret==2) {
+			data = tmp[1];
+		} else {
+			data = 0;
+		}
 		return data;
 	}
 }
@@ -193,9 +211,9 @@ uint8_t send_test(usb_dev_handle *hdev) {
 
 	int8_t data;
 	int ret;
-	unsigned char tmp[2] = { 0x15, 0x01 };
+	unsigned char tmp[2] = { 0x16, 0x01 };
 
-	ret = usb_control_msg(hdev,  0x21 , 0x09, (0x03 << 8) | 0x15, 0, tmp, 2, 5000);
+	ret = usb_control_msg(hdev,  0x21 , 0x09, (0x03 << 8) | 0x16, 0, tmp, 2, 5000);
 
 	if (ret < 0) {
 		printf("retrieving hid report failed\n");
@@ -205,7 +223,11 @@ uint8_t send_test(usb_dev_handle *hdev) {
 		printf("retrieving hid report succeeded, read %d bytes\n", ret);
 		print_data(tmp, ret);
 		#endif
-		data = tmp[1];
+		if(ret==2) {
+			data = tmp[1];
+		} else {
+			data = 0;
+		}
 		return data;
 	}
 }
@@ -214,9 +236,9 @@ uint8_t send_boff(usb_dev_handle *hdev) {
 
 	int8_t data;
 	int ret;
-	unsigned char tmp[2] = { 0x13, 0x00 };
+	unsigned char tmp[2] = { 0x14, 0x00 };
 
-	ret = usb_control_msg(hdev,  0x21 , 0x09, (0x03 << 8) | 0x13, 0, tmp, 2, 5000);
+	ret = usb_control_msg(hdev,  0x21 , 0x09, (0x03 << 8) | 0x14, 0, tmp, 2, 5000);
 
 	if (ret < 0) {
 		printf("retrieving hid report failed\n");
@@ -226,7 +248,11 @@ uint8_t send_boff(usb_dev_handle *hdev) {
 		printf("retrieving hid report succeeded, read %d bytes\n", ret);
 		print_data(tmp, ret);
 		#endif
-		data = tmp[1];
+		if(ret==2) {
+			data = tmp[1];
+		} else {
+			data = 0;
+		}
 		return data;
 	}
 }
@@ -256,7 +282,7 @@ int main(int argc, char ** argv) {
 
 	if(help)
 	{
-		printf("USB UPS Powercom WOW-xxxU monitoring, v.%s\n", version);
+		printf("USB UPS APC Smart-UPS monitoring, v.%s\n", version);
 		printf(" no args - get and show ups data\n");
 		printf(" -u      - get and show unformatted ups data\n");
 		printf(" -s      - get and show UPS data for bash script\n");
@@ -264,8 +290,8 @@ int main(int argc, char ** argv) {
 		printf(" -b      - switch off beeper (audible alarm control; experimental)\n");
 		printf(" -d      - detach kernle driver before use interface\n");
 		printf(" -a      - attach kernle driver after use interface\n");
-		printf(" -v VID  - vendor ID (default: 0d9f - Powercom)\n");
-		printf(" -p PID  - product ID (default: 00a4 - Powercom WOW)\n");
+		printf(" -v VID  - vendor ID (default: 051d - APC)\n");
+		printf(" -p PID  - product ID (default: 0002 - APC Smart UPS)\n");
 		printf(" -h -?   - this help\n");
 		exit(0);
 	}
@@ -308,6 +334,13 @@ int main(int argc, char ** argv) {
 
 	// 09 21 00 01 00 01 22 d0 02
 
+	// dummy read - clear all
+	for(j=0; j<8; j++) {
+		ret = get_report16(hdev, UPS_REPORT_VOLTAGE_IN);
+	}
+	//ret = usb_clear_halt(hdev,USB_ENDPOINT_IN);
+	//ret = usb_clear_halt(hdev,USB_ENDPOINT_OUT);
+
 	if (tflag) {
 		printf("Test: ");
 		ret = send_test(hdev);
@@ -335,40 +368,42 @@ int main(int argc, char ** argv) {
 	}
 
 	if (hflag == 1) {
-		printf("%s %d\n", "voltage_in:", get_report16(hdev, UPS_REPORT_VOLTAGE_IN));
-		printf("%s %d\n", "frequency_in:", get_report8(hdev, UPS_REPORT_FREQUENCY_IN));
-		printf("%s %d\n", "voltage_out:", get_report16(hdev, UPS_REPORT_VOLTAGE_OUT));
-		printf("%s %d\n", "frequency_out:", get_report8(hdev, UPS_REPORT_FREQUENCY_OUT));
-		printf("%s %d\n", "load:", get_report8(hdev, UPS_REPORT_LOAD));
-		printf("%s %d\n", "capacity:", get_report8(hdev, UPS_REPORT_CAPACITY));
-
+		printf("%s %d\n", "voltage_in:", get_report16(hdev, UPS_REPORT_VOLTAGE_IN)/10);
+		printf("%s %d\n", "voltage_out:", get_report16(hdev, UPS_REPORT_VOLTAGE_OUT)/10);
+		printf("%s %d\n", "frequency_out:", get_report16(hdev, UPS_REPORT_FREQUENCY_OUT)/100);
+		printf("%s %d\n", "load:", get_report16(hdev, UPS_REPORT_LOAD)/10);
+		printf("%s %d\n", "capacity:", get_report16(hdev, UPS_REPORT_CAPACITY)/10);
+		printf("%s %d\n", "run_time_to_empty:", get_report16(hdev, UPS_RUN_TIME_TO_EMPTY));
+#ifdef PRINT_STATUS
 		status = get_report16(hdev, UPS_REPORT_STATUS);
 
 		for (j=0; j<12; j++) {
 			printf("%s %s\n", status_str[j], onoff[status & (1 << j) && 1]);
 		}
+#endif
 	} else if (hflag == 2) {
-		printf("%s%d\n", "voltage_in=", get_report16(hdev, UPS_REPORT_VOLTAGE_IN));
-		printf("%s%d\n", "frequency_in=", get_report8(hdev, UPS_REPORT_FREQUENCY_IN));
-		printf("%s%d\n", "voltage_out=", get_report16(hdev, UPS_REPORT_VOLTAGE_OUT));
-		printf("%s%d\n", "frequency_out=", get_report8(hdev, UPS_REPORT_FREQUENCY_OUT));
-		printf("%s%d\n", "load=", get_report8(hdev, UPS_REPORT_LOAD));
-		printf("%s%d\n", "capacity=", get_report8(hdev, UPS_REPORT_CAPACITY));
-
+		printf("%s%d\n", "voltage_in=", get_report16(hdev, UPS_REPORT_VOLTAGE_IN)/10);
+		printf("%s%d\n", "voltage_out=", get_report16(hdev, UPS_REPORT_VOLTAGE_OUT)/10);
+		printf("%s%d\n", "frequency_out=", get_report16(hdev, UPS_REPORT_FREQUENCY_OUT)/100);
+		printf("%s%d\n", "load=", get_report16(hdev, UPS_REPORT_LOAD)/10);
+		printf("%s%d\n", "capacity=", get_report16(hdev, UPS_REPORT_CAPACITY)/10);
+		printf("%s%d\n", "run_time_to_empty=", get_report16(hdev, UPS_RUN_TIME_TO_EMPTY));
+#ifdef PRINT_STATUS
 		status = get_report16(hdev, UPS_REPORT_STATUS);
 
 		for (j=0; j<12; j++) {
 			printf("%s%d\n", status_bash_str[j], status & (1 << j) && 1);
 		}
+#endif
 	} else {
 	    if(!skip) {
-		printf("%-22s %d V\n", "Voltage in:", get_report16(hdev, UPS_REPORT_VOLTAGE_IN));
-		printf("%-22s %d Hz\n", "Frequency in:", get_report8(hdev, UPS_REPORT_FREQUENCY_IN));
-		printf("%-22s %d V\n", "Voltage out:", get_report16(hdev, UPS_REPORT_VOLTAGE_OUT));
-		printf("%-22s %d Hz\n", "Frequency out:", get_report8(hdev, UPS_REPORT_FREQUENCY_OUT));
-		printf("%-22s %d %%\n", "Load:", get_report8(hdev, UPS_REPORT_LOAD));
-		printf("%-22s %d %%\n", "Capacity:", get_report8(hdev, UPS_REPORT_CAPACITY));
-
+		printf("%-22s %d V\n", "Voltage in:", get_report16(hdev, UPS_REPORT_VOLTAGE_IN)/10);
+		printf("%-22s %d V\n", "Voltage out:", get_report16(hdev, UPS_REPORT_VOLTAGE_OUT)/10);
+		printf("%-22s %d Hz\n", "Frequency out:", get_report16(hdev, UPS_REPORT_FREQUENCY_OUT)/100);
+		printf("%-22s %d %%\n", "Load:", get_report16(hdev, UPS_REPORT_LOAD)/10);
+		printf("%-22s %d %%\n", "Capacity:", get_report16(hdev, UPS_REPORT_CAPACITY)/10);
+		printf("%-22s %d s\n", "Run time to empty:", get_report16(hdev, UPS_RUN_TIME_TO_EMPTY));
+#ifdef PRINT_STATUS
 		printf("\n");
 
 		status = get_report16(hdev, UPS_REPORT_STATUS);
@@ -376,6 +411,7 @@ int main(int argc, char ** argv) {
 		for (j=0; j<12; j++) {
 			printf("%-22s %s\n", status_human_str[j], onoff[status & (1 << j) && 1]);
 		}
+#endif
 	    }
 	}
 
