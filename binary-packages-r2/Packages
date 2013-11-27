@@ -2675,107 +2675,64 @@ Description:  Mozilla JavaScript Engine (interpreter)
 
 Package: kmod-fs-cifs
 Version: 2.6.23-rt-1
-Depends: 
-Provides: 
 Source: package/kernel
-SourceFile: 
-SourceURL: 
-License: 
-LicenseFiles: 
 Section: kernel
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 145167
+Installed-Size: 147581
 Filename: kmod-fs-cifs_2.6.23-rt-1_keenetic.ipk
-Size: 144096
-MD5Sum: 3bc1f684a4596cae7f390068ea4089d2
+Size: 146405
+MD5Sum: c0214190438e7aaafc6ec860e7e6485f
 Description:  Kernel module for CIFS support
 
 Package: kmod-fs-exportfs
 Version: 2.6.23-rt-2
-Depends: 
-Provides: 
 Source: package/kernel
-SourceFile: 
-SourceURL: 
-License: 
-LicenseFiles: 
 Section: kernel
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3194
+Installed-Size: 3529
 Filename: kmod-fs-exportfs_2.6.23-rt-2_keenetic.ipk
-Size: 3861
-MD5Sum: 579ff1ff58365fec06d444bedb8a3ceb
+Size: 4077
+MD5Sum: 351d41adb5880e521e3039752be1916e
 Description:  Kernel module for exportfs. Needed for some other modules.
 
 Package: kmod-fs-nfs-common
 Version: 2.6.23-rt-1
-Depends: 
-Provides: 
 Source: package/kernel
-SourceFile: 
-SourceURL: 
-License: 
-LicenseFiles: 
 Section: kernel
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 120270
+Installed-Size: 126511
 Filename: kmod-fs-nfs-common_2.6.23-rt-1_keenetic.ipk
-Size: 120387
-MD5Sum: ee025f6affebc9016116a838227225ba
+Size: 126329
+MD5Sum: 4f221a810fd548688504de9d7aca29cf
 Description:  Common NFS filesystem modules
 
 Package: kmod-fs-nfs
 Version: 2.6.23-rt-2
 Depends: kmod-fs-nfs-common
-Provides: 
 Source: package/kernel
-SourceFile: 
-SourceURL: 
-License: 
-LicenseFiles: 
 Section: kernel
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 75671
+Installed-Size: 64386
 Filename: kmod-fs-nfs_2.6.23-rt-2_keenetic.ipk
-Size: 75979
-MD5Sum: f4ed90ac1848c6562009f7017c66159c
+Size: 64614
+MD5Sum: 387895a3d8e72f811860f8cdd588567d
 Description:  Kernel module for NFS support
 
 Package: kmod-fs-nfsd
 Version: 2.6.23-rt-2
 Depends: kmod-fs-nfs-common, kmod-fs-exportfs
-Provides: 
 Source: package/kernel
-SourceFile: 
-SourceURL: 
-License: 
-LicenseFiles: 
 Section: kernel
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 53668
+Installed-Size: 55959
 Filename: kmod-fs-nfsd_2.6.23-rt-2_keenetic.ipk
-Size: 54126
-MD5Sum: d33341dca21b0def8fe1455a82a58969
+Size: 56283
+MD5Sum: 4ef2f3dba69440dfbe5397e27ef5808a
 Description:  Kernel module for NFS kernel server support
 
 Package: kmod-fs-xfs
@@ -2785,32 +2742,35 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 330275
+Installed-Size: 338945
 Filename: kmod-fs-xfs_2.6.23-rt-2_keenetic.ipk
-Size: 329246
-MD5Sum: a2fa612531697aca4d2d02cefb1a1fc6
+Size: 337560
+MD5Sum: 085a8d83d50627fd2171a0569ee5c504
 Description:  Kernel module for XFS support
 
-Package: kmod-gre
-Version: 2.6.23-rt-1
-Depends: 
-Provides: 
+Package: kmod-hid
+Version: 2.6.23-rt-2
 Source: package/kernel
-SourceFile: 
-SourceURL: 
-License: 
-LicenseFiles: 
 Section: kernel
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7835
-Filename: kmod-gre_2.6.23-rt-1_keenetic.ipk
-Size: 8516
-MD5Sum: da7cb9429f2d86ee83b4c7c0da450f25
-Description:  Generic Routing Encapsulation support
+Installed-Size: 15472
+Filename: kmod-hid_2.6.23-rt-2_keenetic.ipk
+Size: 15668
+MD5Sum: 686e3874e52a4340333c648749f1d118
+Description:  Kernel modules for HID devices
+
+Package: kmod-input-core
+Version: 2.6.23-rt-2
+Source: package/kernel
+Section: kernel
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 14425
+Filename: kmod-input-core_2.6.23-rt-2_keenetic.ipk
+Size: 14947
+MD5Sum: 7dc1f20991672546f74cc771622c7536
+Description:  Kernel modules for support of input device
 
 Package: kmod-mini_fo
 Version: 2.6.23-rt+1-1
@@ -2818,52 +2778,47 @@ Source: package/mini_fo
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 30719
+Installed-Size: 31680
 Filename: kmod-mini_fo_2.6.23-rt+1-1_keenetic.ipk
-Size: 31030
-MD5Sum: b2902ce580131ca03eabf3481caf8256
+Size: 32056
+MD5Sum: ffcda442811c44cf38538f5e46876ca1
 Description:  Kernel module for Mini fanout overlay filesystem support
 
 Package: kmod-tun
 Version: 2.6.23-rt-1
-Depends: 
-Provides: 
 Source: package/kernel
-SourceFile: 
-SourceURL: 
-License: 
-LicenseFiles: 
 Section: kernel
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 5862
+Installed-Size: 6241
 Filename: kmod-tun_2.6.23-rt-1_keenetic.ipk
-Size: 6500
-MD5Sum: 7e67adc4c8f9124b7f9f41d931daa66e
+Size: 6790
+MD5Sum: ef0cf06b773868ac0528d0319fe2554c
 Description:  Kernel support for the TUN/TAP tunneling device
+
+Package: kmod-usb-hid
+Version: 2.6.23-rt-1
+Depends: kmod-input-core, kmod-hid
+Source: package/kernel
+Section: kernel
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 17380
+Filename: kmod-usb-hid_2.6.23-rt-1_keenetic.ipk
+Size: 17958
+MD5Sum: 1398e7bc82b03359bf3b84c17887ed10
+Description:  Kernel support for USB HID devices such as keyboards and mice
 
 Package: kmod-usb-serial-cp2101
 Version: 2.6.23-rt-1
-Depends: 
-Provides: 
 Source: package/kernel
-SourceFile: 
-SourceURL: 
-License: 
-LicenseFiles: 
 Section: kernel
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7815
+Installed-Size: 8460
 Filename: kmod-usb-serial-cp2101_2.6.23-rt-1_keenetic.ipk
-Size: 8464
-MD5Sum: 717a6f4f4560175396b50199ffde3162
+Size: 9029
+MD5Sum: 241e83b5eddccb9fffb03d85931e40d1
 Description:  Support for Silicon Labs cp210x devices
 
 Package: kmod-usbip
@@ -2872,10 +2827,10 @@ Source: package/kusbip
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 27876
+Installed-Size: 28940
 Filename: kmod-usbip_2.6.23-rt+1-1_keenetic.ipk
-Size: 28428
-MD5Sum: 2731a39c5997039a20ac461c267bf0e1
+Size: 29480
+MD5Sum: 2642ff75f8bbde21444d672a1105d10a
 Description:  Kernel module for USB/IP support
 
 Package: kmod-video-core
@@ -9977,24 +9932,17 @@ Description:  Portmap is a server that converts RPC (Remote Procedure Call) prog
  numbers into DARPA protocol port numbers.
 
 Package: pptpd
-Version: 1.3.4-3
-Depends: kmod-gre
-Provides: 
+Version: 1.3.4-4
 Source: package/built/pptpd
 SourceFile: pptpd-1.3.4.tar.gz
 SourceURL: @SF/poptop
-License: 
-LicenseFiles: 
 Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 30511
-Filename: pptpd_1.3.4-3_keenetic.ipk
-Size: 31177
-MD5Sum: ab233398beaee7cfac36d33c9493a0c5
+Installed-Size: 29514
+Filename: pptpd_1.3.4-4_keenetic.ipk
+Size: 30134
+MD5Sum: ee206d10e573c33eeb7b177e48fe2b29
 Description:  PopTop pptp server
 
 Package: privoxy
