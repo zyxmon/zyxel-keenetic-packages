@@ -2421,10 +2421,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 144342
+Installed-Size: 144259
 Filename: kmod-fs-cifs_2.6.22-tc-1_keeneticII.ipk
-Size: 143158
-MD5Sum: bceaad4b50179114a89a74fa34cca3cc
+Size: 143223
+MD5Sum: 333358eaa856f5bc06cb6127f67bedc7
 Description:  Kernel module for CIFS support
 
 Package: kmod-fs-exportfs
@@ -2433,10 +2433,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 3381
+Installed-Size: 3342
 Filename: kmod-fs-exportfs_2.6.22-tc-2_keeneticII.ipk
-Size: 3917
-MD5Sum: 3bdf715c41d3495a89ccb420e3dc04c7
+Size: 3878
+MD5Sum: 26c714607cc2c75a391535e5f4f5df22
 Description:  Kernel module for exportfs. Needed for some other modules.
 
 Package: kmod-fs-nfs-common
@@ -2445,10 +2445,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 120019
+Installed-Size: 122633
 Filename: kmod-fs-nfs-common_2.6.22-tc-1_keeneticII.ipk
-Size: 120069
-MD5Sum: 5e73f41a741960d60ded5e70184cd8b2
+Size: 122545
+MD5Sum: 8201011925f6cf991c5910790a7828ec
 Description:  Common NFS filesystem modules
 
 Package: kmod-fs-nfs
@@ -2458,10 +2458,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 59973
+Installed-Size: 59653
 Filename: kmod-fs-nfs_2.6.22-tc-2_keeneticII.ipk
-Size: 60340
-MD5Sum: 0399a6954f74b5a59d220b4cee83fb7e
+Size: 59880
+MD5Sum: be0b35ec281961c8e44a328d2fa5aa7d
 Description:  Kernel module for NFS support
 
 Package: kmod-fs-nfsd
@@ -2471,10 +2471,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 53983
+Installed-Size: 55378
 Filename: kmod-fs-nfsd_2.6.22-tc-2_keeneticII.ipk
-Size: 54369
-MD5Sum: 84ef41e269461c43c961a197e6e52279
+Size: 55679
+MD5Sum: 81354934450f112d47e4b70deb563ff8
 Description:  Kernel module for NFS kernel server support
 
 Package: kmod-fs-xfs
@@ -2484,23 +2484,35 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 330430
+Installed-Size: 330341
 Filename: kmod-fs-xfs_2.6.22-tc-2_keeneticII.ipk
-Size: 329320
-MD5Sum: abbf45e775a3462d9d66bbd13be45c0b
+Size: 329014
+MD5Sum: 6175992a1984e5d3e586ae74cf76fd03
 Description:  Kernel module for XFS support
 
-Package: kmod-gre
-Version: 2.6.22-tc-1
+Package: kmod-hid
+Version: 2.6.22-tc-2
 Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 7666
-Filename: kmod-gre_2.6.22-tc-1_keeneticII.ipk
-Size: 8255
-MD5Sum: 8bb57590bc5d09840f2b5e3abf506a47
-Description:  Generic Routing Encapsulation support
+Installed-Size: 14571
+Filename: kmod-hid_2.6.22-tc-2_keeneticII.ipk
+Size: 14955
+MD5Sum: 11b302fd0435f33e7f6721671af8cd78
+Description:  Kernel modules for HID devices
+
+Package: kmod-input-core
+Version: 2.6.22-tc-2
+Source: package/kernel
+Section: kernel
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 13526
+Filename: kmod-input-core_2.6.22-tc-2_keeneticII.ipk
+Size: 14042
+MD5Sum: d212b455f84b4190f328acfb4edeeae1
+Description:  Kernel modules for support of input device
 
 Package: kmod-mini_fo
 Version: 2.6.22-tc+1-1
@@ -2508,10 +2520,10 @@ Source: package/mini_fo
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 29809
+Installed-Size: 30557
 Filename: kmod-mini_fo_2.6.22-tc+1-1_keeneticII.ipk
-Size: 30231
-MD5Sum: 19f662306fee1eb2b3d5874323077369
+Size: 30918
+MD5Sum: 56c3db420f17e869caadf4b05b153aa8
 Description:  Kernel module for Mini fanout overlay filesystem support
 
 Package: kmod-tun
@@ -2520,11 +2532,24 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 5812
+Installed-Size: 6122
 Filename: kmod-tun_2.6.22-tc-1_keeneticII.ipk
-Size: 6377
-MD5Sum: 8657a91eb172665e9a4392b0056180e1
+Size: 6669
+MD5Sum: bf48f456c167947d87051af0ec7086e0
 Description:  Kernel support for the TUN/TAP tunneling device
+
+Package: kmod-usb-hid
+Version: 2.6.22-tc-1
+Depends: kmod-input-core, kmod-hid
+Source: package/kernel
+Section: kernel
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 16429
+Filename: kmod-usb-hid_2.6.22-tc-1_keeneticII.ipk
+Size: 17009
+MD5Sum: b75745167c859820ea6824d4f52dc4f9
+Description:  Kernel support for USB HID devices such as keyboards and mice
 
 Package: kmod-usb-serial-cp2101
 Version: 2.6.22-tc-1
@@ -2532,10 +2557,10 @@ Source: package/kernel
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 8097
+Installed-Size: 8606
 Filename: kmod-usb-serial-cp2101_2.6.22-tc-1_keeneticII.ipk
-Size: 8674
-MD5Sum: a72b211f815f3d82b3df64414079ca37
+Size: 9188
+MD5Sum: aff50afc0b04915926acae5818ab8e86
 Description:  Support for Silicon Labs cp210x devices
 
 Package: kmod-usbip
@@ -2544,10 +2569,10 @@ Source: package/kusbip
 Section: kernel
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 29266
+Installed-Size: 28724
 Filename: kmod-usbip_2.6.22-tc+1-1_keeneticII.ipk
-Size: 29789
-MD5Sum: c1fef4260a31a7404a041cb3aa64516c
+Size: 29264
+MD5Sum: 0eccfce3d4617d24ca3f98847baaa002
 Description:  Kernel module for USB/IP support
 
 Package: knock
@@ -8244,18 +8269,17 @@ Description:  Portmap is a server that converts RPC (Remote Procedure Call) prog
  numbers into DARPA protocol port numbers.
 
 Package: pptpd
-Version: 1.3.4-3
-Depends: kmod-gre
+Version: 1.3.4-4
 Source: package/built/pptpd
 SourceFile: pptpd-1.3.4.tar.gz
 SourceURL: @SF/poptop
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 29512
-Filename: pptpd_1.3.4-3_keeneticII.ipk
-Size: 30147
-MD5Sum: dffe727fcf34e38d013c77fccef8d9df
+Installed-Size: 29522
+Filename: pptpd_1.3.4-4_keeneticII.ipk
+Size: 30149
+MD5Sum: c1a83dca1854b27e3509aa48a0863f94
 Description:  PopTop pptp server
 
 Package: privoxy
@@ -9422,17 +9446,44 @@ Description:  InfoZIP's unzip program. With the exception of multi-volume archiv
  this can handle any file produced either by PKZIP, or the corresponding 
  InfoZIP zip program.
 
+Package: usb_ups_apc_smart
+Version: 1.0.5-1
+Source: package/built/ups_apc_smart
+Section: utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 5587
+Filename: usb_ups_apc_smart_1.0.5-1_keeneticII.ipk
+Size: 6161
+MD5Sum: f86f3d3d55f83803e4c91656147dd4f0
+Description:  USB UPS APC Smart-UPS monitor.
+
 Package: usb_ups_powercom_wow
-Version: 1.0.4-1
+Version: 1.0.5-1
 Source: package/built/ups_powercom
 Section: utils
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 3794
-Filename: usb_ups_powercom_wow_1.0.4-1_keeneticII.ipk
-Size: 4348
-MD5Sum: dadc94f35cc9ad4b0d1d91009d515230
+Installed-Size: 5885
+Filename: usb_ups_powercom_wow_1.0.5-1_keeneticII.ipk
+Size: 6468
+MD5Sum: 39cc215ea96240c6b736d63a3d6db48a
 Description:  USB UPS Powercom WOW monitor.
+
+Package: usbip-client
+Version: 0.1.7-2
+Depends: usbip, glib2, kmod-usbip
+Source: package/built/usbip
+SourceFile: usbip-0.1.7.tar.gz
+SourceURL: @SF/usbip
+Section: net
+Maintainer: Nuno Goncalves <nunojpg@gmail.com>
+Architecture: keeneticII
+Installed-Size: 8374
+Filename: usbip-client_0.1.7-2_keeneticII.ipk
+Size: 8994
+MD5Sum: 604b5053f3653cfb67dd29dfc234e2c4
+Description:  USB-over-IP (client)
 
 Package: usbip-server
 Version: 0.1.7-2
