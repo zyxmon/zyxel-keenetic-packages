@@ -1,0 +1,86 @@
+diff -U 3 -dHBbrN -- ppp-2.4.4.old/include/linux/if_pppol2tp.h ppp-2.4.4/include/linux/if_pppol2tp.h
+--- ppp-2.4.4.old/include/linux/if_pppol2tp.h	2013-03-16 20:03:57.000000000 +0400
++++ ppp-2.4.4/include/linux/if_pppol2tp.h	2013-03-14 03:23:36.317415559 +0400
+@@ -29,6 +29,7 @@
+ 	int	fd;			/* FD of UDP socket to use */
+ 
+ 	struct sockaddr_in addr;	/* IP address and port to send to */
++	struct sockaddr_in bind_addr;	/* IP address and port to send to */
+ 
+ 	__u16 s_tunnel, s_session;	/* For matching incoming packets */
+ 	__u16 d_tunnel, d_session;	/* For sending outgoing packets */
+diff -U 3 -dHBbrN -- ppp-2.4.4.old/pppd/plugins/pppol2tp/common.h ppp-2.4.4/pppd/plugins/pppol2tp/common.h
+--- ppp-2.4.4.old/pppd/plugins/pppol2tp/common.h	2013-03-16 20:03:57.000000000 +0400
++++ ppp-2.4.4/pppd/plugins/pppol2tp/common.h	2013-03-14 03:21:23.813421101 +0400
+@@ -35,6 +35,7 @@
+ typedef struct {
+ 	int ifd;
+ 	struct in_addr addr;
++	struct in_addr bind_addr;
+ 	uint32_t tid;
+ 	uint32_t sid;
+ 	uint32_t remtid;
+@@ -73,6 +74,7 @@
+ 	uint16_t remns;
+ 	uint16_t remnr;
+ 	struct in_addr addr;
++	struct in_addr bind_addr;
+ 	char chostname[L2TP_MHOST_LEN];
+ 	int isock;
+ 	int istage;
+diff -U 3 -dHBbrN -- ppp-2.4.4.old/pppd/plugins/pppol2tp/l2tp_control.c ppp-2.4.4/pppd/plugins/pppol2tp/l2tp_control.c
+--- ppp-2.4.4.old/pppd/plugins/pppol2tp/l2tp_control.c	2013-03-16 20:03:57.000000000 +0400
++++ ppp-2.4.4/pppd/plugins/pppol2tp/l2tp_control.c	2013-03-14 03:23:10.869416624 +0400
+@@ -93,6 +93,7 @@
+   	
+ 	psegptr->ifd = pstate->isock;
+ 	psegptr->addr = pstate->addr;
++	psegptr->bind_addr = pstate->bind_addr;
+ 	psegptr->tid = pstate->tid;
+ 	psegptr->sid = pstate->sid;
+ 	psegptr->remtid = pstate->remtid;
+@@ -158,6 +159,11 @@
+ 	   return -3;
+    }
+    
++   getsockname(pstate->isock, (struct sockaddr*)&l2tp_local, &iret);
++	pstate->bind_addr = l2tp_local.sin_addr;
++	
++	info("l2tp: bind: %s\n", inet_ntoa(pstate->bind_addr));
++   
+    iexit = 0;
+    icnt = 0;
+    
+@@ -457,6 +463,9 @@
+    sax.pppol2tp.addr.sin_addr = state.addr;
+    sax.pppol2tp.addr.sin_port = L2TP_PORT;
+    sax.pppol2tp.addr.sin_family = AF_INET;
++   sax.pppol2tp.bind_addr.sin_addr = state.bind_addr;
++   sax.pppol2tp.bind_addr.sin_port = L2TP_PORT;
++   sax.pppol2tp.bind_addr.sin_family = AF_INET;
+    sax.pppol2tp.s_tunnel  = state.tid;
+    sax.pppol2tp.s_session = state.sid;
+    sax.pppol2tp.d_tunnel  = state.remtid;
+diff -U 3 -dHBbrN -- ppp-2.4.4.old/pppd/plugins/pptp/pptp_ctrl.c ppp-2.4.4/pppd/plugins/pptp/pptp_ctrl.c
+--- ppp-2.4.4.old/pppd/plugins/pptp/pptp_ctrl.c	2013-03-16 20:03:57.000000000 +0400
++++ ppp-2.4.4/pppd/plugins/pptp/pptp_ctrl.c	2013-03-15 02:33:05.371620935 +0400
+@@ -258,6 +258,9 @@
+ PPTP_CONN * pptp_conn_open(int inet_sock, int isclient, pptp_conn_cb callback)
+ {
+     PPTP_CONN *conn;
++#ifdef USE_TCP_NODELAY
++    int on = 1;
++#endif
+     /* Allocate structure */
+     if ((conn = malloc(sizeof(*conn))) == NULL) return NULL;
+     if ((conn->call = vector_create()) == NULL) { free(conn); return NULL; }
+@@ -283,6 +286,9 @@
+     /* Make this socket non-blocking. */
+     fcntl(conn->inet_sock, F_SETFL, O_NONBLOCK);
+     /* Request connection from server, if this is a client */
++#ifdef USE_TCP_NODELAY
++    setsockopt(conn->inet_sock, IPPROTO_TCP, TCP_NODELAY, &on, sizeof(on));
++#endif
+     if (isclient) {
+         struct pptp_start_ctrl_conn packet = {
+             PPTP_HEADER_CTRL(PPTP_START_CTRL_CONN_RQST),

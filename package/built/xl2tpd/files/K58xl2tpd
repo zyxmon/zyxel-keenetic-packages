@@ -1,8 +1,8 @@
 #!/bin/sh
 
 MOUNT="/media/DISK_A1/system"
-BIN="$MOUNT/usr/sbin/pptpd"
-PID="/var/run/pptpd.pid"
+BIN="$MOUNT/usr/sbin/xl2tpd"
+PID="/var/run/xl2tpd.pid"
 
 export PATH=$MOUNT/bin:$MOUNT/sbin:$MOUNT/usr/bin:$MOUNT/usr/sbin:/sbin:/usr/sbin:/bin:/usr/bin
 export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
@@ -11,7 +11,6 @@ export LD_LIBRARY_PATH=$MOUNT/lib:$MOUNT/usr/lib:/lib:/usr/lib
 
 start() {
     $BIN -p $PID
-
 }
 
 stop() {
