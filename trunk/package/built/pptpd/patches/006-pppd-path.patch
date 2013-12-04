@@ -1,0 +1,11 @@
+--- a/configure.orig	2013-12-02 11:53:50.154304383 +0400
++++ b/configure	2013-12-02 11:54:21.885353138 +0400
+@@ -2195,7 +2195,7 @@
+ # check common command line options early
+ 
+ cat >>confdefs.h <<\_ACEOF
+-#define PPP_BINARY "/usr/sbin/pppd"
++#define PPP_BINARY "/media/DISK_A1/system/usr/sbin/pppd"
+ _ACEOF
+ 
+ { echo "$as_me:$LINENO: checking command line for use of BSD PPP" >&5

@@ -354,7 +354,7 @@
 +		return -4;
 +   }
 +   
-+   close_network();
++   //close_network();
 +
 +	return isock_fd;
 +}

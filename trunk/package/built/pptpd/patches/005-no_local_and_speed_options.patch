@@ -1,0 +1,25 @@
+--- a/pptpctrl.c	2006-12-08 04:01:40.000000000 +0400
++++ b/pptpctrl.c	2012-05-21 20:49:29.000000000 +0400
+@@ -733,7 +733,8 @@
+ 
+ 	/* options for 'normal' pppd */
+ 
+-	pppd_argv[an++] = "local";
++	// patch by DJ-Andrey-sXe 
++	// pppd_argv[an++] = "local";
+ 
+ 	/* If a pppd option file is specified, use it
+ 	 * if not, pppd will default to /etc/ppp/options
+@@ -746,11 +747,14 @@
+ 	/* If a speed has been specified, use it
+ 	 * if not, use "smart" default (defaults.h)
+ 	 */
++	// patch by DJ-Andrey-sXe 
++	/*
+ 	if (*speed) {
+ 		pppd_argv[an++] = speed;
+ 	} else {
+ 		pppd_argv[an++] = PPP_SPEED_DEFAULT;
+ 	}
++	*/
+ 
