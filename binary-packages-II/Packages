@@ -8268,18 +8268,33 @@ MD5Sum: 1eb047fbb79156b4873221230e0c555c
 Description:  Portmap is a server that converts RPC (Remote Procedure Call) program
  numbers into DARPA protocol port numbers.
 
+Package: ppp
+Version: 2.4.4-5
+Source: package/ppp
+SourceFile: ppp-2.4.4.tar.gz
+SourceURL: ftp://ftp.samba.org/pub/ppp/
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 120017
+Filename: ppp_2.4.4-5_keeneticII.ipk
+Size: 120414
+MD5Sum: 91ec8fb88e1199e15ad8f8a439910024
+Description:  This package contains the PPP (Point-to-Point Protocol) daemon.
+
 Package: pptpd
-Version: 1.3.4-4
+Version: 1.3.4-5
+Depends: ppp
 Source: package/built/pptpd
 SourceFile: pptpd-1.3.4.tar.gz
 SourceURL: @SF/poptop
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 29522
-Filename: pptpd_1.3.4-4_keeneticII.ipk
-Size: 30149
-MD5Sum: c1a83dca1854b27e3509aa48a0863f94
+Installed-Size: 29510
+Filename: pptpd_1.3.4-5_keeneticII.ipk
+Size: 30131
+MD5Sum: fea07eacf48c0afc260bc7a456d500b3
 Description:  PopTop pptp server
 
 Package: privoxy
@@ -9832,6 +9847,23 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  on the number of servers that can be started, and has deployable
  defence mechanisms to protect against port scanners, among other
  things.
+
+Package: xl2tpd
+Version: 1.3.1-6
+Depends: ppp
+Source: package/built/xl2tpd
+SourceFile: xl2tpd-1.3.1.tar.gz
+SourceURL: http://pkgs.fedoraproject.org/lookaside/pkgs/xl2tpd/xl2tpd-1.3.1.tar.gz/cf61576fef5c2d6c68279a408ec1f0d5/
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 46430
+Filename: xl2tpd_1.3.1-6_keeneticII.ipk
+Size: 47313
+MD5Sum: 5970b8c8818a4e0205d2d55eb88709ed
+Description:  l2tpd is the open source implementation of the L2TP tunneling protocol (RFC2661).
+ It does implement both LAC and LNS role in a L2TP networking architecture. The
+ main goal of this protocol is to tunnel PPP frame trough an IP network.
 
 Package: xupnpd
 Version: 392-1
