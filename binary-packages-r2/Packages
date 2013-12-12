@@ -11596,6 +11596,24 @@ MD5Sum: 80a687326e1156bd3f52787799894f54
 Description:  Vim is an almost compatible version of the UNIX editor Vi.
  (Tiny build)
 
+Package: vitetris
+Version: 0.57-1
+Depends: libncurses
+Source: package/built/vitetris
+SourceFile: vitetris-0.57.tar.gz
+SourceURL: http://www.victornils.net/tetris
+Section: games
+Maintainer: Entware team, wl500g-repo.googlecode.com
+Architecture: keenetic
+Installed-Size: 54641
+Filename: vitetris_0.57-1_keenetic.ipk
+Size: 55335
+MD5Sum: 4ae52b13156f254c3a4b9a7976397853
+Description:  Vitetris is a terminal-based Tetris clone by Victor Nilsson. Gameplay is
+ much like the early Tetris games by Nintendo. Features include:
+ configurable keys, highscore table, two-player mode with garbage,
+ network play.
+
 Package: vncrepeater
 Version: 0.12-4
 Depends: uclibcxx
