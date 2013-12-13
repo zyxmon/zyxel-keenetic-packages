@@ -2275,6 +2275,22 @@ Size: 788742
 MD5Sum: 71e7e3d66cf8001baafb617e99162515
 Description:  The GLib library of C routines
 
+Package: gnuchess
+Version: 6.1.0-1
+Depends: libreadline, libncurses, libstdcpp
+Source: package/built/gnuchess
+SourceFile: gnuchess-6.1.0.tar.gz
+SourceURL: http://ftp.gnu.org/pub/gnu/chess
+Section: games
+Maintainer: Entware team, wl500g-repo.googlecode.com
+Architecture: keenetic
+Installed-Size: 166011
+Filename: gnuchess_6.1.0-1_keenetic.ipk
+Size: 166260
+MD5Sum: d5d6b4368c45de649d45ab63aebb2c3f
+Description:  GNU Chess lets most modern computers play a full game of chess.
+ It has a plain terminal interface but supports visual interfaces such as XBoard.
+
 Package: golded
 Version: 115-20110223-1
 Depends: libncursesw, libstdcpp
