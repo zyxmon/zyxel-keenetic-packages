@@ -4145,20 +4145,22 @@ Size: 22878
 MD5Sum: 8625598a9643b969b9eb1a5b3c854017
 Description:  FastCGI module
 
-Package: lighttpd-mod-flv-streaming
-Version: 1.4.30-2a
+Package: lighttpd-mod-flv_streaming
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 2885
-Filename: lighttpd-mod-flv-streaming_1.4.30-2a_keeneticII.ipk
-Size: 3516
-MD5Sum: 194cc01b45314726a19e7def60278c9b
-Description:  flv streaming module
+Installed-Size: 3049
+Filename: lighttpd-mod-flv_streaming_1.4.32-1_keeneticII.ipk
+Size: 3664
+MD5Sum: 46db104f3c33ff371fcc3779652c48c8
+Description:  FLV streaming module
 
 Package: lighttpd-mod-magnet
 Version: 1.4.32-1
@@ -4176,6 +4178,23 @@ Filename: lighttpd-mod-magnet_1.4.32-1_keeneticII.ipk
 Size: 5303
 MD5Sum: 485ce27e73bacd593be2d31cc14c20da
 Description:  Magnet module
+
+Package: lighttpd-mod-mysql_vhost
+Version: 1.4.32-1
+Depends: lighttpd, libmysqlclient
+Source: package/built/lighttpd
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 7367
+Filename: lighttpd-mod-mysql_vhost_1.4.32-1_keeneticII.ipk
+Size: 8032
+MD5Sum: 248609ca01115d375cdd38cd1e807476
+Description:  Mysql virtual hosting module
 
 Package: lighttpd-mod-proxy
 Version: 1.4.32-1
@@ -4296,19 +4315,21 @@ Size: 3222
 MD5Sum: 30b53bbe89fb18227b54c8bb27e88a47
 Description:  Environment variable setting module
 
-Package: lighttpd-mod-simple-vhost
-Version: 1.4.30-2a
+Package: lighttpd-mod-simple_vhost
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 2886
-Filename: lighttpd-mod-simple-vhost_1.4.30-2a_keeneticII.ipk
-Size: 3533
-MD5Sum: 36d37678b9b7c37e4bd80b7e1e73fa29
+Installed-Size: 3314
+Filename: lighttpd-mod-simple_vhost_1.4.32-1_keeneticII.ipk
+Size: 3951
+MD5Sum: 8f3e70b74f0381aca32ee8796849addb
 Description:  Simple virtual hosting module
 
 Package: lighttpd-mod-ssi
@@ -4358,6 +4379,23 @@ Installed-Size: 2723
 Filename: lighttpd-mod-trigger-b4-dl_1.4.30-2a_keeneticII.ipk
 Size: 3372
 MD5Sum: 3ae39d934e4e1d1d953af9aa8a9c336d
+Description:  Trigger before download module
+
+Package: lighttpd-mod-trigger_b4_dl
+Version: 1.4.32-1
+Depends: lighttpd, libpcre
+Source: package/built/lighttpd
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 3544
+Filename: lighttpd-mod-trigger_b4_dl_1.4.32-1_keeneticII.ipk
+Size: 4184
+MD5Sum: 6d9c7ca3393b3c71ca6911d44b20c293
 Description:  Trigger before download module
 
 Package: lighttpd-mod-userdir
