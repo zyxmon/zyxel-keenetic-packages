@@ -4706,183 +4706,207 @@ MD5Sum: fa45b7ce852f5ca8747cd8b7fee894ed
 Description:  A library for XML transformation using XSLT.
 
 Package: lighttpd-mod-access
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2284
-Filename: lighttpd-mod-access_1.4.30-2a_keenetic.ipk
-Size: 2905
-MD5Sum: c6454ade313869e9930ba338723adf01
+Installed-Size: 2433
+Filename: lighttpd-mod-access_1.4.32-1_keenetic.ipk
+Size: 3051
+MD5Sum: 8bd0d06f2f686d3c0e9fc8a394727a96
 Description:  Access restrictions module
 
 Package: lighttpd-mod-accesslog
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 5791
-Filename: lighttpd-mod-accesslog_1.4.30-2a_keenetic.ipk
-Size: 6377
-MD5Sum: 2f75b9490def54c94bcd6b961e745424
+Installed-Size: 5917
+Filename: lighttpd-mod-accesslog_1.4.32-1_keenetic.ipk
+Size: 6527
+MD5Sum: 2821f5a0bfffb03a699c4509b707a3cd
 Description:  Access logging module
 
 Package: lighttpd-mod-alias
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2532
-Filename: lighttpd-mod-alias_1.4.30-2a_keenetic.ipk
-Size: 3150
-MD5Sum: 0d9def725a36a3d97c9a3c95c5d7f8c1
+Installed-Size: 2682
+Filename: lighttpd-mod-alias_1.4.32-1_keenetic.ipk
+Size: 3300
+MD5Sum: d1816c92275e17b2f826de2647104153
 Description:  Directory alias module
 
 Package: lighttpd-mod-auth
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 10131
-Filename: lighttpd-mod-auth_1.4.30-2a_keenetic.ipk
-Size: 10750
-MD5Sum: 733c7fe717cfccc6e8c8e3da425f0c30
+Installed-Size: 10555
+Filename: lighttpd-mod-auth_1.4.32-1_keenetic.ipk
+Size: 11165
+MD5Sum: 68a69f0e978bd9f591d1d3293211aa9e
 Description:  Authentication module
 
 Package: lighttpd-mod-cgi
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 8716
-Filename: lighttpd-mod-cgi_1.4.30-2a_keenetic.ipk
-Size: 9320
-MD5Sum: 6e367f117e5213842ecf1dbf6f02667a
+Installed-Size: 9257
+Filename: lighttpd-mod-cgi_1.4.32-1_keenetic.ipk
+Size: 9899
+MD5Sum: 6826a88fccb90da3e12ea03c5eb46fe9
 Description:  CGI module
 
 Package: lighttpd-mod-cml
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2868
-Filename: lighttpd-mod-cml_1.4.30-2a_keenetic.ipk
-Size: 3503
-MD5Sum: 38205d6f0c5eee312b2b21dd82dd975d
+Installed-Size: 3258
+Filename: lighttpd-mod-cml_1.4.32-1_keenetic.ipk
+Size: 3884
+MD5Sum: 2013bd9dcc3537650563e7d6b7688094
 Description:  Cache Meta Language module
 
 Package: lighttpd-mod-compress
-Version: 1.4.30-2a
-Depends: lighttpd
+Version: 1.4.32-1
+Depends: lighttpd, zlib
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6208
-Filename: lighttpd-mod-compress_1.4.30-2a_keenetic.ipk
-Size: 6804
-MD5Sum: 2d5e4f2a42864f0783411b08a394eed1
+Installed-Size: 6887
+Filename: lighttpd-mod-compress_1.4.32-1_keenetic.ipk
+Size: 7530
+MD5Sum: 6861ba6c07df6635cc410be33113fde4
 Description:  Compress output module
 
 Package: lighttpd-mod-evasive
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2216
-Filename: lighttpd-mod-evasive_1.4.30-2a_keenetic.ipk
-Size: 2832
-MD5Sum: 6e68d3216d3df26dc6a4003a83d3891d
+Installed-Size: 2314
+Filename: lighttpd-mod-evasive_1.4.32-1_keenetic.ipk
+Size: 2960
+MD5Sum: a50a3f1948a8dda999410b5f188516b2
 Description:  Evasive module
 
 Package: lighttpd-mod-evhost
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3227
-Filename: lighttpd-mod-evhost_1.4.30-2a_keenetic.ipk
-Size: 3869
-MD5Sum: b5462e910c9ea8d4d73841e5be4b05dd
+Installed-Size: 3601
+Filename: lighttpd-mod-evhost_1.4.32-1_keenetic.ipk
+Size: 4219
+MD5Sum: e332eec9f24b2ecc326ae6f235581bd4
 Description:  Exnhanced Virtual-Hosting module
 
 Package: lighttpd-mod-expire
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3530
-Filename: lighttpd-mod-expire_1.4.30-2a_keenetic.ipk
-Size: 4108
-MD5Sum: 25ae01e47411b2900224c83b7dfd933f
+Installed-Size: 3884
+Filename: lighttpd-mod-expire_1.4.32-1_keenetic.ipk
+Size: 4501
+MD5Sum: e3e4b83091ef342b00fc11adb027e2c4
 Description:  Expire module
 
 Package: lighttpd-mod-extforward
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3365
-Filename: lighttpd-mod-extforward_1.4.30-2a_keenetic.ipk
-Size: 3948
-MD5Sum: 1fab8c62988e0ff4ceb4d9102242101b
-Description:  Extract client IP module
+Installed-Size: 3509
+Filename: lighttpd-mod-extforward_1.4.32-1_keenetic.ipk
+Size: 4112
+MD5Sum: 4fb25f2eea67639e0e9a374295f448aa
+Description:  Extract client module
 
 Package: lighttpd-mod-fastcgi
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 21145
-Filename: lighttpd-mod-fastcgi_1.4.30-2a_keenetic.ipk
-Size: 21735
-MD5Sum: 15bc45962c2d7ad55455479c5da6065d
+Installed-Size: 22312
+Filename: lighttpd-mod-fastcgi_1.4.32-1_keenetic.ipk
+Size: 22868
+MD5Sum: 5b51299c1f3878e6eb07a5b7da9e1181
 Description:  FastCGI module
 
 Package: lighttpd-mod-flv-streaming
@@ -4901,123 +4925,139 @@ MD5Sum: 70e2f447171f69f6d8ff303b6b2f3fcb
 Description:  flv streaming module
 
 Package: lighttpd-mod-magnet
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 1094
-Filename: lighttpd-mod-magnet_1.4.30-2a_keenetic.ipk
-Size: 1701
-MD5Sum: addb81dcf3351e4a9e5a366006fea873
-Description:  magnet module
+Installed-Size: 1378
+Filename: lighttpd-mod-magnet_1.4.32-1_keenetic.ipk
+Size: 2034
+MD5Sum: 01078f1341655a6c0e188db08cd56479
+Description:  Magnet module
 
 Package: lighttpd-mod-proxy
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 8642
-Filename: lighttpd-mod-proxy_1.4.30-2a_keenetic.ipk
-Size: 9220
-MD5Sum: 7f408922d0a13b5415c10e14deb41051
+Installed-Size: 9058
+Filename: lighttpd-mod-proxy_1.4.32-1_keenetic.ipk
+Size: 9690
+MD5Sum: 28be5d449ba591c14d49079235152dbb
 Description:  Proxy module
 
 Package: lighttpd-mod-redirect
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd, libpcre
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3124
-Filename: lighttpd-mod-redirect_1.4.30-2a_keenetic.ipk
-Size: 3747
-MD5Sum: 33e463d044ac01964384caa74a9465c9
+Installed-Size: 3363
+Filename: lighttpd-mod-redirect_1.4.32-1_keenetic.ipk
+Size: 3986
+MD5Sum: 70bac7142934de3a8f4bb42330c4e58a
 Description:  URL redirection module
 
 Package: lighttpd-mod-rewrite
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd, libpcre
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4223
-Filename: lighttpd-mod-rewrite_1.4.30-2a_keenetic.ipk
-Size: 4816
-MD5Sum: 38a490e479f7675656f54de80aaf4ae4
+Installed-Size: 4321
+Filename: lighttpd-mod-rewrite_1.4.32-1_keenetic.ipk
+Size: 4950
+MD5Sum: ed4d9a0ec0499187e84d646c6c28e745
 Description:  URL rewriting module
 
 Package: lighttpd-mod-rrdtool
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 4343
-Filename: lighttpd-mod-rrdtool_1.4.30-2a_keenetic.ipk
-Size: 4931
-MD5Sum: 2f976dbbaa4215a7b94996e24bc2672b
-Description:  rrdtool module
+Installed-Size: 4619
+Filename: lighttpd-mod-rrdtool_1.4.32-1_keenetic.ipk
+Size: 5249
+MD5Sum: 55dfbfbd263ca35110e03700adcb5087
+Description:  RRDtool module
 
 Package: lighttpd-mod-scgi
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 15961
-Filename: lighttpd-mod-scgi_1.4.30-2a_keenetic.ipk
-Size: 16523
-MD5Sum: 0546bf28deb53d802fd3b9d6aec8ae17
+Installed-Size: 16658
+Filename: lighttpd-mod-scgi_1.4.32-1_keenetic.ipk
+Size: 17210
+MD5Sum: af5810bc8d60bd0b10c8ce48630abffd
 Description:  SCGI module
 
 Package: lighttpd-mod-secdownload
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2969
-Filename: lighttpd-mod-secdownload_1.4.30-2a_keenetic.ipk
-Size: 3604
-MD5Sum: 78573ad1bc11f3134b190d618f19af09
+Installed-Size: 3392
+Filename: lighttpd-mod-secdownload_1.4.32-1_keenetic.ipk
+Size: 4002
+MD5Sum: cb65175f288c11e79301ffb889b62778
 Description:  Secure and fast download module
 
 Package: lighttpd-mod-setenv
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2441
-Filename: lighttpd-mod-setenv_1.4.30-2a_keenetic.ipk
-Size: 3080
-MD5Sum: c298bf4a67c620e49e4b9158aa4a7c66
+Installed-Size: 2587
+Filename: lighttpd-mod-setenv_1.4.32-1_keenetic.ipk
+Size: 3225
+MD5Sum: 9b32b7f0e248c9573d3d254e138d8dee
 Description:  Environment variable setting module
 
 Package: lighttpd-mod-simple-vhost
@@ -5036,33 +5076,37 @@ MD5Sum: 7de5f0a9a3380b703fed8b65fa0502bd
 Description:  Simple virtual hosting module
 
 Package: lighttpd-mod-ssi
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd, libpcre
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 10612
-Filename: lighttpd-mod-ssi_1.4.30-2a_keenetic.ipk
-Size: 11213
-MD5Sum: cedcb03f0f9b6971f7c967b64f7120a8
+Installed-Size: 10833
+Filename: lighttpd-mod-ssi_1.4.32-1_keenetic.ipk
+Size: 11479
+MD5Sum: a5aa12ce75985a866718094e53678e7d
 Description:  SSI module
 
 Package: lighttpd-mod-status
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 7288
-Filename: lighttpd-mod-status_1.4.30-2a_keenetic.ipk
-Size: 7914
-MD5Sum: e31b90ec3a3e20fed410936c8058a8c7
+Installed-Size: 7598
+Filename: lighttpd-mod-status_1.4.32-1_keenetic.ipk
+Size: 8264
+MD5Sum: 3d544ac3b98821541be03c342dfd08ca
 Description:  Server status display module
 
 Package: lighttpd-mod-trigger-b4-dl
@@ -5081,63 +5125,71 @@ MD5Sum: 8c933e05008484c39b17ffff6ac978d9
 Description:  Trigger before download module
 
 Package: lighttpd-mod-userdir
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 2960
-Filename: lighttpd-mod-userdir_1.4.30-2a_keenetic.ipk
-Size: 3570
-MD5Sum: 19e071ff24fb8198ba7f5dd33f0c97cb
+Installed-Size: 3463
+Filename: lighttpd-mod-userdir_1.4.32-1_keenetic.ipk
+Size: 4089
+MD5Sum: 9e6d898d13173884c2f1a153fab5037c
 Description:  User directory module
 
 Package: lighttpd-mod-usertrack
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 3061
-Filename: lighttpd-mod-usertrack_1.4.30-2a_keenetic.ipk
-Size: 3668
-MD5Sum: fb768089f2fe8fb53fac4a92bc9af9cc
+Installed-Size: 3217
+Filename: lighttpd-mod-usertrack_1.4.32-1_keenetic.ipk
+Size: 3816
+MD5Sum: 3a6cd13cb9ca9fe9a508e972d1f522cb
 Description:  User tracking module
 
 Package: lighttpd-mod-webdav
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: lighttpd, libsqlite3, libuuid, libxml2
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 16986
-Filename: lighttpd-mod-webdav_1.4.30-2a_keenetic.ipk
-Size: 17576
-MD5Sum: 6055031fcf99adce809bfc6e8d285993
+Installed-Size: 17412
+Filename: lighttpd-mod-webdav_1.4.32-1_keenetic.ipk
+Size: 18058
+MD5Sum: 0ddee6dd847e20b4dc34e0a5319cb754
 Description:  WebDAV module
 
 Package: lighttpd
-Version: 1.4.30-2a
+Version: 1.4.32-1
 Depends: libopenssl, libpcre
 Source: package/built/lighttpd
-SourceFile: lighttpd-1.4.30.tar.bz2
-SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x/
+SourceFile: lighttpd-1.4.32.tar.xz
+SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
+License: BSD-3c
+LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 89175
-Filename: lighttpd_1.4.30-2a_keenetic.ipk
-Size: 89902
-MD5Sum: 66dd9ded849ba9be1cb86847969ad87e
+Installed-Size: 87751
+Filename: lighttpd_1.4.32-1_keenetic.ipk
+Size: 88445
+MD5Sum: 07b6042deb93db0a9fedbcebd6b1c3a3
 Description:  A flexible and lightweight web server
 
 Package: look
@@ -6142,34 +6194,34 @@ MD5Sum: ea953252fafba363dc3de643db13d208
 Description:  Kernel NFS server support
 
 Package: nginx-basic
-Version: 1.4.1-1
+Version: 1.4.4-1
 Depends: libpcre, libopenssl
 Source: package/built/nginx
-SourceFile: nginx-1.4.1.tar.gz
+SourceFile: nginx-1.4.4.tar.gz
 SourceURL: http://nginx.org/download/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 261784
-Filename: nginx-basic_1.4.1-1_keenetic.ipk
-Size: 262167
-MD5Sum: 5c25441a13ea08c7c27a063696710e7b
+Installed-Size: 261849
+Filename: nginx-basic_1.4.4-1_keenetic.ipk
+Size: 262224
+MD5Sum: da3d6d26ba058af7fe7b5301bb3b86f2
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev. Built with basic set of modules
 
 Package: nginx-full
-Version: 1.4.1-1
+Version: 1.4.4-1
 Depends: libpcre, liblua, libgd, libopenssl
 Source: package/built/nginx
-SourceFile: nginx-1.4.1.tar.gz
+SourceFile: nginx-1.4.4.tar.gz
 SourceURL: http://nginx.org/download/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 438216
-Filename: nginx-full_1.4.1-1_keenetic.ipk
-Size: 438376
-MD5Sum: 56bd2cc763c8e65140b1dbd02c24fc31
+Installed-Size: 438340
+Filename: nginx-full_1.4.4-1_keenetic.ipk
+Size: 438487
+MD5Sum: 29d1067fe6844a72b8581cd537ad5365
 Description:  nginx is an HTTP and reverse proxy server, as well as a mail proxy server,
  written by Igor Sysoev. Built with full set of modules
 
