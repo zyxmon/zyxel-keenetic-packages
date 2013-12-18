@@ -4809,7 +4809,7 @@ Description:  Cache Meta Language module
 
 Package: lighttpd-mod-compress
 Version: 1.4.32-1
-Depends: lighttpd, zlib
+Depends: lighttpd
 Source: package/built/lighttpd
 SourceFile: lighttpd-1.4.32.tar.xz
 SourceURL: http://download.lighttpd.net/lighttpd/releases-1.4.x
@@ -4818,10 +4818,10 @@ LicenseFiles: COPYING
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 6887
+Installed-Size: 6884
 Filename: lighttpd-mod-compress_1.4.32-1_keenetic.ipk
-Size: 7530
-MD5Sum: 6861ba6c07df6635cc410be33113fde4
+Size: 7529
+MD5Sum: 480121f51b03b70025ff174d06644ff2
 Description:  Compress output module
 
 Package: lighttpd-mod-evasive
