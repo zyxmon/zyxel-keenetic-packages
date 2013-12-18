@@ -1,0 +1,47 @@
+--- a/doc/config/conf.d/cgi.conf.save	2013-12-16 15:06:27.496413773 +0400
++++ b/doc/config/conf.d/cgi.conf	2013-12-16 15:07:07.005695822 +0400
+@@ -12,11 +12,11 @@
+ ##
+ ## For PHP don't forget to set cgi.fix_pathinfo = 1 in the php.ini.
+ ##
+-cgi.assign                 = ( ".pl"  => "/usr/bin/perl",
+-                               ".cgi" => "/usr/bin/perl",
+-                               ".rb"  => "/usr/bin/ruby",
+-                               ".erb" => "/usr/bin/eruby",
+-                               ".py"  => "/usr/bin/python" )
++cgi.assign                 = ( ".pl"  => "/media/DISK_A1/system/usr/bin/perl",
++                               ".cgi" => "/media/DISK_A1/system//usr/bin/perl",
++                               ".rb"  => "/media/DISK_A1/system//usr/bin/ruby",
++                               ".erb" => "/media/DISK_A1/system//usr/bin/eruby",
++                               ".py"  => "/media/DISK_A1/system//usr/bin/python" )
+ 
+ ##
+ ## to get the old cgi-bin behavior of apache
+--- a/doc/config/conf.d/rrdtool.conf.save	2013-12-16 15:08:43.208424417 +0400
++++ b/doc/config/conf.d/rrdtool.conf	2013-12-16 15:09:25.772822144 +0400
+@@ -10,12 +10,12 @@
+ ##
+ ## Path to the rrdtool binary.
+ ##
+-rrdtool.binary             = "/usr/bin/rrdtool"
++rrdtool.binary             = "/media/DISK_A1/system/usr/bin/rrdtool"
+ 
+ ##
+ ## Path to the rrdtool database. You can override this in conditionals.
+ ##
+-rrdtool.db-name            = "/var/lib/lighttpd/lighttpd.rrd"
++rrdtool.db-name            = "/media/DISK_A1/system/var/lib/lighttpd/lighttpd.rrd"
+ 
+ ##
+ #######################################################################
+--- a/doc/config/conf.d/simple_vhost.conf.save	2013-12-16 15:10:33.624785760 +0400
++++ b/doc/config/conf.d/simple_vhost.conf	2013-12-16 15:11:00.731678676 +0400
+@@ -17,7 +17,7 @@
+ ##
+ simple-vhost.server-root   = vhosts_dir + "/"
+ simple-vhost.default-host  = "default.example.com"
+-simple-vhost.document-root = "/htdocs/"
++simple-vhost.document-root = "/media/DISK_A1/system/www/"
+ 
+ ##
+ ## Print some errors for finding the document-root

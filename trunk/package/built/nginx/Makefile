@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=nginx
-PKG_VERSION:=1.4.1
+PKG_VERSION:=1.4.4
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://nginx.org/download/
-PKG_MD5SUM:=fea7dfab995545ce27fe4c49dc21a972
+PKG_MD5SUM:=5dfaba1cbeae9087f3949860a02caa9f
 
 ################################################################################################
 
