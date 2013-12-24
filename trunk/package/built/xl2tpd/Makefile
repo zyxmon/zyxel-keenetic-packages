@@ -17,7 +17,7 @@ PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_MD5SUM:=cf61576fef5c2d6c68279a408ec1f0d5
 PKG_SOURCE_URL:=http://pkgs.fedoraproject.org/lookaside/pkgs/xl2tpd/xl2tpd-$(PKG_VERSION).tar.gz/$(PKG_MD5SUM)/
 
-PKG_INSTALL:=1
+PKG_INSTALL:=2
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -69,7 +69,7 @@ define Package/xl2tpd/install
 	$(INSTALL_DATA) ./files/options.xl2tpd $(1)/etc/ppp/options.xl2tpd
 	$(INSTALL_BIN) ./files/ip-up.sh $(1)/etc/ppp/
 	$(INSTALL_BIN) ./files/ip-down.sh $(1)/etc/ppp/
-
+	$(INSTALL_DIR) $(1)/var/run
 endef
 
 $(eval $(call BuildPackage,xl2tpd))
