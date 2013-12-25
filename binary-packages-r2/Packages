@@ -11951,7 +11951,7 @@ Description:  xinetd has access control mechanisms, extensive logging capabiliti
  things.
 
 Package: xl2tpd
-Version: 1.3.1-6
+Version: 1.3.1-7
 Depends: ppp
 Source: package/built/xl2tpd
 SourceFile: xl2tpd-1.3.1.tar.gz
@@ -11959,10 +11959,10 @@ SourceURL: http://pkgs.fedoraproject.org/lookaside/pkgs/xl2tpd/xl2tpd-1.3.1.tar.
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keenetic
-Installed-Size: 46430
-Filename: xl2tpd_1.3.1-6_keenetic.ipk
-Size: 47307
-MD5Sum: 21199c9b00252d6cabc116f8b19725ad
+Installed-Size: 46457
+Filename: xl2tpd_1.3.1-7_keenetic.ipk
+Size: 47322
+MD5Sum: f1d903a8dc5d0d17590555e81ca984b4
 Description:  l2tpd is the open source implementation of the L2TP tunneling protocol (RFC2661).
  It does implement both LAC and LNS role in a L2TP networking architecture. The
  main goal of this protocol is to tunnel PPP frame trough an IP network.
