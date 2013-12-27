@@ -2431,6 +2431,18 @@ Size: 15605
 MD5Sum: cda0c8f5d20dfa189febc42c2849cbc4
 Description:  Mozilla JavaScript Engine (interpreter)
 
+Package: kmod-asix
+Version: 2.6.22-tc+1-1
+Source: package/asix
+Section: kernel
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 28171
+Filename: kmod-asix_2.6.22-tc+1-1_keeneticII.ipk
+Size: 28610
+MD5Sum: ae407719e6ca95e685a3d5414769c10d
+Description:  Kernel module for USB ethernet asix
+
 Package: kmod-fs-cifs
 Version: 2.6.22-tc-1
 Source: package/kernel
