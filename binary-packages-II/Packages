@@ -2554,6 +2554,18 @@ Size: 30918
 MD5Sum: 56c3db420f17e869caadf4b05b153aa8
 Description:  Kernel module for Mini fanout overlay filesystem support
 
+Package: kmod-sound-core
+Version: 2.6.22-tc-1
+Source: package/kernel
+Section: kernel
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 141531
+Filename: kmod-sound-core_2.6.22-tc-1_keeneticII.ipk
+Size: 141682
+MD5Sum: 2b069676411cf01b97f5db6976f84da1
+Description:  Kernel modules for sound support
+
 Package: kmod-tun
 Version: 2.6.22-tc-1
 Source: package/kernel
@@ -2565,6 +2577,19 @@ Filename: kmod-tun_2.6.22-tc-1_keeneticII.ipk
 Size: 6669
 MD5Sum: bf48f456c167947d87051af0ec7086e0
 Description:  Kernel support for the TUN/TAP tunneling device
+
+Package: kmod-usb-audio
+Version: 2.6.22-tc-1
+Depends: kmod-sound-core
+Source: package/kernel
+Section: kernel
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 49037
+Filename: kmod-usb-audio_2.6.22-tc-1_keeneticII.ipk
+Size: 49218
+MD5Sum: 28489b807fe7ddb171e4748a77e107b1
+Description:  Kernel support for USB audio devices
 
 Package: kmod-usb-hid
 Version: 2.6.22-tc-1
@@ -4607,6 +4632,24 @@ Size: 579472
 MD5Sum: 80bbe8a4619feb5e8e06220d38f3cda0
 Description:  Lynx is the text web browser
 
+Package: madplay
+Version: 0.15.2b-3
+Depends: libid3tag, libmad
+Source: package/built/madplay
+SourceFile: madplay-0.15.2b.tar.gz
+SourceURL: @SF/mad ftp://ftp.mars.org/pub/mpeg/
+Section: sound
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keeneticII
+Installed-Size: 33623
+Filename: madplay_0.15.2b-3_keeneticII.ipk
+Size: 34497
+MD5Sum: 3f51ca6fca95390bb971d91beddc4603
+Description:  MAD is an MPEG audio decoder. It currently only supports the MPEG 1 
+ standard, but fully implements all three audio layers (Layer I, Layer II, 
+ and Layer III, the latter often colloquially known as MP3.). There is also 
+ full support for ID3 tags.
+
 Package: make
 Version: 3.81-1
 Source: package/built/make
@@ -4719,17 +4762,17 @@ Description:  mini_sendmail reads its standard input up to an end-of-file and se
  mini_sendmail can be used to send email from inside a chroot(2) area.
 
 Package: mini-snmpd
-Version: 1.2b-7
+Version: 1.2b-8
 Source: package/built/mini_snmpd
 SourceFile: mini_snmpd-1.2b.tar.gz
 SourceURL: http://members.aon.at/linuxfreak/linux/
 Section: net
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 22849
-Filename: mini-snmpd_1.2b-7_keeneticII.ipk
-Size: 23514
-MD5Sum: ec1e6ba9ff6cdbc723ad9c098f932992
+Installed-Size: 23646
+Filename: mini-snmpd_1.2b-8_keeneticII.ipk
+Size: 24254
+MD5Sum: b4af528c528bf0e2a56dd0fd395b911c
 Description:  SNMP server for embedded systems
 
 Package: mini_inetd
