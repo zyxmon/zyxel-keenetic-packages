@@ -10045,18 +10045,18 @@ Description:  l2tpd is the open source implementation of the L2TP tunneling prot
  main goal of this protocol is to tunnel PPP frame trough an IP network.
 
 Package: xupnpd
-Version: 392-1
+Version: 395-1
 Depends: liblua
 Source: package/built/xupnpd
-SourceFile: xupnpd-392.tar.gz
+SourceFile: xupnpd-395.tar.gz
 SourceURL: http://tsdemuxer.googlecode.com/svn/trunk/xupnpd/src/
 Section: multimedia
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 149724
-Filename: xupnpd_392-1_keeneticII.ipk
-Size: 150362
-MD5Sum: 85edd1db530fa79921c4eca64670bc39
+Installed-Size: 149778
+Filename: xupnpd_395-1_keeneticII.ipk
+Size: 150411
+MD5Sum: 8920c5db7ee7560d827290f230677303
 Description:  eXtensible UPnP agent
 
 Package: yamdi
