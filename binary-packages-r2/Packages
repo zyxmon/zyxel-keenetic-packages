@@ -1779,27 +1779,6 @@ MD5Sum: 99b93a5a9b93c91505723e574b86534d
 Description:  Mount a WebDAV resource as a regular file system. davfs2 will work with
  most WebDAV servers needing little or no configuration.
 
-Package: dhcp-server
-Version: 3.1.0-4
-Depends: 
-Provides: 
-Source: package/built/dhcp
-SourceFile: dhcp-3.1.0.tar.gz
-SourceURL: ftp://ftp.isc.org/isc/dhcp/
-License: 
-LicenseFiles: 
-Section: net
-Status: unknown ok not-installed
-Essential: no
-Priority: optional
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
-Architecture: keenetic
-Installed-Size: 414503
-Filename: dhcp-server_3.1.0-4_keenetic.ipk
-Size: 413704
-MD5Sum: 49117a194e2816edbe4b449918144db3
-Description:  ISC's DHCP server
-
 Package: diffutils
 Version: 3.0-1
 Depends: 
@@ -2667,6 +2646,22 @@ Filename: iptables-utils_1.3.8-2_keenetic.ipk
 Size: 49216
 MD5Sum: 98a2c20dba64114afa95eba31c54a1fd
 Description:  iptables save and restore utilities
+
+Package: isc-dhcp-server-ipv4
+Version: 4.2.4-3
+Source: package/built/isc-dhcp
+SourceFile: dhcp-4.2.4.tar.gz
+SourceURL: ftp://ftp.isc.org/isc/dhcp/4.2.4
+Section: net
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: keenetic
+Installed-Size: 671279
+Filename: isc-dhcp-server-ipv4_4.2.4-3_keenetic.ipk
+Size: 670214
+MD5Sum: 554e422c3df6d903083bd9c6f963c319
+Description:  implements the Dynamic Host Configuration Protocol (DHCP) and the Internet
+ Bootstrap Protocol (BOOTP).
+ This package is compiled with IPv4 support only.
 
 Package: js
 Version: 1.6.20070208-2
