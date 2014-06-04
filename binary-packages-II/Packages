@@ -3526,19 +3526,19 @@ Description:  Ogg project codecs use the Ogg bitstream format to arrange the raw
  streams into a single physical bitstream.
 
 Package: libopenssl
-Version: 1.0.1e-1a
+Version: 1.0.1g-1
 Source: package/openssl
-SourceFile: openssl-1.0.1e.tar.gz
+SourceFile: openssl-1.0.1g.tar.gz
 SourceURL: http://www.openssl.org/source/ ftp://ftp.funet.fi/pub/crypt/mirrors/ftp.openssl.org/source ftp://ftp.sunet.se/pub/security/tools/net/openssl/source/
 License: SSLEAY OPENSSL
 LicenseFiles: LICENSE
 Section: libs
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 619656
-Filename: libopenssl_1.0.1e-1a_keeneticII.ipk
-Size: 613401
-MD5Sum: 40f410d6aba51c3eeb551b4000419440
+Installed-Size: 622086
+Filename: libopenssl_1.0.1g-1_keeneticII.ipk
+Size: 616190
+MD5Sum: d20d9a097ddd95d35519f5df6f8231bb
 Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  commercial-grade, full-featured, and Open Source toolkit implementing the Secure
  Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well
@@ -5344,20 +5344,20 @@ MD5Sum: 6b38c9855790d9bf0f1bace55f3059cf
 Description:  OpenSSH SFTP server.
 
 Package: openssl-util
-Version: 1.0.1e-1a
+Version: 1.0.1g-1
 Depends: libopenssl
 Source: package/openssl
-SourceFile: openssl-1.0.1e.tar.gz
+SourceFile: openssl-1.0.1g.tar.gz
 SourceURL: http://www.openssl.org/source/ ftp://ftp.funet.fi/pub/crypt/mirrors/ftp.openssl.org/source ftp://ftp.sunet.se/pub/security/tools/net/openssl/source/
 License: SSLEAY OPENSSL
 LicenseFiles: LICENSE
 Section: utils
 Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
 Architecture: keeneticII
-Installed-Size: 173164
-Filename: openssl-util_1.0.1e-1a_keeneticII.ipk
-Size: 173457
-MD5Sum: c8053efb9b831c8ce733ee96d5146b90
+Installed-Size: 173286
+Filename: openssl-util_1.0.1g-1_keeneticII.ipk
+Size: 173518
+MD5Sum: dad558cec513831ebdd8ed164565a301
 Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  commercial-grade, full-featured, and Open Source toolkit implementing the Secure
  Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well
