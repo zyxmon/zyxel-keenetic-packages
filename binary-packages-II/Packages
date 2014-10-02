@@ -1340,20 +1340,22 @@ Description:  Balance is a load balancing solution being a simple but powerful g
  balancing and failover mechanisms. Its behaviour can be controlled at runtime using a simple command line syntax.
 
 Package: bash
-Version: 4.2-2
+Version: 4.3.26-1
 Depends: libncurses
 Source: package/built/bash
-SourceFile: bash-4.2.tar.gz
+SourceFile: bash-4.3.tar.gz
 SourceURL: @GNU/bash
+License: GPL-3.0+
+LicenseFiles: COPYING
 Section: utils
-Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Maintainer: Marcel Denia <naoir@gmx.net>
 Architecture: keeneticII
-Installed-Size: 350334
-Filename: bash_4.2-2_keeneticII.ipk
-Size: 350807
-MD5Sum: bdf776bc1627791a15c702af01e9979d
-Description:  Bash is an sh-compatible command language interpreter that executes 
- commands read from the standard input or from a file. Bash also 
+Installed-Size: 373526
+Filename: bash_4.3.26-1_keeneticII.ipk
+Size: 373822
+MD5Sum: d9731897c14148c7fb926d4a1fbfb0da
+Description:  Bash is an sh-compatible command language interpreter that executes
+ commands read from the standard input or from a file. Bash also
  incorporates useful features from the Korn and C shells (ksh and csh).
 
 Package: bc
