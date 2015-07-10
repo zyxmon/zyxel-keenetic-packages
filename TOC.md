@@ -1,0 +1,15 @@
+  * [Главная](Welcome.md)
+  * Готовые пакеты
+    * [Требования к USB](usb_hdd.md)
+    * [Устанавливаем opkg](opkg_setup.md)
+    * [Основные команды opkg](opkg_usage.md)
+    * [Запуск сервисов](starting_daemons.md)
+    * [Планировщик cron](cron_setup.md)
+    * [DLNA серверы](dlna_setup.md)
+    * [Transmission](transmission_setup.md)
+    * [http сервер и php](lighttpd_php_setup.md)
+    * [Другие приложения](other_setup.md)
+  * Собираем свои пакеты
+    * [Устанавливаем тулчейн](linux_compile.md)
+    * [Cвои пакеты](linux_add.md)
+  * [Полезные ссылки](links.md)

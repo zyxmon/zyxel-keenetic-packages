@@ -1,0 +1,31 @@
+# Добавляем свои пакеты #
+
+Для добавления своих дополнительных пакетов можно воспользоваться [механизмом фидов (feeds) openwrt](http://wiki.openwrt.org/doc/devel/feeds).
+
+На мой взгляд удобнее делать это иначе.
+
+Создадим в домашней директории папку `openwrt/packages' и "сольем в нее" набор Makefile'ов openwrt для пакетов:
+```
+cd ~/openwrt/packages
+svn co svn://svn.openwrt.org/openwrt/packages/ .
+```
+
+После этого руками перенесем нужный пакет из `~/openwrt/packages` в `~/keenetic/package/build`. После этого запустим `make menuconfig` и добавим пакет в сборку через меню. Для того, чтобы не создавать вторые копии библиотек из прошивки следует в Makefile перенесенного пакета удалить зависимости от `libpthread` и `librt`. Зависимости от библиотек `zlib, libcurl, libopenssl, libusb` следует перенести из определения пакета в переменную `PKG_BUILD_DEPENDS`.
+
+Для многих пакетов требуется внести изменения в Makefile, часто нужны и дополнительные патчи. Для изготовления патчей можно использовать [статью из wiki openwrt](http://wiki.openwrt.org/doc/devel/patches). Примеры изменений в Makefile и патчи имеются в уже перенесенных пакетах.
+
+Для сборки отдельных пакетов удобнее запускать `make` так:
+
+`make package/yyy/compile V=99`,
+
+где `yyy` это папка в `~/keenetic/package/build`. Можно использовать и такие "конструкции":
+
+`make package/yyy/prepare V=99`
+
+`make package/yyy/clean V=99`
+
+`make package/yyy/{clean,compile} V=99`
+
+Для создания индекса пакетов -
+
+`make package/index V=99`

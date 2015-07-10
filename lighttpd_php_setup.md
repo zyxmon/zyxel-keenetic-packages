@@ -1,0 +1,80 @@
+# lighttpd и php #
+
+Сервер lighttpd "состоит из пакетов"
+```
+lighttpd-mod-access_1.4.28-1_keenetic.ipk
+lighttpd-mod-accesslog_1.4.28-1_keenetic.ipk
+lighttpd-mod-cgi_1.4.28-1_keenetic.ipk
+lighttpd-mod-fastcgi_1.4.28-1_keenetic.ipk
+lighttpd-mod-redirect_1.4.28-1_keenetic.ipk
+lighttpd-mod-rewrite_1.4.28-1_keenetic.ipk
+lighttpd_1.4.28-1_keenetic.ipk
+```
+Пакеты lighttpd-mod-`*` являются дополнительными модулями сервера. Настройки lighttpd находятся в файле конфигурации system/etc/lighttpd/lighttpd.conf. Скрипт запуска - system/etc/init.d/K30lighttpd
+
+php 5.3.6- так же поставляется в виде набора пакетов, большая чать из которых - дополнительные модули.
+```
+php5-cgi_5.3.6-2_keenetic.ipk
+php5-cli_5.3.6-2_keenetic.ipk
+php5-fastcgi_5.3.6-2_keenetic.ipk
+php5-mod-dom_5.3.6-2_keenetic.ipk
+php5-mod-gd_5.3.6-2_keenetic.ipk
+php5-mod-hash_5.3.6-2_keenetic.ipk
+php5-mod-json_5.3.6-2_keenetic.ipk
+php5-mod-mbstring_5.3.6-2_keenetic.ipk
+php5-mod-pdo-sqlite_5.3.6-2_keenetic.ipk
+php5-mod-pdo_5.3.6-2_keenetic.ipk
+php5-mod-session_5.3.6-2_keenetic.ipk
+php5-mod-simplexml_5.3.6-2_keenetic.ipk
+php5-mod-sqlite3_5.3.6-2_keenetic.ipk
+php5-mod-xml_5.3.6-2_keenetic.ipk
+php5-mod-xmlreader_5.3.6-2_keenetic.ipk
+php5-mod-xmlwriter_5.3.6-2_keenetic.ipk
+php5_5.3.6-2_keenetic.ipk
+```
+
+Настройки php находятся в файле system/etc/php.ini.
+
+Для того, чтобы lighttpd "понимал" php нужно изменить его настройки. Можно так - редактируем lighttpd.conf:
+
+1. Добавляем модули lighttpd (у меня так):
+
+```
+server.modules = ( 
+    "mod_access",
+    "mod_cgi",
+    "mod_fastcgi",
+    "mod_accesslog"
+)
+```
+
+2. Добавляем index.php в index-file.names
+
+```
+index-file.names = ( "index.html", "default.html", "index.htm", "default.htm", "index.php" )
+```
+
+3. Добавляем fastcgi module
+
+```
+#### fastcgi module
+## read fastcgi.txt for more info
+fastcgi.server = (
+    ".php" => (
+        "localhost" => (
+            "min-procs" => 1,
+            "max-procs" => 1,
+            "max-load-per-proc" => 4,
+            "socket" => "/tmp/php-fastcgi.socket",
+            "bin-path" => "/media/DISK_A1/system/usr/bin/php-fcgi"
+        )
+    )
+)
+
+```
+
+Перезапускаем K30lighttpd.
+
+PS lighttpd слушает на 81 порту, корень в /media/DISK\_A1/system/www (все настраивается в lighttpd.conf).
+
+В ряде случаев могут потребоваться другие настройки. О настройке CMS Drupal7 на кинетике можно прочесть в [этой статье](Drupal7.md).
