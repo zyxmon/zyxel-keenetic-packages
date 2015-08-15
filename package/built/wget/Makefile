@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=wget
-PKG_VERSION:=1.14
+PKG_VERSION:=1.16.3
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=@GNU/$(PKG_NAME)
-PKG_MD5SUM:=316f6f59292c9098ad81fd54f658c579
+PKG_MD5SUM:=d2e4455781a70140ae83b54ca594ce21
 
 PKG_BUILD_DEPENDS:=zlib
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
@@ -63,7 +63,11 @@ endef
 
 CONFIGURE_ARGS+= \
 	--disable-rpath \
-	--disable-iri
+	--disable-iri \
+	--without-libuuid
+
+CONFIGURE_VARS += \
+	ac_cv_header_uuid_uuid_h=no
 
 ifeq ($(BUILD_VARIANT),ssl)
 	CONFIGURE_ARGS+= \
@@ -73,6 +77,7 @@ endif
 
 ifeq ($(BUILD_VARIANT),nossl)
 	CONFIGURE_ARGS+= \
+		--disable-ntlm \
 		--without-ssl
 endif
 
